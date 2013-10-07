@@ -5,6 +5,8 @@ Salish Sea MEOPAR Documentation
 
 This is a collection of documentation about the Salish Sea MEOPAR project.
 
+They are rendered at http://salishsea-meopar-docs.readthedocs.org/.
+
 
 License
 =======
@@ -16,5 +18,5 @@ The Salish Sea MEOPAR Project Documentation by the Salish Sea MEOPAR project con
 
 TODO:
 
-* Add link to the rendered docs
 * Add link to the project contributors list
+* Fix PDF rendering on rtd and add link to PDF
