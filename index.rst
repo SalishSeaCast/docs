@@ -12,5 +12,6 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   repos_plan
 
 .. include:: license_description.rst
