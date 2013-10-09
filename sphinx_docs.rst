@@ -14,7 +14,7 @@ Sphinx_ provides:
 .. _LaTeX: http://www.latex-project.org/
 .. _MathJax: http://www.mathjax.org/
 
-LaTeX_ may also be used for manuscripts of publications,
+LaTeX_ should be used for manuscripts of publications,
 for which PDFs must be rendered,
 uploaded,
 and linked into other documentation to make them available online.
