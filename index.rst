@@ -12,6 +12,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   hg_version_control
    repos_plan
    code-notes/index
 
