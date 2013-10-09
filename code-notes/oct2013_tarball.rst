@@ -57,7 +57,7 @@ Build Notes
 
     * MacBook running OS/X 10.8.5 with Xcode installed: :file:`fait_AA_make` reported :kbd:`sed: RE error: illegal byte sequence` numerous times,
     * :kbd:`salish`: :file:`fait_AA_make` failed because :command:`ksh` was not installed
-    * :kbd:`jasper`:
+    * :kbd:`jasper`: build was successful
 
 The build NEMO 3.1 for a new configuration the following steps are required:
 
@@ -110,6 +110,44 @@ The build NEMO 3.1 for a new configuration the following steps are required:
       #-- JPP 20130717 Run compilation keys for TEST1
       P_P = key_wc3 key_dtatem key_dtasal key_flx_core key_vvl key_zrefsurf key_zdftke key_traldf_c2d key_dynldf_c3d key_mpp_mpi key_ldfslp key_dynspg_ts2 key_dtatem_month key_dtasal_month key_obc_mer key_tide key_diaharm
 
+  Also ensure that there is a prefix for preprocessing line for the build/run target,
+  for example:
+
+  .. code-block:: sh
+
+      #-Q- jasper  prefix = -D
+
+* Ensure that there is an appropriate set of definitions in :file:`modipsl/util/AA_make.gdef` for the build/run target,
+  for example:
+
+  .. code-block:: sh
+
+      #-Q- jasper     #- Global definitions for jasper.westgrid.ca using Linux Compiler Intel v8
+      #-Q- jasper     LIB_MPI = MPI2
+      #-Q- jasper     LIB_MPI_BIS =
+      #-Q- jasper     M_K = make
+      #-Q- jasper     P_C = cpp
+      #-Q- jasper     P_O = -P -C -traditional $(P_P)
+      #-Q- jasper     F_C = mpiifort -c -fpp
+      #-Q- jasper     #-D- MD    F_D = -g
+      #-Q- jasper     #-D- MN    F_D =
+      #-Q- jasper     #-P- I4R4  F_P = -i4
+      #-Q- jasper     #-P- I4R8  F_P = -i4 -r8
+      #-Q- jasper     #-P- I8R8  F_P = -i8 -r8
+      #-Q- jasper     #-P- ??    F_P = -i4 -r8
+      #-Q- jasper     F_O = -O3 $(F_P)  -I$(MODDIR) -I$(MODDIR)/oce -module $(MODDIR) -assume byterecl -convert big_endian -I $(NCDF_INC)
+      #-Q- jasper     F_F = $(F_O) -extend_source
+      #-Q- jasper     F_L = mpiifort
+      #-Q- jasper     L_O =
+      #-Q- jasper     A_C = ar -r
+      #-Q- jasper     A_G = ar -x
+      #-Q- jasper     C_C = gcc -c
+      #-Q- jasper     C_O =
+      #-Q- jasper     C_L = gcc
+      #-Q- jasper     #-
+      #-Q- jasper     NCDF_INC = -I/lustre/jasper/software/netcdf/netcdf-4.1.3/include -lhdf5_hl -lhdf5 -lz -lsz
+      #-Q- jasper     NCDF_LIB = -L/lustre/jasper/software/netcdf/netcdf-4.1.3/lib -lnetcdf -lnetcdff -lhdf5_hl -lhdf5 -lz -lsz
+
 * Run:
 
   .. code-block:: bash
@@ -117,11 +155,14 @@ The build NEMO 3.1 for a new configuration the following steps are required:
       cd modeles/NEMO
       ../UTIL/fait_AA_make
 
-  :file:`fait_AA_make` must be run from the :file:`modeles/NEMO/` directory.
-  It calculates compilation rules,
+  to calculate compilation rules,
   options,
-  and build dependencies so as to create :file:`NEM/WORK/AA_make`
+  and build dependencies so as to create :file:`NEMO/WORK/AA_make`
   (which is symlinked to :file:`modipsl/config/WC3/scripts/BB_make`)
+
+  .. note::
+
+      :file:`fait_AA_make` *must* be run from the :file:`modeles/NEMO/` directory.
 
 * Run:
 
@@ -132,90 +173,44 @@ The build NEMO 3.1 for a new configuration the following steps are required:
       ./ins_make -t target
 
   to remove existing :file:`Makefiles` and create new ones.
-  The target argument to :file:`ins_make` specifies a compiler or host name defined in :file:`AA_make.gdef`.
+  The target argument to :file:`ins_make` specifies a compiler or host name defined in :file:`modipsl/util/AA_make.gdef` and :file:`modipsl/config/WC3/scripts/BB_make.ldef`.
 
 * Run:
 
   .. code-block:: bash
 
       cd modipsl/config/WC3
-      gmake clean
-      gmake all
+      make clean
+      make
 
   to compile and link the code.
+
+The results of a successful build are:
+
+* a :file:`../../bin/opa` executable
+* a :file:`../../lib/libioipsl.a` library
+* a :file:`../../lib/oce/libopa.a` library
+
 
 
 Problems
 ~~~~~~~~
 
-With the CPP keys above in :file:`BB_make.ldef` the :command:`gmake all` command on :kbd:`jasper` fails with these messages::
+With the CPP keys above in :file:`BB_make.ldef` the :command:`make` command on :kbd:`jasper` completes with these messages::
 
-  CHANGE of CPP KEYS yes/no ?
-  CPP options changed
-  CHECKING KEY
-  KEY USED :
-  key_trabbl_dif
-  key_vectopt_loop
-  key_vectopt_memory
-  key_orca_r2
-  key_lim2
-  key_dynspg_flt
-  key_diaeiv
-  key_ldfslp
-  key_traldf_c2d
-  key_traldf_eiv
-  key_dynldf_c3d
-  key_dtatem
-  key_dtasal
-  key_tradmp
-  key_trabbc
-  key_zdftke
-  key_zdfddm
-  CHECKING THE NUMBER AND NAMES OF SOURCE FILES
-     use OPA_SRC files
-     use LIM_SRC_2 files
-     use C1D_SRC files
-     use NST_SRC files
-  ifort: error #10236: File not found:  'key_trabbl_dif'
-  ifort: error #10236: File not found:  'key_vectopt_loop'
-  ifort: error #10236: File not found:  'key_vectopt_memory'
-  ifort: error #10236: File not found:  'key_orca_r2'
-  ifort: error #10236: File not found:  'key_lim2'
-  ifort: error #10236: File not found:  'key_dynspg_flt'
-  ifort: error #10236: File not found:  'key_diaeiv'
-  ifort: error #10236: File not found:  'key_ldfslp'
-  ifort: error #10236: File not found:  'key_traldf_c2d'
-  ifort: error #10236: File not found:  'key_traldf_eiv'
-  ifort: error #10236: File not found:  'key_dynldf_c3d'
-  ifort: error #10236: File not found:  'key_dtatem'
-  ifort: error #10236: File not found:  'key_dtasal'
-  ifort: error #10236: File not found:  'key_tradmp'
-  ifort: error #10236: File not found:  'key_trabbc'
-  ifort: error #10236: File not found:  'key_zdftke'
-  ifort: error #10236: File not found:  'key_zdfddm'
-  make[1]: *** [../../../lib/oce/libopa.a(par_kind.o)] Error 1
-
-Other variations on the list of CPP keys yielded similar results.
-
-Leaving :kbd:`P_P` unset in :file:`BB_make.ldef` resulted in::
-
-  CHANGE of CPP KEYS yes/no ?
-  CHECKING KEY
-  KEY USED :
-  CHECKING THE NUMBER AND NAMES OF SOURCE FILES
-     use OPA_SRC files
-     use LIM_SRC_2 files
-     use C1D_SRC files
-     use NST_SRC files
-  ar: creating ../../../lib/oce/libopa.a
   dynadv_ppm.F90(76): warning #6843: A dummy argument with an explicit INTENT(OUT) declaration is not given an explicit value.   [PHTRA_ADV]
      SUBROUTINE adv_ppm_hor ( kt, pun, pvn, tra, traa, phtra_adv, z2, sort )
   -----------------------------------------------------^
-  step.F90(684): error #6404: This name does not have a type, and must have an explicit type.   [LK_OBC_MER]
-        IF( lk_obc_mer         )   CALL obc_rst_mer_wri( kstp )           ! write open boundary restart file
-  ----------^
-  step.F90(684): error #6341: A logical data type is required in this context.   [LK_OBC_MER]
-        IF( lk_obc_mer         )   CALL obc_rst_mer_wri( kstp )           ! write open boundary restart file
-  ----------^
-  compilation aborted for step.F90 (code 1)
-  make[1]: *** [../../../lib/oce/libopa.a(step.o)] Error 1
+  ./ldfdyn_c3d.h90(148): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+                 IF(lwp) WRITE(numout,'(34x,E7.2,8x,i3)') zcoef(jk) * ahm0, jk
+  -------------------------------------------^
+  dynzdf_imp.F90(20): remark #6536: All symbols from this module are already visible due to another USE; the ONLY clause will have no effect. Rename clauses, if any, will be honored.   [OCE]
+     USE oce             ! ocean dynamics and tracers
+  -------^
+
+  The library is up-to-date
+
+  mpiifort  -o ../../../bin/opa model.o ../../../lib/oce/libopa.a  ../../../lib/libioipsl.a -L/lustre/jasper/software/netcdf/netcdf-4.1.3/lib -lnetcdf -lnetcdff -lhdf5_hl -lhdf5 -lz -lsz
+  /lustre/jasper/software/intel/l_ics_2012.0.032/composer_xe_2011_sp1.10.319/compiler/lib/intel64/libimf.so: warning: warning: feupdateenv is not implemented and will always fail
+  OPA model is OK
+
