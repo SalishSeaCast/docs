@@ -59,3 +59,63 @@ Experienced Python developers may wish to install Sphinx in other ways:
 
 * In a Python virtual environment via :command:`virtualenv` and :command:`pip`
 * In :file:`$HOME/.local/` via :command:`pip install --user sphinx`
+
+
+Building and Previewing Documentation
+-------------------------------------
+
+As you are writing and editing Sphinx documentation you can build the HTML rendered docs locally and preview them in your browser to ensure that there are no reST syntax errors and that the docs look the way you want them to.
+
+In the top level :file:`docs/` directory
+(e.g. :file:`docs/` in the :ref:`docs-repo` repo,
+or :file:`tools/docs/` in the :ref:`tools-repo` repo)
+use the command:
+
+.. code-block:: bash
+
+    make html
+
+to build the docs.
+You will be notified of any syntax or consistency errors.
+The HTML pages produced byt the :command:`make html` command are stored in the :file:`_build/html/` subdirectory and you can use your browser to open the :file:`index.html` file in that directory to preview them.
+You can keep a browser tab open to the rendered docs and refresh after each build to see updates.
+
+.. note::
+
+    The top level :file:`docs/` directory contains
+    (at minimum)
+    the files
+    :file:`conf.py`,
+    :file:`Makefile`,
+    and :file:`index.rst`
+    After the docs have been built it will also contain the
+    :file:`_build/`,
+    :file:`_static/`,
+    and :file:`_templates/` directories.
+
+The result of running :command:`make html` should look something link::
+
+  sphinx-build -b html -d _build/doctrees   . _build/html
+  Running Sphinx v1.1.3
+  loading pickled environment... done
+  building [html]: targets for 9 source files that are out of date
+  updating environment: 0 added, 0 changed, 0 removed
+  looking for now-outdated files... none found
+  preparing documents... done
+  writing output... [100%] sphinx_docs
+  writing additional files... search
+  copying static files... done
+  dumping search index... done
+  dumping object inventory... done
+  build succeeded.
+
+  Build finished. The HTML pages are in _build/html.
+
+.. note::
+
+    Building the :ref:`docs-repo` repo results in 2 consistency warnings::
+
+      docs/README.rst:: WARNING: document isn't included in any toctree
+      docs/license_description.rst:: WARNING: document isn't included in any toctree
+
+    that can be ignored.

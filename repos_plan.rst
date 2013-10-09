@@ -35,6 +35,8 @@ General
 Repositories
 ------------
 
+.. _docs-repo:
+
 docs
 ~~~~
 
@@ -55,6 +57,8 @@ private-docs
   or which cannot be released for some reason
 * ideally at least some of this repo’s will eventually be moved to the public docs repo
 
+
+.. _tools-repo:
 
 tools
 ~~~~~
