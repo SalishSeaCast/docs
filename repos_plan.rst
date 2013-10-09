@@ -1,3 +1,5 @@
+.. _team-repos:
+
 Plan for Mercurial Repositories
 ===============================
 

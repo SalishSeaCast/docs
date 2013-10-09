@@ -13,6 +13,7 @@ Contents:
    :maxdepth: 2
 
    hg_version_control
+   sphinx_docs
    repos_plan
    code-notes/index
 
