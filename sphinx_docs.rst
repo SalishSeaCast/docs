@@ -45,3 +45,17 @@ etc.
 .. _introduction to reST concepts and syntax: http://sphinx-doc.org/rest.html
 .. _collection of directives and interpreted text roles: http://sphinx-doc.org/markup/index.html
 
+
+Installing Sphinx
+-----------------
+
+The easiest way to install Sphinx and the packages that it depends on is to install the Anaconda_ Python distribution.
+Follow the `installation instructions`_ for your operating system and accept the option at the end of the installation to make Anaconda your default Python.
+
+.. _Anaconda: https://store.continuum.io/cshop/anaconda/
+.. _installation instructions: http://www.continuum.io/downloads
+
+Experienced Python developers may wish to install Sphinx in other ways:
+
+* In a Python virtual environment via :command:`virtualenv` and :command:`pip`
+* In :file:`$HOME/.local/` via :command:`pip install --user sphinx`
