@@ -25,3 +25,23 @@ or in the docs directory of another appropriate project repo
 
 .. _docs: https://bitbucket.org/salishsea/docs/
 .. _private-docs: https://bitbucket.org/salishsea/private-docs/
+
+Sphinx_ uses reStructuredText
+(reST),
+a simple,
+unobtrusive markup language.
+The `Sphinx documentation`_ provides a brief `introduction to reST concepts and syntax`_.
+Sphinx extends reST with a `collection of directives and interpreted text roles`_ for
+cross-referencing,
+tables of contents,
+code examples,
+and specially formatted paragraphs like
+notes,
+alerts,
+warnings,
+etc.
+
+.. _Sphinx documentation: http://sphinx-doc.org/contents.html
+.. _introduction to reST concepts and syntax: http://sphinx-doc.org/rest.html
+.. _collection of directives and interpreted text roles: http://sphinx-doc.org/markup/index.html
+
