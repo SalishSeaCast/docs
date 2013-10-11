@@ -1,5 +1,5 @@
-Notes on Downloading NEMO 3.4 from NEMO
-=======================================
+Notes on Downloading/Running NEMO 3.4 on Ocean Cluster
+======================================================
 
 Getting the Code
 ----------------
@@ -29,18 +29,61 @@ Getting the Code
 Making a Project
 ----------------
 
+* Nemo uses an ARCH (architecture) file to determine compiler, maker, netcdf library location.
+
+.. code-block:: bash
+
+        cd dev_v3_4_STABLE_2012/NEMOGCM/ARCH
+
+* NEMO ships with a gfortran_linux file.  This file needs some edits to work on ocean. Changes in bold.
+
+* New ARCH file: :file:`arch-ocean.fcm` containing::
+
+    # generic gfortran compiler options for linux
+    # NCDF_INC    netcdf include file
+    # NCDF_LIB    netcdf library
+    # FC          Fortran compiler command
+    # FCFLAGS     Fortran compiler flags
+    # FFLAGS      Fortran 77 compiler flags
+    # LD          linker
+    # LDFLAGS     linker flags, e.g. -L<lib dir> if you have libraries in a
+    # FPPFLAGS    pre-processing flags
+    # AR          assembler
+    # ARFLAGS     assembler flags
+    # MK          make
+    # USER_INC    additional include files for the compiler,  e.g. -I<include dir>
+    # USER_LIB    additional libraries to pass to the linker, e.g. -l<library>
+
+    %NCDF_INC            **-I/usr/include**
+    %NCDF_LIB            **-L/usr/lib -lnetcdff**
+    %FC                  gfortran
+    %FCFLAGS             -fdefault-real-8 -O3 -funroll-all-loops -fcray-pointer 
+    %FFLAGS              %FCFLAGS
+    %LD                  gfortran
+    %LDFLAGS
+    %FPPFLAGS            -P -C -traditional
+    %AR                  ar
+    %ARFLAGS             -rs
+    %MK                  **make**
+    %USER_INC            %NCDF_INC
+    %USER_LIB            %NCDF_LIB
+
 
 *   then change directory and make a project, e.g. 
-    then for a new AMM12 configuration using gfortran on linux
+    then for a new GYRE configuration using your new arch file ocean
+*   Note we need to add the key_nosignedzero for our fortran 90 compiler
 
     .. code-block:: bash
 
-        cd dev_v3_4_STABLE_2012/NEMOGCM/CONFIG
-        ./makenemo -m gfortran_linux -r AMM12 -n MY_AMM12
+        cd ../CONFIG
+        ./makenemo -m ocean -r GYRE -n MY_GYRE add_key "key_nosignedzero"
 
+Running the Code
+----------------
 
-    .. note::
+    .. code-block:: bash
 
-        stuck again
+       cd MY_GYRE/EXP00
+       nice +19 ./opa 
 
 .. _nemo: http://www.nemo-ocean.eu/
