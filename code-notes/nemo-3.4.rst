@@ -18,6 +18,7 @@ Getting the Code
 *    then type 
 
     .. code-block:: bash
+
         svn --username "sallen@eos.ubc.ca" co -r 3819 http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012
 
 *    EXCEPT change my username to your username on the NEMO system.
