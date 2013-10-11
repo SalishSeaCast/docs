@@ -214,3 +214,84 @@ With the CPP keys above in :file:`BB_make.ldef` the :command:`make` command on :
   /lustre/jasper/software/intel/l_ics_2012.0.032/composer_xe_2011_sp1.10.319/compiler/lib/intel64/libimf.so: warning: warning: feupdateenv is not implemented and will always fail
   OPA model is OK
 
+
+Run Notes
+---------
+
+The :file:`WCSD_RUN_tide_M2_OW_ON_file_DAMP_ANALY.tar` tarball contain the :file:`namelist` and scripts to setup and run on the BIO HPC cluster:
+
+* :file:`linkfile.sh` links the intial conditions,
+  forcing,
+  etc.
+  files into the run directory with the file names that NEMO expects
+
+* :file:`namelist` is the NEMO namelist for the run
+
+* :file:`submit_64.sh` is the file containing PBS directives and shell commands that is submitted to the TORQUE resource manager via :command:`qsub`
+
+The meaning of :kbd:`WCSD_RUN_tide_M2_OW_ON_file_DAMP_ANALY`
+(from J-P's :file:`README.txt`) is::
+
+   WCSD   : West Coast Sub Domain (398x345)
+   M2     : Run with only M2 tides from WebTide
+   OW_ON  : Open West & OpenNorth boundaries
+   file   : reading OBC file (not initial conditions)
+   DAMP   : increased horizontal eddy viscosity
+   ANALY  : Analytical forcing (namsbc_ana) - no atm-ocean fluxes
+            or atmospheric forcing
+
+The :file:`WCSD_PREP.tar` tarball contains the intial conditions,
+forcing,
+etc.
+files for the :kbd:`WCSD_RUN_tide_M2_OW_ON_file_DAMP_ANALY` case.
+
+With those two tarballs unpacked beside each other one the :kbd:`dirPREP` variable in :file:`linkfile.sh` need to be set to:
+
+.. code-block:: bash
+
+    dirPREP=../WCSD_PREP
+
+and :file:`linkfile.sh` run in :file:`WCSD_RUN_tide_M2_OW_ON_file_DAMP_ANALY` to prepare for the run.
+
+:file:`submit_64.sh` is tailored to the BIO HPC cluster.
+To run on :kbd:`jasper`,
+the following script was used:
+
+.. code-block:: bash
+
+    #!/bin/bash
+
+    #PBS -N WCSD_RUN_tide_M2_OW_ON_file_DAMP_ANALY
+    #PBS -S /bin/bash
+    #PBS -l procs=64
+    # memory per processor
+    #PBS -l pmem=2gb
+    #PBS -l walltime=1:00:00
+    # email  when the job [b]egins and [e]nds, or is [a]borted
+    #PBS -m bea
+    #PBS -M dlatornell@eos.ubc.ca
+    #PBS -o OPA.output
+    #PBS -e OPA.output.error
+
+
+    cd $PBS_O_WORKDIR
+    echo working dir: $(pwd)
+
+    module load compiler/intel/12.1
+    module load library/intelmpi/4.0.3.008
+    module load library/netcdf/4.1.3
+    module load library/szip/2.1
+
+    mpiexec ./opa
+
+If that script is stored as :file:`jasper.pbs`,
+a run is submitted with the command:
+
+.. code-block:: bash
+
+    qsub jasper.pbs
+
+As an initial test,
+the run duration was set to 720 time steps via the :kbd:`&namrun.nitend` namelist item.
+The run completed in just over 2 minutes.
+A subsequent 4320 time step run took about 17 minutes.
