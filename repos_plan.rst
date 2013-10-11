@@ -44,6 +44,7 @@ docs
 * Creative Commons Attribution license, copyright project contributors and UBC
 * project level documentation, reports, etc.
 * rendered at https://salishsea-meopar-docs.readthedocs.org/
+* Bitbucket: https://bitbucket.org/salishsea/docs/
 
 private-docs
 ~~~~~~~~~~~~
