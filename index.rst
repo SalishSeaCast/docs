@@ -17,4 +17,4 @@ Contents:
    repos_plan
    code-notes/index
 
-.. include:: license_description.rst
+.. include:: license_description.txt
