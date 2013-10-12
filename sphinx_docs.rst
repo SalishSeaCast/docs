@@ -87,11 +87,9 @@ You can keep a browser tab open to the rendered docs and refresh after each buil
     the files
     :file:`conf.py`,
     :file:`Makefile`,
-    and :file:`index.rst`
-    After the docs have been built it will also contain the
-    :file:`_build/`,
-    :file:`_static/`,
-    and :file:`_templates/` directories.
+    and :file:`index.rst`,
+    and the directory :file:`_static/`.
+    After the docs have been built it will also contain the :file:`_build/` directory.
 
 The result of running :command:`make html` should look something link::
 
@@ -113,9 +111,8 @@ The result of running :command:`make html` should look something link::
 
 .. note::
 
-    Building the :ref:`docs-repo` repo results in 2 consistency warnings::
+    Building the :ref:`docs-repo` repo results in 1 consistency warning::
 
       docs/README.rst:: WARNING: document isn't included in any toctree
-      docs/license_description.rst:: WARNING: document isn't included in any toctree
 
     that can be ignored.
