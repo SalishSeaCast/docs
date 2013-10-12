@@ -78,6 +78,16 @@ Making a Project
         cd ../CONFIG
         ./makenemo -m ocean -r GYRE -n MY_GYRE add_key "key_nosignedzero"
 
+*   and need to change away from NetCDF4.  Should be able to do this with a compile flag but I don't have it working.  So 
+ 
+    .. code-block:: bash
+
+        cd MY_GYRE/EXP00
+        emacs xmlio_server.def
+
+* and find the line "ln_nc4zip     = .TRUE." and change it to .FALSE.
+
+
 Running the Code
 ----------------
 
