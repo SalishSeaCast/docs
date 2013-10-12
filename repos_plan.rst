@@ -99,6 +99,8 @@ NEMO-code
 
   * Port the CONCEPTS changes to NEMO 3.4 or trunk to get the coastal shelf features in 3.4 that we need to properly model the Salish Sea
 
+* Bitbucket: https://bitbucket.org/salishsea/nemo-code/
+
 
 salishsea-site
 ~~~~~~~~~~~~~~
