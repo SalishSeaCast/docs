@@ -69,6 +69,7 @@ tools
 * scripts and docs for
   preparing, running, and post-processing NEMO runs,
   and any other support task that we write software for
+* documentation is rendered at http://salishsea-meopar-tools.readthedocs.org/
 
 
 private-tools
