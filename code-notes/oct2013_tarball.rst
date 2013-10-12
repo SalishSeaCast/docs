@@ -295,3 +295,42 @@ As an initial test,
 the run duration was set to 720 time steps via the :kbd:`&namrun.nitend` namelist item.
 The run completed in just over 2 minutes.
 A subsequent 4320 time step run took about 17 minutes.
+
+
+Post-Processing
+---------------
+
+The results of the runs described above are groups of 64 netCDF files
+(one for each processor)
+for each of the calculated quantities:
+
+* U, V, W, and T
+* :file:`output.init`: initial time step output ??
+* restart and open boundary condition restart
+* 2D slice timeseries results
+* tidal harmonics disagnostic results
+
+
+NOCSCOMBINE
+~~~~~~~~~~~
+
+Google lead to the :kbd:`NOCSCOMBINE` tool at ftp://ftp.soc.soton.ac.uk/omfftp/NEMO/NOCSCOMBINE.tar.
+Building it on :kbd:`jasper` required creation of a new :file:`makefile` with :kbd:`NCHOME` and :kbd:`LIBS` variable set to:
+
+.. code-block:: make
+
+    NCHOME = /lustre/jasper/software/netcdf/netcdf-4.1.3
+    LIBS = -L$(NCHOME)/lib -I$(NCHOME)/include -lnetcdf -lnetcdff -lhdf5_hl -lhdf5 -lz -lsz
+
+Commands like:
+
+.. code-block:: bash
+
+    cd WCSD_RUN_tide_M2_OW_ON_file_DAMP_ANALY/
+    ../../NOCSCOMBINE/nocscombine -f WC3_CU60_20020102_20020104_grid_U_0000.nc
+
+result in the 64 pre-processor files of u velocity results being combined into a single :file:`WC3_CU60_20020102_20020104_grid_U.nc` file.
+The process takes over 10 minutes per quantity for
+U, V, and T
+for the 72 hour run,
+and nearly 30 minutes for W.
