@@ -1,5 +1,7 @@
-Notes on Downloading/Running NEMO 3.4 on Ocean Cluster
-======================================================
+Notes on Downloading/Running NEMO 3.4 on Ocean Cluster including Salish
+=======================================================================
+
+Note, this set-up runs on one core on one processor.
 
 Getting the Code
 ----------------
@@ -93,7 +95,6 @@ Running the Code
 
     .. code-block:: bash
 
-       cd MY_GYRE/EXP00
-       nice +19 ./opa 
+       nice ./opa 
 
 .. _nemo: http://www.nemo-ocean.eu/
