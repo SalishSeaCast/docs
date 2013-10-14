@@ -12,6 +12,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   bash_config
    hg_version_control
    sphinx_docs
    repos_plan
