@@ -41,3 +41,23 @@ The following steps took the `NEMO-code`_ repo from initialization to NEMO-3.1 t
       :file:`lib/`,
       :file:`modeles/`,
       and :file:`tmp/` directories are empty and therefore not included in the Mercurial repo.
+
+* Added J-P Paquin's build script and :file:`util/AA_make.gdef` from 2-Oct-2013 :file:`CODE.tar` tarball.
+  The latter is named :file:`AA_make.gdef_BIO`.
+
+* Added definitions for :file:`util/model` script to :file:`util/mod.def` to get NEMO-3.1 based on those in that file in the 2-Oct-2013 :file:`CODE.tar` tarball.
+
+* Used the :file:`modipsl/util/model` script to obtain the NEMO-3.1 code and other supporting files.
+  The commands to do so were:
+
+  .. code-block:: bash
+
+      cd modipsl/util
+      ./model NEMO_31
+
+  Added the resulting 1295 files
+  (some of which are in :file:`.svn/` directories).
+
+* Added global makefile definitions for :kbd:`jasper.westgrid.ca` and the BIO :kbd:`HPC` cluster to :file:`util/AA_make.gdef`.
+  The source for the former was Paul Myers' NEMO-3.1 installation on :kbd:`jasper` in :file:`/home/pmyers/NEMODRAK_3.1/DRAKKAR/modipsl/util/AA_make.gdef`.
+  The latter came from :file:`uitl/AA_make.gdef` in the 2-Oct-2013 :file:`CODE.tar` tarball.
