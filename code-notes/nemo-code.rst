@@ -76,6 +76,8 @@ Build and Run NEMO-3.1
    .. code-block:: bash
 
       hg clone -u NEMO-3.1 ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code-3.1
+      cd NEMO-code-3.1
+      mkdir modipsl/bin modispl/lib modipsl/tmp
 
 #. Set up a configuration.
    We'll use :kbd:`GYRE` as an example and assume that we are building and running on :kbd:`jasper`:
