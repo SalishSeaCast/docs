@@ -61,3 +61,82 @@ The following steps took the `NEMO-code`_ repo from initialization to NEMO-3.1 t
 * Added global makefile definitions for :kbd:`jasper.westgrid.ca` and the BIO :kbd:`HPC` cluster to :file:`util/AA_make.gdef`.
   The source for the former was Paul Myers' NEMO-3.1 installation on :kbd:`jasper` in :file:`/home/pmyers/NEMODRAK_3.1/DRAKKAR/modipsl/util/AA_make.gdef`.
   The latter came from :file:`uitl/AA_make.gdef` in the 2-Oct-2013 :file:`CODE.tar` tarball.
+
+
+Build and Run NEMO-3.1
+----------------------
+
+.. note::
+
+    These instructions are included for completeness.
+    The Salish Sea MEOPAR project does not use pristine NEMO-3.1.
+
+#. Clone the repository from Bitbucket and update it to the :kbd:`NEMO-3.1` tag state:
+
+   .. code-block:: bash
+
+      hg clone -u NEMO-3.1 https://bitbucket.org/salishsea/nemo-code NEMO-code-3.1
+
+#. Set up a configuration.
+   We'll use :kbd:`GYRE` as an example and assume that we are building and running on :kbd:`jasper`:
+
+   .. code-block:: bash
+
+      cd modispl/util
+      ../modeles/UTIL/fait_config GYRE
+
+#. Edit :file:`../config/GYRE/BB_make.ldef` to add the appropriate pre-processing prefix for the system you are working on. For :kbd:`jasper` that is::
+
+     #-Q- jasper  prefix = -D
+
+   .. note::
+
+      If you are working on a system other than those that already have global makefile definitions in :file:`modipsl/util/AA_make.gdef` you will need to add an appropriate block of definitions to that file.
+
+#. Calculate compilation rules,
+   options,
+   and build dependencies so as to create :file:`modipsl/modelels/NEMO/WORK/AA_make`
+   (which is symlinked to :file:`modipsl/config/GYRE/scripts/BB_make`):
+
+   .. code-block:: bash
+
+      cd ../modeles/NEMO
+      ../UTIL/fait_AA_make
+
+   .. note::
+
+      :file:`fait_AA_make` *must* be run from the :file:`modipsl/modeles/NEMO/` directory.
+
+#. Remove any existing :file:`Makefiles` and create new ones:
+
+   .. code-block:: bash
+
+      cd ../../util
+      ./clr_make
+      ./ins_make -t jasper
+
+#. Compile and link the code:
+
+   .. code-block:: bash
+
+      cd ../config/GYRE
+      make clean
+      make
+
+    The results of a successful build are:
+
+    * a :file:`../../bin/opa` executable
+    * a :file:`../../lib/libioipsl.a` library
+    * a :file:`../../lib/oce/libopa.a` library
+
+#. Run the model:
+
+   .. code-block:: bash
+
+      cd EXP00
+      ../../../bin/opa
+
+   On :kbd:`jasper` the above command is only appopriate for short test runs.
+   Longer runs should be done using a `TORQUE batch job`_ script submitted via the :command:`qsub` command.
+
+   .. _TORQUE batch job: https://www.westgrid.ca/support/running_jobs#qsub
