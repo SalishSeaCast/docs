@@ -115,6 +115,18 @@ Build and Run NEMO-3.1
       ./clr_make
       ./ins_make -t jasper
 
+#. On :kbd:`jasper` several modules must be loaded prior to compiling and linking:
+
+   .. code-block:: bash
+
+       module load compiler/intel/12.1
+       module load library/intelmpi/4.0.3.008
+       module load library/netcdf/4.1.3
+       module load library/szip/2.1
+
+   That only needs to be done once per login so you may wish to add those commands to your :file:`$HOME/.bashrc` file
+   (See :ref:`.bashrc-snippets`).
+
 #. Compile and link the code:
 
    .. code-block:: bash
