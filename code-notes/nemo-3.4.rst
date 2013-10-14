@@ -74,27 +74,19 @@ Making a Project
 *   then change directory and make a project, e.g. 
     then for a new GYRE configuration using your new arch file ocean
 *   Note we need to add the key_nosignedzero for our fortran 90 compiler
+*   Add the netcdf4 key to use netcdf4 capabilities
 
     .. code-block:: bash
 
         cd ../CONFIG
-        ./makenemo -m ocean -r GYRE -n MY_GYRE add_key "key_nosignedzero"
-
-*   and need to change away from NetCDF4.  Should be able to do this with a compile flag but I don't have it working.  So 
- 
-    .. code-block:: bash
-
-        cd MY_GYRE/EXP00
-        emacs xmlio_server.def
-
-* and find the line "ln_nc4zip     = .TRUE." and change it to .FALSE.
-
+        ./makenemo -m ocean -r GYRE -n MY_GYRE add_key "key_nosignedzero key_netcdf4"
 
 Running the Code
 ----------------
 
     .. code-block:: bash
 
+       cd MY_GYRE/EXP00
        nice ./opa 
 
 .. _nemo: http://www.nemo-ocean.eu/
