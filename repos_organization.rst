@@ -1,7 +1,7 @@
 .. _team-repos:
 
-Plan for Mercurial Repositories
-===============================
+Organization of Mercurial Repositories
+======================================
 
 General
 -------

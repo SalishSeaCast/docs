@@ -12,10 +12,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   repos_organization
    bash_config
    hg_version_control
    sphinx_docs
-   repos_plan
    code-notes/index
 
 .. include:: license_description.txt
