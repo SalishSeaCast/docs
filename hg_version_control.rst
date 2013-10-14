@@ -48,3 +48,63 @@ this documentation focuses on command line use of Mercurial.
 The workflows described below should be easily translatable into the TortoiseHg interface and it also includes a command line interface.
 
 .. _TortoiseHg: http://tortoisehg.org/
+
+
+Mercurial Configuration
+-----------------------
+
+Mercurial uses configuration settings in your :file:`$HOME/.hgrc` file as global settings for everything you do with it.
+You should create or edit your :file:`$HOME/.hgrc` file to contain:
+
+.. code-block:: ini
+
+    [extensions]
+    color =
+    graphlog =
+    pager =
+    rebase =
+
+    [pager]
+    pager = LESS='FRX' less
+
+    [ui]
+    username = Your Name <your_email_address>
+    ignore = $HOME/.hgignore
+    ssh = ssh -C
+
+The :kbd:`[extensions]` section enables several useful Mercurial extensions:
+
+* :kbd:`color` shows log listing,
+  diffs,
+  etc. in colour
+
+* :kbd:`graphlog` provides the :command:`hg glog` command and the synonymous :command:`hg log -G` command that formats the output as a graph representing the revision history using ASCII characters to the left of the log
+
+* :kbd:`pager` sends output of Mercurial commands through the pager that you specify in the :kbd:`[pager]` section so that long output is displayed one page at a time
+
+  .. note::
+
+      The version of Mercurial on :kbd:`jasper` does not include the :kbd:`pager` extension and this extension should not be used there.
+
+* :kbd:`rebase` enables rebasing which is particularly useful when working in repositories to which several contributors are pushing changes.
+  As described below,
+  :kbd:`rebase` allows changes that have been pushed by other contributors to be pulled into your cloned repo while you have committed changes that have not been pushed without having to do frivolous branch merges.
+
+  .. todo::
+
+      Add link to section about :command:`hg pull --rebase` when it exists
+
+The :kbd:`[ui]` section configures the Mercurial user interface:
+
+* :kbd:`username` defines the name and email address that will be used in your commits.
+  You should use the same email address as the one you have registered on Bitbucket.
+
+* :kbd:`ignore` is the path and name of an ignore file to be applied to all repositories
+  (see below)
+
+* :kbd:`ssh` specifies the :command:`ssh` command to use when communicating with remote Mercurial instances like the one on Bitbucket.
+  Setting it to :command:`ssh -C` enables data compression.
+
+See the `Mercurial configuration file docs`_ for more information about configuration options.
+
+.. _Mercurial configuration file docs: http://www.selenic.com/mercurial/hgrc.5.html
