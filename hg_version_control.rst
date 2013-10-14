@@ -100,7 +100,7 @@ The :kbd:`[ui]` section configures the Mercurial user interface:
   You should use the same email address as the one you have registered on Bitbucket.
 
 * :kbd:`ignore` is the path and name of an ignore file to be applied to all repositories
-  (see below)
+  (see :ref:`global-ignore-file`)
 
 * :kbd:`ssh` specifies the :command:`ssh` command to use when communicating with remote Mercurial instances like the one on Bitbucket.
   Setting it to :command:`ssh -C` enables data compression.
@@ -108,3 +108,37 @@ The :kbd:`[ui]` section configures the Mercurial user interface:
 See the `Mercurial configuration file docs`_ for more information about configuration options.
 
 .. _Mercurial configuration file docs: http://www.selenic.com/mercurial/hgrc.5.html
+
+
+.. _global-ignore-file:
+
+Global Ignore File
+------------------
+
+Mercurial uses the file specified by :kbd:`ignore` in the :kbd:`[ui]` configuration section to define a set of ignore patterns that will be applied to all repos.
+The recommended path and name for that file is :file:`$HOME/.hgignore`.
+
+You should create or edit your :file:`$HOME/.hgignore` file to contain::
+
+  syntax: glob
+  *~
+  *.pyc
+  *.egg-info
+  .DS_Store
+  .coverage
+  .cache
+
+  syntax: regexp
+  (.*/)?\#[^/]*\#$
+  ^docs/(.*)build/
+
+The :kbd:`syntax: glob` section uses shell wildcard expansion to define file patterns to be ignored.
+
+The :kbd:`syntax: regexp` section uses regular expressions to define ignore patterns.
+The :kbd:`^docs/(.*)build/` pattern ignores the products of Sphinx documentation builds in :file:`docs/` directories.
+
+Most repos have their own :file:`.hgignore` file that defines patterns to ignore for that repo in addition to those specified globally.
+
+See the `ignore file syntax docs`_ for more information.
+
+.. _ignore file syntax docs: http://www.selenic.com/mercurial/hgignore.5.html
