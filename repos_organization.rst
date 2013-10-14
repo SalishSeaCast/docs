@@ -22,14 +22,12 @@ General
   .. _Sphinx: http://sphinx-doc.org/
   .. _salishsea.eos.ubc.ca: http://salishsea.eos.ubc.ca/
 
-* Docs from public repos will be rendered as HTML under the `salishsea.eos.ubc.ca`_ domain and on readthedocs.org as an alternative;
+* Docs from public repos will be rendered as HTML under the `salishsea.eos.ubc.ca`_ domain and on `readthedocs.org`_ as an alternative;
   readthedocs also provides PDF rendering
 
+  .. _readthedocs.org: https://readthedocs.org/profiles/salishsea/
+
 * Docs from private repos will be rendered as HTML in password protected areas under the `salishsea.eos.ubc.ca`_ domain
-
-.. todo::
-
-   Add link to project page on readthedocs.org once it exists
 
 
 Repositories
