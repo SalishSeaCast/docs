@@ -85,7 +85,7 @@ Build and Run NEMO-3.1
       cd modispl/util
       ../modeles/UTIL/fait_config GYRE
 
-#. Edit :file:`../config/GYRE/BB_make.ldef` to add the appropriate pre-processing prefix for the system you are working on. For :kbd:`jasper` that is::
+#. Edit :file:`../config/GYRE/scripts/BB_make.ldef` to add the appropriate pre-processing prefix for the system you are working on (near the end of the file). For :kbd:`jasper` that is::
 
      #-Q- jasper  prefix = -D
 
