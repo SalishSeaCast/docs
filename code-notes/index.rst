@@ -9,6 +9,7 @@ NEMO Code Notes
    oct2013_tarball
    nemo31
    nemo-3.4
+   nemo_3.4_westgrid
    compiler_options
-
+   
 
