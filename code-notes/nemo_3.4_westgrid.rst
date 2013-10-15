@@ -3,6 +3,18 @@ Notes on Downloading/Running NEMO 3.4 on Jasper
 
 Note, this set-up runs on one core on one processor.
 
+Getting your Jasper Shell Ready
+-------------------------------
+
+* make sure your shell is bash (echo $SHELL), if its not, write to Westgrid support and get it changed.
+* load the following modules (good idea to put these in your .bashrc file so you don't have to do it each time)
+
+.. code-block:: bash
+
+     module load compiler/intel/12.1
+     module load library/intelmpi/4.0.3.008
+     module load library/netcdf/4.1.3
+
 Getting the Code
 ----------------
 
