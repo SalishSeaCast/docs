@@ -9,4 +9,6 @@ NEMO Code Notes
    oct2013_tarball
    nemo31
    nemo-3.4
+   compiler_options
+
 
