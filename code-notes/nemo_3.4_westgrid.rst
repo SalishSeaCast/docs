@@ -6,7 +6,7 @@ Note, this set-up runs on one core on one processor.
 Getting the Code
 ----------------
 
-see `Notes on Downloading/Running NEMO 3.4 on Ocean Cluster including Salish`_
+see :ref:`GettingTheCodeNM34` in Notes on Downloading/Running NEMO 3.4 on Ocean Cluster including Salish
 
 Making a Project
 ----------------
@@ -79,7 +79,7 @@ Running the Code
 
 * PBS file: :file:`GYRE.pbs` containing::
 
-# Script for running simple GYRE configuration
+   # Script for running simple GYRE configuration
 
    #PBS -l procs=1
    #PBS -l pmem=500mb
@@ -92,6 +92,13 @@ Running the Code
    echo "Starting run at: `data`"
    ./opa
    echo "Program opa finished with exit code $? at: `date`"
+
+
+* and run
+
+    .. code-block:: bash
+
+       qsub GYRE.pbs
 
 
 .. _nemo: http://www.nemo-ocean.eu/

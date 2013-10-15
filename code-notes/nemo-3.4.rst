@@ -3,6 +3,8 @@ Notes on Downloading/Running NEMO 3.4 on Ocean Cluster including Salish
 
 Note, this set-up runs on one core on one processor.
 
+.. _GettingTheCodeNM34:
+
 Getting the Code
 ----------------
 
