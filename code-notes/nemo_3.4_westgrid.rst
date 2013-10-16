@@ -7,13 +7,15 @@ Getting your Jasper Shell Ready
 -------------------------------
 
 * make sure your shell is bash (echo $SHELL), if its not, write to Westgrid support and get it changed.
-* load the following modules (good idea to put these in your .bashrc file so you don't have to do it each time)
+* load the following modules (just putting these in my .bashrc file didn't work for me.)
 
 .. code-block:: bash
 
      module load compiler/intel/12.1
      module load library/intelmpi/4.0.3.008
      module load library/netcdf/4.1.3
+     module load library/szip/2.1
+
 
 Getting the Code
 ----------------
@@ -55,7 +57,7 @@ Making a Project
     %NCDF_LIB            -L/lustre/jasper/software/netcdf/netcdf-4.1.3/lib -lnetcdf -lnetcdff -lhdf5_hl -lhdf5 -lz -lsz
     %FC                  mpiifort
     %FCFLAGS 	         -c -fpp -r8 -O3 -assume byterecl -convert big_endian -heap-arrays
-    %F_O                 -O3 -r8 $(F_P)  -I$(MODDIR) -I$(MODDIR)/oce -module $(MODDIR) -assume byterecl -convert big_endian -heap-arrays $(NCDF_INC)
+    %F_O                 -O3 -r8 $(F_P)  -I$(MODDIR) -module $(MODDIR) -assume byterecl -convert big_endian -heap-arrays $(NCDF_INC)
     %FFLAGS 	         $(F_O) -extend_source
     %LD                  mpiifort
     %PC                  cpp
@@ -66,8 +68,7 @@ Making a Project
     %MK                  make
     %USER_INC            %NCDF_INC
     %USER_LIB            %NCDF_LIB 
-    %LIBDIR 	         ../../../lib
-    %MODDIR  	         $(LIBDIR)
+    %MODDIR  	         ../../../lib
 
 *   then change directory and make a project, e.g. 
     then for a new GYRE configuration using your new arch file ocean
@@ -97,11 +98,17 @@ Running the Code
    #PBS -l pmem=500mb
    #PBS -l walltime=00:05:00 
 
+   module load compiler/intel/12.1
+   module load library/intelmpi/4.0.3.008
+   module load library/netcdf/4.1.3
+   module load library/szip/2.1
+
+   module list
    echo "Current working directory is `pwd`"
    cd dev_v3_4_STABLE_2012/NEMOGCM/CONFIG/MY_GYRE/EXP00
    echo "Current working directory is `pwd`"
 
-   echo "Starting run at: `data`"
+   echo "Starting run at: `date`"
    ./opa
    echo "Program opa finished with exit code $? at: `date`"
 
