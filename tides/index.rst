@@ -1,5 +1,5 @@
 ***************
-Notes on tidal information and evaluation
+Tidal evaluation
 ***************
 
 .. toctree::
