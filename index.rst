@@ -17,5 +17,6 @@ Contents:
    hg_version_control
    sphinx_docs
    code-notes/index
+   tides/index
 
 .. include:: license_description.txt
