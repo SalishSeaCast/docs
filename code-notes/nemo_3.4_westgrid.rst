@@ -1,7 +1,7 @@
 Notes on Downloading/Running NEMO 3.4 on Jasper
 ===============================================
 
-Note, this set-up runs on one core on one processor.
+Set-up for runs on one processor or multiprocessors included.
 
 Getting your Jasper Shell Ready
 -------------------------------
@@ -73,14 +73,15 @@ Making a Project
 *   then change directory and make a project, e.g. 
     then for a new GYRE configuration using your new arch file ocean
 *   Add the netcdf4 key to use netcdf4 capabilities
+*   Exactly the same (except GYRE -> AMM12) for AMM12 
 
     .. code-block:: bash
 
         cd ../CONFIG
         ./makenemo -m ifort_jasper -r GYRE -n MY_GYRE add_key "key_netcdf4"
 
-Running the Code
-----------------
+Running the Code: GYRE
+----------------------
 
 * Go to your version (where you want the results to end up)
 
@@ -118,6 +119,55 @@ Running the Code
     .. code-block:: bash
 
        qsub GYRE.pbs
+
+Running the CODE: AMM12: 32 Processors
+--------------------------------------
+
+* Need to get the AMM12 forcing and initialization files, untar and unzip
+
+    .. code-block:: bash
+
+       curl -LO http://dodsp.idris.fr/reee512/NEMO/amm12_inputs_v3_4.tar
+       cd dev_v3_4_STABLE_2012/NEMOGCM/CONFIG/MY_AMM12/EXP00/
+       tar xvf ~/amm12_inputs_v3_4.tar
+       gunzip *.gz
+       rm ~/amm12_input_v3_4.tar
+
+* To make AMM12 run on multiple processors, edit the namelist file, changing the following lines
+
+   .. code-block:: bash
+      jpni = 8
+      jpnj = 4
+      jnpij = 32
+
+* Need a .pbs file for multiple core run
+  PBS file: :file:`AMM_multi.pbs` containing::
+
+    # Script for running multiple processor AMM12  configuration
+
+    #PBS -l procs=32
+    #PBS -l pmem=500mb
+    #PBS -l walltime=00:15:00 
+
+    module load compiler/intel/12.1
+    module load library/intelmpi/4.0.3.008
+    module load library/netcdf/4.1.3
+    module load library/szip/2.1
+
+    module list
+    echo "Current working directory is `pwd`"
+    cd dev_v3_4_STABLE_2012/NEMOGCM/CONFIG/MY_AMM12/EXP00
+    echo "Current working directory is `pwd`"
+
+    echo "Starting run at: `date`"
+    mpiexec ./opa
+
+* and run
+
+    .. code-block:: bash
+
+       qsub AMM12_multi.pbs
+
 
 
 .. _nemo: http://www.nemo-ocean.eu/
