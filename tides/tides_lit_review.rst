@@ -3,15 +3,19 @@ Literature review (tides)
 
 Evaluating the performance of the NEMO model of the Strait of Georgia will begin with an evaluation of its skill at reproducing the tides in the domain. So how have other authors done this?
 
+Also, how have other authors forced their models with tidal data?
+
 Foreman et al. (1995) 
 -------------------------
-* Barotropic model of the Strait of Georgia
+1. 	* Barotropic model of the Strait of Georgia
 
-* Used tidal data at 38 sites, subsampled from a list of 90 tidal stations (taken from Parker 1977) to only include stations with more than 120 days of records. 
+	* Used tidal data at 38 sites, subsampled from a list of 90 tidal stations (taken from Parker 1977) to only include stations with more than 120 days of records. 
 
-* Calculated amplitudes and phases of the eight major consituents at each tidal observation site by harmonic analysis (Foreman 1977)
+	* Calculated amplitudes and phases of the eight major consituents at each tidal observation site by harmonic analysis (Foreman 1977)
 
-* 'As discussed and illustrated by Foreman and Walters [1990], the harmonics calculated from the observations are only estimates of the true tides.' (Foreman et al 1995)
+	* 'As discussed and illustrated by Foreman and Walters [1990], the harmonics calculated from the observations are only estimates of the true tides.' (Foreman et al 1995)
+
+2. 	* Model forced with data
 
 Foreman et al. (2000)
 ---------------------------
