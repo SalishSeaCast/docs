@@ -1,11 +1,13 @@
-******************************
-NEMO-code Repository Evolution
-******************************
+********************
+NEMO-code Repository
+********************
 
-These notes describe the evolution of the Salish Sea MEOPAR project `NEMO-code`_ repository.
+These notes describe the Salish Sea MEOPAR project `NEMO-code`_ repository and its maintenance.
 They are a narrative guide to the Mercurial log and diffs that can be obtained from the repository itself or via the Bitbucket interface.
 
 .. _NEMO-code: https://bitbucket.org/salishsea/nemo-code
+
+The `NEMO-code`_ repo is a Mercurial repository in which is maintained the merger of the trunk of the main NEMO :command:`svn` repository and the changes made by the Salish Sea MEOPAR project team.
 
 .. note::
 
@@ -22,135 +24,83 @@ They are a narrative guide to the Mercurial log and diffs that can be obtained f
     .. _Susan Allen: mailto://sallen@eos.ubc.ca
 
 
-Initialization to NEMO-3.1
-==========================
+Mirroring the NEMO :command:`svn` Repo
+======================================
 
-The following steps took the `NEMO-code`_ repo from initialization to NEMO-3.1 that could be built on :kbd:`jasper.westgrid.ca` and used to successfully run the :kbd:`GYRE` configuration:
+The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/nemo/svn/trunk and also a read-only Mercurial repository.
+It was intialized with:
 
-* An :command:`svn` checkout of the trunk of the :kbd:`modipsl` framework was done from http://forge.ipsl.jussieu.fr/igcmg/svn/modipsl/trunk.
-  That yielded revision 2163.
-  The repo state was tagged as `modipsl-r2163`_.
+.. code-block:: bash
 
-  .. _modipsl-r2163: https://bitbucket.org/salishsea/nemo-code/commits/tag/modipsl-r2163
+    cd /ocean/sallen/hg_repos
+    svn --username "dlatornell" co -r 3819 http://forge.ipsl.jussieu.fr/nemo/svn/trunk NEMO-hg-mirror
+    hg init NEMO-hg-mirror
+    cd NEMO-hg-mirror
+    cat > .hgignore
+    .svn
+    DOC/NEMO_book.pdf
+    ctrl-d
+    hg add
+    hg ci -m"Initialize NEMO svn mirror at rev 3819."
 
-  .. note::
-
-      At this point the only directories in the :kbd:`modipsl` tree that are populated at :file:`doc/` and :file:`util/`.
-      The :file:`bin/`,
-      :file:`config/`,
-      :file:`lib/`,
-      :file:`modeles/`,
-      and :file:`tmp/` directories are empty and therefore not included in the Mercurial repo.
-
-* Added J-P Paquin's build script and :file:`util/AA_make.gdef` from 2-Oct-2013 :file:`CODE.tar` tarball.
-  The latter is named :file:`AA_make.gdef_BIO`.
-
-* Added definitions for :file:`util/model` script to :file:`util/mod.def` to get NEMO-3.1 based on those in that file in the 2-Oct-2013 :file:`CODE.tar` tarball.
-
-* Used the :file:`modipsl/util/model` script to obtain the NEMO-3.1 code and other supporting files.
-  The commands to do so were:
-
-  .. code-block:: bash
-
-      cd modipsl/util
-      ./model NEMO_31
-
-  Added the resulting 1295 files
-  (some of which are in :file:`.svn/` directories).
-
-* Added global makefile definitions for :kbd:`jasper.westgrid.ca` and the BIO :kbd:`HPC` cluster to :file:`util/AA_make.gdef`.
-  The source for the former was Paul Myers' NEMO-3.1 installation on :kbd:`jasper` in :file:`/home/pmyers/NEMODRAK_3.1/DRAKKAR/modipsl/util/AA_make.gdef`.
-  The latter came from :file:`uitl/AA_make.gdef` in the 2-Oct-2013 :file:`CODE.tar` tarball.
+:command:`svn` v1.7.5 was used on :kbd:`salish` for the :command:`svn` part of the initialization.
 
 
-Build and Run NEMO-3.1
-----------------------
+.. _PullChangesFromNEMOsvn:
 
-.. note::
+Workflow to Pull Changes from NEMO :command:`svn` Repo
+------------------------------------------------------
 
-    These instructions are included for completeness.
-    The Salish Sea MEOPAR project does not use pristine NEMO-3.1.
+.. todo::
 
-#. Clone the repository from Bitbucket and update it to the :kbd:`NEMO-3.1` tag state:
+    Write Workflow to Pull Changes from NEMO :command:`svn` Repo
 
-   .. code-block:: bash
 
-      hg clone -u NEMO-3.1 ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code-3.1
-      cd NEMO-code-3.1
-      mkdir modipsl/bin modispl/lib modipsl/tmp
+Workflow to Merge :kbd:`trunk` and Salish Sea Revisions
+-------------------------------------------------------
 
-#. Set up a configuration.
-   We'll use :kbd:`GYRE` as an example and assume that we are building and running on :kbd:`jasper`:
+Merging changes from NEMO :kbd:`trunk` and the Salish Sea central `NEMO-code` repo on Bitbucket is done in a repo that is used for only that purpose.
+Doug does the merges on his laptop.
+The repo in which the merging is done was created by cloning the :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repo:
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      cd modispl/util
-      ../modeles/UTIL/fait_config GYRE
+    hg clone ssh://sable.eos.ubc.ca//ocean/sallen/hg_repos/NEMO-hg-mirror NEMO-mirror-merge
 
-#. Edit :file:`../config/GYRE/scripts/BB_make.ldef` to add the appropriate pre-processing prefix for the system you are working on (near the end of the file). For :kbd:`jasper` that is::
+and setting the paths in its :file:`.hg/hgrc` to:
 
-     #-Q- jasper  prefix = -D
+.. code-block:: ini
 
-   .. note::
+    [paths]
+    bb = ssh://hg@bitbucket.org/salishsea/nemo-code
+    default-push = ssh://hg@bitbucket.org/salishsea/nemo-code
+    mirror = ssh://sable//ocean/sallen/hg_repos/NEMO-hg-mirror
 
-      If you are working on a system other than those that already have global makefile definitions in :file:`modipsl/util/AA_make.gdef` you will need to add an appropriate block of definitions to that file.
+Those paths mean that the repo for :command:`hg pull` and :command:`hg incoming` commands must be specified explicitly.
+The :kbd:`bb` and :kbd:`mirror` paths are provided to facilitate pulling from `NEMO-code`_ on Bitbucket and :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror`,
+respectively.
+:command:`hg push` and :command:`hg outgoing` commands will act on the `NEMO-code`_ repo,
+unless otherwise specified.
 
-#. Calculate compilation rules,
-   options,
-   and build dependencies so as to create :file:`modipsl/modelels/NEMO/WORK/AA_make`
-   (which is symlinked to :file:`modipsl/config/GYRE/scripts/BB_make`):
+After the :ref:`PullChangesFromNEMOsvn` has been completed those changes from `NEMO-code`_ are pulled and updated into :kbd:`NEMO-mirror-merge`,
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      cd ../modeles/NEMO
-      ../UTIL/fait_AA_make
+    cd NEMO-mirror-merge
+    hg pull --update bb
 
-   .. note::
+The changes from :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` are also pulled and updated into :kbd:`NEMO-mirror-merge`,
+resolving any merge conflicts as necessary:
 
-      :file:`fait_AA_make` *must* be run from the :file:`modipsl/modeles/NEMO/` directory.
+.. code-block:: bash
 
-#. Remove any existing :file:`Makefiles` and create new ones:
+    hg pull --update mirror
 
-   .. code-block:: bash
+Finally,
+the result of the updates and merges is pushed to `NEMO-code`_:
 
-      cd ../../util
-      ./clr_make
-      ./ins_make -t jasper
+.. code-block:: bash
 
-#. On :kbd:`jasper` several modules must be loaded prior to compiling and linking:
+    hg push bb
 
-   .. code-block:: bash
-
-       module load compiler/intel/12.1
-       module load library/intelmpi/4.0.3.008
-       module load library/netcdf/4.1.3
-       module load library/szip/2.1
-
-   That only needs to be done once per login so you may wish to add those commands to your :file:`$HOME/.bashrc` file
-   (See :ref:`.bashrc-snippets`).
-
-#. Compile and link the code:
-
-   .. code-block:: bash
-
-      cd ../config/GYRE
-      make clean
-      make
-
-    The results of a successful build are:
-
-    * a :file:`../../bin/opa` executable
-    * a :file:`../../lib/libioipsl.a` library
-    * a :file:`../../lib/oce/libopa.a` library
-
-#. Run the model:
-
-   .. code-block:: bash
-
-      cd EXP00
-      ../../../bin/opa
-
-   On :kbd:`jasper` the above command is only appopriate for short test runs.
-   Longer runs should be done using a `TORQUE batch job`_ script submitted via the :command:`qsub` command.
-
-   .. _TORQUE batch job: https://www.westgrid.ca/support/running_jobs#qsub
+If other users have pushed changes to `NEMO-code`_ while merge conflicts were being handled :command:`hg pull --rebase` can be used to bring in those changes and deal with any additional merge conflicts.
