@@ -52,7 +52,7 @@ Making a Project
 
 
     %LIB_MPI             MPI2
-    %LIB_MPI_BIS        
+    %LIB_MPI_BIS
     %NCDF_INC            -I/lustre/jasper/software/netcdf/netcdf-4.1.3/include -lhdf5_hl -lhdf5 -lz -lsz
     %NCDF_LIB            -L/lustre/jasper/software/netcdf/netcdf-4.1.3/lib -lnetcdf -lnetcdff -lhdf5_hl -lhdf5 -lz -lsz
     %FC                  mpiifort
@@ -61,19 +61,19 @@ Making a Project
     %FFLAGS 	         $(F_O) -extend_source
     %LD                  mpiifort
     %PC                  cpp
-    %FPPFLAGS            -P -C -traditional 
+    %FPPFLAGS            -P -C -traditional
     %LDFLAGS
-    %AR                  ar 
+    %AR                  ar
     %ARFLAGS             -r
     %MK                  make
     %USER_INC            %NCDF_INC
-    %USER_LIB            %NCDF_LIB 
+    %USER_LIB            %NCDF_LIB
     %MODDIR  	         ../../../lib
 
-*   then change directory and make a project, e.g. 
+*   then change directory and make a project, e.g.
     then for a new GYRE configuration using your new arch file ocean
 *   Add the netcdf4 key to use netcdf4 capabilities
-*   Exactly the same (except GYRE -> AMM12) for AMM12 
+*   Exactly the same (except GYRE -> AMM12) for AMM12
 
     .. code-block:: bash
 
@@ -88,7 +88,7 @@ Running the Code: GYRE
     .. code-block:: bash
 
        cd MY_GYRE/EXP00
-      
+
 * Created a .pbs run file. For a simple run of GYRE that could be
 
 * PBS file: :file:`GYRE.pbs` containing::
@@ -97,7 +97,7 @@ Running the Code: GYRE
 
    #PBS -l procs=1
    #PBS -l pmem=500mb
-   #PBS -l walltime=00:05:00 
+   #PBS -l walltime=00:05:00
 
    module load compiler/intel/12.1
    module load library/intelmpi/4.0.3.008
@@ -136,6 +136,7 @@ Running the CODE: AMM12: 32 Processors
 * To make AMM12 run on multiple processors, edit the namelist file, changing the following lines
 
    .. code-block:: bash
+
       jpni = 8
       jpnj = 4
       jnpij = 32
@@ -147,7 +148,7 @@ Running the CODE: AMM12: 32 Processors
 
     #PBS -l procs=32
     #PBS -l pmem=500mb
-    #PBS -l walltime=00:15:00 
+    #PBS -l walltime=00:15:00
 
     module load compiler/intel/12.1
     module load library/intelmpi/4.0.3.008
