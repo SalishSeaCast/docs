@@ -22,10 +22,12 @@ The file is in sections:
    !!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 The first part is the Run Management (note MPI directives are further down, under misc)
+
   * nn_intend : Number of time steps
   * nn_date0 : Date to start by
   * nn_write : frequency of write in the NetCDF output files
   * nn_stock : restart file frequency
+
 and restart controls.
 
   .. code-block :: bash
@@ -272,7 +274,7 @@ Section Four, Boundary Conditions
 * Check AGRIF conditions: sponge layer in particular
 * Unstructured open boundaries, may be able to greatly simplify or even remove
 * nambdy_dta open boundary files
-* nambdy_tide tide files 
+* nambdy_tide tide files
 
   .. code-block :: bash
 
@@ -537,7 +539,7 @@ Section 6 : Tracers
 * AMM12 has split-explicit free surface key_dynspg_ts
 * key_ldfslp for s-coordinates, won't need in z
 * key_zdfgls for GLS vertical mixing
-* Hydrostatic pressure depends on z coordinate ln_hpg 
+* Hydrostatic pressure depends on z coordinate ln_hpg
 * Horz Eddy viscosity set here rn_ahm_0_lap = 60.0 m2/s
 * Vert Eddy viscosity/diffusivity rn_avt0, rn_avm0 = 0.1e-6 m2/s
 
@@ -563,8 +565,8 @@ Section 6 : Tracers
    !-----------------------------------------------------------------------
    &namdyn_vor    !   option of physics/algorithm (not control by CPP keys)
    !-----------------------------------------------------------------------
-      ln_dynvor_ene = .false. !  energy    conserving scheme  
-      ln_dynvor_ens = .false. !  enstrophy conserving scheme    
+      ln_dynvor_ene = .false. !  energy    conserving scheme
+      ln_dynvor_ens = .false. !  enstrophy conserving scheme
       ln_dynvor_mix = .false. !  mixed scheme
       ln_dynvor_een = .true.  !  energy & enstrophy scheme
    /
@@ -665,7 +667,7 @@ Section 6 : Tracers
    !-----------------------------------------------------------------------
    &namzdf_ddm    !   double diffusive mixing parameterization             ("key_zdfddm")
    !-----------------------------------------------------------------------
-   NOT USED 
+   NOT USED
    /
    !-----------------------------------------------------------------------
    &namzdf_tmx    !   tidal mixing parameterization                        ("key_zdftmx")
@@ -768,7 +770,7 @@ Section 6 : Tracers
    !-----------------------------------------------------------------------
    &namgap       !   level mean model-data gap                             ('key_diagap')
    !-----------------------------------------------------------------------
-   NOT USED   
+   NOT USED
    /
    !-----------------------------------------------------------------------
    &namflo       !   float parameters                                      ("key_float")
