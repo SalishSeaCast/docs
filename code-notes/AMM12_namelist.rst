@@ -3,23 +3,23 @@ Understanding the AMM12 Namelist
 
 The file is in sections:
 
-  .. code-block :: bash
+.. code-block:: fortran
 
-   !!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-   !! NEMO/OPA  :  1 - run manager      (namrun)
-   !! namelists    2 - Domain           (namzgr, namzgr_sco, namdom, namtsd)
-   !!              3 - Surface boundary (namsbc, namsbc_ana, namsbc_flx, namsbc_clio, namsbc_core
-   !!                                    namsbc_cpl, namtra_qsr, namsbc_rnf,
-   !!                                    namsbc_apr, namsbc_ssr, namsbc_alb)
-   !!              4 - lateral boundary (namlbc, namcla, namobc, namagrif, nambdy, nambdy_tide)
-   !!              5 - bottom  boundary (nambfr, nambbc, nambbl)
-   !!              6 - Tracer           (nameos, namtra_adv, namtra_ldf, namtra_dmp)
-   !!              7 - dynamics         (namdyn_adv, namdyn_vor, namdyn_hpg, namdyn_spg, namdyn_ldf)
-   !!              8 - Verical physics  (namzdf, namzdf_ric, namzdf_tke, namzdf_kpp, namzdf_ddm, namzdf_tmx)
-   !!              9 - diagnostics      (namnc4, namtrd, namspr, namflo, namptr, namhsb)
-   !!             10 - miscellaneous    (namsol, nammpp, nammpp_dyndist, namctl)
-   !!             11 - Obs & Assim      (namobs, nam_asminc)
-   !!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ !!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ !! NEMO/OPA  :  1 - run manager      (namrun)
+ !! namelists    2 - Domain           (namzgr, namzgr_sco, namdom, namtsd)
+ !!              3 - Surface boundary (namsbc, namsbc_ana, namsbc_flx, namsbc_clio, namsbc_core
+ !!                                    namsbc_cpl, namtra_qsr, namsbc_rnf,
+ !!                                    namsbc_apr, namsbc_ssr, namsbc_alb)
+ !!              4 - lateral boundary (namlbc, namcla, namobc, namagrif, nambdy, nambdy_tide)
+ !!              5 - bottom  boundary (nambfr, nambbc, nambbl)
+ !!              6 - Tracer           (nameos, namtra_adv, namtra_ldf, namtra_dmp)
+ !!              7 - dynamics         (namdyn_adv, namdyn_vor, namdyn_hpg, namdyn_spg, namdyn_ldf)
+ !!              8 - Verical physics  (namzdf, namzdf_ric, namzdf_tke, namzdf_kpp, namzdf_ddm, namzdf_tmx)
+ !!              9 - diagnostics      (namnc4, namtrd, namspr, namflo, namptr, namhsb)
+ !!             10 - miscellaneous    (namsol, nammpp, nammpp_dyndist, namctl)
+ !!             11 - Obs & Assim      (namobs, nam_asminc)
+ !!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 The first part is the Run Management (note MPI directives are further down, under misc)
 
@@ -30,38 +30,38 @@ The first part is the Run Management (note MPI directives are further down, unde
 
 and restart controls.
 
-  .. code-block :: bash
+.. code-block:: fortran
 
-   !!======================================================================
-   !!                   ***  Run management namelists  ***
-   !!======================================================================
-   !!   namrun        parameters of the run
-   !!======================================================================
-   !
-   !-----------------------------------------------------------------------
-   &namrun        !   parameters of the run
-   !-----------------------------------------------------------------------
-      nn_no       =       0   !  job number (no more used...)
-      cn_exp      =  "AMM12"  !  experience name
-      nn_it000    =       1   !  first time step
-      nn_itend    =     576   !  last  time step (std 1 day = 576)
-      nn_date0    =  20070101 !  date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
-      nn_leapy    =       1   !  Leap year calendar (1) or not (0)
-      ln_rstart   =  .false.  !  start from rest (F) or from a restart file (T)
-      nn_rstctl   =       0   !  restart control => activated only if ln_rstart = T
-                              !    = 0 nn_date0 read in namelist ; nn_it000 : read in namelist
-                              !    = 1 nn_date0 read in namelist ; nn_it000 : check consistancy between namelist and restart
-                              !    = 2 nn_date0 read in restart  ; nn_it000 : check consistancy between namelist and restart
-      cn_ocerst_in  = "restart"   !  suffix of ocean restart name (input)
-      cn_ocerst_out = "restart"   !  suffix of ocean restart name (output)
-      nn_istate   =       0   !  output the initial state (1) or not (0)
-      nn_stock    =     576   !  frequency of creation of a restart file (modulo referenced to 1)
-      nn_write    =      12   !  frequency of write in the output file   (modulo referenced to nit000)
-      ln_dimgnnn  = .false.   !  DIMG file format: 1 file for all processors (F) or by processor (T)
-      ln_mskland  = .false.   !  mask land points in NetCDF outputs (costly: + ~15%)
-      ln_clobber  = .false.   !  clobber (overwrite) an existing file
-      nn_chunksz  =       0   !  chunksize (bytes) for NetCDF file (works only with iom_nf90 routines)
-   /
+ !!======================================================================
+ !!                   ***  Run management namelists  ***
+ !!======================================================================
+ !!   namrun        parameters of the run
+ !!======================================================================
+ !
+ !-----------------------------------------------------------------------
+ &namrun        !   parameters of the run
+ !-----------------------------------------------------------------------
+    nn_no       =       0   !  job number (no more used...)
+    cn_exp      =  "AMM12"  !  experience name
+    nn_it000    =       1   !  first time step
+    nn_itend    =     576   !  last  time step (std 1 day = 576)
+    nn_date0    =  20070101 !  date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
+    nn_leapy    =       1   !  Leap year calendar (1) or not (0)
+    ln_rstart   =  .false.  !  start from rest (F) or from a restart file (T)
+    nn_rstctl   =       0   !  restart control => activated only if ln_rstart = T
+                            !    = 0 nn_date0 read in namelist ; nn_it000 : read in namelist
+                            !    = 1 nn_date0 read in namelist ; nn_it000 : check consistancy between namelist and restart
+                            !    = 2 nn_date0 read in restart  ; nn_it000 : check consistancy between namelist and restart
+    cn_ocerst_in  = "restart"   !  suffix of ocean restart name (input)
+    cn_ocerst_out = "restart"   !  suffix of ocean restart name (output)
+    nn_istate   =       0   !  output the initial state (1) or not (0)
+    nn_stock    =     576   !  frequency of creation of a restart file (modulo referenced to 1)
+    nn_write    =      12   !  frequency of write in the output file   (modulo referenced to nit000)
+    ln_dimgnnn  = .false.   !  DIMG file format: 1 file for all processors (F) or by processor (T)
+    ln_mskland  = .false.   !  mask land points in NetCDF outputs (costly: + ~15%)
+    ln_clobber  = .false.   !  clobber (overwrite) an existing file
+    nn_chunksz  =       0   !  chunksize (bytes) for NetCDF file (works only with iom_nf90 routines)
+ /
 
 The next part is setting up the grid and bathymetry
  * vertical coordinate, switch between z and s-coordinates
@@ -72,60 +72,60 @@ The next part is setting up the grid and bathymetry
  * rn_rd : tracer time steps
  * initialization of TS with input data, and damping back to that data.
 
-  .. code-block :: bash
+.. code-block:: fortran
 
-   !!======================================================================
-   !!                      ***  Domain namelists  ***
-   !!======================================================================
-   !!   namzgr       vertical coordinate
-   !!   namzgr_sco   s-coordinate or hybrid z-s-coordinate
-   !!   namdom       space and time domain (bathymetry, mesh, timestep)
-   !!   namtsd       data: temperature & salinity
-   !!======================================================================
-   !
-   !-----------------------------------------------------------------------
-   &namzgr        !   vertical coordinate
-   !-----------------------------------------------------------------------
-      ln_zco      = .false.   !  z-coordinate - full    steps   (T/F)      ("key_zco" may also be defined)
-      ln_zps      = .false.   !  z-coordinate - partial steps   (T/F)
-      ln_sco      = .true.    !  s- or hybrid z-s-coordinate    (T/F)
-   /
-   !-----------------------------------------------------------------------
-   &namzgr_sco    !   s-coordinate or hybrid z-s-coordinate
-   !-----------------------------------------------------------------------
-   NOT IMPORTANT FOR Z-COORDINATES
-   /
-   !-----------------------------------------------------------------------
-   &namdom        !   space and time domain (bathymetry, mesh, timestep)
-   !-----------------------------------------------------------------------
-      nn_bathy    =    1      !  compute (=0) or read (=1) the bathymetry file
-      nn_closea    =   0      !  remove (=0) or keep (=1) closed seas and lakes (ORCA)
-      nn_msh      =    0      !  create (=1) a mesh file or not (=0)
-      rn_hmin     =   -3.     !  min depth of the ocean (>0) or min number of ocean level (<0)
-      rn_e3zps_min=   20.     !  partial step thickness is set larger than the minimum of
-      rn_e3zps_rat=    0.1    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
-                              !
-      rn_rdt      =  150.     !  time step for the dynamics (and tracer if nn_acc=0)
-      nn_baro     =   30      !  number of barotropic time step            ("key_dynspg_ts")
-      rn_atfp     =    0.1    !  asselin time filter parameter
-      nn_acc      =    0      !  acceleration of convergence : =1      used, rdt < rdttra(k)
-                                    !                          =0, not used, rdt = rdttra
-      rn_rdtmin   =   300.          !  minimum time step on tracers (used if nn_acc=1)
-      rn_rdtmax   =   300.          !  maximum time step on tracers (used if nn_acc=1)
-      rn_rdth     =  300.           !  depth variation of tracer time step  (used if nn_acc=1)
-   /
-   !-----------------------------------------------------------------------
-   &namtsd    !   data : Temperature  & Salinity
-   !-----------------------------------------------------------------------
-   !          ! file name ! frequency (hours)    ! variable ! time interp. ! clim  !'yearly' or ! weights  ! rotation !
-   !          !           !  (if <0  months)     !   name   !  (logical)   ! (T/F) ! 'monthly'  ! filename ! pairing  !
-      sn_tem  = 'data_1m_potential_temperature_nomask', -1,'votemper',  .true.  , .true., 'yearly'   , ' '      , ' '
-      sn_sal  = 'data_1m_salinity_nomask'             , -1,'vosaline',  .true.  , .true., 'yearly'   , ''       , ' '
-      !
-      cn_dir        = './'     !  root directory for the location of the runoff files
-      ln_tsd_init   = .false.   !  Initialisation of ocean T & S with T &S input data (T) or not (F)
-      ln_tsd_tradmp = .false.   !  damping of ocean T & S toward T &S input data (T) or not (F)
-   /
+ !!======================================================================
+ !!                      ***  Domain namelists  ***
+ !!======================================================================
+ !!   namzgr       vertical coordinate
+ !!   namzgr_sco   s-coordinate or hybrid z-s-coordinate
+ !!   namdom       space and time domain (bathymetry, mesh, timestep)
+ !!   namtsd       data: temperature & salinity
+ !!======================================================================
+ !
+ !-----------------------------------------------------------------------
+ &namzgr        !   vertical coordinate
+ !-----------------------------------------------------------------------
+    ln_zco      = .false.   !  z-coordinate - full    steps   (T/F)      ("key_zco" may also be defined)
+    ln_zps      = .false.   !  z-coordinate - partial steps   (T/F)
+    ln_sco      = .true.    !  s- or hybrid z-s-coordinate    (T/F)
+ /
+ !-----------------------------------------------------------------------
+ &namzgr_sco    !   s-coordinate or hybrid z-s-coordinate
+ !-----------------------------------------------------------------------
+ NOT IMPORTANT FOR Z-COORDINATES
+ /
+ !-----------------------------------------------------------------------
+ &namdom        !   space and time domain (bathymetry, mesh, timestep)
+ !-----------------------------------------------------------------------
+    nn_bathy    =    1      !  compute (=0) or read (=1) the bathymetry file
+    nn_closea    =   0      !  remove (=0) or keep (=1) closed seas and lakes (ORCA)
+    nn_msh      =    0      !  create (=1) a mesh file or not (=0)
+    rn_hmin     =   -3.     !  min depth of the ocean (>0) or min number of ocean level (<0)
+    rn_e3zps_min=   20.     !  partial step thickness is set larger than the minimum of
+    rn_e3zps_rat=    0.1    !  rn_e3zps_min and rn_e3zps_rat*e3t, with 0<rn_e3zps_rat<1
+                            !
+    rn_rdt      =  150.     !  time step for the dynamics (and tracer if nn_acc=0)
+    nn_baro     =   30      !  number of barotropic time step            ("key_dynspg_ts")
+    rn_atfp     =    0.1    !  asselin time filter parameter
+    nn_acc      =    0      !  acceleration of convergence : =1      used, rdt < rdttra(k)
+                                  !                          =0, not used, rdt = rdttra
+    rn_rdtmin   =   300.          !  minimum time step on tracers (used if nn_acc=1)
+    rn_rdtmax   =   300.          !  maximum time step on tracers (used if nn_acc=1)
+    rn_rdth     =  300.           !  depth variation of tracer time step  (used if nn_acc=1)
+ /
+ !-----------------------------------------------------------------------
+ &namtsd    !   data : Temperature  & Salinity
+ !-----------------------------------------------------------------------
+ !          ! file name ! frequency (hours)    ! variable ! time interp. ! clim  !'yearly' or ! weights  ! rotation !
+ !          !           !  (if <0  months)     !   name   !  (logical)   ! (T/F) ! 'monthly'  ! filename ! pairing  !
+    sn_tem  = 'data_1m_potential_temperature_nomask', -1,'votemper',  .true.  , .true., 'yearly'   , ' '      , ' '
+    sn_sal  = 'data_1m_salinity_nomask'             , -1,'vosaline',  .true.  , .true., 'yearly'   , ''       , ' '
+    !
+    cn_dir        = './'     !  root directory for the location of the runoff files
+    ln_tsd_init   = .false.   !  Initialisation of ocean T & S with T &S input data (T) or not (F)
+    ln_tsd_tradmp = .false.   !  damping of ocean T & S toward T &S input data (T) or not (F)
+ /
 
 Part 3 is the surface boundary conditions
 
@@ -133,7 +133,7 @@ Part 3 is the surface boundary conditions
 * ln_rnf sets runoffs, in namsbc_rnf set files and configure river inflow
 * left in the penetrative light formulation.  Suspect it is turned off here, but docs not clear.
 
-  .. code-block :: bash
+  .. code-block:: fortran
 
    !!======================================================================
    !!            ***  Surface Boundary Condition namelists  ***
@@ -276,7 +276,7 @@ Section Four, Boundary Conditions
 * nambdy_dta open boundary files
 * nambdy_tide tide files
 
-  .. code-block :: bash
+  .. code-block:: fortran
 
    !!======================================================================
    !!               ***  Lateral boundary condition  ***
@@ -427,7 +427,7 @@ Section 5 : bottom boundaries
 
 * probably don't have to change anything here on first cut.  May need to do later to get tides correct
 
-  .. code-block :: bash
+  .. code-block:: fortran
 
    !!======================================================================
    !!                 ***  Bottom boundary condition  ***
@@ -471,7 +471,7 @@ Section 6 : Tracers
 
 * probably nothing to change here (No TEOS!)
 
-  .. code-block :: bash
+  .. code-block:: fortran
 
    !!======================================================================
    !!                        Tracer (T & S ) namelists
@@ -543,7 +543,7 @@ Section 6 : Tracers
 * Horz Eddy viscosity set here rn_ahm_0_lap = 60.0 m2/s
 * Vert Eddy viscosity/diffusivity rn_avt0, rn_avm0 = 0.1e-6 m2/s
 
-  .. code-block :: bash
+  .. code-block:: fortran
 
    !!======================================================================
    !!                      ***  Dynamics namelists  ***
@@ -681,7 +681,7 @@ Section 6 : Tracers
 
 * mpi settings for blocks are here, jpni, jpnj, jpnij
 
-  .. code-block :: bash
+  .. code-block:: fortran
 
    !!======================================================================
    !!                  ***  Miscellaneous namelists  ***
@@ -737,8 +737,7 @@ Section 6 : Tracers
 * Float parameters would be set here too
 * Harmonic analysis of tidal constituents set here!
 
-  .. code-block :: bash
-
+  .. code-block:: fortran
 
    !!======================================================================
    !!                  ***  Diagnostics namelists  ***
@@ -815,7 +814,7 @@ Section 6 : Tracers
 
 * no changes here
 
-  .. code-block :: bash
+  .. code-block:: fortran
 
    /
    !!======================================================================
