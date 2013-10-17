@@ -117,7 +117,19 @@ NEMO-3.1
 * private
   (because NEMO project required sign-in to access code)
 * CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
-* NEMO-3.1 reference repo for the Salish Sea MEOPAR project.
+* NEMO-3.1 reference repo
 * a Mercurial repo of SVN checkouts of modipsl trunk, the NEMO-3.1 tag, and supporting repos that are believed to be the basis on which the 2-Oct-2013 CONCEPTS-110 CODE tarball was built
 * documentation rendered at http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo31-concepts110.html
 * Bitbucket: https://bitbucket.org/salishsea/nemo-3.1/
+
+
+CONCEPTS-110
+~~~~~~~~~~~~
+
+* private
+  (because NEMO project required sign-in to access code)
+* CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
+* CONCEPTS-110 reference repo
+* a Mercurial repo of the CODE.tar tarball received from J-P Paquin on 2-Oct-2013
+* documentation rendered at http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo31-concepts110.html
+* Bitbucket: https://bitbucket.org/salishsea/concepts-110/
