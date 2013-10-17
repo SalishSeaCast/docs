@@ -6,6 +6,7 @@ NEMO Code Notes
    :maxdepth: 2
 
    nemo-code
+   nemo31-concepts110
    oct2013_tarball
    nemo31
    nemo-3.4
