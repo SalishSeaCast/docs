@@ -168,7 +168,3 @@ Running the CODE: AMM12: 32 Processors
   .. code-block:: bash
 
      qsub AMM12_multi.pbs
-
-
-
-.. _nemo: http://www.nemo-ocean.eu/
