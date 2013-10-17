@@ -135,7 +135,7 @@ Running the CODE: AMM12: 32 Processors
 
 * To make AMM12 run on multiple processors, edit the namelist file, changing the following lines
 
-   .. code-block:: bash
+   .. code-block:: fortran
 
       jpni = 8
       jpnj = 4
