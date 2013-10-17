@@ -18,13 +18,24 @@ Foreman et al. (2000)
 
 * Model of the north east Pacific Ocean, including Alaskan and BC shelf (no detail in Strait of Georgia)
 
-* Compared model M2 and K1 harmonics against those calculated from harmonic analysis of 5.3 years of altimeter observations (Topex/Poseidon), at locations of crossover within the model domain
+* Compared model :math:`M_2` and :math:`K_1` harmonics against those calculated from harmonic analysis of 5.3 years of altimeter observations (Topex/Poseidon), at locations of crossover within the model domain
 
-* Model accuracy was determined by calculating RMS differences between modelled and observed tidal harmonics at the crossover locations
+* Model accuracy was determined by calculating RMS differences between modelled and observed tidal harmonics at the crossover locations:
 
 .. math:: 
 	D_{rms} = (C^2_{rms}+S^2_{rms})^{1/2}
 
+	C_{rms} = [\sum_1^N(A_t \cos G_T - A_m \cos G_m)^2/N]^{1/2}
+
+	S_{rms} = [\sum_1^N(A_t \sin G_T - A_m \sin G_m)^2/N]^{1/2}
+
+where N is the number of crossover sites, :math:`A_T`, :math:`G_T`, :math:`A_m` and :math:`G_m` are the altimeter and modelled amplitudes and phases respectively
+
+* :math:`M_2` differences showed that modelled amplitude and phase lags were generally too small, possibly due to the existence of an amphidromic ridge near the south and west boundaries
+
+* :math:`K_1` amplitude and phase lags looked better
+
+* other semidiurnal and diurnal consituents had similar (but scaled down) inaccuracies
 
 Masson & Cummins (2004)
 ------------------------------------
