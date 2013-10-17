@@ -23,8 +23,11 @@ Barotropic model of the Strait of Georgia, does not include stratification or es
 * 8 tidal constituents used at boundaries (M2, S2, N2, K2, K1, O1, P1 and Q1) plus a residual tide and compound tides and overtides as a result of nonlinear interactions between these constituents
 * Zero flow normal to the coast at boundaries
 * Specified elevations on open sea boundaries mostly taken from observations
+
 	- cotidal charts (Parker 1977, Crean et al. 1988) were sometimes used to deduce trends for interpolation and extrapolation along boundaries
+
 * Specific boundaries (see Figure 2 of Foreman et al. (1995) for map):
+
 	- Admiralty Inlet boundary: forced with Port Townsend and Admiralty Head tidal harmonics
 	- Juan de Fuca boundary: forced with Sheringham Point and Seiku tidal harmonics
 	- Northern boundaries: forced with Irvines Landing, Northwest Bay, Squitty Bay, False Bay and Skerry Bay tidal harmonics
