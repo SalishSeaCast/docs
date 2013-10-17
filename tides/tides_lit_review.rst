@@ -37,8 +37,15 @@ where N is the number of crossover sites, :math:`A_T`, :math:`G_T`, :math:`A_m` 
 
 * other semidiurnal and diurnal consituents had similar (but scaled down) inaccuracies
 
+* assimilated 
+
 Masson & Cummins (2004)
 ------------------------------------
+
+* to do
+  .. to do::
+
+      Add this section
 
 Sutherland & MacCready (2011)
 -------------------------------------------
