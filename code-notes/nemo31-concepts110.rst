@@ -154,3 +154,29 @@ Build and Run NEMO-3.1
 Diffs Analysis
 ==============
 
+The image below shows the results of an analysis of the file-level differences between the :file:`NEMO/` directory trees in the `NEMO-3.1`_ and `CONCEPTS-110`_ repos.
+
+* Green indicates directories in which all files are identical
+* Red indicates directories in which 1 or more files are different
+* Black shows the number of files in the directories and the difference in the number of files between `NEMO-3.1`_ and `CONCEPTS-110`_ when applicable
+* The :file:`OPA_SRC/TDE/` directory in purple is present only in the `CONCEPTS-110`_ directory
+
+.. image:: images/NEMO-3.1vsCONCEPTS-110.jpg
+    :width: 1000px
+
+The numbers of files in each directory were calculated with commands like:
+
+.. code-block:: bash
+
+    find OPA_SRC/ZDF/* -prune ! -type d | wc -l
+
+In the directories in which the number of files was the same checks for differences between files was done with commands like:
+
+.. code-block:: bash
+
+    CONCEPTS=CONCEPTS-110/CONCEPTS110_WCSD_OW_NOBC_tide/modipsl/modeles/NEMO
+    cd NEMO-3.1/NEMO
+    for file in $(find OPA_SRC/ZDF/* -prune ! -type d);
+    do
+      diff $CONCEPTS/$file $file;
+    done
