@@ -2,7 +2,7 @@
 NEMO-code Repository Evolution
 ******************************
 
-These notes described the evolution of the Salish Sea MEOPAR project `NEMO-code`_ repository.
+These notes describe the evolution of the Salish Sea MEOPAR project `NEMO-code`_ repository.
 They are a narrative guide to the Mercurial log and diffs that can be obtained from the repository itself or via the Bitbucket interface.
 
 .. _NEMO-code: https://bitbucket.org/salishsea/nemo-code
