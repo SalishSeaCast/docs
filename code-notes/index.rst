@@ -13,5 +13,3 @@ NEMO Code Notes
    nemo_3.4_westgrid
    compiler_options
    AMM12_namelist
-   
-
