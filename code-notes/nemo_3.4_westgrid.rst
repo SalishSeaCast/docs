@@ -9,12 +9,12 @@ Getting your Jasper Shell Ready
 * make sure your shell is bash (echo $SHELL), if its not, write to Westgrid support and get it changed.
 * load the following modules (just putting these in my .bashrc file didn't work for me.)
 
-.. code-block:: bash
+  .. code-block:: bash
 
-     module load compiler/intel/12.1
-     module load library/intelmpi/4.0.3.008
-     module load library/netcdf/4.1.3
-     module load library/szip/2.1
+       module load compiler/intel/12.1
+       module load library/intelmpi/4.0.3.008
+       module load library/netcdf/4.1.3
+       module load library/szip/2.1
 
 
 Getting the Code
@@ -27,9 +27,9 @@ Making a Project
 
 * Nemo uses an ARCH (architecture) file to determine compiler, maker, netcdf library location.
 
-.. code-block:: bash
+  .. code-block:: bash
 
-        cd dev_v3_4_STABLE_2012/NEMOGCM/ARCH
+      cd dev_v3_4_STABLE_2012/NEMOGCM/ARCH
 
 * NEMO ships with number of different arch files.  So far, however, what works is the jasper file from P. Myers GEOTRACES code:
 
@@ -85,9 +85,9 @@ Running the Code: GYRE
 
 * Go to your version (where you want the results to end up)
 
-    .. code-block:: bash
+  .. code-block:: bash
 
-       cd MY_GYRE/EXP00
+     cd MY_GYRE/EXP00
 
 * Created a .pbs run file. For a simple run of GYRE that could be
 
@@ -116,30 +116,30 @@ Running the Code: GYRE
 
 * and run
 
-    .. code-block:: bash
+  .. code-block:: bash
 
-       qsub GYRE.pbs
+     qsub GYRE.pbs
 
 Running the CODE: AMM12: 32 Processors
 --------------------------------------
 
 * Need to get the AMM12 forcing and initialization files, untar and unzip
 
-    .. code-block:: bash
+  .. code-block:: bash
 
-       curl -LO http://dodsp.idris.fr/reee512/NEMO/amm12_inputs_v3_4.tar
-       cd dev_v3_4_STABLE_2012/NEMOGCM/CONFIG/MY_AMM12/EXP00/
-       tar xvf ~/amm12_inputs_v3_4.tar
-       gunzip *.gz
-       rm ~/amm12_input_v3_4.tar
+     curl -LO http://dodsp.idris.fr/reee512/NEMO/amm12_inputs_v3_4.tar
+     cd dev_v3_4_STABLE_2012/NEMOGCM/CONFIG/MY_AMM12/EXP00/
+     tar xvf ~/amm12_inputs_v3_4.tar
+     gunzip *.gz
+     rm ~/amm12_input_v3_4.tar
 
 * To make AMM12 run on multiple processors, edit the namelist file, changing the following lines
 
-   .. code-block:: fortran
+  .. code-block:: fortran
 
-      jpni = 8
-      jpnj = 4
-      jnpij = 32
+    jpni = 8
+    jpnj = 4
+    jnpij = 32
 
 * Need a .pbs file for multiple core run
   PBS file: :file:`AMM_multi.pbs` containing::
@@ -165,9 +165,9 @@ Running the CODE: AMM12: 32 Processors
 
 * and run
 
-    .. code-block:: bash
+  .. code-block:: bash
 
-       qsub AMM12_multi.pbs
+     qsub AMM12_multi.pbs
 
 
 
