@@ -40,6 +40,28 @@ For password authentication use:
     hg clone https://douglatornell@bitbucket.org/salishsea/nemo-code NEMO-code
 
 
+Managing Configurations
+=======================
+
+To create a new configuration based on,
+for example,
+`AMM12`_ use:
+
+.. _AMM12: http://www.nemo-ocean.eu/Using-NEMO/Configurations/AMM
+
+.. code-block:: bash
+
+    cd NEMO-code/NEMOGCM/CONFIG
+    ./makenemo -r AMM12 -n MY_AMM12 -m salish -j8
+
+That will use the existing :kbd:`AMM12` configuration as a basis to build a new configuration called :kbd:`MY_AMM12` with the :kbd:`salish` architecture definitions and with compilation distributed over 8 cores.
+The resulting configuration,
+including a compiled and link NEMO executable,
+is located in :file:`NEMO-code/NEMOGCM/CONFIG/MY_AMM12`.
+
+See :command:`./makenemo -h` for details of options and sub-commands.
+
+
 NEMO :command:`svn` Repo Mirror Maintenance
 ===========================================
 
