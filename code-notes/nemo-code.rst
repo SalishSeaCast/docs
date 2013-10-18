@@ -109,6 +109,8 @@ Run the model on 16 cores:
     mpiexec -n 16 ./opa
 
 
+.. NEMO-MirrorMaintenance:
+
 NEMO :command:`svn` Repo Mirror Maintenance
 ===========================================
 

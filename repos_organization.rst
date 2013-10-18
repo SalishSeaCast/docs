@@ -44,6 +44,7 @@ docs
 * rendered at https://salishsea-meopar-docs.readthedocs.org/
 * Bitbucket: https://bitbucket.org/salishsea/docs/
 
+
 private-docs
 ~~~~~~~~~~~~
 
@@ -92,14 +93,10 @@ NEMO-code
   (because NEMO project required sign-in to access code)
 * CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
 * NEMO code that we run
-
-  * Initially,
-    an :command:`svn` checkout of the :kbd:`nemo_v3_1` tag from https://forge.ipsl.jussieu.fr/nemo/tags/nemo_v3_1/
-
-  * Merge the CONCEPTS model changes from the :file:`CODE` tarball received received from J-P Paquin on 2013-10-02
-
-  * Port the CONCEPTS changes to NEMO 3.4 or trunk to get the coastal shelf features in 3.4 that we need to properly model the Salish Sea
-
+* a merge of the :kbd:`http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012` branch and our local code
+* maintenance of the repo to handle the merges is decribed in :ref:`NEMO-MirrorMaintenance`
+* Bitbucket: https://bitbucket.org/salishsea/nemo-code/
+* documentation: http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo-code.html
 
 
 salishsea-site
