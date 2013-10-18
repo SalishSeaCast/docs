@@ -74,7 +74,7 @@ and setting the paths in its :file:`.hg/hgrc` to:
     [paths]
     bb = ssh://hg@bitbucket.org/salishsea/nemo-code
     default-push = ssh://hg@bitbucket.org/salishsea/nemo-code
-    mirror = ssh://sable//ocean/sallen/hg_repos/NEMO-hg-mirror
+    mirror = ssh://sable.eos.ubc.ca//ocean/sallen/hg_repos/NEMO-hg-mirror
 
 Those paths mean that the repo for :command:`hg pull` and :command:`hg incoming` commands must be specified explicitly.
 The :kbd:`bb` and :kbd:`mirror` paths are provided to facilitate pulling from `NEMO-code`_ on Bitbucket and :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror`,
