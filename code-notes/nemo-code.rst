@@ -27,13 +27,13 @@ The `NEMO-code`_ repo is a Mercurial repository in which is maintained the merge
 Mirroring the NEMO :command:`svn` Repo
 ======================================
 
-The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/nemo/svn/trunk and also a read-only Mercurial repository.
+The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012 and also a read-only Mercurial repository.
 It was intialized with:
 
 .. code-block:: bash
 
     cd /ocean/sallen/hg_repos
-    svn --username "dlatornell" co -r 3819 http://forge.ipsl.jussieu.fr/nemo/svn/trunk NEMO-hg-mirror
+    svn --username "dlatornell" co -r 3819 http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012
     hg init NEMO-hg-mirror
     cd NEMO-hg-mirror
     cat > .hgignore
@@ -41,7 +41,7 @@ It was intialized with:
     DOC/NEMO_book.pdf
     ctrl-d
     hg add
-    hg ci -m"Initialize NEMO svn mirror at rev 3819."
+    hg ci -m"Initialize NEMO svn mirror at r3819 of ^/branches/2012/dev_v3_4_STABLE_2012."
 
 :command:`svn` v1.7.5 was used on :kbd:`salish` for the :command:`svn` part of the initialization.
 
