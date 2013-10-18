@@ -99,13 +99,21 @@ NEMO-code
 * documentation: http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo-code.html
 
 
+SS-run-sets
+~~~~~~~~~~~
+
+* public
+* Apache v2.0 license, copyright project contributors and UBC
+* a collection of namelists and run description files for various sets of NEMO runs
+* Bitbucket: https://bitbucket.org/salishsea/ss-run-sets
+
+
 salishsea-site
 ~~~~~~~~~~~~~~
 
 * public
 * Apache v2.0 license, copyright project contributors and UBC
 * content and tool chain for the `salishsea.eos.ubc.ca`_ domain site static content
-* Bitbucket: https://bitbucket.org/salishsea/nemo-code/
 
 
 NEMO-3.1
