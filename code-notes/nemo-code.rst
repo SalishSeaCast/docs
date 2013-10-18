@@ -9,18 +9,6 @@ They are a narrative guide to the Mercurial log and diffs that can be obtained f
 
 The `NEMO-code`_ repo is a Mercurial repository in which is maintained the merger of the trunk of the main NEMO :command:`svn` repository and the changes made by the Salish Sea MEOPAR project team.
 
-Team members using SSH key authentication on Bitbucket may clone the `NEMO-code`_ repo with:
-
-.. code-block:: bash
-
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
-
-For password authentication use:
-
-.. code-block:: bash
-
-    hg clone https://douglatornell@bitbucket.org/salishsea/nemo-code NEMO-code
-
 .. note::
 
     The `NEMO-code`_ repository is a private repository for members of the Salish Sea MEOPAR project team.
@@ -36,8 +24,24 @@ For password authentication use:
     .. _Susan Allen: mailto://sallen@eos.ubc.ca
 
 
-Mirroring the NEMO :command:`svn` Repo
-======================================
+Getting the Code
+================
+
+Team members using SSH key authentication on Bitbucket may clone the `NEMO-code`_ repo with:
+
+.. code-block:: bash
+
+    hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
+
+For password authentication use:
+
+.. code-block:: bash
+
+    hg clone https://douglatornell@bitbucket.org/salishsea/nemo-code NEMO-code
+
+
+NEMO :command:`svn` Repo Mirror Maintenance
+===========================================
 
 The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012 and also a read-only Mercurial repository.
 It was intialized with:
