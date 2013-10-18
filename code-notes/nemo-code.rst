@@ -9,6 +9,18 @@ They are a narrative guide to the Mercurial log and diffs that can be obtained f
 
 The `NEMO-code`_ repo is a Mercurial repository in which is maintained the merger of the trunk of the main NEMO :command:`svn` repository and the changes made by the Salish Sea MEOPAR project team.
 
+Team members using SSH key authentication on Bitbucket may clone the `NEMO-code`_ repo with:
+
+.. code-block:: bash
+
+    hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
+
+For password authentication use:
+
+.. code-block:: bash
+
+    hg clone https://douglatornell@bitbucket.org/salishsea/nemo-code NEMO-code
+
 .. note::
 
     The `NEMO-code`_ repository is a private repository for members of the Salish Sea MEOPAR project team.
