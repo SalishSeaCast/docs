@@ -24,16 +24,62 @@ The `NEMO-code`_ repo is a Mercurial repository in which is maintained the merge
     .. _Susan Allen: mailto://sallen@eos.ubc.ca
 
 
-Mirroring the NEMO :command:`svn` Repo
-======================================
+Getting the Code
+================
 
-The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/nemo/svn/trunk and also a read-only Mercurial repository.
+Team members using SSH key authentication on Bitbucket may clone the `NEMO-code`_ repo with:
+
+.. code-block:: bash
+
+    hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
+
+For password authentication use:
+
+.. code-block:: bash
+
+    hg clone https://douglatornell@bitbucket.org/salishsea/nemo-code NEMO-code
+
+
+Managing Configurations
+=======================
+
+To create a new configuration based on,
+for example,
+`AMM12`_ use:
+
+.. _AMM12: http://www.nemo-ocean.eu/Using-NEMO/Configurations/AMM
+
+.. code-block:: bash
+
+    cd NEMO-code/NEMOGCM/CONFIG
+    ./makenemo -r AMM12 -n MY_AMM12 -m salish -j8 add_key "key_netcdf4 key_nosignedzero"
+
+That will use the existing :kbd:`AMM12` configuration as a basis to build a new configuration called :kbd:`MY_AMM12` with the :kbd:`salish` architecture definitions and with compilation distributed over 8 cores.
+The C Pre-Processor (CPP) keys :kbd:`key_netcdf4` and :kbd:`key_nosignedzero` will be added to configurations.
+The resulting configuration,
+including a compiled and link NEMO executable,
+is located in :file:`NEMO-code/NEMOGCM/CONFIG/MY_AMM12`.
+
+See :command:`./makenemo -h` for details of options and sub-commands.
+
+In addition to the collection of architecture definitions that the NEMO consortium provides,
+the `NEMO-code`_ repo includes definitions for:
+
+* :kbd:`ifort_jasper`: MPI builds on :kbd:`jasper.westgrid.ca`
+* :kbd:`salish`: MPI builds on :kbd:`salish.eos.ubc.ca`
+* :kbd:`ocean`: single processor builds on UBC-EOAS :kbd:`ocean` cluster workstations and :kbd:`salish`
+
+
+NEMO :command:`svn` Repo Mirror Maintenance
+===========================================
+
+The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012 and also a read-only Mercurial repository.
 It was intialized with:
 
 .. code-block:: bash
 
     cd /ocean/sallen/hg_repos
-    svn --username "dlatornell" co -r 3819 http://forge.ipsl.jussieu.fr/nemo/svn/trunk NEMO-hg-mirror
+    svn --username "dlatornell" co -r 3819 http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012
     hg init NEMO-hg-mirror
     cd NEMO-hg-mirror
     cat > .hgignore
@@ -41,7 +87,7 @@ It was intialized with:
     DOC/NEMO_book.pdf
     ctrl-d
     hg add
-    hg ci -m"Initialize NEMO svn mirror at rev 3819."
+    hg ci -m"Initialize NEMO svn mirror at r3819 of ^/branches/2012/dev_v3_4_STABLE_2012."
 
 :command:`svn` v1.7.5 was used on :kbd:`salish` for the :command:`svn` part of the initialization.
 
@@ -74,7 +120,7 @@ and setting the paths in its :file:`.hg/hgrc` to:
     [paths]
     bb = ssh://hg@bitbucket.org/salishsea/nemo-code
     default-push = ssh://hg@bitbucket.org/salishsea/nemo-code
-    mirror = ssh://sable//ocean/sallen/hg_repos/NEMO-hg-mirror
+    mirror = ssh://sable.eos.ubc.ca//ocean/sallen/hg_repos/NEMO-hg-mirror
 
 Those paths mean that the repo for :command:`hg pull` and :command:`hg incoming` commands must be specified explicitly.
 The :kbd:`bb` and :kbd:`mirror` paths are provided to facilitate pulling from `NEMO-code`_ on Bitbucket and :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror`,
