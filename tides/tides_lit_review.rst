@@ -7,6 +7,8 @@ Evaluating the performance of the NEMO model of the Strait of Georgia will begin
 
 (b) how are tidal forcings applied at boundaries?
 
+.. _foremanetal95:
+
 Foreman et al. (1995) 
 -------------------------
 Three dimensional, barotropic model of eastern Juan de Fuca Strait and southern Strait of Georgia, does not include stratification, wetting/drying or estuarine flow
@@ -48,9 +50,11 @@ Three dimensional, barotropic model of eastern Juan de Fuca Strait and southern 
 	- Juan de Fuca boundary: forced with Sheringham Point and Seiku tidal harmonics
 	- Northern boundaries: forced with Irvines Landing, Northwest Bay, Squitty Bay, False Bay and Skerry Bay tidal harmonics
 
+.. _foremanetal00:
+
 Foreman et al. (2000)
 ---------------------------
-Model of the north east Pacific Ocean, including Alaskan and BC shelf (no detail in Strait of Georgia)
+Model of the north east Pacific Ocean, including Alaskan and BC shelf. Resolution ranges from 80km off shore to about 100m along the coast. The grid in eastern Juan de Fuca Strait and southern Strait of Georgia is identical to :ref:`foremanetal95`. Since there are only two crossings in the Strait of Georgia, only part of the Strait is included in the model.
 
 *(a) how is model evaluated?*
 
@@ -102,6 +106,7 @@ POM model of southern Strait of Georgia and Juan de Fuca Strait
 * Model is forced at two open boundaries with four tidal constituents (K1, O1, M2 and S2) through a 'forced gravity wave radiation condition on the normal component of the depth-integrated velocity (Flather 1987)' 
 * These four constituents account for about 70% of tidal stream velocity
 
+.. _sutherlandetal11:
 
 Sutherland et al. (2011)
 -------------------------------------------
