@@ -3,7 +3,7 @@ Data acquisition (tides)
 
 To evaluate the performance of the NEMO model in reproducing the tides, we will compare the modelled water level output to measured water level data. 
 
-DFO 
+DFO measured data
 -------------------------
 
 Measured water level data can be downloaded in .csv format from the DFO `website
@@ -263,6 +263,22 @@ For example::
 	2013/09/01 01:00,2.3,
 	2013/09/01 02:00,2.37,
 	2013/09/01 03:00,2.3,
+
+
+DFO modelled tidal predictions
+--------------------------------------
+
+`WebTide <http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-eng.php>`_ is an online tidal prediction tool developed by DFO. The predictions for the North East Pacific region are based on the model of Foreman et al (2000). Tidal currents and elevations can be predicted from the model.
+
+
+
+
+
+
+
+
+
+
 
 
 
