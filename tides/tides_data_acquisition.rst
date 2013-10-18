@@ -1,12 +1,26 @@
-Data acquisition (tides)
-===================================
+Data acquisition (predicted tides and measured water level)
+===========================================
 
-To evaluate the performance of the NEMO model in reproducing the tides, we will compare the modelled water level output to measured water level data. 
+Tidal forcing is required on the boundaries of the NEMO model. Also, to evaluate the performance of the NEMO model in reproducing the tides, modelled water level output must be compared to measured water level data. 
+
+DFO modelled tidal predictions
+--------------------------------------
+
+`WebTide <http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-eng.php>`_ is an online tidal prediction tool developed by DFO. The predictions for the North East Pacific region are based on the model of :ref:`foremanetal00`. Tidal currents and elevations can be predicted from the model. 
+
+WebTide was used for the boundary conditions in the preliminary runs of the NEMO model.
+
+TPXO7.1 modelled tidal predictions
+-------------------------------------------
+
+`TPXO7.1 <http://www.esr.org/polar_tide_models/Model_TPXO71.html>`_ is an online tidal prediction tool funded by NASA. The predictions are based on the model by Egbert and Erofeeva (2002) at Oregon State University. The model is a 1/4 degree x 1/4 degree global inverse tide model. Predictions can be calculated using a Matlab based GUI called TMD (the Tide Model Driver).
+
+TPXO7.1 was used for the boundary conditions of the model by :ref:`sutherlandetal11`.
 
 DFO measured data
 -------------------------
 
-Measured water level data can be downloaded in .csv format from the DFO `website
+Measured water level data can be downloaded in .csv format from Canada's Department of Fisheries and Oceans (DFO) `website
 <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp>`_.
 
 * 10 years of hourly water level measured data can be downloaded at a time
@@ -264,11 +278,6 @@ For example::
 	2013/09/01 02:00,2.37,
 	2013/09/01 03:00,2.3,
 
-
-DFO modelled tidal predictions
---------------------------------------
-
-`WebTide <http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-eng.php>`_ is an online tidal prediction tool developed by DFO. The predictions for the North East Pacific region are based on the model of Foreman et al (2000). Tidal currents and elevations can be predicted from the model.
 
 
 
