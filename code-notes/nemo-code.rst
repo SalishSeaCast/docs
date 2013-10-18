@@ -52,14 +52,22 @@ for example,
 .. code-block:: bash
 
     cd NEMO-code/NEMOGCM/CONFIG
-    ./makenemo -r AMM12 -n MY_AMM12 -m salish -j8
+    ./makenemo -r AMM12 -n MY_AMM12 -m salish -j8 add_key "key_netcdf4 key_nosignedzero"
 
 That will use the existing :kbd:`AMM12` configuration as a basis to build a new configuration called :kbd:`MY_AMM12` with the :kbd:`salish` architecture definitions and with compilation distributed over 8 cores.
+The C Pre-Processor (CPP) keys :kbd:`key_netcdf4` and :kbd:`key_nosignedzero` will be added to configurations.
 The resulting configuration,
 including a compiled and link NEMO executable,
 is located in :file:`NEMO-code/NEMOGCM/CONFIG/MY_AMM12`.
 
 See :command:`./makenemo -h` for details of options and sub-commands.
+
+In addition to the collection of architecture definitions that the NEMO consortium provides,
+the `NEMO-code`_ repo includes definitions for:
+
+* :kbd:`ifort_jasper`: MPI builds on :kbd:`jasper.westgrid.ca`
+* :kbd:`salish`: MPI builds on :kbd:`salish.eos.ubc.ca`
+* :kbd:`ocean`: single processor builds on UBC-EOAS :kbd:`ocean` cluster workstations and :kbd:`salish`
 
 
 NEMO :command:`svn` Repo Mirror Maintenance
