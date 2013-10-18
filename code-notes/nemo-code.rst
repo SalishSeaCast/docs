@@ -70,11 +70,50 @@ the `NEMO-code`_ repo includes definitions for:
 * :kbd:`ocean`: single processor builds on UBC-EOAS :kbd:`ocean` cluster workstations and :kbd:`salish`
 
 
+Running the Model
+=================
+
+We don't want to clutter the `NEMO-code`_ repo with files from development and eploreation run-sets
+(aka experiments),
+run results,
+etc.,
+so runs are done in directories outside the :file:`NEMO-code/` tree.
+To create a run-sets directory copy the :file:`EXP00/` directory:
+
+.. code-block:: bash
+
+    cd NEMO-code/NEMOGCM/CONFIG/MY_AMM12
+    cp EXP00 ../../../amm12_runs
+
+The input files for `AMM12`_ need to be downloaded and unpacked in the run-set directory:
+
+.. code-block:: bash
+
+    cd amm12_runs
+    wget http://dodsp.idris.fr/reee512/NEMO/amm12_inputs_v3_4.tar
+    tar xvf amm12_inputs_v3_4.tar
+    gunzip *.nc.gz
+
+Edit the :kbd:`&nammpp` section of the :file:`namelist` file to set the number of cores to use:
+
+.. code-block:: fortran
+
+    jpni        =   4       !  jpni   number of processors following i (set automatically if < 1)
+    jpnj        =   4       !  jpnj   number of processors following j (set automatically if < 1)
+    jpnij       =   16      !  jpnij  number of local domains (set automatically if < 1)
+
+Run the model on 16 cores:
+
+.. code-block:: bash
+
+    mpiexec -n 16 ./opa
+
+
 NEMO :command:`svn` Repo Mirror Maintenance
 ===========================================
 
 The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012 and also a read-only Mercurial repository.
-It was intialized with:
+It was initialized with:
 
 .. code-block:: bash
 
