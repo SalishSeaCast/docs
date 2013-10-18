@@ -46,3 +46,25 @@ And this needs to be referenced in par_oce.F90.  So add:
     !!   'key_jpp':                        Strait of Georgia Subdomain: JPP 
     !!---------------------------------------------------------------------
   #             include "par_JPP.h90"
+
+
+Recompile
+---------
+
+In your CONFIG directory (assuming you are using SALISH_amm as your config name)
+
+ .. code-block:: bash
+
+    ./makenemo -n SALISH_amm add_key "key_jpp" del_key "key_amm_12km"
+
+
+
+Initialization Files
+--------------------
+
+.. note::
+
+   Bottom Line: you need files: SubDom_bathy_meter_NOBCchancomp.nc linked to bathy_meter.nc and
+   SubDom_coordinates_seagrid_WestCoast.nc linked to coordinates.nc
+
+More details later when we get this repo set-up
