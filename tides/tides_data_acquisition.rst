@@ -15,7 +15,7 @@ TPXO7.1 modelled tidal predictions
 
 `TPXO7.1 <http://www.esr.org/polar_tide_models/Model_TPXO71.html>`_ is an online tidal prediction tool funded by NASA. The predictions are based on the model by Egbert and Erofeeva (2002) at Oregon State University. The model is a 1/4 degree x 1/4 degree global inverse tide model. Predictions can be calculated using a Matlab based GUI called TMD (the Tide Model Driver).
 
-TPXO7.1 was used for the boundary conditions of the model by :ref:`sutherlandetal11`.
+TPXO7.1 was used for the boundary conditions of the model by :ref:`sutherlandetal11`... but resolution is coarse in Juan de Fuca Strait and the Strait of Georgia is an inland sea... Sutherland et al. (2011) used the tidal predictions for a straight boundary along 127 degrees W. The TPXO7.1 predictions are probably only useful when boundaries are offshore from the coast.
 
 DFO measured data
 -------------------------
@@ -277,6 +277,59 @@ For example::
 	2013/09/01 01:00,2.3,
 	2013/09/01 02:00,2.37,
 	2013/09/01 03:00,2.3,
+
+
+NOAA measured data
+---------------------------
+
+Harmonic constituents and 31 days of measured water level data can be downloaded `here <http://tidesandcurrents.noaa.gov/stations.html?type=Historic+Water+Levels>`_.
+
+
+Tulare Beach, Port Susan 9448043
+May 20 2013 - present 
+
+9447963 Tulalip Bay, WA
+- present
+
+Tulalip Bay 9447773
+Apr 8 1935 - Nov 13 1974
+ 
+Toke Point 9440910
+Feb 20 1922 - present
+
+Westport 9441102
+Jun 7 1982 - Jul 23 1982
+
+La Push 9442396
+Dec 19 1924 - Dec 18 1969
+
+Neah Bay 9443090
+Jul 23 1934 - present
+
+Port Angeles 9444090
+Aug 30 1975 - present
+
+Port Townsend 9444900
+Dec 31 1971 - present
+
+Tacoma 9446484
+Jul 22 1996 - present
+
+Seattle 9447130
+Jan 1 1899 - present
+
+Shilshole Bay Gps Buoy 9447214
+Jan 1 2009 - present
+ 
+Cherry Point 9449424
+Nov 7 1971 - present
+
+Friday Harbor 9449880
+Jan 25 1932 - present
+
+Cherry Point cp0101
+(currents)
+
 
 
 

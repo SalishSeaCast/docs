@@ -135,6 +135,8 @@ Group's website: http://faculty.washington.edu/pmacc/MoSSea/index.html
 
 * Open boundaries forced with eight constituents (M2, S2, K1, O1, N2, P1, K2 and Q1) derived from the 1/4 degree TPXO7.1 inverse global tidal model (Egbert and Erofeeva 2002)
 
+* Open boundaries were offshore i.e. straight boundary along 127 degrees W and the northern boundary in the Strait of Georgia was closed
+
 References
 -------------------------
 * Egbert, G.D. and S.Y. Erofeeva, 2002. Efficient inverse modeling of barotropic ocean tides, Joundal of Atmospheric and Oceanic Technology, 19, 183-204.
