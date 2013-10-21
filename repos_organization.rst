@@ -99,6 +99,28 @@ NEMO-code
 * documentation: http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo-code.html
 
 
+NEMO-forcing
+~~~~~~~~~~~~
+
+* private to SalishSea-MEOPAR team members
+* private because the files are from project initialization tarballs received from J-P Paquin on 2013-10-02
+* domain-specific set-up,
+  initial conditions,
+  forcing,
+  etc.
+  files used to run NEMO for the Salish Sea:
+
+  * coordinates
+  * bathymetry
+  * initial temperature and salinity
+  * restart files from spin-up runs
+  * tidal forcing
+  * open boundary condition forcing
+  * etc.
+
+* Bitbucket: https://bitbucket.org/salishsea/nemo-code/
+* documentation: http://salishsea-meopar-docs.readthedocs.org/nemo-forcing.html
+
 SS-run-sets
 ~~~~~~~~~~~
 
