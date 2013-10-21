@@ -15,7 +15,7 @@ Keys in AMM12 that we need/want
 
 * **key_bdy** Use the unstructured open boundary conditions.  We need these ones because they include tides.  This replaces **key_obc_mer** the mercator open boundary conditions in CONCEPTS 110
 * **key_vectopt_loop** Enables vector optimization.  Good idea!
-* **key_netcdf_4** Needed for our compilers.
+* **key_netcdf_4** Gives us chunking etc.
 
 Keys in CONCEPTS 110 that we need/want
 --------------------------------------
