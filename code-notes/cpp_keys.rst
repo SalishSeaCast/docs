@@ -3,8 +3,8 @@ cpp Keys
 
 cpp key are compiler keys used in NEMO
 
-Keys Common to AMM12 and WCSD
------------------------------
+Keys Common to AMM12 and CONCEPTS 110
+-------------------------------------
 
 * **key_mpp_mpi** Use multiprocessors
 * **key_vvl** Use variable volume coordinates.  This means a nonlinear free surface.
