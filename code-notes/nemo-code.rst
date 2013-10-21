@@ -37,7 +37,9 @@ For password authentication use:
 
 .. code-block:: bash
 
-    hg clone https://douglatornell@bitbucket.org/salishsea/nemo-code NEMO-code
+    hg clone https://<you>@bitbucket.org/salishsea/nemo-code NEMO-code
+
+where :kbd:`<you>` is your Bitbucket user id.
 
 
 Managing Configurations
@@ -109,7 +111,7 @@ Run the model on 16 cores:
     mpiexec -n 16 ./opa
 
 
-.. NEMO-MirrorMaintenance:
+.. _NEMO-MirrorMaintenance:
 
 NEMO :command:`svn` Repo Mirror Maintenance
 ===========================================
