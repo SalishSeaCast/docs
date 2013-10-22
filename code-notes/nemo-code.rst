@@ -1,3 +1,5 @@
+.. _NEMO-code-repo:
+
 ********************
 NEMO-code Repository
 ********************
@@ -108,7 +110,7 @@ Run the model on 16 cores:
 
 .. code-block:: bash
 
-    mpiexec -n 16 ./opa
+    /usr/bin/mpiexec -n 16 ./opa
 
 
 .. _NEMO-MirrorMaintenance:
