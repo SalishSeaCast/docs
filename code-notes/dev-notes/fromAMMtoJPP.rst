@@ -44,7 +44,7 @@ And this needs to be referenced in par_oce.F90.  So add:
 
   #elif defined key_jpp
     !!---------------------------------------------------------------------
-    !!   'key_jpp':                        Strait of Georgia Subdomain: JPP 
+    !!   'key_jpp':                        Strait of Georgia Subdomain: JPP
     !!---------------------------------------------------------------------
   #             include "par_JPP.h90"
 
@@ -100,7 +100,7 @@ Changes from AMM12 namelist file
 * time scales for open boundary relaxation **rn_dpeXob**
 
 * turn tidal potential off **ln_tide_pot**
-* number of tidal harmonics (for potential) & names **nb_harmo** **clname()** 
+* number of tidal harmonics (for potential) & names **nb_harmo** **clname()**
 
 * number of open boundary sets **nb_bdy** *to be changed next!*
 * name of tide files, component names and speed **filtid** **tide_cpt()** **tide_speed()**
@@ -122,7 +122,7 @@ Changes from AMM12 namelist file
 
 * maximum interations for the SOR solver and its coefficient **nn_nmax** **rn_sor**
 
-* number of processors in various directions **jpni** **jpnj** **jpnij** 
+* number of processors in various directions **jpni** **jpnj** **jpnij**
 * control sumes **nn_ictlX** **nn_jctlX**
 
 * time step frequency for dynamics and tracer trends **nn_trd**
