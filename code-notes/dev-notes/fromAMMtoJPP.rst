@@ -62,9 +62,68 @@ In your CONFIG directory (assuming you are using SALISH_amm as your config name)
 Initialization Files
 --------------------
 
+Clone the nemo-forcing repository from here https://bitbucket.org/salishsea/nemo-forcing
+
 .. note::
 
    Bottom Line: you need files: SubDom_bathy_meter_NOBCchancomp.nc linked to bathy_meter.nc and
    SubDom_coordinates_seagrid_WestCoast.nc linked to coordinates.nc
 
-More details later when we get this repo set-up
+Namelist File
+-------------
+
+Changes from AMM12 namelist file
+
+* experience name **cn_exp**
+* last time step **nn_itend**
+* start date **nn_date0**
+* frequency of restart file **nn_stock**
+* frequency of write in output file **nn_write** *probably superceded*
+* DIMG file format **ln_dimgnnn** *probably superceded*
+
+* vertical coordinate **ln_zps** **ln_sco**
+* minimum depth of ocean **rn_hmin**
+* partial step thickenss **rn_e3sps_min** **rn_e3zps_rat**
+
+* time step for the dynamics **rn_rdt**
+* zero surface forcing **ln_ana** **ln_flx**  **rn_utau0** *to be changed later!!*
+* zero run off **ln_rnf** *to be changed later!!*
+* light penetration **ln_traqsr**
+
+* amount of slip on lateral boundaries **rn_shlat**
+
+* climatological obs files **ln_obc_clim**
+* total volume conservation **ln_vol_cst**
+
+* use initial state for open boundary conditions **nn_obcdta** *to be changed later!!*
+* time scales for open boundary relaxation **rn_dpeXob**
+
+* turn tidal potential off **ln_tide_pot**
+* number of tidal harmonics (for potential) & names **nb_harmo** **clname()** 
+
+* number of open boundary sets **nb_bdy** *to be changed next!*
+* name of tide files, component names and speed **filtid** **tide_cpt()** **tide_speed()**
+
+* bottom drag coefficient **rn_bfri2**
+* bottom turbulent kinetic energy background **rn_bfeb2**
+* geothermal heat flux **nn_geoflx**
+* lateral mixing coefficient in the bbl **rn_ahtbbl**
+* horizontal eddy diffusivity for tracers **rn_aht_0**
+
+* treatment of hydrostatic pressure **ln_phg_sco** **ln_phg_prj**
+* bilaplacian operator **ln_dynldf_bilap**
+* horizontal laplacian eddy viscosity **rn_ahm_0_lap**
+* vertical eddy viscosity and diffusitivity **rn_avm0** **rn_avt0**
+* enhanced vertical diffusion and coefficient **ln_zdfevd** **rn_avevd**
+* surface tke input coefficient **rn_ebb**
+* surface mixing length scale, Langmuir parameterization **ln_mx10**, **ln_lc**
+* penetration of tke below mixed layer and its exponential decrease **nn_etau** **nn_htau**
+
+* maximum interations for the SOR solver and its coefficient **nn_nmax** **rn_sor**
+
+* number of processors in various directions **jpni** **jpnj** **jpnij** 
+* control sumes **nn_ictlX** **nn_jctlX**
+
+* time step frequency for dynamics and tracer trends **nn_trd**
+* time steps used for harmonic analysis **nit000_han** **nitend_han** **nstep_han**
+* names for harmonic analysis **tname()**
