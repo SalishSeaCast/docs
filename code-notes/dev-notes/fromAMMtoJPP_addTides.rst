@@ -35,6 +35,12 @@ We need to
 
    add_key "key_diaharm key_zdftke key_traldf_c2d key_dynldf_c3d" del_key "key_zdfgls"
 
+So we rebuild (on Salish):
+
+.. code-block:: bash
+
+   ./makenemo -m salish -r SALISH_amm -n SALISH_JPP -j8 add_key "key_diaharm key_zdftke key_traldf_c2d key_dynldf_c3d" del_key "key_zdfgls"
+
 namelist
 --------
 
