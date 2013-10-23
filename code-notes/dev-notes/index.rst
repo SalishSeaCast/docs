@@ -16,3 +16,4 @@ It also includes analyses and discussion of decisions that lead to :ref:`SalishS
    AMM12_namelist
    cpp_keys
    fromAMMtoJPP
+   AMM12-BDY-analysis
