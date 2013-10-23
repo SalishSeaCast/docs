@@ -14,8 +14,23 @@ NEMO 3.4 uses tide files that give the tides only on the open boundary as cosine
 
 In `Prepare Forcing Files`_ I calculate the latter from the former.
 
-.. _Prepare Forcing Files: https://bitbucket.org/salishsea/tools/src/6849b9c32a2d66c1c7e608d30801d883e9e1aed9/I_ForcingFiles/Prepare%20Tide%20Files.ipynb?at=default
+.. _Prepare Forcing Files: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/Prepare%20Tide%20Files.ipynb?at=default
 
 This produces three files : JPP_bdytide_M2_grid_X.nc where X = T, U or V.  These files are available in the `nemo-forcing repository`_ in the bdydta folder.
 
 .. _nemo-forcing repository: https://bitbucket.org/salishsea/nemo-forcing
+
+cpp Keys
+--------
+
+ We have
+
+.. code-block:: bash
+
+   key_bdy key_vectopt_loop   key_dynspg_ts key_ldfslp  key_zdfgls  key_vvl key_diainstant key_mpp_mpi key_netcdf4 key_nosignedzero key_jpp
+
+ We need to
+
+.. code-block:: bash
+
+   add_key "key_diaharm key_zdftke key_traldf_c2d key_dynldf_c3d" del_key "key_zdfgls"
