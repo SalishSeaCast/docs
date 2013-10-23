@@ -60,5 +60,4 @@ Change:
     nbdysegn = -1
     nbdysegs = 0
 /
-    cn_dir  =    'bdydta/'
-    filtide      = 'JPP_bdytide_'                !  file name root of tidal forcing files
+    filtide      = 'bdydta/JPP_bdytide_'                !  file name root of tidal forcing files
