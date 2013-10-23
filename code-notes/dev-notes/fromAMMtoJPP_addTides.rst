@@ -29,8 +29,22 @@ cpp Keys
 
    key_bdy key_vectopt_loop   key_dynspg_ts key_ldfslp  key_zdfgls  key_vvl key_diainstant key_mpp_mpi key_netcdf4 key_nosignedzero key_jpp
 
- We need to
+We need to
 
 .. code-block:: bash
 
    add_key "key_diaharm key_zdftke key_traldf_c2d key_dynldf_c3d" del_key "key_zdfgls"
+
+namelist
+--------
+
+Change:
+
+.. code-block:: bash
+
+    nb_bdy = 0                            !  number of open boundary sets
+    ln_coords_file = .false.              !  =T : read bdy coordinates from file
+    cn_coords_file = ''                   !  bdy coordinates files
+
+    cn_dir  =    'bdydta/'
+    filtide      = 'JPP_bdytide_'                !  file name root of tidal forcing files
