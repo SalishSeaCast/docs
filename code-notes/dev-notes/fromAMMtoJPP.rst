@@ -1,5 +1,6 @@
-Moving an AMM12 Configuration to JPP Configuration
-==================================================
+*************************************************************
+Moving an AMM12 Configuration to JPP Configuration : Part One
+*************************************************************
 
 par_oce
 -------
@@ -127,3 +128,21 @@ Changes from AMM12 namelist file
 * time step frequency for dynamics and tracer trends **nn_trd**
 * time steps used for harmonic analysis **nit000_han** **nitend_han** **nstep_han**
 * names for harmonic analysis **tname()**
+
+.. note::
+
+   Bottom Line: you need to clone the namelist from https://bitbucket.org/salishsea/ss-run-sets see JPP.  This run is based on hg changeset: b501af941889
+
+Run
+---
+
+From inside your EXP00 directory, where you have linked to your forcing files you can run
+
+.. code-block:: bash
+
+    mpiexec .opa
+
+Put it Together
+---------------
+
+
