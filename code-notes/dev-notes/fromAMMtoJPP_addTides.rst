@@ -48,9 +48,17 @@ Change:
 
 .. code-block:: bash
 
-    nb_bdy = 0                            !  number of open boundary sets
+    nb_bdy = 1                            !  number of open boundary sets
     ln_coords_file = .false.              !  =T : read bdy coordinates from file
     cn_coords_file = ''                   !  bdy coordinates files
 
+!-----------------------------------------------------------------------
+&nambdy_index ! open boundaries - definition ("key_bdy")
+!-----------------------------------------------------------------------
+    nbdysege = 0
+    nbdysegw = -1
+    nbdysegn = -1
+    nbdysegs = 0
+/
     cn_dir  =    'bdydta/'
     filtide      = 'JPP_bdytide_'                !  file name root of tidal forcing files
