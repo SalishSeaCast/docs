@@ -21,6 +21,9 @@ Keys in CONCEPTS 110 that we need/want
 --------------------------------------
 
 * **key_diaharm** calculate amplitude and phase of tidal components
+* **key_tide** Required in addition to **key_diaharm** to enable calculation of amplitude and phase of tidal components.
+  Also causes code for tidal potential to be included in the model and we are excluding that effect,
+  so it is important to set :kbd:`ln_tide_pot` to :kbd:`.false.` in the :kbd:`nam_tide` namelist.
 
 
 Decisions
