@@ -52,12 +52,13 @@ Change:
     ln_coords_file = .false.              !  =T : read bdy coordinates from file
     cn_coords_file = ''                   !  bdy coordinates files
 
-!-----------------------------------------------------------------------
-&nambdy_index ! open boundaries - definition ("key_bdy")
-!-----------------------------------------------------------------------
-    nbdysege = 0
-    nbdysegw = -1
-    nbdysegn = -1
-    nbdysegs = 0
-/
-    filtide      = 'bdydta/JPP_bdytide_'                !  file name root of tidal forcing files
+    !-----------------------------------------------------------------------
+    &nambdy_index ! open boundaries - definition ("key_bdy")
+    !-----------------------------------------------------------------------
+        nbdysege = 0
+        nbdysegw = -1
+        nbdysegn = -1
+        nbdysegs = 0
+    /
+
+        filtide      = 'bdydta/JPP_bdytide_'                !  file name root of tidal forcing files
