@@ -54,3 +54,15 @@ Coordinates and bathymetry for the initial sub-domain test case known as :kbd:`J
 
 * :file:`SubDom_coordinates_seagrid_WestCoast.nc`
 * :file:`SubDom_bathy_meter_NOBCchancomp.nc`
+
+:file:`bdydta/` Directory
+-------------------------
+
+The :file:`bdydta/` directory contains forcing data for the open boundaries.
+
+Currently there are three files that specify the M2 tidal components for the Western and Northern open boundaries of the West Coast SubDomain.  These files specify the cosine and sine components for the sea surfac e height (T), the x-direction velocity (U) and y-direction velocity (V).
+
+* :file:`JPP_bdytide_M2_grid_T.nc`
+* :file:`JPP_bdytide_M2_grid_U.nc`
+* :file:`JPP_bdytide_M2_grid_V.nc`
+
