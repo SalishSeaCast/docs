@@ -8,9 +8,9 @@ need to add the tides.
 Tide Forcing Files
 ------------------
 
-CONCEPTS 110 uses tide files that give the tides over the whole domain as amplitude and phase.
+CONCEPTS 110 uses tide files that give the tides over the whole domain as amplitude and phase. Flow amplitude is in vertically integrated flux.
 
-NEMO 3.4 uses tide files that give the tides only on the open boundary as cosine and sine components.
+NEMO 3.4 uses tide files that give the tides only on the open boundary as cosine and sine components. Flow amplitudesa are velocities.
 
 In `Prepare Forcing Files`_ I calculate the latter from the former.
 
