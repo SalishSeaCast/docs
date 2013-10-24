@@ -1,7 +1,8 @@
-cpp Keys
+CPP Keys
 ========
 
-cpp key are compiler keys used in NEMO
+CPP keys used in C Pre-Processor directives in the source code that cause sections of code to be included/excluded from NEMO at the compile stage.
+
 
 Keys Common to AMM12 and CONCEPTS 110
 -------------------------------------
@@ -10,12 +11,14 @@ Keys Common to AMM12 and CONCEPTS 110
 * **key_vvl** Use variable volume coordinates.  This means a nonlinear free surface.
 * **key_ldfslp** Use lateral diffusion scheme for tracers.
 
+
 Keys in AMM12 that we need/want
 -------------------------------
 
 * **key_bdy** Use the unstructured open boundary conditions.  We need these ones because they include tides.  This replaces **key_obc_mer** the mercator open boundary conditions in CONCEPTS 110
 * **key_vectopt_loop** Enables vector optimization.  Good idea!
 * **key_netcdf_4** Gives us chunking etc.
+
 
 Keys in CONCEPTS 110 that we need/want
 --------------------------------------
@@ -35,6 +38,7 @@ Decisions
 * **key_flx_core** Use short/long wave radiation forcing.  Need to return to this issue later.
 * Start with **key_traldf_c2d** horizontal eddy mixing of tracers from CONCEPTS
 * Start with **key_dynldf_c3d** 3-dimensional mixing of momentum from CONCEPTS
+
 
 CONCEPTS 110 that we don't want
 -------------------------------
