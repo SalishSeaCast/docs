@@ -49,11 +49,7 @@ etc.
 Installing Sphinx
 -----------------
 
-The easiest way to install Sphinx and the packages that it depends on is to install the Anaconda_ Python distribution.
-Follow the `installation instructions`_ for your operating system and accept the option at the end of the installation to make Anaconda your default Python.
-
-.. _Anaconda: https://store.continuum.io/cshop/anaconda/
-.. _installation instructions: http://www.continuum.io/downloads
+Sphinx and the packages that it depends on are included in the :ref:`AnacondaPythonDistro` that you should already have installed.
 
 Experienced Python developers may wish to install Sphinx in other ways:
 
