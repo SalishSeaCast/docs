@@ -14,4 +14,5 @@ Those repos are not used for model runs.
 
    nemo-code
    nemo-forcing
+   ss-run-sets
    nemo31-concepts110
