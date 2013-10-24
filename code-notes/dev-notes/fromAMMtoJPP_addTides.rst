@@ -27,19 +27,19 @@ cpp Keys
 
 .. code-block:: bash
 
-   key_bdy key_vectopt_loop   key_dynspg_ts key_ldfslp  key_zdfgls  key_vvl key_diainstant key_mpp_mpi key_netcdf4 key_nosignedzero key_jpp
+   key_bdy key_vectopt_loop key_dynspg_ts key_ldfslp key_zdfgls key_vvl key_diainstant key_mpp_mpi key_netcdf4 key_nosignedzero key_jpp
 
 We need to
 
 .. code-block:: bash
 
-   add_key "key_diaharm key_zdftke key_traldf_c2d key_dynldf_c3d" del_key "key_zdfgls"
+   add_key "key_diaharm key_tide key_zdftke key_traldf_c2d key_dynldf_c3d" del_key "key_zdfgls"
 
 So we rebuild (on Salish):
 
 .. code-block:: bash
 
-   ./makenemo -m salish -r SALISH_amm -n SALISH_JPP -j8 add_key "key_diaharm key_zdftke key_traldf_c2d key_dynldf_c3d" del_key "key_zdfgls"
+   ./makenemo -m salish -r SALISH_amm -n SALISH_JPP -j8 add_key "key_diaharm key_tide key_zdftke key_traldf_c2d key_dynldf_c3d" del_key "key_zdfgls"
 
 namelist
 --------
