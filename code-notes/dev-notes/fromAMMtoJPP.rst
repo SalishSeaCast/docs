@@ -141,8 +141,3 @@ From inside your EXP00 directory, where you have linked to your forcing files yo
 .. code-block:: bash
 
     mpiexec -n 16 ./opa
-
-Put it Together
----------------
-
-
