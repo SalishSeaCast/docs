@@ -1,5 +1,5 @@
 Data acquisition (predicted tides and measured water level)
-===========================================
+====================================================
 
 Tidal forcing is required on the boundaries of the NEMO model. Also, to evaluate the performance of the NEMO model in reproducing the tides, modelled water level output must be compared to measured water level data. 
 
@@ -48,7 +48,7 @@ Temporary DFO stations in Strait of Georgia and on Vancouver Island (station num
 
 Vancouver:
 
-*	`station name  (num, ??min, year1, year2, numdays)
+*	station name  (num, ??min, year1, year2, numdays)
 *	`Point Grey <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7635&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7635, 60min, 1977, 1978, 552)
 *	`North Arm <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7634&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7634, 60min, 1969, 1969, 175)
 *	`Sand Heads (Stn Harry) <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp#divGoogleMaps>`_ (7604, 60min, 1968, 1969, 283)
@@ -122,7 +122,7 @@ Victoria region:
 *	`Esquimalt Harbour <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7109&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7109, 60min, 1981, 2010, 1313, no)
 *	`Esquimalt Government Hbr <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7110&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7110, 60min, 1972, 1978, 1604, no)
 *	`Portage Inlet <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7125&user=isdm-gdsi&region=PAC>`_ (7125, ??min, year1, year2, numdays)
-*	`Gorge at Craigflower<http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7124&user=isdm-gdsi&region=PAC>`_ (7124, ??min, year1, year2, numdays)
+*	`Gorge at Craigflower <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7124&user=isdm-gdsi&region=PAC>`_ (7124, ??min, year1, year2, numdays)
 *	`Gorge at Tillicum <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7123&user=isdm-gdsi&region=PAC>`_ (7123, ??min, year1, year2, numdays)
 *	`Gorge at Aaron Point <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7122&user=isdm-gdsi&region=PAC>`_ (7122, ??min, year1, year2, numdays)
 *	`Selkirk Water, <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7121&user=isdm-gdsi&region=PAC>`_ (7121, ??min, year1, year2, numdays)
@@ -252,7 +252,7 @@ Northern Strait of Georgia
 *	Egg Island  (8805, ??min, year1, year2, numdays)
 *	Wadhams  (8840, ??min, year1, year2, numdays)
 
-*=not digitised
+* = not digitised
 
 Data format
 ````````````````````````````````````
