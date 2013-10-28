@@ -4,21 +4,21 @@ Data acquisition (predicted tides and measured water level)
 Tidal forcing is required on the boundaries of the NEMO model. Also, to evaluate the performance of the NEMO model in reproducing the tides, modelled water level output must be compared to measured water level data. 
 
 DFO modelled tidal predictions
---------------------------------------
+---------------------------------------
 
 `WebTide <http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-eng.php>`_ is an online tidal prediction tool developed by DFO. The predictions for the North East Pacific region are based on the model of :ref:`foremanetal00`. Tidal currents and elevations can be predicted from the model. 
 
 WebTide was used for the boundary conditions in the preliminary runs of the NEMO model.
 
 TPXO7.1 modelled tidal predictions
--------------------------------------------
+----------------------------------------------
 
 `TPXO7.1 <http://www.esr.org/polar_tide_models/Model_TPXO71.html>`_ is an online tidal prediction tool funded by NASA. The predictions are based on the model by Egbert and Erofeeva (2002) at Oregon State University. The model is a 1/4 degree x 1/4 degree global inverse tide model. Predictions can be calculated using a Matlab based GUI called TMD (the Tide Model Driver).
 
 TPXO7.1 was used for the boundary conditions of the model by :ref:`sutherlandetal11`... but resolution is coarse in Juan de Fuca Strait and the Strait of Georgia is an inland sea... Sutherland et al. (2011) used the tidal predictions for a straight boundary along 127 degrees W. The TPXO7.1 predictions are probably only useful when boundaries are offshore from the coast.
 
 DFO measured data
--------------------------
+--------------------------
 
 Measured water level data can be downloaded in .csv format from Canada's Department of Fisheries and Oceans (DFO) `website
 <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp>`_.
@@ -48,7 +48,7 @@ Temporary DFO stations in Strait of Georgia and on Vancouver Island (station num
 
 Vancouver:
 
-*	`station name <>`_ (num, ??min, year1, year2, numdays)
+*	`station name  (num, ??min, year1, year2, numdays)
 *	`Point Grey <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7635&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7635, 60min, 1977, 1978, 552)
 *	`North Arm <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7634&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7634, 60min, 1969, 1969, 175)
 *	`Sand Heads (Stn Harry) <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp#divGoogleMaps>`_ (7604, 60min, 1968, 1969, 283)
@@ -150,107 +150,107 @@ Washington:
 
 West coast Vancouver Island (southern)
 
-*	`Port Renfrew <>`_ (8525, ??min, year1, year2, numdays)
-*	`Mutine Point <>`_ (8556, ??min, year1, year2, numdays)
-*	`Pocahontas Pt <>`_ (8560, ??min, year1, year2, numdays)
-*	`Chesnuknuw Cr <>`_ (8562, ??min, year1, year2, numdays)
-*	`Sproat Narrows <>`_ (8564, ??min, year1, year2, numdays)
-*	`Franklin River <>`_ (8565, ??min, year1, year2, numdays)
-*	`Stamp Narrows <>`_ (8570, ??min, year1, year2, numdays)
-*	`Port Alberni <>`_ (8575, ??min, year1, year2, numdays)
-*	`Brooksby Point <>`_ (8558, ??min, year1, year2, numdays)
-*	`Kildonan <>`_ (8557, ??min, year1, year2, numdays)
-*	`Head of Uchucklesit <>`_ (8559, ??min, year1, year2, numdays)
-*	`Effingham <>`_ (8585, ??min, year1, year2, numdays)
-*	`Walsh Island <>`_ (8586, ??min, year1, year2, numdays)
-*	`Ucluelet <>`_ (8595, ??min, year1, year2, numdays)
-*	`Kennedy Cover <>`_ (8623, ??min, year1, year2, numdays)
-*	`Warn Bay <>`_ (8626, ??min, year1, year2, numdays)
-*	`Cypress Bay <>`_ (8630, ??min, year1, year2, numdays)
-*	`Herbert Inlet <>`_ (8632, ??min, year1, year2, numdays)
-*	`Sulphur Passage <>`_ (8634, ??min, year1, year2, numdays)
-*	`Riley Cove <>`_ (8637, ??min, year1, year2, numdays)
+*	Port Renfrew  (8525, ??min, year1, year2, numdays)
+*	Mutine Point  (8556, ??min, year1, year2, numdays)
+*	Pocahontas Pt  (8560, ??min, year1, year2, numdays)
+*	Chesnuknuw Cr  (8562, ??min, year1, year2, numdays)
+*	Sproat Narrows  (8564, ??min, year1, year2, numdays)
+*	Franklin River  (8565, ??min, year1, year2, numdays)
+*	Stamp Narrows  (8570, ??min, year1, year2, numdays)
+*	Port Alberni  (8575, ??min, year1, year2, numdays)
+*	Brooksby Point  (8558, ??min, year1, year2, numdays)
+*	Kildonan  (8557, ??min, year1, year2, numdays)
+*	Head of Uchucklesit  (8559, ??min, year1, year2, numdays)
+*	Effingham  (8585, ??min, year1, year2, numdays)
+*	Walsh Island  (8586, ??min, year1, year2, numdays)
+*	Ucluelet  (8595, ??min, year1, year2, numdays)
+*	Kennedy Cover  (8623, ??min, year1, year2, numdays)
+*	Warn Bay  (8626, ??min, year1, year2, numdays)
+*	Cypress Bay  (8630, ??min, year1, year2, numdays)
+*	Herbert Inlet  (8632, ??min, year1, year2, numdays)
+*	Sulphur Passage  (8634, ??min, year1, year2, numdays)
+*	Riley Cove  (8637, ??min, year1, year2, numdays)
 
 West coast Vancouver Island (northern)
 
-*	`Gold River <>`_ (8650, ??min, year1, year2, numdays)
-*	`Saavedra Islands <>`_ (8645, ??min, year1, year2, numdays)
-*	`Esperanza <>`_ (8665, ??min, year1, year2, numdays)
-*	`Tahsis <>`_ (8658, ??min, year1, year2, numdays)
-*	`Zeballos <>`_ (8670, ??min, year1, year2, numdays)
-*	`Kyuquot <>`_ (8710, ??min, year1, year2, numdays)
-*	`Port Alice <>`_ (8750, ??min, year1, year2, numdays)
-*	`Bergh Cove <>`_ (8754, ??min, year1, year2, numdays)
-*	`Kwokwesta Creek <>`_ (8755, ??min, year1, year2, numdays)
-*	`Makwazniht I <>`_ (8756, ??min, year1, year2, numdays)
-*	`Coal Harbour <>`_ (8765, ??min, year1, year2, numdays)
-*	`Hunt Islet <>`_ (8736, ??min, year1, year2, numdays)
-*	`Cape Scott <>`_ (8790, ??min, year1, year2, numdays)
+*	Gold River  (8650, ??min, year1, year2, numdays)
+*	Saavedra Islands  (8645, ??min, year1, year2, numdays)
+*	Esperanza  (8665, ??min, year1, year2, numdays)
+*	Tahsis  (8658, ??min, year1, year2, numdays)
+*	Zeballos  (8670, ??min, year1, year2, numdays)
+*	Kyuquot  (8710, ??min, year1, year2, numdays)
+*	Port Alice  (8750, ??min, year1, year2, numdays)
+*	Bergh Cove  (8754, ??min, year1, year2, numdays)
+*	Kwokwesta Creek  (8755, ??min, year1, year2, numdays)
+*	Makwazniht I  (8756, ??min, year1, year2, numdays)
+*	Coal Harbour  (8765, ??min, year1, year2, numdays)
+*	Hunt Islet  (8736, ??min, year1, year2, numdays)
+*	Cape Scott  (8790, ??min, year1, year2, numdays)
 
 Howe Sound
 
-*	`Squamish Inner <>`_ (7811, ??min, year1, year2, numdays)
-*	`Squamish <>`_ (7810, ??min, year1, year2, numdays)
-*	`Latona Beach <>`_ (7805, ??min, year1, year2, numdays)
-*	`Gibsons <>`_ (7820, ??min, year1, year2, numdays)
+*	Squamish Inner  (7811, ??min, year1, year2, numdays)
+*	Squamish  (7810, ??min, year1, year2, numdays)
+*	Latona Beach  (7805, ??min, year1, year2, numdays)
+*	Gibsons  (7820, ??min, year1, year2, numdays)
 
 Sunshine Coast
 
-*	`Roberts Creek <>`_ (7824, ??min, year1, year2, numdays)
-*	`Porpoise Bay <>`_ (7852, ??min, year1, year2, numdays)
-*	`Halfmoon Bay <>`_ (7830, ??min, year1, year2, numdays)
-*	`Storm Bay <>`_ (7847, ??min, year1, year2, numdays)
-*	`Irvines Landing <>`_ (7836, ??min, year1, year2, numdays)
-*	`Egmont <>`_ (7842, ??min, year1, year2, numdays)
-*	`Saltery Bay <>`_ (7868, ??min, year1, year2, numdays)
-*	`Powell River <>`_ (7880, ??min, year1, year2, numdays)
-*	`Okeover Inlet <>`_ (8006, ??min, year1, year2, numdays)
-*	`Lund <>`_ (7885, ??min, year1, year2, numdays)
-*	`Prideaux Haven <>`_ (8008, ??min, year1, year2, numdays)
+*	Roberts Creek  (7824, ??min, year1, year2, numdays)
+*	Porpoise Bay  (7852, ??min, year1, year2, numdays)
+*	Halfmoon Bay  (7830, ??min, year1, year2, numdays)
+*	Storm Bay  (7847, ??min, year1, year2, numdays)
+*	Irvines Landing  (7836, ??min, year1, year2, numdays)
+*	Egmont  (7842, ??min, year1, year2, numdays)
+*	Saltery Bay  (7868, ??min, year1, year2, numdays)
+*	Powell River  (7880, ??min, year1, year2, numdays)
+*	Okeover Inlet  (8006, ??min, year1, year2, numdays)
+*	Lund  (7885, ??min, year1, year2, numdays)
+*	Prideaux Haven  (8008, ??min, year1, year2, numdays)
 
 Mid Strait of Georgia 
 
-*	`Squitty Bay <>`_ (7980, ??min, year1, year2, numdays)
-*	`Skerry Bay <>`_ (7985, ??min, year1, year2, numdays)
-*	`False Bay <>`_ (7982, ??min, year1, year2, numdays)
-*	`Welcome Bay <>`_ (7990, ??min, year1, year2, numdays)
-*	`Blubber Bay <>`_ (7875, ??min, year1, year2, numdays)
-*	`Hornby Island <>`_ (7953, ??min, year1, year2, numdays)
-*	`Denman Island <>`_ (7955, ??min, year1, year2, numdays)
-*	`Comox <>`_ (7965, ??min, year1, year2, numdays)
-*	`Little River <>`_ (7993, ??min, year1, year2, numdays)
+*	Squitty Bay  (7980, ??min, year1, year2, numdays)
+*	Skerry Bay  (7985, ??min, year1, year2, numdays)
+*	False Bay  (7982, ??min, year1, year2, numdays)
+*	Welcome Bay  (7990, ??min, year1, year2, numdays)
+*	Blubber Bay  (7875, ??min, year1, year2, numdays)
+*	Hornby Island  (7953, ??min, year1, year2, numdays)
+*	Denman Island  (7955, ??min, year1, year2, numdays)
+*	Comox  (7965, ??min, year1, year2, numdays)
+*	Little River  (7993, ??min, year1, year2, numdays)
 
 Northern Strait of Georgia
 
-*	`Mitlenatch <>`_ (7895, ??min, year1, year2, numdays)
-*	`Twin Island <>`_ (7892, ??min, year1, year2, numdays)
-*	`Surge Narrows <>`_ (8045, ??min, year1, year2, numdays)
-*	`Florence Cove <>`_ (8055, ??min, year1, year2, numdays)
-*	`Octopus Island <>`_ (8050, ??min, year1, year2, numdays)
-*	`Owen Bay <>`_ (8120, ??min, year1, year2, numdays)
-*	`Okis Island <>`_ (8124, ??min, year1, year2, numdays)
-*	`Brown Bay <>`_ (8110, ??min, year1, year2, numdays)
-*	`Seymour Narrows <>`_ (8105, ??min, year1, year2, numdays)
-*	`Chatham Pt <>`_ (8180, ??min, year1, year2, numdays)
-*	`Hardinge Is <>`_ (8127, ??min, year1, year2, numdays)
-*	`Big Bay, Stuart Island <>`_ (8060, ??min, year1, year2, numdays)
-*	`Blind Channel <>`_ (8155, ??min, year1, year2, numdays)
-*	`Kelsey Bay <>`_ (8215, ??min, year1, year2, numdays)
-*	`Yorke Island <>`_ (8233, ??min, year1, year2, numdays)
-*	`Warren Islands <>`_ (8254, ??min, year1, year2, numdays)
-*	`Cedar Island <>`_ (8325, ??min, year1, year2, numdays)
-*	`Alert Bay <>`_ (8280, ??min, year1, year2, numdays)
-*	`Sullivan Bay <>`_ (8364, ??min, year1, year2, numdays)
-*	`Stuart Narrows <>`_ (8379, ??min, year1, year2, numdays)
-*	`Drury Inlet <>`_ (8381, ??min, year1, year2, numdays)
-*	`Jennis Bay <>`_ (8384, ??min, year1, year2, numdays)
-*	`Frederick Sd <>`_ (8458, ??min, year1, year2, numdays)
-*	`Alison Sound <>`_ (8488, ??min, year1, year2, numdays)
-*	`Nugent Sound <>`_ (8464, ??min, year1, year2, numdays)
-*	`Charlotte Bay <>`_ (8443, ??min, year1, year2, numdays)
-*	`Mereworth Sound <>`_ (8476, ??min, year1, year2, numdays)
-*	`Egg Island <>`_ (8805, ??min, year1, year2, numdays)
-*	`Wadhams <>`_ (8840, ??min, year1, year2, numdays)
+*	Mitlenatch  (7895, ??min, year1, year2, numdays)
+*	Twin Island  (7892, ??min, year1, year2, numdays)
+*	Surge Narrows  (8045, ??min, year1, year2, numdays)
+*	Florence Cove  (8055, ??min, year1, year2, numdays)
+*	Octopus Island  (8050, ??min, year1, year2, numdays)
+*	Owen Bay  (8120, ??min, year1, year2, numdays)
+*	Okis Island  (8124, ??min, year1, year2, numdays)
+*	Brown Bay  (8110, ??min, year1, year2, numdays)
+*	Seymour Narrows  (8105, ??min, year1, year2, numdays)
+*	Chatham Pt  (8180, ??min, year1, year2, numdays)
+*	Hardinge Is  (8127, ??min, year1, year2, numdays)
+*	Big Bay, Stuart Island  (8060, ??min, year1, year2, numdays)
+*	Blind Channel  (8155, ??min, year1, year2, numdays)
+*	Kelsey Bay  (8215, ??min, year1, year2, numdays)
+*	Yorke Island  (8233, ??min, year1, year2, numdays)
+*	Warren Islands  (8254, ??min, year1, year2, numdays)
+*	Cedar Island  (8325, ??min, year1, year2, numdays)
+*	Alert Bay  (8280, ??min, year1, year2, numdays)
+*	Sullivan Bay  (8364, ??min, year1, year2, numdays)
+*	Stuart Narrows  (8379, ??min, year1, year2, numdays)
+*	Drury Inlet  (8381, ??min, year1, year2, numdays)
+*	Jennis Bay  (8384, ??min, year1, year2, numdays)
+*	Frederick Sd  (8458, ??min, year1, year2, numdays)
+*	Alison Sound  (8488, ??min, year1, year2, numdays)
+*	Nugent Sound  (8464, ??min, year1, year2, numdays)
+*	Charlotte Bay  (8443, ??min, year1, year2, numdays)
+*	Mereworth Sound  (8476, ??min, year1, year2, numdays)
+*	Egg Island  (8805, ??min, year1, year2, numdays)
+*	Wadhams  (8840, ??min, year1, year2, numdays)
 
 *=not digitised
 
@@ -280,7 +280,7 @@ For example::
 
 
 NOAA measured data
----------------------------
+-------------------------------
 
 Harmonic constituents and 31 days of measured water level data can be downloaded `here <http://tidesandcurrents.noaa.gov/stations.html?type=Historic+Water+Levels>`_.
 
