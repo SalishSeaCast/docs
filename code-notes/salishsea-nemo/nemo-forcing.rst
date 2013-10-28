@@ -61,6 +61,16 @@ Coordinates and bathymetry for the initial sub-domain test case known as :kbd:`J
 
     Sub-domain bathymetry used for initial tests.
 
+Coordinates and bathymetry for the full Salish Sea domain:
+
+* :file:`coordinates_seagrid_SalishSea.nc`
+* :file:`bathy_meter_SalishSea.nc`
+
+.. _SalishSeaBathy-image:
+
+.. figure:: images/SalishSeaBathy.png
+
+    Full Salish Sea domain bathymetry.
 
 
 :file:`bdydta/` Directory
