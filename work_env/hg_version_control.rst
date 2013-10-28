@@ -124,6 +124,7 @@ You should create or edit your :file:`$HOME/.hgignore` file to contain::
   *~
   *.pyc
   *.egg-info
+  .ipynb_checkpoints
   .DS_Store
   .coverage
   .cache
