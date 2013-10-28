@@ -55,6 +55,12 @@ Coordinates and bathymetry for the initial sub-domain test case known as :kbd:`J
 * :file:`SubDom_coordinates_seagrid_WestCoast.nc`
 * :file:`SubDom_bathy_meter_NOBCchancomp.nc`
 
+.. _SalishSeaSubdomainBathy-image:
+
+.. image:: images/SalishSeaSubdomainBathy.png
+
+
+
 :file:`bdydta/` Directory
 -------------------------
 
