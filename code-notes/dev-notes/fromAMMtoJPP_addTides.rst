@@ -62,3 +62,25 @@ Change:
     /
 
         filtide      = 'bdydta/JPP_bdytide_'                !  file name root of tidal forcing files
+
+Making it Work
+==============
+
+The above changes gave a code that ran for 295 time steps.  It blew up with a large horizontal velocity error located at i=217, j=97 which is on the ridge north of the Chatham Island.  Much work ensued but the final working version had the following changes. All this testing was done on Salish using 16 processors (4x4)
+
+Turbulence Scheme
+-----------------
+
+Turbulence scheme was changed back to GLS from TKE.  This requires a change in key from key_zdftke to key_zdfgls.
+
+Horizontal Laplacian Viscosity
+------------------------------
+
+This was increased from 20.5 m2/s to 200 m2/s.  Variable is called rn_ahm_0_lap.  Increasing bottom friction (rn_bfeb2 and rn_bfri2) seems to increase the instability.
+
+Topography Smoothing
+--------------------
+
+Topography was hand smoothed in Chatham Islands region, Porlier Pass and in a deep basin south of Victoria.  Details available in `SalishSeaSubdomainBathy.ipynb`_.
+
+.. _SalishSeaSubdomainBathy.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/bathymetry/SalishSeaSubdomainBathy.ipynb
