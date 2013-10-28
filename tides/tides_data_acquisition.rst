@@ -1,5 +1,5 @@
 Data acquisition (predicted tides and measured water level)
-====================================================
+======================================================================================================
 
 Tidal forcing is required on the boundaries of the NEMO model. Also, to evaluate the performance of the NEMO model in reproducing the tides, modelled water level output must be compared to measured water level data. 
 
