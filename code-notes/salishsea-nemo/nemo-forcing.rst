@@ -57,7 +57,9 @@ Coordinates and bathymetry for the initial sub-domain test case known as :kbd:`J
 
 .. _SalishSeaSubdomainBathy-image:
 
-.. image:: images/SalishSeaSubdomainBathy.png
+.. figure:: images/SalishSeaSubdomainBathy.png
+
+    Sub-domain bathymetry used for initial tests.
 
 
 
@@ -71,4 +73,3 @@ Currently there are three files that specify the M2 tidal components for the Wes
 * :file:`JPP_bdytide_M2_grid_T.nc`
 * :file:`JPP_bdytide_M2_grid_U.nc`
 * :file:`JPP_bdytide_M2_grid_V.nc`
-
