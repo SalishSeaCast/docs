@@ -112,3 +112,83 @@ The result of running :command:`make html` should look something link::
       docs/README.rst:: WARNING: document isn't included in any toctree
 
     that can be ignored.
+
+
+Links and Cross-references
+--------------------------
+
+External Links
+~~~~~~~~~~~~~~
+
+The preferred way to including external links is via markup like::
+
+  This is a paragraph that contains `a link`_.
+
+  .. _a link: http://example.com/
+
+If the link text should be the web address,
+you don't need special markup at all,
+the parser finds links and mail addresses in ordinary text.
+
+
+Internal Links
+~~~~~~~~~~~~~~
+
+To support cross-referencing to arbitrary locations in any document,
+the standard reST labels are used.
+For this to work label names must be unique throughout the entire documentation.  There are two ways in which you can refer to labels:
+
+* If you place a label directly before a section title,
+  you can reference to it with ``:ref:`label-name```.
+  Example::
+
+    .. _my-reference-label:
+
+    Section to cross-reference
+    --------------------------
+
+    This is the text of the section.
+
+    It refers to the section itself, see :ref:`my-reference-label`.
+
+  The ``:ref:`` role would then generate a link to the section,
+  with the link title being "Section to cross-reference".
+  This works just as well when section and reference are in different source files.
+
+  Automatic labels also work with figures: given::
+
+    .. _my-figure:
+
+    .. figure:: whatever
+
+       Figure caption
+
+  a reference ``:ref:`my-figure``` would insert a reference to the figure
+  with link text "Figure caption".
+
+  The same works for tables that are given an explicit caption using the
+  :kbd:`table` directive.
+
+* Labels that aren't placed before a section title can still be referenced to,
+  but you must give the link an explicit title,
+  using this syntax: ``:ref:`Link title <label-name>```.
+
+* Inter-Sphinx links are enabled between the :ref:`tools-repo` docs and the :ref:`docs-repo` repo;
+  i.e.
+  whenever Sphinx encounters a cross-reference that has no matching target in the :ref:`tools-repo` docs,
+  it looks for targets in the :ref:`docs-repo`.
+
+Using :rst:role:`ref` is advised over standard reStructuredText links to sections
+(like ```Section title`_``) because it works across files,
+when section headings are changed,
+and for all builders that support cross-references.
+
+
+Links to Rendered IPython Notebooks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To link to a rendered representation of an IPython Notebook that has been pushed to a Bitbucket repo use markup like::
+
+  * `SalishSeaBathy.ipynb`_: Documents the full domain bathymetry used for the Salish Sea NEMO runs.
+
+  .. _SalishSeaBathy.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/bathymetry/SalishSeaBathy.ipynb
