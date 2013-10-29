@@ -9,9 +9,9 @@ Water level
 
 * Measured water level observations at DFO stations can be compared to water level time series from NEMO
 
-* ipython notebook :: tools/dfo_w_level/DFO_waterleveldownload.ipynb
+* ipython notebook: tools/dfo_w_level/DFO_waterleveldownload.ipynb
 
-* Eventually will make this notebook into a function that would plot time vs. water level at the station location for model and measured: ::
+* Eventually will make this notebook into a function that plots time vs. water level at the station location for model and measured: ::
 
 	comp_wlev_ts(model_run,stat_num)
 
@@ -37,9 +37,9 @@ M2 and K1
 
 * Measured M2 and K1 harmonics from water level (calculated and shown by Foreman et al (1995))  can be compared to harmonics calculated inside NEMO model
 
-* ipython notebook :: tools/dfo_w_level/harm_comp_model_foreman95.ipynb
+* ipython notebook: tools/dfo_w_level/harm_comp_model_foreman95.ipynb
 
-* Eventually will write this notebook into a function like this that will calculate differences (as described by Foreman et al (1995) and Masson & Cummins (2004)) for each constituent and save them to a text file for each station number: ::
+* Eventually will write this notebook into a function that will calculate differences (as described by Foreman et al (1995) and Masson & Cummins (2004)) for each constituent and save them to a text file for each station number: ::
 	
 	comp_wlev_harm_M2(model_run)
 	comp_wlev_harm_K1(model_run)
