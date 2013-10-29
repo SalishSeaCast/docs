@@ -39,7 +39,7 @@ M2 and K1
 
 * ipython notebook: tools/dfo_w_level/harm_comp_model_foreman95.ipynb
 
-* Eventually will write this notebook into a function that will calculate differences (as described by Foreman et al (1995) and Masson & Cummins (2004)) for each constituent and save them to a text file for each station number: ::
+* Eventually will write this notebook into a function that will calculate differences (as described by Foreman et al (1995) and Masson & Cummins (2004)) for each constituent and save them to a text file at all stations in the model domain: ::
 	
 	comp_wlev_harm_M2(model_run)
 	comp_wlev_harm_K1(model_run)
