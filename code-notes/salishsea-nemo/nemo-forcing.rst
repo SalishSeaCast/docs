@@ -78,8 +78,32 @@ Coordinates and bathymetry for the full Salish Sea domain:
 
 The :file:`bdydta/` directory contains forcing data for the open boundaries.
 
-Currently there are three files that specify the M2 tidal components for the Western and Northern open boundaries of the West Coast SubDomain.  These files specify the cosine and sine components for the sea surfac e height (T), the x-direction velocity (U) and y-direction velocity (V).
+Currently there are three files that specify the M2 tidal components for the Western and Northern open boundaries of the West Coast SubDomain.  These files specify the cosine and sine components for the sea surface height (T), the x-direction velocity (U) and y-direction velocity (V).
 
 * :file:`JPP_bdytide_M2_grid_T.nc`
 * :file:`JPP_bdytide_M2_grid_U.nc`
 * :file:`JPP_bdytide_M2_grid_V.nc`
+
+:file:`initial_strat/` Directory
+--------------------------------
+
+The :file:`initial_strat/` directory contains initial data for the temperature and salinity fields.
+
+Currently there are two files for the JPP Sub-domain based on 500 m maximum water depth and 40 vertical levels.  
+
+* :file:`SoG0318_1y_temperature_nomask.nc`
+* :file:`SoG0318_1y_salinity_nomask.nc`
+
+The data is horizontally uniform, based on STRATOGEM profile at S4-1 in September 2003 from cruise 0318.  Original data file is
+
+* :file:`sg0318006.cnv`
+
+and the profile is plotted in
+
+* :file:`sg0318006_profile.ps`
+* :file:`sg0318006_profile.fig`
+
+The preparation of the NetCDF files is done by the python notebook `Tools/I_Forcing/PrepareTS.ipynb`_
+
+.. _Tools/I_Forcing/PrepareTS.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/PrepareTS.ipynb
+
