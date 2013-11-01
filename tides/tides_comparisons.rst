@@ -9,7 +9,9 @@ Water level
 
 * Measured water level observations at DFO stations can be compared to water level time series from NEMO
 
-* ipython notebook: tools/compare_tides/comp_wlev_ts.ipynb
+* ipython notebook: `comp_wlev_ts.ipynb`_
+
+.. _comp_wlev_ts.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/compare_tides/comp_wlev_ts.ipynb
 
 * TO DO: make this notebook into a function that plots time vs. water level at the station location for model and measured: ::
 
@@ -37,7 +39,10 @@ M2 and K1
 
 * Measured M2 and K1 harmonics from water level (calculated and shown by Foreman et al (1995))  can be compared to harmonics calculated inside NEMO model
 
-* ipython notebook: tools/compare_tides/comp_wlev_harm.ipynb
+* ipython notebook: `comp_wlev_harm.ipynb`_
+
+.. _comp_wlev_harm.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/compare_tides/comp_wlev_harm.ipynb
+
 
 * Eventually will write this notebook into a function that will calculate differences (as described by Foreman et al (1995) and Masson & Cummins (2004)) for each constituent and save them to a text file at all stations in the model domain: ::
 	
@@ -62,9 +67,15 @@ Currents
 M2 and K1
 +++++++++++++++++++
 
-* TO DO: M2 and K1 harmonics calculated from current measurements (calculated and shown by Foreman et al (1995))  can be compared to harmonics calculated inside NEMO model
+* M2 and K1 harmonics calculated from current measurements (calculated and shown by Foreman et al (1995))  can be compared to harmonics calculated inside NEMO model. 
 
-* no ipython notebook yet
+* Not sure how to compare harmonics from model to measured harmonics, because measured harmonics are rectilinear and just have a direction. Which is OK for converting the measured amplitude to U and V components, but I don't know what to do with the phase...
+
+* Also, the bathymetry is not well resolved around many of the measured points (because they're in narrow inlets and passes) so there is no model point to compare to the measurements
+
+* ipython notebook: `comp_current_harm.ipynb`_
+
+.. _comp_current_harm.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/compare_tides/comp_current_harm.ipynb
 
 * something like: ::
 
