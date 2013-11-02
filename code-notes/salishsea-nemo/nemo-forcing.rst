@@ -76,13 +76,38 @@ Coordinates and bathymetry for the full Salish Sea domain:
 :file:`bdydta/` Directory
 -------------------------
 
-The :file:`bdydta/` directory contains forcing data for the open boundaries.
+The :file:`bdydta/` directory contains forcing data for the open boundaries of sub-domain.
 
 Currently there are three files that specify the M2 tidal components for the Western and Northern open boundaries of the West Coast SubDomain.  These files specify the cosine and sine components for the sea surface height (T), the x-direction velocity (U) and y-direction velocity (V).
 
 * :file:`JPP_bdytide_M2_grid_T.nc`
 * :file:`JPP_bdytide_M2_grid_U.nc`
 * :file:`JPP_bdytide_M2_grid_V.nc`
+
+:file: `open_boundaries/west` Directory
+---------------------------------------
+
+The :file:`open_boundaries/` directory contains the open boundary forcing information for the full domain.  Currently we are only using the :file:`west/` subdirectory as we have the north boundary closed.
+
+There is currently one file in the main directory.  It specifies set temperature and salinity (uniform across the boundary) from Thomson et al, 2007 winter picture.
+
+* :file:`SalishSea_bdyT_tra.nc`
+
+The preparation of the NetCDF file is done by the python notebook `Tools/I_Forcing/PrepareSimpleOBC.ipynb`_
+
+.. _Tools/I_Forcing/PrepareTS.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/PrepareSimpleOBC.ipynb
+
+
+:file: `open_boundaries/west/tides/` Directory
+----------------------------------------------
+
+The :file:`open_boundaries/west/tides/` sub-directory contains the tidal forcing files for the western boundary of the full domain.  
+
+Currently there are three files that specify the M2 tidal components.  These files specify the cosine and sine components for the sea surface height (T), the x-direction velocity (U) and y-direction velocity (V).
+
+* :file:`SalishSea_west_tide_M2_grid_T.nc`
+* :file:`SalishSea_west_tide_M2_grid_U.nc`
+* :file:`SalishSea_west_tide_M2_grid_V.nc`
 
 :file:`initial_strat/` Directory
 --------------------------------
