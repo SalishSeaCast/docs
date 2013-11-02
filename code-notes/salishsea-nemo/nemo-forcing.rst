@@ -84,7 +84,7 @@ Currently there are three files that specify the M2 tidal components for the Wes
 * :file:`JPP_bdytide_M2_grid_U.nc`
 * :file:`JPP_bdytide_M2_grid_V.nc`
 
-:file: `open_boundaries/west` Directory
+:file:`open_boundaries/west` Directory
 ---------------------------------------
 
 The :file:`open_boundaries/` directory contains the open boundary forcing information for the full domain.  Currently we are only using the :file:`west/` subdirectory as we have the north boundary closed.
@@ -95,10 +95,10 @@ There is currently one file in the main directory.  It specifies set temperature
 
 The preparation of the NetCDF file is done by the python notebook `Tools/I_Forcing/PrepareSimpleOBC.ipynb`_
 
-.. _Tools/I_Forcing/PrepareTS.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/PrepareSimpleOBC.ipynb
+.. _Tools/I_Forcing/PrepareSimpleOBC.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/PrepareSimpleOBC.ipynb
 
 
-:file: `open_boundaries/west/tides/` Directory
+:file:`open_boundaries/west/tides/` Directory
 ----------------------------------------------
 
 The :file:`open_boundaries/west/tides/` sub-directory contains the tidal forcing files for the western boundary of the full domain.  
@@ -132,3 +132,15 @@ The preparation of the NetCDF files is done by the python notebook `Tools/I_Forc
 
 .. _Tools/I_Forcing/PrepareTS.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/PrepareTS.ipynb
 
+:file:`rivers/`: Directory
+--------------------------
+
+The :file:`rivers/` directory contains forcing data for the rivers.
+
+Currently there is one file, for the full Salish Sea domain that puts a constant 2000 m3/s out of the southern arm of the Fraser River.
+
+* :file:`rivers_Fraser_only_cnst.nc`
+
+The preparation of the NetCDF file is done by the python notebook `Tools/I_Forcing/AddRivers.ipynb`_
+
+.. _Tools/I_Forcing/AddRivers.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/AddRivers.ipynb
