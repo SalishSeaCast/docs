@@ -1,10 +1,13 @@
 .. SalishSea-MEOPAR documentation master file
 
+.. _SalishSeaDocs:
+
 ***************************************
 Salish Sea MEOPAR Project Documentation
 ***************************************
 
 This is a collection of documentation about the Salish Sea MEOPAR project.
+There is a companion collection of :ref:`project tools documentation <SalishSeaToolsDocs>`.
 
 
 Contents:
