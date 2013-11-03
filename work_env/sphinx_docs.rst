@@ -176,7 +176,8 @@ For this to work label names must be unique throughout the entire documentation.
 * Inter-Sphinx links are enabled between the :ref:`tools-repo` docs and the :ref:`docs-repo` repo;
   i.e.
   whenever Sphinx encounters a cross-reference that has no matching target in the :ref:`tools-repo` docs,
-  it looks for targets in the :ref:`docs-repo`.
+  it looks for targets in the :ref:`docs-repo`,
+  and vice-versa.
 
 Using :rst:role:`ref` is advised over standard reStructuredText links to sections
 (like ```Section title`_``) because it works across files,
