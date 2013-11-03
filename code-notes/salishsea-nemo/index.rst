@@ -13,6 +13,6 @@ Those repos are not used for model runs.
    :maxdepth: 2
 
    nemo-code
-   nemo-forcing
+   nemo-forcing/index
    ss-run-sets
    nemo31-concepts110
