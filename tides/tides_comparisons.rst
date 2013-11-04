@@ -43,8 +43,9 @@ M2 and K1
 
 .. _comp_wlev_harm.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/compare_tides/comp_wlev_harm.ipynb
 
+* This notebook has a switch for choosing which model run to analyse. Then it evaluates the model's performance by calculating differences (as described by Foreman et al (1995) and Masson & Cummins (2004)) and saving these to a text file. Finally, the notebook plots the differences as circles of varying radii on a map of the bathymetry. So far, the notebook only does this for M2.
 
-* Eventually will write this notebook into a function that will calculate differences (as described by Foreman et al (1995) and Masson & Cummins (2004)) for each constituent and save them to a text file at all stations in the model domain: ::
+* This notebook will be made into a function that calculates differences (as described by Foreman et al (1995) and Masson & Cummins (2004)) for each constituent and save them to a text file at all stations in the model domain: ::
 	
 	comp_wlev_harm_M2(model_run)
 	comp_wlev_harm_K1(model_run)
