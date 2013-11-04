@@ -84,6 +84,8 @@ The recommended order of dimesions is :kbd:`t`,
 Not all datasets are required to have all 4 dimensions.
 
 
+.. _netCDF4-python-variables:
+
 Variables
 ---------
 
@@ -178,8 +180,8 @@ The can be access individually as attributes using dotted notation:
 
 or in code using the methods on a :py:class:`Dataset` object.
 
-Recommended
-~~~~~~~~~~~
+Required
+~~~~~~~~
 
 All datasets should have values for the following attributes unless there is a *very* good reason not to.
 
@@ -272,8 +274,8 @@ The can be access individually as attributes using dotted notation:
 or in code using the methods on a :py:class:`Variable` object.
 
 
-Recommended
-~~~~~~~~~~~
+Required
+~~~~~~~~
 
 All variables should have values for the following attributes unless there is a *very* good reason not to.
 
@@ -308,22 +310,11 @@ See that documentation for more details of the intent behind these attributes.
 
       depths.long_name = 'Depth'
 
-:kbd:`standard_name`
-  A name used to identify the physical quantity.
-  A standard name contains no whitespace and is case sensitive.
-  The :kbd:`standard_name` attribute is typically used where a descriptive
-
-  Example:
-
-  .. code-block:: python
-
-      lats.standard_name = 'latitude'
-
 
 As Applicable
 ~~~~~~~~~~~~~
 
-:kbd:`positive`
+:kbd:`calendar`
   foo
 
   Example:
@@ -331,40 +322,69 @@ As Applicable
   .. code-block:: python
 
       source
+
+:kbd:`positive`
+  The direction of positive
+  (i.e., the direction in which the coordinate values are increasing)
+  for a vertical coordinate.
+  For Salish Sea MEOPAR files this is applicable to depths and a value of :kbd:`down` is used,
+  indicating that the depth of the surface is 0 and depth values increase downward.
+
+  Example:
+
+  .. code-block:: python
+
+      depths.positive = 'down'
 
 :kbd:`valid_range`
-  foo
+  Smallest and largest valid values of a variable.
+  If valid minimum and maximum values for a variable can be stated,
+  use this instead of :kbd:`valid_min` and :kbd:`valid_max`.
 
   Example:
 
   .. code-block:: python
 
-      source
+      depths.valid_range = np.array((0.0, 428.0))
 
 :kbd:`valid_min`
-  foo
+  Smallest valid value of a variable.
+  Use this only if there is no value for :kbd:`valid_max`,
+  otherwise,
+  use :kbd:`valid_range`.
 
   Example:
 
   .. code-block:: python
 
-      source
+      sal.valid_min = 0
 
 :kbd:`valid_max`
-  foo
+  Largest valid value of a variable.
+  Use this only if there is no value for :kbd:`valid_min`,
+  otherwise,
+  use :kbd:`valid_range`.
 
   Example:
 
   .. code-block:: python
 
-      source
+      foo.valid_max = 42
 
 :kbd:`_FillValue`
-  foo
+  The value that a variable gets filled with before any data is loaded into it.
+  Each data type has a default for :kbd:`_FillValue`,
+  but a variable-specific value can be specified in the :py:meth:`createVariable` method
+  (see :ref:`netCDF4-python-variables`).
+
+:kbd:`standard_name`
+  A name used to identify the physical quantity.
+  A standard name contains no whitespace and is case sensitive.
+  The :kbd:`standard_name` attribute is typically used where a descriptive,
+  code-friendly alternative to the :kbd:`long_name` or the variable name itself is needed.
 
   Example:
 
   .. code-block:: python
 
-      source
-
+      sal.standard_name = 'practical_salinity'
