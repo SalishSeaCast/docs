@@ -99,6 +99,8 @@ NEMO-code
 * documentation: http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo-code.html
 
 
+.. _NEMO-forcing-repo:
+
 NEMO-forcing
 ~~~~~~~~~~~~
 
