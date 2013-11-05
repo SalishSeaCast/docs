@@ -79,20 +79,20 @@ The preparation of the NetCDF file is done by the python notebook `Tools/I_Forci
 :file:`open_boundaries/west/tides/` Directory
 ----------------------------------------------
 
-The :file:`open_boundaries/west/tides/` sub-directory contains the tidal forcing files for the western boundary of the full domain.  
+The :file:`open_boundaries/west/tides/` sub-directory contains the tidal forcing files for the western boundary of the full domain.
 
-Currently there are three files that specify the M2 tidal components.  These files specify the cosine and sine components for the sea surface height (T), the x-direction velocity (U) and y-direction velocity (V).
+Currently there are three preliminary files that specify the M2 tidal components.  These files specify the cosine and sine components for the sea surface height (T), the x-direction velocity (U) and y-direction velocity (V).
 
-* :file:`SalishSea_west_tide_M2_grid_T.nc`
-* :file:`SalishSea_west_tide_M2_grid_U.nc`
-* :file:`SalishSea_west_tide_M2_grid_V.nc`
+* :file:`SalishSea_west_sea_tide_M2_grid_T.nc`
+* :file:`SalishSea_west_sea_tide_M2_grid_U.nc`
+* :file:`SalishSea_west_sea_tide_M2_grid_V.nc`
 
 :file:`initial_strat/` Directory
 --------------------------------
 
 The :file:`initial_strat/` directory contains initial data for the temperature and salinity fields.
 
-Currently there are two files for the JPP Sub-domain based on 500 m maximum water depth and 40 vertical levels.  
+Currently there are two files for the JPP Sub-domain based on 500 m maximum water depth and 40 vertical levels.
 
 * :file:`SoG0318_1y_temperature_nomask.nc`
 * :file:`SoG0318_1y_salinity_nomask.nc`
