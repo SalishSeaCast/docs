@@ -10,6 +10,31 @@ DFO modelled tidal predictions
 
 WebTide was used for the boundary conditions in the preliminary runs of the NEMO model.
 
+Tidal constituents (amplitude and phase) can be output from Webtide for surface elevation and tidal currents. These constituents are relative to compass north, south etc. However, firstly our grid is rotated 29 degrees and secondly, NEMO takes Z1 and Z2, where
+	.. math::
+	 Z1 = A\cos\phi
+
+	 Z2 = A\sin\phi
+	
+So to go from Webtide constituents to grid constituents, with a rotation of theta (= 29 degrees)
+	.. math::
+	 Z1 = u_a\cos\theta\cos\phi_u - v_a\sin\theta\sin\phi_v
+
+	 Z2 = u_a\cos\theta\sin\phi_u + v_a\sin\theta\cos\phi_v
+
+where 
+	.. math:: 
+	 u_a = \text{Webtide u amplitude}
+	
+	 v_a = \text{Webtide v amplitude}
+
+	 \phi_u = \text{Webtide u phase}
+
+	 \phi_v = \text{Webtide v phase}
+
+	 \theta = \text{Grid rotation} (29^\circ)
+
+
 TPXO7.1 modelled tidal predictions
 ----------------------------------------------
 
