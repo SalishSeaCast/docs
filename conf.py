@@ -176,3 +176,16 @@ html_use_index = False
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'SalishSea-MEOPARdoc'
+
+
+# -- Options for LaTeX output --------------------------------------------------
+
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title, author, documentclass [howto/manual]).
+latex_documents = [(
+    'index',
+    'SalishSea-MEOPAR-docs.tex',
+    'Salish Sea MEOPAR Documentation',
+    'Salish Sea MEOPAR Project Contributors',
+    'manual',
+)]
