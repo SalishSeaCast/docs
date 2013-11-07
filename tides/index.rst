@@ -8,4 +8,5 @@ Tidal evaluation
    tides_lit_review
    tides_data_acquisition
    tides_comparisons
+   storm_surge
 
