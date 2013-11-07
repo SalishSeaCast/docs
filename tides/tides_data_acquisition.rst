@@ -18,11 +18,17 @@ For tidal currents, these constituents are relative to compass north, south etc.
 
 	 Z2 = A\sin\phi
 	
-So to go from Webtide constituents to grid constituents, with a rotation of theta (= 29 degrees)
+So to go from Webtide constituents to grid constituents, with a rotation of theta (= 29 degrees), for U
 	.. math::
 	 Z1 = u_a\cos\theta\cos\phi_u - v_a\sin\theta\sin\phi_v
 
 	 Z2 = u_a\cos\theta\sin\phi_u + v_a\sin\theta\cos\phi_v
+
+And for V
+	.. math::
+	 Z1 = -u_a\sin\theta\cos\phi_u - v_a\cos\theta\sin\phi_v
+
+	 Z2 = -u_a\sin\theta\sin\phi_u + v_a\cos\theta\cos\phi_v
 
 where 
 	.. math:: 
