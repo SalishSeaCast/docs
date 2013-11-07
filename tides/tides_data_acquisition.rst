@@ -13,12 +13,14 @@ WebTide was used for the boundary conditions in the preliminary runs of the NEMO
 Tidal constituents (amplitude and phase) can be output from Webtide for surface elevation and tidal currents. 
 
 For tidal currents, these constituents are relative to compass north, south etc. However, firstly our grid is rotated 29 degrees and secondly, NEMO takes Z1 and Z2, where
+
 	.. math::
 	 Z1 = A\cos\phi
 
 	 Z2 = A\sin\phi
 	
 So to go from Webtide constituents to grid constituents, with a rotation of theta (= 29 degrees), for U
+
 	.. math::
 	 Z1 = u_a\cos\theta\cos\phi_u - v_a\sin\theta\sin\phi_v
 
