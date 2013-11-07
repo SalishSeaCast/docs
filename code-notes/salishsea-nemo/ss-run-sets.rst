@@ -44,10 +44,10 @@ Repo Contents
 
 the :file:`SalishSea` directory contains the run-set files for the initial full domain runs:
 
-:file:`SalishSea.yaml`: Sample run description file for use with the :ref:`SalishSeaCmdProcessor`
-:file:`namelist`: Sample namelist containing the current recommended model parameter values
-:file:`iodef.xml`: Sample IOM output server definitions
-:file:`xmlio_server.def`: IOM output server control settings
+* :file:`SalishSea.yaml`: Sample run description file for use with the :ref:`SalishSeaCmdProcessor`
+* :file:`namelist`: Sample namelist containing the current recommended model parameter values
+* :file:`iodef.xml`: Sample IOM output server definitions
+* :file:`xmlio_server.def`: IOM output server control settings
 
 
 :file:`JPP/` Directory
