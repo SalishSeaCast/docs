@@ -27,12 +27,14 @@ So to go from Webtide constituents to grid constituents, with a rotation of thet
 	 Z2 = u_a\cos\theta\sin\phi_u + v_a\sin\theta\cos\phi_v
 
 And for V
+
 	.. math::
 	 Z1 = -u_a\sin\theta\cos\phi_u - v_a\cos\theta\sin\phi_v
 
 	 Z2 = -u_a\sin\theta\sin\phi_u + v_a\cos\theta\cos\phi_v
 
 where 
+
 	.. math:: 
 	 u_a = \text{Webtide u amplitude}
 	
