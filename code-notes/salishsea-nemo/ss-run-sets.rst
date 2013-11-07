@@ -39,7 +39,7 @@ where :kbd:`<you>` is your Bitbucket user id.
 Repo Contents
 =============
 
-:file:`SalishSea` Directory
+:file:`SalishSea/` Directory
 ---------------------------
 
 the :file:`SalishSea` directory contains the run-set files for the initial full domain runs:
