@@ -40,7 +40,7 @@ Repo Contents
 =============
 
 :file:`SalishSea/` Directory
----------------------------
+----------------------------
 
 the :file:`SalishSea` directory contains the run-set files for the initial full domain runs:
 
