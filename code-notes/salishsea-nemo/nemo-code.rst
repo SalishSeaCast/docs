@@ -89,7 +89,7 @@ the repo contains:
 Running the Model
 =================
 
-We don't want to clutter the `NEMO-code`_ repo with files from development and eploreation run-sets
+We don't want to clutter the `NEMO-code`_ repo with files from development and exploration run-sets
 (aka experiments),
 run results,
 etc.,
