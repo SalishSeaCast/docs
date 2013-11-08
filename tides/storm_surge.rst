@@ -3,6 +3,8 @@ Storm surge
 
 We need to test our model to see how well it can represent storm surge events in the Salish Sea. We have wind forcing available from 2002-2010, so storms need to be in this period.
 
+High water levels can be due to a combination of high seasonal tide, strong winds, low atmospheric pressure and sea level height anomalies due to ENSO events.
+
 What classifies as a storm?
 --------------------------------------
 
@@ -14,12 +16,35 @@ How to find storms?
 
 e.g. looking through timeseries of difference between expected and measured 
 
-e.g. literature search for big storms
+e.g. literature search for big storms 
 
+* Jan 02, 2003, Victoria
+* Dec 24, 2003, Vancouver
+* Nov 2006, Vancouver
+* Dec 15, 2006, Vancouver 
+* Dec 25, 2008, Vancouver
+* Nov 24, 2011, Vancouver (not within range)
+* Jan 05, 2012, Vancouver (not within range)
+* Dec 17, 2012, Vancouver (not within range)
+* Sep 30, 2013, Vancouver (not within range)
+
+Prediction for 2013/2014 from Storm Surge Almanac:
+
+`Flooding risk is greatest during the seasonal perigean spring tides, which correspond to times of extreme high tidal levels during the winter months. This year the highest tides for the Lower Mainland are expected in the first weeks of December, January and February; for Victoria the highest tides are expected in the first and last weeks of December, and the final week of January.`
+
+Also, from Abeysirigunawardena et al (2011), extremes generally occur from October to March.
 
 Existing storm surge models
 ---------------------------------------
 
 The Government of British Columbia launched the `BC Storm Surge Forecast System <http://www.env.gov.bc.ca/cas/adaptation/storm_surges.html>`_ in 2011. This model is driven by the Pacific Ocean Model (which is driven by 7 day weather forecasts from NOAA) and a 6 day forecast from Environment Canada. Forecast bulletins are available for Point Atkinson, Victoria and Campbell River. There is no hindcasting avaiable in the model.
+
+
+References
+-------------------------------
+Abeysirigunawardena, D.S., D.J. Smith and B. Taylor, 2011. Extreme Sea Surge Responses to
+Climate Variability in Coastal British Columbia, Canada, Annals of the Association of American Geographers, 101:5, 992-1010,
+DOI: 10.1080/00045608.2011.585929
+
 
 
