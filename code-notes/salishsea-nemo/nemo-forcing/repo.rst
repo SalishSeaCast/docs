@@ -67,11 +67,13 @@ Currently there are three files that specify the M2 tidal components for the Wes
 
 The :file:`open_boundaries/` directory contains the open boundary forcing information for the full domain.  Currently we are only using the :file:`west/` subdirectory as we have the north boundary closed.
 
-There is currently one file in the main directory.  It specifies set temperature and salinity (uniform across the boundary) from Thomson et al, 2007 winter picture.
+There is currently one tested file in the main directory.  It specifies set temperature and salinity (uniform across the boundary) from Thomson et al, 2007 winter picture.
 
 * :file:`SalishSea_bdyT_tra.nc`
 
-The preparation of the NetCDF file is done by the python notebook `Tools/I_Forcing/PrepareSimpleOBC.ipynb`_
+There are 5 files undergoing testing that specify the barotropic and baroclinic currents and the surface height.  These are uniform velocities across the boundary but vary in depth.  They are based on Thomson et al, 2007 but were then adjusted to ensure almost zero net velocity across the boundary.
+
+The preparation of the NetCDF files is done by the python notebook `Tools/I_Forcing/PrepareSimpleOBC.ipynb`_
 
 .. _Tools/I_Forcing/PrepareSimpleOBC.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/PrepareSimpleOBC.ipynb
 
@@ -115,9 +117,13 @@ The preparation of the NetCDF files is done by the python notebook `Tools/I_Forc
 
 The :file:`rivers/` directory contains forcing data for the rivers.
 
-Currently there is one file, for the full Salish Sea domain that puts a constant 2000 m3/s out of the southern arm of the Fraser River.
+Currently there are two files, for the full Salish Sea domain.  One that puts a constant 2000 m3/s out of the southern arm of the Fraser River.
 
 * :file:`rivers_Fraser_only_cnst.nc`
+
+and one that includes all three mouths of the Fraser, Burrard Inlet, Squamish River, Puntledge (Comox), Nanaimo and Cowichan.  All at constant values (yearly averages).
+
+* :file:`rivers_Fraserplus_cnst.nc`
 
 The preparation of the NetCDF file is done by the python notebook `Tools/I_Forcing/AddRivers.ipynb`_
 
