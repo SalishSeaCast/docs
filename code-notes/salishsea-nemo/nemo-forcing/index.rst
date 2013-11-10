@@ -25,4 +25,5 @@ files used to run NEMO for the Salish Sea are maintained in the `NEMO-forcing`_ 
    :maxdepth: 2
 
    repo.rst
+   atmospheric.rst
    netcdf4.rst
