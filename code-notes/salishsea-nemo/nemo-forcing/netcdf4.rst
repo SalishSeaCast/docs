@@ -213,7 +213,7 @@ See that documentation for more details of the intent behind these attributes.
 
   .. code-block:: python
 
-      institution = 'Dept of Earth, Ocean & Atmospheric Sciences, University of British Columbia'
+      foo.institution = 'Dept of Earth, Ocean & Atmospheric Sciences, University of British Columbia'
 
 :kbd:`source`
   The method of production of the original dataset.
