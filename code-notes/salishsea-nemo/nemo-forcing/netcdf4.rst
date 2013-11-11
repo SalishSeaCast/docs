@@ -299,6 +299,7 @@ See that documentation for more details of the intent behind these attributes.
 
   * For latitude use ``units = 'degrees_north'``
   * For longitude use ``units = 'degrees_east'``
+  * For time use ``units = `seconds since yyyy-mm-dd HH:MM:SS'`` with an actual date/time
   * For practical salinity use ``units = 1`` and ``long_name = 'Practical Salinity'``
 
 :kbd:`long_name`
@@ -315,13 +316,14 @@ As Applicable
 ~~~~~~~~~~~~~
 
 :kbd:`calendar`
-  foo
+  The calendar to use on a time axis to calculate a new date and time given a base date,
+  base time and a time increment.
 
   Example:
 
   .. code-block:: python
 
-      source
+      time.calendar = 'gregorian'
 
 :kbd:`positive`
   The direction of positive
