@@ -21,6 +21,16 @@ where :kbd:`<you>` is your Bitbucket user id.
 Repo Contents
 =============
 
+:file:`atmospheric/` Directory
+------------------------------
+
+The :file:`atmospheric/` directory contains forcing data that supports the :ref:`AtmosphericForcing` of the model.
+
+:file:`no_snow.nc`: A :ref:`CGRF-Dataset`-like file that can be used as annual climatology to impose the :ref:`NoSnowConstraint`. Created by the :ref:`tools-repo` repo `I_ForcingFiles/NoSnow.ipynb`_ notebook.
+
+.. _I_ForcingFiles/NoSnow.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/NoSnow.ipynb
+
+
 :file:`grid/` Directory
 -----------------------
 
@@ -49,18 +59,6 @@ Coordinates and bathymetry for the full Salish Sea domain:
 .. figure:: images/SalishSeaBathy.png
 
     Full Salish Sea domain bathymetry.
-
-
-:file:`bdydta/` Directory
--------------------------
-
-The :file:`bdydta/` directory contains forcing data for the open boundaries of sub-domain.
-
-Currently there are three files that specify the M2 tidal components for the Western and Northern open boundaries of the West Coast SubDomain.  These files specify the cosine and sine components for the sea surface height (T), the x-direction velocity (U) and y-direction velocity (V).
-
-* :file:`JPP_bdytide_M2_grid_T.nc`
-* :file:`JPP_bdytide_M2_grid_U.nc`
-* :file:`JPP_bdytide_M2_grid_V.nc`
 
 :file:`open_boundaries/west` Directory
 ---------------------------------------
@@ -128,3 +126,15 @@ and one that includes all three mouths of the Fraser, Burrard Inlet, Squamish Ri
 The preparation of the NetCDF file is done by the python notebook `Tools/I_Forcing/AddRivers.ipynb`_
 
 .. _Tools/I_Forcing/AddRivers.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/AddRivers.ipynb
+
+
+:file:`bdydta/` Directory
+-------------------------
+
+The :file:`bdydta/` directory contains forcing data for the open boundaries of the sub-domain used for initial tests.
+
+Currently there are three files that specify the M2 tidal components for the Western and Northern open boundaries of the West Coast SubDomain.  These files specify the cosine and sine components for the sea surface height (T), the x-direction velocity (U) and y-direction velocity (V).
+
+* :file:`JPP_bdytide_M2_grid_T.nc`
+* :file:`JPP_bdytide_M2_grid_U.nc`
+* :file:`JPP_bdytide_M2_grid_V.nc`
