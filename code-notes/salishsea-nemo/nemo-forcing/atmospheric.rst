@@ -20,11 +20,8 @@ To satisfy that requirement the following file management strategy has been esta
   * :file:`NEMO-atmos/` is a collection of symbolic links to the CGRF files using the names required by the NEMO CORE bulk interface.
     The :file:`NEMO-atmos/` directory also contains symbolic links to the :ref:`AtmosphericForcingInterpolationWeights` file and the :ref:`NoSnowConstraint` file in the :ref:`NEMO-forcing-repo` repo.
 
-* The files in the :file:`/ocean/dlatorne/MEOPAR/CGRF/` directory are managed by the :command:`salishsea get_cgrf` tool
-
-  .. todo::
-
-      Create and document :command:`salishsea get_cgrf`
+* The files in the :file:`/ocean/dlatorne/MEOPAR/CGRF/` directory are managed by the :command:`salishsea get_cgrf` tool;
+  see the :ref:`salishsea-get_cgrf` docs.
 
 * The namelist that directs NEMO to use the files in :file:`NEMO-atmos/` looks like:
 
@@ -150,8 +147,6 @@ and non-executable with:
 
     chmod 664 2002-09-15/*
 
-.. todo::
-
-    Add a link to the tools repo function that automates the above process.
+See the :command:`salishsea` :ref:`salishsea-get_cgrf` docs for details of a tool that automates this process.
 
 .. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and Bélair, S. (2013), A new atmospheric dataset for forcing ice–ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc.. doi: 10.1002/qj.2194 http://dx.doi.org/10.1002/qj.2194
