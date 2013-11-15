@@ -31,6 +31,8 @@ The :file:`atmospheric/` directory contains forcing data that supports the :ref:
 .. _I_ForcingFiles/NoSnow.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/NoSnow.ipynb
 
 
+.. _grid-directory:
+
 :file:`grid/` Directory
 -----------------------
 
