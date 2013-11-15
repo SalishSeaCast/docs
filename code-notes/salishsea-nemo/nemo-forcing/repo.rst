@@ -34,9 +34,36 @@ The :file:`atmospheric/` directory contains forcing data that supports the :ref:
 :file:`grid/` Directory
 -----------------------
 
-The :file:`grid/` directory contains coordinates and bathymetry files.
+The :file:`grid/` directory contains coordinates,
+bathymetry,
+and interpolation weights files.
+
+
+Full Salish Sea Domain
+~~~~~~~~~~~~~~~~~~~~~~
 
 NEMO has the file names of the coordinates and bathymetry files hard-coded as :file:`coordinates.nc` and :file:`bathy_meter.nc` so the files used for a particular run-set need to be copied or symlinked to those names.
+
+Coordinates and bathymetry:
+
+* :file:`coordinates_seagrid_SalishSea.nc`
+* :file:`bathy_meter_SalishSea.nc`
+
+.. _SalishSeaBathy-image:
+
+.. figure:: images/SalishSeaBathy.png
+
+    Full Salish Sea domain bathymetry.
+
+Interpolation weights:
+
+* :file:`weights-CGRF.nc`: :ref:`AtmosphericForcing` weights for Interpolation On the Fly
+  (IOF)
+  from the :ref:`CGRF-Dataset`
+
+
+Initial Tests Sub-Domain
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Coordinates and bathymetry for the initial sub-domain test case known as :kbd:`JPP` or :kbd:`WCSD_RUN_tide_M2_OW_ON_file_DAMP_ANALY`:
 
@@ -48,17 +75,6 @@ Coordinates and bathymetry for the initial sub-domain test case known as :kbd:`J
 .. figure:: images/SalishSeaSubdomainBathy.png
 
     Sub-domain bathymetry used for initial tests.
-
-Coordinates and bathymetry for the full Salish Sea domain:
-
-* :file:`coordinates_seagrid_SalishSea.nc`
-* :file:`bathy_meter_SalishSea.nc`
-
-.. _SalishSeaBathy-image:
-
-.. figure:: images/SalishSeaBathy.png
-
-    Full Salish Sea domain bathymetry.
 
 :file:`open_boundaries/west` Directory
 ---------------------------------------
