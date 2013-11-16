@@ -11,4 +11,5 @@ and information about the major tools that we use.
    bash_config
    hg_version_control
    anaconda_python
+   salishsea_pkgs
    sphinx_docs

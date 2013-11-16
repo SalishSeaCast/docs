@@ -21,4 +21,6 @@ that we use in the Salish Sea MEOPAR project.
 
 Follow the `installation instructions`_ for your operating system and accept the option at the end of the installation to make Anaconda your default Python.
 
+Start a new shell session and confirm that :file:`$HOME/anaconda/bin/` is on your path.
+
 .. _installation instructions: http://www.continuum.io/downloads
