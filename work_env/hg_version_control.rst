@@ -24,8 +24,12 @@ can get up to speed with Mercurial by reading `Chapter 2`_.
 .. _Chapter 2: http://hgbook.red-bean.com/read/a-tour-of-mercurial-the-basics.html
 
 The central storage of repositories is in the `SalishSea-MEOPAR`_ team account on Bitbucket.
+If you haven't done so already,
+you should follow the `Bitbucket ssh Set-up`_ instructions to enable key authentication.
+You probably won't need to do steps 7 and 8 at the end.
 
 .. _SalishSea-MEOPAR: https://bitbucket.org/salishsea/
+.. _Bitbucket ssh Set-up: https://confluence.atlassian.com/pages/viewpage.action?pageId=270827678
 
 
 Installing Mercurial
