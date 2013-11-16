@@ -50,6 +50,8 @@ The workflows described below should be easily translatable into the TortoiseHg 
 .. _TortoiseHg: http://tortoisehg.org/
 
 
+.. _MercurialConfiguration:
+
 Mercurial Configuration
 -----------------------
 
