@@ -26,6 +26,13 @@ Three dimensional, barotropic model of eastern Juan de Fuca Strait and southern 
 
 	where :math:`A_0`, :math:`A_m`, :math:`g_0` and :math:`g_m` are observed and modelled amplitudes and phases
 
+* M2 differences were between 0.8cm (Pedder Bay) and 8.7cm (Sidney), with average around 3cm 
+* K1 differences were between 0.4cm (Pedder Bay) and 5.4cm (Sidney), with average around 2.5cm
+* M2 is too early at Sooke, possibly because of large frictional effects of mudflats, which are not considered in calculation
+* M2 is too small and too late at Clover Point and Sidney possibly because the interaction of estuarine flow with tides was not taken into effect
+* M2 inaccuracies at Point Grey may be due to proximity of Fraser River mudflats and a long jetty that is not in the model domain
+* M2 inaccuracies at Ladysmith, Maple Bay and Patricia Bay may be due to the Cowichan River, whose discharge could interfere with tidal propagation in narrow channels around these sites
+
 * Also calculated root-mean-square differences between all measured and modelled amplitudes and phase differences
 
 	- rms amplitude differences all within 2.0cm
