@@ -8,8 +8,14 @@ High water levels can be due to a combination of high seasonal tide, strong wind
 What classifies as a storm?
 --------------------------------------
 
-How long is a storm? What is the water level elevation during a storm? Does the storm affect the whole domain or does it not matter?
+How long is a storm? 
+	Don't know yet... 6 hours? 12 hours?
 
+What is the water level elevation during a storm? 
+	For now, I will say sea surface anomaly of over 20cm
+
+Does the storm affect the whole domain or does it not matter?
+	For now I will just look at Point Atkinson
 
 How to find storms?
 --------------------------------------
