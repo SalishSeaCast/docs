@@ -105,14 +105,6 @@ The result of running :command:`make html` should look something link::
 
   Build finished. The HTML pages are in _build/html.
 
-.. note::
-
-    Building the :ref:`docs-repo` repo results in 1 consistency warning::
-
-      docs/README.rst:: WARNING: document isn't included in any toctree
-
-    that can be ignored.
-
 
 Links and Cross-references
 --------------------------
