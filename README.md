@@ -5,7 +5,7 @@ Salish Sea MEOPAR Documentation
 
 This is a collection of documentation about the Salish Sea MEOPAR project.
 
-They are rendered at http://salishsea-meopar-docs.readthedocs.org/.
+They are rendered at [http://salishsea-meopar-docs.readthedocs.org/](http://salishsea-meopar-docs.readthedocs.org/).
 
 
 License
