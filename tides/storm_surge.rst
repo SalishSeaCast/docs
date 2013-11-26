@@ -20,16 +20,15 @@ Does the storm affect the whole domain or does it not matter?
 Finding storms in the record
 ------------------------------------------
 
-Compare predicted tide with measured water level using t_tide (Pawlowicz et al, 2002) and the following MATLAB scripts:
+Compare predicted tide with measured water level using t_tide (Pawlowicz et al, 2002) and the following MATLAB scripts: ::
 
-* get_tidal_anomaly.m
-* find_storm_events.m
+	get_tidal_anomaly.m
+	find_storm_events.m
 
-USAGE:
+Usage: ::
 
-[pred,wlev,anomaly,tim] = get_tidal_anomaly(csvfilename)
-
-[startind,endind,lengthstorm] = find_storm_events(anomaly,tim,anomthres,stormlength)
+	[pred,wlev,anomaly,tim] = get_tidal_anomaly(csvfilename)
+	[startind,endind,lengthstorm] = find_storm_events(anomaly,tim,anomthres,stormlength)
 
 where:
 
