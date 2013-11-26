@@ -9,20 +9,45 @@ What classifies as a storm?
 --------------------------------------
 
 How long is a storm? 
-	Don't know yet... 6 hours? 12 hours?
+	Decision: more than 6 hours
 
 What is the water level elevation during a storm? 
-	For now, I will say sea surface anomaly of over 20cm
+	Decision: sea surface anomaly greater than 40cm
 
 Does the storm affect the whole domain or does it not matter?
-	For now I will just look at Point Atkinson
+	For now, just look at Point Atkinson
 
-How to find storms?
---------------------------------------
+Finding storms in the record
+------------------------------------------
 
-e.g. looking through timeseries of difference between expected and measured 
+Compare predicted tide with measured water level using t_tide (Pawlowicz et al, 2002) and the following MATLAB scripts:
 
-e.g. literature search for big storms 
+* get_tidal_anomaly.m
+* find_storm_events.m
+
+USAGE:
+
+[pred,wlev,anomaly,tim] = get_tidal_anomaly(csvfilename)
+
+[startind,endind,lengthstorm] = find_storm_events(anomaly,tim,anomthres,stormlength)
+
+where:
+
+* csvfilename - name of csv file of hourly measured water level at Point Atkinson
+* pred - predicted tides from t_tide (m CD)
+* wlev - measured water level at Point Atkinson (m CD)
+* anomaly - difference between prediction and water level (m)
+* tim - time vector for pred, wlev and anomaly (MATLAB date format)
+* startind - indice in tim for start of each storm (-)
+* endind - indice in tim for end of each storm (-)
+* lengthstorm - length of each storm (hours)
+* anomthres - water level elevation defined as a storm (m)
+* stormlength - minimum length defined as a storm (hrs)
+
+Outputs a text file called 'storms.txt' that contains a list of the start dates of storms and the length of each storm in hours.
+
+Literature search for big storms 
+-----------------------------------------
 
 * Jan 02, 2003, Victoria
 * Dec 24, 2003, Vancouver
