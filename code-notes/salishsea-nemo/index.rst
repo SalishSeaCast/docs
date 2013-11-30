@@ -12,6 +12,7 @@ Those repos are not used for model runs.
 .. toctree::
    :maxdepth: 2
 
+   quickstart
    nemo-code
    nemo-forcing/index
    ss-run-sets
