@@ -7,13 +7,13 @@ These notes describe the `NEMO-3.1`_ and `CONCEPTS-110`_ reference repositories.
 .. _NEMO-3.1: https://bitbucket.org/salishsea/nemo-3.1/
 .. _CONCEPTS-110: https://bitbucket.org/salishsea/concepts-110/
 
-The construction of the `NEMO-3.1`_ repo is described in :ref:`nemo-3.1-repo` below.
+The construction of the `NEMO-3.1`_ repo is described in :ref:`nemo-3.1-repo-construction` below.
 The `CONCEPTS-110`_ repo was constructed from the :file:`CODE.tar` tarball received on 2-Oct-2013 from J-P Paquin.
 
 Also included here is an :ref:`analysis of the differences <nemo31-concepts110-diffs>` between the :file:`NEMO/` directory trees in the 2 repos that was done early in the Salish Sea MEOPAR project in Oct-2013.
 
 
-.. _nemo-3.1-repo:
+.. _nemo-3.1-repo-construction:
 
 NEMO-3.1
 ========

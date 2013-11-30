@@ -1,7 +1,9 @@
+.. _NEMO-forcing:
+
 Getting the Repo
 ================
 
-Team members using SSH key authentication on Bitbucket may clone the `NEMO-forcing`_ repo with:
+Team members using SSH key authentication on Bitbucket may clone the :ref:`NEMO-forcing-repo` repo with:
 
 .. code-block:: bash
 
@@ -14,8 +16,6 @@ For password authentication use:
     hg clone https://<you>@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
 
 where :kbd:`<you>` is your Bitbucket user id.
-
-.. _NEMO-forcing: https://bitbucket.org/salishsea/nemo-forcing/
 
 
 Repo Contents
