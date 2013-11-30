@@ -1,4 +1,4 @@
-.. _NEMO-code-repo:
+.. _NEMO-code:
 
 ********************
 NEMO-code Repository
@@ -6,8 +6,6 @@ NEMO-code Repository
 
 These notes describe the Salish Sea MEOPAR project `NEMO-code`_ repository and its maintenance.
 They are a narrative guide to the Mercurial log and diffs that can be obtained from the repository itself or via the Bitbucket interface.
-
-.. _NEMO-code: https://bitbucket.org/salishsea/nemo-code
 
 The `NEMO-code`_ repo is a Mercurial repository in which is maintained the merger of the trunk of the main NEMO :command:`svn` repository and the changes made by the Salish Sea MEOPAR project team.
 

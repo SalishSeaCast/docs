@@ -45,6 +45,8 @@ docs
 * Bitbucket: https://bitbucket.org/salishsea/docs/
 
 
+.. _pricate-docs-repo:
+
 private-docs
 ~~~~~~~~~~~~
 
@@ -72,6 +74,8 @@ tools
 * Bitbucket: https://bitbucket.org/salishsea/tools/
 
 
+.. _private-tools-repo:
+
 private-tools
 ~~~~~~~~~~~~~
 
@@ -85,6 +89,8 @@ private-tools
 * ideally this repo will eventually empty out as its contents are moved to the public tools repo
 * Bitbucket: https://bitbucket.org/salishsea/private-tools/
 
+
+.. _NEMO-code-repo:
 
 NEMO-code
 ~~~~~~~~~
@@ -123,6 +129,9 @@ NEMO-forcing
 * Bitbucket: https://bitbucket.org/salishsea/nemo-code/
 * documentation: http://salishsea-meopar-docs.readthedocs.org/nemo-forcing.html
 
+
+.. _SS-run-sets-repo:
+
 SS-run-sets
 ~~~~~~~~~~~
 
@@ -132,6 +141,8 @@ SS-run-sets
 * Bitbucket: https://bitbucket.org/salishsea/ss-run-sets
 
 
+.. _salishsea-site-repo:
+
 salishsea-site
 ~~~~~~~~~~~~~~
 
@@ -139,6 +150,8 @@ salishsea-site
 * Apache v2.0 license, copyright project contributors and UBC
 * content and tool chain for the `salishsea.eos.ubc.ca`_ domain site static content
 
+
+.. _NEMO-3.1-repo:
 
 NEMO-3.1
 ~~~~~~~~
@@ -151,6 +164,8 @@ NEMO-3.1
 * documentation rendered at http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo31-concepts110.html
 * Bitbucket: https://bitbucket.org/salishsea/nemo-3.1/
 
+
+.. _CONCEPTS-110-repo:
 
 CONCEPTS-110
 ~~~~~~~~~~~~

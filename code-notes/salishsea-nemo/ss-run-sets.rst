@@ -1,12 +1,12 @@
+.. _SS-run-sets:
+
 *************************
 Salish Sea Run Sets Files
 *************************
 
 The collection of NEMO namelist,
 :command:`salishsea` command processor run description,
-and NEMO output server control files used to run NEMO for the Salish Sea are maintained in the `SS-run-sets`_ repo.
-
-.. _SS-run-sets: https://bitbucket.org/salishsea/ss-run-sets/
+and NEMO output server control files used to run NEMO for the Salish Sea are maintained in the :ref:`SS-run-sets-repo` repo.
 
 We choose to call these run-set files but they are also referred to as "experiments" in the NEMO community.
 That term is difficult for the laboratory modelers on the Salish Sea MEOPAR team to apply to computational model runs.
@@ -38,6 +38,8 @@ where :kbd:`<you>` is your Bitbucket user id.
 
 Repo Contents
 =============
+
+.. _SS-run-sets-SalishSea:
 
 :file:`SalishSea/` Directory
 ----------------------------
