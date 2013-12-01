@@ -52,7 +52,6 @@ the :file:`SalishSea` directory contains the run-set files for the initial full 
 
 * :file:`SalishSea.yaml`: Sample run description file for use with the :ref:`SalishSeaCmdProcessor`
 * :file:`SalishSea_no_IOM.yaml`: Sample run description file that uses the :file:`SalishSea_no_IOM` configuration to execute minimal output runs without using the IOM output server
-* :file:`namelist`: Sample namelist containing the current recommended model parameter values
 * :file:`namelist_no_IOM`: Sample namelist for running without the IOM output server
 * :file:`namelist.bottom`: Sample bottom boundary conditions namelists
 * :file:`namelist.compute`: Sample compute parameters namelists
