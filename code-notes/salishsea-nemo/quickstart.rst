@@ -131,7 +131,7 @@ combine the pre-processor netCDF run results files and gather the rest of the ru
 .. code-block:: bash
 
     salishsea combine --no-compress SalishSea.yaml ../results/my_excellent_results
-    mv layout.dat NEMO-code_tip.txt NEMO-forcing_tip.txt namelist ocean.output solver.stat stderr stdout time.step ../results/my_excellent_results/
+    mv layout.dat namelist NEMO-code_tip.txt NEMO-forcing_tip.txt ocean.output SalishSea.yaml solver.stat stderr stdout time.step ../results/my_excellent_results/
 
 Unless you have a reason to keep it around,
 the temporary run directory can be deleted at this point.
