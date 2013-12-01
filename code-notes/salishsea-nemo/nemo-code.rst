@@ -166,7 +166,7 @@ and the non-netCDF results files produced by the run can be moved to the results
 
 .. code-block:: bash
 
-    mv layout.dat namelist NEMO-code_tip.txt NEMO-forcing_tip.txt ocean.output solver.stat stderr stdout time.step ../results/15-21Sep2002
+    mv layout.dat namelist NEMO-code_tip.txt NEMO-forcing_tip.txt ocean.output SalishSea.yaml solver.stat stderr stdout time.step ../results/15-21Sep2002
 
 
 .. _NEMO-MirrorMaintenance:
