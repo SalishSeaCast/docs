@@ -71,6 +71,20 @@ install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python packag
     pip install -e .
 
 
+Compile the Code
+================
+
+Assuming that you are working on :kbd:`salish`,
+compile and link the full domain Salish Sea NEMO configuration and the IOM output server with the :kbd:`salish` architecture definitions with the compilation distributed over 8 cores.
+
+.. code-block:: bash
+
+    cd NEMO-code/NEMOGCM/CONFIG
+    ./makenemo -n SalishSea -m salish -j8
+
+The resulting executables are located in :file:`NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/`.
+
+
 Prepare a Run
 =============
 
