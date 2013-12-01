@@ -45,6 +45,49 @@ where :kbd:`<you>` is your Bitbucket user id.
 Managing Configurations
 =======================
 
+Building an Existing Configuration
+----------------------------------
+
+To build the executable code for an already defined configurations,
+for example,
+:kbd:`SalishSea`,
+use:
+
+.. code-block:: bash
+
+    cd NEMO-code/NEMOGCM/CONFIG
+    ./makenemo -n SalishSea -m salish -j8
+
+That will compile the full domain Salish Sea NEMO configurations and the IOM output server with the :kbd:`salish` architecture definitions with the compilation distributed over 8 cores.
+The resulting executables are located in in :file:`NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/`.
+
+
+Available Configurations
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+In addition to the configurations from the NEMO :program:`svn` checkout,
+the repo contains:
+
+* :file:`SalishSea`: The initial full domain Salish Sea development configuration
+* :file:`SalishSea_no_IOM`: A copy of the :file:`SalishSea` configuration compiled without the :kbd:`key_iom_put` CPP key
+* :file:`SALISH_amm`: A very early stepping-stone configuration created during the learning process of creating a Salish Sea configuration based on the :file:`AMM12` configuration
+* :file:`SALISH_JPP`: The Salish Sea sub-domain configuration used to compare with CONCEPTS-110
+
+
+Available Architecture Definitions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In addition to the collection of architecture definitions that the NEMO consortium provides,
+the `NEMO-code`_ repo includes definitions for:
+
+* :kbd:`ifort_jasper`: MPI builds on :kbd:`jasper.westgrid.ca`
+* :kbd:`salish`: MPI builds on :kbd:`salish.eos.ubc.ca`
+* :kbd:`ocean`: single processor builds on UBC-EOAS :kbd:`ocean` cluster workstations and :kbd:`salish`
+
+
+Creating a New Configuration
+----------------------------
+
 To create a new configuration based on,
 for example,
 `AMM12`_ use:
@@ -63,25 +106,6 @@ including a compiled and link NEMO executable,
 is located in :file:`NEMO-code/NEMOGCM/CONFIG/MY_AMM12`.
 
 See :command:`./makenemo -h` for details of options and sub-commands.
-
-In addition to the collection of architecture definitions that the NEMO consortium provides,
-the `NEMO-code`_ repo includes definitions for:
-
-* :kbd:`ifort_jasper`: MPI builds on :kbd:`jasper.westgrid.ca`
-* :kbd:`salish`: MPI builds on :kbd:`salish.eos.ubc.ca`
-* :kbd:`ocean`: single processor builds on UBC-EOAS :kbd:`ocean` cluster workstations and :kbd:`salish`
-
-
-Available Configurations
-------------------------
-
-In addition to the configurations from the NEMO :program:`svn` checkout,
-the repo contains:
-
-* :file:`SalishSea`: The initial full domain Salish Sea development configuration
-* :file:`SalishSea_no_IOM`: A copy of the :file:`SalishSea` configuration compiled without the :kbd:`key_iom_put` CPP key
-* :file:`SALISH_amm`: A very early stepping-stone configuration created during the learning process of creating a Salish Sea configuration based on the :file:`AMM12` configuration
-* :file:`SALISH_JPP`: The Salish Sea sub-domain configuration used to compare with CONCEPTS-110
 
 
 Running the Model
