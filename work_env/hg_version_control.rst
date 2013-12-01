@@ -1,7 +1,8 @@
 .. _vc-with-hg:
 
+******************************
 Version Control with Mercurial
-==============================
+******************************
 
 We use Mercurial_ (:command:`hg`) for version control of code,
 documentation,
@@ -33,7 +34,7 @@ You probably won't need to do steps 7 and 8 at the end.
 
 
 Installing Mercurial
---------------------
+====================
 
 Obviously,
 you need to have Mercurial installed on your computer.
@@ -57,7 +58,7 @@ The workflows described below should be easily translatable into the TortoiseHg 
 .. _MercurialConfiguration:
 
 Mercurial Configuration
------------------------
+=======================
 
 Mercurial uses configuration settings in your :file:`$HOME/.hgrc` file as global settings for everything you do with it.
 You should create or edit your :file:`$HOME/.hgrc` file to contain:
@@ -95,10 +96,7 @@ The :kbd:`[extensions]` section enables several useful Mercurial extensions:
 * :kbd:`rebase` enables rebasing which is particularly useful when working in repositories to which several contributors are pushing changes.
   As described below,
   :kbd:`rebase` allows changes that have been pushed by other contributors to be pulled into your cloned repo while you have committed changes that have not been pushed without having to do frivolous branch merges.
-
-  .. todo::
-
-      Add link to section about :command:`hg pull --rebase` when it exists
+  See :ref:`PullingAndRebaseingChangesFromUpstream` for more details.
 
 The :kbd:`[ui]` section configures the Mercurial user interface:
 
@@ -119,7 +117,7 @@ See the `Mercurial configuration file docs`_ for more information about configur
 .. _global-ignore-file:
 
 Global Ignore File
-------------------
+==================
 
 Mercurial uses the file specified by :kbd:`ignore` in the :kbd:`[ui]` configuration section to define a set of ignore patterns that will be applied to all repos.
 The recommended path and name for that file is :file:`$HOME/.hgignore`.
@@ -149,3 +147,104 @@ Most repos have their own :file:`.hgignore` file that defines patterns to ignore
 See the `ignore file syntax docs`_ for more information.
 
 .. _ignore file syntax docs: http://www.selenic.com/mercurial/hgignore.5.html
+
+
+Mercurial Workflows
+===================
+
+.. note::
+
+    Mercurial commands may be shortened to the fewest number of letters that uniquely identifies them.
+    For example,
+    :command:`hg status` can be spelled :command:`hg stat` or even :command:`hg st`.
+    If you don't provide enough letters Mercurial will show the the possible command completions.
+
+
+.. _PullingAndRebaseingChangesFromUpstream:
+
+Pulling and Rebasing Changes from Upstream
+------------------------------------------
+
+The upstream Bitbucket repos from which you cloned your local working repos are the central repos to which everyone working on the project push their changes.
+This section describes workflows for pulling those changes into your repos,
+how to do so without having to do frivolous branch merges,
+and how to recover from the common mistakes.
+
+Use :command:`hg incoming` to see changes that are present in the upstream repo that have not yet been pulled into your local repo.
+Similarly,
+:command:`hg outgoing` will show you the changes that are present in your local repo that have not been pushed upstream.
+
+Ensure that you have committed all of your changes before you pull new changes from upstream;
+i.e.
+:command:`hg status` should show nothing or a list of untracked files marked with the :kbd:`!` character.
+
+:command:`hg pull --rebase` will pull the changes from upstream and merge your locally committed changes on top of them.
+Using :kbd:`rebase` avoids the creation of a new head
+(aka a branch)
+in your local repo and an unnecessary merge commit that results from the use of :command:`hg pull --update`.
+That reserves branching and merging for the relatively rare occasions when temporarily divergent lines of development are actually required.
+
+The `rebase extension docs`_ have more information and diagrams of what's going on in this `common rebase use case`_.
+
+.. _rebase extension docs: http://mercurial.selenic.com/wiki/RebaseExtension
+.. _common rebase use case: http://mercurial.selenic.com/wiki/RebaseExtension#A_common_case
+
+
+Rebasing an Accidental Branch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Sooner or later you will accidentally create a branch in your local repo.
+Using :command:`hg pull --rebase` with uncommitted changes and then commiting those changes is one way that an accidental branch can happen.
+:command:`hg glog` is a variant of the :command:`hg log` command that shows an ASCII-art graph of the commit tree to the left of the commit log,
+providing a way of visualizing branches.
+
+:command:`hg rebase` can be used to move the changes on an accidental branch to the tip of the repo.
+See the `scenarios section`_ of the `rebase extension docs`_ for diagrams and rebase command options for moving branches around in various ways.
+
+.. _scenarios section: http://mercurial.selenic.com/wiki/RebaseExtension#Scenarios
+
+
+Amending the Last Commit
+------------------------
+
+:command:`hg commit --amend` can be used to alter the last commit,
+provided that it has not yet been pushed up stream.
+This allows for correction or elaboration of the commit message,
+inclusion of additional changes in the commit,
+or addition of new files to the commit,
+etc.
+
+
+Commit Message Style
+--------------------
+
+Commit messages can be written on the command line with the :command:`hg commit -m` option with the message enclosed in double-quotes
+(:kbd:`"`);
+e.g.
+
+.. code-block:: bash
+
+    hg commit -m"Add Salish Sea NEMO model quick-start section."
+
+Assuming that you have the :envvar:`EDITOR` environment variable set :command:`hg commit` without the :kbd:`-m` option will open your editor for you to write your commit message and the files to be committed will be shown in the editor.
+Using your editor for commit message also makes it easy to write multi-line commit messages.
+
+Here are recommendations for commit message style::
+
+  Short (70 chars or less) summary sentence.
+
+  More detailed explanatory text, if necessary.  Wrap it to about 72
+  characters or so. The blank line separating the summary from the body
+  is critical (unless you omit the body entirely).
+
+  Write your commit message in the imperative: "Fix bug" and not "Fixed bug"
+  or "Fixes bug."
+
+  Further paragraphs come after blank lines.
+
+  - Bullet points are okay, too
+
+  - Typically a hyphen or asterisk is used for the bullet, followed by a
+    single space, with blank lines in between
+
+  - Use a hanging indent
