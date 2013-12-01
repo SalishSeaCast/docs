@@ -58,8 +58,8 @@ use:
     cd NEMO-code/NEMOGCM/CONFIG
     ./makenemo -n SalishSea -m salish -j8
 
-That will compile the full domain Salish Sea NEMO configurations and the IOM output server with the :kbd:`salish` architecture definitions with the compilation distributed over 8 cores.
-The resulting executables are located in in :file:`NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/`.
+That will compile the full domain Salish Sea NEMO configuration and the IOM output server with the :kbd:`salish` architecture definitions with the compilation distributed over 8 cores.
+The resulting executables are located in :file:`NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/`.
 
 
 Available Configurations
@@ -111,40 +111,62 @@ See :command:`./makenemo -h` for details of options and sub-commands.
 Running the Model
 =================
 
-We don't want to clutter the `NEMO-code`_ repo with files from development and exploration run-sets
+We don't want to clutter the :ref:`NEMO-code-repo` repo with files from development and exploration run-sets
 (aka experiments),
 run results,
 etc.,
 so runs are done in directories outside the :file:`NEMO-code/` tree.
-To create a run-sets directory copy the :file:`EXP00/` directory:
+
+The :ref:`SS-run-sets` repo contains example run description,
+namelist,
+and output server control files that define a run.
+Run description files define the names and locations of files and directories that the :ref:`SalishSeaCmdProcessor` tool uses to manage Salish Sea NEMO runs and their results.
+See :ref:`RunDescriptionFileStructure` for details of the run description file syntax.
+
+After copying and/or editing the run description,
+namelist,
+and output server control files to define a run use the :program:`salishsea` :ref:`salishsea-prepare` to set up a temporary run directory from which to execute the run.
+For example:
 
 .. code-block:: bash
 
-    cd NEMO-code/NEMOGCM/CONFIG/MY_AMM12
-    cp EXP00 ../../../amm12_runs
+    salishsea prepare SalishSea.yaml iodef.xml
 
-The input files for `AMM12`_ need to be downloaded and unpacked in the run-set directory:
+Use the run description and output server definitions files names that are appropriate for your run.
+See the :ref:`salishsea-prepare` docs for details of the files and symbolic links that are created in the run directory.
+The path to the run directory is printed upon completion of the command.
 
-.. code-block:: bash
-
-    cd amm12_runs
-    wget http://dodsp.idris.fr/reee512/NEMO/amm12_inputs_v3_4.tar
-    tar xvf amm12_inputs_v3_4.tar
-    gunzip *.nc.gz
-
-Edit the :kbd:`&nammpp` section of the :file:`namelist` file to set the number of cores to use:
-
-.. code-block:: fortran
-
-    jpni        =   4       !  jpni   number of processors following i (set automatically if < 1)
-    jpnj        =   4       !  jpnj   number of processors following j (set automatically if < 1)
-    jpnij       =   16      !  jpnij  number of local domains (set automatically if < 1)
-
-Run the model on 16 cores:
+Go to the run directory and start the run with a command like:
 
 .. code-block:: bash
 
-    /usr/bin/mpiexec -n 16 ./opa
+    mpiexec -n 16 ./nemo.exe > stdout 2> stderr &
+
+That command runs the model in the background on 16 processors,
+redirecting the stdout and stderr streams to :file:`stdout` and :file:`stderr` files.
+The number of processors to run is must match the domain decomposition defined in the :file:`namelist.compute` file.
+
+A convenient command to monitor the memory use of a run and its time step progress is:
+
+.. code-block:: bash
+
+    watch -n 5 "(free -m; cat time.step)"
+
+The :command:`salishsea combine` sub-command combines the per-processors netCDF results files from a run into files in a results directory.
+It has a number of option flags to define how it works;
+see :command:`salishsea combine -h` for details.
+A typical use on :kbd:`salish` is:
+
+.. code-block:: bash
+
+    salishsea combine --no-compress SalishSea.yaml ../results/15-21Sep2002
+
+The files that define the run,
+and the non-netCDF results files produced by the run can be moved to the results directory with a command like:
+
+.. code-block:: bash
+
+    mv layout.dat namelist NEMO-code_tip.txt NEMO-forcing_tip.txt ocean.output solver.stat stderr stdout time.step ../results/15-21Sep2002
 
 
 .. _NEMO-MirrorMaintenance:
