@@ -5,17 +5,21 @@ Salish Sea Run Sets Files
 *************************
 
 The collection of NEMO namelist,
-:command:`salishsea` command processor run description,
+:program:`salishsea` command processor run description,
 and NEMO output server control files used to run NEMO for the Salish Sea are maintained in the :ref:`SS-run-sets-repo` repo.
 
 We choose to call these run-set files but they are also referred to as "experiments" in the NEMO community.
 That term is difficult for the laboratory modelers on the Salish Sea MEOPAR team to apply to computational model runs.
 
-The namelist and output server control files are like those found in the :file:`EXP00/` directories of the reference configurations in the :ref:`NEMO-code-repo`.
-
-The :command:`salishsea` command processor run description files are YAML_ files that are used by our tool for managing NEMO runs and results.
+The :program:`salishsea` command processor run description files are YAML_ files that are used by our :ref:`SalishSeaCmdProcessor` tool for managing NEMO runs and results.
+The :ref:`RunDescriptionFileStructure` section describes the file syntax.
 
 .. _YAML: http://pyyaml.org/wiki/PyYAMLDocumentation
+
+The namelist files contain collections of related namelists.
+They are concatenated to form a complete namelist for a NEMO run by the :program:`salishsea` :ref:`salishsea-prepare`.
+
+The output server control files is like those found in the :file:`EXP00/` directories of the reference configurations in the :ref:`NEMO-code-repo` repo.
 
 
 Getting the Repo
@@ -47,9 +51,17 @@ Repo Contents
 the :file:`SalishSea` directory contains the run-set files for the initial full domain runs:
 
 * :file:`SalishSea.yaml`: Sample run description file for use with the :ref:`SalishSeaCmdProcessor`
-* :file:`SalishSea.yaml`: Sample run description file that uses the :file:`SalishSea_no_IOM` configuration to execute minimal output runs without using the IOM output server
+* :file:`SalishSea_no_IOM.yaml`: Sample run description file that uses the :file:`SalishSea_no_IOM` configuration to execute minimal output runs without using the IOM output server
 * :file:`namelist`: Sample namelist containing the current recommended model parameter values
-* :file:`namelist`: Sample namelist for running without the IOM output server
+* :file:`namelist_no_IOM`: Sample namelist for running without the IOM output server
+* :file:`namelist.bottom`: Sample bottom boundary conditions namelists
+* :file:`namelist.compute`: Sample compute parameters namelists
+* :file:`namelist.domain`: Sample domain configuration nameslists
+* :file:`namelist.dynamics`: Sample dynamics parameter namelists
+* :file:`namelist.lateral`: Sample lateral boundary conditions and forcing namelists
+* :file:`namelist.surface`: Sample surface boundary conditions namelists
+* :file:`namelist.time`: Sample model time parameters namelists
+* :file:`namelist.tracers`: Sample tracer quantities configuration namelist
 * :file:`iodef.xml`: Sample IOM output server definitions
 * :file:`xmlio_server.def`: IOM output server control settings
 
