@@ -84,6 +84,15 @@ compile and link the full domain Salish Sea NEMO configuration and the IOM outpu
 
 The resulting executables are located in :file:`NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/`.
 
+Compile and link the :program:`rebuild_nemo` tool:
+
+.. code-block:: bash
+
+    cd NEMO-code/NEMOGCM/TOOLS
+    ./maketools -m salish -n REBUILD_NEMO
+
+See :ref:`rebuild-nemo-tool` for more information about it.
+
 
 Prepare a Run
 =============
