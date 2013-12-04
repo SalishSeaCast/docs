@@ -15,7 +15,20 @@ What is the water level elevation during a storm?
 	Decision: sea surface anomaly greater than 40cm
 
 Does the storm affect the whole domain or does it not matter?
-	For now, just look at Point Atkinson
+	For now, look at the DFO water level sites that are in the domain and have water level data for the period of interest (2002 - 2010). These sites are:
+
+	* Point Atkinson
+		* lat/lon: 49.34,-123.25
+		* grid co-ordinates: i=468, j=328
+	* Victoria
+		* lat/lon: 48.42,-123.37
+		* grid co-ordinates: i=298, j=195
+	* Patricia Bay
+		* lat/lon: 48.65,-123.45
+		* grid co-ordinates: i=351, j=213
+	* Campbell River
+		* lat/lon: 50.04,-125.25
+		* grid co-ordinates: i=747, j=123
 
 Finding storms in the record
 ------------------------------------------
