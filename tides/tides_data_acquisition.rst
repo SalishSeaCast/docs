@@ -226,21 +226,21 @@ West coast Vancouver Island (northern)
 
 Howe Sound
 
-*	Squamish Inner  (7811, ??min, year1, year2, numdays)
-*	Squamish  (7810, ??min, year1, year2, numdays)
-*	Latona Beach  (7805, ??min, year1, year2, numdays)
-*	Gibsons  (7820, ??min, year1, year2, numdays)
+*	Squamish Inner  (7811, ??min, 1961, 1962, 395)
+*	Squamish  (7810, ??min, 1961, 1961, 30)
+*	Latona Beach  (7805, ??min, 1973, 1973, 60)
+*	Gibsons  (7820, ??min, 1967, 1973, numdays)
 
 Sunshine Coast
 
-*	Roberts Creek  (7824, ??min, year1, year2, numdays)
-*	Porpoise Bay  (7852, ??min, year1, year2, numdays)
-*	Halfmoon Bay  (7830, ??min, year1, year2, numdays)
-*	Storm Bay  (7847, ??min, year1, year2, numdays)
-*	Irvines Landing  (7836, ??min, year1, year2, numdays)
+*	Roberts Creek  (7824, ??min, 1968, 1969, numdays)
+*	Porpoise Bay  (7852, ??min, 1951, 1952, numdays)
+*	Halfmoon Bay  (7830, ??min, 1967, 1969, numdays)
+*	Storm Bay  (7847, ??min, 1963, 1963, numdays)
+*	Irvines Landing  (7836, ??min, 1967, 1974, numdays)
 *	Egmont  (7842, ??min, year1, year2, numdays)
-*	Saltery Bay  (7868, ??min, year1, year2, numdays)
-*	Powell River  (7880, ??min, year1, year2, numdays)
+*	Saltery Bay  (7868, ??min, 1967, 1969, numdays)
+*	Powell River  (7880, ??min, 1965, 1973, numdays)
 *	Okeover Inlet  (8006, ??min, year1, year2, numdays)
 *	Lund  (7885, ??min, year1, year2, numdays)
 *	Prideaux Haven  (8008, ??min, year1, year2, numdays)
