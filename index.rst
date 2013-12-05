@@ -19,6 +19,7 @@ Contents:
    work_env/index
    code-notes/salishsea-nemo/index
    tides/index
+   rivers/index
    code-notes/dev-notes/index
 
 .. include:: license_description.txt
