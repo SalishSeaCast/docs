@@ -9,8 +9,8 @@ What classifies as a storm?
 --------------------------------------
 
 How long is a storm? 
-	* More than 6 hours => finds 65 'storms' from 2002-2012
-	* More than 12 hours => finds 25 'storms' from 2002-2012
+	* More than 6 hours => the algorithm below finds 65 'storms' from 2002-2012
+	* More than 12 hours => the algorithm below finds 25 'storms' from 2002-2012
 	* Decision: more than 12 hours is a more appropriate number to test
 
 What is the water level elevation during a storm? 
@@ -114,14 +114,13 @@ Also, from Abeysirigunawardena et al (2011), extremes generally occur from Octob
 Existing storm surge models
 ---------------------------------------
 
-The Government of British Columbia launched the `BC Storm Surge Forecast System <http://www.env.gov.bc.ca/cas/adaptation/storm_surges.html>`_ in 2011. This model is driven by the Pacific Ocean Model (which is driven by 7 day weather forecasts from NOAA) and a 6 day forecast from Environment Canada. Forecast bulletins are available for Point Atkinson, Victoria and Campbell River. There is no hindcasting avaiable in the model.
+The Government of British Columbia launched the `BC Storm Surge Forecast System <http://www.env.gov.bc.ca/cas/adaptation/storm_surges.html>`_ in 2011. This model is driven by the Pacific Ocean Model (which is driven by 7 day weather forecasts from NOAA) and a 6 day forecast from Environment Canada. Forecast bulletins are available for Point Atkinson, Victoria and Campbell River. There is no hindcasting available in the model.
 
 
 References
 -------------------------------
-Abeysirigunawardena, D.S., D.J. Smith and B. Taylor, 2011. Extreme Sea Surge Responses to
-Climate Variability in Coastal British Columbia, Canada, Annals of the Association of American Geographers, 101:5, 992-1010,
-DOI: 10.1080/00045608.2011.585929
 
+* Abeysirigunawardena, D.S., D.J. Smith and B. Taylor, 2011. Extreme Sea Surge Responses to Climate Variability in Coastal British Columbia, Canada, Annals of the Association of American Geographers, 101:5, 992-1010, DOI: 10.1080/00045608.2011.585929
 
+* Pawlowicz, R., B. Beardsley, and S. Lentz, 2002. Classical tidal harmonic analysis including error estimates in MATLAB using T_TIDE, Computers and Geosciences, 28,  929-937
 
