@@ -9,26 +9,28 @@ What classifies as a storm?
 --------------------------------------
 
 How long is a storm? 
-	Decision: more than 6 hours
+	* More than 6 hours => finds 65 'storms' from 2002-2012
+	* More than 12 hours => finds 25 'storms' from 2002-2012
+	* Decision: more than 12 hours is a more appropriate number to test
 
 What is the water level elevation during a storm? 
-	Decision: sea surface anomaly greater than 40cm
+	* Decision: sea surface anomaly greater than 40cm
 
 Does the storm affect the whole domain or does it not matter?
-	For now, look at the DFO water level sites that are in the domain and have water level data for the period of interest (2002 - 2010). These sites are:
+	* For now, look at the DFO water level sites that are in the domain and have water level data for the period of interest (2002 - 2010). These sites are:
 
-	* Point Atkinson
-		* lat/lon: 49.34,-123.25
-		* grid co-ordinates: i=468, j=328
-	* Victoria
-		* lat/lon: 48.42,-123.37
-		* grid co-ordinates: i=298, j=195
-	* Patricia Bay
-		* lat/lon: 48.65,-123.45
-		* grid co-ordinates: i=351, j=213
-	* Campbell River
-		* lat/lon: 50.04,-125.25
-		* grid co-ordinates: i=747, j=123
+		* Point Atkinson
+			* lat/lon: 49.34,-123.25
+			* grid co-ordinates: i=468, j=328
+		* Victoria
+			* lat/lon: 48.42,-123.37
+			* grid co-ordinates: i=298, j=195
+		* Patricia Bay
+			* lat/lon: 48.65,-123.45
+			* grid co-ordinates: i=351, j=213
+		* Campbell River
+			* lat/lon: 50.04,-125.25
+			* grid co-ordinates: i=747, j=123
 
 Finding storms in the record
 ------------------------------------------
@@ -56,7 +58,39 @@ where:
 * anomthres - water level elevation defined as a storm (m)
 * stormlength - minimum length defined as a storm (hrs)
 
-Outputs a text file called 'storms.txt' that contains a list of the start dates of storms and the length of each storm in hours.
+Outputs a text file called 'storms.txt' that contains a list of the start dates of storms and the length of each storm in hours. e.g.: ::
+
+	[pred,wlev,anomaly,tim] = get_tidal_anomaly('wlev_ts_for_storms.csv');
+	[startind,endind,lengthstorm] = find_storm_events(anomaly,tim,0.4,12);
+
+gives for Point Atkinson: ::
+
+	Start date 	 	 Duration (hrs) 
+	02-Jan-2003 04:00:00 	 13
+	13-Mar-2003 04:00:00 	 27
+	14-Mar-2003 23:00:00 	 16
+	05-Dec-2003 20:00:00 	 13
+	22-Dec-2005 04:00:00 	 14
+	31-Dec-2005 00:00:00 	 17
+	31-Jan-2006 18:00:00 	 13
+	04-Feb-2006 01:00:00 	 18
+	15-Nov-2006 09:00:00 	 15
+	14-Dec-2006 18:00:00 	 15
+	12-Nov-2007 04:00:00 	 14
+	03-Dec-2007 02:00:00 	 35
+	04-Jan-2008 12:00:00 	 27
+	11-Jan-2010 20:00:00 	 13
+	18-Jan-2010 02:00:00 	 16
+	19-Jan-2010 02:00:00 	 45
+	21-Jan-2010 02:00:00 	 43
+	29-Mar-2010 01:00:00 	 16
+	23-Oct-2010 23:00:00 	 19
+	22-Nov-2011 23:00:00 	 21
+	20-Jan-2012 20:00:00 	 14
+	12-Mar-2012 07:00:00 	 13
+	29-Mar-2012 02:00:00 	 26
+	30-Nov-2012 21:00:00 	 15
+	01-Dec-2012 16:00:00 	 22
 
 Literature search for big storms 
 -----------------------------------------
