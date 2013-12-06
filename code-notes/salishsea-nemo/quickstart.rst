@@ -144,3 +144,22 @@ combine the pre-processor netCDF run results files and gather the rest of the ru
 
 Unless you have a reason to keep it around,
 the temporary run directory can be deleted at this point.
+
+Look at the Results
+===================
+
+A number of notebooks that look at NetCDF files are available in Tools/NetCDF_Plot/.  To start these, go to the directory Tools/NetCDF_Plot on your local machine (not on Salish).  Type
+
+.. code-block:: bash
+
+    ipython notebook
+
+At this points alot of information will appear in your terminal.  This terminal session is now running a server and cannot be used for anything else until you are finished with the notebooks.  At that point you need to CTRL-C to get out.
+
+At the same time a window should open in your browser.  If it doesn't, look at your terminal, find the ip address (something like 
+
+.. code-block:: bash
+
+    The IPython Notebook is running at: http://127.0.0.1:8888/
+
+and put that number in your browser.  From this initial window you can open the notebooks and look around.  The links to the various files will probably not work.  Change them to point to your file.  You will probably want to build your own notebook but these notebooks give you lots of examples to copy from.
