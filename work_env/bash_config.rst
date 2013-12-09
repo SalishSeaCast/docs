@@ -109,6 +109,8 @@ To always be prompted to confirm file removals use:
     alias rm="rm -i"
 
 
+.. _LoadingModulesOnJasper:
+
 Loading modules on :kbd:`jasper`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
