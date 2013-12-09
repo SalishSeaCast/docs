@@ -163,3 +163,64 @@ At the same time a window should open in your browser.  If it doesn't, look at y
     The IPython Notebook is running at: http://127.0.0.1:8888/
 
 and put that number in your browser.  From this initial window you can open the notebooks and look around.  The links to the various files will probably not work.  Change them to point to your file.  You will probably want to build your own notebook but these notebooks give you lots of examples to copy from.
+
+
+Working on :kbd:`jasper`
+========================
+
+There are some minor differences to keep in mind when working on :kbd:`jasper.westgrid.ca` or other WestGrid_ machines.
+This section is an even more condensed version of the above guide.
+
+.. _WestGrid: https://www.westgrid.ca/
+
+Follow the instructions in :ref:`LoadingModulesOnJasper` to manually load the necessary software component modules or edit your :kbd:`jasper` :file:`$HOME/.bashrc` to make them load automatically when you :program:`ssh` into :kbd:`jasper`.
+
+Create a workspace:
+
+.. code-block:: bash
+
+    mkdir -p $HOME/MEOPAR/SalishSea/results
+
+Clone the repos:
+
+.. code-block:: bash
+
+    hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
+    hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
+    hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
+    hg clone ssh://hg@bitbucket.org/salishsea/tools
+
+There is probably no need to clone the :file:`docs` repo on :kbd:`jasper`.
+
+Create a :file:`$HOME/.local/` file space for per-user installation of Python packages,
+install pip_,
+upgrade setuptools_ to the current release,
+and install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python packages:
+
+.. code-block:: bash
+
+    mkdir -p $HOME/.local/bin $HOME/.local/lib/python2.7/site-packages
+    easy_install --install-dir $HOME/.local/lib/python2.7/site-packages --script-dir $HOME/.local/bin pip
+    /home/dlatorne/.local/bin/pip install --user --upgrade setuptools
+    cd tools/SalishSeaTools
+    $HOME/.local/bin/pip install --user .
+    cd ../SalishSeaCmdProcessor
+    $HOME/.local/bin/pip install --user .
+
+.. _pip: https://pypi.python.org/pypi/pip
+.. _setuptools: https://pypi.python.org/pypi/setuptools
+
+.. note::
+
+    The above method of installing the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` packages means that they must be updated any time changes to them are pulled in from the :ref:`tools-repo`.
+    The command to do that is:
+
+    .. code-block:: bash
+
+        pip install --upgrade --user .
+
+Edit your :file:`$HOME/.bashrc` to add :file:`$HOME/.local/bin` to your :envvar:`PATH`:
+
+.. code-block:: bash
+
+    export PATH=$HOME/.local/bin:$PATH
