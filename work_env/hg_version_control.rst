@@ -204,6 +204,27 @@ See the `scenarios section`_ of the `rebase extension docs`_ for diagrams and re
 .. _scenarios section: http://mercurial.selenic.com/wiki/RebaseExtension#Scenarios
 
 
+Aborting a Merge
+----------------
+
+You may find yourself having followed Mercurial's workflow suggestions have having merged changes from upstream but then realizing that you really should have rebased.
+At that point if you try to do almost anything other than commit the merge Mercurial will stop you with a message like::
+
+  abort: outstanding uncommitted merges
+
+You can use :command:`hg update --clean` to discard the uncommitted changes,
+effectively aborting the merge
+(and any other uncommitted changes you might have).
+After that you should use :command:`hg glog` or :command:`hg heads` to examine your repo structure because you may well have an accidental branch that you will want to rebase.
+
+Incidentally,
+:command:`hg update --clean` can be used any time that you want to discard all uncommitted changes,
+but be warned,
+it does so without keeping a backup.
+See :command:`hg revert` for a less destructive way of discarding changes on a file by file basis
+(but note that :command:`hg revert` cannot be used to undo a merge).
+
+
 Amending the Last Commit
 ------------------------
 
