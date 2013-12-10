@@ -139,11 +139,12 @@ combine the pre-processor netCDF run results files and gather the rest of the ru
 
 .. code-block:: bash
 
-    salishsea combine --no-compress SalishSea.yaml ../results/my_excellent_results
-    mv layout.dat namelist NEMO-code_tip.txt NEMO-forcing_tip.txt ocean.output SalishSea.yaml solver.stat stderr stdout time.step ../results/my_excellent_results/
+    salishsea gather --no-compress SalishSea.yaml ../results/my_excellent_results
 
 Unless you have a reason to keep it around,
-the temporary run directory can be deleted at this point.
+the
+(now empty)
+temporary run directory can be deleted at this point.
 
 Look at the Results
 ===================
@@ -156,7 +157,7 @@ A number of notebooks that look at NetCDF files are available in Tools/NetCDF_Pl
 
 At this points alot of information will appear in your terminal.  This terminal session is now running a server and cannot be used for anything else until you are finished with the notebooks.  At that point you need to CTRL-C to get out.
 
-At the same time a window should open in your browser.  If it doesn't, look at your terminal, find the ip address (something like 
+At the same time a window should open in your browser.  If it doesn't, look at your terminal, find the ip address (something like
 
 .. code-block:: bash
 
@@ -212,7 +213,7 @@ and install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python pa
 
 .. note::
 
-    The above method of installing the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` packages means that they must be updated any time changes to them are pulled in from the :ref:`tools-repo`.
+    The above method of installing the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` packages means that they must be updated any time changes to them are pulled in from the :ref:`tools-repo` repo.
     The command to do that is:
 
     .. code-block:: bash
