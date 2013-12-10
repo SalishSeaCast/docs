@@ -31,6 +31,7 @@ Fraser
 * Assume that the Fraser River itself occupies 98% of this watershed, and that WRIA1 occupies 2% of this watershed
 
 * WRIA1
+
 	* 20% of WRIA1 flows into the Fraser anyway
 	* WRIA1 = Flux*(0.02*0.80)
 	* Fraser = Flux - WRIA1
@@ -42,6 +43,7 @@ Fraser
 	* Chuckanut occupies 4% of WRIA1, enters at 48.7243762, -122.5068995, i = 298, j = 361
 
 * Fraser
+
 	 * Main South Arm cells based on map are i=414,415,416 and j=334
 	 * Assumed river flow (m3/s): this is 75% of the Fraser yearly average flow from Morrison spreadsheet (in km3/yr)
 	 * Southern South Arm (aka Canoe Pass, although that is not open), cells i= 411,412 j=324
@@ -59,6 +61,7 @@ Skagit
 * WRIA3 represents 17% of Skagit Watershed
 
 	* Skagit River drains 70% of WRIA3
+
 		* assume 50% enters at 48.297470, -122.390614 (i = 207, j = 326)
 		* assume 50% enters at 48.370163,-122.497387 (i = 229, j = 319)
 	* Samish River drains 20% of WRIA3 (48.569395,-122.472496) (i = 265, j = 348)
@@ -66,6 +69,7 @@ Skagit
 * WRIA5 represents 17% of Skagit Watershed
 
 	* Stillaguamish River drains 100% of WRIA5
+
 		* assume 70% enters at 48.196188,-122.371902 (i = 186, j = 316)
 		* assume 10% enters at 48.222042,-122.392502 (i = 192, j = 315)
 		* assume 20% enters at 48.254513,-122.40263 (i = 200, j = 318)
@@ -220,7 +224,8 @@ JdF
 * The Juan de Fuca watershed in Morrison et al (2011) includes the north side of Juan de Fuca Strait from Victoria to Port Renfrew (inclusive) and the south side of Juan de Fuca Strait from Cape Flattery to Port Townsend.
 * Assume that 50% of the area of the JdF watershed defined by Morrison et al (2011) is on north side of JdF (Canada side):
 
-	* From bccf steelhead site map, assume that 33% of Canada side is part of San Juan River/Harris Creek watershed
+	* From bccf map, assume  33% of Canada side is part of San Juan River/Harris Creek watershed
+
 		* San Juan River (in the steelhead map) (includes Harris Creek from the steelhead map) 48.560449,-124.404595 (i = 402, j = 56)
 	* Assume that 14% of Canada side is in the Gordon River Watershed 48.575897,-124.415281 (i = 403, j = 56)
 	* Assume that 20% of Canada side is in Muir/Loss/Tugwell/Jordan
