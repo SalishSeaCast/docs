@@ -29,45 +29,48 @@ Fraser
 * Source used: BCCF map and WA map
 * Includes three arms of the Fraser River (v. important to Salish Sea!) and some little US rivers south of the Fraser, shown in WRIA1
 * Assume that the Fraser River itself occupies 98% of this watershed, and that WRIA1 occupies 2% of this watershed
-	* WRIA1
-		* 20% of WRIA1 flows into the Fraser anyway
-		* WRIA1 = Flux*(0.02*0.80)
-		* Fraser = Flux - WRIA1
-		* Dakota Creek occupies 6% of WRIA1, enters at 48.9684184, -122.7371679, i = 362, j = 357
-		* Terrel Creek occupies 4% of WRAI1, enters at 48.9063480, -122.7649440, i = 351, j = 345
-		* Nooksack River occupies 75% of WRIA1, enters at 48.7896486, -122.6667206, i = 321, j = 347
-		* Squallum River occupies 5% of WRIA1, enters at 48.7602333, -122.5129287, i = 305, j = 365
-		* Lake river thingo occupies 6% of WRIA1, i = 302, j = 367, enters at 48.7520645, -122.4882228
-		* Chuckanut occupies 4% of WRIA1, enters at 48.7243762, -122.5068995, i = 298, j = 361
-	* Fraser
-		 * Main South Arm cells based on map are i=414,415,416 and j=334
-		 * Assumed river flow (m3/s): this is 75% of the Fraser yearly average flow from Morrison spreadsheet (in km3/yr)
-		 * Southern South Arm (aka Canoe Pass, although that is not open), cells i= 411,412 j=324
-		 * Main Arm, cells i=434,435, j=318
-		 * North Arm, cells i=440, j=323,324
+
+* WRIA1
+	* 20% of WRIA1 flows into the Fraser anyway
+	* WRIA1 = Flux*(0.02*0.80)
+	* Fraser = Flux - WRIA1
+	* Dakota Creek occupies 6% of WRIA1, enters at 48.9684184, -122.7371679, i = 362, j = 357
+	* Terrel Creek occupies 4% of WRAI1, enters at 48.9063480, -122.7649440, i = 351, j = 345
+	* Nooksack River occupies 75% of WRIA1, enters at 48.7896486, -122.6667206, i = 321, j = 347
+	* Squallum River occupies 5% of WRIA1, enters at 48.7602333, -122.5129287, i = 305, j = 365
+	* Lake river thingo occupies 6% of WRIA1, i = 302, j = 367, enters at 48.7520645, -122.4882228
+	* Chuckanut occupies 4% of WRIA1, enters at 48.7243762, -122.5068995, i = 298, j = 361
+
+* Fraser
+	 * Main South Arm cells based on map are i=414,415,416 and j=334
+	 * Assumed river flow (m3/s): this is 75% of the Fraser yearly average flow from Morrison spreadsheet (in km3/yr)
+	 * Southern South Arm (aka Canoe Pass, although that is not open), cells i= 411,412 j=324
+	 * Main Arm, cells i=434,435, j=318
+	 * North Arm, cells i=440, j=323,324
 
 Skagit
 ^^^^^^^^^^^^^^^^^^
 
 * Source used: WA map
 * Includes subwatersheds WRIA3, WRIA4, WRIA5 and WRIA7 from WA map
-* Assume WRIA4 represents 33% of Skagit Watershed
-	* Baker River and lake drains 8% of WRIA4 but does not enter ocean (24.7)... but Morrison spreadsheet is for coastal runoff therefore assume Skagit River drains 100% of WRIA4 and then enters WRIA3
+* WRIA4 represents 33% of Skagit Watershed
 
+	* Baker River and lake drains 8% of WRIA4 but does not enter ocean (24.7)... but Morrison spreadsheet is for coastal runoff therefore assume Skagit River drains 100% of WRIA4 and then enters WRIA3
 * WRIA3 represents 17% of Skagit Watershed
+
 	* Skagit River drains 70% of WRIA3
 		* assume 50% enters at 48.297470, -122.390614 (i = 207, j = 326)
 		* assume 50% enters at 48.370163,-122.497387 (i = 229, j = 319)
 	* Samish River drains 20% of WRIA3 (48.569395,-122.472496) (i = 265, j = 348)
 	* Joe Leary Slough drains 5% of WRIA 3 (48.520811,-122.484426) (i = 257, j = 339)
-
 * WRIA5 represents 17% of Skagit Watershed
+
 	* Stillaguamish River drains 100% of WRIA5
 		* assume 70% enters at 48.196188,-122.371902 (i = 186, j = 316)
 		* assume 10% enters at 48.222042,-122.392502 (i = 192, j = 315)
 		* assume 20% enters at 48.254513,-122.40263 (i = 200, j = 318)
-
 * WRIA7 represents 33% of Skagit Watershed
+
 	* Snohomish River drains 96% of WRIA7, Quilceda Creek drains 1% of WRIA7, Allen Creek drains 1% of WRIA7, all enter at 48.028853,-122.212429 (i = 143, j = 318)
 	* Tulalip Creek drains 1% of WRIA7 (48.064343,-122.284926) (i = 154, j = 311)
 	* Mission Creek drains 1% of WRIA7 (48.056656,-122.274742) (i = 152, j = 312)
@@ -77,6 +80,7 @@ EVI_N
 
 * Source used: Toporama map
 * Total area of watershed = 9709.0
+
 	* Oyster, proportion = 363/totalarea (i=705, j=121)
 	* Qunisam, proportion = 1470/totalarea (i=749-750, j=123)
 	* Snowden, proportion = 139/totalarea (i=770, j=117)
@@ -103,7 +107,7 @@ Howe
 ^^^^^^^^^^^^^^^^^
 
 * Source used: BCCF map
-* Squamish River is 90% of watershed (because http://www.bccf.com/steelhead says Indian+Capilano+Lynn+Seymour+Brunette are 10% of area recorded in Morrison spreadsheet) i = 532 and j=385 and j=386
+* Squamish River is 90% of watershed (i = 532 and j=385, j=386)
 * Burrard Inlet is 10% of watershed (i=457-459 and j=343)
 
 Bute
@@ -119,7 +123,8 @@ Puget
 
 * Source used: WA map
 * Includes subwatersheds WRIA17, WRIA16, WRIA15, WRIA14, WRIA08, WRIA09, WRIA10, WRIA12 and WRIA11 from WA map
-* Assume WRIA17 10% of Puget Sound Watershed
+* WRIA17 10% of Puget Sound Watershed
+
 	* Johnson 5% of WRIA17, 48.061231,-123.039665, i = 207, j = 202
 	* Jimmycomelately 5% of WRIA17, 48.028911,-123.004131, i = 199, j = 202
 	* Salmon and Snow 25% of WRIA17, 47.997331,-122.873926, i = 182, j = 219
@@ -128,7 +133,8 @@ Puget
 	* Torboo 5% of WRIA17, 47.843407,-122.812986, i = 149, j = 208
 	* Little Quilcene/Big Quilcene 35% of WRIA17, 47.813846,-122.854614, i = 146, j = 199
 
-* Assume WRIA16 10% of Puget Sound Watershed
+* WRIA16 10% of Puget Sound Watershed
+
 	* Dosewalips 20% of WRIA16, 47.681628,-122.893496, i = 124, j = 177
 	* Duckabush 14% of WRIA16, 47.645094,-122.92973, i = 119, j = 167
 	* Fulton 2% of WRIA16, 47.616376,-122.973876, i = 116, j = 156
@@ -140,7 +146,8 @@ Puget
 	* Finch 2% of WRIA16, 47.406308,-123.138102, i = 87, j = 108
 	* Skokomish 40% of WRIA16, 47.345802,-123.121719, i = 75, j = 103
 
-* Assume WRIA15 15% of Puget Sound Watershed
+* WRIA15 15% of Puget Sound Watershed
+
 	* Rendsland 2.5% of WRIA15, 47.385624,-123.114982, i = 81, j = 107
 	* Tahuya 20% of WRIA15, 47.36842,-123.052325, i = 72, j = 114
 	* Mission 5% of WRIA15, 47.428697,-122.873712, i = 73, j = 149
@@ -161,7 +168,8 @@ Puget
 	* Anderson 5% of WRIA15, 47.567261,-122.97143, i = 107, j = 150
 	* Dewatta 5% of WRIA15, 47.452208,-123.058977, i = 94, j = 122
 
-* Assume WRIA14 5% of Puget Sound Watershed
+* WRIA14 5% of Puget Sound Watershed
+
 	* Sherwood 15% of WRIA14, 47.378098,-122.828994, i = 60, j = 149
 	* Deer 10% of WRIA14, 47.250193,-123.026683
 	* Johns 10% of WRIA14, 47.243843,-123.043656
@@ -174,29 +182,35 @@ Puget
 	* 50% of Deer+Johns+Goldborough+Mill+Skookum+Kennedy+Schneider enter Puget Sound at 47.289476,-122.894711,i = 47, j = 130
 	* 50% of Deer+Johns+Goldborough+Mill+Skookum+Kennedy+Schneider +100% of Perry enter Puget Sound at 47.166609,-122.861266, i = 20, j = 120
 
-* Assume WRIA13 3% of Puget Sound Watershed
+* WRIA13 3% of Puget Sound Watershed
+
 	* McClane 10% of WRIA13
 	* Deschutes 70% of WRIA13
 	* Woodward 10% of WRIA13
 	* Woodland 10% of WRIA13
 	* Assume McClane+Deschutes+Woodward+Woodland enter Puget Sound at 47.182713,-122.83659, i = 22, j = 121
 
-* Assume WRIA12 2% of Puget Sound Watershed
+* WRIA12 2% of Puget Sound Watershed
+
 	* Chambers 100% of WRIA12 47.187438,-122.584419, i = 6, j = 162
 
-* Assume WRIA11 15% of Puget Sound Watershed
+* WRIA11 15% of Puget Sound Watershed
+
 	* Nisqually 99.5% of WRIA11 47.099227,-122.701149
 	* McAllister 0.5% of WRIA11 47.098233,-122.723994
 	* Assume Nisqually+McAllister enter Puget Sound at i = 0, j = 137
 
-* Assume WRIA10 20% of Puget Sound Watershed
+* WRIA10 20% of Puget Sound Watershed
+
 	* Puyallup 99.5% of WRIA10 47.269678,-122.428036, i = 10, j = 195
 	* Hylebas 0.5% of WRIA10 47.284935,-122.410011, i = 13, j = 199
 
-* Assume WRIA9 10% of Puget Sound Watershed
+* WRIA9 10% of Puget Sound Watershed
+
 	* Duwamish 100% of WRIA9, 50% 47.586831,-122.361259, (i = 68, j = 243) 50% 47.592099,-122.344866 (i = 68, j = 246)
 
-* Assume WRIA8 10% of Puget Sound Watershed
+* WRIA8 10% of Puget Sound Watershed
+
 	* Cedar/Sammamish 100% of WRIA8, 47.672894,-122.409207, i = 88, j = 246
 
 JdF
@@ -205,10 +219,12 @@ JdF
 * Source used: BCCF map and Toporama map
 * The Juan de Fuca watershed in Morrison et al (2011) includes the north side of Juan de Fuca Strait from Victoria to Port Renfrew (inclusive) and the south side of Juan de Fuca Strait from Cape Flattery to Port Townsend.
 * Assume that 50% of the area of the JdF watershed defined by Morrison et al (2011) is on north side of JdF (Canada side):
+
 	* From bccf steelhead site map, assume that 33% of Canada side is part of San Juan River/Harris Creek watershed
 		* San Juan River (in the steelhead map) (includes Harris Creek from the steelhead map) 48.560449,-124.404595 (i = 402, j = 56)
 	* Assume that 14% of Canada side is in the Gordon River Watershed 48.575897,-124.415281 (i = 403, j = 56)
 	* Assume that 20% of Canada side is in Muir/Loss/Tugwell/Jordan
+
 		* Loss Creek  (5% of Canada side) 48.480062,-124.27331 (i = 375, j = 71)
 		* River Jordan (5% of Canada side) 48.421255,-124.056244 (i = 348, j = 96)
 		* Muir Creek (5% of Canada side) 48.378744,-123.867352 (i = 326, j = 119)
@@ -216,7 +232,9 @@ JdF
 	* Assume that 33% of Canada side is in Sooke River Watershed 48.383846,-123.700011 (i = 308, j = 137)
 
 * Assume that 50% of the area of the watershed defined by Morrison et al (2011) is on south side of JdF (US side)
+
 	* Assume that 60% of US side of JdF is occupied by watershed WRIA 18, two main rivers Elwha and Dungeness
+
 		* Elwha River 48.14616,-123.567095 (50% of watershed WRIA 18) 48.148193,-123.565807 (i = 261, j = 134)
 		* Tumwater Creek (1% of watershed WRIA 18) 48.124708,-123.445626 (i = 248, j = 151)
 		* Valley Creek (1% of watershed WRIA 18) 48.122445,-123.437018 (i = 247, j = 152)
@@ -228,6 +246,7 @@ JdF
 		* Matriotti Creek (2% of watershed WRIA 18) Dungeness River (30% of watershed) are at same grid point 48.154520, -123.130217 (i = 231, j = 201)
 
 	* Assume that 40% of US side of JdF is occupied by watershed WRIA 19 Lyre-Hoko
+
 		* Coville Creek (5% of watershed WRIA 19) 48.138342,-123.611684 (i = 263, j = 128)
 		* Salt Creek (5% of watershed WRIA 19) 48.16328,-123.70481 (i = 275, j = 116)
 		* Field Creek (5% of watershed WRIA 19) 48.154406,-123.810554 (i = 281, j = 100)
