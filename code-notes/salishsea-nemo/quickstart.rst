@@ -218,7 +218,7 @@ and install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python pa
 
     .. code-block:: bash
 
-        pip install --upgrade --user .
+        pip install --upgrade --no-deps --user .
 
 Edit your :file:`$HOME/.bashrc` to add :file:`$HOME/.local/bin` to your :envvar:`PATH`:
 
