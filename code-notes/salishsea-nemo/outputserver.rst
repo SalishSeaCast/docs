@@ -131,17 +131,10 @@ Here we have added a group of variables tagged as "1h_freq" that will be saved e
 
 Storm Surge Outputs
 ===================
-The file :file:`iodef_freq.xml` has been set up to give one hour outputs at known storm surge locations. 
+The file :file:`iodef.xml` has been set up to give one hour outputs at known storm surge locations. 
 The storm surge locations are outlined in the :ref:`StormSurge` doc. 
-
-Prepare a run  with this configuration using the following command:
-
-.. code-block:: bash
-
-    salishsea prepare SalishSea.yaml iodef_freq.xml
-
-Run NEMO as usual.   
-The output should include four new files :file:`1h_PointAtkinson.nc`, :file:`1h_Victoria.nc`, :file:`1h_PatriciaBay.nc`, and :file:`1h_CampbellRiver.nc`. 
+The "enabled" attributes for these files and group must be set to true in order to produce the new output files.   
+After NEMO is run, the output should include four new files :file:`1h_PointAtkinson.nc`, :file:`1h_Victoria.nc`, :file:`1h_PatriciaBay.nc`, and :file:`1h_CampbellRiver.nc`. 
 
 Other Notes
 ===========
