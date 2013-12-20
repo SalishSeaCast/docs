@@ -26,7 +26,7 @@ Watersheds
 Fraser
 ^^^^^^^^^^^^^^^^^^^^
 
-* Source used: BCCF map and WA map
+* Source used: BCCF map and WA map and Thomson, 1982 to split Fraser flow among its arms
 * Includes three arms of the Fraser River (v. important to Salish Sea!) and some little US rivers south of the Fraser, shown in WRIA1
 * Assume that the Fraser River itself occupies 98% of this watershed, and that WRIA1 occupies 2% of this watershed
 
@@ -78,34 +78,12 @@ Skagit
 EVI_N
 ^^^^^^^^^^^^^^^
 
-* Source used: Toporama map
-* Total area of watershed = 9709.0
-
-	* Oyster, proportion = 363/totalarea (i=705, j=121)
-	* Qunisam, proportion = 1470/totalarea (i=749-750, j=123)
-	* Snowden, proportion = 139/totalarea (i=770, j=117)
-	* Menzies, proportion = 31/totalarea (i=773, j=117)
-	* Creek1, proportion = 23/totalarea (i=786, j=123)
-	* Creek2, proportion = 16/totalarea (i=795, j=126)
-	* Creek3, proportion = 23/totalarea (i=798, j=127)
-	* Elk, proportion = 23/totalarea (i=807, j=127)
-	* Slab, proportion = 12/totalarea (i=813, j=129)
-	* Pye, proportion = 109/totalarea (i=826, j=121)
-	* BearPoint, proportion = 12/totalarea (i=839, j=107)
-	* AmordeCosmos, proportion = 229/totalarea (i=843, j=96)
-	* Humpback, proportion = 10/totalarea (i=844, j=93)
-	* Palmer, proportion = 14/totalarea (i=845, j=92)
-	* Hkusam, proportion = 14/totalarea (i=848, j=87)
-	* CampPoint, proportion = 28/totalarea (i=858, j=77)
-	* SalmonSayward, proportion = (1210+14)/totalarea (i=866, j=64)
-	* Kelsey, proportion = 7/totalarea (i=878, j=59)
-	* unmarked, proportion = 7/totalarea (i=884, j=54)
-	* Newcastle, proportion = 34/totalarea (i=890, j=47)
-	* Windy, proportion = 10/totalarea (i=893, j=42)
+* Source used: Toporama map at 1:20,000?
 
 Howe
 ^^^^^^^^^^^^^^^^^
 
+* Source used: BCCF information to determine amount coming from Burrard Inlet.  This is a region we could return to using the Toporama maps.
 * Source used: BCCF map
 * Squamish River is 90% of watershed (i = 532 and j=385, j=386)
 * Burrard Inlet is 10% of watershed (i=457-459 and j=343)
@@ -113,6 +91,7 @@ Howe
 Bute
 ^^^^^^^^^^^^^^^^^^
 
+* Source used: Numerous sources on major rivers in the region.  This is a region we could return to using the Toporama maps.
 * Source used: Maps
 * Assume Homathko is 58% of watershed (i=897,j=294)
 * Assume Southgate is 35% of watershed (i=885,j=296-297)
@@ -262,6 +241,7 @@ JdF
 EVI_S
 ^^^^^^^^^^^^^^^^^^
 
+* Source used: BCCF.  Could return here using the Toporama maps.
 * Source used: BCCF map
 * Cowichan 22% of watershed (i=383, j=201,202)
 * Chemanius1 6.5% of watershed (i=414, j=211)
@@ -287,7 +267,7 @@ Jervis
 * Source used: Toporama map, 
 * See `this site <http://www.pac.dfo-mpo.gc.ca/science/oceans/BCinlets/jervis-eng.htm>`_
 * As there were no gauged rivers in the Jervis Inlet watershed, Trites (1955) estimated the freshwater discharge using  the area of the watershed (~1400 km2) and local precipitation data.   The estimated mean annual discharge of 180 m3 s-1 is considerably smaller than the discharge in most of the longer BC inlets.  Unlike many of the BC inlets where the main river enters at the head, there are many small rivers and streams distributed along the shores of Jervis Inlet.  The runoff cycle for Jervis Inlet more closely follows the local precipitation cycle as the area of snow fields which store winter precipitation is relatively small (Macdonald and Murray 1973). 
-* Pickard (1961) (http://www.nrcresearchpress.com/doi/pdf/10.1139/f61-062): The chief difference between these inlets is that Jervis has less than 40% as much river runoff as Bute, and only one-quarter of this comes in at the head whereas in Bute three-quarters of the total enters at the head. The flushing effect of the large runoff into the head of Bute is expected to be greater on the whole of the inlet length thzrn that of the smaller runoff distributed along the length of Jervis.
+* Pickard (1961) (http://www.nrcresearchpress.com/doi/pdf/10.1139/f61-062): The chief difference between these inlets is that Jervis has less than 40% as much river runoff as Bute, and only one-quarter of this comes in at the head whereas in Bute three-quarters of the total enters at the head. The flushing effect of the large runoff into the head of Bute is expected to be greater on the whole of the inlet length than that of the smaller runoff distributed along the length of Jervis.
 * Flow out of Powell Lake taken from Sanderson et al. (1986)
 * Jervis Inlet only area = 1400km2 (Trites 1955) ==> 25% of Jervis watershed (5785km2)
 * Assume Skwawka/Hunaechin/Lausmann/Slane/Smanit/ account for 30% of Jervis only watershed
@@ -322,6 +302,7 @@ Jervis
 Toba
 ^^^^^^^^^^^^^^^^^^
 
+* Source used: All just put in at truncated head.
 * Source used: Maps
 * Assume Toba is 100% of watershed (i=746, j= 240-242)
 
@@ -337,4 +318,5 @@ References
 
 * J. Morrison , M. G. G. Foreman and D. Masson, 2012. A method for estimating monthly freshwater discharge affecting British Columbia coastal waters, Atmosphere-Ocean, 50:1, 1-8, DOI: 10.1080/07055900.2011.637667
 * Sanderson et al (1986)
+* Thomson, 1982: Physical Oceanography of the BC Coast.
 
