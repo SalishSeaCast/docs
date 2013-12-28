@@ -85,7 +85,7 @@ The :kbd:`[extensions]` section enables several useful Mercurial extensions:
   diffs,
   etc. in colour
 
-* :kbd:`graphlog` provides the :command:`hg glog` command and the synonymous :command:`hg log -G` command that formats the output as a graph representing the revision history using ASCII characters to the left of the log
+* :kbd:`graphlog` provides the :kbd:`hg glog` command and the synonymous :kbd:`hg log -G` command that formats the output as a graph representing the revision history using ASCII characters to the left of the log
 
 * :kbd:`pager` sends output of Mercurial commands through the pager that you specify in the :kbd:`[pager]` section so that long output is displayed one page at a time
 
@@ -107,7 +107,7 @@ The :kbd:`[ui]` section configures the Mercurial user interface:
   (see :ref:`global-ignore-file`)
 
 * :kbd:`ssh` specifies the :command:`ssh` command to use when communicating with remote Mercurial instances like the one on Bitbucket.
-  Setting it to :command:`ssh -C` enables data compression.
+  Setting it to :kbd:`ssh -C` enables data compression.
 
 See the `Mercurial configuration file docs`_ for more information about configuration options.
 
@@ -156,7 +156,7 @@ Mercurial Workflows
 
     Mercurial commands may be shortened to the fewest number of letters that uniquely identifies them.
     For example,
-    :command:`hg status` can be spelled :command:`hg stat` or even :command:`hg st`.
+    :kbd:`hg status` can be spelled :kbd:`hg stat` or even :kbd:`hg st`.
     If you don't provide enough letters Mercurial will show the the possible command completions.
 
 
@@ -170,18 +170,18 @@ This section describes workflows for pulling those changes into your repos,
 how to do so without having to do frivolous branch merges,
 and how to recover from the common mistakes.
 
-Use :command:`hg incoming` to see changes that are present in the upstream repo that have not yet been pulled into your local repo.
+Use :kbd:`hg incoming` to see changes that are present in the upstream repo that have not yet been pulled into your local repo.
 Similarly,
-:command:`hg outgoing` will show you the changes that are present in your local repo that have not been pushed upstream.
+:kbd:`hg outgoing` will show you the changes that are present in your local repo that have not been pushed upstream.
 
 Ensure that you have committed all of your changes before you pull new changes from upstream;
 i.e.
-:command:`hg status` should show nothing or a list of untracked files marked with the :kbd:`!` character.
+:kbd:`hg status` should show nothing or a list of untracked files marked with the :kbd:`!` character.
 
-:command:`hg pull --rebase` will pull the changes from upstream and merge your locally committed changes on top of them.
+:kbd:`hg pull --rebase` will pull the changes from upstream and merge your locally committed changes on top of them.
 Using :kbd:`rebase` avoids the creation of a new head
 (aka a branch)
-in your local repo and an unnecessary merge commit that results from the use of :command:`hg pull --update`.
+in your local repo and an unnecessary merge commit that results from the use of :kbd:`hg pull --update`.
 That reserves branching and merging for the relatively rare occasions when temporarily divergent lines of development are actually required.
 
 The `rebase extension docs`_ have more information and diagrams of what's going on in this `common rebase use case`_.
@@ -194,11 +194,11 @@ Rebasing an Accidental Branch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sooner or later you will accidentally create a branch in your local repo.
-Using :command:`hg pull --rebase` with uncommitted changes and then commiting those changes is one way that an accidental branch can happen.
-:command:`hg glog` is a variant of the :command:`hg log` command that shows an ASCII-art graph of the commit tree to the left of the commit log,
+Using :kbd:`hg pull --rebase` with uncommitted changes and then commiting those changes is one way that an accidental branch can happen.
+:kbd:`hg glog` is a variant of the :kbd:`hg log` command that shows an ASCII-art graph of the commit tree to the left of the commit log,
 providing a way of visualizing branches.
 
-:command:`hg rebase` can be used to move the changes on an accidental branch to the tip of the repo.
+:kbd:`hg rebase` can be used to move the changes on an accidental branch to the tip of the repo.
 See the `scenarios section`_ of the `rebase extension docs`_ for diagrams and rebase command options for moving branches around in various ways.
 
 .. _scenarios section: http://mercurial.selenic.com/wiki/RebaseExtension#Scenarios
@@ -212,23 +212,23 @@ At that point if you try to do almost anything other than commit the merge Mercu
 
   abort: outstanding uncommitted merges
 
-You can use :command:`hg update --clean` to discard the uncommitted changes,
+You can use :kbd:`hg update --clean` to discard the uncommitted changes,
 effectively aborting the merge
 (and any other uncommitted changes you might have).
-After that you should use :command:`hg glog` or :command:`hg heads` to examine your repo structure because you may well have an accidental branch that you will want to rebase.
+After that you should use :kbd:`hg glog` or :kbd:`hg heads` to examine your repo structure because you may well have an accidental branch that you will want to rebase.
 
 Incidentally,
-:command:`hg update --clean` can be used any time that you want to discard all uncommitted changes,
+:kbd:`hg update --clean` can be used any time that you want to discard all uncommitted changes,
 but be warned,
 it does so without keeping a backup.
-See :command:`hg revert` for a less destructive way of discarding changes on a file by file basis
-(but note that :command:`hg revert` cannot be used to undo a merge).
+See :kbd:`hg revert` for a less destructive way of discarding changes on a file by file basis
+(but note that :kbd:`hg revert` cannot be used to undo a merge).
 
 
 Amending the Last Commit
 ------------------------
 
-:command:`hg commit --amend` can be used to alter the last commit,
+:kbd:`hg commit --amend` can be used to alter the last commit,
 provided that it has not yet been pushed up stream.
 This allows for correction or elaboration of the commit message,
 inclusion of additional changes in the commit,
@@ -239,7 +239,7 @@ etc.
 Commit Message Style
 --------------------
 
-Commit messages can be written on the command line with the :command:`hg commit -m` option with the message enclosed in double-quotes
+Commit messages can be written on the command line with the :kbd:`hg commit -m` option with the message enclosed in double-quotes
 (:kbd:`"`);
 e.g.
 
@@ -247,7 +247,7 @@ e.g.
 
     hg commit -m"Add Salish Sea NEMO model quick-start section."
 
-Assuming that you have the :envvar:`EDITOR` environment variable set :command:`hg commit` without the :kbd:`-m` option will open your editor for you to write your commit message and the files to be committed will be shown in the editor.
+Assuming that you have the :envvar:`EDITOR` environment variable set :kbd:`hg commit` without the :kbd:`-m` option will open your editor for you to write your commit message and the files to be committed will be shown in the editor.
 Using your editor for commit message also makes it easy to write multi-line commit messages.
 
 Here are recommendations for commit message style::
