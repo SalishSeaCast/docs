@@ -18,15 +18,17 @@ Next, we split the freshwater runoff from each watershed between the rivers in t
 
 * In Washington, maps of watersheds are available `here <http://www.ecy.wa.gov/apps/watersheds/wriapages/>`_.
 
-From these maps, the percentage of the watershed that each river drains was estimated.
+* For the Fraser River, the split between the arms is given in Thomson, 1981, available `here <http://www.dfo-mpo.gc.ca/Library/487.pdf>`_
+
+From the maps, the percentage of the watershed that each river drains was estimated.
 
 Watersheds
---------------------------------------
+----------
 
 Fraser
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^
 
-* Source used: BCCF map and WA map and Thomson, 1982 to split Fraser flow among its arms
+* Source used: BCCF map and WA map and Thomson, 1981 to split Fraser flow among its arms
 * Includes three arms of the Fraser River (v. important to Salish Sea!) and some little US rivers south of the Fraser, shown in WRIA1
 * Assume that the Fraser River itself occupies 98% of this watershed, and that WRIA1 occupies 2% of this watershed
 
@@ -41,15 +43,15 @@ Fraser
 	* Lake river thingo occupies 6% of WRIA1, i = 302, j = 367, enters at 48.7520645, -122.4882228
 	* Chuckanut occupies 4% of WRIA1, enters at 48.7243762, -122.5068995, i = 298, j = 361
 
-* Fraser
+* Fraser River
 	 * Main South Arm cells based on map are i=414,415,416 and j=334
-	 * Assumed river flow (m3/s): this is 75% of the Fraser yearly average flow from Morrison spreadsheet (in km3/yr)
-	 * Southern South Arm (aka Canoe Pass, although that is not open), cells i= 411,412 j=324
-	 * Main Arm, cells i=434,435, j=318
-	 * North Arm, cells i=440, j=323,324
+	 * Assumed that 75% goes into the main South Arm (Thomson, 1981)
+	 * Southern South Arm 5% (aka Canoe Pass, although that is not open), cells i= 411,412 j=324
+	 * Main Arm 5%, cells i=434,435, j=318
+	 * North Arm 15%, cells i=440, j=323,324
 
 Skagit
-^^^^^^^^^^^^^^^^^^
+^^^^^^
 
 * Source used: WA map
 * Includes subwatersheds WRIA3, WRIA4, WRIA5 and WRIA7 from WA map
@@ -76,29 +78,80 @@ Skagit
 	* Mission Creek drains 1% of WRIA7 (48.056656,-122.274742) (i = 152, j = 312)
 
 EVI_N
-^^^^^^^^^^^^^^^
+^^^^^
 
-* Source used: Toporama map at 1:20,000?
+* Source used: Toporama map at 1:100,000 (CA).  Areas (other than Oyster, Campbell, Sayward) were estimated from print outs of the graphs.  Large rivers areas are given in Environment Canada (EC) database. Note that not all of Morrison's EVI_N drains into our model.  
+Percent drained from each river was proportional to its drainage area versus 
+the total drainage area given by Morrison.
+
+Below, rivers marked with '+' means I made up the name.
+
+ * Oyster River is at 705,121: area 363 km2 (according to EC)  
+
+ * Qunisam River flows into Campbell River. #08HD003 is Campbell River at the town, drainage area 1470 km2 (EC) Latitude: 50.0353065 Longitude: -125.2629857  
+Lat/Lon of mouth -125.2601, 50.0510 for the mouth gives two points 123 749 and 750 
+ 
+  * Snowden Creek 139 km2 CA Latitude: 50.1125819 Longitude: -125.3723186 point 117 770
+
+  * Menzies Creek 31 km2 CA  Latitude: 50.1383412 Longitude: -125.3908277 point  117 773
+
+  * Creek 1+ 23 km2 CA  Latitude: 50.1952619 Longitude: -125.3825383 point 123 786
+
+  * Creek 2+ 16 km2 CA  Latitude: 50.2333137 Longitude: -125.3975887 point 126 795
+
+  * Creek 3 23 km2 CA  Latitude: 50.2435598 Longitude: -125.3991498 point 127 798
+  * Elk Creek+ 23 km2 CA  Latitude: 50.2819399 Longitude: -125.4402655 point 127 807
+
+  * Slab Creek+ 12 km2 CA  Latitude: 50.3063334 Longitude: -125.4381633 point 129 813
+
+  * Pye Creek 109 km2 CA  Latitude: 50.336607 Longitude: -125.5188295 point 121 826
+
+  * Bear Point Creek+ 12 km2 CA  Latitude: 50.3628639 Longitude: -125.6340551 point 107 839
+
+  * Amor de Cosmos Creek 229 km2 CA Latitude: 50.3582412 Longitude: -125.6876354 point 96 843
+
+  * Humpback+ 10 km2 CA Latitude: 50.3561671 Longitude: -125.7174369 point 93 844
+  
+  * Palmer+ 14 km2 CA Latitude: 50.3603414 Longitude: -125.7371761 point 92 845
+
+  * Hkusam+ 14 km2 CA Latitude: 50.3624995 Longitude: -125.7693388  point 87 848
+
+  * Camp Point South+ 14 km2 CA Latitude: 50.3815933 Longitude: -125.8429452 point 77, 858
+
+  * Camp Point North+ 14 km2 CA Latitude: 50.3807285 Longitude: -125.8540664 point 78, 858 so done together with Camp Point South
+
+  * Salmon River drainage area 1210 km2 (EC), #08HD006 is Salmon River near Sayward,   Latitude: 50.3930713 Longitude: -125.9514349 points 64 866-867 
+
+  * Sayward+ 14 km2 CA Latitude: 50.388379 Longitude: -125.9592292 point 64, 866
+
+  * Kelsey+ 10 km2 CA Latitude: 50.4122688 Longitude: -125.9864134 point 62 872
+
+  * double rivers Communication+ 7 km2 CA Latitude: 50.4253357 Longitude: -126.0181504 & Latitude: 50.4292907 Longitude: -126.0299097  points 59, 877 and 58, 879  put both in at 59, 878
+
+   * unmarked+ 7 km2 CA Latitude: 50.4427467 Longitude: -126.0688793 point 54 884
+
+   * Newcastle+ 34 km2 CA Latitude: 50.4526841 Longitude: -126.1194916 point 47 890 
+
+   * Windy+ 10 km2 CA Latitude: 50.4552649 Longitude: -126.1585149 point 42 893
+
 
 Howe
-^^^^^^^^^^^^^^^^^
+^^^^
 
 * Source used: BCCF information to determine amount coming from Burrard Inlet.  This is a region we could return to using the Toporama maps.
-* Source used: BCCF map
 * Squamish River is 90% of watershed (i = 532 and j=385, j=386)
 * Burrard Inlet is 10% of watershed (i=457-459 and j=343)
 
 Bute
-^^^^^^^^^^^^^^^^^^
+^^^^
 
-* Source used: Numerous sources on major rivers in the region.  This is a region we could return to using the Toporama maps.
-* Source used: Maps
+* Source used: Numerous sources on major rivers in the region including wikipedia entries, tourist agencies etc.  This is a region we could return to using the Toporama maps.
 * Assume Homathko is 58% of watershed (i=897,j=294)
 * Assume Southgate is 35% of watershed (i=885,j=296-297)
 * Assume Orford is 7% of watershed (i=831, j=249)
 
 Puget
-^^^^^^^^^^^^^^^^^^
+^^^^^
 
 * Source used: WA map
 * Includes subwatersheds WRIA17, WRIA16, WRIA15, WRIA14, WRIA08, WRIA09, WRIA10, WRIA12 and WRIA11 from WA map
