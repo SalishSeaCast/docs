@@ -106,6 +106,14 @@ The result of running :command:`make html` should look something link::
   Build finished. The HTML pages are in _build/html.
 
 
+Writing Style
+-------------
+
+Consider using `semantic line breaks`_ in your Sphinx files.
+
+.. _semantic line breaks: http://rhodesmill.org/brandon/2012/one-sentence-per-line/
+
+
 Links and Cross-references
 --------------------------
 
