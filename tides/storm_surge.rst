@@ -92,6 +92,17 @@ gives for Point Atkinson: ::
 	30-Nov-2012 21:00:00 	 15
 	01-Dec-2012 16:00:00 	 22
 
+Water level at Point Atkinson 
+------------------------------------------
+
+Example of hourly water level at Point Atkinson during the storm on 4 February 2004:
+
+.. _PtAtkinsonWLev_Feb04-image:
+
+.. figure:: PtAtkinsonWLev_Feb04.png
+
+Outputting water level data at each hour (or perhaps every 30 minutes?) from the NEMO model should be therefore be appropriate for assessing storm surge performance. 
+
 Literature search for big storms 
 -----------------------------------------
 
