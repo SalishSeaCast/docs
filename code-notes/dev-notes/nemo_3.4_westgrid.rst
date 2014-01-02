@@ -7,14 +7,7 @@ Getting your Jasper Shell Ready
 -------------------------------
 
 * make sure your shell is bash (echo $SHELL), if its not, write to Westgrid support and get it changed.
-* load the following modules (just putting these in my .bashrc file didn't work for me.)
-
-  .. code-block:: bash
-
-       module load compiler/intel/12.1
-       module load library/intelmpi/4.0.3.008
-       module load library/netcdf/4.1.3
-       module load library/szip/2.1
+* follow the instructions in :ref:`LoadingModulesOnJasper` to manually load the necessary software component modules or edit your :kbd:`jasper` :file:`$HOME/.bashrc` to make them load automatically when you :program:`ssh` into :kbd:`jasper`.
 
 
 Getting the Code
@@ -25,50 +18,46 @@ see :ref:`GettingTheCodeNM34` in Notes on Downloading/Running NEMO 3.4 on Ocean 
 Making a Project
 ----------------
 
-* Nemo uses an ARCH (architecture) file to determine compiler, maker, netcdf library location.
+* NEMO uses an ARCH (architecture) file to determine compiler, maker, netcdf library location.
 
   .. code-block:: bash
 
       cd dev_v3_4_STABLE_2012/NEMOGCM/ARCH
 
-* NEMO ships with number of different arch files.  So far, however, what works is the jasper file from P. Myers GEOTRACES code:
+* NEMO ships with a number of different arch files.  So far, however, what works is one based on the jasper file from P. Myers GEOTRACES code:
 
-* ARCH file: :file:`arch-ifort_jasper.fcm` containing::
+  .. code-block:: sh
 
-    # ifort compiler options for jasper on westgrid: from P. Myers group
-    # NCDF_INC    netcdf include file
-    # NCDF_LIB    netcdf library
-    # FC          Fortran compiler command
-    # FCFLAGS     Fortran compiler flags
-    # FFLAGS      Fortran 77 compiler flags
-    # LD          linker
-    # LDFLAGS     linker flags, e.g. -L<lib dir> if you have libraries in a
-    # FPPFLAGS    pre-processing flags
-    # AR          assembler
-    # ARFLAGS     assembler flags
-    # MK          make
-    # USER_INC    additional include files for the compiler,  e.g. -I<include dir>
-    # USER_LIB    additional libraries to pass to the linker, e.g. -l<library>
+      # makefile definitions for mpif90 on jasper.westgrid.ca; based on ifort file from P. Myers group
+      #
+      # NCDF_INC    netcdf include file
+      # NCDF_LIB    netcdf library
+      # FC          Fortran compiler command
+      # FCFLAGS     Fortran compiler flags
+      # LD          linker
+      # LDFLAGS     linker flags, e.g. -L<lib dir> if you have libraries in a
+      # FPPFLAGS    pre-processing flags
+      # AR          assembler
+      # ARFLAGS     assembler flags
+      # MK          make
+      # USER_INC    additional include files for the compiler,  e.g. -I<include dir>
+      # USER_LIB    additional libraries to pass to the linker, e.g. -l<library>
 
 
-    %LIB_MPI             MPI2
-    %LIB_MPI_BIS
-    %NCDF_INC            -I/lustre/jasper/software/netcdf/netcdf-4.1.3/include -lhdf5_hl -lhdf5 -lz -lsz
-    %NCDF_LIB            -L/lustre/jasper/software/netcdf/netcdf-4.1.3/lib -lnetcdf -lnetcdff -lhdf5_hl -lhdf5 -lz -lsz
-    %FC                  mpiifort
-    %FCFLAGS 	         -c -fpp -r8 -O3 -assume byterecl -convert big_endian -heap-arrays
-    %F_O                 -O3 -r8 $(F_P)  -I$(MODDIR) -module $(MODDIR) -assume byterecl -convert big_endian -heap-arrays $(NCDF_INC)
-    %FFLAGS 	         $(F_O) -extend_source
-    %LD                  mpiifort
-    %PC                  cpp
-    %FPPFLAGS            -P -C -traditional
-    %LDFLAGS
-    %AR                  ar
-    %ARFLAGS             -r
-    %MK                  make
-    %USER_INC            %NCDF_INC
-    %USER_LIB            %NCDF_LIB
-    %MODDIR  	         ../../../lib
+      %NCDF_INC     -I/lustre/jasper/software/netcdf/netcdf-4.1.3/include -lhdf5_hl -lhdf5 -lz -lsz
+      %NCDF_LIB     -L/lustre/jasper/software/netcdf/netcdf-4.1.3/lib -lnetcdf -lnetcdff -lhdf5_hl -lhdf5 -lz -lsz
+      %FC           mpif90
+      %FCFLAGS      -c -fpp -r8 -O3 -assume byterecl -convert big_endian -heap-arrays
+      %LD           mpif90
+      %PC           cpp
+      %FPPFLAGS     -P -C -traditional
+      %LDFLAGS
+      %AR           ar
+      %ARFLAGS      -r
+      %MK           make
+      %USER_INC     %NCDF_INC
+      %USER_LIB     %NCDF_LIB
+      %MODDIR       ../../../lib
 
 *   then change directory and make a project, e.g.
     then for a new GYRE configuration using your new arch file ocean
@@ -78,7 +67,7 @@ Making a Project
     .. code-block:: bash
 
         cd ../CONFIG
-        ./makenemo -m ifort_jasper -r GYRE -n MY_GYRE add_key "key_netcdf4"
+        ./makenemo -m mpif90_jasper -r GYRE -n MY_GYRE add_key "key_netcdf4"
 
 Running the Code: GYRE
 ----------------------

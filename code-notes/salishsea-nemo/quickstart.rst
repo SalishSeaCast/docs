@@ -218,10 +218,21 @@ and install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python pa
 
     .. code-block:: bash
 
-        pip install --upgrade --user .
+        pip install --upgrade --no-deps --user .
 
 Edit your :file:`$HOME/.bashrc` to add :file:`$HOME/.local/bin` to your :envvar:`PATH`:
 
 .. code-block:: bash
 
     export PATH=$HOME/.local/bin:$PATH
+
+Compile the Salish Sea NEMO configuration,
+and the :program:`rebuild_nemo` tool:
+
+.. code-block:: bash
+
+    cd NEMO-code/NEMOGCM/CONFIG
+    ./makenemo -n SalishSea -m mpif90_jasper -j8
+    cd ../TOOLS
+    ./maketools -n REBUILD_NEMO  -m mpif90_jasper
+

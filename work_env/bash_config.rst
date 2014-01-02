@@ -118,13 +118,22 @@ When working on :kbd:`jasper.westgrid.ca` the :command:`module` command must be 
 compile,
 run,
 and work with the results of NEMO.
-The following :command:`module` commands should be added to your :kbd:`jasper` :file:`$HOME/.bashrc` file:
+The following :command:`module load` commands should be added to your :kbd:`jasper` :file:`$HOME/.bashrc` file:
 
 .. code-block:: bash
 
-    module load compiler/intel/12.1
-    module load library/intelmpi/4.0.3.008
+    module load application/python/2.7.3
     module load library/netcdf/4.1.3
     module load library/szip/2.1
-    module load application/ncview/2.1.1
-    module load application/python/2.7.3
+
+The Intel Fortran compiler,
+OpenMPI,
+and HDF5 modules will be loaded as side-effects.
+You can inspect the collection of modules that are loaded with the :command:`module list` command:
+
+.. .. code-block:: bash
+
+    module list
+    Currently Loaded Modulefiles:
+      1) compiler/intel/12.1           3) application/python/2.7.3      5) library/netcdf/4.1.3
+      2) library/openmpi/1.6.4-intel   4) library/hdf5/1.8.8            6) library/szip/2.1

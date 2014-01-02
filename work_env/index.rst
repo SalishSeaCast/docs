@@ -13,3 +13,4 @@ and information about the major tools that we use.
    anaconda_python
    salishsea_pkgs
    sphinx_docs
+   emacs_config
