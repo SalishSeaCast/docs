@@ -18,15 +18,17 @@ Next, we split the freshwater runoff from each watershed between the rivers in t
 
 * In Washington, maps of watersheds are available `here <http://www.ecy.wa.gov/apps/watersheds/wriapages/>`_.
 
-From these maps, the percentage of the watershed that each river drains was estimated.
+* For the Fraser River, the split between the arms is given in Thomson, 1981, available `here <http://www.dfo-mpo.gc.ca/Library/487.pdf>`_
+
+From the maps, the percentage of the watershed that each river drains was estimated.
 
 Watersheds
---------------------------------------
+----------
 
 Fraser
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^
 
-* Source used: BCCF map and WA map
+* Source used: BCCF map and WA map and Thomson, 1981 to split Fraser flow among its arms
 * Includes three arms of the Fraser River (v. important to Salish Sea!) and some little US rivers south of the Fraser, shown in WRIA1
 * Assume that the Fraser River itself occupies 98% of this watershed, and that WRIA1 occupies 2% of this watershed
 
@@ -42,16 +44,16 @@ Fraser
 	* Lake river thingo occupies 6% of WRIA1, i = 302, j = 367, enters at 48.7520645, -122.4882228
 	* Chuckanut occupies 4% of WRIA1, enters at 48.7243762, -122.5068995, i = 298, j = 361
 
-* Fraser
+* Fraser River
 
 	 * Main South Arm cells based on map are i=414,415,416 and j=334
-	 * Assumed river flow (m3/s): this is 75% of the Fraser yearly average flow from Morrison spreadsheet (in km3/yr)
-	 * Southern South Arm (aka Canoe Pass, although that is not open), cells i= 411,412 j=324
-	 * Main Arm, cells i=434,435, j=318
-	 * North Arm, cells i=440, j=323,324
+	 * Assumed that 75% goes into the main South Arm (Thomson, 1981)
+	 * Southern South Arm 5% (aka Canoe Pass, although that is not open), cells i= 411,412 j=324
+	 * Main Arm 5%, cells i=434,435, j=318
+	 * North Arm 15%, cells i=440, j=323,324
 
 Skagit
-^^^^^^^^^^^^^^^^^^
+^^^^^^
 
 * Source used: WA map
 * Includes subwatersheds WRIA3, WRIA4, WRIA5 and WRIA7 from WA map
@@ -80,50 +82,80 @@ Skagit
 	* Mission Creek drains 1% of WRIA7 (48.056656,-122.274742) (i = 152, j = 312)
 
 EVI_N
-^^^^^^^^^^^^^^^
+^^^^^
 
-* Source used: Toporama map
-* Total area of watershed = 9709.0
+* Source used: Toporama map at 1:100,000 (CA).  Areas (other than Oyster, Campbell, Sayward) were estimated from print outs of the graphs.  Large rivers areas are given in Environment Canada (EC) database. Note that not all of Morrison's EVI_N drains into our model.  
+Percent drained from each river was proportional to its drainage area versus 
+the total drainage area given by Morrison.
 
-	* Oyster, proportion = 363/totalarea (i=705, j=121)
-	* Qunisam, proportion = 1470/totalarea (i=749-750, j=123)
-	* Snowden, proportion = 139/totalarea (i=770, j=117)
-	* Menzies, proportion = 31/totalarea (i=773, j=117)
-	* Creek1, proportion = 23/totalarea (i=786, j=123)
-	* Creek2, proportion = 16/totalarea (i=795, j=126)
-	* Creek3, proportion = 23/totalarea (i=798, j=127)
-	* Elk, proportion = 23/totalarea (i=807, j=127)
-	* Slab, proportion = 12/totalarea (i=813, j=129)
-	* Pye, proportion = 109/totalarea (i=826, j=121)
-	* BearPoint, proportion = 12/totalarea (i=839, j=107)
-	* AmordeCosmos, proportion = 229/totalarea (i=843, j=96)
-	* Humpback, proportion = 10/totalarea (i=844, j=93)
-	* Palmer, proportion = 14/totalarea (i=845, j=92)
-	* Hkusam, proportion = 14/totalarea (i=848, j=87)
-	* CampPoint, proportion = 28/totalarea (i=858, j=77)
-	* SalmonSayward, proportion = (1210+14)/totalarea (i=866, j=64)
-	* Kelsey, proportion = 7/totalarea (i=878, j=59)
-	* unmarked, proportion = 7/totalarea (i=884, j=54)
-	* Newcastle, proportion = 34/totalarea (i=890, j=47)
-	* Windy, proportion = 10/totalarea (i=893, j=42)
+Below, rivers marked with '+' means I made up the name.
+
+ * Oyster River is at 705,121: area 363 km2 (according to EC)  
+
+ * Qunisam River flows into Campbell River. #08HD003 is Campbell River at the town, drainage area 1470 km2 (EC) Latitude: 50.0353065 Longitude: -125.2629857  
+Lat/Lon of mouth -125.2601, 50.0510 for the mouth gives two points 123 749 and 750 
+ 
+  * Snowden Creek 139 km2 CA Latitude: 50.1125819 Longitude: -125.3723186 point 117 770
+
+  * Menzies Creek 31 km2 CA  Latitude: 50.1383412 Longitude: -125.3908277 point  117 773
+
+  * Creek 1+ 23 km2 CA  Latitude: 50.1952619 Longitude: -125.3825383 point 123 786
+
+  * Creek 2+ 16 km2 CA  Latitude: 50.2333137 Longitude: -125.3975887 point 126 795
+
+  * Creek 3 23 km2 CA  Latitude: 50.2435598 Longitude: -125.3991498 point 127 798
+  * Elk Creek+ 23 km2 CA  Latitude: 50.2819399 Longitude: -125.4402655 point 127 807
+
+  * Slab Creek+ 12 km2 CA  Latitude: 50.3063334 Longitude: -125.4381633 point 129 813
+
+  * Pye Creek 109 km2 CA  Latitude: 50.336607 Longitude: -125.5188295 point 121 826
+
+  * Bear Point Creek+ 12 km2 CA  Latitude: 50.3628639 Longitude: -125.6340551 point 107 839
+
+  * Amor de Cosmos Creek 229 km2 CA Latitude: 50.3582412 Longitude: -125.6876354 point 96 843
+
+  * Humpback+ 10 km2 CA Latitude: 50.3561671 Longitude: -125.7174369 point 93 844
+  
+  * Palmer+ 14 km2 CA Latitude: 50.3603414 Longitude: -125.7371761 point 92 845
+
+  * Hkusam+ 14 km2 CA Latitude: 50.3624995 Longitude: -125.7693388  point 87 848
+
+  * Camp Point South+ 14 km2 CA Latitude: 50.3815933 Longitude: -125.8429452 point 77, 858
+
+  * Camp Point North+ 14 km2 CA Latitude: 50.3807285 Longitude: -125.8540664 point 78, 858 so done together with Camp Point South
+
+  * Salmon River drainage area 1210 km2 (EC), #08HD006 is Salmon River near Sayward,   Latitude: 50.3930713 Longitude: -125.9514349 points 64 866-867 
+
+  * Sayward+ 14 km2 CA Latitude: 50.388379 Longitude: -125.9592292 point 64, 866
+
+  * Kelsey+ 10 km2 CA Latitude: 50.4122688 Longitude: -125.9864134 point 62 872
+
+  * double rivers Communication+ 7 km2 CA Latitude: 50.4253357 Longitude: -126.0181504 & Latitude: 50.4292907 Longitude: -126.0299097  points 59, 877 and 58, 879  put both in at 59, 878
+
+   * unmarked+ 7 km2 CA Latitude: 50.4427467 Longitude: -126.0688793 point 54 884
+
+   * Newcastle+ 34 km2 CA Latitude: 50.4526841 Longitude: -126.1194916 point 47 890 
+
+   * Windy+ 10 km2 CA Latitude: 50.4552649 Longitude: -126.1585149 point 42 893
+
 
 Howe
-^^^^^^^^^^^^^^^^^
+^^^^
 
-* Source used: BCCF map
+* Source used: BCCF information to determine amount coming from Burrard Inlet.  This is a region we could return to using the Toporama maps.
 * Squamish River is 90% of watershed (i = 532 and j=385, j=386)
 * Burrard Inlet is 10% of watershed (i=457-459 and j=343)
 
 Bute
-^^^^^^^^^^^^^^^^^^
+^^^^
 
-* Source used: Maps
+* Source used: Numerous sources on major rivers in the region including wikipedia entries, tourist agencies etc.  This is a region we could return to using the Toporama maps.
 * Assume Homathko is 58% of watershed (i=897,j=294)
 * Assume Southgate is 35% of watershed (i=885,j=296-297)
 * Assume Orford is 7% of watershed (i=831, j=249)
 
 Puget
-^^^^^^^^^^^^^^^^^^
+^^^^^
 
 * Source used: WA map
 * Includes subwatersheds WRIA17, WRIA16, WRIA15, WRIA14, WRIA08, WRIA09, WRIA10, WRIA12 and WRIA11 from WA map
@@ -267,6 +299,7 @@ JdF
 EVI_S
 ^^^^^^^^^^^^^^^^^^
 
+* Source used: BCCF.  Could return here using the Toporama maps.
 * Source used: BCCF map
 * Cowichan 22% of watershed (i=383, j=201,202)
 * Chemanius1 6.5% of watershed (i=414, j=211)
@@ -292,7 +325,7 @@ Jervis
 * Source used: Toporama map, 
 * See `this site <http://www.pac.dfo-mpo.gc.ca/science/oceans/BCinlets/jervis-eng.htm>`_
 * As there were no gauged rivers in the Jervis Inlet watershed, Trites (1955) estimated the freshwater discharge using  the area of the watershed (~1400 km2) and local precipitation data.   The estimated mean annual discharge of 180 m3 s-1 is considerably smaller than the discharge in most of the longer BC inlets.  Unlike many of the BC inlets where the main river enters at the head, there are many small rivers and streams distributed along the shores of Jervis Inlet.  The runoff cycle for Jervis Inlet more closely follows the local precipitation cycle as the area of snow fields which store winter precipitation is relatively small (Macdonald and Murray 1973). 
-* Pickard (1961) (http://www.nrcresearchpress.com/doi/pdf/10.1139/f61-062): The chief difference between these inlets is that Jervis has less than 40% as much river runoff as Bute, and only one-quarter of this comes in at the head whereas in Bute three-quarters of the total enters at the head. The flushing effect of the large runoff into the head of Bute is expected to be greater on the whole of the inlet length thzrn that of the smaller runoff distributed along the length of Jervis.
+* Pickard (1961) (http://www.nrcresearchpress.com/doi/pdf/10.1139/f61-062): The chief difference between these inlets is that Jervis has less than 40% as much river runoff as Bute, and only one-quarter of this comes in at the head whereas in Bute three-quarters of the total enters at the head. The flushing effect of the large runoff into the head of Bute is expected to be greater on the whole of the inlet length than that of the smaller runoff distributed along the length of Jervis.
 * Flow out of Powell Lake taken from Sanderson et al. (1986)
 * Jervis Inlet only area = 1400km2 (Trites 1955) ==> 25% of Jervis watershed (5785km2)
 * Assume Skwawka/Hunaechin/Lausmann/Slane/Smanit/ account for 30% of Jervis only watershed
@@ -327,6 +360,7 @@ Jervis
 Toba
 ^^^^^^^^^^^^^^^^^^
 
+* Source used: All just put in at truncated head.
 * Source used: Maps
 * Assume Toba is 100% of watershed (i=746, j= 240-242)
 
@@ -342,4 +376,5 @@ References
 
 * J. Morrison , M. G. G. Foreman and D. Masson, 2012. A method for estimating monthly freshwater discharge affecting British Columbia coastal waters, Atmosphere-Ocean, 50:1, 1-8, DOI: 10.1080/07055900.2011.637667
 * Sanderson et al (1986)
+* Thomson, 1982: Physical Oceanography of the BC Coast.
 

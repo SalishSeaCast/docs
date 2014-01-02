@@ -20,6 +20,7 @@ Contents:
    code-notes/salishsea-nemo/index
    tides/index
    rivers/index
+   turbulence/index
    code-notes/dev-notes/index
 
 .. include:: license_description.txt

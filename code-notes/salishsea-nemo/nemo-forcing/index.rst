@@ -3,7 +3,7 @@ Set-up, Initial Conditions, Forcing, etc. Files
 ***********************************************
 
 The collection of domain-specific set-up,
-initial conditions,
+initial conditions, open boundary conditions,
 forcing,
 etc.
 files used to run NEMO for the Salish Sea are maintained in the `NEMO-forcing`_ repo.
@@ -26,4 +26,5 @@ files used to run NEMO for the Salish Sea are maintained in the `NEMO-forcing`_ 
 
    repo.rst
    atmospheric.rst
+   obc.rst
    netcdf4.rst

@@ -80,7 +80,8 @@ Available Architecture Definitions
 In addition to the collection of architecture definitions that the NEMO consortium provides,
 the `NEMO-code`_ repo includes definitions for:
 
-* :kbd:`ifort_jasper`: MPI builds on :kbd:`jasper.westgrid.ca`
+* :kbd:`mpif90_jasper`: OpenMPI builds on :kbd:`jasper.westgrid.ca`
+* :kbd:`ifort_jasper`: Intel MPI builds on :kbd:`jasper.westgrid.ca`
 * :kbd:`salish`: MPI builds on :kbd:`salish.eos.ubc.ca`
 * :kbd:`ocean`: single processor builds on UBC-EOAS :kbd:`ocean` cluster workstations and :kbd:`salish`
 
