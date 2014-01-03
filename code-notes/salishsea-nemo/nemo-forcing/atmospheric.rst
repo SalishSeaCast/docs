@@ -32,8 +32,8 @@ To satisfy that requirement the following file management strategy has been esta
       !-----------------------------------------------------------------------
       !        !  file name  ! freq (hr)  ! variable  !  time   !  clim  ! period ! weights             ! rotation !
       !        !             ! (<0 == mo) !   name    ! interp  !  (T/F) !        ! filename            ! pairing  !
-        sn_wndi = 'u10',       1,          'u_wind',    .true.,  .false., 'daily', 'met_gem_weight.nc',  'u_wind'
-        sn_wndj = 'v10',       1,          'v_wind',    .true.,  .false., 'daily', 'met_gem_weight.nc',  'v_wind'
+        sn_wndi = 'u10',       1,          'u_wind',    .true.,  .false., 'daily', 'met_gem_weight.nc',  'Uwnd'
+        sn_wndj = 'v10',       1,          'v_wind',    .true.,  .false., 'daily', 'met_gem_weight.nc',  'Vwnd'
         sn_qsr  = 'qsw',       1,          'solar',     .true.,  .false., 'daily', 'met_gem_weight.nc',  ''
         sn_qlw  = 'qlw',       1,          'therm_rad', .true.,  .false., 'daily', 'met_gem_weight.nc',  ''
         sn_tair = 't2',        1,          'tair',      .true.,  .false., 'daily', 'met_gem_weight.nc',  ''
