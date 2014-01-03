@@ -16,7 +16,7 @@ Next, we split the freshwater runoff from each watershed between the rivers in t
 
 * For some areas of BC, maps of watersheds that include rivers where wild steelhead live are available from the `BCCF <http://www.bccf.com/steelhead/watersheds.htm>`_ .
 
-* In Washington, maps of watersheds are available `here <http://www.ecy.wa.gov/apps/watersheds/wriapages/>`_.
+* In Washington, maps of watersheds are available `at this site <http://www.ecy.wa.gov/apps/watersheds/wriapages/>`_.
 
 * For the Fraser River, the split between the arms is given in Thomson, 1981, available `here <http://www.dfo-mpo.gc.ca/Library/487.pdf>`_
 
@@ -85,15 +85,14 @@ EVI_N
 ^^^^^
 
 * Source used: Toporama map at 1:100,000 (CA).  Areas (other than Oyster, Campbell, Sayward) were estimated from print outs of the graphs.  Large rivers areas are given in Environment Canada (EC) database. Note that not all of Morrison's EVI_N drains into our model.  
-Percent drained from each river was proportional to its drainage area versus 
-the total drainage area given by Morrison.
+
+Percent drained from each river was proportional to its drainage area versus the total drainage area given by Morrison.
 
 Below, rivers marked with '+' means I made up the name.
 
  * Oyster River is at 705,121: area 363 km2 (according to EC)  
 
- * Qunisam River flows into Campbell River. #08HD003 is Campbell River at the town, drainage area 1470 km2 (EC) Latitude: 50.0353065 Longitude: -125.2629857  
-Lat/Lon of mouth -125.2601, 50.0510 for the mouth gives two points 123 749 and 750 
+ * Qunisam River flows into Campbell River. #08HD003 is Campbell River at the town, drainage area 1470 km2 (EC) Latitude: 50.0353065 Longitude: -125.2629857, Lat/Lon of mouth -125.2601, 50.0510 for the mouth gives two points 123 749 and 750 
  
   * Snowden Creek 139 km2 CA Latitude: 50.1125819 Longitude: -125.3723186 point 117 770
 
