@@ -165,7 +165,7 @@ The `NetCDF Climate and Forecast (CF) Metadata Conventions, Version 1.6, 5 Decem
   (relative to earth-based coordinates)
   and time.
 
-Datasets created by the Salish Sea MEOPAR project shall include conform to `CF-1.6`_.
+Datasets created by the Salish Sea MEOPAR project shall conform to `CF-1.6`_.
 NEMO results nominally conform to an ealier version,
 `CF-1.1`_.
 
