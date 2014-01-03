@@ -22,6 +22,20 @@ Next, we split the freshwater runoff from each watershed between the rivers in t
 
 From the maps, the percentage of the watershed that each river drains was estimated.
 
+Based on the values in Morrison et al. (2011), the approximate percentage of freshwater input from each river in our domain is given below:
+
+* Fraser 44%
+* Skagit 12%
+* East Vancouver Is (North and South) 12%
+* Howe 7%
+* Bute 7% 
+* Puget 6% 
+* Juan de Fuca 5%
+* Jervis 4%
+* Toba 3%
+
+Through the method described above, we have parameterised a total of 150 rivers in our domain. 
+
 Watersheds
 ----------
 
