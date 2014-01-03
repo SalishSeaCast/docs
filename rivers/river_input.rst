@@ -22,7 +22,7 @@ Next, we split the freshwater runoff from each watershed between the rivers in t
 
 From the maps, the percentage of the watershed that each river drains was estimated.
 
-Based on the values in Morrison et al. (2011), the approximate percentage of freshwater input from each river in our domain is given below:
+Based on the values in Morrison et al. (2011), the approximate percentage of freshwater input from each watershed in our domain is given below:
 
 * Fraser 44%
 * Skagit 12%
