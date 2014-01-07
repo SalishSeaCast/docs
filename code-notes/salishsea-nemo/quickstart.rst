@@ -94,6 +94,8 @@ Compile and link the :program:`rebuild_nemo` tool:
 See :ref:`rebuild-nemo-tool` for more information about it.
 
 
+.. _PrepareRun:
+
 Prepare a Run
 =============
 
@@ -237,3 +239,41 @@ and the :program:`rebuild_nemo` tool:
     cd ../TOOLS
     ./maketools -n REBUILD_NEMO  -m mpif90_jasper
 
+Run preparation is the same as that for running on :kbd:`salish`
+(described in :ref:`PrepareRun`).
+The recommended MPI domain decomposition for :kbd:`jasper` runs is 6x14.
+A namelist for that configuration is included in :ref:`SS-run-sets-SalishSea`.
+One additional file is required for :kbd:`jasper` runs:
+a TORQUE batch job script;
+an example can be found in :file:`SS-run-sets/SalishSea/jasper/SalishSea.40d.pbs`.
+You should create your own copy with appropriate values for:
+
+* :kbd:`#PBS -N`
+* :kbd:`#PBS -l walltime=`
+* :kbd:`#PBS -M`
+* :kbd:`#PBS -o`
+* :kbd:`#PBS -e`
+* :kbd:`RESULTS_DIR=`
+
+See the `WestGrid TORQUE directives docs`_ for details of the :kbd:`#PBS` directives.
+Set :kbd:`RESULTS_DIR` to the name of the directory where you want your run results to be gathered.
+
+.. _WestGrid TORQUE directives docs: https://www.westgrid.ca/support/running_jobs#directives
+
+Run the model by copying the TORQUE batch job script to the temporary run directory
+(returned by the :command:`salishsea prepare` command),
+going to that directory,
+and submitting the job script:
+
+.. code-block:: bash
+
+    cp SalishSea.40d.pbs ../../SalishSea/4361797c-530f-11e3-ae1d-0025909a8461/
+    cd ../../SalishSea/4361797c-530f-11e3-ae1d-0025909a8461
+    qsub SalishSea.40d.pbs
+
+The :program:`qsub` command returns a job identifier string that you can use with :program:`qstat` and :program:`checkjob` to monitor the execution status of your job.
+
+When the job completes the results should have been gathered in the directory you specified in the jobs script and the temporary run directory should be empty.
+You can delete the run directory.
+
+To view and analyze the run results copy them to your :file:`/ocean/` workspace with :program:`scp` or :program:`sftp`.
