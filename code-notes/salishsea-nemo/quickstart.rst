@@ -186,6 +186,7 @@ Clone the repos:
 
 .. code-block:: bash
 
+    cd $HOME/MEOPAR
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
