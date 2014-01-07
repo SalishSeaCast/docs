@@ -52,7 +52,12 @@ the :file:`SalishSea` directory contains the run-set files for the initial full 
 
 * :file:`SalishSea.yaml`: Sample run description file for use with the :ref:`SalishSeaCmdProcessor`
 * :file:`namelist.bottom`: Sample bottom boundary conditions namelists
-* :file:`namelist.compute`: Sample compute parameters namelists
+* :file:`namelist.compute.1core`: Sample compute parameters namelists for a single core run
+  (useful for debugging on :kbd:`salish`)
+* :file:`namelist.compute.4x4`: Sample compute parameters namelists for 4x4 MPI domain decomposition
+  (the recommended decomposition for running on :kbd:`salish`)
+* :file:`namelist.compute.6x14`: Sample compute parameters namelists for 6x14 MPI decomposition
+  (the recommended decomposition for running on :kbd:`jasper`)
 * :file:`namelist.domain`: Sample domain configuration nameslists
 * :file:`namelist.dynamics`: Sample dynamics parameter namelists
 * :file:`namelist.lateral`: Sample lateral boundary conditions and forcing namelists
