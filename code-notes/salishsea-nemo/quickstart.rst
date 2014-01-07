@@ -67,7 +67,7 @@ install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python packag
 
     cd tools/SalishSeaTools
     pip install -e .
-    cd ../SalishSeaCmdProcessor
+    cd ../SalishSeaCmd
     pip install -e .
 
 
@@ -202,11 +202,11 @@ and install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python pa
 .. code-block:: bash
 
     mkdir -p $HOME/.local/bin $HOME/.local/lib/python2.7/site-packages
-    easy_install --install-dir $HOME/.local/lib/python2.7/site-packages --script-dir $HOME/.local/bin pip
-    /home/dlatorne/.local/bin/pip install --user --upgrade setuptools
+    easy_install --install-dir $HOME/.local/lib/python2.7/site-packages --script-dir $HOME/.local/bin "pip==1.4.1"
+    $HOME/.local/bin/pip install --user --upgrade setuptools
     cd tools/SalishSeaTools
     $HOME/.local/bin/pip install --user .
-    cd ../SalishSeaCmdProcessor
+    cd ../SalishSeaCmd
     $HOME/.local/bin/pip install --user .
 
 .. _pip: https://pypi.python.org/pypi/pip
