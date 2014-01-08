@@ -145,11 +145,11 @@ Below, rivers marked with '+' means I made up the name.
 
   * double rivers Communication+ 7 km2 CA Latitude: 50.4253357 Longitude: -126.0181504 & Latitude: 50.4292907 Longitude: -126.0299097  points 59, 877 and 58, 879  put both in at 59, 878
 
-   * unmarked+ 7 km2 CA Latitude: 50.4427467 Longitude: -126.0688793 point 54 884
+  * unmarked+ 7 km2 CA Latitude: 50.4427467 Longitude: -126.0688793 point 54 884
 
-   * Newcastle+ 34 km2 CA Latitude: 50.4526841 Longitude: -126.1194916 point 47 890 
+  * Newcastle+ 34 km2 CA Latitude: 50.4526841 Longitude: -126.1194916 point 47 890 
 
-   * Windy+ 10 km2 CA Latitude: 50.4552649 Longitude: -126.1585149 point 42 893
+  * Windy+ 10 km2 CA Latitude: 50.4552649 Longitude: -126.1585149 point 42 893
 
 
 Howe
@@ -263,7 +263,7 @@ Puget
 	* Cedar/Sammamish 100% of WRIA8, 47.672894,-122.409207, i = 88, j = 246
 
 JdF
-^^^^^^^^^^^^^^^^^^
+^^^
 
 * Source used: BCCF map and Toporama map
 * The Juan de Fuca watershed in Morrison et al (2011) includes the north side of Juan de Fuca Strait from Victoria to Port Renfrew (inclusive) and the south side of Juan de Fuca Strait from Cape Flattery to Port Townsend.
@@ -312,28 +312,32 @@ JdF
 EVI_S
 ^^^^^^^^^^^^^^^^^^
 
-* Source used: BCCF.  Could return here using the Toporama maps.
-* Source used: BCCF map
-* Cowichan 22% of watershed (i=383, j=201,202)
-* Chemanius1 6.5% of watershed (i=414, j=211)
-* Chemanius2, 6.5% of watershedof watershed (i=417, j=212)
-* Nanaimo1, 9.4% of watershedof watershed (i=478, j=208, 209)
-* Nanaimo2, 4.6% of watershedof watershed (i=477, j=210)
-* NorNanaimo, 2% of watershed (i=491-493, j=213)
-* Goldstream, 8% of watershed (i=334, j=185)
-* Nanoose, 2% of watershed (i=518, j=185)
-* Englishman, 5% of watershed (i=541, j=175)
-* FrenchCreek, 1% of watershed (i=551, j=168)
-* LittleQualicum, 5% of watershed (i=563, j=150)
-* Qualicum, 2% of watershed (i=578, j=137)
-* SouthDenman, 5% of watershed (i=602, j=120)
-* Tsable, 3% of watershed (i=616-617, j=120)
-* Trent, 1% of watershed (i=648, j=121)
-* Puntledge, 14% of watershed (i=656, j=119-120)
-* BlackCreek, 3% of watershed (i=701, j=123)
+* Source used: BCCF map and fluxes.  Could return here using the Toporama maps.
+* Total flux (according to Morrison is 329.5 m3/s.  Adding fluxes and areas to estimate fluxes as given below gave 292.6 so values were multiplied up to make the difference
+
+* Koksilah flows into Cowichan (9.77 m3/s)
+* Cowichan (55 m3/s + Koksilah) gives 22% of watershed (i=383, j=201,202)
+* Chemanius 19.2 m3/s and by area, north and south of Chemanius another 1/2.  Mouths are split:
+      o Chemanius1 6.5% of watershed (i=414, j=211)
+      o Chemanius2, 6.5% of watershedof watershed (i=417, j=212)
+* Nanaimo 39.7 m3/s.  Mouths are split:
+      o Nanaimo1, 9.4% of watershedof watershed (i=478, j=208, 209)
+      o Nanaimo2, 4.6% of watershedof watershed (i=477, j=210)
+* NorNanaimo, North of Naniamo and area of 1/2 Little Qualicum gives 2% of watershed (i=491-493, j=213)
+* Goldstream, 2.2 m3/s gives 8% of watershed (i=334, j=185)
+* Nanoose, area of 1/2 Little Qualicum gives 2% of watershed (i=518, j=185)
+* Englishman, 14 m3/s gives 5% of watershed (i=541, j=175)
+* FrenchCreek, area of 1/2 of Qualicum gives 1% of watershed (i=551, j=168)
+* LittleQualicum, 11.8 m3/s plus 1/2 of Qualicum in nearby area gives 5% of watershed (i=563, j=150)
+* Qualicum, 7.3 m3/s gives 2% of watershed (i=578, j=137)
+* SouthDenman, about the size of Tsable + Qualicum gives 5% of watershed (i=602, j=120)
+* Tsable, 7.99 m3/s but double for surrounding region 3% of watershed (i=616-617, j=120)
+* Trent, 3 m3/s gives 1% of watershed (i=648, j=121)
+* Puntledge, 42 m3/s gives 14% of watershed (i=656, j=119-120)
+* BlackCreek, 1.8 m3/s plus area of Qualicum gives 3% of watershed (i=701, j=123)
 
 Jervis
-^^^^^^^^^^^^^^^^^^
+^^^^^^
 
 * Source used: Toporama map, 
 * See `this site <http://www.pac.dfo-mpo.gc.ca/science/oceans/BCinlets/jervis-eng.htm>`_
