@@ -51,12 +51,8 @@ private-docs
 ~~~~~~~~~~~~
 
 * private to SalishSea-MEOPAR team members
-* documentation from project codebase initialization tarballs received from J-P Paquin on 2013-10-02
-
-  * contents of :file:`DOCUMENTATION` tarball and :file:`OPA_notes_2013.pdf` that Doug generated
-
-* meeting notes, plans, work-in-progress papers, etc.
-* reports that might go in docs repo but are not ready for release,
+* meeting notes, plans, work-in-progress reports and papers, presentations, etc.
+* anything that might go in docs repo but are not ready for release,
   or which cannot be released for some reason
 * ideally at least some of this repo’s will eventually be moved to the public docs repo
 
@@ -80,10 +76,6 @@ private-tools
 ~~~~~~~~~~~~~
 
 * private to SalishSea-MEOPAR team members
-* scripts from project codebase initialization tarballs received from J-P Paquin on 2013-10-02
-
-  * contents of :file:`NEMO_PREPARATION` tarball
-
 * scripts and docs that might go in tools repo but are not ready for release,
   or which cannot be released for some reason
 * ideally this repo will eventually empty out as its contents are moved to the public tools repo
