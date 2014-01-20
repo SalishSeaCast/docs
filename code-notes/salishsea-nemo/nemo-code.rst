@@ -153,21 +153,18 @@ A convenient command to monitor the memory use of a run and its time step progre
 
     watch -n 5 "(free -m; cat time.step)"
 
-The :command:`salishsea combine` sub-command combines the per-processors netCDF results files from a run into files in a results directory.
+The :command:`salishsea gather` sub-command collects the run definition and results files from a Salish Sea NEMO run into a results directory.
+The collection process includes combining the per-processors netCDF results files into files in the results directory.
 It has a number of option flags to define how it works;
-see :command:`salishsea combine -h` for details.
+see :command:`salishsea gather -h` for details.
 A typical use on :kbd:`salish` is:
 
 .. code-block:: bash
 
-    salishsea combine --no-compress SalishSea.yaml ../results/15-21Sep2002
+    salishsea gather --no-compress SalishSea.yaml ../results/15-21Sep2002
 
 The files that define the run,
-and the non-netCDF results files produced by the run can be moved to the results directory with a command like:
-
-.. code-block:: bash
-
-    mv layout.dat namelist NEMO-code_tip.txt NEMO-forcing_tip.txt ocean.output SalishSea.yaml solver.stat stderr stdout time.step ../results/15-21Sep2002
+and the non-netCDF results files produced by the run are also moved to the results directory by :command:`salishsea gather`.
 
 
 .. _NEMO-MirrorMaintenance:
