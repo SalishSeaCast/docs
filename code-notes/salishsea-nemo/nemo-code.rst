@@ -200,9 +200,67 @@ It was initialized with:
 Workflow to Pull Changes from NEMO :command:`svn` Repo
 ------------------------------------------------------
 
-.. todo::
+The workflow to pull changes from the master NEMO :command:`svn` repo and commit them to our :file:`NEMO-hg-mirror` repo is:
 
-    Write Workflow to Pull Changes from NEMO :command:`svn` Repo
+#. Review the upstream changes in the source browser at https://forge.ipsl.jussieu.fr/nemo/log/branches/2012/dev_v3_4_STABLE_2012 to select a range of changes to be pulled into our :file:`NEMO-hg-mirror` repo.
+
+   .. note::
+
+      Pay special attention to changes in the :file:`OPA_SRC/` tree that involve files that have been copied into team members' :file:`MY_SRC/` directories.
+      Those files must be *manually* merged with their :file:`MY_SRC/` counterparts.
+
+#. Working the :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repo:
+
+   .. code-block:: bash
+
+       ssh sable
+       cd /ocean/sallen/hg_repos/NEMO-hg-mirror
+
+#. Use :kbd:`svn info` or :kbd:`svn log -l1` to get the revision number of the working copy:
+
+   .. code-block:: bash
+
+       svn info
+       Path: .
+       Working Copy Root Path: /ocean/sallen/hg_repos/NEMO-hg-mirror
+       URL: http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012
+       Repository Root: http://forge.ipsl.jussieu.fr/nemo/svn
+       Repository UUID: 4aad9cc9-4d31-0410-b1e8-ee312aa4b1ec
+       Revision: 3822
+       Node Kind: directory
+       Schedule: normal
+       Last Changed Author: cetlod
+       Last Changed Rev: 3822
+       Last Changed Date: 2013-02-25 10:41:57 -0800 (Mon, 25 Feb 2013)
+
+#. Use :kbd:`svn log -l2` to get the revision number and commit message of the next commit on the branch in the upstream repo:
+
+   .. code-block:: bash
+
+       svn log -l2 -r3822:HEAD http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012
+       ------------------------------------------------------------------------
+       r3822 | cetlod | 2013-02-25 10:41:57 -0800 (Mon, 25 Feb 2013) | 1 line
+
+       dev_v3_4_STABLE_2012: bugfix in offline data management, see ticket #1061
+       ------------------------------------------------------------------------
+       r3828 | cetlod | 2013-03-06 01:02:01 -0800 (Wed, 06 Mar 2013) | 1 line
+
+       v3.4 stable: Add missing IF(lwp) before writing in numout, see ticket #1066
+       ------------------------------------------------------------------------
+
+#. Update the working copy to the next upstream commit:
+
+   .. code-block:: bash
+
+       svn update -r3828
+
+#. Commit the SVN update as a Mercurial changeset with the SVN commit message as the body of the Mercurial commit message:
+
+   .. code-block:: bash
+
+       hg commit -m"Update to svn r3828.
+        >
+        > v3.4 stable: Add missing IF(lwp) before writing in numout, see ticket #1066"
 
 
 Workflow to Merge :kbd:`trunk` and Salish Sea Revisions
