@@ -190,6 +190,10 @@ It was initialized with:
 
 :command:`svn` v1.7.5 was used on :kbd:`salish` for the :command:`svn` part of the initialization.
 
+.. figure:: images/NEMO-CodeReposMaint.png
+
+   NEMO code repositories and workflow to update and merge SVN and local changes
+
 
 .. _PullChangesFromNEMOsvn:
 
