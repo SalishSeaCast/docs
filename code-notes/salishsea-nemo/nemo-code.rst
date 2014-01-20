@@ -206,7 +206,7 @@ The workflow to pull changes from the master NEMO :command:`svn` repo and commit
 
    .. note::
 
-      Pay special attention to changes in the :file:`OPA_SRC/` tree that involve files that have been copied into team members' :file:`MY_SRC/` directories.
+      Pay special attention to changes in the :file:`OPA_SRC/` tree that involve files that have been copied into :file:`NEMOGCM/CONFIG/SalishSea/MY_SRC/` or team members' :file:`MY_SRC/` directories.
       Those files must be *manually* merged with their :file:`MY_SRC/` counterparts.
 
 #. Working the :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repo:
@@ -263,10 +263,10 @@ The workflow to pull changes from the master NEMO :command:`svn` repo and commit
         > v3.4 stable: Add missing IF(lwp) before writing in numout, see ticket #1066"
 
 
-Workflow to Merge :kbd:`trunk` and Salish Sea Revisions
--------------------------------------------------------
+Workflow to Merge NEMO :command:`svn` Repo and Salish Sea Revisions
+-------------------------------------------------------------------
 
-Merging changes from NEMO :kbd:`trunk` and the Salish Sea central `NEMO-code` repo on Bitbucket is done in a repo that is used for only that purpose.
+Merging changes from NEMO :command:`svn` and the Salish Sea central `NEMO-code` repo on Bitbucket is done in a repo that is used for only that purpose.
 Doug does the merges on his laptop.
 The repo in which the merging is done was created by cloning the :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repo:
 
@@ -289,25 +289,39 @@ respectively.
 :command:`hg push` and :command:`hg outgoing` commands will act on the `NEMO-code`_ repo,
 unless otherwise specified.
 
-After the :ref:`PullChangesFromNEMOsvn` has been completed those changes from `NEMO-code`_ are pulled and updated into :kbd:`NEMO-mirror-merge`,
+After the :ref:`PullChangesFromNEMOsvn` has been completed the workflow to merge those changes with Salish Sea MEOPAR project revisions is:
 
-.. code-block:: bash
+#. Pull and update recent changes from `NEMO-code`_ into :kbd:`NEMO-mirror-merge`:
 
-    cd NEMO-mirror-merge
-    hg pull --update bb
+   .. code-block:: bash
 
-The changes from :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` are also pulled and updated into :kbd:`NEMO-mirror-merge`,
-resolving any merge conflicts as necessary:
+       cd NEMO-mirror-merge
+       hg pull --update bb
 
-.. code-block:: bash
+#. Pull and update the changes from :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` into :kbd:`NEMO-mirror-merge`:
 
-    hg pull --update mirror
+   .. code-block:: bash
 
-Finally,
-the result of the updates and merges is pushed to `NEMO-code`_:
+       hg pull --update mirror
 
-.. code-block:: bash
+#. Because the changesets pulled from `NEMO-code`_ are public a branch merge is necessary:
 
-    hg push bb
+   .. code-block:: bash
 
-If other users have pushed changes to `NEMO-code`_ while merge conflicts were being handled :command:`hg pull --rebase` can be used to bring in those changes and deal with any additional merge conflicts.
+       hg merge
+       hg commit -m"Merge svn updates."
+
+#. Manually merge and commit changes that involve files that have been copied into :file:`NEMOGCM/CONFIG/SalishSea/MY_SRC/` or team members' :file:`MY_SRC/` directories.
+   Those files are most likely to be in :file:`OPA_SRC/`.
+
+#. Push the result of the updates and merges to `NEMO-code`_:
+
+   .. code-block:: bash
+
+       hg push bb
+
+   If other users have pushed changes to `NEMO-code`_ while merge conflicts were being handled :command:`hg pull --rebase` can be used to bring in those changes and deal with any additional merge conflicts.
+
+#. Notify team members of the upstream merge,
+   especially if manual merges of :file:`MY_SRC/` files were required,
+   so that they can manage merging changes into any untracked :file:`MY_SRC/` files they may have.
