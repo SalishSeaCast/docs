@@ -47,6 +47,21 @@ where
 	 \theta = \text{Grid rotation} (29^\circ)
 
 
+Thomson & Huggett (1980) - Johnstone Strait
+------------------------------------------------------------------
+
+Thomson & Huggett (1980) measured tidal elevations at 4 stations in Johnstone Strait 1976 and 1977. Tidal elevation harmonics for O1, K1, M2 and S2 are reported in Table 2 and stations are shown in Figure 4. 
+
+They also measured tidal currents at 11 stations (at various depths) in Johnstone Strait and report tidal current harmonics in Table 1.
+
+Also have some temperature and salinity data that may be useful.
+
+Thomson (1976) and Thomson (1977) - Johnstone Strait
+------------------------------------------------------------------------------
+
+Four months of current observations in Johnstone Strait
+
+
 TPXO7.1 modelled tidal predictions
 ----------------------------------------------
 
