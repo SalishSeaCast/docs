@@ -124,6 +124,7 @@ The following :command:`module load` commands should be added to your :kbd:`jasp
 
     module load application/python/2.7.3
     module load library/netcdf/4.1.3
+    module load application/nco/4.3.9
     module load library/szip/2.1
 
 The Intel Fortran compiler,
