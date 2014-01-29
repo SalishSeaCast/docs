@@ -33,6 +33,19 @@ That was done to stabilize the model as the initial boundary condition values
 propogated through the moderate,
 uniform initial stratification that was set for the entire domain.
 
+.. note::
+
+  These runs have :kbd:`nn_date0` set to the day for which the calculations are being done,
+  not the day on which :kbd:`nn_it000` is 1
+  (see :ref:`nn_date0-quirk`).
+  So,
+  the tidal forcing is inconsistent.
+  This does not invalidate these runs as part of spin-up because they are early in the spin-up,
+  and the objective of spin-up is temperature,
+  salinity,
+  and velocity fields,
+  not tides.
+
 
 23-Sep-2002 to 2-Oct-2002
 -------------------------
