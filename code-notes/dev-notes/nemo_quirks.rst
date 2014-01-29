@@ -39,3 +39,8 @@ is only output to :file:`ocean.output` when the code is run on a single processo
 Otherwise,
 it appear that only the isolated points (if any) on the MPI sub-domain on processor 0 are shown in :file:`ocean.output`;
 for the Salish Sea domain that is none.
+
+Values for Barotropic Boundary Conditions must be Interpolated
+--------------------------------------------------------------
+
+If you are using Tides + External Information on boundary values (nn_dyn2d_dta   =  3), you must turn interpolation on for the barotropic files read.  If you do not, the code will add the tides onto the previous value (of tides + external).  If you do use interpolation, the code will recalculate the external value and then add the tides.  So all is good.
