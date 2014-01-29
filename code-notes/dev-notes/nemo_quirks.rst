@@ -1,5 +1,5 @@
-Notes on a few Quirks we have found with NEMO
-=============================================
+Notes on NEMO Bugs and Quirks We Have Found
+===========================================
 
 These issues could perhaps be called bugs, but more than anything they take time to understand.  So hopefully this will save someone some time!
 
@@ -40,7 +40,40 @@ Otherwise,
 it appear that only the isolated points (if any) on the MPI sub-domain on processor 0 are shown in :file:`ocean.output`;
 for the Salish Sea domain that is none.
 
+
 Values for Barotropic Boundary Conditions must be Interpolated
 --------------------------------------------------------------
 
 If you are using Tides + External Information on boundary values (nn_dyn2d_dta   =  3), you must turn interpolation on for the barotropic files read.  If you do not, the code will add the tides onto the previous value (of tides + external).  If you do use interpolation, the code will recalculate the external value and then add the tides.  So all is good.
+
+
+.. _nn_date0-quirk:
+
+Value and Use of :kbd:`nn_date0`
+--------------------------------
+
+The comment for the :kbd:`nn_date0` varaible in the :kbd:`namrun` in the AMM12 namelist
+(and probably other configurations too)
+from the SVN repo is very inaccurate::
+
+  ! date at nit_0000 (format yyyymmdd) used if ln_rstart=F or (ln_rstart=T and nn_rstctl=0 or 1)
+
+In models where tidal forcing is used via :kbd:`key_bdy` and the :kbd:`nambdy_tide` namelist,
+the value of :kbd:`nn_date0` is used to adjust the tidal forcing to the timeframe of the run
+(see :kbd:`Correcting tide for date:` in the :file:`ocean.output` file).
+That is the case *regardless* of the values of :kbd:`ln_rstart` and :kbd:`nn_rstctl`.
+So,
+the value of :kbd:`nn_date0` must be set to the day on which :kbd:`nn_it000 = 1` for the run *even if the initial conditions are being supplied from a restart file*.
+
+We have revised our namelists to say::
+
+  ! date at nit_0000 = 1 (format yyyymmdd)
+  ! used to adjust tides to run date (regardless of restart control)
+
+Also note that NEMO will accept and use some nonsensical values for :kbd:`nn_date0`.
+For example,
+:kbd:`nn_date0 = 200209`
+(note that the day digits have been truncated)
+will result in tidal forcing being adjusted to a
+(biblical?)
+date of 9-Feb-20!
