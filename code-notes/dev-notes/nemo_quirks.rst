@@ -1,7 +1,10 @@
 Notes on NEMO Bugs and Quirks We Have Found
 ===========================================
 
-These issues could perhaps be called bugs, but more than anything they take time to understand.  So hopefully this will save someone some time!
+The issues described here are clearly bugs in some cases,
+and in other cases perhaps just things about NEMO that take time to understand.
+In either case,
+we hope that this page this will save someone some time!
 
 
 Monthly (and Yearly) Averaging
