@@ -8,7 +8,7 @@ DFO modelled tidal predictions
 
 `WebTide <http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-eng.php>`_ is an online tidal prediction tool developed by DFO. The predictions for the North East Pacific region are based on the model of :ref:`foremanetal00`. Tidal currents and elevations can be predicted from the model. 
 
-WebTide was used for the boundary conditions in the preliminary runs of the NEMO model.
+WebTide was used for the Juan de Fuca boundary conditions in the preliminary runs of the NEMO model. WebTide doesn't quite include our Johnstone Strait boundary, which is around -126.5 deg, 50.5 deg. Webtide cuts out around -126.8 deg, 50.6 deg... so it's close!
 
 Tidal constituents (amplitude and phase) can be output from Webtide for surface elevation and tidal currents. 
 
@@ -334,8 +334,9 @@ For example::
 NOAA measured data
 -------------------------------
 
-Harmonic constituents and 31 days of measured water level data can be downloaded `here <http://tidesandcurrents.noaa.gov/stations.html?type=Historic+Water+Levels>`_.
+Harmonic constituents and up to 31 days of measured water level data at NOAA tide gauges in the US can be downloaded `here <http://tidesandcurrents.noaa.gov/stations.html?type=Historic+Water+Levels>`_.
 
+(remember that tidal heights are in feet!)
 
 Tulare Beach, Port Susan 9448043
 May 20 2013 - present 
