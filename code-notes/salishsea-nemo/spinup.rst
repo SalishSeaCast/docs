@@ -27,7 +27,7 @@ Spin-up Sections
 The first 7 days of spin-up were run on :kbd:`salish` 1 day at a time.
 The lateral turbulent viscosity
 (NEMO :kbd:`namdyn_ldf` namelist variable :kbd:`rn_ahm_0_lap`)
-was intially set to 80 $m^2/s$ and reduced by 5 $m^2/s$ each day to 50 $m^2/s$ on day 7.
+was intially set to 80 :math:`m^2/s` and reduced by 5 :math:`m^2/s` each day to 50 :math:`m^2/s` on day 7.
 That was done to stabilize the model as the initial boundary condition values
 (especially deep salinity)
 propogated through the moderate,
@@ -39,7 +39,7 @@ uniform initial stratification that was set for the entire domain.
 
 The next 10 days of spin-up were run with the bottom turbulent kinetic energy background
 (NEMO :kbd:`nambfr` namelist variable :kbd:`rn_bfeb2`)
-set to $1 \times 10^{-4} m^2/s^2$.
+set to :math:`1 \times 10^{-4} m^2/s^2`.
 This was done to investigate the effect of reducing turbulent bottom friction on amplitudes of the M2 tidal harmonics.
 Harmonics for the M2 and K1 tides were calculated over the entire duration of this run with a resolution of 9 time steps
 (450 seconds).
