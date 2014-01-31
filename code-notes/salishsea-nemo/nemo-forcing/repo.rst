@@ -115,7 +115,7 @@ Then the partial cells had their TS corrected to the proper depth (depth-correct
 
 * :file:`SalishSea2_Masson_DC.nc`
 
-The three steps are done in the python notebooks `Tools/I_Forcing/OBC/MakeTSfromMasson.ipynb`_  `Tools/I_ForcingFiles/OBC/MassonClimatology.ipynb`_ and `Tools/I_ForcingFiles/OBC/MassonClimDC.ipynb`_ respectively.
+The three steps are done in the python notebooks `Tools/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb`_ and `Tools/I_ForcingFiles/OBC/MassonClimatology.ipynb`_ and `Tools/I_ForcingFiles/OBC/MassonClimDC.ipynb`_ respectively.
 
 .. _Tools/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb
 .. _Tools/I_ForcingFiles/OBC/MassonClimatology.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MassonClimatology.ipynb
@@ -141,17 +141,19 @@ Currently there are two complete sets of files that specify eight tidal componen
 
 * :file:`bathy_west_sea_tide_component_grid_TUV.nc`
 
-where bathy is one of *SalishSea* or *SalishSea2*, the latter specifying the bathymetry with the smoothed mouth, component is one of *M2*, *K1*, *O1*, *Q1*, *K2*, *P1*, *S2*, *N2* specifying which of the eight tidal components and TUV is one of *T*, *U*, *V* specifying the parameter in the file.
+where bathy is one of *SalishSea* or *SalishSea2*, the latter specifying the bathymetry with the smoothed mouth of JdF, component is one of *M2*, *K1*, *O1*, *Q1*, *K2*, *P1*, *S2*, *N2* specifying which of the eight tidal components and TUV is one of *T*, *U*, *V* specifying the parameter in the file.
 
 The tidal components come from `Webtide`_ and are prepared in the ipython notebook `I_ForcingFiles/Tides/Prepare Tide Files.ipynb`_
 
 .. _Webtide: http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-eng.php
-.. _I_ForcingFiles/Tides/Prepare Tide Files.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFilesTides/Prepare Tide Files.ipynb
+.. _I_ForcingFiles/Tides/Prepare Tide Files.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Tides/Prepare Tide Files.ipynb
 
 :file:`initial_strat/` Directory
 --------------------------------
 
 The :file:`initial_strat/` directory contains initial data for the temperature and salinity fields.
+
+***JPP Domain***
 
 Currently there are two files for the JPP Sub-domain based on 500 m maximum water depth and 40 vertical levels.
 
@@ -167,9 +169,18 @@ and the profile is plotted in
 * :file:`sg0318006_profile.ps`
 * :file:`sg0318006_profile.fig`
 
-The preparation of the NetCDF files is done by the python notebook `Tools/I_Forcing/PrepareTS.ipynb`_
+***Full Domain***
 
-.. _Tools/I_Forcing/PrepareTS.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/PrepareTS.ipynb
+There are two files each for the Salish Sea domain (SS) and the Salish Sea domain with smoothed Juan de Fuca mouth (SS2).  The latter is depth-corrected for partial cells.
+
+* :file:`SS_SoG0318_1y_temperature_nomask.nc`
+* :file:`SS_SoG0318_1y_salinity_nomask.nc`
+* :file:`SS2_SoG0318_1y_temperature_nomask.nc`
+* :file:`SS2_SoG0318_1y_salinity_nomask.nc`
+
+The preparation of the NetCDF files is done by the python notebook `Tools/I_ForcingFiles/Initial/PrepareTS.ipynb`_
+
+.. _Tools/I_ForcingFiles/PrepareTS.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Inital/PrepareTS.ipynb
 
 :file:`rivers/`: Directory
 --------------------------
