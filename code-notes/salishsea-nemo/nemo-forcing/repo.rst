@@ -26,9 +26,9 @@ Repo Contents
 
 The :file:`atmospheric/` directory contains forcing data that supports the :ref:`AtmosphericForcing` of the model.
 
-:file:`no_snow.nc`: A :ref:`CGRF-Dataset`-like file that can be used as annual climatology to impose the :ref:`NoSnowConstraint`. Created by the :ref:`tools-repo` repo `I_ForcingFiles/NoSnow.ipynb`_ notebook.
+:file:`no_snow.nc`: A :ref:`CGRF-Dataset`-like file that can be used as annual climatology to impose the :ref:`NoSnowConstraint`. Created by the :ref:`tools-repo` repo `I_ForcingFiles/Atmos/NoSnow.ipynb`_ notebook.
 
-.. _I_ForcingFiles/NoSnow.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/NoSnow.ipynb
+.. _I_ForcingFiles/Atmos/NoSnow.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Atmos/NoSnow.ipynb
 
 
 .. _grid-directory:
@@ -84,8 +84,7 @@ Coordinates and bathymetry for the initial sub-domain test case known as :kbd:`J
 
 The :file:`open_boundaries/` directory contains the open boundary forcing information for the full domain.  Currently we are only using the :file:`west/` subdirectory as we have the north boundary closed.
 
-Original Files
-++++++++++++++
+***Original Files***
 
 Original file specifies set temperature and salinity (uniform across the boundary) from Thomson et al, 2007 winter picture.
 
@@ -96,16 +95,13 @@ Two files keep the original TS until the model starts and then move the Thomson 
 * :file:`SalishSea_Soft_tra.nc`
 * :file:`SalishSea2_Soft_tra.nc`
 
-There are 5 files undergoing testing that specify the barotropic and baroclinic currents and the surface height.  These are uniform velocities across the boundary but vary in depth.  They are based on Thomson et al, 2007 but were then adjusted to ensure almost zero net velocity across the boundary.
+The preparation of the NetCDF files is done by the python notebook `I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb`_
+and the soft start combination is done in the python notebook `I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb`_
 
-The preparation of the NetCDF files is done by the python notebook `Tools/I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb`_
-and the soft start combination is done in the python notebook `Tools/I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb`_
+.. _I_ForcingFiles/PrepareSimpleOBC.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb
+.. _I_ForcingFiles/TS_OBC_Softstart.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb
 
-.. _Tools/I_ForcingFiles/PrepareSimpleOBC.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb
-.. _Tools/I_ForcingFiles/TS_OBC_Softstart.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb
-
-Seasonal Climatology
-++++++++++++++++++++
+***Seasonal Climatology***
 
 Diane Masson through Wendy Callendar provided model results from Masson and Fine (2013) for all their model years at the mouth of Juan de Fuca.  These were interpolated onto our z-levels and then interpolated onto our horizontal grid.  
 
