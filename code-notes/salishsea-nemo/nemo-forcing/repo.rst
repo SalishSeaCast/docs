@@ -146,7 +146,7 @@ where bathy is one of *SalishSea* or *SalishSea2*, the latter specifying the bat
 The tidal components come from `Webtide`_ and are prepared in the ipython notebook `I_ForcingFiles/Tides/Prepare Tide Files.ipynb`_
 
 .. _Webtide: http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-eng.php
-.. _I_ForcingFiles/Tides/Prepare Tide Files.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Tides/Prepare Tide Files.ipynb
+.. _I_ForcingFiles/Tides/Prepare Tide Files.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Tides/Prepare\ Tide\ Files.ipynb
 
 :file:`initial_strat/` Directory
 --------------------------------
@@ -180,14 +180,14 @@ There are two files each for the Salish Sea domain (SS) and the Salish Sea domai
 
 The preparation of the NetCDF files is done by the python notebook `Tools/I_ForcingFiles/Initial/PrepareTS.ipynb`_
 
-.. _Tools/I_ForcingFiles/PrepareTS.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Inital/PrepareTS.ipynb
+.. _Tools/I_ForcingFiles/Initial/PrepareTS.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Inital/PrepareTS.ipynb
 
 :file:`rivers/`: Directory
 --------------------------
 
 The :file:`rivers/` directory contains forcing data for the rivers.
 
-Currently there are two files, for the full Salish Sea domain.  One that puts a constant 2000 m3/s out of the southern arm of the Fraser River.
+Currently there are four files, for the full Salish Sea domain and two preparation files.  One that puts a constant 2000 m3/s out of the southern arm of the Fraser River.
 
 * :file:`rivers_Fraser_only_cnst.nc`
 
@@ -195,9 +195,27 @@ and one that includes all three mouths of the Fraser, Burrard Inlet, Squamish Ri
 
 * :file:`rivers_Fraserplus_cnst.nc`
 
-The preparation of the NetCDF file is done by the python notebook `Tools/I_Forcing/AddRivers.ipynb`_
+The preparation of these NetCDF files is done by the python notebook `Tools/I_ForcingFiles/rivers/AddRivers.ipynb`_
 
-.. _Tools/I_Forcing/AddRivers.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/AddRivers.ipynb
+.. _Tools/I_ForcingFiles/rivers/AddRivers.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/rivers/AddRivers.ipynb
+
+Morrison et al, 2011 prepared climatologies of a number of river watersheds in the Salish Sea region.  These are in the files
+
+* :file:`Salish_allrivers_monthly.nc`
+* :file:`Salish_allrivers_cnst.nc`
+
+The construction of these NetCDF files is done by the python notebook `Tools/I_ForcingFiles/rivers/Prep_Seasonal_Rivers.ipynb`_
+
+.. _Tools/I_ForcingFiles/rivers/Prep_Seasonal_Rivers.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/rivers/Prep_Seasonal_Rivers.ipynb
+
+and then this information is downscaled onto 150 rivers to give the forcing files:
+
+* :file:`rivers_month.nc`
+* :file:`rivers_cnst.nc`
+
+The preparation of these NetCDF files is done by the python notebook `Tools/I_ForcingFiles/rivers/Add Rivers Month and Constant.ipynb`_
+
+.. _Tools/I_ForcingFiles/rivers/Add Rivers Month and Constant.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/rivers/Add\ Rivers\ Month\ and\ Constant.ipynb
 
 
 :file:`bdydta/` Directory
