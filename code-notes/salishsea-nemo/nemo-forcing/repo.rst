@@ -115,7 +115,7 @@ Then the partial cells had their TS corrected to the proper depth (depth-correct
 
 * :file:`SalishSea2_Masson_DC.nc`
 
-The three steps are done in the python notebooks `Tools/I_Forcing/OBC/MakeTSfromMasson.ipynb`_, `Tools/I_ForcingFiles/OBC/MassonClimatology.ipynb`_, and `Tools/I_ForcingFiles/OBC/MassonClimDC.ipynb`_, respectively.
+The three steps are done in the python notebooks `Tools/I_Forcing/OBC/MakeTSfromMasson.ipynb`_  `Tools/I_ForcingFiles/OBC/MassonClimatology.ipynb`_ and `Tools/I_ForcingFiles/OBC/MassonClimDC.ipynb`_ respectively.
 
 .. _Tools/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb
 .. _Tools/I_ForcingFiles/OBC/MassonClimatology.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MassonClimatology.ipynb
@@ -129,6 +129,7 @@ The sea surface height climatology is taken from 2000-2010 hourly sea surface he
 
 Preparation of the file was done in ipython notebook `I_ForcingFiles/OBC/SSH.ipynb`_
 
+.. _http://tides.gc.ca/eng/data: http://tides.gc.ca/eng/data
 .. _I_ForcingFiles/OBC/SSH.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH.ipynb
 
 :file:`open_boundaries/west/tides/` Directory
@@ -136,11 +137,16 @@ Preparation of the file was done in ipython notebook `I_ForcingFiles/OBC/SSH.ipy
 
 The :file:`open_boundaries/west/tides/` sub-directory contains the tidal forcing files for the western boundary of the full domain.
 
-Currently there are three preliminary files that specify the M2 tidal components.  These files specify the cosine and sine components for the sea surface height (T), the x-direction velocity (U) and y-direction velocity (V).
+Currently there are two complete sets of files that specify eight tidal components.  These files specify the cosine and sine components for the sea surface height (T), the x-direction velocity (U) and y-direction velocity (V).  Files are of the form 
 
-* :file:`SalishSea_west_sea_tide_M2_grid_T.nc`
-* :file:`SalishSea_west_sea_tide_M2_grid_U.nc`
-* :file:`SalishSea_west_sea_tide_M2_grid_V.nc`
+* :file:`bathy_west_sea_tide_component_grid_TUV.nc`
+
+where bathy is one of *SalishSea* or *SalishSea2*, the latter specifying the bathymetry with the smoothed mouth, component is one of *M2*, *K1*, *O1*, *Q1*, *K2*, *P1*, *S2*, *N2* specifying which of the eight tidal components and TUV is one of *T*, *U*, *V* specifying the parameter in the file.
+
+The tidal components come from `Webtide`_ and are prepared in the ipython notebook `I_ForcingFiles/Tides/Prepare Tide Files.ipynb`_
+
+.. _Webtide: http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-eng.php
+.. _I_ForcingFiles/Tides/Prepare Tide Files.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFilesTides/Prepare Tide Files.ipynb
 
 :file:`initial_strat/` Directory
 --------------------------------
