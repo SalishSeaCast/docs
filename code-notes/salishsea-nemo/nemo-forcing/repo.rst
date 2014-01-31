@@ -84,7 +84,7 @@ Coordinates and bathymetry for the initial sub-domain test case known as :kbd:`J
 
 The :file:`open_boundaries/` directory contains the open boundary forcing information for the full domain.  Currently we are only using the :file:`west/` subdirectory as we have the north boundary closed.
 
-***Original Files***
+***Original TS Files***
 
 Original file specifies set temperature and salinity (uniform across the boundary) from Thomson et al, 2007 winter picture.
 
@@ -98,10 +98,10 @@ Two files keep the original TS until the model starts and then move the Thomson 
 The preparation of the NetCDF files is done by the python notebook `I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb`_
 and the soft start combination is done in the python notebook `I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb`_
 
-.. _I_ForcingFiles/PrepareSimpleOBC.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb
-.. _I_ForcingFiles/TS_OBC_Softstart.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb
+.. _I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb
+.. _I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb
 
-***Seasonal Climatology***
+***Seasonal TS Climatology***
 
 Diane Masson through Wendy Callendar provided model results from Masson and Fine (2013) for all their model years at the mouth of Juan de Fuca.  These were interpolated onto our z-levels and then interpolated onto our horizontal grid.  
 
@@ -117,10 +117,19 @@ Then the partial cells had their TS corrected to the proper depth (depth-correct
 
 The three steps are done in the python notebooks `Tools/I_Forcing/OBC/MakeTSfromMasson.ipynb`_, `Tools/I_ForcingFiles/OBC/MassonClimatology.ipynb`_, and `Tools/I_ForcingFiles/OBC/MassonClimDC.ipynb`_, respectively.
 
-.. _Tools/I_ForcingFiles/MakeTSfromMasson.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb
-.. _Tools/I_ForcingFiles/MassonClimatology.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/OBC/MassonClimatology.ipynb
-.. _Tools/I_ForcingFiles/MassonClimDC.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/OBC/MassonClimDC.ipynb
+.. _Tools/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb
+.. _Tools/I_ForcingFiles/OBC/MassonClimatology.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MassonClimatology.ipynb
+.. _Tools/I_ForcingFiles/OBC/MassonClimDC.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MassonClimDC.ipynb
 
+*** ssh Climatology ***
+
+The sea surface height climatology is taken from 2000-2010 hourly sea surface height at Tofino (`http://tides.gc.ca/eng/data`_), averaged over years and by the month to give a climatology, which is in
+
+* :file:`SS2_SSH_climatology.nc`
+
+Preparation of the file was done in ipython notebook `I_ForcingFiles/OBC/SSH.ipynb`_
+
+.. _I_ForcingFiles/OBC/SSH.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH.ipynb
 
 :file:`open_boundaries/west/tides/` Directory
 ----------------------------------------------
