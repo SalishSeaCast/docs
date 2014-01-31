@@ -27,4 +27,5 @@ files used to run NEMO for the Salish Sea are maintained in the `NEMO-forcing`_ 
    repo
    atmospheric
    TSrestart
+   obc
    netcdf4
