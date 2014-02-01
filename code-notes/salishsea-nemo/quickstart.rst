@@ -271,7 +271,9 @@ and submitting the job script:
     cd ../../SalishSea/4361797c-530f-11e3-ae1d-0025909a8461
     qsub SalishSea.40d.pbs
 
-The :program:`qsub` command returns a job identifier string that you can use with :program:`qstat` and :program:`checkjob` to monitor the execution status of your job.
+The :program:`qsub` command returns a job identifier string that you can use with :program:`qstat`,
+:program:`showstart`,
+and :program:`checkjob` to monitor the execution status of your job.
 
 When the job completes the results should have been gathered in the directory you specified in the jobs script and the temporary run directory should be empty.
 You can delete the run directory.
