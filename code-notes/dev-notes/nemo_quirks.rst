@@ -16,7 +16,7 @@ available there.
 For monthly averaging, ztmp is initialized as a fractional part of a month, but inside the IF statement,
 it is added to in seconds.
 
-I believe a similar error occurs in the monthly averaging.
+I believe a similar error occurs in the yearly averaging.
 
 
 Values go NaN
@@ -80,3 +80,20 @@ For example,
 will result in tidal forcing being adjusted to a
 (biblical?)
 date of 9-Feb-20!
+
+Salinity Extrema
+----------------
+
+Similar to others that have found extreme low temperatures in ORCA-LIM (see Trac Ticket 1180) we are getting extreme salinity values at depth, strongest near the Victoria Sill.
+
+ Reminder that we are running dev_v3_4_STABLE_2012
+ with vvl, partial z cells, tvd advection.
+
+ The advection scheme is not taking into account the partial cells, as
+ shown in Fig 5.5 in the NEMO 3.4 book, but the Laplacian diffusion is.  If we turn off the
+ partial cell correction in Laplacian diffusion we improve things by about
+ a factor of 10, but do not eliminate the problem.
+
+ For the deep Strait of Georgia it will be important to have the partial cell
+ correction in the diffusion.  Our plan is to keep that turned on and just to keep an eye on those
+ extreme salinities as we go through a year of spin-up.
