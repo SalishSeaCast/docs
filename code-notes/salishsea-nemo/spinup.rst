@@ -46,6 +46,12 @@ uniform initial stratification that was set for the entire domain.
   and velocity fields,
   not tides.
 
+22-Sep-2002 : 7b
+----------------
+
+As we were having "blow-ups" on 23-Sep run, Sep 22 was rerun with the following changes:
+1) Viscosity was 55 m2/s and 2) tides were set to be consistent with time -- so they jumped at the beginning of 7b but should not be aligned for runs going forward.
+
 
 23-Sep-2002 to 2-Oct-2002
 -------------------------
