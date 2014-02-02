@@ -21,13 +21,13 @@ So,
 Spin-up Sections
 ================
 
-16-Sep-2002 to 22-Sep-2002
+16-Sep-2002 to 21-Sep-2002
 --------------------------
 
-The first 7 days of spin-up were run on :kbd:`salish` 1 day at a time.
+The first 6 days of spin-up were run on :kbd:`salish` 1 day at a time.
 The lateral turbulent viscosity
 (NEMO :kbd:`namdyn_ldf` namelist variable :kbd:`rn_ahm_0_lap`)
-was intially set to 80 :math:`m^2/s` and reduced by 5 :math:`m^2/s` each day to 50 :math:`m^2/s` on day 7.
+was intially set to 80 :math:`m^2/s` and reduced by 5 :math:`m^2/s` each day to 55 :math:`m^2/s` on day 6.
 That was done to stabilize the model as the initial boundary condition values
 (especially deep salinity)
 propogated through the moderate,
@@ -46,11 +46,14 @@ uniform initial stratification that was set for the entire domain.
   and velocity fields,
   not tides.
 
-22-Sep-2002 : 7b
-----------------
+22-Sep-2002
+-----------
 
-As we were having "blow-ups" on 23-Sep run, Sep 22 was rerun with the following changes:
-1) Viscosity was 55 m2/s and 2) tides were set to be consistent with time -- so they jumped at the beginning of 7b but should not be aligned for runs going forward.
+After the :kbd:`nn_date0` issue was discovered 22-Sep was rerun with the following changes:
+
+1. Viscosity was set to 55 :math:`m^2/s`
+2. :kbd:`nn_date0` was set to :kbd:`20020916` so that tides were consistent with time in the spin-up.
+   That means that there is a jump in the tidal forcing at the beginning of this run.
 
 
 23-Sep-2002 to 2-Oct-2002
