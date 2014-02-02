@@ -209,7 +209,7 @@ The workflow to pull changes from the master NEMO :command:`svn` repo and commit
       Pay special attention to changes in the :file:`OPA_SRC/` tree that involve files that have been copied into :file:`NEMOGCM/CONFIG/SalishSea/MY_SRC/` or team members' :file:`MY_SRC/` directories.
       Those files must be *manually* merged with their :file:`MY_SRC/` counterparts.
 
-#. Working the :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repo:
+#. Working in the :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repo:
 
    .. code-block:: bash
 
