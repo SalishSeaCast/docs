@@ -59,10 +59,11 @@ After the :kbd:`nn_date0` issue was discovered 22-Sep was rerun with the followi
 23-Sep-2002 to 2-Oct-2002
 -------------------------
 
-The next 10 days of spin-up were run with the bottom turbulent kinetic energy background
-(NEMO :kbd:`nambfr` namelist variable :kbd:`rn_bfeb2`)
-set to :math:`1 \times 10^{-4} m^2/s^2`.
-This was done to investigate the effect of reducing turbulent bottom friction on amplitudes of the M2 tidal harmonics.
+The next 10 days of spin-up were run with the lateral turbulent viscosity
+(NEMO :kbd:`namdyn_ldf` namelist variable :kbd:`rn_ahm_0_lap`)
+set to 55 :math:`m^2/s`;
+i.e. the same value as the 22-Sep run from which this run used the restart file.
+This was done to mitigate residual effects of the tidal forcing mismatch that was corrected in the 22-Sep run.
 Harmonics for the M2 and K1 tides were calculated over the entire duration of this run with a resolution of 9 time steps
 (450 seconds).
 The results during this period also include sea surface height at selected locations for analysis of storm surges,
