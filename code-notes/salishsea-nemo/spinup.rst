@@ -70,3 +70,15 @@ The results during this period also include sea surface height at selected locat
 and sea surface height and profiles of temperature,
 salinity,
 and u anv v velocity components at 6 points along the thalweg and at a location in the Fraser River plume.
+
+
+3-Oct-2002 to 12-Oct-2002
+-------------------------
+
+Days 18 through 27 of spin-up were run with the lateral turbulent viscosity
+(NEMO :kbd:`namdyn_ldf` namelist variable :kbd:`rn_ahm_0_lap`)
+set to 50 :math:`m^2/s`.
+The tidal harmonics calculations,
+and the output for storm surge analysis,
+thalweg points,
+and the Fraser River plume are the same during this period as for the previous period.
