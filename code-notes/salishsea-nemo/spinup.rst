@@ -71,3 +71,251 @@ The results during this period also include sea surface height at selected locat
 and sea surface height and profiles of temperature,
 salinity,
 and u anv v velocity components at 6 points along the thalweg and at a location in the Fraser River plume.
+
+
+Spin-up Run Workflows
+=====================
+
+Run Preparation and Queuing
+---------------------------
+
+These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.ca`:
+
+#. If the CGRF atmospheric forcing files for the period of the run are not already in place on :kbd:`jasper`,
+   prepare them.
+   Files for the day before the run starts and the day after it finishes are required so that interpolation of forcing values in NEMO works,
+   for example:
+
+   .. code-block:: bash
+
+       ssh jasper
+       cd MEOPAR/CGRF/
+       salishsea get_cgrf 2002-10-03 -d 10
+
+   You will be prompted for a userid and password for the :kbd:`goapp.ocean.dal.ca` rsync server.
+   Those credentials can also be supplied in the command via the :kbd:`--user` and :kbd:`--password` options.
+
+#. Create a YAML run description file for the run in the :file:`SS-run-sets/SalishSea/spin-up/` directory.
+   That can be done by copying and renaming a previous run file.
+   The name pattern for run description files is :file:`SalishSea.ddmmmddmmm.yaml`,
+   where :file:`ddmmmddmmm` is the day and month of the first and last days of the run;
+   e.g. :file:`SalishSea.23sep2oct.yaml`.
+   The 2nd :file:`ddmmm` is omitted for 1 day long runs.
+
+   The values that *must* be set correctly in every new spin-up run description file are:
+
+   * :kbd:`initial conditions` in the :kbd:`forcing` stanza,
+     which must be set to the path and file name of the restart file to use as initial conditions for the run,
+     typically the last restart file from the previous spin-up run
+
+   * the :file:`namelist.time` file name in the :kbd:`namelists` stanza
+     (see below)
+
+   Other namelist file names may also be used to set special conditions for the run.
+   In general,
+   the namelists from :file:`SS-run-sets/SalishSea/` are used unless there are changes for a particular spin-up run.
+   Special condition namelists are created and commited to version control in the :file:`spin-up/` directory.
+
+   A typical spin-up run description file looks like:
+
+   .. code-block:: yaml
+
+       # salishsea command processor run description for Salish Sea case
+       #
+       # Spin-up run
+       #
+       # Salish Sea full domain with:
+       #   Smoothed JdF mouth bathymetry
+       #   S4-1 uniform initial T and S, depth corrected
+       #   Open, unstructured western boundary across Strait of Juan de Fuca
+       #     Tidal forcing
+       #     Masson model, depth corrected, T, S, U & V
+       #   Monthly climatology river run-off forcing, all rivers
+       #   Atmospheric forcing from CGRF dataset
+       #     Atmospheric pressure as inverse sea surface height effect enabled
+
+       config_name: SalishSea
+
+       paths:
+         NEMO-code: ../../../NEMO-code/
+         forcing: ../../../NEMO-forcing/
+         runs directory: ../../../SalishSea/
+
+       grid:
+         # If relative, paths are taken from forcing path above
+         coordinates: coordinates_seagrid_SalishSea.nc
+         bathymetry: bathy_meter_SalishSea2.nc
+
+       forcing:
+         # If relative, paths are taken from forcing path above
+         atmospheric: ../CGRF/NEMO-atmos/
+         initial conditions: ../../../SalishSea/results/spin-up/22sep/SalishSea_00012096_restart.nc
+         open boundaries: open_boundaries/
+         rivers: rivers/
+
+       namelists:
+         - namelist.time.23sep24sep
+         - ../namelist.domain
+         - ../namelist.surface
+         - ../namelist.lateral
+         - ../namelist.bottom
+         - ../namelist.tracers
+         - namelist.dynamics.nu55evd100  # 23sep24sep run only
+         - ../namelist.compute.6x14
+
+#. Create a :file:`namelist.time` file for the run in the :file:`SS-run-sets/SalishSea/spin-up/` directory.
+   That can be done by copying and renaming a previous run file.
+   The name pattern for run description files is :file:`namelist.time.ddmmmddmmm`,
+   where :file:`ddmmmddmmm` is the day and month of the first and last days of the run;
+   e.g. :file:`namelist.time.23sep2oct`.
+   The 2nd :file:`ddmmm` is omitted for 1 day long runs.
+
+   The values that *must* be set correctly in every new spin-up run :file:`namelist.time` file are:
+
+   * :kbd:`nn_it000`: the first time step for the run,
+     typically 1 greater than the final time step of the previous run that is included in the name of the restart in the run description file
+
+   * :kbd:`nn_itend`: the final time step for the run,
+     :kbd:`nn_it000 + days * 1728 - 1`,
+     where days is the run duration in days
+
+   * :kbd:`nn_date0`: the date when :kbd:`nn_it000` was 1;
+     i.e. :kbd:`20020916`
+
+   * :kbd:`nit000_han`: the first time step for tidal harmonic analysis,
+     typically the same value as :kbd:`nn_it000`
+
+   * :kbd:`nitend_han`: the final time step for tidal harmonic analysis,
+     typically the same value as :kbd:`nn_itend`
+
+   A typical :file:`namelist.time` file looks like:
+
+   .. code-block:: fortran
+
+       !! Run timing control
+       !!
+       !! *Note*: The time step is set in the &namdom namelist in the namelist.domain
+       !!         file.
+       !!
+       &namrun        !   Parameters of the run
+       !-----------------------------------------------------------------------
+          cn_exp      = "SalishSea"  ! experience name
+          nn_it000    =       12097  ! first time step
+          nn_itend    =       15552  ! last time step (std 1 day = 1728 re: rn_rdt in &namdom)
+          nn_date0    =    20020916  ! date at nit_0000 = 1 (format yyyymmdd)
+                                     ! used to adjust tides to run date (regardless of restart control)
+          nn_leapy    =       1      ! Leap year calendar (1) or not (0)
+          ln_rstart   =  .true.      ! start from rest (F) or from a restart file (T)
+          nn_rstctl   =       2      ! restart control => activated only if ln_rstart = T
+                                     !   = 0 nn_date0 read in namelist
+                                     !       nn_it000 read in namelist
+                                     !   = 1 nn_date0 read in namelist
+                                     !       nn_it000 check consistency between namelist and restart
+                                     !   = 2 nn_date0 read in restart
+                                     !       nn_it000 check consistency between namelist and restart
+          nn_istate   =       0      ! output the initial state (1) or not (0)
+          nn_stock    =   17280      ! frequency of creation of a restart file (modulo referenced to 1)
+          ln_clobber  =  .true.      ! clobber (overwrite) an existing file
+       &end
+
+       &nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
+       !-----------------------------------------------------------------------
+           nit000_han =  12097  ! First time step used for harmonic analysis
+           nitend_han =  15552  ! Last time step used for harmonic analysis
+           nstep_han  =      9  ! Time step frequency for harmonic analysis
+           !! Names of tidal constituents
+           tname(1)   = 'K1'
+           tname(2)   = 'M2'
+       &end
+
+#. Create any special condition namelist files and ensure that they are correctly included in the :kbd:`nameslists` stanza of the run description file.
+
+#. Choose or create an :file:`iodef.xml` file for the run.
+   The name pattern for :file:`iodef.xml` files is :file:`iodef.nnt.xml`,
+   where :file:`nn` is the frequency of output of the :file:`*_grid_[TUV].nc` files,
+   and :file:`t` is the output interval;
+   e.g. :file:`iodef.1d.xml`.
+
+#. Create or update a TORQUE batch job file for the run.
+   The name pattern for batch job files is :file:`SalishSea.nnd.pbs`,
+   where :file:`nn` is the duration of the run in days;
+   e.g. :file:`SalishSea.10d.pbs`.
+
+   The values that *must* be set correctly for every job are:
+
+   * The :file:`ddmmmddmmm` part in the following lines:
+
+     * :kbd:`#PBS -N`: the job name
+     * :kbd:`#PBS -o`: the path and name for stdout from the job
+     * :kbd:`#PBS -e`: the path and name for stderr from the job
+     * :kbd:`RESULTS_DIR=`: the path and name of the results directory where the run results are to be gathered
+
+   * The :kbd:`walltime` limit;
+     e.g.
+
+     .. code-block:: bash
+
+         #PBS -l walltime=1:00:00
+
+     Runs typically required about 17 minutes of compute time per model-day but a substantial excess allowance should be requested.
+     Wall time values that have been found to be adequate are 1h for a 2d run,
+     4h for a 10d run,
+     and 12h for a 30d run.
+
+   A typical TORQUE batch job file looks like:
+
+   .. code-block:: bash
+
+       #!/bin/bash
+
+       #PBS -N SalishSea.23sep24sep
+       #PBS -S /bin/bash
+       #PBS -l procs=84
+       # memory per processor
+       #PBS -l pmem=2gb
+       #PBS -l walltime=1:00:00
+       # email when the job [b]egins and [e]nds, or is [a]borted
+       #PBS -m bea
+       #PBS -M dlatornell@eos.ubc.ca
+       #PBS -o ../results/spin-up/23sep24sep/stdout
+       #PBS -e ../results/spin-up/23sep24sep/stderr
+
+
+       RESULTS_DIR=../results/spin-up/23sep24sep
+
+       cd $PBS_O_WORKDIR
+       echo working dir: $(pwd)
+
+       module load application/python/2.7.3
+       module load library/netcdf/4.1.3
+       module load library/szip/2.1
+
+       echo "Starting run at $(date)"
+       mkdir -p $RESULTS_DIR
+       mpirun ./nemo.exe
+       echo "Ended run at $(date)"
+
+       echo "Results gathering started at $(date)"
+       $PBS_O_HOME/.local/bin/salishsea gather --no-compress SalishSea*.yaml $RESULTS_DIR
+       chmod go+rx $RESULTS_DIR
+       chmod go+r  $RESULTS_DIR/*
+       echo "Results gathering ended at $(date)"
+
+       echo "Scheduling cleanup of run directory"
+       echo rmdir $PBS_O_WORKDIR > /tmp/cleanup
+       at now + 1 minutes -f /tmp/cleanup 2>&1
+
+#. Commit and push the run set file changes for each run prior to queuing the run so that there is a clear record of runs in the :ref:`SS-run-sets-repo` repo.
+   Don't forget to add any files created for a run to the repo.
+
+#. Prepare the run,
+   copy the TROQUE batch job file to the run directory,
+   go to the run directory,
+   and submit the job to the scheduler:
+
+   .. code-block:: bash
+
+       salishsea prepare SalishSea.23sep24sep.yaml iodef.1d.xml
+       cp SalishSea.2d.pbs ../../../SalishSea/bb1357d6-8c6e-11e3-bdd0-0025902b0cdc
+       pushd ../../../SalishSea/bb1357d6-8c6e-11e3-bdd0-0025902b0cdc
+       qsub SalishSea.2d.pbs
