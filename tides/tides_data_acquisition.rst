@@ -52,9 +52,17 @@ Thomson & Huggett (1980) - Johnstone Strait
 
 Thomson & Huggett (1980) measured tidal elevations at 4 stations in Johnstone Strait 1976 and 1977. Tidal elevation harmonics for O1, K1, M2 and S2 are reported in Table 2 and stations are shown in Figure 4. 
 
-They also measured tidal currents at 11 stations (at various depths) in Johnstone Strait and report tidal current harmonics in Table 1.
+They also measured tidal currents at 11 stations (at various depths) in Johnstone Strait and report tidal current harmonics in Table 1. 
 
-Also have some temperature and salinity data that may be useful.
+Note that phase in these tables is reported as phase lag relative to 120 degrees W longitude. This means the measurements were probably in Pacific Standard Time (PST) and that's how the lags were calculated. 
+
+Now, 120 degrees W (Pacific Standard Time) is 8 hours different to GMT, so to convert M2 phase from PST to GMT:
+
+GMTphase = PSTphase - (-8hours)*(1/12.42hours)*360degrees
+
+(For details on this conversion, see Manual for Tide Heights Analysis and Prediction by M.G.G. Foreman, Pacific Marine Science Report 77-10, IOS, 1977 (Revised 2004), Section 2.3.1 Astronomical argument and Greenwich phase lag, available `from here <ftp://canuck.seos.uvic.ca/docs/MFTides/heights.pdf>`_ or `also here <http://www.pac.dfo-mpo.gc.ca/science/oceans/tidal-marees/index-eng.html>`_)
+
+This paper also have some info on temperature and salinity in Johnstone Strait that may be useful.
 
 Thomson (1976) and Thomson (1977) - Johnstone Strait
 ------------------------------------------------------------------------------
