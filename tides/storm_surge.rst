@@ -32,7 +32,7 @@ Does the storm affect the whole domain or does it not matter?
 			* grid co-ordinates: i=351, j=213
 		* Campbell River
 			* lat/lon: 50.04,-125.25
-			* grid co-ordinates: i=747, j=123
+			* grid co-ordinates: i=747, j=124 
 
 Finding storms in the record
 ------------------------------------------
