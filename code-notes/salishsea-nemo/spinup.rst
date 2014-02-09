@@ -56,15 +56,13 @@ After the :kbd:`nn_date0` issue was discovered 22-Sep was rerun with the followi
    That means that there is a jump in the tidal forcing at the beginning of this run.
 
 
-23-Sep-2002 to 24-Sep-2002
---------------------------
+23-Sep-2002 onwards
+-------------------
 
-The next 2 days of spin-up were run with the lateral turbulent viscosity
+The next days of spin-up were run with the lateral turbulent viscosity
 (NEMO :kbd:`namdyn_ldf` namelist variable :kbd:`rn_ahm_0_lap`)
-set to 55 :math:`m^2/s`;
-i.e. the same value as the 22-Sep run from which this run used the restart file.
-This was done to mitigate residual effects of the tidal forcing mismatch that was corrected in the 22-Sep run,
-and to try to avoid too much Juan de Fuca deep water from reaching the bottom of the Strait of Georgia as happened in a 10d spin-up run started on 23-Sep.
+set to as low as possible but high enough that the code did not blow up.55 
+This was done to  to try to avoid too much Juan de Fuca deep water from reaching the bottom of the Strait of Georgia as happened in a 10d spin-up run started on 23-Sep.  The fresh water in San Juan needs to be flushed to allow enough pre-mixing there.
 Harmonics for the M2 and K1 tides were calculated over the entire duration of this run with a resolution of 9 time steps
 (450 seconds).
 The results during this period also include sea surface height at selected locations for analysis of storm surges,
@@ -72,6 +70,35 @@ and sea surface height and profiles of temperature,
 salinity,
 and u anv v velocity components at 6 points along the thalweg and at a location in the Fraser River plume.
 
+**The Runs**
+
+========== =======================  ====================    ================== =========== ==================
+ Dates     Viscosity :math:`m^2/s`   EVD :math:`m^2/s`      Status              Platform   Note
+========== =======================  ====================    ================== =========== ==================
+Sep 23         50                    100                    blew up off Pender    Salish
+Sep 23         55                    100                    *complete*            Salish
+Sep 24         50                    100                    *complete*            Salish
+Sep 25         45                    100                    *complete*            Salish
+Sep 26         40                    100                    *complete*            Salish
+Sep 27         35                    100                    *complete*            Salish
+Sep 28         30                    100                    *complete*            Salish
+Sep 29         25                    100                    *complete*            Salish
+Sep 30         20                    100                    blew up off Stuart    Salish
+Sep 30         25                    100                    blew up off Pender    Salish
+Sep 30         30                    100                    *complete*            Salish
+Oct 1-2        25                    100                    blew up BP Mouth      Salish
+Oct 1          30                    100                    *complete*            Salish
+Oct 2-3        30                    100                    *complete*            Salish
+Oct 4-5        30                    100                    blew up off Stuart    Salish
+Oct 4-5        35                    100                    *complete*            Salish
+Oct 6-9        35                    100                    blew up BP Mouth      Jasper
+Oct 6-7        40                    100                    *complete*            Jasper   first 2 days of 4
+Oct 8-9        40                    100                    blew up NaN           Jasper   last 2 days of 4
+Oct 8-9        45                    100                    *complete*            Jasper   first 2 days of 4
+Oct 10-11      45                    100                    blew up off Pender    Jasper   last 2 days of 4
+Oct 10-13      50                    100                    blew up off San J.    Jasper
+Oct 10-13      50                    150                    
+========== =======================  ====================    ================== =========== ==================
 
 Spin-up Run Workflows
 =====================
