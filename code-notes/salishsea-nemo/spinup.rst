@@ -98,7 +98,8 @@ Oct 8-9        40                    100                    blew up NaN         
 Oct 8-9        45                    100                    *complete*            Jasper   first 2 days of 4
 Oct 10-11      45                    100                    blew up off Pender    Jasper   last 2 days of 4
 Oct 10-13      50                    100                    blew up off San J.    Jasper
-Oct 10-13      50                    150
+Oct 10-13      50                    150                    *complete*            Jasper
+Oct 14-23      50                    150                    blew up off Pender    Jasper
 ========== =======================  ====================    ================== =========== ==================
 
 Spin-up Run Workflows
