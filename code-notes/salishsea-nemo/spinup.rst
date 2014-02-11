@@ -101,7 +101,9 @@ Oct 10-13      50                    100                    blew up off San J.  
 Oct 10-13      50                    150                    *complete*            Jasper
 Oct 14-17      50                    150                    *complete*            Jasper   first 4 days of 10
 Oct 18-23      50                    150                    blew up off Pender    Jasper   last 6 days of 10
-Oct 18-27      50                    200                    queued
+Oct 18-25      50                    200                    *complete*            Jasper   first 8 days of 10
+Oct 26-27      50                    200                    blew up off Pender    Jasper   last 2 days of 10
+Oct26-Nov4     55                    200                   
 ========== =======================  ====================    ================== =========== ==================
 
 Spin-up Run Workflows
