@@ -7,7 +7,7 @@ Salish Sea MEOPAR Project Documentation
 ***************************************
 
 This is a collection of documentation about the Salish Sea MEOPAR project.
-There is a companion collection of :ref:`project tools documentation <SalishSeaToolsDocs>`.
+There is a companion collection of :ref:`project tools documentation <SalishSeaToolsDocs>`. Project details can be found here: :ref:`About the Project <about>`.
 
 
 Contents:
@@ -15,6 +15,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   about
    repos_organization
    work_env/index
    code-notes/salishsea-nemo/index
