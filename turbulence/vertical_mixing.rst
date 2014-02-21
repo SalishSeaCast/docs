@@ -56,7 +56,7 @@ Bottom friction is parameterized through a bottom boundary layer with either lin
 
 There is some flexibility in setting the coefficients on the flux term, :file:`rn_bfri2` for the nonlinear setting. This is controlled in :file:`namelist.bottom`. Also, the NEMO documentation suggests using a low or zero value for :file:`rn_bfeb2` when tides are treated explicitly.
 
-Reducing the parameter :file:`rn_bfri2` from :math:`5\times 10^{-3}` to :math:`4\times 10^{-3}` caused instability in the Puget Sounds region. Setting :file:`rn_bfeb2=0` made no difference. 
+Reducing the parameter :file:`rn_bfri2` from :math:`5\times 10^{-3}` to :math:`4\times 10^{-3}` caused instability in the Puget Sound region. Setting :file:`rn_bfeb2=0` made no difference. 
 
 References
 ----------
