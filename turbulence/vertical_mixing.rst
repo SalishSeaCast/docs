@@ -48,9 +48,6 @@ As noted in the discussion on lateral viscosity (:ref:`Lateral`), the model ofte
 
 The simulations performed to date are outlined in :ref:`Lateral`. 
 
-To do:
-
-* Establish an approriate combination of :file:`rn_avevd` and :file:`rn_ahm_0_lap` to produce accurate tides and vertical mixing.
 
 Bottom Friction
 -----------------------------------------
@@ -59,9 +56,7 @@ Bottom friction is parameterized through a bottom boundary layer with either lin
 
 There is some flexibility in setting the coefficients on the flux term, :file:`rn_bfri2` for the nonlinear setting. This is controlled in :file:`namelist.bottom`. Also, the NEMO documentation suggests using a low or zero value for :file:`rn_bfeb2` when tides are treated explicitly.
 
-To do:
-
-* Reduce :file:`rn_bfeb2` in :file:`namelist.bottom` as suggested by the NEMO documentation.
+Reducing the parameter :file:`rn_bfri2` from :math:`5\times 10^{-3}` to :math:`4\times 10^{-3}` caused instability in the Puget Sounds region. Setting :file:`rn_bfeb2=0` made no difference. 
 
 References
 ----------
