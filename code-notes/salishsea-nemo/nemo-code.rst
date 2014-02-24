@@ -281,7 +281,7 @@ After the :ref:`PullChangesFromNEMOsvn` has been completed the workflow to merge
 
    .. code-block:: bash
 
-       hg pull --update mirror
+       hg pull mirror
 
 #. Because the changesets pulled from `NEMO-code`_ are public a branch merge is necessary:
 
