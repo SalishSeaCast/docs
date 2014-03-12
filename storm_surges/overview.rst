@@ -1,6 +1,6 @@
-.. _StormSurge:
+.. _StormOverview:
 
-Storm surge
+Storm surge overview
 ======================================================================================================
 
 We need to test our model to see how well it can represent storm surge events in the Salish Sea. We have wind forcing available from 2002-2010, so storms need to be in this period.
