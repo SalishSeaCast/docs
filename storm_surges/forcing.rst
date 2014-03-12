@@ -1,6 +1,6 @@
 .. _StormForcing:
 
-Storm surge forcing
+Storm surge simulation set up
 ======================================================================================================
 
 Once we have identified an appropriate date for a storm surge simulation hindcast (see :ref:`StormOverview` for examples), we need to generate forcing files. We are forcing the storm surge system in two ways: sea surface height anomaly at the Juan de Fuca boundary and atmopsheric winds and pressure at the sea surface. The usual tidal forcing is also applied. The initial conditions should also be considered carefully. 
@@ -19,7 +19,7 @@ To do:
 Sea surface height forcing
 ------------------------------------------
 
-We force the sea surface height anomaly at the Juan de Fuca boundary. The tidal component of the observed observed water level height at Tofino has been removed. The water level height observations are taken from the DFO and the tidal predictions are generated with t_tide. Details are found in this notebook: `SSG_Tofino.ipynb <http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_Tofino.ipynb>`_. 
+We force the sea surface height anomaly at the Juan de Fuca boundary based on tidal observations from Tofino. The tidal component of the observed water level height at Tofino has been removed. The water level height observations are taken from the DFO and the tidal predictions are generated with t_tide. Details are found in this notebook: `SSG_Tofino.ipynb <http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_Tofino.ipynb>`_. 
 
 This notebook can be edited to generate forcing files for other time frames. 
 
@@ -65,3 +65,8 @@ Next, insert the forcing files into the :file:`nambdy_dta` section. It should lo
 
 Atmospheric Forcing
 ----------------------------------
+Atmospheric forcing is an important component of storm surges. Currently, we are using model output for winds, pressure and a variety of other fields from CGRF (see :ref:`AtmosphericForcing`). Ensure that the atmospheric forcing files for the simulation dates of interest have been generated.
+
+Namelists
+------------------- 
+Example namelists and run set files for storm surge simulations are located in the :file:`SS-run-sets` repo. The :file:`iodef.xml` tells NEMO to output hourly data for several storm surge locations of interest. 
