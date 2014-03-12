@@ -21,6 +21,7 @@ Contents:
    code-notes/salishsea-nemo/index
    tides/index
    rivers/index
+   stability/index
    storm_surges/index
    turbulence/index
    code-notes/dev-notes/index
