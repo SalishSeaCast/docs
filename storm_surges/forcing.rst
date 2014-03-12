@@ -3,7 +3,7 @@
 Storm surge simulation set up
 ======================================================================================================
 
-Once we have identified an appropriate date for a storm surge simulation hindcast (see :ref:`StormOverview` for examples), we need to generate forcing files. We are forcing the storm surge system in two ways: sea surface height anomaly at the Juan de Fuca boundary and atmopsheric winds and pressure at the sea surface. The usual tidal forcing is also applied. The initial conditions should also be considered carefully. 
+Once we have identified an appropriate date for a storm surge simulation hindcast (see :ref:`StormOverview`  for examples), we need to generate forcing files. We are forcing the storm surge system in two ways: sea surface height anomaly at the Juan de Fuca boundary and atmopsheric winds and pressure at the sea surface. The usual tidal forcing is also applied. The initial conditions should also be considered carefully. 
 
 
 Initial conditions and start date
@@ -23,7 +23,7 @@ We force the sea surface height anomaly at the Juan de Fuca boundary based on ti
 
 This notebook can be edited to generate forcing files for other time frames. 
 
-To use these forcing files in NEMO, we must edit :file:`namelist.lateral`.  The title of the forcing files should have the format :file:`ssh_y2006m01.nc`. First, tell NEMO that you are using external data on the barotropic fields:
+To use these forcing files in NEMO, we must edit :file:`namelist.lateral`.  The title of the forcing files should have the format :file:`ssh_y2006m01.nc`. Each file contains one month of the hourly sea surface height anomaly. First, tell NEMO that you are using external data on the barotropic fields:
 
  .. code-block:: fortran
 
