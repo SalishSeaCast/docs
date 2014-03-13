@@ -15,3 +15,8 @@ Model velocities at these two points at various depths are given in the followin
 
 .. figure:: images/model_east.png
 .. figure:: images/model_central.png
+
+Actual ACDP velocities (for Oct 15, 2013) are stronger by 20-40%.
+
+.. figure:: images/adcp_east.png
+.. figure:: images/adcp_central.png
