@@ -76,38 +76,41 @@ and u and v velocity components at 6 points along the thalweg and at a location 
 
 **The Runs**
 
-========== =======================  ====================    ================== =========== ==================
- Dates     Viscosity :math:`m^2/s`   EVD :math:`m^2/s`      Status              Platform   Note
-========== =======================  ====================    ================== =========== ==================
-Sep 23         50                    100                    blew up off Pender    Salish
-Sep 23         55                    100                    *complete*            Salish
-Sep 24         50                    100                    *complete*            Salish
-Sep 25         45                    100                    *complete*            Salish
-Sep 26         40                    100                    *complete*            Salish
-Sep 27         35                    100                    *complete*            Salish
-Sep 28         30                    100                    *complete*            Salish
-Sep 29         25                    100                    *complete*            Salish
-Sep 30         20                    100                    blew up off Stuart    Salish
-Sep 30         25                    100                    blew up off Pender    Salish
-Sep 30         30                    100                    *complete*            Salish
-Oct 1-2        25                    100                    blew up BP Mouth      Salish
-Oct 1          30                    100                    *complete*            Salish
-Oct 2-3        30                    100                    *complete*            Salish
-Oct 4-5        30                    100                    blew up off Stuart    Salish
-Oct 4-5        35                    100                    *complete*            Salish
-Oct 6-9        35                    100                    blew up BP Mouth      Jasper
-Oct 6-7        40                    100                    *complete*            Jasper   first 2 days of 4
-Oct 8-9        40                    100                    blew up NaN           Jasper   last 2 days of 4
-Oct 8-9        45                    100                    *complete*            Jasper   first 2 days of 4
-Oct 10-11      45                    100                    blew up off Pender    Jasper   last 2 days of 4
-Oct 10-13      50                    100                    blew up off San J.    Jasper
-Oct 10-13      50                    150                    *complete*            Jasper
-Oct 14-17      50                    150                    *complete*            Jasper   first 4 days of 10
-Oct 18-23      50                    150                    blew up off Pender    Jasper   last 6 days of 10
-Oct 18-25      50                    200                    *complete*            Jasper   first 8 days of 10
-Oct 26-27      50                    200                    blew up off Pender    Jasper   last 2 days of 10
-Oct26-Nov4     55                    200                    blew up off Pender    Jasper   blew before prev.
-========== =======================  ====================    ================== =========== ==================
+========== ===== ============= =============  ================== =========== ==================
+ Dates      dt   Viscosity     EVD            Status              Platform   Note
+            s    :math:`m^2/s` :math:`m^2/s`
+========== ===== ============= =============  ================== =========== ==================
+Sep 23      50   50                    100    blew up off Pender    Salish
+Sep 23      50   55                    100    *complete*            Salish
+Sep 24      50   50                    100    *complete*            Salish
+Sep 25      50   45                    100    *complete*            Salish
+Sep 26      50   40                    100    *complete*            Salish
+Sep 27      50   35                    100    *complete*            Salish
+Sep 28      50   30                    100    *complete*            Salish
+Sep 29      50   25                    100    *complete*            Salish
+Sep 30      50   20                    100    blew up off Stuart    Salish
+Sep 30      50   25                    100    blew up off Pender    Salish
+Sep 30      50   30                    100    *complete*            Salish
+Oct 1-2     50   25                    100    blew up BP Mouth      Salish
+Oct 1       50   30                    100    *complete*            Salish
+Oct 2-3     50   30                    100    *complete*            Salish
+Oct 4-5     50   30                    100    blew up off Stuart    Salish
+Oct 4-5     50   35                    100    *complete*            Salish
+Oct 6-9     50   35                    100    blew up BP Mouth      Jasper
+Oct 6-7     50   40                    100    *complete*            Jasper   first 2 days of 4
+Oct 8-9     50   40                    100    blew up NaN           Jasper   last 2 days of 4
+Oct 8-9     50   45                    100    *complete*            Jasper   first 2 days of 4
+Oct 10-11   50   45                    100    blew up off Pender    Jasper   last 2 days of 4
+Oct 10-13   50   50                    100    blew up off San J.    Jasper
+Oct 10-13   50   50                    150    *complete*            Jasper
+Oct 14-17   50   50                    150    *complete*            Jasper   first 4 days of 10
+Oct 18-23   50   50                    150    blew up off Pender    Jasper   last 6 days of 10
+Oct 18-25   50   50                    200    *complete*            Jasper   first 8 days of 10
+Oct 26-27   50   50                    200    blew up off Pender    Jasper   last 2 days of 10
+Oct26-Nov4  50   55                    200    blew up off Pender    Jasper   blew before prev.
+Oct 26      10   20                     20    *complete*            Salish
+========== ===== ============= =============  ================== =========== ==================
+
 
 Spin-up Run Workflows
 =====================
