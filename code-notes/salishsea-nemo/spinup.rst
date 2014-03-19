@@ -109,6 +109,7 @@ Oct 18-25   50   50                    200    *complete*            Jasper   fir
 Oct 26-27   50   50                    200    blew up off Pender    Jasper   last 2 days of 10
 Oct26-Nov4  50   55                    200    blew up off Pender    Jasper   blew before prev.
 Oct 26      10   20                     20    *complete*            Salish
+Oct 27-30   10   20                     20    *complete*            Jasper
 ========== ===== ============= =============  ================== =========== ==================
 
 
