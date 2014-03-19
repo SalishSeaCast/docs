@@ -13,3 +13,10 @@ One can calculate the time for the flow to cross one grid cell vertically using 
 .. figure:: images/logdzw.png
 
 Note that the above is log plot.  The minimum value is 21.5 s.  Given that the CFL condition is 1/2 of this for a leapfrog scheme with staggered grids, that would imply a CFL time step of 10.75 s or less!
+
+Testing
+-------
+
+The code was run with baroclinic time step of 10s, and the barotropic time step unchanged at 2s. Started Oct 26, with density fields from spin up.  Ran 1 day on Salish and a further 4 days on Jasper with horizontal viscosity of 20 m2/s and vertical evd at 20 m2/s.  The code was stable and the output looks reasonable.  Velocities and mixing increased, particularly in the island.  Current widths decreases (deep current into SoG for example).
+
+Code is now slow!  The four days on Jasper took over 4 hours.  The day on Salish took 8 hours.
