@@ -59,8 +59,8 @@ After the :kbd:`nn_date0` issue was discovered 22-Sep was rerun with the followi
    That means that there is a jump in the tidal forcing at the beginning of this run.
 
 
-23-Sep-2002 onwards
--------------------
+23-Sep-2002 to 25-Oct-2002
+-------------------------
 
 The next days of spin-up were run with the lateral turbulent viscosity
 (NEMO :kbd:`namdyn_ldf` namelist variable :kbd:`rn_ahm_0_lap`)
@@ -73,6 +73,17 @@ The results during this period also include sea surface height at selected locat
 and sea surface height and profiles of temperature,
 salinity,
 and u and v velocity components at 6 points along the thalweg and at a location in the Fraser River plume.
+
+
+26-Oct-2002 to 30-Oct-2002
+--------------------------
+
+Lack of stability in the previous runs and the continuous need to increase viscosity lead to an investigation of stability.  It was determined that the viscosity was too high (currents in the SoG were smaller than observed), and the time step was too large for a vertical CFL condition.  Reducing the time step (and reducing the viscosity) led o stable run of 26-Oct and onwards.
+
+31-Oct-2002 --
+--------------
+
+Northern boundary was opened using tides (all 8 constituents) and T&S restoring (based on Thomson and Huggett paper). 
 
 **The Runs**
 
@@ -110,6 +121,8 @@ Oct 26-27   50   50                    200    blew up off Pender    Jasper   las
 Oct26-Nov4  50   55                    200    blew up off Pender    Jasper   blew before prev.
 Oct 26      10   20                     20    *complete*            Salish
 Oct 27-30   10   20                     20    *complete*            Jasper
+Oct 31      10   20                     20    *complete*            Jasper   opened North
+Nov 1-4     10   20                     20
 ========== ===== ============= =============  ================== =========== ==================
 
 
