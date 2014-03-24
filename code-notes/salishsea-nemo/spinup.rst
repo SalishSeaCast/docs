@@ -83,7 +83,7 @@ Lack of stability in the previous runs and the continuous need to increase visco
 31-Oct-2002 --
 --------------
 
-Northern boundary was opened using tides (all 8 constituents) and T&S restoring (based on Thomson and Huggett paper). 
+Northern boundary was opened using tides (all 8 constituents) and seasonal T&S (based on Thomson and Huggett paper). 
 
 **The Runs**
 
