@@ -364,7 +364,7 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
    Don't forget to add any files created for a run to the repo.
 
 #. Prepare the run,
-   copy the TROQUE batch job file to the run directory,
+   copy the TORQUE batch job file to the run directory,
    go to the run directory,
    and submit the job to the scheduler:
 
