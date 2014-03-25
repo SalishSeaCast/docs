@@ -123,7 +123,8 @@ Oct 26      10   20                     20    *complete*            Salish
 Oct 27-30   10   20                     20    *complete*            Jasper
 Oct 31      10   20                     20    *complete*            Jasper   opened North
 Nov 1-4     10   20                     20    *complete*            Jasper
-Nov 5-14    10   20                     20
+Nov 5-14    10   20                     20    *complete*            Jasper
+Nov 15-24   10   20                     20
 ========== ===== ============= =============  ================== =========== ==================
 
 
