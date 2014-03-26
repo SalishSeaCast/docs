@@ -124,7 +124,9 @@ Oct 27-30   10   20                     20    *complete*            Jasper
 Oct 31      10   20                     20    *complete*            Jasper   opened North
 Nov 1-4     10   20                     20    *complete*            Jasper
 Nov 5-14    10   20                     20    *complete*            Jasper
-Nov 15-24   10   20                     20
+Nov 15-19   10   20                     20    *complete*            Jasper   no output files
+Nov 20-24   10   20                     20    timed-out             Jasper
+Nov 20-29   10   20                     20
 ========== ===== ============= =============  ================== =========== ==================
 
 
