@@ -83,7 +83,7 @@ Lack of stability in the previous runs and the continuous need to increase visco
 31-Oct-2002 --
 --------------
 
-Northern boundary was opened using tides (all 8 constituents) and seasonal T&S (based on Thomson and Huggett paper). 
+Northern boundary was opened using tides (all 8 constituents) and seasonal T&S (based on Thomson and Huggett paper).
 
 **The Runs**
 
@@ -124,9 +124,10 @@ Oct 27-30   10   20                     20    *complete*            Jasper
 Oct 31      10   20                     20    *complete*            Jasper   opened North
 Nov 1-4     10   20                     20    *complete*            Jasper
 Nov 5-14    10   20                     20    *complete*            Jasper
-Nov 15-19   10   20                     20    *complete*            Jasper   no output files
+Nov 15-19   10   20                     20    *complete*            Jasper
 Nov 20-24   10   20                     20    timed-out             Jasper
-Nov 20-29   10   20                     20
+Nov 20-29   10   20                     20                          Jasper
+Nov30-Dec9  10   20                     20                          Jasper
 ========== ===== ============= =============  ================== =========== ==================
 
 
