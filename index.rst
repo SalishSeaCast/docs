@@ -25,5 +25,6 @@ Contents:
    storm_surges/index
    turbulence/index
    code-notes/dev-notes/index
+   CONTRIBUTORS
 
 .. include:: license_description.txt
