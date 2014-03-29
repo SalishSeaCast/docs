@@ -17,10 +17,12 @@ License
       The Salish Sea MEOPAR Project Documentation
     </span>
     by
-    <a xmlns:cc="http://creativecommons.org/ns#" href="http://salishsea.eos.ubc.ca/docs/" property="cc:attributionName" rel="cc:attributionURL">
+    <a xmlns:cc="http://creativecommons.org/ns#" href="http://salishsea-meopar-docs.readthedocs.org/en/latest/index.html" property="cc:attributionName" rel="cc:attributionURL">
       the Salish Sea MEOPAR project contributors and The University of British Columbia
     </a>
     is licensed under a
     <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
       Creative Commons Attribution 3.0 Unported License
     </a>.
+    Permissions beyond the scope of this license may be available at
+    <a xmlns:cc="http://creativecommons.org/ns#" href="http://salishsea-meopar-docs.readthedocs.org/en/latest/CONTRIBUTORS.html" rel="cc:morePermissions">http://salishsea-meopar-docs.readthedocs.org/en/latest/CONTRIBUTORS.html</a>.
