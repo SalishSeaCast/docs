@@ -60,7 +60,7 @@ After the :kbd:`nn_date0` issue was discovered 22-Sep was rerun with the followi
 
 
 23-Sep-2002 to 25-Oct-2002
--------------------------
+--------------------------
 
 The next days of spin-up were run with the lateral turbulent viscosity
 (NEMO :kbd:`namdyn_ldf` namelist variable :kbd:`rn_ahm_0_lap`)
@@ -234,11 +234,11 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
      typically 1 greater than the final time step of the previous run that is included in the name of the restart in the run description file
 
    * :kbd:`nn_itend`: the final time step for the run,
-     :kbd:`nn_it000 + days * 1728 - 1`,
+     :kbd:`nn_it000 + days * 8640 - 1`,
      where days is the run duration in days
 
    * :kbd:`nn_date0`: the date when :kbd:`nn_it000` was 1;
-     i.e. :kbd:`20020916`
+     i.e. :kbd:`20021026`
 
    * :kbd:`nit000_han`: the first time step for tidal harmonic analysis,
      typically the same value as :kbd:`nn_it000`
@@ -250,41 +250,41 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
 
    .. code-block:: fortran
 
-       !! Run timing control
-       !!
-       !! *Note*: The time step is set in the &namdom namelist in the namelist.domain
-       !!         file.
-       !!
-       &namrun        !   Parameters of the run
-       !-----------------------------------------------------------------------
-          cn_exp      = "SalishSea"  ! experience name
-          nn_it000    =       12097  ! first time step
-          nn_itend    =       15552  ! last time step (std 1 day = 1728 re: rn_rdt in &namdom)
-          nn_date0    =    20020916  ! date at nit_0000 = 1 (format yyyymmdd)
-                                     ! used to adjust tides to run date (regardless of restart control)
-          nn_leapy    =       1      ! Leap year calendar (1) or not (0)
-          ln_rstart   =  .true.      ! start from rest (F) or from a restart file (T)
-          nn_rstctl   =       2      ! restart control => activated only if ln_rstart = T
-                                     !   = 0 nn_date0 read in namelist
-                                     !       nn_it000 read in namelist
-                                     !   = 1 nn_date0 read in namelist
-                                     !       nn_it000 check consistency between namelist and restart
-                                     !   = 2 nn_date0 read in restart
-                                     !       nn_it000 check consistency between namelist and restart
-          nn_istate   =       0      ! output the initial state (1) or not (0)
-          nn_stock    =   17280      ! frequency of creation of a restart file (modulo referenced to 1)
-          ln_clobber  =  .true.      ! clobber (overwrite) an existing file
-       &end
+        !! Run timing control
+        !!
+        !! *Note*: The time step is set in the &namdom namelist in the namelist.domain
+        !!         file.
+        !!
+        &namrun        !   Parameters of the run
+        !-----------------------------------------------------------------------
+           cn_exp      = "SalishSea"  ! experience name
+           nn_it000    =      302401  ! first time step
+           nn_itend    =      388800  ! last time step (std 1 day = 8640 re: rn_rdt in &namdom)
+           nn_date0    =    20021026  ! date at nit_0000 = 1 (format yyyymmdd)
+                                      ! used to adjust tides to run date (regardless of restart control)
+           nn_leapy    =       1      ! Leap year calendar (1) or not (0)
+           ln_rstart   =  .true.      ! start from rest (F) or from a restart file (T)
+           nn_rstctl   =       2      ! restart control => activated only if ln_rstart = T
+                                      !   = 0 nn_date0 read in namelist
+                                      !       nn_it000 read in namelist
+                                      !   = 1 nn_date0 read in namelist
+                                      !       nn_it000 check consistency between namelist and restart
+                                      !   = 2 nn_date0 read in restart
+                                      !       nn_it000 check consistency between namelist and restart
+           nn_istate   =       0      ! output the initial state (1) or not (0)
+           nn_stock    =    43200      ! frequency of creation of a restart file (modulo referenced to 1)
+           ln_clobber  =  .true.      ! clobber (overwrite) an existing file
+        &end
 
-       &nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
-       !-----------------------------------------------------------------------
-           nit000_han =  12097  ! First time step used for harmonic analysis
-           nitend_han =  15552  ! Last time step used for harmonic analysis
-           nstep_han  =      9  ! Time step frequency for harmonic analysis
-           !! Names of tidal constituents
-           tname(1)   = 'K1'
-           tname(2)   = 'M2'
-       &end
+        &nam_diaharm   !   Harmonic analysis of tidal constituents ('key_diaharm')
+        !-----------------------------------------------------------------------
+            nit000_han = 302401  ! First time step used for harmonic analysis
+            nitend_han = 388800  ! Last time step used for harmonic analysis
+            nstep_han  =     90  ! Time step frequency for harmonic analysis
+            !! Names of tidal constituents
+            tname(1)   = 'K1'
+            tname(2)   = 'M2'
+        &end
 
 #. Create any special condition namelist files and ensure that they are correctly included in the :kbd:`nameslists` stanza of the run description file.
 
@@ -313,12 +313,15 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
 
      .. code-block:: bash
 
-         #PBS -l walltime=1:00:00
+         #PBS -l walltime=15:00:00
 
-     Runs typically required about 17 minutes of compute time per model-day but a substantial excess allowance should be requested.
-     Wall time values that have been found to be adequate are 1h for a 2d run,
-     4h for a 10d run,
-     and 12h for a 30d run.
+     Runs typically required about 80 minutes of compute time per model-day but a substantial excess allowance should be requested.
+     Wall time values that have been found to be adequate are 4h for a 2d run,
+     and 15h for a 10d run.
+
+     You should also set your email address in the :kbd:`#PBS -M` line so that job start,
+     end,
+     and abort messages are emailed to you.
 
    A typical TORQUE batch job file looks like:
 
@@ -326,20 +329,20 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
 
        #!/bin/bash
 
-       #PBS -N SalishSea.23sep24sep
+       #PBS -N SpinUp26oct4nov
        #PBS -S /bin/bash
        #PBS -l procs=84
        # memory per processor
        #PBS -l pmem=2gb
-       #PBS -l walltime=1:00:00
+       #PBS -l walltime=15:00:00
        # email when the job [b]egins and [e]nds, or is [a]borted
        #PBS -m bea
-       #PBS -M dlatornell@eos.ubc.ca
-       #PBS -o ../results/spin-up/23sep24sep/stdout
-       #PBS -e ../results/spin-up/23sep24sep/stderr
+       #PBS -M sallen@eos.ubc.ca
+       #PBS -o ../SpinUp26oct4nov/stdout
+       #PBS -e ../SpinUp26oct4nov/stderr
 
 
-       RESULTS_DIR=../results/spin-up/23sep24sep
+       RESULTS_DIR=../SpinUp26oct4nov
 
        cd $PBS_O_WORKDIR
        echo working dir: $(pwd)
