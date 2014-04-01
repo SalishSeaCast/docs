@@ -126,9 +126,10 @@ Nov 1-4     10   20                     20    *complete*            Jasper
 Nov 5-14    10   20                     20    *complete*            Jasper
 Nov 15-19   10   20                     20    *complete*            Jasper
 Nov 20-24   10   20                     20    timed-out             Jasper
-Nov 20-29   10   20                     20    run finished          Jasper
-Nov30-Dec9  10   20                     20    run finished          Jasper
-Dec 10-19   10   20                     20                          Jasper
+Nov 20-29   10   20                     20    *complete*            Jasper
+Nov30-Dec9  10   20                     20    *complete*            Jasper
+Dec 10-19   10   20                     20    *complete*            Jasper
+Dec 20-31   10   20                     20                          Jasper
 ========== ===== ============= =============  ================== =========== ==================
 
 
