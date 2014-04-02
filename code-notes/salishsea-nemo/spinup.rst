@@ -319,7 +319,7 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
 
      Runs typically required about 80 minutes of compute time per model-day but a substantial excess allowance should be requested.
      Wall time values that have been found to be adequate are 4h for a 2d run,
-     and 15h for a 10d run.
+     16.75h for a 10d run, and 20h for a 12d run.
 
      You should also set your email address in the :kbd:`#PBS -M` line so that job start,
      end,
@@ -336,7 +336,7 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
        #PBS -l procs=84
        # memory per processor
        #PBS -l pmem=2gb
-       #PBS -l walltime=15:00:00
+       #PBS -l walltime=16:45:00
        # email when the job [b]egins and [e]nds, or is [a]borted
        #PBS -m bea
        #PBS -M sallen@eos.ubc.ca
