@@ -129,7 +129,13 @@ Nov 20-24   10   20                     20    timed-out             Jasper
 Nov 20-29   10   20                     20    *complete*            Jasper
 Nov30-Dec9  10   20                     20    *complete*            Jasper
 Dec 10-19   10   20                     20    *complete*            Jasper
-Dec 20-31   10   20                     20                          Jasper
+Dec 20-31   10   20                     20    timed-out             Jasper
+Dec 20-25   10   20                     20    *complete*            Jasper   fixed North tides
+Dec 26-31   10   20                     20    *complete*            Jasper
+Jan 1-5     10   20                     20    *complete*            Jasper
+Jan 6-10    10   20                     20    run finished          Jasper
+Jan 11-20   10   20                     20    running               Jasper
+Jan 21-30   10   20                     20    ready to run          Jasper
 ========== ===== ============= =============  ================== =========== ==================
 
 
@@ -317,9 +323,12 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
 
          #PBS -l walltime=15:00:00
 
-     Runs typically required about 80 minutes of compute time per model-day but a substantial excess allowance should be requested.
-     Wall time values that have been found to be adequate are 4h for a 2d run,
-     16.75h for a 10d run, and 20h for a 12d run.
+     Runs typically required about 80 minutes of compute time per model-day if they allocated to the fast (X5675) nodes on jasper.
+     However,
+     if a run is allocated to the slow (L5420) nodes on jasper it can take nearly 180 minutes of compute time per model-day.
+     It appears to be more advantageous to request sufficient run walltime to allow runs to complete on the slow nodes than to request that only fast nodes be used.
+     Wall time values that have been found to be adequate are 6h for a 2d run,
+     15h for a 5d run, and 30h for a 10d run.
 
      You should also set your email address in the :kbd:`#PBS -M` line so that job start,
      end,
@@ -336,7 +345,7 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
        #PBS -l procs=84
        # memory per processor
        #PBS -l pmem=2gb
-       #PBS -l walltime=16:45:00
+       #PBS -l walltime=30:00:00
        # email when the job [b]egins and [e]nds, or is [a]borted
        #PBS -m bea
        #PBS -M sallen@eos.ubc.ca
@@ -365,8 +374,8 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
        echo "Results gathering ended at $(date)"
 
        echo "Scheduling cleanup of run directory"
-       echo rmdir $PBS_O_WORKDIR > /tmp/cleanup
-       at now + 1 minutes -f /tmp/cleanup 2>&1
+       echo rmdir $PBS_O_WORKDIR > /tmp/SpinUp26oct4nov_cleanup
+       at now + 1 minutes -f /tmp/SpinUp26oct4nov_cleanup 2>&1
 
 #. Commit and push the run set file changes for each run prior to queuing the run so that there is a clear record of runs in the :ref:`SS-run-sets-repo` repo.
    Don't forget to add any files created for a run to the repo.
