@@ -137,8 +137,9 @@ Jan 6-10    10   20                     20    *complete*            Jasper
 Jan 11-20   10   20                     20    *complete*            Jasper
 Jan 21-30   10   20                     20    *complete*            Jasper
 Jan31-Feb9  10   20                     20    run finished          Jasper
-Feb 10-19   10   20                     20    running               Jasper   fixed West bt vels
-Feb20-Mar1  10   20                     20    ready to queue        Jasper
+Feb 10-19   10   20                     20    run finishe           Jasper   fixed West bt vels
+Feb20-Mar1  10   20                     20    run finished          Jasper
+Mar 2-11    10   20                     20    running               Jasper
 ========== ===== ============= =============  ================== =========== ==================
 
 
