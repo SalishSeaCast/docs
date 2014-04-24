@@ -136,10 +136,16 @@ Jan 1-5     10   20                     20    *complete*            Jasper
 Jan 6-10    10   20                     20    *complete*            Jasper
 Jan 11-20   10   20                     20    *complete*            Jasper
 Jan 21-30   10   20                     20    *complete*            Jasper
-Jan31-Feb9  10   20                     20    run finished          Jasper
-Feb 10-19   10   20                     20    run finishe           Jasper   fixed West bt vels
-Feb20-Mar1  10   20                     20    run finished          Jasper
-Mar 2-11    10   20                     20    running               Jasper
+Jan31-Feb9  10   20                     20    *complete*            Jasper
+Feb 10-19   10   20                     20    *complete*            Jasper   fixed West bt vels
+Feb20-Mar1  10   20                     20    *complete*            Jasper
+Mar 2-11    10   20                     20    *complete*            Jasper
+Mar 12-21   10   20                     20    *complete*            Jasper
+Mar 22-31   10   20                     20    *complete*            Jasper
+Apr 1-10    10   20                     20    *complete*            Jasper
+Apr 11-20   10   20                     20    *complete*            Jasper
+Apr 21-30   10   20                     20    finished              Jasper
+May 1-10    10   20                     20    running               Jasper
 ========== ===== ============= =============  ================== =========== ==================
 
 
@@ -325,14 +331,20 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
 
      .. code-block:: bash
 
-         #PBS -l walltime=15:00:00
+         #PBS -l walltime=16:00:00
 
      Runs typically required about 80 minutes of compute time per model-day if they allocated to the fast (X5675) nodes on jasper.
      However,
      if a run is allocated to the slow (L5420) nodes on jasper it can take nearly 180 minutes of compute time per model-day.
-     It appears to be more advantageous to request sufficient run walltime to allow runs to complete on the slow nodes than to request that only fast nodes be used.
-     Wall time values that have been found to be adequate are 6h for a 2d run,
-     15h for a 5d run, and 30h for a 10d run.
+     It appears to be more advantageous to request that only fast nodes be used rather than requesting sufficient run walltime to allow runs to complete on the slow nodes.
+     The directive to request only fast nodes is:
+
+     .. .. code-block:: bash
+
+         #PBS -l feature=X5675
+
+     Wall time values that have been found to be adequate are 3h for a 2d run,
+     8h for a 5d run, and 16h for a 10d run.
 
      You should also set your email address in the :kbd:`#PBS -M` line so that job start,
      end,
@@ -349,7 +361,8 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
        #PBS -l procs=84
        # memory per processor
        #PBS -l pmem=2gb
-       #PBS -l walltime=30:00:00
+       #PBS -l walltime=16:00:00
+       #PBS -l feature=X5675
        # email when the job [b]egins and [e]nds, or is [a]borted
        #PBS -m bea
        #PBS -M sallen@eos.ubc.ca
