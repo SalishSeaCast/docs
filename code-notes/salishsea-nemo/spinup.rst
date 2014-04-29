@@ -148,7 +148,8 @@ Apr 21-30   10   20                     20    finished              Jasper
 May 1-10    10   20                     20    finished              Jasper
 May 11-20   10   20                     20    finished              Jasper
 May 21-30   10   20                     20    finished              Jasper
-May31-Jun9  10   20                     20    running               Jasper
+May31-Jun9  10   20                     20    finished              Jasper
+Jun 10-19   10   20                     20    running               Jasper
 ========== ===== ============= =============  ================== =========== ==================
 
 
