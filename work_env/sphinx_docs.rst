@@ -51,10 +51,20 @@ Installing Sphinx
 
 Sphinx and the packages that it depends on are included in the :ref:`AnacondaPythonDistro` that you should already have installed.
 
-Experienced Python developers may wish to install Sphinx in other ways:
+The `Read the Docs Sphinx Theme`_ package needs to be installed to give local preview builds of the documentation the same appearance as they have on `readthedocs.org`_.
+Do that with:
+
+.. code-block:: bash
+
+    pip install sphinx-rtd-theme
+
+.. _Read the Docs Sphinx Theme: https://github.com/snide/sphinx_rtd_theme/blob/master/README.rst
+.. _readthedocs.org: http://salishsea-meopar-docs.readthedocs.org/
+
+Experienced Python developers may wish to install Sphinx and the Read the Docs theme in other ways:
 
 * In a Python virtual environment via :command:`virtualenv` and :command:`pip`
-* In :file:`$HOME/.local/` via :command:`pip install --user sphinx`
+* In :file:`$HOME/.local/` via :command:`pip install --user sphinx sphinx-rtd-theme`
 
 
 Building and Previewing Documentation
