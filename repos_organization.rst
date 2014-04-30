@@ -61,6 +61,7 @@ private-docs
 
 tools
 ~~~~~
+
 * public
 * Apache v2.0 license, copyright project contributors and UBC
 * scripts and docs for
@@ -118,7 +119,7 @@ NEMO-forcing
   * open boundary condition forcing
   * etc.
 
-* Bitbucket: https://bitbucket.org/salishsea/nemo-code/
+* Bitbucket: https://bitbucket.org/salishsea/nemo-forcing/
 * documentation: http://salishsea-meopar-docs.readthedocs.org/nemo-forcing.html
 
 
@@ -130,7 +131,7 @@ SS-run-sets
 * public
 * Apache v2.0 license, copyright project contributors and UBC
 * a collection of namelists and run description files for various sets of NEMO runs
-* Bitbucket: https://bitbucket.org/salishsea/ss-run-sets
+* Bitbucket: https://bitbucket.org/salishsea/ss-run-sets/
 
 
 .. _salishsea-site-repo:
@@ -141,6 +142,38 @@ salishsea-site
 * public
 * Apache v2.0 license, copyright project contributors and UBC
 * content and tool chain for the `salishsea.eos.ubc.ca`_ domain site static content
+* Bitbucket: https://bitbucket.org/salishsea/salishsea-site/
+
+
+.. _results-repo:
+
+results
+~~~~~~~
+
+* public
+* all rights reserved, copyright project contributors and UBC
+* a collection of model results and analysis produced by the Salish Sea MEOPAR project
+* Bitbucket: https://bitbucket.org/salishsea/results/
+
+
+.. _storm-surge-repo:
+
+Storm-Surge
+~~~~~~~~~~~
+
+* private until paper is published
+* development of the Salish Sea NEMO storm surge paper
+* Bitbucket: https://bitbucket.org/salishsea/Storm-Surge/
+
+
+.. _SoG-obs-repo
+
+SoG-obs
+~~~~~~~
+
+* private
+* a collection of observations made in the Salish Sea
+* Bitbucket: https://bitbucket.org/salishsea/SoG-obs/
 
 
 .. _NEMO-3.1-repo:
