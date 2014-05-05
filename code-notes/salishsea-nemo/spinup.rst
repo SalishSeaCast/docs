@@ -144,12 +144,17 @@ Mar 12-21   10   20                     20    *complete*            Jasper
 Mar 22-31   10   20                     20    *complete*            Jasper
 Apr 1-10    10   20                     20    *complete*            Jasper
 Apr 11-20   10   20                     20    *complete*            Jasper
-Apr 21-30   10   20                     20    finished              Jasper
-May 1-10    10   20                     20    finished              Jasper
-May 11-20   10   20                     20    finished              Jasper
-May 21-30   10   20                     20    finished              Jasper
-May31-Jun9  10   20                     20    finished              Jasper
-Jun 10-19   10   20                     20    running               Jasper
+Apr 21-30   10   20                     20    *complete*            Jasper
+May 1-10    10   20                     20    *complete*            Jasper
+May 11-20   10   20                     20    *complete*            Jasper
+May 21-30   10   20                     20    *complete*            Jasper
+May31-Jun9  10   20                     20    *complete*            Jasper
+Jun 10-19   10   20                     20    *complete*            Jasper
+Jun 20-29   10   20                     20    *complete*            Jasper
+Jun30-Jul9  10   20                     20    *complete*            Jasper
+Jul 10-19   10   20                     20    finished              Jasper
+Jul 20-29   10   20                     20    finished              Jasper
+Jul30-Aug8  10   20                     20    queued                Jasper
 ========== ===== ============= =============  ================== =========== ==================
 
 
