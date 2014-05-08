@@ -126,30 +126,46 @@ For example:
 creates the :command:`go_results` command that will :command:`cd` from wherever you are to the directory where your Salish Sea NEMO model run results are stored.
 
 
-.. _LoadingModulesOnJasper:
+.. _LoadingModulesOnWestgridClusters:
 
-Loading modules on :kbd:`jasper`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Loading Modules on Westgrid Clusters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When working on :kbd:`jasper.westgrid.ca` the :command:`module` command must be used to load several software components required to
+When working on Westgrid clusters the :command:`module` command must be used to load several software components required to
 compile,
 run,
 and work with the results of NEMO.
-The following :command:`module load` commands should be added to your :kbd:`jasper` :file:`$HOME/.bashrc` file:
+The required modules vary from machine to machine:
+
+.. _LoadingModulesOnJasper:
+
+* On :kbd:`jasper`,
+  the following :command:`module load` commands should be added to your :file:`$HOME/.bashrc` file:
+
+  .. code-block:: bash
+
+      module load application/python/2.7.3
+      module load library/netcdf/4.1.3
+      module load application/nco/4.3.9
+      module load library/szip/2.1
+
+  The Intel Fortran compiler,
+  OpenMPI,
+  and HDF5 modules will be loaded as side-effects.
+
+.. _LoadingModulesOnOrcinus:
+
+* On :kbd:`orcinus` the list of :command:`module load` commands is:
+
+  .. code-block:: bash
+
+      module load python
+      module load intel
+
+You can inspect the collection of modules that are loaded with the :command:`module list` command; for example,
+on :kbd:`jasper`:
 
 .. code-block:: bash
-
-    module load application/python/2.7.3
-    module load library/netcdf/4.1.3
-    module load application/nco/4.3.9
-    module load library/szip/2.1
-
-The Intel Fortran compiler,
-OpenMPI,
-and HDF5 modules will be loaded as side-effects.
-You can inspect the collection of modules that are loaded with the :command:`module list` command:
-
-.. .. code-block:: bash
 
     module list
     Currently Loaded Modulefiles:
