@@ -1,3 +1,5 @@
+.. _NEMO-forcing:
+
 ***********************************************
 Set-up, Initial Conditions, Forcing, etc. Files
 ***********************************************
@@ -6,9 +8,9 @@ The collection of domain-specific set-up,
 initial conditions, open boundary conditions,
 forcing,
 etc.
-files used to run NEMO for the Salish Sea are maintained in the `NEMO-forcing`_ repo.
+files used to run NEMO for the Salish Sea are maintained in the `NEMO-forcing repo`_.
 
-.. _NEMO-forcing: https://bitbucket.org/salishsea/nemo-forcing/
+.. _NEMO-forcing repo: https://bitbucket.org/salishsea/nemo-forcing/
 
 .. note::
 

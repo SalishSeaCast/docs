@@ -1,5 +1,3 @@
-.. _NEMO-forcing:
-
 Getting the Repo
 ================
 
@@ -103,7 +101,7 @@ and the soft start combination is done in the python notebook `I_ForcingFiles/OB
 
 ***Seasonal TS Climatology***
 
-Diane Masson through Wendy Callendar provided model results from Masson and Fine (2013) for all their model years at the mouth of Juan de Fuca.  These were interpolated onto our z-levels and then interpolated onto our horizontal grid.  
+Diane Masson through Wendy Callendar provided model results from Masson and Fine (2013) for all their model years at the mouth of Juan de Fuca.  These were interpolated onto our z-levels and then interpolated onto our horizontal grid.
 
 * :file:`SalishSea_TS_Masson.nc`
 
@@ -137,7 +135,7 @@ Preparation of the file was done in ipython notebook `I_ForcingFiles/OBC/SSH.ipy
 
 The :file:`open_boundaries/west/tides/` sub-directory contains the tidal forcing files for the western boundary of the full domain.
 
-Currently there are two complete sets of files that specify eight tidal components.  These files specify the cosine and sine components for the sea surface height (T), the x-direction velocity (U) and y-direction velocity (V).  Files are of the form 
+Currently there are two complete sets of files that specify eight tidal components.  These files specify the cosine and sine components for the sea surface height (T), the x-direction velocity (U) and y-direction velocity (V).  Files are of the form
 
 * :file:`bathy_west_sea_tide_component_grid_TUV.nc`
 
