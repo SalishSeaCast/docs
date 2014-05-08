@@ -15,6 +15,11 @@ If the result is not something like :kbd:`/bin/bash` you may be able to start :c
     bash
 
 You may want to request that your IT support change your default shell to :command:`bash` to avoid having to start :command:`bash` every time that you open a new shell window/tab.
+For the Waterhome workstations and :kbd:`salish` you can open a ticket with the request on the `EOAS Compstaff Helpdesk system`_.
+On Westgrid,
+send an email request to support@westgrid.ca.
+
+.. _EOAS Compstaff Helpdesk system: https://my.eos.ubc.ca/portal.html
 
 
 .. _.bashrc-snippets:
