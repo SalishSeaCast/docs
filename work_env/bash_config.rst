@@ -38,7 +38,7 @@ To shorten your prompt so that it shows just the name of the machine that you ar
 
     PS1="\h:\W$ "
 
-To force programs and command that want to display output page by page to use :command:`less` as their pager use:
+To force programs and commands that want to display output page by page to use :command:`less` as their pager use:
 
 .. code-block:: bash
 
@@ -112,6 +112,18 @@ To always be prompted to confirm file removals use:
 .. code-block:: bash
 
     alias rm="rm -i"
+
+Some things cannot be easily accomplished with aliases and so :command:`bash` also provides a way of writing functions.
+One good use for :command:`bash` functions is creating commands that change directories for you to particular locations without having to type long paths.
+For example:
+
+.. code-block:: bash
+
+    go_results() {
+        cd /ocean/$USER/MEOPAR/SalishSea/results;
+    }
+
+creates the :command:`go_results` command that will :command:`cd` from wherever you are to the directory where your Salish Sea NEMO model run results are stored.
 
 
 .. _LoadingModulesOnJasper:
