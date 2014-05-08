@@ -166,7 +166,7 @@ Storm-Surge
 * Bitbucket: https://bitbucket.org/salishsea/Storm-Surge/
 
 
-.. _SoG-obs-repo
+.. _SoG-obs-repo:
 
 SoG-obs
 ~~~~~~~
