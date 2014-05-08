@@ -152,9 +152,10 @@ May31-Jun9  10   20                     20    *complete*            Jasper
 Jun 10-19   10   20                     20    *complete*            Jasper
 Jun 20-29   10   20                     20    *complete*            Jasper
 Jun30-Jul9  10   20                     20    *complete*            Jasper
-Jul 10-19   10   20                     20    finished              Jasper
-Jul 20-29   10   20                     20    finished              Jasper
-Jul30-Aug8  10   20                     20    queued                Jasper
+Jul 10-19   10   20                     20    *complete*            Jasper
+Jul 20-29   10   20                     20    *complete*            Jasper
+Jul30-Aug8  10   20                     20    *complete*            Jasper
+9-18 Aug    10   20                     20    queued                Jasper
 ========== ===== ============= =============  ================== =========== ==================
 
 
