@@ -1,5 +1,8 @@
+.. bashConfiguration:
+
+*****************************
 :command:`bash` Configuration
-=============================
+*****************************
 
 All of the Salish Sea MEOPAR documentation assumes that you are using the :command:`bash` shell.
 You can check which shell you are using with:
@@ -25,7 +28,7 @@ send an email request to support@westgrid.ca.
 .. _.bashrc-snippets:
 
 :command:`.bashrc` Snippets
----------------------------
+===========================
 
 :command:`bash` executes the commands in :file:`$HOME/.bashrc` every time a new shell window/tab is opened.
 If you do not have a :file:`$HOME/.bashrc` file you can create it using your favourite editor.
@@ -129,7 +132,7 @@ creates the :command:`go_results` command that will :command:`cd` from wherever 
 .. _LoadingModulesOnWestgridClusters:
 
 Loading Modules on Westgrid Clusters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
 When working on Westgrid clusters the :command:`module` command must be used to load several software components required to
 compile,
