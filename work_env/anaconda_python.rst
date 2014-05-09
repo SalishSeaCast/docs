@@ -21,6 +21,9 @@ that we use in the Salish Sea MEOPAR project.
 
 Follow the `installation instructions`_ for your operating system and accept the option at the end of the installation to make Anaconda your default Python.
 
+Thanks to the shared storage and user configurations across all of the Waterhole machines and :kbd:`salish` you only need to do the installation once on a Waterhole machine for the libraries to be available on all of those machines.
+There is no need to install Anaconda on the Westgrid machines.
+
 Start a new shell session and confirm that :file:`$HOME/anaconda/bin/` is on your path.
 
 .. _installation instructions: http://www.continuum.io/downloads
