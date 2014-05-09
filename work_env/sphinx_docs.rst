@@ -22,9 +22,15 @@ and linked into other documentation to make them available online.
 All documentation is under :ref:`vc-with-hg` and stored in either the docs_ or `private-docs`_ project documentation repos,
 or in the docs directory of another appropriate project repo
 (see :ref:`team-repos`).
+Most notably,
+the tools_ repo includes a large public documentation tree.
+When changes that have been committed to the docs_ and tools_ repos are pushed to Bitbucket a signal is sent to readthedocs.org to automatically rebuild and render the docs at
+http://salishsea-meopar-docs.readthedocs.org/ and http://salishsea-meopar-tools.readthedocs.org/,
+respectively.
 
 .. _docs: https://bitbucket.org/salishsea/docs/
 .. _private-docs: https://bitbucket.org/salishsea/private-docs/
+.. _tools: https://bitbucket.org/salishsea/tools/
 
 Sphinx_ uses reStructuredText
 (reST),
