@@ -74,6 +74,7 @@ Mercurial Configuration
 =======================
 
 Mercurial uses configuration settings in your :file:`$HOME/.hgrc` file as global settings for everything you do with it.
+You need to set up this configuration on each machine that you use Mercurial on.
 You should create or edit your :file:`$HOME/.hgrc` file to contain:
 
 .. code-block:: ini
@@ -133,6 +134,8 @@ Global Ignore File
 ==================
 
 Mercurial uses the file specified by :kbd:`ignore` in the :kbd:`[ui]` configuration section to define a set of ignore patterns that will be applied to all repos.
+Like your Mercurial configuration,
+you need to set this up on each machine that you use Mercurial on.
 The recommended path and name for that file is :file:`$HOME/.hgignore`.
 
 You should create or edit your :file:`$HOME/.hgignore` file to contain::
