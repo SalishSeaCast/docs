@@ -245,7 +245,7 @@ Amending the Last Commit
 ------------------------
 
 :kbd:`hg commit --amend` can be used to alter the last commit,
-provided that it has not yet been pushed up stream.
+provided that it has not yet been pushed upstream.
 This allows for correction or elaboration of the commit message,
 inclusion of additional changes in the commit,
 or addition of new files to the commit,
