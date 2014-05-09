@@ -52,18 +52,20 @@ you need to have Mercurial installed on your computer.
 It is already installed on the Waterhole workstations,
 :kbd:`sable`,
 and :kbd:`salish` at UBC.
-It is also installed on :kbd:`bugaboo` and :kbd:`jasper` on WestGrid and a request to install it on other systems will likely be addressed within an hour.
+It is also installed on :kbd:`bugaboo`, :kbd:`jasper`, and :kbd:`orcinus` on WestGrid.
 If you have administrator privileges on your workstation or laptop you can download and install Mercurial for your operating system from http://mercurial.selenic.com/downloads/,
 otherwise,
 contact your IT support to have it installed for you.
 
-Windows users may want to use TortoiseHg_,
-a GUI interface that integrates with Windows Explorer.
+Windows users may want to use TortoiseHg_ or SourceTree_,
+GUI interface tools that integrate with Windows Explorer.
 However,
 this documentation focuses on command line use of Mercurial.
-The workflows described below should be easily translatable into the TortoiseHg interface and it also includes a command line interface.
+The workflows described below should be easily translatable into the GUI interface.
+TortoiseHg also includes a command line interface.
 
 .. _TortoiseHg: http://tortoisehg.org/
+.. _SourceTree: http://www.sourcetreeapp.com/
 
 
 .. _MercurialConfiguration:
