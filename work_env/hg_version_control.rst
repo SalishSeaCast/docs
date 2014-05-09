@@ -24,11 +24,22 @@ can get up to speed with Mercurial by reading `Chapter 2`_.
 .. _2: http://hgbook.red-bean.com/read/a-tour-of-mercurial-the-basics.html
 .. _Chapter 2: http://hgbook.red-bean.com/read/a-tour-of-mercurial-the-basics.html
 
-The central storage of repositories is in the `SalishSea-MEOPAR`_ team account on Bitbucket.
+The central storage of repositories is in the `SalishSea-MEOPAR`_ team account on `Bitbucket.org`_.
 If you haven't done so already,
-you should follow the `Bitbucket ssh Set-up`_ instructions to enable key authentication.
-You probably won't need to do steps 7 and 8 at the end.
+you should:
 
+* Create a `Bitbucket.org`_ account.
+  If you use an academic domain email address (like :kbd:`@eos.ubc.ca`) you will get perks like unlimited private repo collaboration.
+* Send your Bitbucket user id to dlatornell@eos.ubc.ca so that you can be added to the `SalishSea-MEOPAR`_ team account.
+* Follow the `Bitbucket ssh Set-up`_ instructions to enable key authentication.
+  You probably won't need to do steps 7 and 8 at the end.
+
+  .. note::
+
+      You only need to do the :command:`ssh-keygen` part described in step 3 once.
+      Once you have an ssh key-pair you can use it from all of your working environments.
+
+.. _Bitbucket.org: https://bitbucket.org/
 .. _SalishSea-MEOPAR: https://bitbucket.org/salishsea/
 .. _Bitbucket ssh Set-up: https://confluence.atlassian.com/pages/viewpage.action?pageId=270827678
 
