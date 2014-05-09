@@ -48,6 +48,7 @@ Other machines that you may need working environments on later include:
    anaconda_python
    salishsea_pkgs
    sphinx_docs
+   ssh_config
    emacs_config
 
 It is also possible to set up a working environment for most things other than running the NEMO model on your own laptop,
