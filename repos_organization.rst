@@ -83,6 +83,18 @@ private-tools
 * Bitbucket: https://bitbucket.org/salishsea/private-tools/
 
 
+.. _analysis-repo:
+
+analysis
+~~~~~~~~
+
+* public
+* Apache v2.0 license, copyright project contributors and UBC
+* analyses of the results of the Salish Sea MEOPAR NEMO model;
+  most of the files are IPython Notebooks
+* Bitbucket: https://bitbucket.org/salishsea/analysis/
+
+
 .. _NEMO-code-repo:
 
 NEMO-code
