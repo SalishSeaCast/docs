@@ -159,8 +159,13 @@ Jul30-Aug8  10   20                     20    *complete*            Jasper
 19-28 Aug   10   20                     20    *complete*            Jasper
 Aug29-Sep7  10   20                     20    *complete*            Jasper
 8-17 Sep    10   20                     20    *complete*            Jasper
-18-27 Sep   10   20                     20    finished              Jasper
-28Sep-7Oct  10   20                     20    queued                Jasper   flux corr N tides
+18-27 Sep   10   20                     20    *complete*            Jasper
+28Sep-7Oct  10   20                     20    *complete*            Jasper   flux corr N tides
+8-17 Oct    10   20                     20    *complete*            Jasper
+18-27 Oct   10   20                     20    *complete*            Jasper
+Oct28-Nov6  10   20                     20    finished              Jasper
+7-16 Nov    10   20                     20    finished              Jasper
+17-26 Nov   10   20                     20    queued                Jasper
 ========== ===== ============= =============  ================== =========== ==================
 
 
