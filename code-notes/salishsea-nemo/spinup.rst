@@ -166,8 +166,9 @@ Aug29-Sep7  10   20                     20    *complete*            Jasper
 Oct28-Nov6  10   20                     20    *complete*            Jasper
 7-16 Nov    10   20                     20    *complete*            Jasper
 17-26 Nov   10   20                     20    *complete*            Jasper
-Nov27-Dec6  10   20                     20    finished              Jasper
-7-16 Dec    10   20                     20    queued                Jasper
+Nov27-Dec6  10   20                     20    *complete*            Jasper
+7-16 Dec    10   20                     20    finished              Jasper
+17-26 Dec   10   20                     20    queued                Jasper
 ========== ===== ============= =============  ================== =========== ==================
 
 
