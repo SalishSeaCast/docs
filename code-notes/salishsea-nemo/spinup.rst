@@ -85,6 +85,21 @@ Lack of stability in the previous runs and the continuous need to increase visco
 
 Northern boundary was opened using tides (all 8 constituents) and seasonal T&S (based on Thomson and Huggett paper).
 
+20-Dec-2002 --
+--------------
+
+Error in phase of northern boundary constituents was found and corrected (all 8 constituents).
+
+10-Feb-2003 --
+--------------
+
+Error in the barotropic velocities at the western boundary was found and corrected.  The length of the arrays needs to be carefully matched or ssh contaminates the velocities.
+
+28-Sep-2003 --
+--------------
+
+Our northern cross-section is bigger than the cross-section where Thomson & Huggett measured their currents.  Thus our flux in is too large.  We corrected the K1 tides by the estimated amount 25% and the M2 tides by twice this to better agree with observations. 
+
 **The Runs**
 
 ========== ===== ============= =============  ================== =========== ==================
