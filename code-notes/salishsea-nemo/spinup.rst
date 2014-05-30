@@ -75,8 +75,8 @@ salinity,
 and u and v velocity components at 6 points along the thalweg and at a location in the Fraser River plume.
 
 
-26-Oct-2002 to 30-Oct-2002
---------------------------
+26-Oct-2002 --
+--------------
 
 Lack of stability in the previous runs and the continuous need to increase viscosity lead to an investigation of stability.  It was determined that the viscosity was too high (currents in the SoG were smaller than observed), and the time step was too large for a vertical CFL condition.  Reducing the time step (and reducing the viscosity) led o stable run of 26-Oct and onwards.
 
