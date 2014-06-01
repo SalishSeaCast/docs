@@ -98,7 +98,8 @@ Error in the barotropic velocities at the western boundary was found and correct
 28-Sep-2003 --
 --------------
 
-Our northern cross-section is bigger than the cross-section where Thomson & Huggett measured their currents.  Thus our flux in is too large.  We corrected the K1 tides by the estimated amount 25% and the M2 tides by twice this to better agree with observations. 
+Our northern cross-section is bigger than the cross-section where Thomson & Huggett measured their currents.  Thus our flux in is too large.  We corrected the K1 tides by the estimated amount 25% and the M2 tides by twice this to better agree with observations.
+
 
 **The Runs**
 
@@ -149,8 +150,8 @@ Dec 20-25   10   20                     20    *complete*            Jasper   fix
 Dec 26-31   10   20                     20    *complete*            Jasper
 Jan 1-5     10   20                     20    *complete*            Jasper
 Jan 6-10    10   20                     20    *complete*            Jasper
-Jan 11-20   10   20                     20    *complete*            Jasper
-Jan 21-30   10   20                     20    *complete*            Jasper
+Jan 11-20   10   20                     20    *complete*            Jasper   5d restart files
+Jan 21-30   10   20                     20    *complete*            Jasper   5d restart files
 Jan31-Feb9  10   20                     20    *complete*            Jasper
 Feb 10-19   10   20                     20    *complete*            Jasper   fixed West bt vels
 Feb20-Mar1  10   20                     20    *complete*            Jasper
@@ -179,11 +180,12 @@ Aug29-Sep7  10   20                     20    *complete*            Jasper
 8-17 Oct    10   20                     20    *complete*            Jasper
 18-27 Oct   10   20                     20    *complete*            Jasper
 Oct28-Nov6  10   20                     20    *complete*            Jasper
-7-16 Nov    10   20                     20    *complete*            Jasper
-17-26 Nov   10   20                     20    *complete*            Jasper
-Nov27-Dec6  10   20                     20    *complete*            Jasper
-7-16 Dec    10   20                     20    finished              Jasper
-17-26 Dec   10   20                     20    queued                Jasper
+7-16 Nov    10   20                     20    *complete*            Jasper   5d restart files
+17-26 Nov   10   20                     20    *complete*            Jasper   5d restart files
+Nov27-Dec6  10   20                     20    *complete*            Jasper   5d restart files
+7-16 Dec    10   20                     20    *complete*            Jasper   5d restart files
+17-26 Dec   10   20                     20    finished              Jasper   5d restart files
+27-31 Dec   10   20                     20    queued                Jasper   5d restart file
 ========== ===== ============= =============  ================== =========== ==================
 
 
