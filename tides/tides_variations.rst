@@ -17,11 +17,9 @@ where :math:`A_{M_2}`, :math:`\phi_{M_2}`, :math:`A_{K_1}`, and :math:`\phi_{K_1
 
 Results
 --------------
-The modelled amplitude and phase will be compared to observations at several points within the domain: Port Renfrew, Point Atkinson, and Yorke Island. This way we can evaluate model performance over different regions. Other comparisons are available but will not be summarized here. 
+The modelled amplitude and phase will be compared to observations at several points within the domain: Port Renfrew, Point Atkinson, and Yorke Island. This way we can evaluate model performance over different regions. Other locations are available but will not be summarized here. 
 
-We have calculated the phase difference :math:`\Delta \phi =\phi_{mod}-\phi_{obs}` and the amplitude ratio :math:`R = \frac{A_{mod}}{A_{obs}}`. The results are summarized in the table below.
-
-
+We have calculated the phase difference :math:`\Delta \phi =\phi_{mod}-\phi_{obs}` and the amplitude ratio :math:`R = \frac{A_{mod}}{A_{obs}}`. The results are summarized in the tables below. (to follow)
 
 
 References
