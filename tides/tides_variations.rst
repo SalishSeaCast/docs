@@ -28,38 +28,50 @@ We have calculated the phase difference :math:`\Delta \phi =\phi_{mod}-\phi_{obs
 +================+============================+=============+=====================+================+=====================+================+=====================+
 |                |                            | :math:`R`   | :math:`\Delta \phi` | :math:`R`      | :math:`\Delta \phi` | :math:`R`      | :math:`\Delta \phi` |   
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_flux_M2K1  | original tides at west,    |             |                     |                |                     |                |                     | 
+|tide_flux_M2K1  | original tides at west,    | 1.01        | 1.74                | 0.911          | 10.4                | 1.16           | -3.91               | 
 |                | flux corrected at north    |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_flux_west  | :math:`M_2` and            |             |                     |                |                     |                |                     | 
+|tide_flux_west  | :math:`M_2` and            | 1.16        | 6.06                | 1.01           | 13.4                | 1.15           | -4.03               | 
 |                | :math:`K_1` flux           |             |                     |                |                     |                |                     |
 |                | increased by 25% at        |             |                     |                |                     |                |                     |
 |                | west                       |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_bottom     | bottom friction            |             |                     |                |                     |                |                     |
+|tide_bottom     | bottom friction            | 0.991       | -0.944              | 0.943          | 9.94                | 1.13           | -5.44               |    
 |                | decreased to               |             |                     |                |                     |                |                     |
 |                | :math:`3\times 10^{-3}`    |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_nu15       | lateral viscosity          |             |                     |                |                     |                |                     |
+|tide_nu15       | lateral viscosity          | 1.00        | 1.54                | 0.914          | 10.2                | 1.16           | -4.08               |
 |                | decreased to 15            |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_bottom1e-3 | bottom friction            |             |                     |                |                     |                |                     |
+|tide_bottom1e-3 | bottom friction            | 0.965       | -5.14               | 0.993          | 9.13                | 1.09           | -8.24               |
 |                | decreased to               |             |                     |                |                     |                |                     |
 |                | :math:`1\times 10^{-3}`    |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_K1phase2   | :math:`K_1` phase          |             |                     |                |                     |                |                     |
+|tide_K1phase2   | :math:`K_1` phase          | 1.01        | 1.70                | 0.911          | 10.5                | 1.16           | -3.95               |
 |                | decreased 5 deg            |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_K1amp      | above plus :math:`K_1`     |             |                     |                |                     |                |                     |
+|tide_K1amp      | above plus :math:`K_1`     | 0.965       | -5.55               | 0.998          | 9.13                | 1.08           | -8.33               |
 |                | amplitude                  |             |                     |                |                     |                |                     |
 |                | decreased 15% and          |             |                     |                |                     |                |                     |
 |                | b.f.                       |             |                     |                |                     |                |                     |
 |                | :math:`1\times 10^{-3}`    |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_M2phase    | above plus :math:`M_2`     |  .969       | -15.2               | 1.01           | 0.662               | 1.08           | -6.66               |
+|tide_M2phase    | above plus :math:`M_2`     | 0.969       | -15.2               | 1.01           | 0.662               | 1.08           | -6.66               |
 |                | phase                      |             |                     |                |                     |                |                     |
 |                | decreased 9 deg            |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
+
+**Summary**
+
+* Decreasing bottom friction increases :math:`M_2` amplitude at Point Atkinson but decreases it at Port Renfrew. There is a good match at Point Atkinson when bottom friction is :math:`1\times10^{-3}`.
+
+* Decreasing bottom friction decreases the :math:`M_2` phase difference at all three locations, with the largest response at Port Renfrew and Yorke Island.
+
+* Decreasing the viscosity has little effect at all three stations. 
+
+* Decreasing the :math:`K_1` phase has little effect on the :math:`M_2` amplitude and phase.
+
+* Point Atkinson :math:`M_2` phases are very consistent over all of the iterations, except the last where the :math:`M_2` phase has changed in forcing. The phases at Port Renfrew and Yorke Island are more sensitive to changes in bottom friction and viscosity.
 
 
 :math:`K_1` Results
@@ -72,29 +84,29 @@ We have calculated the phase difference :math:`\Delta \phi =\phi_{mod}-\phi_{obs
 +================+============================+=============+=====================+================+=====================+================+=====================+
 |                |                            | :math:`R`   | :math:`\Delta \phi` | :math:`R`      | :math:`\Delta \phi` | :math:`R`      | :math:`\Delta \phi` |   
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_flux_M2K1  | original tides at west,    |             |                     |                |                     |                |                     | 
+|tide_flux_M2K1  | original tides at west,    | 1.07        | 3.51                | 1.09           | 8.46                | 1.14           | -5.78               | 
 |                | flux corrected at north    |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_flux_west  | :math:`M_2` and            |             |                     |                |                     |                |                     | 
+|tide_flux_west  | :math:`M_2` and            | 1.19        | 0.151               | 1.18           | 7.11                | 1.16           | -5.09               | 
 |                | :math:`K_1` flux           |             |                     |                |                     |                |                     |
 |                | increased 25% at           |             |                     |                |                     |                |                     |
 |                | west                       |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_bottom     | bottom friction            |             |                     |                |                     |                |                     |
+|tide_bottom     | bottom friction            | 1.08        | 6.31                | 1.11           | 7.10                | 1.14           | -4.42               |
 |                | decreased to               |             |                     |                |                     |                |                     |
 |                | :math:`3\times 10^{-3}`    |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_nu15       | lateral viscosity          |             |                     |                |                     |                |                     |
+|tide_nu15       | lateral viscosity          | 1.07        | 3.48                | 1.08           | 8.24                | 1.14           | -5.69               |
 |                | decreased to 15            |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_bottom1e-3 | bottom friction            |             |                     |                |                     |                |                     |
+|tide_bottom1e-3 | bottom friction            | 1.10        | 10.2                | 1.15           | 5.27                | 1.14           | -2.22               |
 |                | decreased to               |             |                     |                |                     |                |                     |
 |                | :math:`1\times 10^{-3}`    |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_K1phase2   | :math:`K_1` phase          |             |                     |                |                     |                |                     |
+|tide_K1phase2   | :math:`K_1` phase          | 1.07        | -1.36               | 1.09           | 3.52                | 1.16           | -5.56               |
 |                | decreased 5 deg            |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
-|tide_K1amp      | above plus :math:`K_1`     |             |                     |                |                     |                |                     |
+|tide_K1amp      | above plus :math:`K_1`     | 0.934       | 5.81                | 0.984          | 0.541               | 1.13           | -5.78               |
 |                | amplitude                  |             |                     |                |                     |                |                     |
 |                | decreased 15% and          |             |                     |                |                     |                |                     |
 |                | b.f.                       |             |                     |                |                     |                |                     |
@@ -104,6 +116,15 @@ We have calculated the phase difference :math:`\Delta \phi =\phi_{mod}-\phi_{obs
 |                | phase                      |             |                     |                |                     |                |                     |
 |                | decreased 9 deg            |             |                     |                |                     |                |                     |
 +----------------+----------------------------+-------------+---------------------+----------------+---------------------+----------------+---------------------+
+
+**Summary** 
+
+* Decreasing the bottom friction increases the :math:`K_1` amplitude at Port Renfrew and Point Atkinson. There is no effect at Yorke Island.
+
+* Decreasing the bottom friction increases the :math:`K_1` phase difference at Port Renfrew and Yorke Island, with the largest response at Port Renfrew. The Point Atkinson phase difference has decreased.
+
+* Decreasing the viscosity has little effect on the :math:`K_1` amplitude and phase at these three locations. 
+
 
 References
 -------------------------
