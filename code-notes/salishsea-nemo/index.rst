@@ -9,7 +9,7 @@ This section documents the NEMO code and supporting files used to model the Sali
 .. toctree::
    :maxdepth: 2
 
-   quickstart
+   quickstart/index
    nemo-code
    nemo-forcing/index
    ss-run-sets
