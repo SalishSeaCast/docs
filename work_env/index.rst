@@ -47,6 +47,7 @@ Other machines that you may need working environments on later include:
    hg_version_control
    anaconda_python
    salishsea_pkgs
+   ipython_notebook
    sphinx_docs
    ssh_config
    emacs_config
