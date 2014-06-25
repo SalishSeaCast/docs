@@ -26,6 +26,7 @@ __ ipynb_
 * `Plotting Bathymetry Colour Meshes.ipynb`_
 * `Plotting Tracers on Horizontal Planes.ipynb`_
 * `Plotting Velocity Fields on Horizontal Planes.ipynb`_
+* `Plotting Velocities and Tracers on Vertical Planes.ipynb`_
 
 .. _Exploring netCDF Files.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Exploring%20netCDF%20Files.ipynb
 
@@ -34,6 +35,8 @@ __ ipynb_
 .. _Plotting Tracers on Horizontal Planes.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Tracers%20on%20Horizontal%20Planes.ipynb
 
 .. _Plotting Velocity Fields on Horizontal Planes.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Velocity%20Fields%20on%20Horizontal%20Planes.ipynb
+
+.. _Plotting Velocities and Tracers on Vertical Planes.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Velocities%20and%20Tracers%20on%20Vertical%20Planes.ipynb
 
 The links above are to static renderings of the notebooks via
 `nbviewer.ipython.org`_ .
