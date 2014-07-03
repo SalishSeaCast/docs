@@ -52,6 +52,7 @@ etc.
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     hg clone ssh://hg@bitbucket.org/salishsea/docs
     hg clone ssh://hg@bitbucket.org/salishsea/tools
+    hg clone ssh://hg@bitbucket.org/salishsea/analysis
 
 Next,
 install the :ref:`SalishSeaTools` and the :ref:`SalishSeaCmdProcessor` by following the installation instructions in those links.
