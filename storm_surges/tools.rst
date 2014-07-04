@@ -25,7 +25,7 @@ Tidal predictions can be calculated using a package called :file:`t_tide` (Pawlo
 
 Tidal predictions
 ^^^^^^^^^^^^^^^^^
-Using, the :file:`t_tide` package, we have a matlab script that will calculate and save tidal harmonics and predictions. 
+Using, the :file:`t_tide` package, we have a MATLAB script that will calculate and save tidal harmonics and predictions. 
 It also calculates tidal predictions using only the 8 consituents with which we are forcing the model. 
 We would like to know what error might appear by only using 8 constituents.
 
