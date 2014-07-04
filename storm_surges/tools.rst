@@ -5,7 +5,9 @@ Analysis tools
 
 An sample script for analyzing storm surge results can be found here: `analysisSS.ipynb <http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/storm_surges/analysisSS.ipynb>`_.
 
-There are also a variety of functions written in :file:`salishsea_tools/stormtools`.
+There are also a variety of functions described in `salishsea_tools/stormtools`_.
+
+.. _salishsea_tools/stormtools: http://salishsea-meopar-tools.readthedocs.org/en/latest/SalishSeaTools/salishsea-tools.html#module-stormtools
 
 The surge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -34,7 +36,7 @@ The MATLAB script is called :file:`get_ttide_8.m` and is found in the :file:`ana
 This MATLAB function takes in the csv file with water level observations from the DFO website to calculate tidal harmonics and tidal predictions over a time period defined by date strings :file:`starts` and :file:`ends`.
 It then saves harmonics in :file:`location_harmonics_date1_date2.csv` where location is one of the arguments of :file:`get_ttide_8`. 
 :file:`date1` and :file:`date2` are string representations of the start and end date of the observation time series. 
-For years heavy in storm surges, it is suggested to use a time series from the year prior to the surge event of interest since a large surge may affect the harmonic analysys.
+For years heavy in storm surges, it is suggested to use a time series from the year prior to the surge event of interest since a large surge may affect the harmonic analysis.
 
 This function also saves a file called :file:`location_t_tide_compare8_starts_ends.csv` where :file:`starts` and :file:`ends` are arguments of :file:`get_ttide_8`.
 This file contains tidal predictions with all the consituents determined by :file:`t_tide` and the 8 used to force the model. 
