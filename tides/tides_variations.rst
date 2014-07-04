@@ -8,7 +8,7 @@ The modelled tidal response is compared to observations from Foreman et al. (199
 
 Procedure
 -------------------------
-Several 5-day long simulations forced with :math:`M_2` and :math:`K_1` tidal constituents have been completed. A sinusoidal curve fitting technique is applied to the time series of the modelled sea surface high to estimate the :math:`M_2` and :math:`K_1` amplitude and phase. The fitting curve is defined as follows:
+Several 5-day long simulations forced with :math:`M_2` and :math:`K_1` tidal constituents have been completed. A sinusoidal curve fitting technique is applied to the time series of the modelled sea surface height to estimate the :math:`M_2` and :math:`K_1` amplitude and phase. The fitting curve is defined as follows:
 
 .. math::
    f(t) = A_{M_2}\cos(\omega_{M_2}t - \phi_{M_2}) + A_{K_1}\cos(\omega_{K_1}t - \phi_{K_1})
