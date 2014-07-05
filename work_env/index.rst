@@ -38,7 +38,10 @@ Other machines that you may need working environments on later include:
   (primarily :kbd:`jasper`)
   are used for longer research runs of the model.
 
-.. _Westgrid: https://www.westgrid.ca/
+  .. _Westgrid: https://www.westgrid.ca/
+
+When you are ready to run on those machines,
+please see the :ref:`QuickStartGuide` for instructions on setting working environments on them.
 
 .. toctree::
    :maxdepth: 2
