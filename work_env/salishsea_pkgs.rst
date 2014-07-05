@@ -37,7 +37,7 @@ In the work space you need to clone a number of Salish Sea MEOPAR project repos 
 The repos that you need depends whether the environment is for running the model,
 doing analysis,
 etc.;
-the :ref:`QuickStart` provides guidance for the repos to install in model run environments.
+the :ref:`QuickStartGuide` provides guidance for the repos to install in model run environments.
 Here,
 we'll assume that you are setting up your Waterhole machine working environment where you will be doing analysis,
 development,
