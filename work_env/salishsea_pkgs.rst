@@ -13,22 +13,6 @@ In the working environment on your Waterhole workstation you should create a wor
 
     mkdir -p /ocean/$USER/MEOPAR
 
-On :kbd:`salish` you should create a work space on the :file:`/data/` partition:
-
-.. code-block:: bash
-
-    ssh salish
-    mkdir -p /data/$USER/MEOPAR
-
-On the Westgrid clusters you can create a work space in your home directory,
-for example,
-on :kbd:`jasper`:
-
-.. code-block:: bash
-
-    ssh jasper
-    mkdir $HOME/MEOPAR
-
 On your own laptop,
 well,
 the choice of where you put files is up to you...
@@ -40,19 +24,24 @@ etc.;
 the :ref:`QuickStartGuide` provides guidance for the repos to install in model run environments.
 Here,
 we'll assume that you are setting up your Waterhole machine working environment where you will be doing analysis,
-development,
 documentation,
 etc.
 
 .. code-block:: bash
 
     cd /ocean/$USER/MEOPAR/
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
-    hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     hg clone ssh://hg@bitbucket.org/salishsea/docs
     hg clone ssh://hg@bitbucket.org/salishsea/tools
     hg clone ssh://hg@bitbucket.org/salishsea/analysis
+    hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
 
 Next,
-install the :ref:`SalishSeaTools` and the :ref:`SalishSeaCmdProcessor` by following the installation instructions in those links.
+install the :ref:`SalishSeaTools` and the :ref:`SalishSeaCmdProcessor`:
+
+.. code-block:: bash
+
+    cd tools
+    pip install -e SalishSeaTools
+    pip install -e SalishSeaCmd
+
+The links above contain information about the contents of those packages.

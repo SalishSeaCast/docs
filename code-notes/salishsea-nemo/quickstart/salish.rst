@@ -11,19 +11,13 @@ Details of what this all means and why the steps below are what they are can be 
 Create a Workspace
 ==================
 
-You can call your workspace directory whatever you want so here we're going to call it :file:`MEOPAR`.
+You can call your workspace directory whatever you want but for consistency across systems we're going to call it :file:`MEOPAR`.
 
-Modelruns  will be done on :kbd:`salish` and the :file:`/data/` partition should be used there:
+:kbd:`salish` has a large local storage partition mounted at :file:`/data/` which is where we will put the code and run configuration file repos:
 
 .. code-block:: bash
 
     mkdir -p /data/$USER/MEOPAR
-
-Development and analysis work will probably be done on one of the :kbd:`ocean`-cluster workstations where storage is under the :file:`/ocean/` NFS mount:
-
-.. code-block:: bash
-
-    mkdir -p /ocean/$USER/MEOPAR
 
 Create directories for the temporary directories that are created to run the model,
 and to receive results files from runs.
@@ -32,6 +26,10 @@ We'll call them :file:`SalishSea/` and :file:`SalishSea/results/`:
 .. code-block:: bash
 
     mkdir -p /data/$USER/MEOPAR/SalishSea/results
+
+The :kbd:`ocean.eos.ubc.ca` storage storage server space that you use on your Waterhole workstation is mounted at :file:`/ocean/` on :kbd:`salish` so you should be able to see your :ref:`SalishSeaReposPackages` at :file:`/ocean/$USER/MEOPAR/`.
+
+You may want to open an EOAS help desk ticket requesting that the :kbd:`salish` :file:`/data/` partition be mounted on your Waterhole workstation so that you can easily view and copy files when you are not logged into :kbd:`salish` without having to use :command:`scp` or :command:`sftp`.
 
 
 Clone the Repos
@@ -47,40 +45,13 @@ and :ref:`SS-run-sets <SS-run-sets>` repos into your workspace on :file:`/data/`
 
     cd /data/$USER/MEOPAR/
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
-
-And clone the :ref:`tools <tools-repo>`,
-:ref:`analysis <analysis-repo>`
-and :ref:`docs <docs-repo>` repos into your workspace on :file:`/ocean/`:
-
-.. code-block:: bash
-
-    cd /ocean/$USER/MEOPAR/
-    hg clone ssh://hg@bitbucket.org/salishsea/tools
-    hg clone ssh://hg@bitbucket.org/salishsea/analysis
-    hg clone ssh://hg@bitbucket.org/salishsea/docs
-
-
-Install Tools and Command Processor Packages
-============================================
-
-Assuming that you have the :ref:`AnacondaPythonDistro` installed,
-install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python packages:
-
-.. code-block:: bash
-
-    cd tools/SalishSeaTools
-    pip install -e .
-    cd ../SalishSeaCmd
-    pip install -e .
 
 
 Compile the Code
 ================
 
-Assuming that you are working on :kbd:`salish`,
-compile and link the full domain Salish Sea NEMO configuration and the IOM output server with the :kbd:`salish` architecture definitions with the compilation distributed over 8 cores.
+Compile and link the full domain Salish Sea NEMO configuration and the IOM output server with the :kbd:`salish` architecture definitions with the compilation distributed over 8 cores.
 
 .. code-block:: bash
 
