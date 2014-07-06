@@ -1,16 +1,16 @@
-River input 
-======================================================================================================
+River Input
+===========
 
 Sources
----------------------------------
+-------
 
-River input provides a significant volume of freshwater to the Salish Sea and can influence stratification, circulation and primary productivity. We need to parametrise the rivers that flow into the Salish Sea throughout the domain. 
+River input provides a significant volume of freshwater to the Salish Sea and can influence stratification, circulation and primary productivity. We need to parametrise the rivers that flow into the Salish Sea throughout the domain.
 
 Morrison et al. (2011) provides a method for estimating freshwater runoff in the Salish Sea region based on precipitation. We acquired the exact data from Morrison, which includes the runoff volumes for each watershed for each year from 1970 to 2012, as well as monthly averages. These data are saved in netcdf files in the nemo-forcing/rivers directory.
 
 Figure 1 of Morrison et al. (2011) shows the watershed boundaries but for more precise detail, some of these boundaries coincide with watershed boundaries shown `on this ArcGIS map <http://www.arcgis.com/home/webmap/viewer.html?services=aeef4efc47e842a59ea11431fcffa2bd>`_.
 
-Next, we split the freshwater runoff from each watershed between the rivers in that watershed. To do this, we needed accurate maps of the rivers in the region. The following sources were used: 
+Next, we split the freshwater runoff from each watershed between the rivers in that watershed. To do this, we needed accurate maps of the rivers in the region. The following sources were used:
 
 * For BC, maps of rivers can be found on the Atlas of Canada - `Toporama site <http://atlas.nrcan.gc.ca/site/english/toporama/index.html>`_.
 
@@ -28,13 +28,13 @@ Based on the values in Morrison et al. (2011), the approximate percentage of fre
 * Skagit 12%
 * East Vancouver Is (North and South) 12%
 * Howe 7%
-* Bute 7% 
-* Puget 6% 
+* Bute 7%
+* Puget 6%
 * Juan de Fuca 5%
 * Jervis 4%
 * Toba 3%
 
-Through the method described above, we have parameterised a total of 150 rivers in our domain. 
+Through the method described above, we have parameterised a total of 150 rivers in our domain.
 
 Watersheds
 ----------
@@ -98,16 +98,16 @@ Skagit
 EVI_N
 ^^^^^
 
-* Source used: Toporama map at 1:100,000 (CA).  Areas (other than Oyster, Campbell, Sayward) were estimated from print outs of the graphs.  Large rivers areas are given in Environment Canada (EC) database. Note that not all of Morrison's EVI_N drains into our model.  
+* Source used: Toporama map at 1:100,000 (CA).  Areas (other than Oyster, Campbell, Sayward) were estimated from print outs of the graphs.  Large rivers areas are given in Environment Canada (EC) database. Note that not all of Morrison's EVI_N drains into our model.
 
 Percent drained from each river was proportional to its drainage area versus the total drainage area given by Morrison.
 
 Below, rivers marked with '+' means I made up the name.
 
- * Oyster River is at 705,121: area 363 km2 (according to EC)  
+ * Oyster River is at 705,121: area 363 km2 (according to EC)
 
- * Qunisam River flows into Campbell River. #08HD003 is Campbell River at the town, drainage area 1470 km2 (EC) Latitude: 50.0353065 Longitude: -125.2629857, Lat/Lon of mouth -125.2601, 50.0510 for the mouth gives two points 123 749 and 750 
- 
+ * Qunisam River flows into Campbell River. #08HD003 is Campbell River at the town, drainage area 1470 km2 (EC) Latitude: 50.0353065 Longitude: -125.2629857, Lat/Lon of mouth -125.2601, 50.0510 for the mouth gives two points 123 749 and 750
+
   * Snowden Creek 139 km2 CA Latitude: 50.1125819 Longitude: -125.3723186 point 117 770
 
   * Menzies Creek 31 km2 CA  Latitude: 50.1383412 Longitude: -125.3908277 point  117 773
@@ -128,7 +128,7 @@ Below, rivers marked with '+' means I made up the name.
   * Amor de Cosmos Creek 229 km2 CA Latitude: 50.3582412 Longitude: -125.6876354 point 96 843
 
   * Humpback+ 10 km2 CA Latitude: 50.3561671 Longitude: -125.7174369 point 93 844
-  
+
   * Palmer+ 14 km2 CA Latitude: 50.3603414 Longitude: -125.7371761 point 92 845
 
   * Hkusam+ 14 km2 CA Latitude: 50.3624995 Longitude: -125.7693388  point 87 848
@@ -137,7 +137,7 @@ Below, rivers marked with '+' means I made up the name.
 
   * Camp Point North+ 14 km2 CA Latitude: 50.3807285 Longitude: -125.8540664 point 78, 858 so done together with Camp Point South
 
-  * Salmon River drainage area 1210 km2 (EC), #08HD006 is Salmon River near Sayward,   Latitude: 50.3930713 Longitude: -125.9514349 points 64 866-867 
+  * Salmon River drainage area 1210 km2 (EC), #08HD006 is Salmon River near Sayward,   Latitude: 50.3930713 Longitude: -125.9514349 points 64 866-867
 
   * Sayward+ 14 km2 CA Latitude: 50.388379 Longitude: -125.9592292 point 64, 866
 
@@ -147,7 +147,7 @@ Below, rivers marked with '+' means I made up the name.
 
   * unmarked+ 7 km2 CA Latitude: 50.4427467 Longitude: -126.0688793 point 54 884
 
-  * Newcastle+ 34 km2 CA Latitude: 50.4526841 Longitude: -126.1194916 point 47 890 
+  * Newcastle+ 34 km2 CA Latitude: 50.4526841 Longitude: -126.1194916 point 47 890
 
   * Windy+ 10 km2 CA Latitude: 50.4552649 Longitude: -126.1585149 point 42 893
 
@@ -208,7 +208,7 @@ Puget
 	* Blackjack 5% of WRIA15, 47.545278,-122.627292
 	* Clear 5% of WRIA15, 47.64735,-122.686901
 	* Barker 2.5% of WRIA15, 47.636998,-122.674971
-	* Big Valley 10% of WRIA15, 47.736812,-122.653127 
+	* Big Valley 10% of WRIA15, 47.736812,-122.653127
 	* Assume 50% of Blackjack+Clear+Barker+BigValley enters Puget Sound at i = 68, j = 210
 	* Assume 50% of Blackjack+Clear+Barker+BigValley enters Puget Sound at 47.724083,-122.551725 i = 108, j = 232
 	* Big Bear 5% of WRIA15, 47.657482,-122.785542, i = 112, j = 189
@@ -227,7 +227,7 @@ Puget
 	* Skookum 10% of WRIA14, 47.136374,-123.075929
 	* Kennedy 10% of WRIA14, 47.057873,-123.006234
 	* Schneider 5% of WRIA14, 47.057932,-122.998338
-	* Perry 10% of WRIA14, 
+	* Perry 10% of WRIA14,
 	* 50% of Deer+Johns+Goldborough+Mill+Skookum+Kennedy+Schneider enter Puget Sound at 47.289476,-122.894711,i = 47, j = 130
 	* 50% of Deer+Johns+Goldborough+Mill+Skookum+Kennedy+Schneider +100% of Perry enter Puget Sound at 47.166609,-122.861266, i = 20, j = 120
 
@@ -310,7 +310,7 @@ JdF
 		* Sail River (5% of watershed WRIA 19) 48.360327,-124.556508 (i = 373, j = 17)
 
 EVI_S
-^^^^^^^^^^^^^^^^^^
+^^^^^
 
 * Source used: BCCF map and fluxes.  Could return here using the Toporama maps.
 * Total flux (according to Morrison is 329.5 m3/s.  Adding fluxes and areas to estimate fluxes as given below gave 292.6 so values were multiplied up to make the difference
@@ -339,9 +339,9 @@ EVI_S
 Jervis
 ^^^^^^
 
-* Source used: Toporama map, 
+* Source used: Toporama map,
 * See `this site <http://www.pac.dfo-mpo.gc.ca/science/oceans/BCinlets/jervis-eng.htm>`_
-* As there were no gauged rivers in the Jervis Inlet watershed, Trites (1955) estimated the freshwater discharge using  the area of the watershed (~1400 km2) and local precipitation data.   The estimated mean annual discharge of 180 m3 s-1 is considerably smaller than the discharge in most of the longer BC inlets.  Unlike many of the BC inlets where the main river enters at the head, there are many small rivers and streams distributed along the shores of Jervis Inlet.  The runoff cycle for Jervis Inlet more closely follows the local precipitation cycle as the area of snow fields which store winter precipitation is relatively small (Macdonald and Murray 1973). 
+* As there were no gauged rivers in the Jervis Inlet watershed, Trites (1955) estimated the freshwater discharge using  the area of the watershed (~1400 km2) and local precipitation data.   The estimated mean annual discharge of 180 m3 s-1 is considerably smaller than the discharge in most of the longer BC inlets.  Unlike many of the BC inlets where the main river enters at the head, there are many small rivers and streams distributed along the shores of Jervis Inlet.  The runoff cycle for Jervis Inlet more closely follows the local precipitation cycle as the area of snow fields which store winter precipitation is relatively small (Macdonald and Murray 1973).
 * Pickard (1961) (http://www.nrcresearchpress.com/doi/pdf/10.1139/f61-062): The chief difference between these inlets is that Jervis has less than 40% as much river runoff as Bute, and only one-quarter of this comes in at the head whereas in Bute three-quarters of the total enters at the head. The flushing effect of the large runoff into the head of Bute is expected to be greater on the whole of the inlet length than that of the smaller runoff distributed along the length of Jervis.
 * Flow out of Powell Lake taken from Sanderson et al. (1986)
 * Jervis Inlet only area = 1400km2 (Trites 1955) ==> 25% of Jervis watershed (5785km2)
@@ -352,7 +352,7 @@ Jervis
 * Assume Stakawus Creek accounts for 4% of Jervis only, enters at 50.074273,-123.776457
 * Crabapple Creek accounts for 4% of Jervis only, enters at 50.1207422, -123.8436382
 * Osgood Creek accounts for 4% of Jervis only, enters at 50.0371886, -123.8964722
-* Skwawka/Hunaechin/Lausmann/Slane/Smanit/Loquilts/Potato/Deserted/Crabapple/Stakawus/Osgood all enter 
+* Skwawka/Hunaechin/Lausmann/Slane/Smanit/Loquilts/Potato/Deserted/Crabapple/Stakawus/Osgood all enter
 * domain at the same point 50.0894746,-123.7828011, i = 648, j = 318
 * Glacial Creek accounts for 5% of Jervis only, enters at 50.0062107, -123.9070838, i = 647, j = 317
 * Seshal Creek accounts for 5% of Jervis only, enters at 50.0246890, -123.9260495, i = 650, j = 317
@@ -363,9 +363,9 @@ Jervis
 * Sechelt is about 66% of Jervis Inlet, based on values in Table II of Pickard (1961) (110m3/s / 180m3/s) ==> 17% of Jervis watershed
 * Sechelt Inlet isn't in the domain, assume the input enters at 49.770844,-123.955708, i = 604, j = 280
 * Outflow from Powell Lake is 3e9m3/year (Sanderson et al 1986) ==> 32% of Jervis watershed, enters at 49.874421,-124.565288, i = 666, j = 202
-* From Section 4 of this report (http://www.powellriverrd.bc.ca/wp-content/uploads/2011/09/Community-Profile.pdf), 
+* From Section 4 of this report (http://www.powellriverrd.bc.ca/wp-content/uploads/2011/09/Community-Profile.pdf),
 * Lois Lake drains 45,000ha = 450km2 ==> 8% of Jervis watershed...make it 10% to account for little rivers nearby, enters at  49.771481, -124.332197, i = 629, j = 224
-* From Section 4 of this report (http://www.powellriverrd.bc.ca/wp-content/uploads/2011/09/Community-Profile.pdf), 
+* From Section 4 of this report (http://www.powellriverrd.bc.ca/wp-content/uploads/2011/09/Community-Profile.pdf),
 * Haslam Lake drains 13,140ha = 131km2 ==> 2% of Jervis watershed, enters at 49.77356,-124.367173, i = 632, j = 219
 * estimate Chapman Creek drains about 2% of the catchment, enters at 49.4381655, -123.7229658, i = 522, j = 273
 * estimate Lapan Creek drains about 2% of the catchment, enters at 49.8368204, -123.9942065, i = 619, j = 282
@@ -375,23 +375,25 @@ Jervis
 * estimate Myers/Kleindale/Anderson represent 4% of catchment, into the domain at 49.6340820, -123.9952235, i = 571, j = 248
 
 Toba
-^^^^^^^^^^^^^^^^^^
+^^^^
 
 * Source used: All just put in at truncated head.
 * Source used: Maps
 * Assume Toba is 100% of watershed (i=746, j= 240-242)
 
 Creating input files for NEMO
--------------------------------------------------
+-----------------------------
 
-The grid point of the location of each river mouth was found. The ipython notebook 'AddRivers' creates a NetCDF files containing the river flow at the respective grid cell for each river throughout the domain. Where the river mouth was not included in the domain, the river was added to the closest grid point to the river mouth. 
+The grid point of the location of each river mouth was found. The ipython notebook 'AddRivers' creates a NetCDF files containing the river flow at the respective grid cell for each river throughout the domain. Where the river mouth was not included in the domain, the river was added to the closest grid point to the river mouth.
 
 In some cases (e.g. the end of Jervis inlet, Puget Sound) numerous rivers were not included in the domain, so the sum of all the omitted rivers' flow was added to the closest grid point.
 
 References
--------------------------------
+----------
 
-* J. Morrison , M. G. G. Foreman and D. Masson, 2012. A method for estimating monthly freshwater discharge affecting British Columbia coastal waters, Atmosphere-Ocean, 50:1, 1-8, DOI: 10.1080/07055900.2011.637667
+* J. Morrison , M. G. G. Foreman and D. Masson, 2012. A method for estimating monthly freshwater discharge affecting British Columbia coastal waters, Atmosphere-Ocean, 50:1, 1-8, DOI: `10.1080/07055900.2011.637667`_
 * Sanderson et al (1986)
 * Thomson, 1982: Physical Oceanography of the BC Coast.
+
+.. _10.1080/07055900.2011.637667: http://dx.doi.org/10.1080/07055900.2011.637667
 
