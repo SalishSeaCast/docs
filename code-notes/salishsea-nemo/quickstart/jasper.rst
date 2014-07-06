@@ -38,10 +38,9 @@ Create a :file:`$HOME/.local/` file space for per-user installation of Python pa
 .. code-block:: bash
 
     mkdir -p $HOME/.local
-    cd tools/SalishSeaTools
-    pip install --user -e .
-    cd ../SalishSeaCmd
-    pip install --user -e .
+    cd tools
+    pip install --user -e SalishSeaTools
+    pip install --user -e SalishSeaCmd
 
 Edit your :file:`$HOME/.bashrc` to add :file:`$HOME/.local/bin` to your :envvar:`PATH`:
 
@@ -73,7 +72,7 @@ edit,
 and version control those files to define the runs that you want to execute.
 
 The run description file is described in the :ref:`RunDescriptionFileStructure` section of the :ref:`project tools documentation <SalishSeaToolsDocs>`.
-The namelist are described in the `NEMO-3.4 Book`_.
+The namelists are described in the `NEMO-3.4 Book`_.
 
 .. _NEMO-3.4 Book: http://www.nemo-ocean.eu/content/download/21612/97924/file/NEMO_book_3_4.pdf
 
@@ -91,7 +90,7 @@ something like:
 
 .. code-block:: bash
 
-    salishsea_cmd.prepare Created run directory ../../SalishSea/38e87e0c-472d-11e3-9c8e-0025909a8461
+    salishsea_cmd.prepare INFO: Created run directory ../../SalishSea/38e87e0c-472d-11e3-9c8e-0025909a8461
     salishsea_cmd.run INFO: 4792276.jasper-usradm.westgrid.ca
 
 You can use the job identifier with :program:`qstat`,
