@@ -72,37 +72,38 @@ See :ref:`rebuild-nemo-tool` for more information about it.
 
 .. _PrepareRun:
 
-Prepare a Run
-=============
+Prepare and Execute Runs
+========================
 
 The :file:`SS-run-sets/` :ref:`SS-run-sets-SalishSea` contains version controlled sample run description files and namelist segment files.
 Create your own directory in that repo where you can copy,
 edit,
 and version control those files to define the run that you want to execute.
-Use :program:`salishsea` :ref:`salishsea-prepare` to create a temporary run directory containing all of the appropriate files and symbolic links:
+
+The run description file is described in the :ref:`RunDescriptionFileStructure` section of the :ref:`project tools documentation <SalishSeaToolsDocs>`.
+The namelists are described in the `NEMO-3.4 Book`_.
+
+.. _NEMO-3.4 Book: http://www.nemo-ocean.eu/content/download/21612/97924/file/NEMO_book_3_4.pdf
+
+Use :program:`salishsea` :ref:`salishsea-run` to prepare,
+execute,
+and gather the results for a run:
 
 .. code-block:: bash
 
-    salishsea prepare SalishSea.yaml iodef.xml
+    salishsea run SalishSea.yaml iodef.xml /data/$USER/MEOPAR/SalishSea/results/my_excellent_results
 
-That command will provide the relative path and name of the temporary run directory,
+:command:`salishsea run` returns the relative path and name of the temporary run directory,
+and the job identifier assigned by the queue manager,
 something like:
 
 .. code-block:: bash
 
-    Created run directory ../../SalishSea/4361797c-530f-11e3-ae1d-0025909a8461
+    salishsea_cmd.prepare INFO: Created run directory ../../SalishSea/38e87e0c-472d-11e3-9c8e-0025909a8461
+    salishsea_cmd.run INFO: 57.master
 
 
-Run the Model
-=============
-
-Assuming that you are running the model with a 4x4 MPI domain decomposition,
-go to the temporary run directory and run the model:
-
-.. code-block:: bash
-
-    cd ../../SalishSea/4361797c-530f-11e3-ae1d-0025909a8461
-    mpiexec -n 16 ./nemo.exe > stdout 2> stderr &
+You can use the :program:`qstat` command to monitor the execution status of your job.
 
 A convenient command to monitor the memory use of a run and its time step progress is:
 
@@ -110,22 +111,7 @@ A convenient command to monitor the memory use of a run and its time step progre
 
     watch -n 5 "(free -m; cat time.step)"
 
-
-Collect the Run Results
-=======================
-
-When the run is finished,
-and assuming that you are still in the temporary run directory,
-combine the pre-processor netCDF run results files and gather the rest of the run results files into a directory for analysis:
-
-.. code-block:: bash
-
-    salishsea gather --no-compress SalishSea.yaml ../results/my_excellent_results
-
-Unless you have a reason to keep it around,
-the
-(now empty)
-temporary run directory can be deleted at this point.
+When the job completes the results should have been gathered in the directory you specified in the :command:`salishsea run` command and the temporary run directory should have been deleted.
 
 
 Look at the Results
