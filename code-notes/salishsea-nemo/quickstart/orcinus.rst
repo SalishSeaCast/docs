@@ -104,6 +104,8 @@ There is no need to clone the :file:`docs` or :file:`analysis` repos on :kbd:`or
 Install Tools and Command Processor Packages
 ============================================
 
+*Warning*: pip is not installed on orcinus, instructions to come.
+
 Create a :file:`$HOME/.local/` file space for per-user installation of Python packages and install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python packages:
 
 .. code-block:: bash
@@ -122,10 +124,10 @@ and the :program:`rebuild_nemo` tool:
 
 .. code-block:: bash
 
-    cd NEMO-code/NEMOGCM/CONFIG
-    source SalishSea/orcinus_build.sh
-    cd ../TOOLS
-    source REBUILD_NEMO/orcinus_build.sh
+    cd NEMO-code/NEMOGCM/CONFIG/SalishSea
+    source orcinus_build.sh
+    cd ../TOOLS/REBUILD_NEMO
+    source orcinus_build.sh
 
 
 Prepare and Execute Runs
