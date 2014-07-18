@@ -1,4 +1,4 @@
-.. bashConfiguration:
+.. _bashConfiguration:
 
 *****************************
 :command:`bash` Configuration
