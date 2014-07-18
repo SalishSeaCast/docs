@@ -74,6 +74,12 @@ You can manually load the :kbd:`python` module each time you log in,
 or you can add it to your :file:`.bashrc` file (as shown above)
 so that it is automatically loaded when you :program:`ssh` into :kbd:`orcinus`.
 
+Change the :kbd:`lpath` line in the :kbd:`modify search path` section of :file:`.bash_profile` to include :file:`$HOME/.local/bin` and :file:`$HOME/bin` in your search path:
+
+.. code-block:: bash
+
+    lpath=$HOME/.local/bin:$HOME/bin
+
 
 Create a Workspace and Clone the Repos
 ======================================
@@ -106,12 +112,6 @@ Create a :file:`$HOME/.local/` file space for per-user installation of Python pa
     cd tools
     pip install --user -e SalishSeaTools
     pip install --user -e SalishSeaCmd
-
-Change the :kbd:`lpath` line in the :kbd:`modify search path` section of :file:`.bash_profile` to include :file:`$HOME/.local/bin` and :file:`$HOME/bin` in your search path:
-
-.. code-block:: bash
-
-    lpath=$HOME/.local/bin:$HOME/bin
 
 
 Compile the Code
