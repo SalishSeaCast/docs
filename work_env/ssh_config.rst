@@ -47,8 +47,10 @@ Thanks to shared storage between the Waterhole machines and :kbd:`salish` that i
     cat id_rsa.pub >> authorized_keys
 
 
-:command:`ssh-agent` Forwarding for :kbd:`jasper`
-=================================================
+:command:`ssh-agent` Forwarding for :kbd:`jasper` or for :kbd:`orcinus`
+=======================================================================
+
+Orcinus is exactly the same as jasper, just change the name throughout.
 
 To set up agent forwarding for :kbd:`jasper` append the following to the :file:`$HOME/.ssh/config` file on your Waterhole machine:
 
