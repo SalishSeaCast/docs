@@ -104,13 +104,23 @@ There is no need to clone the :file:`docs` or :file:`analysis` repos on :kbd:`or
 Install Tools and Command Processor Packages
 ============================================
 
-*Warning*: pip is not installed on orcinus, instructions to come.
+Install pip
+-----------
 
-Create a :file:`$HOME/.local/` file space for per-user installation of Python packages and install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python packages:
+Create a :file:`$HOME/.local/` file space for per-user installation of Python packages.
+Download and install pip
 
 .. code-block:: bash
 
     mkdir -p $HOME/.local
+    curl -LO https://bootstrap.pypa.io/get-pip.py
+    python get-pip.py --user
+    
+
+ and install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python packages:
+
+.. code-block:: bash
+    
     cd tools
     pip install --user -e SalishSeaTools
     pip install --user -e SalishSeaCmd
