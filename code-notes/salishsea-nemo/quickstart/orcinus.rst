@@ -9,6 +9,11 @@ and that you are familiar with :ref:`WorkingOnSalish`.
 .. _orcinus.westgrid.ca: https://www.westgrid.ca/orcinus
 
 
+Set-up SSH key-forwarding
+=========================
+
+See orcinus instructions at the bottom of :ref:`sshConfiguration`.
+
 :file:`.bash_profile` and :file:`.bashrc`
 =========================================
 
@@ -79,7 +84,6 @@ Change the :kbd:`lpath` line in the :kbd:`modify search path` section of :file:`
 .. code-block:: bash
 
     lpath=$HOME/.local/bin:$HOME/bin
-
 
 Create a Workspace and Clone the Repos
 ======================================
