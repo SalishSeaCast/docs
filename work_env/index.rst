@@ -50,7 +50,7 @@ please see the :ref:`QuickStartGuide` for instructions on setting working enviro
    hg_version_control
    anaconda_python
    salishsea_pkgs
-   ipython_notebook
+   python_notes
    sphinx_docs
    ssh_config
    emacs_config
