@@ -70,7 +70,7 @@ Install your :command:`ssh` public key on :kbd:`jasper`:
     cd $HOME/.ssh/
     scp id_rsa.pub jasper:.ssh/authorized_keys
 
-You will be prompted for your Westgrid password,
+Note: You may have to create the :file:`.ssh` directory in your home directory on :kbd:`jasper` first. You will be prompted for your Westgrid password,
 but after the key has been installed you should be able to use :command:`ssh`,
 :command:`scp`,
 and :command:`sftp` to connect to :kbd:`jasper` without having to type your password.
