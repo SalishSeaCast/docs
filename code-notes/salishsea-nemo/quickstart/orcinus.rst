@@ -139,7 +139,7 @@ and the :program:`rebuild_nemo` tool:
 
     cd NEMO-code/NEMOGCM/CONFIG/SalishSea
     source orcinus_build.sh
-    cd ../TOOLS/REBUILD_NEMO
+    cd ../../TOOLS/REBUILD_NEMO
     source orcinus_build.sh
 
 
