@@ -7,6 +7,8 @@ This is a collection of documentation about the Salish Sea MEOPAR project.
 
 They are rendered at [http://salishsea-meopar-docs.readthedocs.org/](http://salishsea-meopar-docs.readthedocs.org/).
 
+[![Documentation Status](https://readthedocs.org/projects/salishsea-meopar-docs/badge/?version=latest)](https://readthedocs.org/projects/salishsea-meopar-docs/?badge=latest)
+
 
 License
 -------
