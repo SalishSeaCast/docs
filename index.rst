@@ -48,6 +48,7 @@ Contents
    stability/index
    storm_surges/index
    turbulence/index
+   particles/index
    code-notes/dev-notes/index
    CONTRIBUTORS
 
