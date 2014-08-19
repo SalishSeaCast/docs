@@ -55,11 +55,7 @@ To run Ariane, add the path for the Ariane executable to your :kbd:`PATH` enviro
 
 	export PATH=SHOME/MEOPAR/Ariane/bin:$PATH
 
-Now you can run Ariane from any directory by typing:
-
-.. code-block:: bash
-
-	ariane
+Now you can run Ariane from any directory by typing :kbd:`ariane`.
 
 To test that you have everything set up correctly, run one of the Ariane examples. 
 For instance, try:
