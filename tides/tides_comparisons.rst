@@ -36,7 +36,7 @@ Water level
 
 .. _alltidecomparison:
 
-.. figure:: alltidecomparion.png 
+.. figure:: alltidecomparison.png 
 	
 In the above figure, green circles represent errors less than 5 cm, yellow circles represent errors between 5 and 10 cm and red circles mark errors greater than 10 cm.	
 
