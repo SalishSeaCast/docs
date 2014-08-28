@@ -1,32 +1,6 @@
-Progress on tidal comparisons
+Tidal comparisons
 ===========================================
 
-Time series comparisons
---------------------------------------
-
-Water level
-*********** 
-
-* Measured water level observations at DFO stations can be compared to water level time series from NEMO
-
-* ipython notebook: `comp_wlev_ts.ipynb`_
-
-.. _comp_wlev_ts.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/compare_tides/comp_wlev_ts.ipynb
-
-* TO DO: make this notebook into a function that plots time vs. water level at the station location for model and measured: ::
-
-	comp_wlev_ts(model_run,stat_num)
-
-Currents
-**********
- 
-* Measured current time series - have not got measured time series of currents yet could be compared to current time series from NEMO
-
-* no ipython notebook yet
-
-* Would be nice to write a function that would plot tidal ellipses at the station location for model and measured: ::
-	
-	comp_current_ts(model_run,stat_num)
 
 Harmonics comparisons
 -------------------------------------------
@@ -34,32 +8,37 @@ Harmonics comparisons
 Water level 
 ************
 
-M2 and K1
-+++++++++++++++++++
+* All 8 components (M2, K1, O1, S2, P1, N2, Q1 and K2) computed by NEMO can be compared to harmonics from water level (calculated by Mike Foreman, Institute of Ocean Sciences and for M2 and K1 shown in his papers Foreman et al (1995, 2000)). 
 
-* Measured M2 and K1 harmonics from water level (calculated and shown by Foreman et al (1995))  can be compared to harmonics calculated inside NEMO model
+* ipython notebook: `Analysis8Components.ipynb`_
 
-* ipython notebook: `comp_wlev_harm.ipynb`_
+.. _Analysis8Components.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/compare_tides/Analysis8Components.ipynb
 
-.. _comp_wlev_harm.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/compare_tides/comp_wlev_harm.ipynb
+* This notebook focuses on a set of 31 stations that form a line from Juan de Fuca up through the Strait of Georgia into Discovery Passage and the North End of the Model.
 
-* This notebook has a switch for choosing which model run to analyse. Then it evaluates the model's performance by calculating differences (as described by Foreman et al (1995) and Masson & Cummins (2004)) and saving these to a text file. Finally, the notebook plots the differences as circles of varying radii on a map of the bathymetry. So far, the notebook only does this for M2.
+.. _Station_map-image:
 
-* This notebook will be made into a function that calculates differences (as described by Foreman et al (1995) and Masson & Cummins (2004)) for each constituent and save them to a text file at all stations in the model domain: ::
+.. figure:: Station_map.png
+
+* Tidal harmonics are calculated using a least squares fit to the last 37.5 days of a 40-day model run without wind.  Scatter plots comparing the measured and modelled harmonics are made, example:
+
+.. _K1scatter-image:
+
+.. figure:: K1scatter.png
+
+* The notebook calculates differences (as described by Foreman et al (1995)) for M2 and K1 and saves them to a text file and plots them.
+
+.. _fit-image:
+
+.. figure:: fit.png
+
+* This image clearly shows that other than at Seymour Narrows (station 26) the model K1 tide is within 5 cm of the measured tide.  However, the M2 tide is poor not only in the Discovery Passage area (stations 24-28) but also in the Strait of Juan de Fuca.  The latter is a choice.  The model was tuned to match in Strait of Georgia (SoG).  Due to over-prediction of the amphidrome near Victoria the model cannot reproduce both the M2 tide in Juan de Fuca and in SoG at the same time.  This error is the only significant error with the tides.  We think it is due to over mixing in the Gulf/San Juan Island region and are working on that.
+
+.. _alltidecomparison:
+
+.. figure:: alltidecomparion.png 
 	
-	comp_wlev_harm_M2(model_run)
-	comp_wlev_harm_K1(model_run)
-
-Other constituents
-+++++++++++++++++++++
-
-* Other constituents will have to be either requested from someone who has calculated them (e.g. Foreman) or calculated from time series using t_tide.
-
-* no ipython notebook yet
-
-* something like: ::
-	
-	comp_wlev_harm_minor(model_run)
+In the above figure, green circles represent errors less than 5 cm, yellow circles represent errors between 5 and 10 cm and red circles mark errors greater than 10 cm.	
 
 
 Currents
@@ -68,31 +47,11 @@ Currents
 M2 and K1
 +++++++++++++++++++
 
-* M2 and K1 harmonics calculated from current measurements (calculated and shown by Foreman et al (1995))  can be compared to harmonics calculated inside NEMO model. 
+* M2 and K1 tidal ellipses calculated from current measurements at the ONC nodes have been compared to the model output.  The agreement is generally good, but the model currents are somewhat lower.
 
-* Not sure how to compare harmonics from model to measured harmonics, because measured harmonics are rectilinear and just have a direction. Which is OK for converting the measured amplitude to U and V components, but I don't know what to do with the phase...
+* M2 and K1 tidal ellipses calculated from CODAR current measurements have also been compared to the model output.  The agreement is generally good, but the model currents are somewhat higher!
 
-* Also, the bathymetry is not well resolved around many of the measured points (because they're in narrow inlets and passes) so there is no model point to compare to the measurements
-
-* ipython notebook: `comp_current_harm.ipynb`_
-
-.. _comp_current_harm.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/compare_tides/comp_current_harm.ipynb
-
-* something like: ::
-
-	comp_current_harm_M2(model_run)
-	comp_current_harm_K1(model_run)
-
-Other constituents
-+++++++++++++++++++++
-
-* TO DO: Other measured current constituents will have to be either requested from someone who has calculated them (e.g. Foreman) or calculated from time series using t_tide.
-
-* no ipython notebook yet
-
-* something like: ::
-
-	comp_current_harm_minor(model_run)
+* Drifter measurements to be made in Sep 2014 will also be used to compare to the modelled tidal ellipses.
 
 
 
