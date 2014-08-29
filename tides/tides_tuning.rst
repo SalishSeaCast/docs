@@ -72,6 +72,11 @@ Then moved to 30 days for RC8 and 40 days for R9 and further.
 
 From RC9 on, tuning used Newton-Ralphson method assuming that the western amplitude only affected the amplitude in SoG, the western phase determines the phase in SoG and the northern amplitude and phase determined the Johnstone Strait amplitude and phase, respectively.  There is indeed little correlation from the west to the north.  However, phase does affect amplitude and vice versa.
 
+Stopping
+--------
+
+For the longer runs, error estimates were made by sub-sampling the full time-series multiple times.  This allowed an estimate of the error in determining the harmonics.  Once the difference between the mean value and the observations was less than twice the standard deviation of the model results, the tuning was consider finished.
+
 At RC13 it was determined that the western tides were tuned.
 
 At corr15 it was determined that the northern tides were tuned.
@@ -80,17 +85,17 @@ Full run parameters are at:
 
 * spreadsheet: `TideTuningRunParameters.ods`_
 
-.. _TideTuningRunParameters.ods: https://bitbucket.org/salishsea/analysis/src/tip/compare_tides/TideTuningRunParameters.ods?at=default`
+.. _TideTuningRunParameters.ods: https://bitbucket.org/salishsea/analysis/src/tip/compare_tides/TideTuningRunParameters.ods?at=default
 
 Newton-Ralphson Process is at:
 
 * spreadsheet: `diagnostics.ods`_
 
-.. _diagnostics.ods: https://bitbucket.org/salishsea/analysis/src/tip/Susan/diagnostics.ods?at=default`
+.. _diagnostics.ods: https://bitbucket.org/salishsea/analysis/src/tip/Susan/diagnostics.ods?at=default
 
 And final results can be seen in:
 
-* ipython notebook: `Analysis8Components.ipynb`_
+* ipython notebook: `Analysis8Components`_
 
-.. _Analysis8Components.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/compare_tides/Analysis8Components.ipynb`
+.. _Analysis8Components: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/compare_tides/Analysis8Components.ipynb`
 
