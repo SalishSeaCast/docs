@@ -9,3 +9,4 @@ Tidal evaluation
    tides_data_acquisition
    tides_comparisons
    tides_variations
+   tides_tuning
