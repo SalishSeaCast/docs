@@ -92,5 +92,5 @@ And final results can be seen in:
 
 * ipython notebook: `Analysis8Components.ipynb`_
 
-.. _Analysis8Components.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/compare_tides/Analysis8Components.ipynb
+.. _Analysis8Components.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/compare_tides/Analysis8Components.ipynb`
 
