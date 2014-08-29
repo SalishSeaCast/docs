@@ -64,6 +64,10 @@ We have calculated the phase difference :math:`\Delta \phi =\phi_{mod}-\phi_{obs
 |                | slip BCs: :file:`rn_shlat` |                |           |            |           |                |              |                     |                |                     |                |                     |
 |                | is 0.1 (from 0.5)          |                |           |            |           |                |              |                     |                |                     |                |                     |
 +----------------+----------------------------+----------------+-----------+------------+-----------+----------------+--------------+---------------------+----------------+---------------------+----------------+---------------------+
+|tide_slipH      | above plus closer to noslip| :math:`0.001`  | 20        |            |           |   161.2        |   0.998      | -8.98               | 0.929          | 2.14                |                |                     |
+|                | BCs: :file:`rn_shlat`      |                |           |            |           |                |              |                     |                |                     |                |                     |
+|                | is 1.0 (from 0.5)          |                |           |            |           |                |              |                     |                |                     |                |                     |
++----------------+----------------------------+----------------+-----------+------------+-----------+----------------+--------------+---------------------+----------------+---------------------+----------------+---------------------+
 
 
 **Summary**
@@ -76,12 +80,13 @@ We have calculated the phase difference :math:`\Delta \phi =\phi_{mod}-\phi_{obs
 
 * Decreasing the viscosity has little effect at all three stations but does slightly decrease the phase difference between Point Atkinson and Port Renfrew.
 
-* Increasing the flux  decreased the phase difference between Point Atkinson and Port Renfrew.
+* Increasing the flux decreased the phase difference between Point Atkinson and Port Renfrew but increased the amplitude drop.
 
 * Decreasing the :math:`K_1` phase has little effect on the :math:`M_2` amplitude and phase.
 
 * Point Atkinson :math:`M_2` phases are very consistent over all of the iterations, except the last where the :math:`M_2` phase has changed in forcing. The phases at Port Renfrew and Yorke Island are more sensitive to changes in bottom friction and viscosity.
 
+* Increasing the slip, increases the phase difference between Point Atkinson and Port Renfrew.  Decreasing the slip, decreases the phase difference but increases the amplitude drop.
 
 :math:`K_1` Results
 ^^^^^^^^^^^^^^^^^^^
@@ -142,8 +147,11 @@ We have calculated the phase difference :math:`\Delta \phi =\phi_{mod}-\phi_{obs
 Implications
 ------------
 
-From the first set of results, we decided that the bottom friction should not be reduced and we fixed it at 0.005, that the smaller viscosity 
-was better so we fixed that at 15 :math: `m^2 s^{-1}`.
+From the M2 results, we decided that the bottom friction should not be reduced and we fixed it at 0.005, that the smaller viscosity 
+was better so we fixed that at 15 :math:`m^2 s^{-1}`.  We increased the Flux by 25% but left the slip at 0.5.
+
+Both amplitude drop and phase increase between Port Renfrew and Point Atkinson are important, but the large phase change causes the largest total errors.  So choices were made to reduce the phase increase at the expense of increasing the
+amplitude drop.
 
 
 References
