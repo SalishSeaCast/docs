@@ -26,8 +26,8 @@ We have calculated the phase difference :math:`\Delta \phi =\phi_{mod}-\phi_{obs
 :math:`M_2` Results
 ^^^^^^^^^^^^^^^^^^^
 +----------------+----------------------------+----------------+-----------+------------+-----------+----------------+--------------+---------------------+----------------+---------------------+----------------+---------------------+
-| Simulation     |Description                 |                |           |            |           | Diff. in Phase |   Port Renfrew                     | Point Atkinson                       | Yorke Island                         |
-|                |                            |                |           |            |           | betw. PR & PA
+| Simulation     |Description                 |                |           |            |           | Diff. in Phase | Port Renfrew                       | Point Atkinson                       | Yorke Island                         |
+|                |                            |                |           |            |           | betw. PR & PA  |                                    |                                      |                                      |
 +================+============================+================+===========+============+===========+================+==============+=====================+================+=====================+================+=====================+
 |                |                            |Bottom Friction | Viscosity | Mean Error | RMS Error |      (deg)     |  :math:`R`   | :math:`\Delta \phi` | :math:`R`      | :math:`\Delta \phi` | :math:`R`      | :math:`\Delta \phi` |   
 |                |                            |                |           | (m/deg)    | (m/deg)   |                |              |                     |                |                     |                |                     |
