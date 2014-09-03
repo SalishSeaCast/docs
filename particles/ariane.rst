@@ -11,7 +11,7 @@ Getting the code
 
 * Register and use your username and password to download the zip file with Ariane's source code
 
-Installing and running on :kbd:`salish`
+Installing on :kbd:`salish`
 ------------------------------------------
 On :kbd:`salish` create an Ariane working directory:
 
@@ -61,7 +61,7 @@ Run Ariane from any directory by typing :kbd:`ariane`.
 
 
 
-Installing and running on :kbd:`orcinus` 
+Installing :kbd:`orcinus` 
 ------------------------------------------
 On :kbd:`orcinus` create an Ariane working directory:
 
