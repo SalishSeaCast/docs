@@ -11,7 +11,7 @@ Getting the code
 
 * Register and use your username and password to download the zip file with Ariane's source code
 
-Installing on :kbd:`salish`
+Installing and running on :kbd:`salish`
 ------------------------------------------
 On :kbd:`salish` create an Ariane working directory:
 
@@ -57,11 +57,10 @@ Add the path for the Ariane executable to your :kbd:`PATH` environment variable:
 
 	export PATH=$HOME/MEOPAR/Ariane/bin:$PATH
 
-Run Ariane from any directory by typing :kbd:`ariane`.
+Now you can run Ariane from any directory by typing :kbd:`ariane`.
 
 
-
-Installing :kbd:`orcinus` 
+Installing and running on :kbd:`orcinus` 
 ------------------------------------------
 On :kbd:`orcinus` create an Ariane working directory:
 
@@ -110,7 +109,7 @@ On :kbd:`orcinus` Ariane runs can also be sumbitted to the queue.
 An example :kbd:`.pbs` will be included soon. 
 
 
-Running Ariane
+Testing and Setup
 ------------------------
 To test that you have everything set up correctly, run one of the Ariane examples. 
 For instance, try:
