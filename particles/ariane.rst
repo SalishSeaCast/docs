@@ -106,6 +106,12 @@ To run Ariane, add the path for the Ariane executable to your :kbd:`PATH` enviro
 
 Now you can run Ariane from any directory by typing :kbd:`ariane`.
 
+On :kbd:`orcinus` Ariane runs can also be sumbitted to the queue.
+An example :kbd:`.pbs` will be included soon. 
+
+
+Running Ariane
+------------------------
 To test that you have everything set up correctly, run one of the Ariane examples. 
 For instance, try:
 
@@ -116,8 +122,9 @@ For instance, try:
 
 You should notice several new files, such as :kbd:`ariane_trajectories_qualitative.nc` and :kbd:`traj.txt`.
 These files contain the trajectory information.
-:kbd:`ariane_trajectories_qualitative.nc` can be loaded into a notebook to plot the particle locations over time and starting/finishing points, etc. 
-A quick look at :kbd:`traj.txt` can be useful as well.
+
+* :kbd:`ariane_trajectories_qualitative.nc` can be loaded into a notebook to plot the particle locations over time and starting/finishing points, etc. 
+* :kbd:`traj.txt` is helpful if you want to get a general idea of what the resulting trajectory coordinates look like or to check if the simulation ran properly.
 
 To run your own trajectory simulation with Salish Sea model output, create a run directory:
 
@@ -127,10 +134,8 @@ To run your own trajectory simulation with Salish Sea model output, create a run
 	cd $HOME/MEOPAR/Ariane/results/myexperiment
 	
 You will need :kbd:`namelist` and :kbd:`initial_positions.txt` files in this run directory (see below). 
-Type :kbd:`ariane` to  run the code. 
 
-On :kbd:`orcinus` Ariane runs can also be sumbitted to the queue.
-An example :kbd:`.pbs` will be included soon. 
+Type :kbd:`ariane` to  run the code.
 
 
 Example run files for Salish Sea model
