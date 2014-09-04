@@ -172,7 +172,7 @@ This simulation, for example, will have 5 particles.
 
       Ariane can be run in 2 modes, quantitative and qualitative. This example, and therefore this version of the namelist, is qualitative.
 
-The namelist has the following sections: Ariane, OPAParam, Qualitative, ZonalCrt, MeridCrt, Mesh.
+The general setup for the simulation is specified in the sections **Ariane**, **OPAParam**, and **Qualitative**.
 
  .. code-block:: fortran
 
@@ -232,7 +232,7 @@ The namelist has the following sections: Ariane, OPAParam, Qualitative, ZonalCrt
 +------------------+---------------------------------------+------------------+---------------------------------------+
 
 
-
+Next, we specify both horizontal components of velocity under the sections **ZonalCrt** and **MeridCrt**. You can also input the vertical velocity component (recommended if using NEMO data) under **VertiCrt** or Ariane can compute it using the horizontal components. There is also the option of specifying temperature, saliniy, and density in the sections **Temperat**, **Salinity**, and **Density** respectively.
 
 
  .. code-block:: fortran
