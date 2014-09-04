@@ -145,6 +145,27 @@ Example run files for Salish Sea model
 
 :kbd:`intitial_positions.txt`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The :kbd:`initial_positions.txt` contains 5 columns and as many rows as there are particles in the simulation you are running.
+
+
+   .. code-block:: txt
+
+       331  415   -1  1.000    1.0
+       310  360   -1  1.000    1.0
+       310  370   -1  1.000    1.0
+       310  380   -1  1.000    1.0
+       310  410   -1  1.000    1.0
+       310  430   -1  1.000    1.0
+       310  440   -1  1.000    1.0
+       310  460   -1  1.000    1.0
+This simulation, for example, will have 8 particles.
+
+* Column 1: Spatial index (X)
+* Column 2: Spatial index (Y)
+* Column 3: Spatial index (Z). A negative value tells Ariane to confine the particle to its original depth throught its trajectory. If you would like to have the particle trajectory include vertical movement, enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data.
+* Column 4: Time index
+* Column 5: Fifth parameter = 1.0
+
 
 Looking at Ariane output
 ------------------------
