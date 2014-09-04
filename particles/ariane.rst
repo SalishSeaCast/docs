@@ -17,13 +17,13 @@ On :kbd:`salish` create an Ariane working directory:
 
 .. code-block:: bash
 
-	mkdir $HOME/MEOPAR/Ariane
+	mkdir /ocean/username/MEOPAR/Ariane
 
 Place the :kbd:`ariane-2.2.6_00.tar.gz` package in that directory and unpack it
 
 .. code-block:: bash
 
-	cd $HOME/MEOPAR/Ariane
+	cd /ocean/username/MEOPAR/Ariane
 	gunzip ariane-2.2.6_00.tar.gz
 	tar -xf ariane-2.2.6_00.tar
 
@@ -39,7 +39,7 @@ Configure the installation:
 
 .. code-block:: bash
 
-	./configure --prefix=$HOME/MEOPAR/Ariane
+	./configure --prefix=/ocean/username/MEOPAR/Ariane
 The :kbd:`prefix` argument overwrites the default install directory into a customized directory.
 
 Make and install Ariane:
@@ -55,7 +55,7 @@ Add the path for the Ariane executable to your :kbd:`PATH` environment variable:
 
 .. code-block:: bash
 
-	export PATH=$HOME/MEOPAR/Ariane/bin:$PATH
+	export PATH=/ocean/username/MEOPAR/Ariane/bin:$PATH
 
 Now you can run Ariane from any directory by typing :kbd:`ariane`.
 
@@ -132,8 +132,8 @@ To run your own trajectory simulation with Salish Sea model output, create a run
 
 .. code-block:: bash
 
-	mkdir -p  $HOME/MEOPAR/Ariane/results/myexperiment
-	cd $HOME/MEOPAR/Ariane/results/myexperiment
+	mkdir -p  /ocean/username/MEOPAR/Ariane/results/myexperiment
+	cd /ocean/username/MEOPAR/Ariane/results/myexperiment
 	
 You will need :kbd:`namelist` and :kbd:`initial_positions.txt` files in this run directory (see below). 
 
@@ -142,14 +142,14 @@ Type :kbd:`ariane` to  run the code.
 
 :kbd:`intitial_positions.txt`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :kbd:`initial_positions.txt` contains 5 columns and as many rows as there are particles in the simulation you are running.
+The :kbd:`initial_positions.txt` file is where you will specify the initial positions and initial times of the particles you are tracking. It contains 5 columns and as many rows as there are particles in the simulation you are running.
 
 
    .. code-block:: txt
 
        310  360   -1  1.000    1.0
        310  370   -2  1.000    1.0
-       310  380   -1  1.000    1.0
+       310  380   -1  2.000    1.0
        310  410   -1  1.000    1.0
        331  415   -1  1.000    1.0
        
@@ -160,20 +160,134 @@ This simulation, for example, will have 5 particles.
 * Column 3: Spatial index (Z)
 
 	* A negative value tells Ariane to confine the particle to its original depth throught its trajectory. If you would like to have the particle trajectory include vertical movement, enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data. 
-	* Since Ariane starts counting at 1, a "-1" or "1" in this column represents the surface.
-* Column 4: Time index
+	* A "-1" or "1" in this column represents the surface.
+* Column 4: Time index or :kbd:`fl`
 * Column 5: Fifth parameter = 1.0
 
 
 :kbd:`namelist`
 ^^^^^^^^^^^^^^^
 
+ .. note::
+
+      Ariane can be run in 2 modes, quantitative and qualitative. This example, and therefore this version of the namelist, is qualitative.
+
+The namelist has the following sections: Ariane, OPAParam, Qualitative, ZonalCrt, MeridCrt, Mesh.
+
+ .. code-block:: fortran
+
+        &ARIANE
+            key_alltracers =.FALSE.,
+            key_sequential =.FALSE.,
+	    key_ascii_outputs =.TRUE.,
+	    mode ='qualitative',
+	    forback ='forward',
+	    bin ='nobin',
+	    init_final ='init',
+	    nmax =10,
+	    tunit =3600.,
+	    ntfic =1,
+	    tcyc =0.,
+        /
+
+        &OPAPARAM
+            imt =398,
+	    jmt =898,
+	    kmt =40,
+	    lmt =48,
+	    key_periodic =.FALSE.,
+	    key_jfold =.FALSE.,
+	    key_computew =.TRUE.,
+	    key_partialsteps =.TRUE.,
+        /
+
+        &QUALITATIVE
+            delta_t =3600.,
+	    frequency =1,
+	    nb_output =46,
+	    key_region =.FALSE.,
+        /	
+
+
++------------------+---------------------------------------+------------------+---------------------------------------+
+|    Parameter     |              Description              |    Parameter     |              Description              |
++==================+=======================================+==================+=======================================+
+| :kbd:`nmax`      | Number of particles                   | :kbd:`kmt`       | Vertical space dimension (depth)      |
++------------------+---------------------------------------+------------------+---------------------------------------+           
+| :kbd:`tunit`     | Unit of time.                         | :kbd:`lmt`       | Number of time steps                  |
++                  +                                       +                  +                                       + 
+|                  | Example: 3600 for 1 hour              |                  |                                       |
++------------------+---------------------------------------+------------------+---------------------------------------+
+| :kbd:`ntfic`     | x :kbd:`tunit` = Time period covered  | :kbd:`delta_t`   | Unit of time.                         |
++                  +                                       +                  +                                       + 
+|                  | by each time sample in input files    |                  | Example: 3600 for 1 hour              |
++------------------+---------------------------------------+------------------+---------------------------------------+
+| :kbd:`imt`       | Horizontal space dimension            | :kbd:`frequency` | x :kbd:`delta_t` = Time interval      |
++                  +                                       +                  +                                       + 
+|                  | (longitude)                           |                  | between two sucessive position outputs|
++------------------+---------------------------------------+------------------+---------------------------------------+
+| :kbd:`jmt`       | Horizontal space dimension            | :kbd:`nb_output` | Total number of position outputs for  |
++                  +                                       +                  +                                       + 
+|                  | (latitude)                            |                  | each trajectory.                      |
++------------------+---------------------------------------+------------------+---------------------------------------+
+
+
+
+
+
+ .. code-block:: fortran
+
+        &
+        &ZONALCRT
+            c_dir_zo ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
+            c_prefix_zo ='SalishSea_1h_20061214_20061215_grid_U.nc',
+	    ind0_zo =-1,
+	    indn_zo =-1,
+	    maxsize_zo =-1,
+	    c_suffix_zo ='NONE',
+	    nc_var_zo ='vozocrtx',
+	    nc_var_eivu ='NONE',
+	    nc_att_mask_zo ='NONE',
+        /
+
+        &MERIDCRT
+            c_dir_me ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
+	    c_prefix_me ='SalishSea_1h_20061214_20061215_grid_V.nc',
+	    ind0_me =-1,
+	    indn_me =-1,
+	    maxsize_me =-1,
+	    c_suffix_me ='NONE',
+	    nc_var_me ='vomecrty',
+	    nc_var_eivv ='NONE',
+	    nc_att_mask_me ='NONE',
+        /
+
+        &MESH
+            dir_mesh ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
+	    fn_mesh ='mesh_mask.nc',
+	    nc_var_xx_tt ='glamt',
+	    nc_var_xx_uu ='glamu',
+	    nc_var_yy_tt ='gphit',
+	    nc_var_yy_vv ='gphiv',
+	    nc_var_zz_ww ='gdepw',
+	    nc_var_e2u ='e2u',
+	    nc_var_e1v ='e1v',
+	    nc_var_e1t ='e1t',
+	    nc_var_e2t ='e2t',
+	    nc_var_e3t ='e3t',
+	    nc_var_tmask ='tmask',
+	    nc_mask_val =0.,
+        /
+
 
 
  .. note::
 
-      Condition 1:
-      Condition 2:
+      Condition 1: delta_t × frequency × nb_output < tunit × ntfic × lmt
+
+      Condition 2: delta_t × frequency × nb_output < tunit × ntfic × (lmt + 0.5 - max(fl))
+
+      Condition 1 must always be satisfied. Condition 2 must also be satisfied if the inital time index :kbd:`fl` is greater than 0.5.
 
 
 
