@@ -11,7 +11,7 @@ Getting the code
 
 * Register and use your username and password to download the zip file with Ariane's source code
 
-Installing and running on :kbd:`salish`
+Installing on :kbd:`salish`
 ------------------------------------------
 On :kbd:`salish` create an Ariane working directory:
 
@@ -60,7 +60,7 @@ Add the path for the Ariane executable to your :kbd:`PATH` environment variable:
 Now you can run Ariane from any directory by typing :kbd:`ariane`.
 
 
-Installing and running on :kbd:`orcinus` 
+Installing on :kbd:`orcinus` 
 ------------------------------------------
 On :kbd:`orcinus` create an Ariane working directory:
 
@@ -109,7 +109,7 @@ On :kbd:`orcinus` Ariane runs can also be sumbitted to the queue.
 An example :kbd:`.pbs` will be included soon. 
 
 
-Testing and Setup
+Testing Ariane
 ------------------------
 To test that you have everything set up correctly, run one of the Ariane examples. 
 For instance, try:
@@ -125,6 +125,9 @@ These files contain the trajectory information.
 * :kbd:`ariane_trajectories_qualitative.nc` can be loaded into a notebook to plot the particle locations over time and starting/finishing points, etc. 
 * :kbd:`traj.txt` is helpful if you want to get a general idea of what the resulting trajectory coordinates look like or to check if the simulation ran properly.
 
+
+Running Ariane: An example for Salish Sea model
+------------------------------------------------------------------------------
 To run your own trajectory simulation with Salish Sea model output, create a run directory:
 
 .. code-block:: bash
@@ -137,12 +140,6 @@ You will need :kbd:`namelist` and :kbd:`initial_positions.txt` files in this run
 Type :kbd:`ariane` to  run the code.
 
 
-Example run files for Salish Sea model
-------------------------------------------------------------------------------
-
-:kbd:`namelist`
-^^^^^^^^^^^^^^^
-
 :kbd:`intitial_positions.txt`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The :kbd:`initial_positions.txt` contains 5 columns and as many rows as there are particles in the simulation you are running.
@@ -150,24 +147,38 @@ The :kbd:`initial_positions.txt` contains 5 columns and as many rows as there ar
 
    .. code-block:: txt
 
-       331  415   -1  1.000    1.0
        310  360   -1  1.000    1.0
-       310  370   -1  1.000    1.0
+       310  370   -2  1.000    1.0
        310  380   -1  1.000    1.0
        310  410   -1  1.000    1.0
-       310  430   -1  1.000    1.0
-       310  440   -1  1.000    1.0
-       310  460   -1  1.000    1.0
-This simulation, for example, will have 8 particles.
+       331  415   -1  1.000    1.0
+       
+This simulation, for example, will have 5 particles.
 
 * Column 1: Spatial index (X)
 * Column 2: Spatial index (Y)
-* Column 3: Spatial index (Z). A negative value tells Ariane to confine the particle to its original depth throught its trajectory. If you would like to have the particle trajectory include vertical movement, enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data.
+* Column 3: Spatial index (Z)
+
+	* A negative value tells Ariane to confine the particle to its original depth throught its trajectory. If you would like to have the particle trajectory include vertical movement, enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data. 
+	* Since Ariane starts counting at 1, a "-1" or "1" in this column represents the surface.
 * Column 4: Time index
 * Column 5: Fifth parameter = 1.0
 
 
-Looking at Ariane output
+:kbd:`namelist`
+^^^^^^^^^^^^^^^
+
+
+
+ .. note::
+
+      Condition 1:
+      Condition 2:
+
+
+
+
+Ariane output
 ------------------------
 
 References
