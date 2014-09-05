@@ -216,7 +216,7 @@ The general setup for the simulation is specified in the sections **Ariane**, **
 +------------------+---------------------------------------+------------------+---------------------------------------+           
 | :kbd:`tunit`     | Unit of time.                         | :kbd:`lmt`       | Number of time steps                  |
 +                  +                                       +                  +                                       + 
-|                  | Example: 3600 for 1 hour              |                  |                                       |
+|                  | Example: 3600 for 1 hour              |                  | in input data                         |
 +------------------+---------------------------------------+------------------+---------------------------------------+
 | :kbd:`ntfic`     | x :kbd:`tunit` = Time period covered  | :kbd:`delta_t`   | Unit of time.                         |
 +                  +                                       +                  +                                       + 
@@ -240,7 +240,7 @@ The general setup for the simulation is specified in the sections **Ariane**, **
 
       Condition 1 must always be satisfied. Condition 2 must also be satisfied if any inital time index :kbd:`fl` is greater than 0.5.
       
-      Additionally, even if both conditions hold, please ensure that nb_out is less than or equal to lmt-fl.
+      Additionally, even if both conditions hold, please ensure that nb_out is less than or equal to lmt-max(fl).
 
 
 Next, we specify both horizontal components of velocity under the sections **ZonalCrt** and **MeridCrt**. You can also input the vertical velocity component (recommended if using NEMO data) under **VertiCrt** or Ariane can compute it using the horizontal components. There is also the option of specifying temperature, salinity, and density in the sections **Temperat**, **Salinity**, and **Density** respectively.
@@ -307,6 +307,12 @@ Next, we specify both horizontal components of velocity under the sections **Zon
 
 Ariane output
 ------------------------
+The trajectories can be plotted in a python notebook. Different colours are used to distinguish the different trajectories and their initial positions are marked by a gray square. A 3D plot may be helpful in viewing particles at varying depths.
+
+
+.. figure:: images/Trajectories2D.png
+
+.. figure:: images/Trajectories3D.png
 
 References
 -------------------------------
