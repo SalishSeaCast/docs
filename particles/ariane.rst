@@ -314,6 +314,16 @@ The trajectories can be plotted in a python notebook. Different colours are used
 
 .. figure:: images/Trajectories3D.png
 
+
+Notebooks
+-------------------------------
+If you would like to see more examples of particle tracking, feel free to look at the following notebook:
+
+* `ParticleTracking.ipynb`_
+
+.. _ParticleTracking.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/ParticleTracking.ipynb
+
+
 References
 -------------------------------
 
