@@ -184,7 +184,7 @@ The general setup for the simulation is specified in the sections **Ariane**, **
 	    forback ='forward',
 	    bin ='nobin',
 	    init_final ='init',
-	    nmax =10,
+	    nmax =5,
 	    tunit =3600.,
 	    ntfic =1,
 	    tcyc =0.,
@@ -232,7 +232,18 @@ The general setup for the simulation is specified in the sections **Ariane**, **
 +------------------+---------------------------------------+------------------+---------------------------------------+
 
 
-Next, we specify both horizontal components of velocity under the sections **ZonalCrt** and **MeridCrt**. You can also input the vertical velocity component (recommended if using NEMO data) under **VertiCrt** or Ariane can compute it using the horizontal components. There is also the option of specifying temperature, saliniy, and density in the sections **Temperat**, **Salinity**, and **Density** respectively.
+ .. note::
+
+      **Condition 1: delta_t × frequency × nb_output < tunit × ntfic × lmt**
+
+      **Condition 2: delta_t × frequency × nb_output < tunit × ntfic × (lmt + 0.5 - max(fl))**
+
+      Condition 1 must always be satisfied. Condition 2 must also be satisfied if any inital time index :kbd:`fl` is greater than 0.5.
+      
+      Additionally, even if both conditions hold, please ensure that nb_out is less than or equal to lmt-fl.
+
+
+Next, we specify both horizontal components of velocity under the sections **ZonalCrt** and **MeridCrt**. You can also input the vertical velocity component (recommended if using NEMO data) under **VertiCrt** or Ariane can compute it using the horizontal components. There is also the option of specifying temperature, salinity, and density in the sections **Temperat**, **Salinity**, and **Density** respectively.
 
 
  .. code-block:: fortran
@@ -280,17 +291,19 @@ Next, we specify both horizontal components of velocity under the sections **Zon
         /
 
 
-
- .. note::
-
-      Condition 1: delta_t × frequency × nb_output < tunit × ntfic × lmt
-
-      Condition 2: delta_t × frequency × nb_output < tunit × ntfic × (lmt + 0.5 - max(fl))
-
-      Condition 1 must always be satisfied. Condition 2 must also be satisfied if the inital time index :kbd:`fl` is greater than 0.5.
-
-
-
++----------------------------------------+---------------------------------------+
+|    Parameter                           |              Description              |
++========================================+=======================================+
+| :kbd:`c_dir_zo`, :kbd:`c_dir_me`       | Directory where data is store         |
++----------------------------------------+---------------------------------------+
+| :kbd:`c_prefix_zo`, :kbd:`c_prefix_me` | NetCDF file name with velocity data   |
++----------------------------------------+---------------------------------------+
+| :kbd:`nc_var_zo`, :kbd:`nc_var_me`     | Variable name for velocity component  |
++----------------------------------------+---------------------------------------+
+| :kbd:`dir_mesh`                        | Directory where grid is stored        |
++----------------------------------------+---------------------------------------+
+| :kbd:`fn_mesh`                         | NetCDF file name with grid            |
++----------------------------------------+---------------------------------------+
 
 Ariane output
 ------------------------
