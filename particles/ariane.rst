@@ -309,10 +309,9 @@ Ariane output
 ------------------------
 The trajectories can be plotted in a python notebook. Different colours are used to distinguish the different trajectories and their initial positions are marked by a gray square. A 3D plot may be helpful in viewing particles at varying depths.
 
-
 .. figure:: images/Trajectories2D.png
-
 .. figure:: images/Trajectories3D.png
+
 
 
 Notebooks
