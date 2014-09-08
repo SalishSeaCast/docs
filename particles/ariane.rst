@@ -327,9 +327,9 @@ If you would like to see more examples of particle tracking, feel free to look a
 
 References
 -------------------------------
-* `Compilation and Installation`_
-* `Ariane Namelist`_
-* `Ariane Tutorial`_
+* Manual: `Compilation and Installation`_
+* Manual: `Ariane Namelist`_
+* Manual: `Ariane Tutorial`_
 * Blanke, B., and S. Raynaud, 1997: Kinematics of the Pacific Equatorial Undercurrent: a Eulerian and Lagrangian approach from GCM results. J. Phys. Oceanogr., 27, 1038-1053.
 * Blanke, B., M. Arhan, G. Madec, and S. Roche, 1999: Warm water paths in the equatorial Atlantic as diagnosed with a general circulation model. J. Phys. Oceanogr., 29, 2753-2768.
 * Blanke, B., S. Speich, G. Madec, and K. Döös, 2001: A global diagnostic of interocean mass transfers. J. Phys. Oceanogr., 31, 1623-1632.
