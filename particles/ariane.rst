@@ -128,7 +128,7 @@ These files contain the trajectory information.
 
 Running Ariane: An example for Salish Sea model
 ------------------------------------------------------------------------------
-To run your own trajectory simulation with Salish Sea model output, create a run directory:
+To run your own trajectory simulation with Salish Sea model output, create a run directory. For example, on your local machine:
 
 .. code-block:: bash
 
@@ -155,9 +155,9 @@ The :kbd:`initial_positions.txt` file is where you will specify the initial posi
        
 This simulation, for example, will have 5 particles.
 
-* Column 1: Spatial index (X)
-* Column 2: Spatial index (Y)
-* Column 3: Spatial index (Z)
+* Column 1: Spatial grid index (X)
+* Column 2: Spatial grid index (Y)
+* Column 3: Spatial grid index (Z)
 
 	* A negative value tells Ariane to confine the particle to its original depth throught its trajectory. If you would like to have the particle trajectory include vertical movement, enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data. 
 	* A "-1" or "1" in this column represents the surface.
@@ -172,13 +172,14 @@ This simulation, for example, will have 5 particles.
 
       Ariane can be run in 2 modes, quantitative and qualitative. This example, and therefore this version of the namelist, is qualitative.
 
-The general setup for the simulation is specified in the sections **Ariane**, **OPAParam**, and **Qualitative**.
+An example Ariane namelist configured to a Salish Sea model run with hourly output over two days is provided below.
+This namelist is also under version control in :file:`analysis/Nancy/Ariane_namelists/namelist`. 
 
  .. code-block:: fortran
 
         &ARIANE
-            key_alltracers =.FALSE.,
-            key_sequential =.FALSE.,
+        key_alltracers =.FALSE.,
+        key_sequential =.FALSE.,
 	    key_ascii_outputs =.TRUE.,
 	    mode ='qualitative',
 	    forback ='forward',
@@ -191,7 +192,7 @@ The general setup for the simulation is specified in the sections **Ariane**, **
         /
 
         &OPAPARAM
-            imt =398,
+        imt =398,
 	    jmt =898,
 	    kmt =40,
 	    lmt =48,
@@ -202,12 +203,56 @@ The general setup for the simulation is specified in the sections **Ariane**, **
         /
 
         &QUALITATIVE
-            delta_t =3600.,
+        delta_t =3600.,
 	    frequency =1,
-	    nb_output =46,
+	    nb_output =48,
 	    key_region =.FALSE.,
         /	
+		
+        &ZONALCRT
+        c_dir_zo ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
+        c_prefix_zo ='SalishSea_1h_20061214_20061215_grid_U.nc',
+	    ind0_zo =-1,
+	    indn_zo =-1,
+	    maxsize_zo =-1,
+	    c_suffix_zo ='NONE',
+	    nc_var_zo ='vozocrtx',
+	    nc_var_eivu ='NONE',
+	    nc_att_mask_zo ='NONE',
+        /
 
+        &MERIDCRT
+        c_dir_me ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
+	    c_prefix_me ='SalishSea_1h_20061214_20061215_grid_V.nc',
+	    ind0_me =-1,
+	    indn_me =-1,
+	    maxsize_me =-1,
+	    c_suffix_me ='NONE',
+	    nc_var_me ='vomecrty',
+	    nc_var_eivv ='NONE',
+	    nc_att_mask_me ='NONE',
+        /
+
+        &MESH
+        dir_mesh ='/ocean/nsoontie/MEOPAR/Ariane/',
+	    fn_mesh ='mesh_mask.nc',
+	    nc_var_xx_tt ='glamt',
+	    nc_var_xx_uu ='glamu',
+	    nc_var_yy_tt ='gphit',
+	    nc_var_yy_vv ='gphiv',
+	    nc_var_zz_ww ='gdepw',
+	    nc_var_e2u ='e2u',
+	    nc_var_e1v ='e1v',
+	    nc_var_e1t ='e1t',
+	    nc_var_e2t ='e2t',
+	    nc_var_e3t ='e3t',
+	    nc_var_tmask ='tmask',
+	    nc_mask_val =0.,
+        /
+
+The general setup for the simulation is specified in the sections **ARIANE**, **OPAPARAM**, and **QUALITATIVE**.
+Some of the parameters are described in the table below. 
+For a more detailed description of the parameters, please refer to the Ariane documentation: `Ariane Namelist`_
 
 +------------------+---------------------------------------+------------------+---------------------------------------+
 |    Parameter     |              Description              |    Parameter     |              Description              |
@@ -243,53 +288,9 @@ The general setup for the simulation is specified in the sections **Ariane**, **
       Additionally, even if both conditions hold, please ensure that nb_out is less than or equal to lmt-max(fl).
 
 
-Next, we specify both horizontal components of velocity under the sections **ZonalCrt** and **MeridCrt**. You can also input the vertical velocity component (recommended if using NEMO data) under **VertiCrt** or Ariane can compute it using the horizontal components. There is also the option of specifying temperature, salinity, and density in the sections **Temperat**, **Salinity**, and **Density** respectively.
-
-
- .. code-block:: fortran
-
-        &
-        &ZONALCRT
-            c_dir_zo ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
-            c_prefix_zo ='SalishSea_1h_20061214_20061215_grid_U.nc',
-	    ind0_zo =-1,
-	    indn_zo =-1,
-	    maxsize_zo =-1,
-	    c_suffix_zo ='NONE',
-	    nc_var_zo ='vozocrtx',
-	    nc_var_eivu ='NONE',
-	    nc_att_mask_zo ='NONE',
-        /
-
-        &MERIDCRT
-            c_dir_me ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
-	    c_prefix_me ='SalishSea_1h_20061214_20061215_grid_V.nc',
-	    ind0_me =-1,
-	    indn_me =-1,
-	    maxsize_me =-1,
-	    c_suffix_me ='NONE',
-	    nc_var_me ='vomecrty',
-	    nc_var_eivv ='NONE',
-	    nc_att_mask_me ='NONE',
-        /
-
-        &MESH
-            dir_mesh ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
-	    fn_mesh ='mesh_mask.nc',
-	    nc_var_xx_tt ='glamt',
-	    nc_var_xx_uu ='glamu',
-	    nc_var_yy_tt ='gphit',
-	    nc_var_yy_vv ='gphiv',
-	    nc_var_zz_ww ='gdepw',
-	    nc_var_e2u ='e2u',
-	    nc_var_e1v ='e1v',
-	    nc_var_e1t ='e1t',
-	    nc_var_e2t ='e2t',
-	    nc_var_e3t ='e3t',
-	    nc_var_tmask ='tmask',
-	    nc_mask_val =0.,
-        /
-
+We must also specify where Salish Sea model output is stored in sections **ZONALCRT** and **MERIDCRT**. 
+You can also input the vertical velocity component (recommended if using NEMO data) under **VERTICRT** or Ariane can compute it using the horizontal components. 
+There is also the option of specifying temperature, salinity, and density in the sections **TEMPERAT**, **SALINITY**, and **DENSITY** respectively.
 
 +----------------------------------------+---------------------------------------+
 |    Parameter                           |              Description              |
@@ -305,6 +306,14 @@ Next, we specify both horizontal components of velocity under the sections **Zon
 | :kbd:`fn_mesh`                         | NetCDF file name with grid            |
 +----------------------------------------+---------------------------------------+
 
+Namelists can be constructed using the namelist assistant on the Ariane website: `Namelist Assistant`_
+
+.. _Namelist Assistant: http://stockage.univ-brest.fr/~grima/Ariane/namelist/namelist.html
+
+Finally, the **&MESH** section indicates where information about the Salish Sea model grid is stored.
+A file, :file:`mesh_mask.nc`, contains the mapping scale factors and grid masks needed by Ariane. 
+This is a large file not under version control but can be found in :file:`/ocean/nsoontie/MEOPAR/Ariane`.
+
 Ariane output
 ------------------------
 The trajectories can be plotted in a python notebook. Different colours are used to distinguish the different trajectories and their initial positions are marked by a gray square. A 3D plot may be helpful in viewing particles at varying depths.
@@ -312,7 +321,6 @@ The trajectories can be plotted in a python notebook. Different colours are used
 
 .. figure:: images/Trajectories2D.png
 .. figure:: images/Trajectories3D.png
-
 
 
 Notebooks
