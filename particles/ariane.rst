@@ -178,8 +178,8 @@ This namelist is also under version control in :file:`analysis/Nancy/Ariane_name
  .. code-block:: fortran
 
         &ARIANE
-        key_alltracers =.FALSE.,
-        key_sequential =.FALSE.,
+        	key_alltracers =.FALSE.,
+        	key_sequential =.FALSE.,
 	    key_ascii_outputs =.TRUE.,
 	    mode ='qualitative',
 	    forback ='forward',
@@ -192,7 +192,7 @@ This namelist is also under version control in :file:`analysis/Nancy/Ariane_name
         /
 
         &OPAPARAM
-        imt =398,
+        	imt =398,
 	    jmt =898,
 	    kmt =40,
 	    lmt =48,
@@ -203,15 +203,15 @@ This namelist is also under version control in :file:`analysis/Nancy/Ariane_name
         /
 
         &QUALITATIVE
-        delta_t =3600.,
+        	delta_t =3600.,
 	    frequency =1,
 	    nb_output =48,
 	    key_region =.FALSE.,
         /	
 		
         &ZONALCRT
-        c_dir_zo ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
-        c_prefix_zo ='SalishSea_1h_20061214_20061215_grid_U.nc',
+        	c_dir_zo ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
+        	c_prefix_zo ='SalishSea_1h_20061214_20061215_grid_U.nc',
 	    ind0_zo =-1,
 	    indn_zo =-1,
 	    maxsize_zo =-1,
@@ -222,7 +222,7 @@ This namelist is also under version control in :file:`analysis/Nancy/Ariane_name
         /
 
         &MERIDCRT
-        c_dir_me ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
+        	c_dir_me ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
 	    c_prefix_me ='SalishSea_1h_20061214_20061215_grid_V.nc',
 	    ind0_me =-1,
 	    indn_me =-1,
@@ -234,7 +234,7 @@ This namelist is also under version control in :file:`analysis/Nancy/Ariane_name
         /
 
         &MESH
-        dir_mesh ='/ocean/nsoontie/MEOPAR/Ariane/',
+        	dir_mesh ='/ocean/nsoontie/MEOPAR/Ariane/',
 	    fn_mesh ='mesh_mask.nc',
 	    nc_var_xx_tt ='glamt',
 	    nc_var_xx_uu ='glamu',
@@ -310,7 +310,7 @@ Namelists can be constructed using the namelist assistant on the Ariane website:
 
 .. _Namelist Assistant: http://stockage.univ-brest.fr/~grima/Ariane/namelist/namelist.html
 
-Finally, the **&MESH** section indicates where information about the Salish Sea model grid is stored.
+Finally, the **MESH** section indicates where information about the Salish Sea model grid is stored.
 A file, :file:`mesh_mask.nc`, contains the mapping scale factors and grid masks needed by Ariane. 
 This is a large file not under version control but can be found in :file:`/ocean/nsoontie/MEOPAR/Ariane`.
 
