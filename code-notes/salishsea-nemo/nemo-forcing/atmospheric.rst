@@ -157,15 +157,15 @@ Pressure Correction
 
 The CGRF atmospheric model uses a terrain following vertical coordinate system which means that the lowest grid cells are not at sea level in mountainous regions such as those surrounding the Salish Sea. 
 As such, we have developed an algorithm to adjust CGRF pressure files to sea level.
-Given the altitude of each grid cell we can estimate the sea level pressure provided we make a few assumptions.
+Given the altitude :math:`z_1`,  temperature :math:`T_1` and pressure :math:`p_1` of an air parcel, we can estimate the sea level pressure as [Holton 1992]: 
 
 First, the altitude of each grid cell is computed since this is not given in the CGRF output. 
-Given the temperature :math:`T_1` and pressure :math:`p_1` of an air parcel, we can approximate its height :math:`z_1` above sea level using the following formula [Holton, 1992]:
+Given the of an air parcel, we can approximate its height :math:`z_1` above sea level using the following formula [Holton, 1992]:
 
-.. math::
-   z_1 = \frac{T_1}{\gamma}\left(\left(\frac{p_1}{p_0}\right)^{-\frac{\gamma R}{g}}-1\right)
+.. math:: 
+   p_s = p_1\left(\gamma\frac{z_1}{T_1} +1 \right)^\frac{g}{\gamma R}
 
-where :math:`g` is the acceleration due to gravity, :math:`R` is the ideal gas constant, :math:`p_0` is the sea level pressure (101 kPa), and :math:`\gamma` is the temperature lapse rate of the atmosphere (0.0098 degrees/m).
+where :math:`g` is the acceleration due to gravity, :math:`R` is the ideal gas constant, and :math:`\gamma` is the temperature lapse rate of the atmosphere (0.0098 degrees/m).
 
 To arrive at this formula we have made a few assumptions: 
 
@@ -173,21 +173,9 @@ To arrive at this formula we have made a few assumptions:
 2. The atmosphere is an ideal gas: :math:`p = \rho R T`
 3. The temperature of the atmosphere decreases with height at a constant rate: :math:`\frac{dT}{dz} = -\gamma`
 
-A script :file:`altitude.py` in the :file:`tools/I_ForcingFiles/Atmos` repository performs this calculations by averaging the pressure and temperature fields over each day and then calculating the altitude associated with those averages. 
-A monthly average altitude for each grid cell is then saved in a netcdf file.
-These files are used to compute an annual average in :file:`altitude_y2003.nc` which is stored in :file:`tools/I_ForcingFiles/Atmos`.
+The altiude of each grid cell is stored in a file :file:`altitude_CGRF.nc` in the :file:`tools/I_ForcingFiles/Atmos` repository.
 
-The average altitude for each grid cell is shown in the image below. 
-The colourbar is in meters. 
-
-.. figure:: images/altitude.png
-
-With this average grid cell height :math:`z_{avg}`, along with a grid cell's pressure :math:`p_1` and temperature :math:`T_1`, the sea level pressure :math:`p_s` can be estimated with:
-
-.. math:: 
-   p_s = p_1\left(\gamma\frac{z_{avg}}{T_1} +1 \right)^\frac{g}{\gamma R}
-
-This calculation is performed in :file:`nc_tools.generate_pressure_file`, which is used in `get_cgrf`_ to correct pressure files on download. 
+Ths sea level pressure calculation is performed in :file:`nc_tools.generate_pressure_file`, which is used in `get_cgrf`_ to correct pressure files on download. 
 Corrected pressure files are named :file:`slp_corr_y0000m00d00.nc`. 
 See the `tools docs`_ for details on :file:`nc_tools.generate_pressure_file` method.. 
 
@@ -197,7 +185,7 @@ See the `tools docs`_ for details on :file:`nc_tools.generate_pressure_file` met
 
 .. note::
    
-   `get_cgrf`_ requires a link to :file:`altitude_y2003.nc` in :file:`/NEMO-atmos/`.
+   `get_cgrf`_ requires a link to :file:`altitude_CGRF.nc` in :file:`/NEMO-atmos/`.
 
 
 .. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and Bélair, S. (2013), A new atmospheric dataset for forcing ice–ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc.. doi: 10.1002/qj.2194 http://dx.doi.org/10.1002/qj.2194
