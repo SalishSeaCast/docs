@@ -194,7 +194,7 @@ This namelist is also under version control in :file:`analysis/Nancy/Ariane_name
         &OPAPARAM
         	imt =398,
 	    	jmt =898,
-	   		kmt =40,
+	   	kmt =40,
 	    	lmt =48,
 	    	key_periodic =.FALSE.,
 	    	key_jfold =.FALSE.,
@@ -284,8 +284,6 @@ For a more detailed description of the parameters, please refer to the Ariane do
       **Condition 2: delta_t × frequency × nb_output < tunit × ntfic × (lmt + 0.5 - max(fl))**
 
       Condition 1 must always be satisfied. Condition 2 must also be satisfied if any inital time index :kbd:`fl` is greater than 0.5.
-      
-      Additionally, even if both conditions hold, please ensure that nb_out is less than or equal to lmt-max(fl).
 
 
 We must also specify where Salish Sea model output is stored in sections **ZONALCRT** and **MERIDCRT**. 
