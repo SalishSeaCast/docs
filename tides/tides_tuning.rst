@@ -24,7 +24,7 @@ Step Three: Correct North Flux
 
 The cross-section of the northern boundary is larger than the cross-section where the north measurements were made by Thomson.  This required a correction (reduction) in the northern flux.  Double the correction was used for M2 to better match with observations.
 
-* ipython notebook: `johnstone_strait_tides.ipynb`_
+* ipython notebook: `Analysis8Components.ipynb`_
 
 .. _Analysis8Components.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Tides/johnstone_strait_tides.ipynb
 
