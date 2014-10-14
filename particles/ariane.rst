@@ -40,6 +40,7 @@ Configure the installation:
 .. code-block:: bash
 
 	./configure --prefix=/ocean/username/MEOPAR/Ariane
+
 The :kbd:`prefix` argument overwrites the default install directory into a customized directory.
 
 Make and install Ariane:
@@ -49,6 +50,7 @@ Make and install Ariane:
 	make
 	make check
 	make install
+
 :kbd:`make` compiles source files, :kbd:`make check` tests Ariane's qualitative and quantitative modes, and :kbd:`make install` installs Ariane.
 
 Add the path for the Ariane executable to your :kbd:`PATH` environment variable:
