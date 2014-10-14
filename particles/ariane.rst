@@ -147,7 +147,7 @@ Type :kbd:`ariane` to  run the code.
 The :kbd:`initial_positions.txt` file is where you will specify the initial positions and initial times of the particles you are tracking. It contains 5 columns and as many rows as there are particles in the simulation you are running.
 
 
-   .. code-block:: txt
+   .. code-block:: text
 
        310  360   -1  1.000    1.0
        310  370   -2  1.000    1.0
