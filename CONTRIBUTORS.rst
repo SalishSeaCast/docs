@@ -20,6 +20,7 @@ etc. to the Salish Sea MEOPAR project repositories hosted on Bitbucket_:
 * Doug Latornell <dlatornell@eos.ubc.ca>
 * Nancy Soontiens <nsoontiens@eos.ubc.ca>
 * Kate Le Souef <klesouef@eos.ubc.ca>
+* Idalia Machuca <imachuca@eos.ubc.ca>
 * Mark Halverson <mhalvers@eos.ubc.ca>
 * Fatemeh Chegini <Fatemeh.Chegini@dal.ca>
 * J-P Paquin <paquin.jeanphilippe@gmail.com>
