@@ -60,7 +60,7 @@ Add the path for the Ariane executable to your :kbd:`PATH` environment variable:
 Now you can run Ariane from any directory by typing :kbd:`ariane`.
 
 
-Installing on :kbd:`orcinus` 
+Installing on :kbd:`orcinus`
 ------------------------------------------
 On :kbd:`orcinus` create an Ariane working directory:
 
@@ -75,7 +75,7 @@ Place the :kbd:`ariane-2.2.6_00.tar.gz` package in that directory and unpack it:
 	cd $HOME/MEOPAR/Ariane
 	gunzip ariane-2.2.6_00.tar.gz
 	tar -xf ariane-2.2.6_00.tar
-	
+
 Like :kbd:`salish`, we need to specify the locations of the :kbd:`netcdf` libraries on :kbd:`orcinus`:
 
 .. code-block:: bash
@@ -106,12 +106,12 @@ To run Ariane, add the path for the Ariane executable to your :kbd:`PATH` enviro
 Now you can run Ariane from any directory by typing :kbd:`ariane`.
 
 On :kbd:`orcinus` Ariane runs can also be sumbitted to the queue.
-An example :kbd:`.pbs` will be included soon. 
+An example :kbd:`.pbs` will be included soon.
 
 
 Testing Ariane
 ------------------------
-To test that you have everything set up correctly, run one of the Ariane examples. 
+To test that you have everything set up correctly, run one of the Ariane examples.
 For instance, try:
 
 .. code-block:: bash
@@ -122,7 +122,7 @@ For instance, try:
 You should notice several new files, such as :kbd:`ariane_trajectories_qualitative.nc` and :kbd:`traj.txt`.
 These files contain the trajectory information.
 
-* :kbd:`ariane_trajectories_qualitative.nc` can be loaded into a notebook to plot the particle locations over time and starting/finishing points, etc. 
+* :kbd:`ariane_trajectories_qualitative.nc` can be loaded into a notebook to plot the particle locations over time and starting/finishing points, etc.
 * :kbd:`traj.txt` is helpful if you want to get a general idea of what the resulting trajectory coordinates look like or to check if the simulation ran properly.
 
 
@@ -134,8 +134,8 @@ To run your own trajectory simulation with Salish Sea model output, create a run
 
 	mkdir -p  /ocean/username/MEOPAR/Ariane/results/myexperiment
 	cd /ocean/username/MEOPAR/Ariane/results/myexperiment
-	
-You will need :kbd:`namelist` and :kbd:`initial_positions.txt` files in this run directory (see below). 
+
+You will need :kbd:`namelist` and :kbd:`initial_positions.txt` files in this run directory (see below).
 
 Type :kbd:`ariane` to  run the code.
 
@@ -152,14 +152,14 @@ The :kbd:`initial_positions.txt` file is where you will specify the initial posi
        310  380   -1  2.000    1.0
        310  410   -1  1.000    1.0
        331  415   -1  1.000    1.0
-       
+
 This simulation, for example, will have 5 particles.
 
 * Column 1: Spatial grid index (X)
 * Column 2: Spatial grid index (Y)
 * Column 3: Spatial grid index (Z)
 
-	* A negative value tells Ariane to confine the particle to its original depth throught its trajectory. If you would like to have the particle trajectory include vertical movement, enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data. 
+	* A negative value tells Ariane to confine the particle to its original depth throught its trajectory. If you would like to have the particle trajectory include vertical movement, enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data.
 	* A "-1" or "1" in this column represents the surface.
 * Column 4: Time index or :kbd:`fl`
 * Column 5: Fifth parameter = 1.0
@@ -173,7 +173,7 @@ This simulation, for example, will have 5 particles.
       Ariane can be run in 2 modes, quantitative and qualitative. This example, and therefore this version of the namelist, is qualitative.
 
 An example Ariane namelist configured to a Salish Sea model run with hourly output over two days is provided below.
-This namelist is also under version control in :file:`analysis/Nancy/Ariane_namelists/namelist`. 
+This namelist is also under version control in :file:`analysis/Nancy/Ariane_namelists/namelist`.
 
  .. code-block:: fortran
 
@@ -207,8 +207,8 @@ This namelist is also under version control in :file:`analysis/Nancy/Ariane_name
 	    	frequency =1,
 	    	nb_output =48,
 	    	key_region =.FALSE.,
-        /	
-		
+        /
+
         &ZONALCRT
         	c_dir_zo ='/data/nsoontie/MEOPAR/SalishSea/results/storm-surges/tide_fix/dec2006/all_forcing/1hour/',
         	c_prefix_zo ='SalishSea_1h_20061214_20061215_grid_U.nc',
@@ -251,28 +251,28 @@ This namelist is also under version control in :file:`analysis/Nancy/Ariane_name
         /
 
 The general setup for the simulation is specified in the sections **ARIANE**, **OPAPARAM**, and **QUALITATIVE**.
-Some of the parameters are described in the table below. 
+Some of the parameters are described in the table below.
 For a more detailed description of the parameters, please refer to the Ariane documentation: `Ariane Namelist`_
 
 +------------------+---------------------------------------+------------------+---------------------------------------+
 |    Parameter     |              Description              |    Parameter     |              Description              |
 +==================+=======================================+==================+=======================================+
 | :kbd:`nmax`      | Number of particles                   | :kbd:`kmt`       | Vertical space dimension (depth)      |
-+------------------+---------------------------------------+------------------+---------------------------------------+           
++------------------+---------------------------------------+------------------+---------------------------------------+
 | :kbd:`tunit`     | Unit of time.                         | :kbd:`lmt`       | Number of time steps                  |
-+                  +                                       +                  +                                       + 
++                  +                                       +                  +                                       +
 |                  | Example: 3600 for 1 hour              |                  | in input data                         |
 +------------------+---------------------------------------+------------------+---------------------------------------+
 | :kbd:`ntfic`     | x :kbd:`tunit` = Time period covered  | :kbd:`delta_t`   | Unit of time.                         |
-+                  +                                       +                  +                                       + 
++                  +                                       +                  +                                       +
 |                  | by each time sample in input files    |                  | Example: 3600 for 1 hour              |
 +------------------+---------------------------------------+------------------+---------------------------------------+
 | :kbd:`imt`       | Horizontal space dimension            | :kbd:`frequency` | x :kbd:`delta_t` = Time interval      |
-+                  +                                       +                  +                                       + 
++                  +                                       +                  +                                       +
 |                  | (longitude)                           |                  | between two sucessive position outputs|
 +------------------+---------------------------------------+------------------+---------------------------------------+
 | :kbd:`jmt`       | Horizontal space dimension            | :kbd:`nb_output` | Total number of position outputs for  |
-+                  +                                       +                  +                                       + 
++                  +                                       +                  +                                       +
 |                  | (latitude)                            |                  | each trajectory.                      |
 +------------------+---------------------------------------+------------------+---------------------------------------+
 
@@ -286,8 +286,8 @@ For a more detailed description of the parameters, please refer to the Ariane do
       Condition 1 must always be satisfied. Condition 2 must also be satisfied if any inital time index :kbd:`fl` is greater than 0.5.
 
 
-We must also specify where Salish Sea model output is stored in sections **ZONALCRT** and **MERIDCRT**. 
-You can also input the vertical velocity component (recommended if using NEMO data) under **VERTICRT** or Ariane can compute it using the horizontal components. 
+We must also specify where Salish Sea model output is stored in sections **ZONALCRT** and **MERIDCRT**.
+You can also input the vertical velocity component (recommended if using NEMO data) under **VERTICRT** or Ariane can compute it using the horizontal components.
 There is also the option of specifying temperature, salinity, and density in the sections **TEMPERAT**, **SALINITY**, and **DENSITY** respectively.
 
 +----------------------------------------+---------------------------------------+
@@ -309,7 +309,7 @@ Namelists can be constructed using the namelist assistant on the Ariane website:
 .. _Namelist Assistant: http://stockage.univ-brest.fr/~grima/Ariane/namelist/namelist.html
 
 Finally, the **MESH** section indicates where information about the Salish Sea model grid is stored.
-A file, :file:`mesh_mask.nc`, contains the mapping scale factors and grid masks needed by Ariane. 
+A file, :file:`mesh_mask.nc`, contains the mapping scale factors and grid masks needed by Ariane.
 This is a large file not under version control but can be found in :file:`/ocean/nsoontie/MEOPAR/Ariane`.
 
 Ariane output
