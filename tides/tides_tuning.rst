@@ -1,9 +1,9 @@
 Tide Tuning
 ===========
 
-This document outlines our efforts to best tune the tides.  Emphasis was on tuning the tides in the Strait of Georgia.  Specifically, in the final tuning, the western tides were tuned to produce the best match with data at Point Atkinson, Gibsons Landing, Winchelsea and Halfmoon Bay and the northern tides were tuned to produce the best math with data at Kelsey Bay and Yorke Island.  
+This document outlines our efforts to best tune the tides.  Emphasis was on tuning the tides in the Strait of Georgia.  Specifically, in the final tuning, the western tides were tuned to produce the best match with data at Point Atkinson, Gibsons Landing, Winchelsea and Halfmoon Bay and the northern tides were tuned to produce the best math with data at Kelsey Bay and Yorke Island.
 
-The modelled tidal response is compared to observations from Foreman et al. (1995), Foreman et al. (2004), and Foreman et al. (2012). 
+The modelled tidal response is compared to observations from Foreman et al. (1995), Foreman et al. (2004), and Foreman et al. (2012).
 
 Step One: New Base Run: M2 & K1 only
 ------------------------------------
@@ -15,7 +15,7 @@ Step Two: Vary the Velocity Phase for M2
 
 A series of runs (Cd10, Cd20, Cd30, Cu10, Cu20, Cu30) were done which varied the phase of the tidal velocity field at the western boundary compared the sea level.  Increasing the phase by 30 degrees, decreased the phase difference between Point Atkinson and Port Renfrew by 2 degrees.
 
-However, this run (Cu30) had low amplitude and late phase everywhere.  Three runs were done (RC_amp, RC_pha, RC_both), that corrected the amplitude, phase and both, respectively.  Correcting the amplitude and phase, returned the phase difference to its original value. 
+However, this run (Cu30) had low amplitude and late phase everywhere.  Three runs were done (RC_amp, RC_pha, RC_both), that corrected the amplitude, phase and both, respectively.  Correcting the amplitude and phase, returned the phase difference to its original value.
 
 Thus, varying the velocity phase relative to the sea surface height phase was abandoned.  (Two more runs FTN and FTK1 were done, tuning the north boundary and the west K1).
 
