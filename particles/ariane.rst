@@ -149,12 +149,12 @@ The :kbd:`initial_positions.txt` file is where you will specify the initial posi
 
    .. code-block:: text
 
-       310  360   -1  1.000    1.0
-       310  370   -2  1.000    1.0
-       310  380   -1  2.000    1.0
-       310  410   -1  1.000    1.0
-       331  415   -1  1.000    1.0
-
+      	310	360	-1.0	0.5	1.0
+	310	370	-1.5 	0.5    	1.0
+	310	380   	-2.0  	1.5    	1.0
+	310  	410   	-1.0  	0.5    	1.0
+	331  	415	-1.0 	0.5    	1.0 
+ 
 This simulation, for example, will have 5 particles.
 
 * Column 1: Spatial grid index (X)
