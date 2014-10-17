@@ -207,7 +207,7 @@ This namelist is also under version control in :file:`analysis/Nancy/Ariane_name
         &QUALITATIVE
         	delta_t =3600.,
 	    	frequency =1,
-	    	nb_output =48,
+	    	nb_output =46,
 	    	key_region =.FALSE.,
         /
 
