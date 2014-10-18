@@ -161,9 +161,11 @@ This simulation, for example, will have 5 particles.
 * Column 2: Spatial grid index (Y)
 * Column 3: Spatial grid index (Z)
 
-	* A negative value tells Ariane to confine the particle to its original depth throught its trajectory. If you would like to have the particle trajectory include vertical movement, enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data.
-	* A "-1" or "1" in this column represents the surface.
+	* A negative value tells Ariane to confine the particle to its original depth throughout its trajectory. If you would like to have the particle trajectory include vertical movement, enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data.
+	* Since Ariane starts counting from 1, a "1" or "-1" here means the first depth grid. The NEMO output grids are 1 metre deep for the first few metres. This means that the second particle in this example (whose Z index is -1.5 will be identical to a particle at depth -1 if they share the same X, Y, and T values.
 * Column 4: Time index or :kbd:`fl`
+
+	* Use "0.5" if you want to start at NEMO time 00:00. Use "1" if you want to start at NEMO time 00:30.
 * Column 5: Fifth parameter = 1.0
 
 
