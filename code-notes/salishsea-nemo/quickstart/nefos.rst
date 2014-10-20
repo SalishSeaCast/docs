@@ -209,6 +209,35 @@ With that in place you should be able to connect to the instance with:
     $ ssh nefos
 
 
+Provisioning and Configuration
+==============================
+
+sudo apt-get update
+sudo apt-get install mercurial
+sudo apt-get install gfortran
+sudo apt-get install libopenmpi1.6 libopenmpi-dev
+sudo apt-get install openmpi-bin
+sudo apt-get install libnetcdf-dev netcdf-bin
+sudo apt-get install libhdf5-dev
+sudo apt-get install nco
+sudo apt-get install liburi-perl
+sudo apt-get install make
+sudo apt-get install python-pip python-dev
+sudo apt-get install python-matplotlib python-pandas python-cliff
+
+mkdir -p MEOPAR/SalishSea
+cd MEOPAR
+hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
+hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
+hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
+hg clone ssh://hg@bitbucket.org/salishsea/tools tools
+
+
+mkdir -p $HOME/.local
+cd MEOPAR/tools/
+pip install --user -e SalishSeaTools SalishSeaCmd
+
+
 Command-line Interface
 ======================
 
