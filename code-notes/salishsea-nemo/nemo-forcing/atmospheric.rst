@@ -151,40 +151,40 @@ and non-executable with:
 See the :command:`salishsea` :ref:`salishsea-get_cgrf` docs for details of a tool that automates this process.
 
 .. _Pressure-Correction:
- 
+
 Pressure Correction
 ====================
 
-The CGRF atmospheric model uses a terrain following vertical coordinate system which means that the lowest grid cells are not at sea level in mountainous regions such as those surrounding the Salish Sea. 
+The CGRF atmospheric model uses a terrain following vertical coordinate system which means that the lowest grid cells are not at sea level in mountainous regions such as those surrounding the Salish Sea.
 As such, we have developed an algorithm to adjust CGRF pressure files to sea level.
-Given the altitude :math:`z_1`,  temperature :math:`T_1` and pressure :math:`p_1` of an air parcel, we can estimate the sea level pressure as [Holton 1992]: 
+Given the altitude :math:`z_1`,  temperature :math:`T_1` and pressure :math:`p_1` of an air parcel, we can estimate the sea level pressure as [Holton 1992]:
 
-First, the altitude of each grid cell is computed since this is not given in the CGRF output. 
+First, the altitude of each grid cell is computed since this is not given in the CGRF output.
 Given the of an air parcel, we can approximate its height :math:`z_1` above sea level using the following formula [Holton, 1992]:
 
-.. math:: 
+.. math::
    p_s = p_1\left(\gamma\frac{z_1}{T_1} +1 \right)^\frac{g}{\gamma R}
 
 where :math:`g` is the acceleration due to gravity, :math:`R` is the ideal gas constant, and :math:`\gamma` is the temperature lapse rate of the atmosphere (0.0098 degrees/m).
 
-To arrive at this formula we have made a few assumptions: 
+To arrive at this formula we have made a few assumptions:
 
-1. The atmopshere is in hydrostatic equilibrium: :math:`\frac{d p}{d z} = -\rho g` 
+1. The atmopshere is in hydrostatic equilibrium: :math:`\frac{d p}{d z} = -\rho g`
 2. The atmosphere is an ideal gas: :math:`p = \rho R T`
 3. The temperature of the atmosphere decreases with height at a constant rate: :math:`\frac{dT}{dz} = -\gamma`
 
 The altiude of each grid cell is stored in a file :file:`altitude_CGRF.nc` in the :file:`tools/I_ForcingFiles/Atmos` repository.
 
-Ths sea level pressure calculation is performed in :file:`nc_tools.generate_pressure_file`, which is used in `get_cgrf`_ to correct pressure files on download. 
-Corrected pressure files are named :file:`slp_corr_y0000m00d00.nc`. 
-See the `tools docs`_ for details on :file:`nc_tools.generate_pressure_file` method.. 
+Ths sea level pressure calculation is performed in :file:`nc_tools.generate_pressure_file`, which is used in `get_cgrf`_ to correct pressure files on download.
+Corrected pressure files are named :file:`slp_corr_y0000m00d00.nc`.
+See the `tools docs`_ for details on :file:`nc_tools.generate_pressure_file` method..
 
 .. _get_cgrf: http://salishsea-meopar-tools.readthedocs.org/en/latest/SalishSeaCmd/salishsea-cmd.html#salishsea-get-cgrf
- 
+
 .. _tools docs: http://salishsea-meopar-tools.readthedocs.org/en/latest/SalishSeaTools/salishsea-tools.html#module-nc_tools
 
 .. note::
-   
+
    `get_cgrf`_ requires a link to :file:`altitude_CGRF.nc` in :file:`/NEMO-atmos/`.
 
 
