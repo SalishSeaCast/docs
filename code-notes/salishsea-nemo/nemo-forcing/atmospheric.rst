@@ -80,6 +80,34 @@ Those weight values were subsequently used to create a netCDF4 weights file with
 .. _I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb
 
 
+Creating New Weights Files
+--------------------------
+
+The :program:`NEMO_Preparation/4_weights_ATMOS/get_weight_nemo` program in the :ref:`NEMO_EastCoast-repo` repo can be used in conjunction with a bathymetry file and atmospheric forcing file(s) to create a weights file that allows NEMO's Interpolation On the Fly
+(IOF)
+feature to use the atmospheric forcing values.
+An example of the use of :program:`get_weight_nemo` to create a weights file for datasets from the operational West deployment of Environment Canada's `High Resolution Deterministic Prediction System`_ (HRDPS) is presented here:
+
+.. _High Resolution Deterministic Prediction System: http://weather.gc.ca/grib/grib2_HRDPS_HR_e.html
+
+Clone the :ref:`NEMO_EastCoast-repo` repo on :kbd:`salish` and edit the :file:`NEMO_Preparation/4_weights_ATMOS/make.sh` file to comment out the default build commands and enable the :kbd:`salish` ones:
+
+.. code-block:: bash
+
+    #- On salish (UBC)
+    LIBNETCDF=/usr
+    mpif90 -c grid.f90 -I${LIBNETCDF}/include -L${LIBNETCDF}/lib -lnetcdf
+    mpif90 -c map.F90 -I${LIBNETCDF}/include -L${LIBNETCDF}/lib -lnetcdf
+    mpif90 -c get_weight_nemo.F90 -I${LIBNETCDF}/include -L${LIBNETCDF}/lib -lnetcdf
+    mpif90 -o get_weight_nemo get_weight_nemo.o map.o grid.o -I${LIBNETCDF}/include -L${LIBNETCDF}/lib -lnetcdf -lnetcdff
+
+Build :program:`get_weight_nemo`:
+
+.. code-block:: bash
+
+    $ ./make.sh
+
+
 .. _CGRF-Dataset:
 
 CGRF Dataset
