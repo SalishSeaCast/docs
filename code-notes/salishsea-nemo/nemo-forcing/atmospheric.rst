@@ -75,7 +75,9 @@ JP Paquin created a weights file that allows NEMO's Interpolation On the Fly
 (IOF)
 feature to be used to take atmospheric forcing values from the :ref:`CGRF-Dataset`.
 It is in the :file:`4_weights_ATMOS/` directory of the 2-Oct-2013 WC3_PREP tarball and has been added to the :ref:`grid-directory` of the :ref:`NEMO-forcing-repo` repo.
-Those weight values were subsequently used to create a netCDF4 weights file with :kbd:`zlib` compression enabled and CF-1.6 conventions compliant attributes.
+Those weight values were subsequently used to create a netCDF4 weights file with :kbd:`zlib` compression enabled and CF-1.6 conventions compliant attributes using the `I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb`_ notebook.
+
+.. _I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb
 
 
 .. _CGRF-Dataset:
