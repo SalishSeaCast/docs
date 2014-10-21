@@ -188,6 +188,19 @@ SoG-obs
 * Bitbucket: https://bitbucket.org/salishsea/SoG-obs/
 
 
+.. _NEMO_EastCoast-repo:
+
+NEMO_EastCoast
+~~~~~~~~~~~~~~
+
+* public
+* a collection of files for pre-processing,
+  running,
+  and post-processing of numerical simulations with NEMO for MEOPAR project
+  with primary focus on the Scotia Shelf deployment of the model
+* Bitbucket: https://bitbucket.org/salishsea/nemo_eastcoast/
+
+
 .. _NEMO-3.1-repo:
 
 NEMO-3.1
