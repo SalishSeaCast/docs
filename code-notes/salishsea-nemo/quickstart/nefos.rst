@@ -222,6 +222,7 @@ sudo apt-get install libhdf5-dev
 sudo apt-get install nco
 sudo apt-get install liburi-perl
 sudo apt-get install make
+sudo apt-get install ksh
 sudo apt-get install python-pip python-dev
 sudo apt-get install python-matplotlib python-pandas python-cliff
 
@@ -235,7 +236,8 @@ hg clone ssh://hg@bitbucket.org/salishsea/tools tools
 
 mkdir -p $HOME/.local
 cd MEOPAR/tools/
-pip install --user -e SalishSeaTools SalishSeaCmd
+pip install --user -e SalishSeaTools
+pip install --user -e SalishSeaCmd
 
 
 Command-line Interface
