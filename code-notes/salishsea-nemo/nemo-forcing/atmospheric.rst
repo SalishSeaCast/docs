@@ -107,6 +107,124 @@ Build :program:`get_weight_nemo`:
 
     $ ./make.sh
 
+:program:`get_weight_nemo` creates a file of weighting factors that allow atmospheric forcing variable values on one grid to be interpolated on to the model grid
+(as defined in the bathymetry dataset).
+To do that it requires:
+
+#. a bathymetry dataset,
+   the name of which is hard-coded to :file:`bathy_meter.nc`
+#. a namelist file,
+   the name of which is hard-coded to :file:`namelist`,
+   and an example of which is contained in the :file:`NEMO_Preparation/4_weights_ATMOS/` directory
+#. one or more atmospheric forcing dataset file(s),
+   the name of which is defined in the namelist
+
+The output of :program:`get_weight_nemo` is a weights file,
+the name of which is hard-coded to :file:`met_gem_weight.nc`.
+
+We'll run :program:`get_weight_nemo` in :file:`NEMO-forcing/grid/`,
+so start by copying the sample namelist file to there,
+changing to that directory,
+and symlinking it as :file:`namelist`:
+
+.. code-block:: bash
+
+    $ cp namelist ../../../NEMO-forcing/grid/namelist.get_weight_nemo.gem2.5-ops
+    $ cd ../../../NEMO-forcing/grid/
+    $ ln -s namelist.get_weight_nemo.gem2.5-ops namelist
+
+Symlink the bathymetry dataset as :file:`bathy_meter.nc`:
+
+.. code-block:: bash
+
+    $ ln -s bathy_meter_SalishSea2.nc bathy_meter.nc
+
+The only values that :program:`get_weight_nemo` actually uses from the atmospheric forcing dataset file is the grid point locations,
+but the namelist file is more complicated.
+We can reduce the complexity by using a single atmospheric forcing dataset file as a climatology,
+so we symlink one as :file:`atmos.nc`:
+
+.. code-block:: bash
+
+    $ ln -s /ocean/sallen/allen/research/Meopar/Operational/oper_allvar_ss_y2014m09d23.nc atmos.nc
+
+Next,
+edit the namelist file to point to that symlink:
+
+.. code-block:: fortran
+
+    !-----------------------------------------------------------------------
+    &namsbc_core !   namsbc_core  CORE bulk formulea
+    !-----------------------------------------------------------------------
+    !            ! file name ! variable   ! clim  ! 'yearly'/
+    !            !           !  name      ! (T/F) ! 'monthly'
+       sn_wndi   = 'atmos',   'u_wind'   , .true., 'yearly'
+       sn_wndj   = 'atmos',   'v_wind'   , .true., 'yearly'
+       sn_qsr    = 'atmos',   'solar'    , .true., 'yearly'
+       sn_qlw    = 'atmos',   'therm_rad', .true., 'yearly'
+       sn_tair   = 'atmos',   'tair'     , .true., 'yearly'
+       sn_humi   = 'atmos',   'qair'     , .true., 'yearly'
+       sn_prec   = 'atmos',   'precip'   , .true., 'yearly'
+       sn_snow   = 'atmos',   'snow'     , .true., 'yearly'
+       cn_dir    = './'      !  root directory for the location of the bulk files
+    /
+
+The important things here are:
+
+* The file name must match the name of the atmospheric forcing dataset file symlink,
+  without the :file:`.nc` extension.
+* The climatology field (:kbd:`clim (T/F)`) must be set to :kbd:`.true.` for all variables.
+* The value of :kbd:`cn_dir` must be :kbd:`'./'`.
+
+Finally,
+run :program:`get_weight_nemo`:
+
+.. code-block:: bash
+
+    ../../eastcoast/NEMO_Preparation/4_weights_ATMOS/get_weight_nemo
+
+The output should be something like::
+
+   sbc_blk_core : flux formulattion for ocean surface boundary condition
+   ~~~~~~~~~~~~
+             namsbc_core Namelist
+             list of files
+                  root filename: ./atmos variable name: u_wind climatology:  T  data type: yearly
+                  root filename: ./atmos variable name: v_wind climatology:  T  data type: yearly
+                  root filename: ./atmos variable name: qair climatology:  T  data type: yearly
+                  root filename: ./atmos variable name: solar climatology:  T  data type: yearly
+                  root filename: ./atmos variable name: therm_rad climatology:  T  data type: yearly
+                  root filename: ./atmos variable name: tair climatology:  T  data type: yearly
+                  root filename: ./atmos variable name: precip climatology:  T  data type: yearly
+                  root filename: ./atmos variable name: snow climatology:  T  data type: yearly
+   reading : ./atmos.nc
+   atmospheric forcing netcdf grid dimensions: nx=         256 , ny=         266
+             get_atmo_grid ~~~ found X axis varid:           3
+             get_atmo_grid ~~~ found Y axis varid:           2
+   grid_type           2
+  xmin/xmax/origin  0.230833E+03  0.240530E+03  0.230833E+03
+   writing variable : src01
+          8065        8065        8321        8321
+   status put           0
+   writing variable : wgt01
+   writing variable : src02
+          8321        8321        8065        8065
+   status put           0
+   writing variable : wgt02
+   writing variable : src03
+          8064        8064        8320        8320
+   status put           0
+   writing variable : wgt03
+   writing variable : src04
+          8320        8320        8064        8064
+   status put           0
+   writing variable : wgt04
+
+and a :file:`met_gem_weight.nc` file should be created.
+
+Use the `I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb`_ notebook as a guide to transform :file:`met_gem_weight` into a netCDF4 file called :file:`weights-2.5kmGEM-ops.nc` with well-structured metadata
+(see :ref:`netCDF4FilesCreationAndConventions`).
+
 
 .. _CGRF-Dataset:
 
