@@ -24,3 +24,7 @@ At Depth
 ===================
 .. figure:: images/Sensitivity3D.png
 
+Figures 1 and 2 show particle trajectories with initial positions along the thalweg. Figure 3 and 4 show trajectories that started at arbitrary locations in Haro Strait. Figures A, B, C, and D show the change in depth of the particle as it progressed in its trajectory.
+
+
+
