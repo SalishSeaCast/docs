@@ -14,11 +14,11 @@ On the Surface
 
 .. figure:: images/Sensitivity2D.png
 
-At the Fraser River, we found that the particle trajectories generated using data at a 4 hour frequency does not capture subtleties in particle movements as do the trajectories deriving from data at 30 minute and 1 hour frequencies.
+At the Fraser River, we found that the particle trajectory generated using data at a 4 hour frequency does not capture subtleties in particle motion as do the trajectories deriving from data at 30 minute and 1 hour frequencies.
 
 The trajectory that used 1 hour frequency data very closely resembles the trajectory that used 30 minute data.
 
-:command:'Conclusion: We can use 1 hour NEMO output data for particle trajectories starting at the Fraser River.'
+:command:`Conclusion: We can use 1 hour or 30 minute NEMO output data when particle trajectories start at the Fraser River.`
 
 At Depth
 ===================
