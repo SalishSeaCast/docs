@@ -6,7 +6,7 @@ Frequency Sensitivity Studies
 
 The model produces datasets containing information about the velocity field for a region. Ariane uses this information to produce particle trajectories. We wanted to know at what frequency would the model output need to be to produce the most reliable particle trajectories.
 
-For the frequency sensitivity studies, we used model outputs with 30 minute, 1 hour, and 4 hour frequencies. This data was used in Ariane to generate particle trajectories with points at 30 minute intervals. We did this for particles starting their trajectories at the Fraser River, at various points along the thalweg, and in the areas between Haro Strait and the Strait of Juan de Fuca where there is strong vertical mixing.
+For the frequency sensitivity studies, we used model outputs with 30 minute, 1 hour, and 4 hour frequencies. This data was used in Ariane to generate particle trajectories with points at 30 minute intervals. We did this for particles starting their trajectories at the Fraser River and at various points along the thalweg.
 
 
 On the Surface
@@ -24,7 +24,7 @@ At Depth
 ===================
 .. figure:: images/Sensitivity3D.png
 
-Figures 1 and 2 show particle trajectories with initial positions along the thalweg. Figure 3 and 4 show trajectories that started at arbitrary locations in Haro Strait. Figures A, B, C, and D show the change in depth of the particle as it progressed in its trajectory.
+Figures 1, 2, 3, and 4 show particle trajectories with initial positions along the thalweg, but the initial positions in figures 3 and 4 are located in regions with stronger mixing. Figures A, B, C, and D show the change in depth of the particles as they progressed in their trajectories.
 
 
 
