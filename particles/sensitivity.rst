@@ -9,9 +9,9 @@ The model produces datasets containing information about the velocity field for 
 For the frequency sensitivity studies, we used model outputs with 30 minute, 1 hour, and 4 hour frequencies. This data was used in Ariane to generate particle trajectories with points at 30 minute intervals. We did this for particles starting their trajectories at the Fraser River and at various points along the thalweg.
 
 :command:`Color scheme:`
-* 30 minute - green
-* 1 hour - blue
-* 4 hour - pink 
+* 30 minute: green
+* 1 hour: blue
+* 4 hour: pink 
 
 
 On the Surface
