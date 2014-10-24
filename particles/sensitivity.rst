@@ -8,6 +8,11 @@ The model produces datasets containing information about the velocity field for 
 
 For the frequency sensitivity studies, we used model outputs with 30 minute, 1 hour, and 4 hour frequencies. This data was used in Ariane to generate particle trajectories with points at 30 minute intervals. We did this for particles starting their trajectories at the Fraser River and at various points along the thalweg.
 
+:command:`Color scheme:`
+* 30 minute - green
+* 1 hour - blue
+* 4 hour - pink 
+
 
 On the Surface
 ===================
@@ -26,5 +31,9 @@ At Depth
 
 Figures 1, 2, 3, and 4 show particle trajectories with initial positions along the thalweg, but the initial positions in figures 3 and 4 are located in regions with stronger mixing. Figures A, B, C, and D show the change in depth of the particles as they progressed in their trajectories.
 
+Figures A and B show many differences in the evolution of depths between the 4 hour frequency cases and the 30 minute or 1 hour cases. In fact, the 1 hour case also deviates from the 30 minute case.
+
+Figures C and D 
 
 
+:command:`Conclusion:` 
