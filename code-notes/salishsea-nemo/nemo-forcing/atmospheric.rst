@@ -222,8 +222,10 @@ The output should be something like::
 
 and a :file:`met_gem_weight.nc` file should be created.
 
-Use the `I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb`_ notebook as a guide to transform :file:`met_gem_weight` into a netCDF4 file called :file:`weights-2.5kmGEM-ops.nc` with well-structured metadata
+Use the `I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb`_ notebook to transform :file:`met_gem_weight` into a netCDF4 file called :file:`weights-2.5kmGEM-ops.nc` with well-structured metadata
 (see :ref:`netCDF4FilesCreationAndConventions`).
+
+.. _I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb
 
 
 .. _CGRF-Dataset:
