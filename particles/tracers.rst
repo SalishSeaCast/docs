@@ -57,12 +57,12 @@ Namelist: Add Parameters
 ===================
 Add the following parameters to the :kbd:`ARIANE` section of the namelist:
 
-* :kbd:`key_computesigma`
-* :kbd:`zsigma`
+* :kbd:`key_computesigma`: False if density is read into Ariane; True if Ariane calculates density.
+* :kbd:`zsigma`: Reference depth for calculation of density.
 
 And change:
 
-* :kbd:`key_alltracers`
+* :kbd:`key_alltracers`: True if tracers are required.
 
 
 Ariane
@@ -85,3 +85,9 @@ Ariane
 		key_computesigma =.TRUE.,
 		zsigma =1.,
         /
+
+Results
+=======
+
+Salinity, Temperature, Density
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
