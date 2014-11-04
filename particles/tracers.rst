@@ -68,20 +68,20 @@ And change:
 Ariane
 ^^^^^^
 
-.. code-block:: fortran
+ .. code-block:: fortran
 
-	&ARIANE
-	    key_alltracers =.TRUE.,
-	    key_sequential =.FALSE.,
-	    key_ascii_outputs =.TRUE.,
-	    mode ='qualitative',
-	    forback ='forward',
-	    bin ='nobin',
-	    init_final ='init',
-	    nmax =1,
-	    tunit =1800.,
-	    ntfic =1,
-	    tcyc =0.,
-	    key_computesigma =.TRUE.,
-	    zsigma =1.,
-	\
+        &ARIANE
+        	key_alltracers =.TRUE.,
+        	key_sequential =.FALSE.,
+	    	key_ascii_outputs =.TRUE.,
+	    	mode ='qualitative',
+	    	forback ='forward',
+	    	bin ='nobin',
+	    	init_final ='init',
+	    	nmax =5,
+	    	tunit =3600.,
+	    	ntfic =1,
+	    	tcyc =0.,
+		key_computesigma =.TRUE.,
+		zsigma =1.,
+        /
