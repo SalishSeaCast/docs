@@ -13,6 +13,12 @@ We will be making changes in :kbd:`namelist`.
 
 Namelist: Sections
 ===================
+Ariane requires both salinity and temperature data as input. It also requires density data or an indication that density should instead be calculated using salinity and temperature.
+
+Our model produces files with filenames that follow this format: *SalishSea_t_yyyymmdd_yyyymmdd_grid_T.nc*. These files contain salinity and temperature. Therefore, Ariane will be calculating density.
+
+
+
 
 
 
