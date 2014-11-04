@@ -32,9 +32,4 @@ At Depth
 
 Figures 1, 2, 3, and 4 show particle trajectories with initial positions along the thalweg, but the initial positions in figures 3 and 4 are located in regions with stronger mixing. Figures A, B, C, and D show the change in depth of the particles as they progressed in their trajectories.
 
-Figures A and B show many differences in the evolution of depths between the 4 hour frequency cases and the 30 minute or 1 hour cases. In fact, the 1 hour case also deviates from the 30 minute case.
-
-Figures C and D 
-
-
-:command:`Conclusion:` 
+:command:`Conclusion: In regions of moderate mixing (Figures A and B), 30 minute data would be preferable; we can use 1 hour data with some caution. In regions of heavy mixing, we should exercise caution in analyzing trajectories and depths since results vary greatly depending on frequencies.` 
