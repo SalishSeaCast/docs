@@ -55,3 +55,32 @@ Salinity
 
 Namelist: Add Parameters
 ===================
+Add the following parameters to the :kbd:`ARIANE` section of the namelist:
+
+* :kbd:`key_computesigma`
+* :kbd:`zsigma`
+
+And change:
+* :kbd:`key_alltracers`
+
+
+Ariane
+^^^^^^
+
+.. code-block:: fortran
+
+	&ARIANE
+	    key_alltracers =.TRUE.,
+	    key_sequential =.FALSE.,
+	    key_ascii_outputs =.TRUE.,
+	    mode ='qualitative',
+	    forback ='forward',
+	    bin ='nobin',
+	    init_final ='init',
+	    nmax =1,
+	    tunit =1800.,
+	    ntfic =1,
+	    tcyc =0.,
+	    key_computesigma =.TRUE.,
+	    zsigma =1.,
+	\
