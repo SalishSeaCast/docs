@@ -91,3 +91,9 @@ Results
 
 Salinity, Temperature, Density
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Notebooks
+-------------------------------
+* `Ariane_Tracers.ipynb`_
+
+.. _Ariane_Tracers.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/Ariane_Tracers.ipynb
