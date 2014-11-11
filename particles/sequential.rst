@@ -1,5 +1,5 @@
-.. _Sequential Function:
+.. _Sequential Mode:
 
 ***********************************************
-Sequential Function
+Sequential Mode
 ***********************************************
