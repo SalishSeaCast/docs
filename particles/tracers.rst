@@ -17,7 +17,7 @@ Ariane requires both salinity and temperature data as input. It also requires de
 
 Our model produces files with filenames that follow this format: *SalishSea_t_yyyymmdd_yyyymmdd_grid_T.nc*. These files contain salinity and temperature. Therefore, Ariane will be calculating density.
 
-Add the following sections to :kbd:`namelist`. 
+Add the following sections to :kbd:`namelist`. Remember to modify the directory and filename of your input files.
 
 Temperature
 ^^^^^^^^^^^
@@ -88,12 +88,23 @@ Ariane
 
 Results
 =======
+The variables names for the tracers are:
 
-Salinity, Temperature, Density
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* traj_temp
+* traj_salt
+* traj_dens
+
+Plots
+^^^^^^^^
+The results produced for the example above:
+
+.. figure:: result_tracers_doc.png
+
+
+
 
 Notebooks
--------------------------------
+=========
 * `Ariane_Tracers.ipynb`_
 
 .. _Ariane_Tracers.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/Ariane_Tracers.ipynb
