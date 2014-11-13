@@ -98,7 +98,7 @@ Plots
 ^^^^^^^^
 The results produced for the example above:
 
-.. figure:: result_tracers_doc.png
+.. figure:: images/result_tracers_doc.png
 
 
 
