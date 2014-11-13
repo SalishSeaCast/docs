@@ -36,7 +36,7 @@ Figures 1, 2, 3, and 4 show particle trajectories with initial positions along t
 
 
 Notebooks
--------------------------------
+=========
 * `Ariane_TimeRes.ipynb`_
 
 .. _Ariane_TimeRes.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/Ariane_TimeRes.ipynb
