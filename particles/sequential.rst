@@ -12,7 +12,7 @@ Input Files
 ===========
 
 The NetCDF files used as input must have the following format:
-*prefix - number - suffix*
+*prefix_number_suffix*
 
 If the file names do not follow this format, create symbolic links that do. Create this link by using the command :kbd:`ln -s [target file directory] [symbolic link name]`
 
@@ -41,13 +41,13 @@ New Input Filename
 ------------------
 Previously, we have been entering the full filename, *SalishSea_t_yyyymmdd_yyyymmdd_grid_T.nc*, into :kbd:`c_prefix_X`. 
 
-Now that we have formatted the filenames as *prefix - number - suffix*, :kbd:`c_prefix_me` takes on the value of the *prefix* and :kbd:`c_suffix_me` takes the value of *suffix*.
+Now that we have formatted the filenames as *prefix_number_suffix*, :kbd:`c_prefix_me` takes on the value of the *prefix* and :kbd:`c_suffix_me` takes the value of *suffix*.
 
 :kbd:`ind0_X` is the *number* for the earliest input file and :kbd:`indn_X` is the latest. 
 
 :kbd:`maxsize_X` is the number of digits in *number*.
 
-For example, the **ZONALCRT** would look like the following for input files **SalishSea_01_grid_U.nc** and **SalishSea_02_grid_U.nc** :
+For example, the **ZONALCRT** section would look like the following for input files **SalishSea_01_grid_U.nc** and **SalishSea_02_grid_U.nc** :
  
  .. code-block:: fortran
         
@@ -66,7 +66,7 @@ For example, the **ZONALCRT** would look like the following for input files **Sa
 
 Sequential Parameter
 --------------------
-Under **ARIANE** in :kbd:`namelist`, change :kbd:`key_sequential` to TRUE.
+Under the **ARIANE** section in :kbd:`namelist`, change :kbd:`key_sequential` to TRUE.
 
 
 
@@ -84,6 +84,14 @@ Sequential
 	&SEQUENTIAL
 	maxcycles =1,
 	/
+
+
+
+Results
+=======
+The results produced for the example above:
+
+.. figure:: images/result_sequential_doc.png
 
 
 
