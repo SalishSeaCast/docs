@@ -29,7 +29,7 @@ Note: *number* must contain a constant digit number and its value must increase 
 Namelist: Modify Sections
 =========================
 
-First, let's take a closer look at the parameteres in the namelist sections. The parameter names are :kbd:`c_dir_X`, :kbd:`c_prefix_X`, :kbd:`ind0_X`, :kbd:`indn_X`, :kbd:`maxsize_X`, and :kbd:`c_suffix_X` where :kbd:`X` is :kbd:`zo`,:kbd:`me`,:kbd:`te`,:kbd:`sa` for the **ZONALCRT**, **MERIDCRT**, **TEMPERAT**, and **SALINITY** sections, respectively.
+First, let's take a closer look at the parameteres in the namelist sections. The parameter names are :kbd:`c_dir_X`, :kbd:`c_prefix_X` , :kbd:`ind0_X` , :kbd:`indn_X` , :kbd:`maxsize_X` , and :kbd:`c_suffix_X` where :kbd:`X` is :kbd:`zo`,:kbd:`me`,:kbd:`te`,:kbd:`sa` for the **ZONALCRT**, **MERIDCRT**, **TEMPERAT**, and **SALINITY** sections, respectively.
 
 Input File Directory
 --------------------
