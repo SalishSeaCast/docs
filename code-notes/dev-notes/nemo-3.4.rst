@@ -80,6 +80,7 @@ Making a Project
         ./makenemo -m ocean -r GYRE -n MY_GYRE add_key "key_nosignedzero key_netcdf4"
 
 *   If the following error comes up:
+
     .. code-block:: bash
 
        /* Copyright (C) 1991-2012 Free Software Foundation, Inc.
