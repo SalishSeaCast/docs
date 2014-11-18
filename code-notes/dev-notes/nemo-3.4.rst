@@ -54,7 +54,6 @@ Making a Project
   # MK          make
   # USER_INC    additional include files for the compiler,  e.g. -I<include dir>
   # USER_LIB    additional libraries to pass to the linker, e.g. -l<library>
-
   %NCDF_INC            **-I/usr/include**
   %NCDF_LIB            **-L/usr/lib -lnetcdff**
   %FC                  gfortran
@@ -79,6 +78,25 @@ Making a Project
 
         cd ../CONFIG
         ./makenemo -m ocean -r GYRE -n MY_GYRE add_key "key_nosignedzero key_netcdf4"
+
+*   If the following error comes up:
+    .. code-block:: bash
+
+       /* Copyright (C) 1991-2012 Free Software Foundation, Inc.
+        1
+       Error: Invalid character in name at (1)
+
+    then modify the arch-ocean.fcm file line:
+
+    .. code-block:: bash
+   
+       %FPPFLAGS	-P -C -traditional
+
+    to:
+
+    .. code-block:: bash
+
+       %FPPFLAGS	-P -traditional
 
 Running the Code
 ----------------
