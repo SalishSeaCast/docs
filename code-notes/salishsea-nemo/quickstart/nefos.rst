@@ -344,4 +344,4 @@ Doing this avoids compilation and linking issues.
 
 .. code-block:: none
 
-    (nefos)$ conda install requests pyopenssl six pytz crytography cffi pycparser
+    (nefos)$ conda install requests pyopenssl six pytz cryptography cffi pycparser
