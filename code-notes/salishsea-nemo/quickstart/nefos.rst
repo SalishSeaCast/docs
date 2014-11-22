@@ -244,6 +244,65 @@ Provisioning and Configuration
     $ pip install --user -e SalishSeaCmd
 
 
+Shared Storage via SSHFS
+------------------------
+
+.. warning::
+
+    Instances with an SSHFS mounted are fragile with respect to rebooting and image creation,
+    that is,
+    if an SSHFS is mounted when an instance is rebooted,
+    the instance will be unreachable.
+    Likewise,
+    inatances booted from an image created from an instance with an SSHFS mounted are unreachable.
+
+Shared, persistent storage accessible via SSHFS is set up for user :kbd:`nemo` on :kbd:`nemo@ncnfs1.neptune.uvic.ca`.
+It is only accessible from :kbd:`nefos` instances.
+
+Generate a pasphrase-less ssh key-pair with the default (:file:`.ssh/id_rsa`) name and copy it to to :kbd:`nemo@ncnfs1.neptune.uvic.ca`:
+
+.. code-block:: bash
+
+    $ ssh-keygen -t rsa
+    $ ssh-copy-id nemo@ncnfs1.neptune.uvic.ca
+
+Create a mount point with appropriate ownership and mount the SSHFS filesystem:
+
+.. code-block:: bash
+
+    $ sudo mkdir /mnt/MEOPAR
+    $ sudo chown ubuntu:ubuntu /mnt/MEOPAR
+    $ sshfs nemo@ncnfs1.neptune.uvic.ca:/gss_onc/NEMO /mnt/MEOPAR
+
+To unmount the filesystem use:
+
+.. code-block:: bash
+
+    $ fusermount -u /mnt/MEOPAR
+
+Set up the shared storage:
+
+.. code-block:: bash
+
+    $ cd /mnt/MEOPAR
+    $ mkdir SalishSea
+    $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
+    $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
+
+Not sure why,
+but running :command:`makenemo` fails with write permission errors in :file:`/mnt/MEOPAR/NEMO-code/`.
+So,
+we fake it by building NEMO in :file:`/home/MEOPAR/NEMO-code/` and copy the executables to :file:`/mnt/MEOPAR/NEMO-code/`:
+
+.. code-block:: bash
+
+    $ mkdir -p /mnt/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin
+    $ cp BLD/bin/*.exe /mnt/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/
+    $ cd /mnt/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/EXP00/
+    $ ln -s /mnt/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/nemo.exe opa
+    $ ln -s /mnt/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/server.exe
+
+
 Command-line Interface
 ======================
 
