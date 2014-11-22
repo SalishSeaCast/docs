@@ -7,9 +7,9 @@ Working on :kbd:`nefos`
     This section contains work in progress notes.
     `nefos`_ is not yet ready to run the Salish Sea NEMO model.
 
-These are working notes about the process of getting the Salish Sea NEMO model set up to run on  the `Ocean Newworks Canada`_ private cloud computing facility `nefos`_ that run on `OpenStack`_.
+These are working notes about the process of getting the Salish Sea NEMO model set up to run on  the `Ocean Networks Canada`_ private cloud computing facility `nefos`_ that run on `OpenStack`_.
 
-.. _Ocean Newworks Canada: http://www.oceannetworks.ca/
+.. _Ocean Networks Canada: http://www.oceannetworks.ca/
 .. _nefos: https://www.westgrid.ca/support/systems/Nefos
 .. _OpenStack: http://www.openstack.org/
 
