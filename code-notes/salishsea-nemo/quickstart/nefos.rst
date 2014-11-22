@@ -1,3 +1,5 @@
+.. _WorkingOnNefos:
+
 ***********************
 Working on :kbd:`nefos`
 ***********************
