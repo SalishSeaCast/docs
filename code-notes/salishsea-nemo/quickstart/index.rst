@@ -12,7 +12,7 @@ The sections below describe *very* briefly the steps to set up and run the Salis
     salish
     jasper
     orcinus
-    nefos
+    west.cloud
 
 Details of what this all means and why the steps below are what they are can be found in the following sections:
 
