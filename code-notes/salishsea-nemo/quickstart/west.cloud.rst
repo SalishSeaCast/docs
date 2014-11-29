@@ -1,26 +1,26 @@
-.. _WorkingOnNefos:
+.. _WorkingOnWestCloud:
 
-***********************
-Working on :kbd:`nefos`
-***********************
+****************************
+Working on :kbd:`west.cloud`
+****************************
 
 .. warning::
 
     This section contains work in progress notes.
-    `nefos`_ is not yet ready to run the Salish Sea NEMO model.
+    `west.cloud`_ is not yet ready to run the Salish Sea NEMO model.
 
-These are working notes about the process of getting the Salish Sea NEMO model set up to run on  the `Ocean Networks Canada`_ private cloud computing facility `nefos`_ that run on `OpenStack`_.
+These are working notes about the process of getting the Salish Sea NEMO model set up to run on  the `Ocean Networks Canada`_ private cloud computing facility `west.cloud`_ that run on `OpenStack`_.
 
 .. _Ocean Networks Canada: http://www.oceannetworks.ca/
-.. _nefos: https://www.westgrid.ca/support/systems/Nefos
+.. _west.cloud: https://www.westgrid.ca/support/systems/Nefos
 .. _OpenStack: http://www.openstack.org/
 
 The `OpenStack dashboard`_ provides a web interface to provision and report on cloud resources.
-The :kbd:`nefos` dashboard is at https://nefos.westgrid.ca/dashboard/.
+The :kbd:`west.cloud` dashboard is at https://west.cloud.computecanada.ca/dashboard/.
 
 .. _OpenStack dashboard: http://docs.openstack.org/user-guide/content/ch_dashboard.html
 
-Authentication and authorization for :kbd:`nefos` is managed by `Westgrid`_,
+Authentication and authorization for :kbd:`west.cloud` is managed by `Westgrid`_,
 so use your Westgrid user id and password to log in to the dashboard.
 
 .. _Westgrid: https://www.westgrid.ca/
@@ -29,7 +29,7 @@ so use your Westgrid user id and password to log in to the dashboard.
 Web Interface
 =============
 
-Initial setup was done via the https://nefos.westgrid.ca/dashboard/ web interface with guidance from the
+Initial setup was done via the https://west.cloud.computecanada.ca/dashboard/ web interface with guidance from the
 (unpublished at time of writing)
 `nefos.westgrid.ca Quickstart Guide`_ and the `OpenStack End User Guide`_.
 
@@ -100,7 +100,7 @@ Generate an ssh key pair on a Linux or OS/X system using the command:
 .. code-block:: bash
 
     $ cd $HOME/.ssh/
-    $ ssh -t rsa -f nefos_id_rsa -c <yourname>-nefos
+    $ ssh -t rsa -f west.cloud_id_rsa -c <yourname>-west.cloud
 
 Assign a string passphrase to the key pair when prompted.
 Passphraseless keys have their place,
@@ -110,7 +110,7 @@ List the public key with the command:
 
 .. code-block:: bash
 
-    $ cat nefos_id_rsa.pub
+    $ cat west.cloud_id_rsa.pub
 
 and use copy-paste to import it into the web interface via the :guilabel:`Compute > Access & Security > Key Pairs > Import Key Pair` button.
 
@@ -172,7 +172,7 @@ Log in to the publicly accessible instance with the command:
 
 .. code-block:: bash
 
-    $ ssh -i $HOME/.ssh/nefos_id_rsa ubuntu@<ip-address>
+    $ ssh -i $HOME/.ssh/west.cloud_id_rsa ubuntu@<ip-address>
 
 The first time you connect to an instance you will be prompted to accept its RSA host key fingerprint.
 You can verify the fingerprint by looking for the :kbd:`SSH HOST KEY FINGERPRINT` section in the instance log in the :guilabel:`Instances > Instance Details > Log` tab.
@@ -186,7 +186,7 @@ You can add the key to the agent yourself with the command:
 
 .. code-block:: bash
 
-    $ ssh-add $HOME/.ssh/nefos_id_rsa
+    $ ssh-add $HOME/.ssh/west.cloud_id_rsa
 
 You can list the keys that the agent is managing for you with:
 
@@ -198,17 +198,17 @@ You can simplify logins to the instance by adding the following lines to your :f
 
 .. code-block:: ini
 
-    Host nefos
+    Host west.cloud
         Hostname        <ip-address>
         User            ubuntu
-        IdentityFile    ~/.ssh/nefos_id_rsa
+        IdentityFile    ~/.ssh/west.cloud_id_rsa
         ForwardAgent    yes
 
 With that in place you should be able to connect to the instance with:
 
 .. code-block:: bash
 
-    $ ssh nefos
+    $ ssh west.cloud
 
 
 Provisioning and Configuration
@@ -257,7 +257,7 @@ Shared Storage via SSHFS
     inatances booted from an image created from an instance with an SSHFS mounted are unreachable.
 
 Shared, persistent storage accessible via SSHFS is set up for user :kbd:`nemo` on :kbd:`nemo@ncnfs1.neptune.uvic.ca`.
-It is only accessible from :kbd:`nefos` instances.
+It is only accessible from :kbd:`west.cloud` instances.
 
 Generate a pasphrase-less ssh key-pair with the default (:file:`.ssh/id_rsa`) name and copy it to to :kbd:`nemo@ncnfs1.neptune.uvic.ca`:
 
@@ -333,9 +333,9 @@ so create and activate an environment with Python 2.7 and `pip`_ installed:
 
 .. code-block:: none
 
-    $ conda create -n nefos python=2.7 pip
+    $ conda create -n west.cloud python=2.7 pip
     ...
-    $ source activate nefos
+    $ source activate west.cloud
 
 .. _pip: https://pip.readthedocs.org/en/latest/
 
@@ -344,4 +344,4 @@ Doing this avoids compilation and linking issues.
 
 .. code-block:: none
 
-    (nefos)$ conda install requests pyopenssl six pytz cryptography cffi pycparser
+    (west.cloud)$ conda install requests pyopenssl six pytz cryptography cffi pycparser
