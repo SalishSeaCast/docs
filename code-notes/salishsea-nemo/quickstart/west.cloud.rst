@@ -214,6 +214,10 @@ With that in place you should be able to connect to the instance with:
 Provisioning and Configuration
 ==============================
 
+Launch an :kbd:`m1.small` flavour instance from the :kbd:`ubuntu-server-14.04-amd64` image,
+associate a floating IP address with it,
+and provision it with the following packages:
+
 .. code-block:: bash
 
     $ sudo apt-get update
@@ -230,19 +234,128 @@ Provisioning and Configuration
     $ sudo apt-get install python-matplotlib python-pandas python-cliff
     $ sudo apt-get install sshfs
 
-    $ mkdir -p MEOPAR/SalishSea
+Use:
+
+.. code-block:: bash
+
+    sudo dpkg-reconfigure tzdata
+
+to set the timezone.
+
+Copy the public key of the passphrase-less ssh key pair that will be used for nowcast cloud operations into :file:`$HOME/.ssh/` and append it to the :file:`authorized_keys` file:
+
+.. code-block:: bash
+
+    # on a system where they key pair is stored
+    $ scp -Cp $HOME/.ssh/SalishSeaNEMO-nowcast_id_rsa.pub west.cloud:.ssh/
+
+    # on west.cloud
+    $ cd $HOME/.ssh/
+    $ cat SalishSeaNEMO-nowcast_id_rsa.pub >> authorized_keys
+    $ rm SalishSeaNEMO-nowcast_id_rsa.pub
+
+The nowcast operations key pair could have been used as the default key pair in the OpenStack web interface,
+but using a key pair with a passphrase there allows for more flexibility:
+in particular,
+the possibliity of revoking the passphrase-less key pair without loosing access to the instances.
+
+Copy the ssh key pair that will be used to access the :ref:`ShareStorageViaSSHFS` and rename them to the default key names:
+
+.. code-block:: bash
+
+    # on a system where they key pair is stored
+    $ scp -Cp $HOME/.ssh/nefos-sshfs_id_rsa* west.cloud:.ssh/
+
+    # on west.cloud
+    $ cd $HOME/.ssh/
+    $ mv nefos-sshfs_id_rsa id_rsa
+    $ mv nefos-sshfs_id_rsa.pub id_rsa.pub
+
+
+.. _HeadNodeSpecificConfiguration:
+
+Head Node Specific Configuration
+--------------------------------
+
+Mount the :ref:`ShareStorageViaSSHFS`:
+
+.. code-block:: bash
+
+    $ sudo mkdir -p /mnt/MEOPAR
+    $ sudo chown ubuntu:ubuntu /mnt/MEOPAR
+    $ sshfs -o idmap=user nemo@ncnfs1.neptune.uvic.ca:/gss_onc/NEMO /mnt/MEOPAR
+
+If they do not already exist on :file:`/mnt/MEOPAR/`,
+clone the Salish Sea NEMO project code,
+forcing,
+run sets,
+and tools repos from Bitbucket:
+
+.. code-block:: bash
+
+    $ mkdir -p /mnt/MEOPAR/SalishSea
     $ cd MEOPAR
     $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
     $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     $ hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     $ hg clone ssh://hg@bitbucket.org/salishsea/tools tools
 
+Install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` as editable user packages and add :file:`$HOME/.local/bin/`:
 
-    $ mkdir -p $HOME/.local
-    $ cd MEOPAR/tools/
+    $ cd /mnt/MEOPAR/tools/
     $ pip install --user -e SalishSeaTools
     $ pip install --user -e SalishSeaCmd
+    $ export PATH=$HOME/.local/bin:$PATH
 
+Unmount the SSHFS:
+
+.. code-block:: bash
+
+    $ cd $HOME
+    $ fusermount -u /mnt/MEOPAR
+
+and use the OpenStack web interface to create a snapshot of the instance for use as the "head" node for running the Salish Sea NEMO nowcast and forecast runs.
+The head node is the one that will have the public IP address associated with it and it will be used for commands,
+uploads,
+and downloads.
+It is also used as a compute node.
+
+Because the provisioning and configuration has been done on a small flavour instance the snapshot image captured from it can be launched on larger instances for production use.
+
+
+.. _ComputeNodeConfiguration:
+
+Compute Node Configuration
+--------------------------
+
+On an instance launched from the head node image remove the installation of the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` as editable user packages and the :file:`$HOME/.local/bin/`:
+
+.. code-block:: bash
+
+    $ rm -rf $HOME/.local
+
+Remove :file:`$HOME/.local/` from :envvar:`PATH`:
+
+.. code-block:: bash
+
+    export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+
+Delete the nowcast operations public key from the :file:`authorized_keys` file and replace it with the :file:`id_rsa.pub` SSHFS key.
+
+Ensure that the SSHFS is not mounted:
+
+.. code-block:: bash
+
+    $ cd $HOME
+    $ fusermount -u /mnt/MEOPAR
+
+and use the OpenStack web interface to create a snapshot of the instance for use as compute nodes for running the Salish Sea NEMO nowcast and forecast runs.
+Compute nodes provide cores and RAM for the runs.
+
+Because the provisioning and configuration has been done on a small flavour instance the snapshot image captured from it can be launched on larger instances for production use.
+
+
+.. _ShareStorageViaSSHFS:
 
 Shared Storage via SSHFS
 ------------------------
@@ -272,7 +385,7 @@ Create a mount point with appropriate ownership and mount the SSHFS filesystem:
 
     $ sudo mkdir /mnt/MEOPAR
     $ sudo chown ubuntu:ubuntu /mnt/MEOPAR
-    $ sshfs nemo@ncnfs1.neptune.uvic.ca:/gss_onc/NEMO /mnt/MEOPAR
+    $ sshfs -o idmap=user nemo@ncnfs1.neptune.uvic.ca:/gss_onc/NEMO /mnt/MEOPAR
 
 To unmount the filesystem use:
 
@@ -284,10 +397,12 @@ Set up the shared storage:
 
 .. code-block:: bash
 
-    $ cd /mnt/MEOPAR
-    $ mkdir SalishSea
+    $ mkdir -p /mnt/MEOPAR/SalishSea
+    $ cd MEOPAR
     $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
     $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
+    $ hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
+    $ hg clone ssh://hg@bitbucket.org/salishsea/tools tools
 
 Not sure why,
 but running :command:`makenemo` fails with write permission errors in :file:`/mnt/MEOPAR/NEMO-code/`.
