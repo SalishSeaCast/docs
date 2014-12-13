@@ -230,9 +230,10 @@ and provision it with the following packages:
     $ sudo apt-get install nco
     $ sudo apt-get install liburi-perl
     $ sudo apt-get install make ksh emacs24
+    $ sudo apt-get install sshfs
     $ sudo apt-get install python-pip python-dev
     $ sudo apt-get install python-matplotlib python-pandas python-cliff
-    $ sudo apt-get install sshfs
+    $ sudo apt-get install python-zmq python-paramiko
 
 Use:
 
