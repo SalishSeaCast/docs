@@ -272,6 +272,25 @@ Copy the ssh key pair that will be used to access the :ref:`ShareStorageViaSSHFS
     $ mv nefos-sshfs_id_rsa id_rsa
     $ mv nefos-sshfs_id_rsa.pub id_rsa.pub
 
+Edit :file:`$HOME/.profile` to add code that puts :file:`$HOME/.local/bin` at the front of :envvar:`PATH`:
+
+.. code-block:: bash
+
+    # set PATH so it includes user's private and local bins
+    # if they exists
+    if [ -d "$HOME/bin" ] ; then
+        PATH="$HOME/bin:$PATH"
+    fi
+    if [ -d "$HOME/.local/bin" ] ; then
+        PATH="$HOME/.local/bin:$PATH"
+    fi
+
+Create :file:`$HOME/.bash_aliases` containing a command to set the command-line prompt to show the host name and the final directory of the :kbd:`pwd` path:
+
+.. code-block:: bash
+
+    PS1="\h:\W\$ "
+
 
 .. _HeadNodeSpecificConfiguration:
 
