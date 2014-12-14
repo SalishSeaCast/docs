@@ -243,6 +243,14 @@ Use:
 
 to set the timezone.
 
+Set the network interface MTU
+(Maximum Transmission Unit)
+to 1500 with:
+
+.. code-block:: bash
+
+    sudo ip link set dev eth0 mtu 1500
+
 Copy the public key of the passphrase-less ssh key pair that will be used for nowcast cloud operations into :file:`$HOME/.ssh/` and append it to the :file:`authorized_keys` file:
 
 .. code-block:: bash
