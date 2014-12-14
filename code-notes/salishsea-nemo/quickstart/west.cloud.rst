@@ -301,11 +301,11 @@ Mount the :ref:`ShareStorageViaSSHFS`:
 
 .. code-block:: bash
 
-    $ sudo mkdir -p /mnt/MEOPAR
-    $ sudo chown ubuntu:ubuntu /mnt/MEOPAR
-    $ sshfs -o idmap=user nemo@ncnfs1.neptune.uvic.ca:/gss_onc/NEMO /mnt/MEOPAR
+    $ sudo mkdir -p $HOME/MEOPAR
+    $ sudo chown ubuntu:ubuntu $HOME/MEOPAR
+    $ sshfs -o idmap=user nemo@ncnfs1.neptune.uvic.ca:/gss_onc/NEMO $HOME/MEOPAR
 
-If they do not already exist on :file:`/mnt/MEOPAR/`,
+If they do not already exist on :file:`$HOME/MEOPAR/`,
 clone the Salish Sea NEMO project code,
 forcing,
 run sets,
@@ -313,7 +313,7 @@ and tools repos from Bitbucket:
 
 .. code-block:: bash
 
-    $ mkdir -p /mnt/MEOPAR/SalishSea
+    $ mkdir -p $HOME/MEOPAR/SalishSea
     $ cd MEOPAR
     $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
     $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
@@ -322,7 +322,7 @@ and tools repos from Bitbucket:
 
 Install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` as editable user packages and add :file:`$HOME/.local/bin/`:
 
-    $ cd /mnt/MEOPAR/tools/
+    $ cd $HOME/MEOPAR/tools/
     $ pip install --user -e SalishSeaTools
     $ pip install --user -e SalishSeaCmd
     $ export PATH=$HOME/.local/bin:$PATH
@@ -332,7 +332,7 @@ Unmount the SSHFS:
 .. code-block:: bash
 
     $ cd $HOME
-    $ fusermount -u /mnt/MEOPAR
+    $ fusermount -u $HOME/MEOPAR
 
 and use the OpenStack web interface to create a snapshot of the instance for use as the "head" node for running the Salish Sea NEMO nowcast and forecast runs.
 The head node is the one that will have the public IP address associated with it and it will be used for commands,
@@ -367,7 +367,7 @@ Ensure that the SSHFS is not mounted:
 .. code-block:: bash
 
     $ cd $HOME
-    $ fusermount -u /mnt/MEOPAR
+    $ fusermount -u $HOME/MEOPAR
 
 and use the OpenStack web interface to create a snapshot of the instance for use as compute nodes for running the Salish Sea NEMO nowcast and forecast runs.
 Compute nodes provide cores and RAM for the runs.
@@ -403,39 +403,26 @@ Create a mount point with appropriate ownership and mount the SSHFS filesystem:
 
 .. code-block:: bash
 
-    $ sudo mkdir /mnt/MEOPAR
-    $ sudo chown ubuntu:ubuntu /mnt/MEOPAR
-    $ sshfs -o idmap=user nemo@ncnfs1.neptune.uvic.ca:/gss_onc/NEMO /mnt/MEOPAR
+    $ sudo mkdir $HOME/MEOPAR
+    $ sudo chown ubuntu:ubuntu $HOME/MEOPAR
+    $ sshfs -o idmap=user nemo@ncnfs1.neptune.uvic.ca:/gss_onc/NEMO $HOME/MEOPAR
 
 To unmount the filesystem use:
 
 .. code-block:: bash
 
-    $ fusermount -u /mnt/MEOPAR
+    $ fusermount -u $HOME/MEOPAR
 
 Set up the shared storage:
 
 .. code-block:: bash
 
-    $ mkdir -p /mnt/MEOPAR/SalishSea
+    $ mkdir -p $HOME/MEOPAR/SalishSea
     $ cd MEOPAR
     $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
     $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     $ hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     $ hg clone ssh://hg@bitbucket.org/salishsea/tools tools
-
-Not sure why,
-but running :command:`makenemo` fails with write permission errors in :file:`/mnt/MEOPAR/NEMO-code/`.
-So,
-we fake it by building NEMO in :file:`/home/MEOPAR/NEMO-code/` and copy the executables to :file:`/mnt/MEOPAR/NEMO-code/`:
-
-.. code-block:: bash
-
-    $ mkdir -p /mnt/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin
-    $ cp BLD/bin/*.exe /mnt/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/
-    $ cd /mnt/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/EXP00/
-    $ ln -s /mnt/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/nemo.exe opa
-    $ ln -s /mnt/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/server.exe
 
 
 Command-line Interface
