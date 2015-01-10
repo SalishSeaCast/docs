@@ -31,7 +31,7 @@ Long term goals include data assimilation from the VENUS network and a coupled b
 
 .. _NEMO: http://www.nemo-ocean.eu/
 
-.. figure:: code-notes/salishsea-nemo/nemo-forcing/images/SalishSeaBathy.png
+.. figure:: _static/SalishSeaImage.png
 
 
 Contents
