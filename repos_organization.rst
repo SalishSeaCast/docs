@@ -155,6 +155,7 @@ salishsea-site
 * Apache v2.0 license, copyright project contributors and UBC
 * content and tool chain for the `salishsea.eos.ubc.ca`_ domain site static content
 * Bitbucket: https://bitbucket.org/salishsea/salishsea-site/
+* documentation: http://salishsea-meopar-docs.readthedocs.org/salishsea-site/index.html
 
 
 .. _results-repo:
