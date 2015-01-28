@@ -112,7 +112,7 @@ __ ipynb_
 
 The links above are to static renderings of the notebooks via
 `nbviewer.ipython.org`_ .
-The notebook source files are in the `analysis_tools`_ directory of the :ref:`analysis-repo` repo.
+The notebook source files are in the `analysis_tools`_ directory of the :ref:`tools-repo` repo.
 
 .. _nbviewer.ipython.org: http://nbviewer.ipython.org/
 .. _analysis_tools: https://bitbucket.org/salishsea/tools/src/tip/analysis_tools/
