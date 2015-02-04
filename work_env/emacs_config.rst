@@ -237,6 +237,7 @@ and to enable :kbd:`flymake-cursor`:
           (list "flake8" (list local-file))))
       (add-to-list 'flymake-allowed-file-name-masks
                    '("\\.py\\'" flymake-flake8-init))
+    )
     (add-hook 'find-file-hook 'flymake-find-file-hook)
     ;; display flymake messages for cursor line in minibuffer
     (require 'flymake-cursor)
