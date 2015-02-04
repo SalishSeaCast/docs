@@ -193,6 +193,55 @@ Configure :program:`emacs` to use :kbd:`python-mode` automatically whenever you 
     (autoload 'python-mode "python-mode" "Python editing mode." t)
 
 
+Python Source Code Checking via Flake8
+--------------------------------------
+
+These settings enable on-the-fly static analysis of Python code using the `flake8`_ tool.
+`flake8`_ uses a collection of Python packages to check Python code for syntax error and adherence to the `PEP8`_ coding style guide.
+The snippet below configures :program:`emacs` :kbd:`flymake` mode to run `flake8`_ in the background whenever you pause in your typing for a few seconds,
+and whenever a Python file is loaded or saved.
+Lines that have messages from `flake8`_ associated with them are colourfully highlighted and the messages should appear in the minibuffer region at the bottom of the screen when you hover your cursor over the highlighting.
+The :kbd:`flymake-cursor` mode displays messages from `flake8`_ for the line that the cursor is on in the minibuffer - useful for :command:`ssh` sessions when mouse integration with :program:`emacs` is not available.
+
+.. _flake8: https://pypi.python.org/pypi/flake8
+.. _PEP8: https://www.python.org/dev/peps/pep-0008/
+
+Install `flake8`_ into your local Python environment:
+
+.. code-block:: bash
+
+    $ pip install --user flake8
+
+Download :file:`flymake-cursor.el` from http://www.emacswiki.org/emacs/download/flymake-cursor.el into your :file:`$HOME/elisp/` directory:
+
+.. code-block:: bash
+
+    cd $HOME/elisp/
+    wget http://www.emacswiki.org/emacs/download/flymake-cursor.el
+
+Byte-compile :file:`flymake-cursor.el` in :program:`emacs` with :kbd:`M-x byte-compile-file`.
+
+Configure :program:`emacs` to run `flake8`_ via :kbd:`flymake` on Python files,
+and to enable :kbd:`flymake-cursor`:
+
+.. code-block:: scheme
+
+    ;; connect flymake for Python buffers to Flake8
+    (when (load "flymake" t)
+      (defun flymake-flake8-init ()
+        (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                           'flymake-create-temp-inplace))
+               (local-file (file-relative-name
+                            temp-file
+                            (file-name-directory buffer-file-name))))
+          (list "flake8" (list local-file))))
+      (add-to-list 'flymake-allowed-file-name-masks
+                   '("\\.py\\'" flymake-flake8-init))
+    (add-hook 'find-file-hook 'flymake-find-file-hook)
+    ;; display flymake messages for cursor line in minibuffer
+    (require 'flymake-cursor)
+
+
 Mercurial Mode
 --------------
 
