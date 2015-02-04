@@ -242,6 +242,34 @@ and to enable :kbd:`flymake-cursor`:
     (require 'flymake-cursor)
 
 
+Code Folding for Python
+-----------------------
+
+Allows you to collapse and expand (aka fold) function definitions in Python code by hooking into :program:`emacs` :kbd:`outline-mode`.
+
+Defaults to collapsing all definitions when a Python file is loaded.
+See the comments at the top of :file:`python-outline.el` for how to change that default.
+:kbd:`C-q` (or perhaps :kbd:`C-c C-e`) toggles folding of the function the cursor is in.
+:kbd:`C-c C-a` toggles folding of all functions.
+
+Download :file:`python-outline.el` from https://chmouel.googlecode.com/svn-history/r48/trunk/emacs/modes/python-outline.el into your :file:`$HOME/elisp/` directory:
+
+.. code-block:: bash
+
+    cd $HOME/elisp/
+    wget https://chmouel.googlecode.com/svn-history/r48/trunk/emacs/modes/python-outline.el
+
+Byte-compile :file:`python-outline.el` in :program:`emacs` with :kbd:`M-x byte-compile-file`.
+
+Configure :program:`emacs` to enable :kbd:`python-outline` mode:
+
+.. code-block:: scheme
+
+    ;; add Python-outline mode
+    (require 'python-outline)
+    (setq auto-mode-alist (append '(("\\.py" . python-outline)) auto-mode-alist))
+
+
 Mercurial Mode
 --------------
 
