@@ -256,15 +256,15 @@ Allows you to collapse and expand (aka fold) function definitions in Python code
 
 Defaults to collapsing all definitions when a Python file is loaded.
 See the comments at the top of :file:`python-outline.el` for how to change that default.
-:kbd:`C-q` (or perhaps :kbd:`C-c C-e`) toggles folding of the function the cursor is in.
+:kbd:`C-q` toggles folding of the function the cursor is in.
 :kbd:`C-c C-a` toggles folding of all functions.
 
-Download :file:`python-outline.el` from https://chmouel.googlecode.com/svn-history/r48/trunk/emacs/modes/python-outline.el into your :file:`$HOME/elisp/` directory:
+Copy :file:`python-outline.el` from :file:`/home/dlatorne/elisp/` into your :file:`$HOME/elisp/` directory:
 
 .. code-block:: bash
 
     cd $HOME/elisp/
-    wget https://chmouel.googlecode.com/svn-history/r48/trunk/emacs/modes/python-outline.el
+    cp /home/dlatorne/elisp/python-outline.el
 
 Byte-compile :file:`python-outline.el` in :program:`emacs` with :kbd:`M-x byte-compile-file`.
 
