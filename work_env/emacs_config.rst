@@ -109,9 +109,6 @@ The general procedure to install a 3rd party mode is:
 * Download the EmacsLisp file
   (file extension :file:`.el`)
   into your :file:`$HOME/elisp/` directory
-* Byte-compile the mode file in :program:`emacs` with the command :command:`M-x byte-compile-file`,
-  giving the path and file name at the prompt that follow;
-  e.g. :file:`~/elisp/yaml-mode.el`
 * Add the appropriate configuration statements listed below to your :file:`$HOME/.emacs` file
 * Restart :program:`emacs` for the changes to take effect
 
@@ -129,8 +126,6 @@ Download :file:`yaml-mode.el` from https://raw.github.com/yoshiki/yaml-mode/mast
 
     cd $HOME/elisp/
     wget https://raw.github.com/yoshiki/yaml-mode/master/yaml-mode.el
-
-Byte-compile :file:`yaml-mode.el` in :program:`emacs` with :kbd:`M-x byte-compile-file`.
 
 Configure :program:`emacs` to use :kbd:`yaml-mode` automatically whenever you visit a file with the extension :kbd:`.yaml` or :kbd:`.yml`:
 
@@ -155,8 +150,6 @@ Download :file:`rst.el` from http://docutils.sourceforge.net/tools/editors/emacs
     cd $HOME/elisp/
     wget http://docutils.sourceforge.net/tools/editors/emacs/rst.el
 
-Byte-compile :file:`rst.el` in :program:`emacs` with :kbd:`M-x byte-compile-file`.
-
 Configure :program:`emacs` to use :kbd:`rst-mode` automatically whenever you visit a file with the extension :kbd:`.rst`:
 
 .. code-block:: scheme
@@ -175,8 +168,6 @@ Python Mode
 but these instructions are for installing a more comprehensive :kbd:`python-mode` that is maintained by the Python community.
 
 Download :file:`python-mode.el` from http://bazaar.launchpad.net/~python-mode-devs/python-mode/python-mode/view/head:/python-mode.el and move it into your :file:`$HOME/elisp/` directory.
-
-Byte-compile :file:`python-mode.el` in :program:`emacs` with :kbd:`M-x byte-compile-file`.
 
 Configure :program:`emacs` to use :kbd:`python-mode` automatically whenever you visit a file with the extension :kbd:`.py`:
 
@@ -225,8 +216,6 @@ Download :file:`flymake-cursor.el` from http://www.emacswiki.org/emacs/download/
     cd $HOME/elisp/
     wget http://www.emacswiki.org/emacs/download/flymake-cursor.el
 
-Byte-compile :file:`flymake-cursor.el` in :program:`emacs` with :kbd:`M-x byte-compile-file`.
-
 Configure :program:`emacs` to run `flake8`_ via :kbd:`flymake` on Python files,
 and to enable :kbd:`flymake-cursor`:
 
@@ -266,8 +255,6 @@ Copy :file:`python-outline.el` from :file:`/home/dlatorne/elisp/` into your :fil
     cd $HOME/elisp/
     cp /home/dlatorne/elisp/python-outline.el
 
-Byte-compile :file:`python-outline.el` in :program:`emacs` with :kbd:`M-x byte-compile-file`.
-
 Configure :program:`emacs` to enable :kbd:`python-outline` mode:
 
 .. code-block:: scheme
@@ -288,8 +275,6 @@ Download :file:`mercurial.el` from http://hg.intevation.org/mercurial/file/tip/c
 
     cd $HOME/elisp/
     wget http://hg.intevation.org/mercurial/file/tip/contrib/mercurial.el
-
-Byte-compile :file:`mercurial.el` in :program:`emacs` with :kbd:`M-x byte-compile-file`.
 
 Configure :program:`emacs` to always load Mercurial mode:
 
