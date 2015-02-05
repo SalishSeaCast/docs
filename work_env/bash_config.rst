@@ -73,6 +73,12 @@ The :file:`$HOME/bin/` directory is the conventional place keep your own scripts
 
     export PATH=$PATH:$HOME/bin
 
+The :file:`$HOME/.local/bin/` directory is where Python scripts installed via the :kbd:`--user` option are stored so it should be near the beginning of your :envvar:`PATH`:
+
+.. .. code-block:: bash
+
+    export PATH=$HOME/.local/bin:$PATH
+
 If you are using the Anaconda Python distribution you should add its :file:`bin/` directory to the beginning of your :envvar:`PATH`:
 
 .. code-block:: bash
