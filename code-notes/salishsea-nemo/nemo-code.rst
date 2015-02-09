@@ -177,16 +177,16 @@ It was initialized with:
 
 .. code-block:: bash
 
-    cd /ocean/sallen/hg_repos
-    svn --username "dlatornell" co -r 3819 http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012
-    hg init NEMO-hg-mirror
-    cd NEMO-hg-mirror
-    cat > .hgignore
+    $ cd /ocean/sallen/hg_repos
+    $ svn --username "dlatornell" co -r 3819 http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012 NEMO-hg-mirror
+    $ hg init NEMO-hg-mirror
+    $ cd NEMO-hg-mirror
+    $ cat > .hgignore
     .svn
     DOC/NEMO_book.pdf
     ctrl-d
-    hg add
-    hg ci -m"Initialize NEMO svn mirror at r3819 of ^/branches/2012/dev_v3_4_STABLE_2012."
+    $ hg add
+    $ hg ci -m"Initialize NEMO svn mirror at r3819 of ^/branches/2012/dev_v3_4_STABLE_2012."
 
 :command:`svn` v1.7.5 was used on :kbd:`salish` for the :command:`svn` part of the initialization.
 
