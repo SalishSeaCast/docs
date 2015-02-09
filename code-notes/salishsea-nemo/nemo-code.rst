@@ -304,3 +304,59 @@ After the :ref:`PullChangesFromNEMOsvn` has been completed the workflow to merge
 #. Notify team members of the upstream merge,
    especially if manual merges of :file:`MY_SRC/` files were required,
    so that they can manage merging changes into any untracked :file:`MY_SRC/` files they may have.
+
+
+.. _NEMO-3.6Migration:
+
+Migration to NEMO-3.6
+=====================
+
+In February 2015 the process of migrating the Salish Sea NEMO model from NEMO-3.4 to NEMO-3.6 was started.
+A collection of mirror repos similar to that described in :ref:`NEMO-MirrorMaintenance` was created.
+NEMO-3.6 uses a separately distributed output server package called `XIOS`_ so the maintenance of Mercurial mirror repos for the Salish Sea NEMO project is expanded to deal with 2 upstream SVN repos.
+For NEMO:
+
+* :file:`/ocean/sallen/hg_repos/NEMO-3.6-hg-mirror`
+* :file:`/Users/doug/MEOPAR/NEMO-3.6-mirror-merge`
+* :file:`https://bitbucket.org/salishsea/nemo-3.6-code`
+
+and for XIOS:
+
+* :file:`/ocean/sallen/hg_repos/XIOS-hg-mirror`
+* :file:`/Users/doug/MEOPAR/XIOS-mirror-merge`
+* :file:`https://bitbucket.org/salishsea/xios`
+
+.. _XIOS: http://forge.ipsl.jussieu.fr/ioserver/
+
+The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012 and also a read-only Mercurial repository.
+It was initialized with:
+
+.. code-block:: bash
+
+    $ cd /ocean/sallen/hg_repos
+    $ svn --username "dlatornell" co http://forge.ipsl.jussieu.fr/nemo/svn/trunk NEMO-3.6-hg-mirror
+    $ hg init NEMO-3.6-hg-mirror
+    $ cd NEMO-3.6-hg-mirror
+    $ cat > .hgignore
+    .svn
+    DOC/NEMO_book.pdf
+    ctrl-d
+    $ hg add
+    $ hg ci -m"Initialize NEMO-3.6 svn mirror at r5072 of ^/trunk."
+
+The :file:`/ocean/sallen/hg_repos/XIOS-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/branchs/xios-1.0 and also a read-only Mercurial repository.
+It was initialized with:
+
+.. code-block:: bash
+
+    $ cd /ocean/sallen/hg_repos
+    $ http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/branchs/xios-1.0 XIOS-hg-mirror
+    $ hg init XIOS-hg-mirror
+    $ cd XIOS-hg-mirror
+    $ cat > .hgignore
+    .svn
+    ctrl-d
+    $ hg add
+    $ hg ci -m"Initialize XIOS svn mirror at r549 of ^/branchs/xios-1.0."
+
+:command:`svn` v1.8.8 was used on :kbd:`salish` for the :command:`svn` part of the initialization.
