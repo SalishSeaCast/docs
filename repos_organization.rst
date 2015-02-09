@@ -101,12 +101,42 @@ NEMO-code
 ~~~~~~~~~
 
 * private
-  (because NEMO project required sign-in to access code)
+  (because NEMO project requires sign-in to access code)
 * CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
 * NEMO code that we run
 * a merge of the :kbd:`http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012` branch and our local code
 * maintenance of the repo to handle the merges is decribed in :ref:`NEMO-MirrorMaintenance`
 * Bitbucket: https://bitbucket.org/salishsea/nemo-code/
+* documentation: http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo-code.html
+
+
+.. _NEMO-3.6-code-repo:
+
+NEMO-3.6-code
+~~~~~~~~~~~~~
+
+* private
+  (because NEMO project requires sign-in to access code)
+* CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
+* NEMO-3.6 code that we will run in the future
+* a merge of the :kbd:`http://forge.ipsl.jussieu.fr/nemo/svn/trunk` and our local code
+* maintenance of the repo to handle the merges is decribed in :ref:`NEMO-MirrorMaintenance`
+* Bitbucket: https://bitbucket.org/salishsea/nemo-3.6-code/
+* documentation: http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo-code.html
+
+
+.. _XIOS-repo:
+
+XIOS
+~~~~
+
+* private
+  (because the canonical source for this code is :kbd:`http://forge.ipsl.jussieu.fr/ioserver/wiki`)
+* CeCILL_V2 license, copyright Centre National de la Recherche Scientifique CNRS
+* XIOS output server code that we will run with NEMO-3.6 in the future
+* a checkout of the :kbd:`http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/branchs/xios-1.0` branch
+* maintenance of the repo to handle the merging in changes from upstream is decribed in :ref:`NEMO-MirrorMaintenance`
+* Bitbucket: https://bitbucket.org/salishsea/xios/
 * documentation: http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo-code.html
 
 
