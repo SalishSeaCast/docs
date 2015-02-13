@@ -84,8 +84,8 @@ Like :kbd:`salish`, we need to specify the locations of the :kbd:`netcdf` librar
 
 	module load intel
     module load intel/14.0/netcdf_hdf5
-        export NETCDF_INC=/global/software/lib64/intel/ncsa-tools/include
-        export NETCDF_LIB=/global/software/lib64/intel/ncsa-tools/lib
+    export NETCDF_INC=/global/software/lib64/intel/ncsa-tools/include
+    export NETCDF_LIB=/global/software/lib64/intel/ncsa-tools/lib
 
 Make and install Ariane:
 
@@ -122,7 +122,9 @@ For instance, try:
        cd examples/qualitative
        ariane
 
-Hint: If you get an error about :kbd:`initial_positions.txt`, you may have to rename :kbd:`initial_positions` as :kbd:`initial_positions.txt` and remove all the the lines with the @ symbol.
+.. note::
+   
+   If you get an error about :kbd:`initial_positions.txt`, you may have to rename :kbd:`initial_positions` as :kbd:`initial_positions.txt` and remove all the the lines with the @ symbol.
 
 You should notice several new files, such as :kbd:`ariane_trajectories_qualitative.nc` and :kbd:`traj.txt`.
 These files contain the trajectory information.
