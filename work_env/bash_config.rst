@@ -140,6 +140,17 @@ For example:
 
 creates the :command:`go_results` command that will :command:`cd` from wherever you are to the directory where your Salish Sea NEMO model run results are stored.
 
+:command:`.bash_profile`
+--------------------------------
+
+To ensure that :command:`.bashrc` is executed when you login via ssh create a file :file:`$HOME/.bash_profile` with the following lines:
+
+.. code-block:: bash
+
+    if [ -f ~/.bashrc ]; then
+        . ~/.bashrc;
+    fi
+
 
 .. _LoadingModulesOnWestgridClusters:
 
