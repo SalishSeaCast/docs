@@ -140,7 +140,7 @@ On the :guilabel:`Details` tab set the following parameters:
 
 * Availability Zone: nova
 * Instance Name: manage
-* Flavor: m1.small
+* Flavor: c4-7.5g-35
 * Instance Count: 1
 * Instance Boot Soure: Boot from image
 * Image Name: ubuntu-server-14.04-amd64
@@ -214,7 +214,7 @@ With that in place you should be able to connect to the instance with:
 Provisioning and Configuration
 ==============================
 
-Launch an :kbd:`m1.small` flavour instance from the :kbd:`ubuntu-server-14.04-amd64` image,
+Launch an :kbd:`c4-7.5g-35` flavour instance from the :kbd:`ubuntu-server-14.04-amd64` image,
 associate a floating IP address with it,
 and provision it with the following packages:
 
@@ -329,6 +329,8 @@ and tools repos from Bitbucket:
     $ hg clone ssh://hg@bitbucket.org/salishsea/tools tools
 
 Install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` as editable user packages and add :file:`$HOME/.local/bin/`:
+
+.. code-block:: bash
 
     $ cd $HOME/MEOPAR/tools/
     $ pip install --user -e SalishSeaTools
