@@ -360,3 +360,74 @@ It was initialized with:
     $ hg ci -m"Initialize XIOS svn mirror at r549 of ^/branchs/xios-1.0."
 
 :command:`svn` v1.8.8 was used on :kbd:`salish` for the :command:`svn` part of the initialization.
+
+
+Building XIOS
+-------------
+
+Building XIOS_ fails with a confusing collection of errors about missing :kbd:`main` modules when the `XIOS build instructions`_ are followed.
+The root cause of those errors appears to be the fact that the :kbd:`parse_xml.exe` in :file:`bld.cfg` is based on a C++ :kbd:`main` function while the :kbd:`xios_server.exe` and other targets are based on Fortran :kbd:`main` subroutines.
+That means that building :kbd:`parse_xml.exe` requires a :kbd:`-nofor-main` linker argument while building the other targets *must not* use that argument.
+It is unclear how the build system is meant to handle those incompatible requirements.
+For the purposes of the SalishSea MEOPAR project NEMO model it appear that :kbd:`parse_xml.exe` is not required,
+so it is removed from line 33 of :file:`bld.cfg`::
+
+  bld::target xios_server.exe test_client.exe test_complete.exe test_xios_interface.exe
+
+In fact,
+the :kbd:`test_*` targets could probably also be eliminated.
+
+.. _XIOS build instructions: http://forge.ipsl.jussieu.fr/ioserver/wiki/documentation
+
+On :kbd:`jasper`,
+XIOS_ was successfully built with the following :file:`arc/arch-*` files:
+
+:file:`arch/arch-X64_JASPER.env`:
+
+.. code-block:: bash
+
+    module load library/openmpi/1.6.4-intel
+    module load library/netcdf/4.1.3
+    module load library/hdf5/1.8.8
+
+:file:`arch/arch-X64_JASPER.path`:
+
+.. code-block:: bash
+
+    NETCDF_LIB="-lnetcdf"
+    HDF5_LIB="-lhdf5_hl -lhdf5 -lz"
+
+:file:`arch/arch-X^4_JASPER.fcm`:
+
+.. code-block:: bash
+
+    %CCOMPILER      mpicc
+    %FCOMPILER      mpif90
+    %LINKER         mpif90
+
+    %BASE_CFLAGS    -diag-disable 1125 -diag-disable 279
+    %PROD_CFLAGS    -O3 -D BOOST_DISABLE_ASSERTS
+    %DEV_CFLAGS     -g -traceback
+    %DEBUG_CFLAGS   -DBZ_DEBUG -g -traceback -fno-inline
+
+    %BASE_FFLAGS    -D__NONE__
+    %PROD_FFLAGS    -O3
+    %DEV_FFLAGS     -g -O2 -traceback
+    %DEBUG_FFLAGS   -g -traceback
+
+    %BASE_INC       -D__NONE__
+    %BASE_LD        -lstdc++
+
+    %CPP            mpicc -EP
+    %FPP            cpp -P
+    %MAKE           gmake
+
+using the command:
+
+.. code-block:: bash
+
+    ./make_xios --arch X64_JASPER --netcdf_lib netcdf4_seq --job 4
+
+At present,
+:kbd:`jasper` lacks the parallel versions of the netCDF4 library that is required to build XIOS_ so that it produces a single output file,
+hence the :kbd:`--netcdf_lib netcdf4_seq` option.
