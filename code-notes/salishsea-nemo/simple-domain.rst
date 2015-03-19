@@ -5,15 +5,15 @@ Simplified Model Domain - 2D
 ****************************
 
 This page provides instructions on how to build a simplified two-dimensional version of the Salish Sea model.
-The two-dimension model is based on a simplifed bathymetry profile along the domain's thalweg.
-A simplified model allows for quick sensitivity tests to mixing parametrizations and resolution.
+The two-dimensional model is based on a simplifed bathymetry profile along the domain's thalweg.
+A simplified model allows for quick sensitivity tests of mixing parametrizations and resolution.
 
 
 New NEMO Configuration
 ----------------------
 The first step is to create a new NEMO configuration.
 Here we will define parameters such as number of grid points and resolution.
-These intructions explain how to create a new configuration called :kbd:`SalishSea2D`
+These instructions explain how to create a new configuration called :kbd:`SalishSea2D`
 
 1. In :kbd:`NEMO-code/NEMOGCM/CONFIG`, create directory for the new configuration.
 
@@ -22,7 +22,7 @@ These intructions explain how to create a new configuration called :kbd:`SalishS
     cd NEMO-code/NEMOGCM/CONFIG
     mkdir SalishSea2D
 
-2. Create a :file:`cpp_SalishSea2D.fcm` file for the configuration and place it the configuration directory.
+2. Create a :file:`cpp_SalishSea2D.fcm` file and place it the configuration directory.
 Add a key for the new configuration and any other keys you require.
 For example,
 
@@ -64,7 +64,9 @@ See the NEMO documentation for details on parameter choices.
       ppe1_m   = 500,   &  !: zonal      grid-spacing (meters )
       ppe2_m   = 500       !: meridional grid-spacing (meters )
 
-5. Try compiling with this new configuration.
+5. Add :kbd:`SalishSea2D OPA_SRC` to the last line of :file:`NEMO-code/NEMOGCM/CONFIG/cfg.txt`
+
+6. Try compiling with this new configuration.
 For example, on :kbd:`salish`
 
 .. code-block:: bash
@@ -72,7 +74,7 @@ For example, on :kbd:`salish`
     cd NEMO-code/NEMOGCM/CONFIG
     ./makenemo -n SalishSea2D -m salish -j8
 
-This configuration has been added to the :kbd:`NEMO-code` repository.
+Note: This configuration has been added to the :kbd:`NEMO-code` repository.
 
 
 Bathymetry
@@ -94,9 +96,9 @@ Tides
 ------
 
 Tidal elevations are based on the 3D model tides, averaged across the mouth of the Strait of Juan de Fuca.
-Tidal currents for U are also based on 3D model U tidal currents, averaged across the boundary.
+Tidal currents for U are also based on 3D tidal currents, averaged across the boundary.
 Tidal currents for V are ignored.
-Some adjustments to the tidal currents are made to enforce rapid velocties over the sill since the horizontal constriction is not presnet in the 2D domain.
+Some adjustments to the tidal currents are made to enforce rapid velocties over the sill since the horizontal constriction is not present in the 2D domain.
 See :file:`/data/nsoontie/MEOPAR/2Ddomain/Generate_2D_Tides.ipynb` for generation of tide forcing files.
 
 Namelists
@@ -107,4 +109,4 @@ See :file:`/data/nsoontie/MEOPAR/2Ddomain/namelists`.
 
 Changes in Resolution
 ---------------------
-To be aded
+To be added
