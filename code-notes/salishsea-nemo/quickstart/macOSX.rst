@@ -4,7 +4,8 @@
 Working on :kbd:`macOSX`
 *****************************
 
-This section describe things that are different from Salish or Sable in getting NEMO to run on a running OSX.
+This section describe things that are different from Salish or Sable
+in getting NEMO to run on a mac running OSX.
 
 Get Your Libraries
 =============
@@ -28,7 +29,7 @@ and check it looks good
 
     echo $PATH
 
-Then see if the brew master is happy
+Then see if the brewmaster is happy
 
 .. code-block:: bash
 
@@ -63,7 +64,9 @@ and put your path back
 Get the Correct Arch File
 ================
 
-If you are on our SalishSea MEOPAR team, if you cloned the NEMO-code repo you will get the arch file you need: arch-gfortran_osx.fcm with the one modification from the standard.  If you are not a member, our macosc arch file is:
+If you are on our SalishSea MEOPAR team, if you cloned the NEMO-code
+repo you will get the arch file you need: arch-gfortran_osx.fcm with
+the one modification from the standard file.  If you are not a member, our macosx arch file is:
  
 :file:`arch-gfortran_osx.fcm`:
 
@@ -108,7 +111,7 @@ If you then compile (e.g.):
 
 you will get errors where fortran complains about spaces between a
 variable and a bracket.  You have to go through and remove these.
-(Seriously).  Tedious.  There are a set of files by the GYRE
+(Seriously).  Tedious.  There are a set of files for the GYRE
 configuration in myGYRE/MY_SRC with the blanks removed.  Other
 configurations may need more corrections.
 
