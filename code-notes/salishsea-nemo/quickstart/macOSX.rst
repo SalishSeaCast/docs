@@ -83,22 +83,6 @@ If you are on our SalishSea MEOPAR team, if you cloned the NEMO-code repo you wi
     # USER_INC    additional include files for the compiler,  e.g. -I<include dir>
     # USER_LIB    additional libraries to pass to the linker, e.g. -l<library>
 
-
-    %NCDF_INC            -I/usr/local/include
-    %NCDF_LIB            -L/usr/local/lib -lnetcdf -lnetcdff
-    %FC                  gfortran
-    %FCFLAGS             -fdefault-real-8 -O3 -funroll-all-loops -fcray-pointer -ffree-line-length-none 
-    %FFLAGS              %FCFLAGS
-    %LD                  gfortran
-    %LDFLAGS
-    # FPPFLAGS    pre-processing flags
-    # AR          assembler
-    # ARFLAGS     assembler flags
-    # MK          make
-    # USER_INC    additional include files for the compiler,  e.g. -I<include dir>
-    # USER_LIB    additional libraries to pass to the linker, e.g. -l<library>
-
-
     %NCDF_INC            -I/usr/local/include
     %NCDF_LIB            -L/usr/local/lib -lnetcdf -lnetcdff
     %FC                  gfortran
