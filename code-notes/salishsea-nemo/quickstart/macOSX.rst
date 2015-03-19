@@ -67,7 +67,7 @@ If you are on our SalishSea MEOPAR team, if you cloned the NEMO-code repo you wi
  
 :file:`arch-gfortran_osx.fcm`:
 
-..code-block:: bash
+.. code-block:: bash
 
     # NCDF_INC    netcdf include file
     # NCDF_LIB    netcdf library
@@ -122,7 +122,11 @@ If you then compile (e.g.):
 
     ./makenemo -m gfortran_osx -r GYRE -n myGYRE add_key "key_nosignedzero key_netcdf4"
 
-you will get errors where fortran complains about spaces between a variable and a bracket.  You have to go through and remove these.  (Seriously).  Tedious.
+you will get errors where fortran complains about spaces between a
+variable and a bracket.  You have to go through and remove these.
+(Seriously).  Tedious.  There are a set of files by the GYRE
+configuration in myGYRE/MY_SRC with the blanks removed.  Other
+configurations may need more corrections.
 
 Run
 ===
