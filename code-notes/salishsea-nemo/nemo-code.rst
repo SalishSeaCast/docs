@@ -83,7 +83,9 @@ the `NEMO-code`_ repo includes definitions for:
 * :kbd:`mpif90_jasper`: OpenMPI builds on :kbd:`jasper.westgrid.ca`
 * :kbd:`ifort_jasper`: Intel MPI builds on :kbd:`jasper.westgrid.ca`
 * :kbd:`salish`: MPI builds on :kbd:`salish.eos.ubc.ca`
-* :kbd:`ocean`: single processor builds on UBC-EOAS :kbd:`ocean` cluster workstations and :kbd:`salish`
+* :kbd:`ocean`: single processor builds on UBC-EOAS :kbd:`ocean`
+  cluster workstations and :kbd:`salish`
+* :kbd:`gfortran_osx`: single processor builds on Mac-OSX
 
 
 Creating a New Configuration
