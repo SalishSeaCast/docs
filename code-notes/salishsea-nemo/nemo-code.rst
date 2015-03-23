@@ -516,3 +516,14 @@ and submitting a PBS script with the :command:`mpirun` line changed to:
 
 results in :file:`test_client.exe` running on 8 processors and :file:`xios_server.exe` running on 2 and produces 2 netCDF4 output files,
 :file:`output_0.nc` and :file:`output_1.nc`.
+
+The netCDF4 files that XIOS produces are not deflated.
+Running:
+
+.. code-block:: bash
+
+    ncks -4 -L4 output_0.nc output_0.nc
+
+on one of the files produces by the above test reduces the file size to 33% or its original size.
+However,
+the build of NCO on :kbd:`jasper` is against the netCDF3 library so it cannot be used to do this deflation.
