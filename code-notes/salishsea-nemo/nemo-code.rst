@@ -364,8 +364,8 @@ It was initialized with:
 :command:`svn` v1.8.8 was used on :kbd:`salish` for the :command:`svn` part of the initialization.
 
 
-Building XIOS
--------------
+Building and Testing XIOS
+-------------------------
 
 Building XIOS_ fails with a confusing collection of errors about missing :kbd:`main` modules when the `XIOS build instructions`_ are followed.
 The root cause of those errors appears to be the fact that the :kbd:`parse_xml.exe` in :file:`bld.cfg` is based on a C++ :kbd:`main` function while the :kbd:`xios_server.exe` and other targets are based on Fortran :kbd:`main` subroutines.
@@ -433,3 +433,86 @@ using the command:
 At present,
 :kbd:`jasper` lacks the parallel versions of the netCDF4 library that is required to build XIOS_ so that it produces a single output file,
 hence the :kbd:`--netcdf_lib netcdf4_seq` option.
+
+The :file:`test_client.exe` executable that is built with :file:`xios_server.exe` and the :file:`inputs/iodef.xml` file can be used to test XIOS.
+This was done by creating a :file:`test-XIOS/` directory,
+copying :file:`inputs/iodef.xml` into it,
+and symlinking :file:`xios_server.exe` and :file:`test_client.exe` into it.
+
+In contrast to NEMO-3.4 where the IO server configuration is specified in the :file:`xmlio_server.def` file,
+the configuration for XIOS is included as a stanza in :file:`iodef.xml`.
+As copied,
+:file:`iodef.xml` configures XIOS to run in "attached" mode,
+similar to how the IO server is used in NEMO-3.4.
+The relevant stanza is:
+
+.. code-block:: xml
+
+    <context id="xios">
+        <variable_definition>
+          <variable_group id="buffer">
+              buffer_size = 80000000
+              buffer_server_factor_size = 2
+           </variable_group>
+
+          <variable_group id="parameters" >
+            <variable id="using_server" type="boolean">false</variable>
+            <variable id="info_level" type="int">50</variable>
+          </variable_group>
+        </variable_definition>
+    </context>
+
+and the line:
+
+.. code-block:: xml
+
+    <variable id="using_server" type="boolean">false</variable>
+
+sets "attached" mode.
+
+Using :command:`qsub` to submit a file containing the following shell script with PBS directives runs :file:`test_client.exe` on 10 processors and produces 10 netCDF4 output files,
+:file:`output_0.nc` through :file:`output_9.nc`:
+
+.. code-block:: bash
+
+    #!/bin/bash
+
+    #PBS -N test-XIOS
+    #PBS -S /bin/bash
+    #PBS -l procs=10
+    #PBS -l walltime=0:10:00
+    #PBS -m bea
+    #PBS -M dlatornell@eos.ubc.ca
+    #PBS -o stdout
+    #PBS -e stderr
+
+    cd $PBS_O_WORKDIR
+    echo working dir: $(pwd)
+
+    module load library/netcdf/4.1.3
+    module load library/hdf5/1.8.8
+
+    mpirun -np 10 ./test_client.exe
+    echo done!
+
+Changing the XIOS server configuration in :file:`iodef.xml` to:
+
+.. code-block:: xml
+
+    <variable id="using_server" type="boolean">true</variable>
+
+creating an MPI application file (let's call it test-XIOS.app) containing:
+
+.. code-block:: bash
+
+    -np 8 ./test_client.exe
+    -np 2 ./xios_server.exe
+
+and submitting a PBS script with the :command:`mpirun` line changed to:
+
+.. code-block:: bash
+
+    mpirun --app ./test-XIOS.app
+
+results in :file:`test_client.exe` running on 8 processors and :file:`xios_server.exe` running on 2 and produces 2 netCDF4 output files,
+:file:`output_0.nc` and :file:`output_1.nc`.
