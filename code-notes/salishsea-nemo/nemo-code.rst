@@ -381,6 +381,61 @@ the :kbd:`test_*` targets could probably also be eliminated.
 
 .. _XIOS build instructions: http://forge.ipsl.jussieu.fr/ioserver/wiki/documentation
 
+
+Building on :kbd:`salish`
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On :kbd:`jasper`,
+XIOS_ was successfully built with the following :file:`arc/arch-*` files:
+
+An :file:`arch/*.env` file is not required for :kbd:`salish`.
+
+:file:`arch/arch-GCC_SALISH.path`:
+
+.. code-block:: bash
+
+    NETCDF_LIB="-lnetcdff -lnetcdf"
+    HDF5_LIB="-lz"
+
+:file:`arch/arch-GCC_SALISH.fcm`:
+
+.. code-block:: bash
+
+    %CCOMPILER      mpicc
+    %FCOMPILER      mpif90
+    %LINKER         mpif90
+
+    %BASE_CFLAGS    -ansi -w
+    %PROD_CFLAGS    -O3 -DBOOST_DISABLE_ASSERTS
+    %DEV_CFLAGS     -g -O2
+    %DEBUG_CFLAGS   -g
+
+    %BASE_FFLAGS    -D__NONE__
+    %PROD_FFLAGS    -O3
+    %DEV_FFLAGS     -g -O2
+    %DEBUG_FFLAGS   -g
+
+    %BASE_INC       -D__NONE__
+    %BASE_LD        -lstdc++
+
+    %CPP            cpp
+    %FPP            cpp -P
+    %MAKE           make
+
+using the command:
+
+.. code-block:: bash
+
+    ./make_xios --arch GCC_SALISH --netcdf_lib netcdf4_seq --job 8
+
+As :kbd:`salish` has only 16 physical cores,
+running multiple :file:`xios_server.exe` processes that use parallel output is unnecessary,
+so the :kbd:`--netcdf_lib netcdf4_seq` option is used.
+
+
+Building on :kbd:`jasper`
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 On :kbd:`jasper`,
 XIOS_ was successfully built with the following :file:`arc/arch-*` files:
 
@@ -433,6 +488,10 @@ using the command:
 At present,
 :kbd:`jasper` lacks the parallel versions of the netCDF4 library that is required to build XIOS_ so that it produces a single output file,
 hence the :kbd:`--netcdf_lib netcdf4_seq` option.
+
+
+Testing
+~~~~~~~
 
 The :file:`test_client.exe` executable that is built with :file:`xios_server.exe` and the :file:`inputs/iodef.xml` file can be used to test XIOS.
 This was done by creating a :file:`test-XIOS/` directory,
@@ -525,5 +584,4 @@ Running:
     ncks -4 -L4 output_0.nc output_0.nc
 
 on one of the files produces by the above test reduces the file size to 33% or its original size.
-However,
-the build of NCO on :kbd:`jasper` is against the netCDF3 library so it cannot be used to do this deflation.
+Note that the present**** build of NCO on :kbd:`jasper` is against the netCDF3 library so it cannot be used to do this deflation.
