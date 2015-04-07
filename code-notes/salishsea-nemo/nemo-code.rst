@@ -363,6 +363,8 @@ It was initialized with:
 
 :command:`svn` v1.8.8 was used on :kbd:`salish` for the :command:`svn` part of the initialization.
 
+The following sections are in-process notes about getting to a running Salish Sea NEMO-3.6 model on various platforms.
+
 
 Building and Testing XIOS
 -------------------------
@@ -385,8 +387,8 @@ the :kbd:`test_*` targets could probably also be eliminated.
 Building on :kbd:`salish`
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-On :kbd:`jasper`,
-XIOS_ was successfully built with the following :file:`arc/arch-*` files:
+On :kbd:`salish`,
+XIOS_ was successfully built with the following :file:`arch/arch-*` files:
 
 An :file:`arch/*.env` file is not required for :kbd:`salish`.
 
@@ -426,7 +428,7 @@ using the command:
 
 .. code-block:: bash
 
-    ./make_xios --arch GCC_SALISH --netcdf_lib netcdf4_seq --job 8
+    $ ./make_xios --arch GCC_SALISH --netcdf_lib netcdf4_seq --job 8
 
 As :kbd:`salish` has only 16 physical cores,
 running multiple :file:`xios_server.exe` processes that use parallel output is unnecessary,
@@ -437,7 +439,7 @@ Building on :kbd:`jasper`
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On :kbd:`jasper`,
-XIOS_ was successfully built with the following :file:`arc/arch-*` files:
+XIOS_ was successfully built with the following :file:`arch/arch-*` files:
 
 :file:`arch/arch-X64_JASPER.env`:
 
@@ -483,7 +485,7 @@ using the command:
 
 .. code-block:: bash
 
-    ./make_xios --arch X64_JASPER --netcdf_lib netcdf4_seq --job 4
+    $ ./make_xios --arch X64_JASPER --netcdf_lib netcdf4_seq --job 4
 
 At present,
 :kbd:`jasper` lacks the parallel versions of the netCDF4 library that is required to build XIOS_ so that it produces a single output file,
@@ -571,7 +573,7 @@ and submitting a PBS script with the :command:`mpirun` line changed to:
 
 .. code-block:: bash
 
-    mpirun --app ./test-XIOS.app
+    $ mpirun --app ./test-XIOS.app
 
 results in :file:`test_client.exe` running on 8 processors and :file:`xios_server.exe` running on 2 and produces 2 netCDF4 output files,
 :file:`output_0.nc` and :file:`output_1.nc`.
@@ -581,7 +583,144 @@ Running:
 
 .. code-block:: bash
 
-    ncks -4 -L4 output_0.nc output_0.nc
+    $ ncks -4 -L4 output_0.nc output_0.nc
 
 on one of the files produces by the above test reduces the file size to 33% or its original size.
-Note that the present**** build of NCO on :kbd:`jasper` is against the netCDF3 library so it cannot be used to do this deflation.
+Note that the present build of NCO on :kbd:`jasper` is against the netCDF3 library so it cannot be used to do this deflation.
+
+
+Building and Testing NEMO-3.6
+-----------------------------
+
+Building on :kbd:`salish`
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+On :kbd:`salish`,
+NEMO-3.6 was successfully built with the following :file:`NEMOGCM/ARCH/` file:
+
+:file:`NEMOGCM/ARCH/UBC_EOAS/arch-GCC_SALISH.fcm`:
+
+.. code-block:: bash
+
+    %XIOS_HOME           /data/$USER/MEOPAR/XIOS
+
+    %NCDF_INC            -I/usr/include
+    %NCDF_LIB            -L/usr/lib -lnetcdff -lnetcdf
+
+    %XIOS_INC            -I%XIOS_HOME/inc
+    %XIOS_LIB            -L%XIOS_HOME/lib -lxios -lstdc++
+
+    %CPP                 cpp
+    %FC                  mpif90
+    %FCFLAGS             -cpp -O3 -fdefault-real-8 -funroll-all-loops -fcray-pointer -ffree-line-length-none
+    %FFLAGS              %FCFLAGS
+    %LD                  mpif90
+    %LDFLAGS
+    %FPPFLAGS            -P -C -traditional
+    %AR                  ar
+    %ARFLAGS             -rs
+    %MK                  make
+    %USER_INC            %XIOS_INC %NCDF_INC
+    %USER_LIB            %XIOS_LIB %NCDF_LIB
+
+Important things to note:
+
+  * Our :kbd:`arch` files are contained in the institution-specific directory :file:`NEMOGCM/ARCH/UBC_EOAS/`
+  * The :kbd:`%XIOS_HOME` build variable uses the :envvar:`USER` environment variable to locate the XIOS_ library to link with NEMO.
+    It is assumed that XIOS_ is installed and built in :file:`/data/{userid}/MEOPAR/XIOS/` on :kbd:`salish`.
+  * The :kbd:`-lstdc++` library option *must* follow :kbd:`-lxios` otherwise a truly astonishing volume of unresolved reference errors will be generated and the build will fail.
+
+
+Testing the GYRE Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A new NEMO-3.6 GYRE configuration was created :kbd:`salish` with:
+
+.. code-block:: bash
+
+    $ cd NEMOGCM/CONFIG/
+    $ ./makenemo -n my_GYRE -r GYRE -m GCC_SALISH -j8
+
+After the build completed successfully,
+a test directory was created outside the :file:`NEMO-3.6-code` repo:
+
+.. code-block:: bash
+
+    $ cd /data/dlatorne/MEOPAR
+    $ mkdir GYRE-3.6-test
+    $ cd GYRE-3.6-test/
+
+and the shared XIOS configurations files,
+reference namelist,
+and executables were symlinked into the test directory:
+
+.. code-block:: bash
+
+    $ ln -s /data/dlatorne/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SHARED/domain_def.xml
+    $ ln -s /data/dlatorne/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SHARED/field_def.xml
+    $ ln -s /data/dlatorne/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SHARED/namelist_ref
+    $ ln -s /data/dlatorne/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/my_GYRE/BLD/bin/nemo.exe
+    $ ln -s /data/dlatorne/MEOPAR/XIOS/bin/xios_server.exe
+
+The :file:`iodef.xml` and :file:`namelist_cfg` files generated for the :kbd:`my_GYRE` configuration were copied into the test directory:
+
+.. code-block:: bash
+
+    $ cp /data/dlatorne/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/my_GYRE/EXP00/iodef.xml ./
+    $ cp /data/dlatorne/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/my_GYRE/EXP00/namelist_cfg ./
+
+The :kbd:`xios context` stanza in :file:`iodef.xml` was edited to set the :kbd:`using_server` variable to :kbd:`true` so that the XIOS server will run in a separate process:
+
+.. code-block:: xml
+   :emphasize-lines: 7
+
+    <context id="xios">
+      <variable_definition>
+        <!-- We must have buffer_size > jpi*jpj*jpk*8 (with jpi and jpj the subdomain size) -->
+        <variable id="buffer_size" type="integer">10000000</variable>
+        <variable id="buffer_server_factor_size" type="integer">2</variable>
+        <variable id="info_level" type="integer">0</variable>
+        <variable id="using_server" type="boolean">true</variable>
+        <variable id="using_oasis" type="boolean">false</variable>
+        <variable id="oasis_codes_id" type="string" >oceanx</variable>
+      </variable_definition>
+    </context>
+
+The :file:`namelist_cfg` file was edited to add the following 2 lines to the :kbd:`nammpp` namelist:
+
+.. code-block:: fortran
+
+    jpni = 3  ! jpni: number of processors following i (set automatically if < 1)
+    jpnj = 5  ! jpnj: number of processors following j (set automatically if < 1)
+
+to set the MPI decomposition for the run to 3x5.
+
+An MPI app file called :file:`nemo.app` was created containing:
+
+.. code-block:: bash
+
+    -np 15 ./nemo.exe
+    -np 1 ./xios_server.exe
+
+to define how many cores to run each executable on.
+The :kbd:`-np` value for :file:`nemo.exe` must equal the product of the :kbd:`jpni` and :kbd:`jpnj` values in the :kbd:`nammpp` namelist.
+
+Finally,
+we're ready to run the model with:
+
+.. code-block:: bash
+
+    $ mpirun -app nemo.app >stout 2>stderr
+
+The run produces a single netCDF4 file for the :kbd:`grid_T`,
+:kbd:`grid_U`,
+:kbd:`grid_V`,
+and :kbd:`grid_W` variables,
+and,
+sadly,
+14 per-processor :kbd:`restart` files that have to be gathered into a run :kbd:`restart` file.
+The netCDF4 files *do not* use Limpel-Ziv deflation compression at the variable level so they can be reduces in size by ~50% with commands like:
+
+.. code-block:: bash
+
+    $ ncks -4 -L4 GYRE_5d_00010101_00011230_grid_T.nc GYRE_5d_00010101_00011230_grid_T.nc
