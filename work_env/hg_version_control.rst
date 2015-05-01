@@ -10,7 +10,7 @@ and pretty much any other important computer files in the Salish Sea MEOPAR proj
 
 .. _Mercurial: http://mercurial.selenic.com/
 
-The Mercurial site includes a `basic guide`_,
+The Mercurial site includes `beginner's guides`_,
 but `Mercurial - The Definitive Guide`_
 (also known as "the redbean book") is the go-to reference.
 If you are new to version control you should read at least Chapters 1_ and 2_.
@@ -18,7 +18,7 @@ Users experiences with other version control tools
 (e.g :command:`svn` or :command:`git`)
 can get up to speed with Mercurial by reading `Chapter 2`_.
 
-.. _basic guide: http://mercurial.selenic.com/guide/
+.. _beginner's guides: http://mercurial.selenic.com/wiki/BeginnersGuides
 .. _Mercurial - The Definitive Guide: http://hgbook.red-bean.com/
 .. _1: http://hgbook.red-bean.com/read/how-did-we-get-here.html
 .. _2: http://hgbook.red-bean.com/read/a-tour-of-mercurial-the-basics.html
