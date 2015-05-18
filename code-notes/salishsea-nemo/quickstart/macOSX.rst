@@ -8,7 +8,7 @@ This section describe things that are different from Salish or Sable
 in getting NEMO to run on a mac running OSX.
 
 Get Your Libraries
-=============
+==================
 
 Unless you are already using a different package manager, use brew.  First, as you probably have Anaconda set-up so you can do analysis in ipython notebooks on your mac, remove anaconda from your path.
 
@@ -62,7 +62,7 @@ and put your path back
     export PATH=$SAVEPATH
 
 Get the Correct Arch File
-================
+==========================
 
 If you are on our SalishSea MEOPAR team, if you cloned the NEMO-code
 repo you will get the arch file you need: arch-gfortran_osx.fcm with
@@ -101,7 +101,7 @@ the one modification from the standard file.  If you are not a member, our macos
     %USER_LIB            %NCDF_LIB
 
 Fix the Blanks
-=========
+===============
 
 If you then compile (e.g.):
 
