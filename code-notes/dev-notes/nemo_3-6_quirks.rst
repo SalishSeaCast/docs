@@ -44,8 +44,10 @@ Tidal Harmonics not Written Out Correctly
 -----------------------------------------
 
 Tidal harmonics for bdy are now taken from tide.h90 in SBC.  However, there is no call to tide_harmo
-before the tides are written out to ocean.output.  To fix this,
+before the tides are written out to ocean.output.  To fix this, in bdytides.F90
+
 * remove the bang (!) in front of USE tide_mod
+
 * add
 
 .. code-block:: fortran
@@ -53,6 +55,7 @@ before the tides are written out to ocean.output.  To fix this,
    call tide_harmo(omega_tide, v0tide, utide, ftide, ntide, nb_harmo)
 
 before the tides are written.
+
 * correct the units in the write statement, they are not deg/hr
 
 .. code-block:: fortran
@@ -62,7 +65,7 @@ before the tides are written.
 Straight Boundary Segments from Namelist Crash
 ----------------------------------------------
 
-The allocated size of the arrays are not set correctly if you use straight boundary segements of
+The allocated size of the arrays are not set correctly if you use straight boundary segments of
 less than a whole side and set them in the namelist.  The variable jpbdtau does not get set and this
 causes a memory error when the boundary data is read.  To fix this add
 
