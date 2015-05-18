@@ -1,4 +1,4 @@
-Notes on NEMO Bugs and Quirks We Have Found
+Notes on NEMO 3.4 Bugs and Quirks We Have Found
 ===========================================
 
 The issues described here are clearly bugs in some cases,
