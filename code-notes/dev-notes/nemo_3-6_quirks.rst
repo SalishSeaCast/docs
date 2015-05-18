@@ -47,12 +47,14 @@ Tidal harmonics for bdy are now taken from tide.h90 in SBC.  However, there is n
 before the tides are written out to ocean.output.  To fix this,
 * remove the bang (!) in front of USE tide_mod
 * add
+
 .. code-block:: fortran
 
    call tide_harmo(omega_tide, v0tide, utide, ftide, ntide, nb_harmo)
 
 before the tides are written.
 * correct the units in the write statement, they are not deg/hr
+
 .. code-block:: fortran
 
    WRITE(numout,*) '             Tidal cpt name    -     Phase speed (/s)'
@@ -65,6 +67,7 @@ less than a whole side and set them in the namelist.  The variable jpbdtau does 
 causes a memory error when the boundary data is read.  To fix this add
 
 .. code-block:: fortran
+
    jpbdtau = jpbdtas
 
 in bdyini.F90, right after jpbdtas is calculated on line 482.
