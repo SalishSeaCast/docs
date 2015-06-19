@@ -3,24 +3,13 @@
 Tools
 ===================================================================================================
 
-An sample script for analyzing storm surge results can be found here: `analysisSS.ipynb <http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/storm_surges/analysisSS.ipynb>`_.
+We have developed a variety of tools used for analysis and creation of storm surge simulations.
 
-There are also a variety of functions described in `salishsea_tools/stormtools`_.
-
-.. _salishsea_tools/stormtools: http://salishsea-meopar-tools.readthedocs.org/en/latest/SalishSeaTools/salishsea-tools.html#module-stormtools
-
-Some of these functions are used to calculate the observed residual, modelled residual, error statistics, and so on.
-
-.. note::
-
-  A different module was used for analysis in the AO storm surge paper. 
-It is in a private repository :file:`storm-surge/stormtools_revisions.py`.
-The functions are almost identical as :file:`stormtools.py` but with a few minor changes.
 
 The surge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We are often interested in the behaviour of the surge component of the water level, that is the anomaly after the tides have been removed.
+We are often interested in the behaviour of the surge component of the water level, that is, the anomaly after the tides have been removed.
 Further, we could like to compare the modelled surge to the observed surge.
 To determine the modelled surge, we perform two simulations: one with all of our forcing conditions, including the tides, atmopsheric conditions, rivers, and sea surface height at the open boundaries and another with only the tidal forcing and rivers.
 We define the modelled surge as the difference between the sea surface height of these two simulations.
@@ -32,7 +21,7 @@ Observations
 ^^^^^^^^^^^^^
 
 Water level observations for Canadian tide gauges are easily obtained from the `Fisheries and Oceans Canada`_ (DFO) website.
-We also use obserations from `NOAA`_ tide gauges.
+We also use observations from `NOAA`_ tide gauges.
 
 
 .. _Fisheries and Oceans Canada: http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp
@@ -45,9 +34,8 @@ Tidal predictions
 Tidal predictions are generated using a MATLAB package called `t_tide`_.
 The general prodcedure is as follows:
 
-1. A harmonic analysis is applied to a year-long time series using :file:`t_tide`.
-2. The tidal constituents produced by the harmonic analysis are used to generate a tidal prediction.
-Typically, 67 constituents are anlayzed with :file:`t_tide`
+1. Perform a harmonic analysis on a year-long time series using :file:`t_tide`.
+2. Use the tidal constituents produced by the harmonic analysis to generate a tidal prediction. Typically, 67 constituents are anlayzed with :file:`t_tide`
 
 However, there are some subtleties that need to be considered before we generate the tidal predictions for use in residual calculations.
 
@@ -63,7 +51,7 @@ The harmonic analysis is then applied to the filtered time series.
 Long Period Constituents
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-In a harmonic analysis, long period constituents (Sa, Ssa, etc) in this region are often contaminated by non-tidal energy due to seasonal meteoroligcal events. We would like to represent this seasonal variability in our residual forcing. As such, we do not include long period constitents in our tidal predictions.
+In a harmonic analysis, long period constituents (Sa, Ssa, etc) in this region are often contaminated by non-tidal energy due to seasonal meteoroligcal events. We would like to represent this seasonal variability in our residual forcing. As such, we do not include long period constituents in our tidal predictions.
 
 Constituents with low signal to noise ratio
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,20 +80,21 @@ These scripts are found in the :file:`analysis/storm_surges/data/` repository an
 
 * :file:`get_ttide_8_filter.m` - This script does most of the work. ::
 
-  get_ttide_8_filter(csvfilename, location, starts, ends, type)
+   get_ttide_8_filter(csvfilename, location, starts, ends, type)
 
-This function takes a csv file with water level observations from either the DFO website or the NOAA website to calculate tidal harmonics and tidal predictions over a time period defined by date strings :file:`starts` and :file:`ends`.
-The type argument specifies if the observations are from NOAA or DFO.
-It then saves harmonics in :file:`location_harmonics_date1_date2_filter.csv` where location is one of the arguments of :file:`get_ttide_8`.
+This function uses water level observations stored in csvfilename to calculate tidal harmonics and tidal predictions over a time period defined by date strings :file:`starts` and :file:`ends`.
+Water level observations can either be from the DFO website or the NOAA website, as specified by the type argument.
+The calculated haromincs are saved in :file:`location_harmonics_date1_date2_filter.csv` where location is one of the arguments of :file:`get_ttide_8`.
 :file:`date1` and :file:`date2` are string representations of the start and end date of the observation time series.
+
 This function also saves a file called :file:`location_t_tide_compare8_starts_ends_snr2_filter.csv` where :file:`starts` and :file:`ends` are arguments of :file:`get_ttide_8_filter`.
-This file saves three types of tidal predictions:
+This file contains three types of tidal predictions:
 
     + pred_all - predictions with all constituents except shallow water and ones with low signal to noise
-    + pred_8 - predictions with onl eight constituents
+    + pred_8 - predictions with only eight constituents
     + pred_noshallow - like pred_all but with no shallow water constituents.
-* :file:`calculate_haoomnics.m` and :file:`calculate_harmonics_NOAA.m` - these files perform the harmonics calculation for DFO and NOAA data respectively.
-* :file:`filter_tides.m` and `file:filter_tides_NOAA.m` - these files do the filtering work.
+* :file:`calculate_harmonics.m` and :file:`calculate_harmonics_NOAA.m` - these files perform the harmonics analysis for DFO and NOAA data respectively.
+* :file:`filter_tides.m` and :file:`filter_tides_NOAA.m` - these files do the filtering work.
 * :file:`get_ttide_8.m` and :file:`calculate_harmonics.m` - these files only work for DFO data and do not apply the filtering or removal of shallow water/ long period constituents.
 
 .. note::
@@ -126,10 +115,12 @@ The function works in a similar manner to the other ones.  ::
 
 Predictions are saved in a file :file:`location_atide_compare8_starts_ends.csv`.
 
+* :file:`read_harmonics.m` - read the CHS tidal harmonics from a file.
+
 Storm surge forcing files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Several notebooks have been developed for generating the anomaly forcing files in simulation hindcasts.
+Several notebooks have been developed for generating the anomaly forcing files used in simulation hindcasts.
 
 * `SSH_Tofino.ipynb`_
 * `SSH_PortHardy.ipynb`_
@@ -137,6 +128,20 @@ Several notebooks have been developed for generating the anomaly forcing files i
 .. _SSH_Tofino.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_Tofino.ipynb
 
 .. _SSH_PortHardy.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_PortHardy.ipynb
+
+
+Analysis
+^^^^^^^^^
+
+Some analysis functions are stored in a module `salishsea_tools/stormtools`_.
+
+.. _salishsea_tools/stormtools: http://salishsea-meopar-tools.readthedocs.org/en/latest/SalishSeaTools/salishsea-tools.html#module-stormtools
+
+Examples include functions that calculate the observed residual, modelled residual, error statistics, and so on.
+
+.. note::
+
+  A different module was used for analysis in the AO storm surge paper. It is in a private repository :file:`storm-surge/stormtools_revisions.py`.The functions are almost identical as :file:`stormtools.py` but with a few minor changes
 
 References
 ^^^^^^^^^^
