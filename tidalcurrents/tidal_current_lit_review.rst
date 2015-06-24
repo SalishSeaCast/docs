@@ -27,16 +27,20 @@ National Oceanic and Atmospheric Administration (2007)
 * Suggest using harmonic contituent ellipses to combine the orthogonal compenent time series (u and v current vectors)
 * The orthogonal components can be chosen to be north/south or along direction of maximum flood and perpentidular to it.  
 * In this book uses the derivation of Doodson and Warburg (1941, p.180-1):
-
-	:math:`N(t) = W_N \cos(\eta t - \kappa_N)`
-	:math:`E(t) = W_E \cos(\eta t - \kappa_E)`
+	.. _math::
+	
+	N(t) = W_N \cos(\eta t - \kappa_N)
+	
+	E(t) = W_E \cos(\eta t - \kappa_E)
 
 	where :math:`N(t)`, and :math:`E(t)`, are the north and east components of the tidal constituents, :math:`W_N` and :math:`W_E` are the current vectors north and east components, :math:`\eta` is the frequency and :math:`\kappa_N` and :math:`\kappa_E` is the phase lag in it's respective direction.
 	
 * Then generalise for any two orthogonal components MJ(t) and MN(t), major and minor components:
+
+	.. _math::
+	MJ(t) = N(t) \cos(\theta) + E(t) \sin(\theta)
 	
-	:math:`MJ(t) = N(t) \cos(\theta) + E(t) \sin(\theta)`
-	:math:`MN(t) = E(t) \cos(\theta) - N(t) \sin(\theta)`
+	MN(t) = E(t) \cos(\theta) - N(t) \sin(\theta)
 
 	where :math:`\theta`, is the major axis direction clockwise from the north.
 
@@ -46,114 +50,57 @@ National Oceanic and Atmospheric Administration (2007)
 Foreman et al. (2004)
 ---------------------------
 
-* Use a observations to do data assimilation.
+* Currents calculated with the TIDE3D finite element model. This model did not include vertical variations in currents by using a large vertical viscocity. This basically outputs constant currents through the water column.
+* Present along channel amplitude and phase.
+* Stratification is too significant for this model to capture it at the Haro Strait and Johnson Strait Central sites.
 * They only report amplitude and phase.
-* We can transform these into tidal ellipses
+* The model uses data assimilation of the elevation observations to impove predictions. These model values are an improvement to the original model presented.
+	 - The major semi-axes are smaller at the more southern sites and larger at the northen sites
+	 - Improvements are southern sites but mostly no changes at the northen sites
+	 - Decreased current speeds by 10 cm/s in most of Juan de Fuca Strait, Gulf and San Juan Islands and the sourther Strait of Georgia
+	 - Increased currents in norther Georgia and in Johnstone Strait
+* We can transform these into tidal ellipses using Xu (2000) technique described below to facilitate the comparison of our Salish Sea model output to the Foreman (2004) model.
 
 
 .. _Xu:
 
-Zigang Xu (2000)
+Zhigang Xu (2000)
 -------------------
 
 Short paper describing a technique for ellipse conversion explained in much detail.
 
 * Uses complex tidal currents to convert between tidal current amplitude and phase lag paramters to tidal current ellipse parameters and vice versa.
-	:math:`w = u +iv`
-	:math:`u = a_u \cos(\omega t - \phi_u)`
-	:math:`v = a_v \cos(\omega t - \phi_v)`
+
+	.. _math:: 
+	
+	w = u +iv
+	
+	u = a_u \cos(\omega t - \phi_u)
+	
+	v = a_v \cos(\omega t - \phi_v)
 	
 	where :math:`w` is the complex tidal current, :math:`\omega`, is the frequency of the chosen tidal constituent, :math:`\phi_u` and :math:`\phi_v` are the phase lag for the u- and v- components and :math:`a_u` and :math:`a_v` are the amplitudes for the u- and v- components.
 	
 
 * Tracing out :math:`w` on a complex plane gives an ellipse, from this ellipse we can calculate many parameters that provide information about the flow.
 
-* Model accuracy was determined by calculating RMS differences between modelled and observed tidal harmonics at the crossover locations:
-
-	.. math:: 
-	 D_{rms} = (C^2_{rms}+S^2_{rms})^{1/2}
-
-	 C_{rms} = [\sum_1^N(A_t \cos G_T - A_m \cos G_m)^2/N]^{1/2}
-
-	 S_{rms} = [\sum_1^N(A_t \sin G_T - A_m \sin G_m)^2/N]^{1/2}
-
-	where N is the number of crossover sites, :math:`A_T`, :math:`G_T`, :math:`A_m` and :math:`G_m` are the altimeter and modelled amplitudes and phases respectively
-
-* :math:`M_2` differences showed that modelled amplitude and phase lags were generally too small, possibly due to the existence of an amphidromic ridge near the south and west boundaries
-* :math:`K_1` amplitude and phase lags looked better
-* other semidiurnal and diurnal consituents had similar (but scaled down) inaccuracies
-* assimilated 
-
-*(b) how are tidal forcings applied at boundaries?*
-
-* along southern and western open boundaries, initial elevation amplitudes and phases for major constituents (M2, S2, N2, K2, K1, O1, P1 and Q1) were calculated from the TPXO.3 world tidal model
-* Puget Sound boundary (Admiralty Inlet) forced with identical amplitudes and phases to Foreman et al. (1995)
-* Strait of Georgia boundary (Northern boundaries) forced with identical amplitudes and phases to Foreman et al. (1995)
-* Queen Charlotte Strait forced with identical amplitudes and phases to Foreman et al. (1993)
-* All coastal boundaries were free slip
-
-Masson & Cummins (2004)
-------------------------------------
-
-POM model of southern Strait of Georgia and Juan de Fuca Strait
-
-*(a) how is model evaluated?*
-
-* Compared qualitatively to Foreman et al. (1995) e.g. the model reproduces the degenerate M2 amphidrome
-* Calculated root-mean-square differences between all measured and modelled amplitudes and phase differences
-* Average relative and absolute rms differences (D) between observed and calculated amplitudes and phases at 44 tide gauge sites, calculated by:
-
-	.. math:: 
-	 D = [\frac{1}{2} (A_m^2 + A_0^2) - A_m A_o \cos (\phi_m - \phi_o)]^{1/2}
-
-	where :math:`A_m` and :math:`A_o` are sea level amplitude of model and observations and :math:`\phi_m` and :math:`\phi_o` phases
-
-* Absolute error of 1.7cm - 5.5cm, relative error (=D/Ao) of 2.2% - 13.7%
-
-*(b) how are tidal forcings applied at boundaries?*
-
-* Model is forced at two open boundaries with four tidal constituents (K1, O1, M2 and S2) through a 'forced gravity wave radiation condition on the normal component of the depth-integrated velocity (Flather 1987)' 
-* These four constituents account for about 70% of tidal stream velocity
-
-.. _sutherlandetal11:
-
-Sutherland et al. (2011)
--------------------------------------------
-
-ROMS model of Salish Sea and Puget Sound
-
-Group's website: http://faculty.washington.edu/pmacc/MoSSea/index.html
-
-*(a) how is model evaluated?*
-
-* Calibrated their model with tidal data from NOAA tide gauges (none in BC, all in OR and WA)
-* Amplitude, phase and spring-neap variability of tidal signals
-* Calculated Skill Score (SS) and 
-* Calculated correlation coeffienct (R2), which is the variance between two variables:
-	.. math:: 
-	 R = \frac{1}{\sigma_m} \frac{1}{\sigma_o} \frac{1}{N} \sum^N_{i=1} (m_i-\bar{m})(o_i-\bar{o})
+	.. _math::
 	
-	where :math:`m_i` is the model variable at time or location i, :math:`o_i` is the observed variable at time or location i, N is the number of observations, math:`\sigma_m` and :math:`\sigma_o` are the standard deviations of model and observed variables and overbar indicates an average
+	w = W_p e^{i(\omega t + \theta_p)} + W_m e^{-i(\omega t - \theta_m)}
+	
+* From these equations we can extract all the ellipse parameters
+* This is the method we used to calculate out tidal ellipse from the model outputs and from the observation that were provided by Dr. Rich Pavlowich, Dr. Mark Halverson and Richard Dewey.
+	
 
-* Also compared ratios of modeled to observed amplitudes of M2, S2 and K1 constituents using t_tide (Pawlowicz et al 2002)
-* The model had better skill at diurnal frequencies because at semi-diurnal frequencies, modeled amplitude was too low
-* In regions where tidal observations were not available, comparisons were made to an empirical tidal model developed for Puget Sound (Lavelle et al. 1988)
-* Weather induced pressure anomalies are not represented in the model, so large difference occured during one winter event
-
-*(b) how are tidal forcings applied at boundaries?*
-
-* Open boundaries forced with eight constituents (M2, S2, K1, O1, N2, P1, K2 and Q1) derived from the 1/4 degree TPXO7.1 inverse global tidal model (Egbert and Erofeeva 2002)
-
-* Open boundaries were offshore i.e. straight boundary along 127 degrees W and the northern boundary in the Strait of Georgia was closed
 
 References
 -------------------------
-* Egbert, G.D. and S.Y. Erofeeva, 2002. Efficient inverse modeling of barotropic ocean tides, Joundal of Atmospheric and Oceanic Technology, 19, 183-204.
+* Parker, B. B., 2007. Tidal analysis and prediction. US Department of Commerce, National Oceanic and Atmospheric Administration, National Ocean Service, Center for Operational Oceanographic Products and Services, 378 pages.
 
-* Foreman, M.G.G., R.A. Walters, R.F. Henry, C.P. Keller and A.G. Dolling, 1995. A tidal model for eastern Juan de Fuca Strait and the southern Strait of Georgia, Journal of Geophysical Research, 100, 721-740.
+* Doodson, A.T. and H.D. Warburg, 1941. Admiralty Manual of Tides. Hydrographic Department, Admiralty, London, 270 pages.
 
-* Foreman, M.G.G., W.R. Crawford, J.Y. Cherniawsky, R.F. Henry and M.R. Tarbottom, 2000. A high-resolution assimilating tidal model for the northeast Pacific Ocean. Journal of Geophysical Research, 105, 28,629-28,652.
+* Foreman, M. G. G., Sutherland, G., & Cummins, P. F., 2004. M2 tidal dissipation around Vancouver Island: an inverse approach. Continental Shelf Research, 24(18), 2167-2185.
 
-* Masson, D. and P.F. Cummins, 2004. Observations and modeling of seasonal variability in the Straits of Georgia and Juan de Fuca, Journal of Marine Research, 62, 491-516.
+* Thomson, R.E., 1981. Oceanography of the British Columbia Coast. Canadian Special Publication of Fisheries and Aquatic Sciences 56, Department of Fisheries and Oceans, Ottawa, 291pp.
 
-* Sutherland, D.A., P. MacCready, 2011, N.S. Banas and L.F. Smedstad, 2011. A model study of the Salish Sea estuarine circulation, Journal of Physical Oceanography, 41, 1125-1143.
+*Xu, Z., 2000. Ellipse parameters conversion and vertical velocity profiles for tidal currents. Bedford Institute of Oceanography, Dartmouth, Nova Scotia, Canada, 20 pages.
