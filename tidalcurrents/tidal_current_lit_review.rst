@@ -13,58 +13,61 @@ Overview of tidal ellipses
 Tidal current vary alot within a fjord-like estuarine system. The Salish Sea is not an execption of this. The hydrodynamics of the channel can drastically change the tidal currents depending on the gradient of these variations. We can observe larger current speeds in the many narrow straits of the Georgia Strait, as well as near the entrance, where it connects to the Pacific Ocean. Tidal currents also vary vertically, generally mainly due to bottom friction, but also baroclinic effects. (NOAA 2007)
 
 * Tidal current constituent ellipses describe the flow as it rotates at a single location for a single contituent's cycle. 
-* Tidal ellipses can communicate alot about a depth profile(or a depth averaged generalisation) of the flow or at a particular locations within a couple parameters. We mainly look at the M2 and K1 contituents' ellipses because they summarise most (percentage?) of the flow.
+* Tidal ellipses can communicate alot about a depth profile(or a depth averaged generalisation) of the flow or at a particular locations within a couple parameters. We mainly look at the M2 and K1 contituents' ellipses because they summarise most (percentage?) of the flow. The M2 componen is much stronger than the K1. (Thomson 1981)
 * Tidal ellipses enable us to see the speed and direction of a flow due to a chosen tidal constituent at every hour of the day as a depth profile using only othogoonal velocities at that point over a long period of time. (NOAA 2007)
 * Comparisons of tidal ellipses from the model output to observations facilitates the understanding of which physical processes are properly and poorly represented and may even provide information of techniques to use to improve the poorly represented processes. 
 
 *(b) What have researchers previously done in the Salish Sea and the Strait of Georgia?*
 
-* Differences calculated as distances in the complex plane:
+.. _NOAA2007:
 
-	:math:`D = [(A_0 \cos g_0 - A_m \cos g_m)^2 + (A_0 \sin g_0 - A_m \sin g_m)^2]^{1/2}`
+National Oceanic and Atmospheric Administration (2007)
+----------------------------------------------------------
 
-	where :math:`A_0`, :math:`A_m`, :math:`g_0` and :math:`g_m` are observed and modelled amplitudes and phases
+* Suggest using harmonic contituent ellipses to combine the orthogonal compenent time series (u and v current vectors)
+* The orthogonal components can be chosen to be north/south or along direction of maximum flood and perpentidular to it.  
+* In this book uses the derivation of Doodson and Warburg (1941, p.180-1):
 
-* M2 differences were between 0.8cm (Pedder Bay) and 8.7cm (Sidney), with average around 3cm 
-* K1 differences were between 0.4cm (Pedder Bay) and 5.4cm (Sidney), with average around 2.5cm
-* M2 is too early at Sooke, possibly because of large frictional effects of mudflats, which are not considered in calculation
-* M2 is too small and too late at Clover Point and Sidney possibly because the interaction of estuarine flow with tides was not taken into effect
-* M2 inaccuracies at Point Grey may be due to proximity of Fraser River mudflats and a long jetty that is not in the model domain
-* M2 inaccuracies at Ladysmith, Maple Bay and Patricia Bay may be due to the Cowichan River, whose discharge could interfere with tidal propagation in narrow channels around these sites
+	:math:`N(t) = W_N \cos(\eta t - \kappa_N)`
+	:math:`E(t) = W_E \cos(\eta t - \kappa_E)`
 
-* Also calculated root-mean-square differences between all measured and modelled amplitudes and phase differences
+	where :math:`N(t)`, and :math:`E(t)`, are the north and east components of the tidal constituents, :math:`W_N` and :math:`W_E` are the current vectors north and east components, :math:`\eta` is the frequency and :math:`\kappa_N` and :math:`\kappa_E` is the phase lag in it's respective direction.
+	
+* Then generalise for any two orthogonal components MJ(t) and MN(t), major and minor components:
+	
+	:math:`MJ(t) = N(t) \cos(\theta) + E(t) \sin(\theta)`
+	:math:`MN(t) = E(t) \cos(\theta) - N(t) \sin(\theta)`
 
-	- rms amplitude differences all within 2.0cm
-	- rms phase differences all within 6.3 degrees
-
-* Plotted out co-amplitude and co-phase lines for major constituents to compare to Crean et al (1988)
-* Ellipses were compared (qualitatively?) between measured currents and modelled currents throughout the water column, but could not account for baroclinic effects such as internal tides which were probably affecting speed variations with depth 
-* Observed M2 constituent was not constant throughout the year at Victoria, possibly due to the exclusion of estuarine flow
-
+	where :math:`\theta`, is the major axis direction clockwise from the north.
 
 
-* :math:`e^{i \omega t}` time dependence assumed for each tidal constituent with frequency :math:`\omega`
-* 8 tidal constituents used at boundaries (M2, S2, N2, K2, K1, O1, P1 and Q1) plus a residual tide and compound tides and overtides as a result of nonlinear interactions between these constituents
-* Zero flow normal to the coast at boundaries
-* Specified elevations on open sea boundaries mostly taken from observations
-
-	- cotidal charts (Parker 1977, Crean et al. 1988) were sometimes used to deduce trends for interpolation and extrapolation along boundaries
-
-* Specific boundaries (see Figure 2 of Foreman et al. (1995) for map):
-
-	- Admiralty Inlet boundary: forced with Port Townsend and Admiralty Head tidal harmonics
-	- Juan de Fuca boundary: forced with Sheringham Point and Seiku tidal harmonics
-	- Northern boundaries: forced with Irvines Landing, Northwest Bay, Squitty Bay, False Bay and Skerry Bay tidal harmonics
-
-.. _foremanetal00:
+.. _foremanetal04:
 
 Foreman et al. (2004)
 ---------------------------
-Model of the north east Pacific Ocean, including Alaskan and BC shelf. Resolution ranges from 80km off shore to about 100m along the coast. The grid in eastern Juan de Fuca Strait and southern Strait of Georgia is identical to :ref:`foremanetal95`. Since there are only two crossings in the Strait of Georgia, only part of the Strait is included in the model.
 
-*(a) how is model evaluated?*
+* Use a observations to do data assimilation.
+* They only report amplitude and phase.
+* We can transform these into tidal ellipses
 
-* Compared model :math:`M_2` and :math:`K_1` harmonics against those calculated from harmonic analysis of 5.3 years of altimeter observations (Topex/Poseidon), at locations of crossover of the two satellite paths within the model domain
+
+.. _Xu:
+
+Zigang Xu (2000)
+-------------------
+
+Short paper describing a technique for ellipse conversion explained in much detail.
+
+* Uses complex tidal currents to convert between tidal current amplitude and phase lag paramters to tidal current ellipse parameters and vice versa.
+	:math:`w = u +iv`
+	:math:`u = a_u \cos(\omega t - \phi_u)`
+	:math:`v = a_v \cos(\omega t - \phi_v)`
+	
+	where :math:`w` is the complex tidal current, :math:`\omega`, is the frequency of the chosen tidal constituent, :math:`\phi_u` and :math:`\phi_v` are the phase lag for the u- and v- components and :math:`a_u` and :math:`a_v` are the amplitudes for the u- and v- components.
+	
+
+* Tracing out :math:`w` on a complex plane gives an ellipse, from this ellipse we can calculate many parameters that provide information about the flow.
+
 * Model accuracy was determined by calculating RMS differences between modelled and observed tidal harmonics at the crossover locations:
 
 	.. math:: 
