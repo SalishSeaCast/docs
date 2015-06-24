@@ -27,20 +27,20 @@ National Oceanic and Atmospheric Administration (2007)
 * Suggest using harmonic contituent ellipses to combine the orthogonal compenent time series (u and v current vectors)
 * The orthogonal components can be chosen to be north/south or along direction of maximum flood and perpentidular to it.  
 * In this book uses the derivation of Doodson and Warburg (1941, p.180-1):
-	.. _math::
+
+	.. math::	
+	  N(t) = W_N \cos(\eta t - \kappa_N)
 	
-	N(t) = W_N \cos(\eta t - \kappa_N)
-	
-	E(t) = W_E \cos(\eta t - \kappa_E)
+	  E(t) = W_E \cos(\eta t - \kappa_E)
 
 	where :math:`N(t)`, and :math:`E(t)`, are the north and east components of the tidal constituents, :math:`W_N` and :math:`W_E` are the current vectors north and east components, :math:`\eta` is the frequency and :math:`\kappa_N` and :math:`\kappa_E` is the phase lag in it's respective direction.
 	
 * Then generalise for any two orthogonal components MJ(t) and MN(t), major and minor components:
 
-	.. _math::
-	MJ(t) = N(t) \cos(\theta) + E(t) \sin(\theta)
+	.. math::
+	  MJ(t) = N(t) \cos(\theta) + E(t) \sin(\theta)
 	
-	MN(t) = E(t) \cos(\theta) - N(t) \sin(\theta)
+	  MN(t) = E(t) \cos(\theta) - N(t) \sin(\theta)
 
 	where :math:`\theta`, is the major axis direction clockwise from the north.
 
@@ -71,22 +71,20 @@ Short paper describing a technique for ellipse conversion explained in much deta
 
 * Uses complex tidal currents to convert between tidal current amplitude and phase lag paramters to tidal current ellipse parameters and vice versa.
 
-	.. _math:: 
+	.. math::
+	  w = u +iv
 	
-	w = u +iv
+	  u = a_u \cos(\omega t - \phi_u)
 	
-	u = a_u \cos(\omega t - \phi_u)
-	
-	v = a_v \cos(\omega t - \phi_v)
+	  v = a_v \cos(\omega t - \phi_v)
 	
 	where :math:`w` is the complex tidal current, :math:`\omega`, is the frequency of the chosen tidal constituent, :math:`\phi_u` and :math:`\phi_v` are the phase lag for the u- and v- components and :math:`a_u` and :math:`a_v` are the amplitudes for the u- and v- components.
 	
 
 * Tracing out :math:`w` on a complex plane gives an ellipse, from this ellipse we can calculate many parameters that provide information about the flow.
 
-	.. _math::
-	
-	w = W_p e^{i(\omega t + \theta_p)} + W_m e^{-i(\omega t - \theta_m)}
+	.. math::
+	  w = W_p e^{i(\omega t + \theta_p)} + W_m e^{-i(\omega t - \theta_m)}
 	
 * From these equations we can extract all the ellipse parameters
 * This is the method we used to calculate out tidal ellipse from the model outputs and from the observation that were provided by Dr. Rich Pavlowich, Dr. Mark Halverson and Richard Dewey.
@@ -103,4 +101,4 @@ References
 
 * Thomson, R.E., 1981. Oceanography of the British Columbia Coast. Canadian Special Publication of Fisheries and Aquatic Sciences 56, Department of Fisheries and Oceans, Ottawa, 291pp.
 
-*Xu, Z., 2000. Ellipse parameters conversion and vertical velocity profiles for tidal currents. Bedford Institute of Oceanography, Dartmouth, Nova Scotia, Canada, 20 pages.
+* Xu, Z., 2000. Ellipse parameters conversion and vertical velocity profiles for tidal currents. Bedford Institute of Oceanography, Dartmouth, Nova Scotia, Canada, 20 pages.
