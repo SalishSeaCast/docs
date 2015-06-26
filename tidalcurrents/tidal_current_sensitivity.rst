@@ -5,11 +5,8 @@ Tidal current sensitivity
 Data Series
 -------------------------------------------
 
-Frequency
-************
 
 * The Salish Sea MEOPAR model outputs daily averages and hourly averages of tracers and velocities at very grid point. It also outputs quarter-hourly results but just at the ONC VENUS Central and East nodes.
-
 * We wondered if it is beneficial to compile the quater-hourly data for the velocities, whether or not it would produce a more accurate tidal ellipse.
 * The quarter-hourly output has started on May 9th 2015, where as the hourly output has been function with the current tidal configuration since November 26th 2014. We also want to see the effects of a longer time series.
 * The figure below is a comparisons of the depth profile of tidal ellipses of 1 month quarter-hourly, one month hourly output to 6 month hourly output of the velocities.
@@ -64,11 +61,20 @@ Sensitivity to Frequency and Length Comparison Table
 +-------------+------------+-----------+--------------+-------------+-----------+--------------+------------+-----------+--------------+
 | 253.1       | 0.21       | 0.00      | 123          | 0.21        | 0.00      | 123          | 0.19       | 0.01      | 123          |
 +-------------+------------+-----------+--------------+-------------+-----------+--------------+------------+-----------+--------------+
-| 306.8       | 0.15       | 0.05      | 112          | 0.15       | 0.05       | 112          | 0.14       | 0.06      | 111          |
+| 306.8       | 0.15       | 0.05      | 112          | 0.15        | 0.05      | 112          | 0.14       | 0.06      | 111          |
 +-------------+------------+-----------+--------------+-------------+-----------+--------------+------------+-----------+--------------+
  
+Frequency
+************
+* One month of quarter-hourly values makes no significant difference to the tidal ellipse parameters at the ONC VENUS Central node. The changes are sparse and miniaml
+* We will need to wait until we have a longer quarter-hourly data set to see if it is beneficial for tidal ellipses, or try other more sensitive locations.
 
-
-* The longer time most significant differences are the smaller surface currents and the 
+Length
+***********
+* The 6 months time series has two significant differences that lead us to believe that these ellipses are a better representation of the currents:
+      * a. The smaller surface currents indicates that it averages out some of the surface currents that are due to winds or Fraser River outflow.
+      * b. The smoother variations throughout the water column. Is not logical for the flow to fluctuate every couple meters throughout the water column.
+      
+* Also a longer time series allows the tidal constituents to seperate, we can be more sure that we are just looking at M2.
 
 
