@@ -19,4 +19,6 @@ It also includes analyses and discussion of decisions that lead to :ref:`SalishS
    fromAMMtoJPP_addTides
 
    AMM12-BDY-analysis
-   nemo_quirks
+   nemo_3-6_quirks
+   nemo_3-4_quirks
+
