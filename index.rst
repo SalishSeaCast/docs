@@ -44,6 +44,7 @@ Contents
    work_env/index
    code-notes/salishsea-nemo/index
    tides/index
+   tidalcurrents/index
    rivers/index
    stability/index
    storm_surges/index
