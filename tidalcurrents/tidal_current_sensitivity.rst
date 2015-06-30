@@ -6,7 +6,7 @@ Data Series
 -------------------------------------------
 
 
-* The Salish Sea MEOPAR model outputs daily averages and hourly averages of tracers and velocities at very grid point. It also outputs quarter-hourly results but just at the ONC VENUS Central and East nodes.
+* The Salish Sea MEOPAR model outputs daily averages and hourly averages of tracers and velocities at very grid point. It also outputs quarter-hourly results but just at the Ocean Networks Canada VENUS Central and East nodes.
 * We wondered if it is beneficial to compile the quarter-hourly data for the velocities and whether or not it would produce a more accurate tidal ellipse.
 * The quarter-hourly output has started on May 9th 2015, where as the hourly output has been produced with the current tidal configuration since November 26th 2014. We also want to see the effects of a longer time series.
 * The figure below is a comparison of the depth profile of tidal ellipses for one month quarter-hourly output, one month hourly output and 6 month hourly output of the velocities.
