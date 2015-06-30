@@ -7,9 +7,9 @@ Data Series
 
 
 * The Salish Sea MEOPAR model outputs daily averages and hourly averages of tracers and velocities at very grid point. It also outputs quarter-hourly results but just at the ONC VENUS Central and East nodes.
-* We wondered if it is beneficial to compile the quater-hourly data for the velocities, whether or not it would produce a more accurate tidal ellipse.
-* The quarter-hourly output has started on May 9th 2015, where as the hourly output has been function with the current tidal configuration since November 26th 2014. We also want to see the effects of a longer time series.
-* The figure below is a comparisons of the depth profile of tidal ellipses of 1 month quarter-hourly, one month hourly output to 6 month hourly output of the velocities.
+* We wondered if it is beneficial to compile the quarter-hourly data for the velocities and whether or not it would produce a more accurate tidal ellipse.
+* The quarter-hourly output has started on May 9th 2015, where as the hourly output has been produced with the current tidal configuration since November 26th 2014. We also want to see the effects of a longer time series.
+* The figure below is a comparison of the depth profile of tidal ellipses for one month quarter-hourly output, one month hourly output and 6 month hourly output of the velocities.
 
 .. _FrequencySensitivity-image:
 
@@ -66,22 +66,25 @@ Sensitivity to Frequency and Length Comparison Table
  
 Frequency
 ************
-* One month of quarter-hourly values makes no significant difference to the tidal ellipse parameters at the ONC VENUS Central node. The changes are sparse and miniaml
+
+* One month of quarter-hourly values makes no significant difference to the tidal ellipse parameters at the ONC VENUS Central node. The changes are sparse and minimal.
 * We will need to wait until we have a longer quarter-hourly data set to see if it is beneficial for tidal ellipses, or try other more sensitive locations.
 
 Length
 ***********
+
 * The 6 months time series has two significant differences that lead us to believe that these ellipses are a better representation of the currents:
+
       * a. The smaller surface currents indicates that it averages out some of the surface currents that are due to winds or Fraser River outflow.
-      * b. The smoother variations throughout the water column. Is not logical for the flow to fluctuate every couple meters throughout the water column.
+      * b. The smoother variations throughout the water column. It is not logical for the flow to fluctuate every couple of meters throughout the water column.
       
-* Also a longer time series allows the tidal constituents to seperate, we can be certain that we are only looking at the M2 tidal constituent.
+* Also a longer time series allows the tidal constituents to separate, we can be certain that we are only looking at the M2 tidal constituent.
 
 
 Season
 ********
 * Larger, more circular currents at the surface in the spring
-* Narrower and smaller currents mid-depths in the spring
+* Narrower and smaller currents at mid-depths in the spring
 * The deep bottom currents are almost identical, like at the Central node.
 
 +-------------+------------+-----------+--------------+-------------+-----------+--------------+
