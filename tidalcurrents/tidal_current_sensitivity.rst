@@ -75,8 +75,8 @@ Length
 
 * The 6 months time series has two significant differences that lead us to believe that these ellipses are a better representation of the currents:
 
-      * a. The smaller surface currents indicates that it averages out some of the surface currents that are due to winds or Fraser River outflow.
-      * b. The smoother variations throughout the water column. It is not logical for the flow to fluctuate every couple of meters throughout the water column.
+    * The smaller surface currents indicates that it averages out some of the surface currents that are due to winds or Fraser River outflow.
+    * The smoother variations throughout the water column. It is not logical for the flow to fluctuate every couple of meters throughout the water column.
       
 * Also a longer time series allows the tidal constituents to separate, we can be certain that we are only looking at the M2 tidal constituent.
 
