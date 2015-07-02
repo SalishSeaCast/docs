@@ -28,12 +28,13 @@ Data Series
 
 Sensitivity to Frequency and Length Comparison Table
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 +-------------+------------+------------+--------------+-------------+------------+--------------+------------+------------+--------------+
 | Central     |  Quarter-Hourly                        | Hourly                                  | Hourly (6months)                       |
 |             |                                        |                                         |                                        |
 +=============+============+============+==============+=============+============+==============+============+============+==============+
-| Depth (m)   | Major-Axis | Minor-Axis |  Inclination |  Major-Axis | Minor-Axis |  Inclination | Major-Axis | Minor-Axis |  Inclination |  
-|             |  (m/s)     |   (m/s)    | (deg. ccw E) |  (m/s)      |   (m/s)    | (deg. ccw E) |  (m/s)     |   (m/s)    | (deg. ccw E) |
+| Depth       | Major-Axis | Minor-Axis |  Inclination |  Major-Axis | Minor-Axis |  Inclination | Major-Axis | Minor-Axis |  Inclination |  
+| (m)         |  (m/s)     |   (m/s)    | (deg. ccw E) |  (m/s)      |   (m/s)    | (deg. ccw E) |  (m/s)     |   (m/s)    | (deg. ccw E) |
 +-------------+------------+------------+--------------+-------------+------------+--------------+------------+------------+--------------+
 | 0.5         | 0.26       | -0.12      | 130          | 0.26        | -0.12      | 130          | 0.20       | -0.07      | 137          |
 +-------------+------------+------------+--------------+-------------+------------+--------------+------------+------------+--------------+
@@ -72,11 +73,13 @@ Sensitivity to Frequency and Length Comparison Table
 | 306.8       | 0.15       | 0.05       | 112          | 0.15        | 0.05       | 112          | 0.14       | 0.06       | 111          |
 +-------------+------------+------------+--------------+-------------+------------+--------------+------------+------------+--------------+
  
+ 
 Frequency
 ************
 
 * One month of quarter-hourly values makes no significant difference to the tidal ellipse parameters at the ONC VENUS Central node. The changes are sparse and minimal.
 * We will need to wait until we have a longer quarter-hourly data set to see if it is beneficial for tidal ellipses, or try other more sensitive locations.
+
 
 Length
 ***********
@@ -95,7 +98,8 @@ Length
 
 
 Seasons
-********
+**********
+
 * Larger, more circular currents at the surface in the spring
 * Narrower and smaller currents at mid-depths in the spring
 * The deep bottom currents are almost identical, like at the Central node.
@@ -104,8 +108,8 @@ Seasons
 | East        |  Winter (Nov 26, 2014 - Feb 26, 2015) | Spring (Feb 27, 2015 - May 27, 2015)   |
 |             |                                       |                                        |
 +=============+============+===========+==============+=============+===========+==============+
-| Depth (m)   | Major-Axis | Minor-Axis|  Inclination |  Major-Axis | Minor-Axis|  Inclination |
-|             |  (m/s)     |   (m/s)   | (deg. ccw E) |    (m/s)    |   (m/s)   | (deg. ccw E) |
+| Depth       | Major-Axis | Minor-Axis|  Inclination |  Major-Axis | Minor-Axis|  Inclination |
+| (m)         |  (m/s)     |   (m/s)   | (deg. ccw E) |    (m/s)    |   (m/s)   | (deg. ccw E) |
 +-------------+------------+-----------+--------------+-------------+-----------+--------------+
 | 0.5         | 0.38       | -0.14     | 130          | 0.40        | -0.20     | 128          | 
 +-------------+------------+-----------+--------------+-------------+-----------+--------------+
