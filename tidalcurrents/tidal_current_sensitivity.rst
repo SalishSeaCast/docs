@@ -7,6 +7,12 @@ Data Series
 
 
 * The Salish Sea MEOPAR model outputs daily averages and hourly averages of tracers and velocities at very grid point. It also outputs quarter-hourly results but just at the Ocean Networks Canada VENUS Central and East nodes.
+Here is where the ONC VENUS nodes that we are comapring data with, East and Central, are located:
+
+.. _VENUSlocation-image:
+
+.. figure:: nodeloc.png
+
 * We wondered if it is beneficial to compile the quarter-hourly data for the velocities and whether or not it would produce a more accurate tidal ellipse.
 * The quarter-hourly output has started on May 9th 2015, where as the hourly output has been produced with the current tidal configuration since November 26th 2014. We also want to see the effects of a longer time series.
 * The figure below is a comparison of the depth profile of tidal ellipses for one month quarter-hourly output, one month hourly output and 6 month hourly output of the velocities.
@@ -14,6 +20,7 @@ Data Series
 .. _FrequencySensitivity-image:
 
 .. figure:: freqsens.png
+
 
 
 * The table below is populated with the values that were used to create the figure above. 
@@ -79,9 +86,14 @@ Length
     * The smoother variations throughout the water column. It is not logical for the flow to fluctuate every couple of meters throughout the water column.
       
 * Also a longer time series allows the tidal constituents to separate, we can be certain that we are only looking at the M2 tidal constituent.
+* We observe the benefits of a longer time series at the ONC VENUS East node as well.
+
+.. _FrequencySensitivity-East:
+
+.. figure:: freqsenseast.png
 
 
-Season
+Seasons
 ********
 * Larger, more circular currents at the surface in the spring
 * Narrower and smaller currents at mid-depths in the spring
