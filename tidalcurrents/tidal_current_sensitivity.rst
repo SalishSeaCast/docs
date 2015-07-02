@@ -6,12 +6,13 @@ Data Series
 -------------------------------------------
 
 
-* The Salish Sea MEOPAR model outputs daily averages and hourly averages of tracers and velocities at very grid point. It also outputs quarter-hourly results but just at the Ocean Networks Canada VENUS Central and East nodes.
-Here is where the ONC VENUS nodes that we are comapring data with, East and Central, are located:
+* The Salish Sea MEOPAR model outputs daily averages and hourly averages of tracers and velocities at very grid point. It also outputs quarter-hourly results at the Ocean Networks Canada VENUS Central and East nodes. The image below indicates where the Central and East nodes are located.
 
-.. _VENUSlocation-image:
+
+.. _VENUSlocation:
 
 .. figure:: nodeloc.png
+
 
 * We wondered if it is beneficial to compile the quarter-hourly data for the velocities and whether or not it would produce a more accurate tidal ellipse.
 * The quarter-hourly output has started on May 9th 2015, where as the hourly output has been produced with the current tidal configuration since November 26th 2014. We also want to see the effects of a longer time series.
@@ -88,7 +89,7 @@ Length
 * Also a longer time series allows the tidal constituents to separate, we can be certain that we are only looking at the M2 tidal constituent.
 * We observe the benefits of a longer time series at the ONC VENUS East node as well.
 
-.. _FrequencySensitivity-East:
+.. _FrequencySensitivityE:
 
 .. figure:: freqsenseast.png
 
