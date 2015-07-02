@@ -23,7 +23,7 @@ Nodes
 
 .. figure:: depavnodecomp.png
 
-* The figures shows that the depth averaged observational and model output values agree quite well.
+* The figure shows that the depth averaged observational and model output values agree quite well.
 * The model output's semi-minor axis is smaller than the observations, this informs us that the model flow is too rectiliniar.
 * Also the model output's angles are slightly more to the West. This may be due to too much mixing or the Fraser River outlflow. 
 
