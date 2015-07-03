@@ -58,6 +58,7 @@ It assumes the current is only affected by M2 and K1, which is incorrect, but it
 
 
     .. _math::
+    
       u = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(\omega_{K1}t-\theta_{K1})
     
       v = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(/omega_{K1}t-\theta_{K1})
