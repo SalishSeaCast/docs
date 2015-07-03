@@ -57,11 +57,11 @@ This function finds tidal parameters from a tidal current component across a spe
 It assumes the current is only affected by M2 and K1, which is incorrect, but it is a good approximation because they are the two main components throughout our domain. The fit performed in fittit is based on Xu, Z. (2000).
 
 
-.. _math::
+    .. _math::
 
-    u = mean + A_{M2}cos(w_{M2}t-\theta_{M2}) + A_{K1}cos(w_{K1}t-\theta_{K1})
+      u = mean + A_{M2}cos(w_{M2}t-\theta_{M2}) + A_{K1}cos(w_{K1}t-\theta_{K1})
     
-    v = mean + A_{M2}cos(w_{M2}t-\theta_{M2}) + A_{K1}cos(w_{K1}t-\theta_{K1})
+      v = mean + A_{M2}cos(w_{M2}t-\theta_{M2}) + A_{K1}cos(w_{K1}t-\theta_{K1})
     
 where :math:`w`, is the frequency of the chosen tidal constituent, :math:`\theta_{M2}` and :math:`\theta_{K1}` and :math:`A_{M2}` and :math:`A_{K1}` are the phase lags and amplitudes for the M2 and K1 components.
     
