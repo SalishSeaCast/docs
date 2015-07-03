@@ -91,6 +91,19 @@ Short paper describing a technique for ellipse conversion explained in much deta
 * This is the method we used to calculate the tidal ellipses from the model outputs and from the observation that were provided by Dr. Rich Pelvics, Dr. Mark Halves and Dr. Richard Dewey.
 	
 
+.. _Thomson_Huggett:
+
+Thomson R.E. & Huggett W.S. (1980)
+--------------------------------------
+
+There isn't as much research and observations done in the Johnstone Strait as in the Georgia Strait and the Juan de Fuca Strait, but it is part of the domain and it is important to understand the research that has been done there and the observations that are being compiled.
+
+* Five current meters were deployed across channel in June 1973 in the Johnstone Strait eastward of Newcastle Sill
+* More were deployed between 1976 and 1978. 
+* Table of 10 stations in the western basin of Johnstone Strait containing the along channel amplitude (semi-major axis) and the phase (from 120 :math:`\deg` W.) and 2 to 10 depths for each station. The moorings were out for 7 to 92 days, depending on the device type, location and start time.
+* M2 components are only fully resolved for time series that are longer than 27.6 days.
+
+
 
 References
 -------------------------
@@ -101,5 +114,7 @@ References
 * Foreman, M. G. G., Sutherland, G., & Cummings, P. F., 2004. M2 tidal dissipation around Vancouver Island: an inverse approach. Continental Shelf Research, 24(18), 2167-2185.
 
 * Thomson, R.E., 1981. Oceanography of the British Columbia Coast. Canadian Special Publication of Fisheries and Aquatic Sciences 56, Department of Fisheries and Oceans, Ottawa, 291pp.
+
+*Thomson, R.E. and W.S. Huggett, 1980. M2 Baroclinic Tides in Johnstone Strait, British Columbia. J. Phys. Oceanogr., 10, 1509–1539.
 
 * Xi, Z., 2000. Ellipse parameters conversion and vertical velocity profiles for tidal currents. Bed ford Institute of Oceanography, Dartmouth, Nova Scotch, Canada, 20 pages.
