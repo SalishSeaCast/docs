@@ -8,3 +8,4 @@ Tidal currents evaluation
    tidal_current_lit_review
    tidal_current_sensitivity
    tidal_current_comparison
+   tidal_current_tools
