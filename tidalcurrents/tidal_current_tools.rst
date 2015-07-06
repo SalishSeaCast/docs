@@ -1,6 +1,6 @@
 .. _TidalCurrentsTools:
 
-Tidal Currents Tools
+Tidal currents tools
 =========================
 
 
@@ -31,14 +31,14 @@ We perform a hamonic analysis on the time series in order to extract the tidal h
 Seperating the constituents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The tidal currents are composent of many different harmonic constituents like tides. When calculating and comparing tidal ellipses it is of one constituents at one location, it is important to have a long enough time series to be able to fully seperate the constituents. 
+Similarly to tides, tidal currents are composent of many different harmonic constituents. When calculating and comparing tidal ellipses it is of one constituents at one location, it is important to have a long enough time series to be able to fully seperate the constituents. 
 
 
 Freshet and changing shorelines
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It is important to avoid using data for a tidal analysis during the Fraser River freshet. The outflow from the river is very larger from the end of may to mid June and this skews the tidal ellipses.
-The bathymetry and shoreline of a location destically effects the tidal currents. However, they can change over time. It is important to select data that would have a consistent shoreline and bathymetry across datasets that are being compared.
+The bathymetry and shoreline drastically effects the tidal currents. However, they can change over time. It is important to select data that would have a consistent shoreline and bathymetry across datasets that are being compared.
 
 
 Python Scripts
@@ -57,11 +57,13 @@ This function finds tidal parameters from a tidal current component across a spe
 It assumes the current is only affected by M2 and K1, which is incorrect, but it is a good approximation because they are the two main components throughout our domain. The fit performed in fittit is based on Xu, Z. (2000).
 
 
-    .. _math::
+    	.. math::	
+	  u = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(\omega_{K1}t-\theta_{K1})
+	  
+	  v = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(/omega_{K1}t-\theta_{K1})
+      
     
-      u = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(\omega_{K1}t-\theta_{K1})
-    
-      v = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(/omega_{K1}t-\theta_{K1})
+      
     
     
 where :math:`\omega_{M2}` and :math:`\omega_{K1}`, :math:`\theta_{M2}` and :math:`\theta_{K1}` and :math:`A_{M2}` and :math:`A_{K1}` are the frequencies, phase lags and amplitudes for the M2 and K1 components.
