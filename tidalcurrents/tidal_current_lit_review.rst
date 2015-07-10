@@ -88,7 +88,7 @@ Short paper describing a technique for ellipse conversion explained in much deta
 	  w = W_p e^{i(\omega t + \theta_p)} + W_m e^{-i(\omega t - \theta_m)}
 	
 * From these equations we can extract all the ellipse parameters
-* This is the method we used to calculate the tidal ellipses from the model outputs and from the observation that were provided by Dr. Rich Pawlowicz, Dr. Mark Halverson and Dr. Richard Dewey.
+* This is the method we used to calculate the tidal ellipses from the Salish Sea model outputs.
 	
 
 .. _Thomson_Huggett:
@@ -98,7 +98,7 @@ Thomson R.E. & Huggett W.S. (1980)
 
 Johnstone Strait is part of the domain, it is important to understand the research that has previously been done regarding the area and the observations that are being compiled.
 
-* Five current meters were deployed across channel in June 1973 in the Johnstone Strait eastward of Newcastle Sill
+* Five current meters were deployed across the the Johnstone Strait, eastward of Newcastle Sill, in June 1973. 
 * More were deployed between 1976 and 1978. 
 * Table of 10 stations in the western basin of Johnstone Strait containing the along channel amplitude (semi-major axis) and the phase (from 120 :math:`\deg` W.) and 2 to 10 depths for each station. The moorings were out for 7 to 92 days, depending on the device type, location and start time.
 * The semi-minor axis amplitude was not reported because it is very small in this region.
