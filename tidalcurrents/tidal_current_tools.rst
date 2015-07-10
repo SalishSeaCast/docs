@@ -26,12 +26,12 @@ Observations
 Tidal ellipses
 ----------------
 
-We perform a hamonic analysis on the time series in order to extract the tidal harmonic constants. From the speed and direction of the tidal current at one location over time we can construct harmonic constituents ellipse which are used to decribe the motion of the water due to one tidal constituent (eg. M2).
+We perform a harmonic analysis on the time series in order to extract the tidal harmonic constants. From the speed and direction of the tidal current at one location over time we can construct harmonic constituents ellipse which are used to describe the motion of the water due to one tidal constituent (eg. M2).
 
-Seperating the constituents
+Separating the constituents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Similarly to tides, tidal currents are composent of many different harmonic constituents. When calculating and comparing tidal ellipses it is of one constituents at one location, it is important to have a long enough time series to be able to fully seperate the constituents. 
+Similarly to tides, tidal currents are composed of many different harmonic constituents. When calculating and comparing tidal ellipses it is of one constituents at one location, it is important to have a long enough time series to be able to fully separate the constituents. 
 
 
 Freshet and changing shorelines
@@ -53,14 +53,14 @@ Some python functions have been written to facilitate calculating amplitude and 
 
    fittit(uaus, time, imin=0, imax=0, jmin=0, jmax=0, dj=1)
 
-This function finds tidal parameters from a tidal current component across a specified area of the grid at a single depth, at a single point through the water column or a sigle depth averaged grid point. Must perform twice, once for each tidal current vector in order to complete the analysis.
+This function finds tidal parameters from a tidal current component across a specified area of the grid at a single depth, at a single point through the water column or a single depth averaged grid point. Must perform twice, once for each tidal current vector in order to complete the analysis.
 It assumes the current is only affected by M2 and K1, which is incorrect, but it is a good approximation because they are the two main components throughout our domain. The fit performed in fittit is based on Xu, Z. (2000).
 
 
     	.. math::	
 	  u = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(\omega_{K1}t-\theta_{K1})
 	  
-	  v = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(/omega_{K1}t-\theta_{K1})
+	  v = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(\omega_{K1}t-\theta_{K1})
       
     
       

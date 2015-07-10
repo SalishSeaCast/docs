@@ -52,7 +52,7 @@ Foreman et al. (2004)
 
 * Currents calculated with the TIDE3D finite element model. This model did not include vertical variations in currents by using a large vertical viscosity. This basically outputs constant currents through the water column.
 * Presents along channel amplitude and phase.
-* Although stratification is known to be important at the Haro Strait and Johnstone Strait Central sites, baroclinic affects are not captured by this model.
+* Although stratification is known to be important at the Haro Strait and Johnstone Strait Central sites, baroclinic effects are not captured by this model.
 * They only report amplitude and phase.
 * The model uses data assimilation of the elevation observations to improve predictions. These model values are an improvement to the original model presented.
 
@@ -88,7 +88,7 @@ Short paper describing a technique for ellipse conversion explained in much deta
 	  w = W_p e^{i(\omega t + \theta_p)} + W_m e^{-i(\omega t - \theta_m)}
 	
 * From these equations we can extract all the ellipse parameters
-* This is the method we used to calculate the tidal ellipses from the model outputs and from the observation that were provided by Dr. Rich Pawlowicz, Dr. Mark Halveson and Dr. Richard Dewey.
+* This is the method we used to calculate the tidal ellipses from the model outputs and from the observation that were provided by Dr. Rich Pawlowicz, Dr. Mark Halverson and Dr. Richard Dewey.
 	
 
 .. _Thomson_Huggett:
@@ -110,7 +110,7 @@ References
 -------------------------
 * Parker, B. B., 2007. Tidal analysis and prediction. US Department of Commerce, National Oceanic and Atmospheric Administration, National Ocean Service, Centre for Operational Oceanographic Products and Services, 378 pages.
 
-* Dodson, A.T. and H.D. War burg, 1941. Admiralty Manual of Tides. Hydro graphic Department, Admiralty, London, 270 pages.
+* Dodson, A.T. and H.D. War burg, 1941. Admiralty Manual of Tides. Hydrographic Department, Admiralty, London, 270 pages.
 
 * Foreman, M. G. G., Sutherland, G., & Cummings, P. F., 2004. M2 tidal dissipation around Vancouver Island: an inverse approach. Continental Shelf Research, 24(18), 2167-2185.
 
