@@ -9,7 +9,7 @@ Keys Common to AMM12 and CONCEPTS 110
 
 * **key_mpp_mpi** Use multiprocessors
 * **key_vvl** Use variable volume coordinates.  This means a nonlinear free surface.
-* **key_ldfslp** Use lateral diffusion scheme for tracers.
+* **key_ldfslp** Computes direction of lateral mixing.
 
 
 Keys in AMM12 that we need/want
