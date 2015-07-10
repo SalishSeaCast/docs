@@ -12,7 +12,7 @@ Tidal current sensitivity
 
 * We wonder if it is beneficial to compile the quarter-hourly data for the velocities and whether or not it would produce a more accurate tidal ellipse.
 * The quarter-hourly output has started on May 9th 2015, where as the hourly output has been produced with the current tidal configuration since November 26th 2014. 
-* The seperation harmonic tidal constituents is important when we want to look at a single constituent's effect on the current. This is accomplished with a long time series. Therefore, we want to see the effects of the length of a time series on the tidal ellipses.
+* The separation of harmonic tidal constituents is important when we want to look at a single constituent's effect on the current. This is accomplished with a long time series. Therefore, we want to see the effects of the length of a time series on the tidal ellipses.
 * The figure below is a comparison of the depth profile of tidal ellipses for one month of quarter-hourly output, one month of hourly output and 6 months hourly output.
 
 
@@ -100,7 +100,7 @@ Length
 Seasons
 ~~~~~~~~~~~
 
-Tabe 2: The effect of seasonality on tidal ellipse parameters
+Table 2: The effect of seasonality on tidal ellipse parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +-------------+------------+-----------+-------------+-------------+-----------+-------------+
