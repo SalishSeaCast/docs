@@ -173,6 +173,9 @@ This simulation, for example, will have 5 particles.
 	* Use "0.5" if you want to start at NEMO time 00:00. Use "1" if you want to start at NEMO time 00:30.
 * Column 5: Fifth parameter = 1.0
 
+.. note::
+
+    Ariane uses FORTAN indexing, which counts starting at 1. If you used Python to look up initial positions, which starts counting at 0, then you should add 1 to your initial positions.
 
 :kbd:`namelist`
 ^^^^^^^^^^^^^^^
