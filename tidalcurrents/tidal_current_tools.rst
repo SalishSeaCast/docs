@@ -72,19 +72,20 @@ where :math:`\omega_{M2}` and :math:`\omega_{K1}`, :math:`\theta_{M2}` and :math
     
 This function calculates the tidal ellipse parameters based on the conversions shown in Xu, Z. (2000). It outputs the positively and negatively rotating amplitude and phase, as well as the major and minor axis and the axis tilt and phase.
 
-* :file:`loadparam_all` -This script gives the tidal ellipse parameters for a given date range and location based on the hourly model output values.
+* :file:`loadparam_all` - This script gives the tidal ellipse parameters for a given date range and location based on the hourly model output values.::
  
     loadparam_all(to, tf, path, i , j, depav='None')
     
 This function loads all the data between the start and the end date that contains hourly velocity netCDF4 files. Then it mask, unstaggers and rotates the velocities by component about the grid point described by the i and j. Lastly it fits the velcities and caculates the tidal ellipse parameters for that date range using the fittit and ellipse_param functions above.
 After finding the amplitude and phase of the orthogonal vector by using fittit it does a tide correction  which is set to September 10th 2014 by the nowcast. These values values and other constituents tide corrections can be found in: /data/dlatorne/MEOPAR/SalishSea/nowcast/08jul15/ocean.output/
 
-* :file:`plot_ellipses_area` & :file:`plot_ellipses` - These scripts are used to plot the tidal ellipses on a map based on the parameters calculated by the functions above.
-    plot_ellipses(params, x, y, depth='None', numellips=1, imin=0, imax=398, jmin=0, jmax=898)
-    
+* :file:`plot_ellipses_area`  &  :file:`plot_ellipses` - These scripts are used to plot the tidal ellipses on a map based on the parameters calculated by the functions above.::
+
     plot_ellipses_area(params, depth='None', imin=0, imax=398, jmin=0, jmax=898)
     
-* This notebook uses the tools described above with a simple case. ipython notebook: `TidalEllipseTools.ipynb`_
+    plot_ellipses(params, x, y, depth='None', numellips=1, imin=0, imax=398, jmin=0, jmax=898)
+    
+* In this notebook: `TidalEllipseTools.ipynb`_  there are simple examples of the functions above.
 
 .. _TidalEllipseTools.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Muriel/TidalEllipseTools.ipynb
 
