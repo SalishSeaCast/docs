@@ -74,7 +74,7 @@ Comparison of the K1 harmonic constituent
 | ADCP    | 0.17       | -0.011     | 122             |
 +---------+------------+------------+-----------------+
 
-* Scale = 100
+
 .. _node_comparison:
 
 .. figure:: depavnodecompK1.png
