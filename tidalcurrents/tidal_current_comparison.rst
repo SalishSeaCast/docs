@@ -16,27 +16,25 @@ Nodes
 ~~~~~~~~
 
 * The ONC VENUS data has been processed by Dr. Rich Pawlowicz and Dr. Mark Halverson, these are the ADCP values in the table below and the opaque ellipses in the figure.
-* These values are depth averaged between 35-290m in at the Central node and 20-160m at the East node.
 * Note that the observational values are averaged over approximately 10-11 months where as the model output values were averaged over 8 months.
 
-Comparisons to observational data
-************************************
+Comparison of the M2 harmonic constituent
+********************************************
 +---------+------------+------------+-----------------+
-| Central | Major-Axis | Minor-Axis |  Inclination    |
+|         | Major-Axis | Minor-Axis |  Inclination    |
 |         |    (m/s)   |   (m/s)    |  (deg ccw E)    |
++---------+------------+------------+-----------------+
+| M2 - Central - (35-290m)                            |
 +---------+------------+------------+-----------------+
 | Model   | 0.17       | 0.014      | 130             |
 +---------+------------+------------+-----------------+
-| ADCP    | 0.18       | 0.005      | 109             |
+| ADCP    | 0.18       | 0.006      | 109             |
 +---------+------------+------------+-----------------+
-
+| M2 - East - (20-160m)                               |
 +---------+------------+------------+-----------------+
-| East    | Major-Axis | Minor-Axis |  Inclination    |
-|         |    (m/s)   |   (m/s)    |  (deg ccw E)    |
+| Model   | 0.31       | -0.018     | 137             |
 +---------+------------+------------+-----------------+
-| Model   | 0.30       | -0.018     | 138             |
-+---------+------------+------------+-----------------+
-| ADCP    | 0.26       | -0.004     | 124             |
+| ADCP    | 0.26       | -0.005     | 125             |
 +---------+------------+------------+-----------------+
 
 
@@ -44,11 +42,42 @@ Comparisons to observational data
 * The model output's semi-minor axis is larger than the observations, this informs us that the model flow is too circular.
 * Also the Salish Sea model output is angled slightly more to the West. This may be due to too much mixing or the Fraser River outflow. 
 
+*Scale = 50
 .. _node_comparison:
 
 .. figure:: depavnodecomp.png
 
 
+* Here we are plotting individual parameters to be able to see what aspects are well represented with the model.
+
+.. _profile_node_comparison:
+
+.. figure:: profnodescompM2.png
+
+
+Comparison of the K1 harmonic constituent
+********************************************
++---------+------------+------------+-----------------+
+|         | Major-Axis | Minor-Axis |  Inclination    |
+|         |    (m/s)   |   (m/s)    |  (deg ccw E)    |
++---------+------------+------------+-----------------+
+| K1 - Central - (35-290m)                            |
++---------+------------+------------+-----------------+
+| Model   | 0.07       | 0.004      | 135             |
++---------+------------+------------+-----------------+
+| ADCP    | 0.11       | 0.007      | 112             |
++---------+------------+------------+-----------------+
+| K1 - East - (20-160m)                               |
++---------+------------+------------+-----------------+
+| Model   | 0.15       | -0.020     | 131             |
++---------+------------+------------+-----------------+
+| ADCP    | 0.17       | -0.011     | 122             |
++---------+------------+------------+-----------------+
+
+* Scale = 100
+.. _node_comparison:
+
+.. figure:: depavnodecompK1.png
 
 
 CODAR
