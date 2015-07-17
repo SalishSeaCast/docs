@@ -53,16 +53,21 @@ Comparisons to observational data
 
 CODAR
 ~~~~~~~~
+* The Fraser River plume creates some very interesting surface currents where it meets the Georgia Strait. ONC has installed two High Frequency coastal radars to measure surface current velocities, it is called the Coastal Ocean Dynamics Applications Radar system (CODAR). 
+* The figure below is the phase form the model output throughout the CODAR region.
+.. _CODAR_phase:
 
+.. figure:: phaseCODAR.png
 
 
 
 Foreman Model (2004)
 ------------------------
 
-
 Along the thalweg
 ~~~~~~~~~~~~~~~~~~~~~
+
+
 
 At model locations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
