@@ -79,6 +79,10 @@ Comparison of the K1 harmonic constituent
 
 .. figure:: depavnodecompK1.png
 
+.. _profile_node_comparison_K1:
+
+.. figure:: profnodesK1.png
+
 
 CODAR
 ~~~~~~~~
