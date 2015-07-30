@@ -47,14 +47,14 @@ Python Scripts
 Tidal ellipse calculation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Some python functions have been written to facilitate calculating amplitude and phase from velocity vectors and to calculate the ellipse parameters from these values. These scripts are found in :file:`tools/SalishSeaTools/salishsea_tools/tidetools.py`
+Some python functions have been written to facilitate calculating amplitude and phase from velocity vectors and to calculate the ellipse parameters from these values. These scripts are found in :file:`tools/SalishSeaTools/salishsea_tools/ellipse.py`
 
 * :file:`fittit` - This script fits a velocity vector time series to a formula and extracts the amplitude and phase of each component in the formula.::
 
-   fittit(uaus, time, imin=0, imax=0, jmin=0, jmax=0, dj=1)
+   fittit(uaus, time, nconst)
 
 This function finds tidal parameters from a tidal current component across a specified area of the grid at a single depth, at a single point through the water column or a single depth averaged grid point. Must perform twice, once for each tidal current vector in order to complete the analysis.
-It assumes the current is only affected by M2 and K1, which is incorrect, but it is a good approximation because they are the two main components throughout our domain. The fit performed in fittit is based on Xu, Z. (2000).
+The nconst input sets how many tidal harmonic constituents will be analysed. They come in pairs and in order of importance the domain. It returns a dictionary object containing the phase and amplitude for each component for the velocity given. The fit performed in fittit is based on Xu, Z. (2000).
 
 
     	.. math::	
@@ -63,7 +63,7 @@ It assumes the current is only affected by M2 and K1, which is incorrect, but it
 	  v = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(\omega_{K1}t-\theta_{K1})
     
     
-where :math:`\omega_{M2}` and :math:`\omega_{K1}`, :math:`\theta_{M2}` and :math:`\theta_{K1}` and :math:`A_{M2}` and :math:`A_{K1}` are the frequencies, phase lags and amplitudes for the M2 and K1 components. If you want to analyse more harmonic constituents you would need to first modify the :file:`double` (sets the equations above) and add on a cosine for each constituent with it's appropriate frequency. Then fittit would just need a bit of modification to adjust the outputs.
+where :math:`\omega_{M2}` and :math:`\omega_{K1}`, :math:`\theta_{M2}` and :math:`\theta_{K1}` and :math:`A_{M2}` and :math:`A_{K1}` are the frequencies, phase lags and amplitudes for the M2 and K1 components.
     
     
 * :file:`ellipse_params` - This script converts from the amplitude and phase lag parameters to the tidal current ellipse parameters.::    
@@ -72,12 +72,13 @@ where :math:`\omega_{M2}` and :math:`\omega_{K1}`, :math:`\theta_{M2}` and :math
     
 This function calculates the tidal ellipse parameters based on the conversions shown in Xu, Z. (2000). It outputs the positively and negatively rotating amplitude and phase, as well as the major and minor axis and the axis tilt and phase.
 
-* :file:`loadparam_all` - This script gives the tidal ellipse parameters for a given date range and location based on the hourly model output values.::
+* :file:`get_params_nowcast` - This script gives the tidal ellipse parameters for a given date range and location based on the hourly model output values.::
  
-    loadparam_all(to, tf, path, i , j, depav='None')
+    get_params_nowcast(to, tf, i, j, path, nconst, depthrange='None', depav=False, tidecorr=CorrTides)
     
 This function loads all the data between the start and the end date that contains hourly velocity netCDF4 files. Then it mask, unstaggers and rotates the velocities by component about the grid point described by the i and j. Lastly it fits the velcities and caculates the tidal ellipse parameters for that date range using the fittit and ellipse_param functions above.
-After finding the amplitude and phase of the orthogonal vector by using fittit it does a tide correction  which is set to September 10th 2014 by the nowcast. These values values and other constituents tide corrections can be found in: /data/dlatorne/MEOPAR/SalishSea/nowcast/08jul15/ocean.output/
+After finding the amplitude and phase of the orthogonal vector by using fittit it does a tide correction  which is set to September 10th 2014 by the nowcast. These values values and other constituents tide corrections can be found in: /data/dlatorne/MEOPAR/SalishSea/nowcast/08jul15/ocean.output/.
+This function outputs a dictionary object containing the ellipse parameters for each tidal harmonic constituent.
 
 * :file:`plot_ellipses_area`  &  :file:`plot_ellipses` - These scripts are used to plot the tidal ellipses on a map based on the parameters calculated by the functions above.::
 
