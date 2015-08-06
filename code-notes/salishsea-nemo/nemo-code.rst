@@ -623,6 +623,13 @@ NEMO-3.6 was successfully built with the following :file:`NEMOGCM/ARCH/` file:
     %USER_INC            %XIOS_INC %NCDF_INC
     %USER_LIB            %XIOS_LIB %NCDF_LIB
 
+using the commands:
+
+.. code-block:: bash
+
+    $ cd NEMO-3.6-code/NEMOGCM/CONFIG
+    $ ./makenemo -n SalishSea -m GCC_SALISH -j4
+
 Important things to note:
 
   * Our :kbd:`arch` files are contained in the institution-specific directory :file:`NEMOGCM/ARCH/UBC_EOAS/`
@@ -631,10 +638,56 @@ Important things to note:
   * The :kbd:`-lstdc++` library option *must* follow :kbd:`-lxios` otherwise a truly astonishing volume of unresolved reference errors will be generated and the build will fail.
 
 
-Testing the GYRE Configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Building on :kbd:`jasper`
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A new NEMO-3.6 GYRE configuration was created :kbd:`salish` with:
+On :kbd:`jasper`,
+NEMO-3.6 was successfully built with the following :file:`NEMOGCM/ARCH/` file:
+
+:file:`NEMOGCM/ARCH/UBC_EOAS/arch-X64_JASPER.fcm`:
+
+.. code-block:: bash
+
+    %NCDF_HOME           /global/software/netcdf/netcdf-4.1.3
+    %HDF5_HOME           /global/software/hdf5/hdf5-1.8.9
+    %XIOS_HOME           $HOME/MEOPAR/XIOS
+
+    %NCDF_INC            -I%NCDF_HOME/include
+    %NCDF_LIB            -L%NCDF_HOME/lib -lnetcdff -lnetcdf -L%HDF5_HOME/lib -lhdf5_hl -lhdf5 -lhdf5
+    %XIOS_INC            -I%XIOS_HOME/inc
+    %XIOS_LIB            -L%XIOS_HOME/lib -lxios
+
+    %CPP                 cpp
+    %FC                  mpif90
+    %FCFLAGS             -c -fpp -r8 -O3 -assume byterecl -convert big_endian -heap-arrays
+    %FFLAGS              %FCFLAGS
+    %LD                  mpif90
+    %LDFLAGS             -lstdc++
+    %FPPFLAGS            -P -C -traditional
+    %AR                  ar
+    %ARFLAGS             -r
+    %MK                  make
+    %USER_INC            %XIOS_INC %NCDF_INC
+    %USER_LIB            %XIOS_LIB %NCDF_LIB
+
+using the commands:
+
+.. code-block:: bash
+
+    $ cd NEMO-3.6-code/NEMOGCM/CONFIG
+    $ ./makenemo -n SalishSea -m X64_JASPER -j8
+
+Important things to note:
+
+  * Our :kbd:`arch` files are contained in the institution-specific directory :file:`NEMOGCM/ARCH/UBC_EOAS/`
+  * The :kbd:`%XIOS_HOME` build variable uses the :envvar:`HOME` environment variable to locate the XIOS_ library to link with NEMO.
+    It is assumed that XIOS_ is installed and built in :file:`$HOME/MEOPAR/XIOS/` on :kbd:`jasper`.
+
+
+Testing the GYRE Configurationon :kbd:`salish`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A new NEMO-3.6 GYRE configuration was created on :kbd:`salish` with:
 
 .. code-block:: bash
 
