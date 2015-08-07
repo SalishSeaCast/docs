@@ -171,6 +171,7 @@ The required modules vary from machine to machine:
   .. code-block:: bash
 
       module load application/python/2.7.3
+      module load utility/mercurial/3.5
       module load library/netcdf/4.1.3
       module load application/nco/4.3.9
       module load library/szip/2.1
