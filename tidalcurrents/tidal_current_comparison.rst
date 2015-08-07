@@ -1,14 +1,14 @@
 Tidal current comparisons
 ===========================================
 
-* Comparisons of the model to observations and other models is very important in evalutating the model output. 
-* It can not only show us what is right and what is wrong but it also gives information about which physical processes are poorly represented and may even give hints towards how we can improve these. 
+* Comparisons of the model to observations and other models is very important in evalutating the model output.
+* It can not only show us what is right and what is wrong but it also gives information about which physical processes are poorly represented and may even give hints towards how we can improve these.
 
 
 Ocean Networks Canada VENUS nodes
 -----------------------------------
 
-* ONC VENUS had three seafloor nodes in the Salish Sea; Central, East and Delta. The nodes are equipped with an extensive amount of equipment. 
+* ONC VENUS had three seafloor nodes in the Salish Sea; Central, East and Delta. The nodes are equipped with an extensive amount of equipment.
 * The comparisons below use the Acoustic Doppler Current Profiler (ADCP) at the Central and East nodes.
 
 
@@ -40,13 +40,13 @@ Comparison of the M2 harmonic constituent
 
 * The figure shows that the depth averaged observational and model output values agree quite well.
 * The model output's semi-minor axis is larger than the observations, this informs us that the model flow is too circular.
-* Also the Salish Sea model output is angled slightly more to the West. This may be due to too much mixing or the Fraser River outflow. 
+* Also the Salish Sea model output is angled slightly more to the West. This may be due to too much mixing or the Fraser River outflow.
 
-*Scale = 50
-.. _node_comparison:
+* Scale = 50
+
+.. _M2_node_comparison:
 
 .. figure:: depavnodecomp.png
-
 
 * Here we are plotting individual parameters to be able to see what aspects are well represented with the model.
 
@@ -75,7 +75,7 @@ Comparison of the K1 harmonic constituent
 +---------+------------+------------+-----------------+
 
 
-.. _node_comparison:
+.. _K1_node_comparison:
 
 .. figure:: depavnodecompK1.png
 
@@ -86,8 +86,9 @@ Comparison of the K1 harmonic constituent
 
 CODAR
 ~~~~~~~~
-* The Fraser River plume creates some very interesting surface currents where it meets the Georgia Strait. ONC has installed two High Frequency coastal radars to measure surface current velocities, it is called the Coastal Ocean Dynamics Applications Radar system (CODAR). 
+* The Fraser River plume creates some very interesting surface currents where it meets the Georgia Strait. ONC has installed two High Frequency coastal radars to measure surface current velocities, it is called the Coastal Ocean Dynamics Applications Radar system (CODAR).
 * The figure below is the phase form the model output throughout the CODAR region.
+
 .. _CODAR_phase:
 
 .. figure:: phaseCODAR.png
