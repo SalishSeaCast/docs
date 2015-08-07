@@ -1,13 +1,13 @@
 .. _StormTools:
 
 Tools
-===================================================================================================
+=====
 
 We have developed a variety of tools used for analysis and creation of storm surge simulations.
 
 
-The surge
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The Surge
+^^^^^^^^^
 
 We are often interested in the behaviour of the surge component of the water level, that is, the anomaly after the tides have been removed.
 Further, we could like to compare the modelled surge to the observed surge.
@@ -93,6 +93,7 @@ This file contains three types of tidal predictions:
     + pred_all - predictions with all constituents except shallow water and ones with low signal to noise
     + pred_8 - predictions with only eight constituents
     + pred_noshallow - like pred_all but with no shallow water constituents.
+
 * :file:`calculate_harmonics.m` and :file:`calculate_harmonics_NOAA.m` - these files perform the harmonics analysis for DFO and NOAA data respectively.
 * :file:`filter_tides.m` and :file:`filter_tides_NOAA.m` - these files do the filtering work.
 * :file:`get_ttide_8.m` and :file:`calculate_harmonics.m` - these files only work for DFO data and do not apply the filtering or removal of shallow water/ long period constituents.
@@ -109,6 +110,7 @@ These methods do not remove the long period/shallow water constituents.
 These files are in a private repository :file:`private-tools/tides`.
 
 * :file:`tide_pred8.m` - generate tidal prediction with all CHS constituents and with only eight.
+
 The function works in a similar manner to the other ones.  ::
 
    tide_pred8(tidefile,location,starts, ends)
