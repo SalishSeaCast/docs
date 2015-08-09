@@ -638,6 +638,8 @@ Important things to note:
   * The :kbd:`-lstdc++` library option *must* follow :kbd:`-lxios` otherwise a truly astonishing volume of unresolved reference errors will be generated and the build will fail.
 
 
+.. _BuildingNEMO3.6OnJasper:
+
 Building on :kbd:`jasper`
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -684,7 +686,7 @@ Important things to note:
     It is assumed that XIOS_ is installed and built in :file:`$HOME/MEOPAR/XIOS/` on :kbd:`jasper`.
 
 
-Testing the GYRE Configurationon :kbd:`salish`
+Testing the GYRE Configuration on :kbd:`salish`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A new NEMO-3.6 GYRE configuration was created on :kbd:`salish` with:
@@ -777,3 +779,127 @@ The netCDF4 files *do not* use Limpel-Ziv deflation compression at the variable 
 .. code-block:: bash
 
     $ ncks -4 -L4 GYRE_5d_00010101_00011230_grid_T.nc GYRE_5d_00010101_00011230_grid_T.nc
+
+
+Testing the :kbd:`SalishSea` Configuration on :kbd:`jasper`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+    This section describes how to manually set up a run directory for the NEMO-3.6 :kbd:`SalishSea` configuration and submit the run to the job queue on :kbd:`jasper`.
+    The steps described here will eventually be incorporated into the :ref:`SalishSeaCmdProcessor`.
+    Once the command processor is capable of working with NEMO-3.6 the recommendedation is that it be used rather than doing manual run setups.
+
+After successfully :ref:`BuildingNEMO3.6OnJasper`,
+create a test directory outside the :file:`NEMO-3.6-code` repo:
+
+.. code-block:: bash
+
+    $ cd $HOME/MEOPAR
+    $ mkdir NEMO-3.6-test
+    $ cd NEMO-3.6-test/
+
+Symlink the shared XIOS configurations files,
+reference namelist,
+and NEMO & XIOS executables into the test directory:
+
+.. code-block:: bash
+
+    $ ln -s $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SHARED/domain_def.xml
+    $ ln -s $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SHARED/field_def.xml
+    $ ln -s $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SHARED/namelist_ref
+    $ ln -s $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/nemo.exe
+    $ ln -s $HOME/MEOPAR/XIOS/bin/xios_server.exe
+
+Copy the :file:`iodef.xml` file generated for the :kbd:`SalishSea` configuration into the test directory:
+
+.. code-block:: bash
+
+    $ cp $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/EXP00/iodef.xml ./
+
+If you wish,
+edit that file to adjust the output interval(s) for various variables.
+
+Create a :file:`namelist_cfg` configuration namelist file for the run by running:
+
+.. code-block:: bash
+
+    $ bash $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/make_namelist_cfg
+
+which concatenates the default namelist section files from :file:`MEOPAR/SS-run-sets/SalishSea/nemo3.6/` into a :file:`namelist_cfg` file in the present working directory,
+then roars like a big cat.
+
+Edit :file:`namelist_cfg` to configure your run.
+In particular,
+set the MPI decomposition values,
+:kbd:`jpni` and :kbd:`jpnj`,
+in the :kbd:`nammpp` namelist at the end of the file;
+e.g.
+
+.. code-block:: fortran
+
+    jpni        =   8       !  number of processors in the i direction
+    jpnj        =  18       !  number of processors in the j direction
+
+Symlink the :kbd:`SalishSea` domain bathymetry and coordinates files into the test directory:
+
+.. code-block:: bash
+
+    $ ln -s $HOME/MEOPAR/NEMO-forcing/grid/bathy_meter_SalishSea2.nc bathy_meter.nc
+    $ ln -s $HOME/MEOPAR/NEMO-forcing/grid/coordinates_seagrid_SalishSea.nc coordinates.nc
+
+Symlink the open boundaries,
+river,
+and atmospheric forcing directories into the test directory:
+
+.. code-block:: bash
+
+    $ ln -s $HOME/MEOPAR/NEMO-forcing/open_boundaries
+    $ ln -s $HOME/MEOPAR/NEMO-forcing/rivers
+    $ ln -s /home/sallen/MEOPAR/GEM2.5/ops/NEMO-atmos
+
+Symlink the directory containing the initial stratification files into the test directory.
+In this case we use results from one of the spin-up runs:
+
+.. code-block:: bash
+
+    $ ln -s /home/dlatorne/MEOPAR/SalishSea/results/spinup/7dec16dec initial_strat
+
+Create a :file:`nemo.app` file to define the number of processors that NEMO and XIOS will run on:
+
+.. code-block:: bash
+
+    # MPI app file to run NEMO with separate xios_server processes
+
+    -np 144 ./nemo.exe
+    -np 6 ./xios_server.exe
+
+Create a :file:`nemo.pbs` file to define the run environment on :kbd:`jasper` and to execute the run:
+
+.. code-block:: bash
+
+    #!/bin/bash
+
+    #PBS -N 8x18+6-regression-1d-6h
+    #PBS -S /bin/bash
+    #PBS -l nodes=13:ppn=12
+    #PBS -l pmem=2000mb
+    #PBS -l walltime=0:30:00
+    #PBS -m bea
+    #PBS -M dlatornell@eos.ubc.ca
+    #PBS -o stdout
+    #PBS -e stderr
+
+    cd ${PBS_O_WORKDIR}
+    echo working dir: $(pwd)
+
+    module load library/netcdf/4.1.3
+    module load library/hdf5/1.8.9
+
+    mpirun -np 144 ./nemo.exe : -np 6 ./xios_server.exe
+    echo done!
+
+Submit the run to the queue manager:
+
+.. code-block:: bash
+
+    $ qsub nemo.pbs
