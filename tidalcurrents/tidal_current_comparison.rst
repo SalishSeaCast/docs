@@ -86,17 +86,23 @@ Comparison of the K1 harmonic constituent
 
 CODAR
 ~~~~~~~~
-* The Fraser River plume creates some very interesting surface currents where it meets the Georgia Strait. ONC has installed two High Frequency coastal radars to measure surface current velocities, it is called the Coastal Ocean Dynamics Applications Radar system (CODAR).
-* The figure below is the phase form the model output throughout the CODAR region.
-
+* The Fraser River plume creates some very interesting surface currents where it meets the Georgia Strait. These currents can be studied using the two High Frequency coastal radars installed by ONC that can measure surface current velocities, the system is called the Coastal Ocean Dynamics Applications Radar system (CODAR).
+* The figure below is the phase of the M2 tidal constituents from the model output throughout the CODAR region compared to the observational values processed by Dr. Mark Halverson.
 .. _CODAR_phase:
 
-.. figure:: phaseCODAR.png
+.. figure:: CODARM2pha.png
 
+* We can see that the model and the observations are in the same range of values, however the observations is able to capture the steep gradients and variations in the center of the Strait of Georgia.
 
+* This figure below is the phase of the K1 tidal constituent.
+
+.. figure:: CODARK1pha.png
+
+* The yellow and orange area by the Fraser River seems to extend for a much larger distance in the observations. 
 
 Foreman Model (2004)
 ------------------------
+
 
 Along the thalweg
 ~~~~~~~~~~~~~~~~~~~~~
