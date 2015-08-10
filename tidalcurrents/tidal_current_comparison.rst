@@ -98,19 +98,20 @@ CODAR
 
 .. figure:: CODARK1pha.png
 
-* The yellow and orange area by the Fraser River seems to extend for a much larger distance in the observations. 
+* The yellow and orange area (approximately 180 degrees out of phase from the rest of the area) by the Fraser River seems to extend for a much larger distance in the observations. This is not seen in the M2 phase. 
 
 Foreman Model (2004)
 ------------------------
-
+A two dimensional, high-resolution barotropic model of the Puget Sound and around Vancouver Island. We use this model and a comparison tool because it can help identify which aspects we are representing similarly or differently to the Foreman model which of these are or aren't comparable to the observations he has reported from current meter deployments. 
 
 Along the thalweg
 ~~~~~~~~~~~~~~~~~~~~~
+* The thalweg is the set of grid points that follow along the deepest point of the Strait of Georgia from every cross section. 
 
+* When looking along the thalweg we can see that both models are resonable through the Juan de Fuca Strait, the Salish Sea model is a bit closer to the observations. Through Haro Strait both models seem to be off by 0.3 m/s. Through the center of the Strait both model have very low velocities as expected. The northern part of the Strait is better resolved by the Foreman model. The Salish Sea model is more focused on getting the southern area correct and many rivers and passages are closed off in this model which causes this discrepancy. Foreman (2004) says the differences in the northern Strait is due to either the grid resolution being too corse and or the observations being inaccurate.
 
+.. figure:: Formanthalwegcomp.png
 
-At model locations
-~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
