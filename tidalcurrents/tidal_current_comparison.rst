@@ -110,7 +110,8 @@ Along the thalweg
 
 * When looking along the thalweg we can see that both models are resonable through the Juan de Fuca Strait, the Salish Sea model is a bit closer to the observations. Through Haro Strait both models seem to be off by 0.3 m/s. Through the center of the Strait both model have very low velocities as expected. The northern part of the Strait is better resolved by the Foreman model. The Salish Sea model is more focused on getting the southern area correct and many rivers and passages are closed off in this model which causes this discrepancy. Foreman (2004) says the differences in the northern Strait is due to either the grid resolution being too corse and or the observations being inaccurate.
 
-.. figure:: Formanthalwegcomp.png
+.. figure:: Foremanthalwegcomp.png
+
 
 
 
