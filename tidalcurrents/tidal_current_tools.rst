@@ -90,12 +90,39 @@ This function outputs a dictionary object containing the ellipse parameters for 
 
 .. _TidalEllipseTools.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Muriel/TidalEllipseTools.ipynb
 
+MATLAB Scripts
+----------------
+Loading and processing of the observational data from the ONC VENUS Central, East and Delta nodes is done in MATLAB scripts written by Dr. Rich Pawlowicz. The processing is done in three parts and is tailors for each deployment at each node.
 
+Processing scripts
+~~~~~~~~~~~~~~~~~~~~~
 
+* The first part is :file:`GET_DATA_fun.m` This script will get the data that is directly output from the ADCP. It
+ does this for the two days before the day indicated. It will put this data in a directory at pth/raw/ and organize it by year and month. **If you are running it for the first time in a new directory you must change firstdate to be at least three days before lastdate because of the filtering in a later function**
+ 
+ * The next step is to run :file:`GET_DEPL_fun.m` goes through all the data in the raw directory gathered by GETDATA_fun and bins it into 30 minutes bins. .
+ 
+ * Lastly, the bulk of the processing is done in :file:`LTIM_fun.m`. This script filters out the tides, corrects the angles for the velocities to get major axis in the direction of the flood current.
+
+Adjustments for running daily
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * When running these scripts for a single day of data at a time to have daily comparisons a few modifications have to be done to keep the scripts running. First of all, GETDEPL_fun creates a new deployment file with the new updated raw data that was loaded by GETDATA_fun however LTIM_fun needs only one mat file per deployment in the directory where it looks.
+ 
+ * The :file:`compare_daily` functions works helps seamlessy join the new update deployment file and the previous deployment file. :file:`GET_DATA_fun` puts the data in a raw folder, :file:`GET_DEPL_fun` makes a new deployement file with all the raw data in a raw file in a new folder. In the :file:`compare_daily` script it updates the previous deployment file by adding on the additional new information.
+ 
+New deployment
+~~~~~~~~~~~~~~~
+
+* Every few months to a year the nodes need maintenance or for whatever reason a new deployment with new devices get installed. This requieres alot of effort because the numbers in :file:`LTIM_fun` are found manually. All the raw data will have to be deleted so that only the present deployment gets reloaded everytime, also 
+
+ Getdata. needs the date of each deployment and the device number associated with the ADCP that is being used during the deployment.
+ Getdepl. It updates this script needs the depth of each deployement, the bins and bin size.
+ 
+ 
 References
 ^^^^^^^^^^^^
 
 * Parker, B. B., 2007. Tidal analysis and prediction. US Department of Commerce, National Oceanic and Atmospheric Administration, National Ocean Service, Centre for Operational Oceanographic Products and Services, 378 pages.
 
-* Xu, Z., 2000. Ellipse parameters conversion and vertical velocity profiles for tidal currents. Bed ford Institute of Oceanography, Dartmouth, Nova Scotch, Canada, 20 pages
+* Xu, Z., 2000. Ellipse parameters conversion and vertical velocity profiles for tidal currents. Bedford Institute of Oceanography, Dartmouth, Nova Scotch, Canada, 20 pages
 
