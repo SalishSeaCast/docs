@@ -889,6 +889,17 @@ Create a :file:`nemo.pbs` file to define the run environment on :kbd:`jasper` an
     mpirun -np 144 ./nemo.exe : -np 6 ./xios_server.exe
     echo done!
 
+Ensure that the MPI decomposition values in your namelist,
+The PBS nodes/ppn directive,
+and the :command:`mpirun` statement are consistent and account for the total number of processors required
+(NEMO plus XIOS).
+Note that :kbd:`jasper` gives higher priority to jobs that fully occupy nodes,
+but it is not necessary to use all of the processors that you request;
+in the :file:`nemo.pbs` example above we request 13 nodes with 12 processors each
+(156 processors)
+but run NEMO with an 8x18 MPI decomposition and 6 XIOS servers
+(144 + 6 = 150 processors).
+
 Submit the run to the queue manager:
 
 .. code-block:: bash
