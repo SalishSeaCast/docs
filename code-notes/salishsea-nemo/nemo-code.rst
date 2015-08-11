@@ -874,6 +874,7 @@ Create a :file:`nemo.pbs` file to define the run environment on :kbd:`jasper` an
     #PBS -S /bin/bash
     #PBS -l nodes=13:ppn=12
     #PBS -l pmem=2000mb
+    #PBS -l feature=X5675
     #PBS -l walltime=0:30:00
     #PBS -m bea
     #PBS -M dlatornell@eos.ubc.ca
