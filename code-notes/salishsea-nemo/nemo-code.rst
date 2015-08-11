@@ -330,7 +330,7 @@ and for XIOS:
 
 .. _XIOS: http://forge.ipsl.jussieu.fr/ioserver/
 
-The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012 and also a read-only Mercurial repository.
+The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/nemo/svn/trunk and also a read-only Mercurial repository.
 It was initialized with:
 
 .. code-block:: bash
@@ -456,7 +456,7 @@ XIOS_ was successfully built with the following :file:`arch/arch-*` files:
     NETCDF_LIB="-lnetcdf"
     HDF5_LIB="-lhdf5_hl -lhdf5 -lz"
 
-:file:`arch/arch-X^4_JASPER.fcm`:
+:file:`arch/arch-X64_JASPER.fcm`:
 
 .. code-block:: bash
 
