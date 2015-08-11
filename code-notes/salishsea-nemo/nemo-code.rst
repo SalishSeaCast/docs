@@ -864,15 +864,6 @@ In this case we use results from one of the spin-up runs:
 
     $ ln -s /home/dlatorne/MEOPAR/SalishSea/results/spinup/7dec16dec initial_strat
 
-Create a :file:`nemo.app` file to define the number of processors that NEMO and XIOS will run on:
-
-.. code-block:: bash
-
-    # MPI app file to run NEMO with separate xios_server processes
-
-    -np 144 ./nemo.exe
-    -np 6 ./xios_server.exe
-
 Create a :file:`nemo.pbs` file to define the run environment on :kbd:`jasper` and to execute the run:
 
 .. code-block:: bash
