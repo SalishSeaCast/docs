@@ -98,7 +98,6 @@ CODAR
 
 .. figure:: CODARK1pha.png
 
-* The yellow and orange area (approximately 180 degrees out of phase from the rest of the area) by the Fraser River seems to extend for a much larger distance in the observations. This is not seen in the M2 phase. 
 
 Foreman Model (2004)
 ------------------------
