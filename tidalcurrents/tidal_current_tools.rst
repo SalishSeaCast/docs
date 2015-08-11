@@ -98,7 +98,7 @@ Processing scripts
 ~~~~~~~~~~~~~~~~~~~~~
 
 * The first part is :file:`GET_DATA_fun.m` This script will get the data that is directly output from the ADCP. It
- does this for the two days before the day indicated. It will put this data in a directory at pth/raw/ and organize it by year and month. **If you are running it for the first time in a new directory you must change firstdate to be at least three days before lastdate because of the filtering in a later function**
+ does this for the two days before the day indicated. It will put this data in a directory at pth/raw/ and organize it by year and month. This function calls to a script written by Marlene Jeffries at Ocean Network Canada :file:`getSoGAdcpDataMay15_mod`. This script contains many functions that are used to ultimately retrieve the raw data from the ONC website.
  
  * The next step is to run :file:`GET_DEPL_fun.m` goes through all the data in the raw directory gathered by GETDATA_fun and bins it into 30 minutes bins. .
  
@@ -106,17 +106,26 @@ Processing scripts
 
 Adjustments for running daily
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * When running these scripts for a single day of data at a time to have daily comparisons a few modifications have to be done to keep the scripts running. First of all, GETDEPL_fun creates a new deployment file with the new updated raw data that was loaded by GETDATA_fun however LTIM_fun needs only one mat file per deployment in the directory where it looks.
- 
- * The :file:`compare_daily` functions works helps seamlessy join the new update deployment file and the previous deployment file. :file:`GET_DATA_fun` puts the data in a raw folder, :file:`GET_DEPL_fun` makes a new deployement file with all the raw data in a raw file in a new folder. In the :file:`compare_daily` script it updates the previous deployment file by adding on the additional new information.
+ * When running these scripts for a single day of data at a time to have daily comparisons a few modifications have to be done to keep the scripts running. First of all, GETDEPL_fun creates a new deployment file with the new updated raw data that was loaded by GETDATA_fun however LTIM_fun needs only one mat file per deployment in the directory where it looks. The :file:`compare_daily` functions works helps seamlessy join the new update deployment file and the previous deployment file.
  
 New deployment
 ~~~~~~~~~~~~~~~
 
-* Every few months to a year the nodes need maintenance or for whatever reason a new deployment with new devices get installed. This requieres alot of effort because the numbers in :file:`LTIM_fun` are found manually. All the raw data will have to be deleted so that only the present deployment gets reloaded everytime, also 
+* Every few months to a year the nodes need maintenance or for whatever reason a new deployment with new devices get installed. This requieres alot of effort because the numbers in :file:`LTIM_fun` have previously been found manually. These values are based on the tilt, depth, angle and other physical aspects of the node. The processing that is done may need weeks of data from a new deployement to accurately get the information to realign the ADCP output into usable data.
 
- Getdata. needs the date of each deployment and the device number associated with the ADCP that is being used during the deployment.
- Getdepl. It updates this script needs the depth of each deployement, the bins and bin size.
+* All the raw data will have to be deleted so that only the present deployment gets reloaded everytime.
+
+* Contact Marlene Jeffries at Ocean Networks Canada for an updated :file:`getSoGAdcpDataMay15_mod.m` script that contains the correct device and sensor IDs of the new deployemnt.
+
+Changing users
+~~~~~~~~~~~~~~~
+If you will be running the processing in a new directory for the first time there are a couple things to change in order to facilite the transitions.
+
+* 1. In :file:`compare_daily.m` change the path to be where you want everything to be saved. Many extra files will appear in this directory everytime you run the scripts.
+
+* 2. Make an account on http://www.oceannetworks.ca/information to get userId. In :file:`getSoGAdcpDataMay15_mod.m` insert your email and userId at lines 173 and 174 of the script. You will receive an email everytime you load raw data from the website.  
+
+* 3. In :file:`GET_DATA_fun` change the firstdate variable to be at least 3 days before the lastdate. This is because the filter length in :file:`LTIM_fun` needs at least that much data for the processing. 
  
  
 References
