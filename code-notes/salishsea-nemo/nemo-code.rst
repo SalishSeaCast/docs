@@ -864,15 +864,6 @@ In this case we use results from one of the spin-up runs:
 
     $ ln -s /home/dlatorne/MEOPAR/SalishSea/results/spinup/7dec16dec initial_strat
 
-Create a :file:`nemo.app` file to define the number of processors that NEMO and XIOS will run on:
-
-.. code-block:: bash
-
-    # MPI app file to run NEMO with separate xios_server processes
-
-    -np 144 ./nemo.exe
-    -np 6 ./xios_server.exe
-
 Create a :file:`nemo.pbs` file to define the run environment on :kbd:`jasper` and to execute the run:
 
 .. code-block:: bash
@@ -883,6 +874,7 @@ Create a :file:`nemo.pbs` file to define the run environment on :kbd:`jasper` an
     #PBS -S /bin/bash
     #PBS -l nodes=13:ppn=12
     #PBS -l pmem=2000mb
+    #PBS -l feature=X5675
     #PBS -l walltime=0:30:00
     #PBS -m bea
     #PBS -M dlatornell@eos.ubc.ca
@@ -898,8 +890,31 @@ Create a :file:`nemo.pbs` file to define the run environment on :kbd:`jasper` an
     mpirun -np 144 ./nemo.exe : -np 6 ./xios_server.exe
     echo done!
 
+Ensure that the MPI decomposition values in your namelist,
+The PBS nodes/ppn directive,
+and the :command:`mpirun` statement are consistent and account for the total number of processors required
+(NEMO plus XIOS).
+Note that :kbd:`jasper` gives higher priority to jobs that fully occupy nodes,
+but it is not necessary to use all of the processors that you request;
+in the :file:`nemo.pbs` example above we request 13 nodes with 12 processors each
+(156 processors)
+but run NEMO with an 8x18 MPI decomposition and 6 XIOS servers
+(144 + 6 = 150 processors).
+
 Submit the run to the queue manager:
 
 .. code-block:: bash
 
     $ qsub nemo.pbs
+
+.. note::
+    One very annoying "feature" of NEMO-3.6 and XIOS is that fatal errors in on seems to cause segmentation fault failures in the other.
+    For example,
+    if an input file is missing,
+    XIOS will fail to read it and the run will fail.
+    The :file:`stderr` file will be full of many uninformative segmentation fault errors and tracebacks that give no clue as to the root cause of the problem but make you think that something is very seriously messed up.
+    Be sure to also search for :kbd:`E R R O R` messages in :file:`ocean.output` before you get too worried about the segmentation faults.
+
+    Another common mistake that results in a huge list of errors in :file:`stderr` is having mismatches in the number of processors among the MPI decomposition specified in the :file:`namelist_cfg`,
+    the :kbd:`PBS` directive in your run script,
+    and the :file:`.app` file.
