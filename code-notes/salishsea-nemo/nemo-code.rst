@@ -894,3 +894,15 @@ Submit the run to the queue manager:
 .. code-block:: bash
 
     $ qsub nemo.pbs
+
+.. note::
+    One very annoying "feature" of NEMO-3.6 and XIOS is that fatal errors in on seems to cause segmentation fault failures in the other.
+    For example,
+    if an input file is missing,
+    XIOS will fail to read it and the run will fail.
+    The :file:`stderr` file will be full of many uninformative segmentation fault errors and tracebacks that give no clue as to the root cause of the problem but make you think that something is very seriously messed up.
+    Be sure to also search for :kbd:`E R R O R` messages in :file:`ocean.output` before you get too worried about the segmentation faults.
+
+    Another common mistake that results in a huge list of errors in :file:`stderr` is having mismatches in the number of processors among the MPI decomposition specified in the :file:`namelist_cfg`,
+    the :kbd:`PBS` directive in your run script,
+    and the :file:`.app` file.
