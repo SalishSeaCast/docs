@@ -10,11 +10,11 @@ Overview of tidal ellipses
 
 *(a) Why use tidal ellipses?*
 
-Tidal currents vary a lot within a fjord-like estuarine system. The Salish Sea is not an exception of this. The hydrodynamics of the channel can drastically change the tidal currents depending on the gradient of these variations. We can observe larger current speeds in the many narrow straits of the Georgia Strait, as well as near the entrance, where it connects to the Pacific Ocean. Tidal currents also vary vertically, generally due to bottom friction, but also baroclinic effects. (NOAA 2007)
+Tidal currents vary a lot within a fjord-like estuarine system. The Salish Sea is not an exception of this. The hydrodynamics of the channel can drastically change the tidal currents depending on the gradient of these variations. We can observe larger current speeds in the many narrow straits of the Georgia Strait, as well as near the entrance, where it connects to the Pacific Ocean. Tidal currents also vary vertically, generally due to bottom friction, but also baroclinic effects. (Parker, 2007)
 
 * Tidal current constituent ellipses describe the flow as it rotates at a single location for a single constituent's cycle. 
 * Tidal ellipses can communicate a lot about a depth profile of the flow at particular locations with only a couple of parameters. At present, we have focused our analysis on the M2 and K1 constituents because they are the largest components in our domain. The M2 component is much stronger than the K1. (Thomson 1981)
-* Tidal ellipses enable us to see the speed and direction of a flow due to a chosen tidal constituent at every hour of the day as a depth profile using only orthogonal velocities at that point over a long period of time. (NOAA 2007)
+* Tidal ellipses enable us to see the speed and direction of a flow due to a chosen tidal constituent at every hour of the day as a depth profile using only orthogonal velocities at that point over a long period of time. (Parker, 2007)
 * Comparisons of tidal ellipses from the model output with observations facilitates the understanding of which physical processes are properly and poorly represented and may even inform techniques to improve the poorly represented processes. 
 
 *(b) What have researchers previously done in the Salish Sea and the Strait of Georgia?*
