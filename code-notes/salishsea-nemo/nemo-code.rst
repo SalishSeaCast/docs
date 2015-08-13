@@ -363,6 +363,24 @@ It was initialized with:
 
 :command:`svn` v1.8.8 was used on :kbd:`salish` for the :command:`svn` part of the initialization.
 
+On 30-Jun-2015 the :kbd:`v3_6_STABLE` release of NEMO was `announced`_.
+The following process
+(not quite as simple as suggested in the `3.6 Quick Start Guide`_)
+was used to update the :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository to the :kbd:`HEAD` of the http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE branch:
+
+.. _announced: http://www.nemo-ocean.eu/About-NEMO/News/NEMO-release-nemo_v3_6_STABLE-available
+.. _3.6 Quick Start Guide: http://www.nemo-ocean.eu/Using-NEMO/User-Guides/Basics/NEMO-Quick-Start-Guide#eztoc1190_1_5)
+
+#. The :command:`svn` revisions from :kbd:`r5300`,
+   through the creation of the :file:`^/branches/2015/nemo_v3_6_STABLE` branch,
+   and onward to :kbd:`r5628` were reviewed and annotated in our `tracking spreadsheet`_
+
+   .. _tracking spreadsheet: https://docs.google.com/spreadsheets/d/1H4FQzLS-GABE0o_wMI4IL1DfPIH8qnjv4ZyBCblHa78
+
+#. The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository was Mercurial-tagged with :kbd:`b4_nemo_v3_6_stable`.
+
+#. The :command:`svn` revisions to :kbd:`r5518` were applied a few at a time using the :ref:`Marlin` and the process described in :ref:`PullChangesFromNEMOsvn`.
+
 The following sections are in-process notes about getting to a running Salish Sea NEMO-3.6 model on various platforms.
 
 
