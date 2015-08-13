@@ -87,7 +87,7 @@ CODAR
 ~~~~~~~~
 * The Fraser River plume creates some very interesting surface currents where it meets the Georgia Strait. These currents can be studied using the two High Frequency coastal radars installed by ONC that measure surface current velocities. The system is called the Coastal Ocean Dynamics Applications Radar system (CODAR).
 
-* The tidal ellipses at 0.5 m depth at both nodes are very large and for the M2 constituent but there is quite a good agreement for the K1 values.
+* The tidal ellipses at 0.5 m depth at both nodes are very large for the M2 constituent but there is quite a good agreement for the K1 values.
 
 +---------+------------+------------+-----------------+
 |         | Major-Axis | Minor-Axis |  Inclination    |
