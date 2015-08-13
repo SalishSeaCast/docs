@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="3240"
+   height="3240"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="posterSoG.pdf"
+   inkscape:export-filename="/home/nsoontie/Documents/Presentations/StateofOceanFeb19/posterSoG.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient6594">
+      <stop
+         style="stop-color:#539ce7;stop-opacity:1;"
+         offset="0"
+         id="stop6596" />
+      <stop
+         style="stop-color:#299ce1;stop-opacity:0;"
+         offset="1"
+         id="stop6598" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5459"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5461" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5453"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#fcfbfb;stop-opacity:1;"
+         offset="0"
+         id="stop5455" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4003"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#299ce1;stop-opacity:1;"
+         offset="0"
+         id="stop4005" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5459"
+       id="linearGradient5463"
+       x1="75.400651"
+       y1="-1233.8403"
+       x2="1560.5993"
+       y2="-1233.8403"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.72899722,0,0,1.0130855,25.680215,22.345077)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5459-1"
+       id="linearGradient5463-5"
+       x1="75.40065"
+       y1="-1233.8403"
+       x2="1560.5992"
+       y2="-1233.8403"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.97289972,0,0,1.1397214,6.1680223,238.59377)" />
+    <linearGradient
+       id="linearGradient5459-1"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5461-2" />
+    </linearGradient>
+    <linearGradient
+       y2="-1233.8403"
+       x2="1560.5992"
+       y1="-1233.8403"
+       x1="75.40065"
+       gradientTransform="matrix(1.3008132,0,0,0.50654261,1135.9349,-842.64814)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5550"
+       xlink:href="#linearGradient5459-1"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="-1233.8403"
+       x2="1560.5992"
+       y1="-1233.8403"
+       x1="75.40065"
+       gradientTransform="matrix(0.75880758,0,0,0.59096668,1139.2954,-698.48196)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5550-7"
+       xlink:href="#linearGradient5459-1-0"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient5459-1-0"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5461-2-3" />
+    </linearGradient>
+    <linearGradient
+       y2="-1233.8403"
+       x2="1560.5992"
+       y1="-1233.8403"
+       x1="75.40065"
+       gradientTransform="matrix(0.73170728,0,0,0.54875476,21.46342,1389.4352)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5657"
+       xlink:href="#linearGradient5459-1-0"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="-1233.8403"
+       x2="1560.5992"
+       y1="-1233.8403"
+       x1="75.40065"
+       gradientTransform="matrix(0.75880758,0,0,0.59096668,1139.2954,-698.48196)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5550-2"
+       xlink:href="#linearGradient5459-1-6"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient5459-1-6"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5461-2-2" />
+    </linearGradient>
+    <linearGradient
+       y2="-1233.8403"
+       x2="1560.5992"
+       y1="-1233.8403"
+       x1="75.40065"
+       gradientTransform="matrix(0.70460704,0,0,0.5909667,23.631442,1381.5179)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5657-6"
+       xlink:href="#linearGradient5459-1-0-7"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient5459-1-0-7"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5461-2-3-3" />
+    </linearGradient>
+    <linearGradient
+       y2="-1233.8403"
+       x2="1560.5992"
+       y1="-1233.8403"
+       x1="75.40065"
+       gradientTransform="matrix(1.3008131,0,0,0.54875494,1135.9349,1389.4351)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5765"
+       xlink:href="#linearGradient5459-1-0-7"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5459-5"
+       id="linearGradient5463-58"
+       x1="75.40065"
+       y1="-1233.8403"
+       x2="1560.5992"
+       y2="-1233.8403"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.72899722,0,0,1.0130855,25.680215,22.345077)" />
+    <linearGradient
+       id="linearGradient5459-5"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5461-5" />
+    </linearGradient>
+    <linearGradient
+       y2="-1233.8403"
+       x2="1560.5992"
+       y1="-1233.8403"
+       x1="75.40065"
+       gradientTransform="matrix(1.2981028,0,0,1.6884758,1140.1517,1695.6682)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient6409"
+       xlink:href="#linearGradient5459-5"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5459-18"
+       id="linearGradient5463-3"
+       x1="75.40065"
+       y1="-1233.8403"
+       x2="1560.5992"
+       y2="-1233.8403"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.72899722,0,0,1.0130855,25.680215,22.345077)" />
+    <linearGradient
+       id="linearGradient5459-18"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5461-6" />
+    </linearGradient>
+    <linearGradient
+       y2="-1233.8403"
+       x2="1560.5992"
+       y1="-1233.8403"
+       x1="75.40065"
+       gradientTransform="matrix(0.73170727,0,0,1.1819331,21.463418,1310.6758)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient6491"
+       xlink:href="#linearGradient5459-18"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5459-7"
+       id="linearGradient5463-37"
+       x1="75.40065"
+       y1="-1233.8403"
+       x2="1560.5992"
+       y2="-1233.8403"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.72899722,0,0,1.0130855,25.680215,22.345077)" />
+    <linearGradient
+       id="linearGradient5459-7"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5461-61" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6594"
+       id="linearGradient4233"
+       x1="0"
+       y1="-567.64038"
+       x2="3240"
+       y2="-567.64038"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1052.3596,2187.6404)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6594"
+       id="linearGradient4249"
+       x1="0"
+       y1="-567.64038"
+       x2="3240"
+       y2="-567.64038"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1052.3596,2187.6404)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24598765"
+     inkscape:cx="1510.9557"
+     inkscape:cy="1617.3435"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="in"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-nodes="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="3600,3200"
+       id="guide3031" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="3440,-200"
+       id="guide3033" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="-1560,3240"
+       id="guide3035" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="3600,-440"
+       id="guide3090" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="4000,3040"
+       id="guide5641" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,2187.6403)">
+    <rect
+       style="fill:url(#linearGradient4249);fill-opacity:1.0;stroke:url(#linearGradient4233);stroke-width:0;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3948"
+       width="3240"
+       height="3240"
+       x="-1052.3596"
+       y="0"
+       transform="matrix(0,-1,1,0,0,0)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3039"
+       style="font-size:144px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-14.546875,-2228.7347)"><flowRegion
+         id="flowRegion3041"><rect
+           id="rect3043"
+           width="2902.5847"
+           height="207.32748"
+           x="203.26224"
+           y="97.565872"
+           style="font-size:144px;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3045">The Salish Sea MEOPAR Project</flowPara></flowRoot>    <rect
+       id="rect3188-5-3-8"
+       width="1919.9999"
+       height="520"
+       x="1240"
+       y="452.35971"
+       style="fill:url(#linearGradient5765);fill-opacity:1;stroke:#002baa;stroke-width:6.05905581;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <image
+       y="534.35968"
+       x="2265.7893"
+       id="image3151"
+       xlink:href="file:///home/nsoontie/Documents/Presentations/StateofOceanFeb19/UBCLogo1.jpg"
+       height="164.04149"
+       width="306.21078" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3154"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:72px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3156"><rect
+           id="rect3158"
+           width="1695.207"
+           height="81.304893"
+           x="719.54834"
+           y="308.95856"
+           style="font-size:72px" /></flowRegion><flowPara
+         id="flowPara3160" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3162"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3164"><rect
+           id="rect3166"
+           width="2325.3201"
+           height="109.7616"
+           x="528.48181"
+           y="288.63232" /></flowRegion><flowPara
+         id="flowPara3168" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="662.63489"
+       y="337.41525"
+       id="text3170"
+       sodipodi:linespacing="125%"
+       transform="translate(0,-2187.6403)"><tspan
+         sodipodi:role="line"
+         id="tspan3172"
+         x="662.63489"
+         y="337.41525" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:56px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1600"
+       y="-1907.6403"
+       id="text3174"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3176"
+         x="1600"
+         y="-1907.6403"
+         style="font-size:48px;text-align:center;text-anchor:middle">Department of Earth, Ocean, and Atmospheric Sciences</tspan><tspan
+         sodipodi:role="line"
+         x="1600"
+         y="-1837.6403"
+         style="font-size:48px;text-align:center;text-anchor:middle"
+         id="tspan7084">University of British Columbia</tspan><tspan
+         sodipodi:role="line"
+         x="1600"
+         y="-1767.6403"
+         style="font-size:48px;text-align:center;text-anchor:middle"
+         id="tspan3178">Susan Allen, Kate Le Souef, Doug Latornell, Nancy Soontiens*</tspan><tspan
+         sodipodi:role="line"
+         x="1600"
+         y="-1697.6403"
+         style="font-size:56px;text-align:center;text-anchor:middle"
+         id="tspan3180" /></text>
+    <rect
+       id="rect3188"
+       width="1076"
+       height="960"
+       x="84"
+       y="-1707.6403"
+       style="fill:url(#linearGradient5463);fill-opacity:1;stroke:#002baa;stroke-width:6.05905512;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="120"
+       y="-1627.6403"
+       id="text3182"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3184"
+         x="120"
+         y="-1627.6403">The Project</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3991"
+       style="font-size:34.0719986px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="matrix(1.0433743,0,0,1.0699651,-11.488967,-2278.7102)"><flowRegion
+         id="flowRegion3993"><rect
+           id="rect3995"
+           width="958.42902"
+           height="863.41333"
+           x="126.02259"
+           y="642.30859"
+           style="font-size:34.0719986px" /></flowRegion><flowPara
+         id="flowPara3997"
+         style="font-size:34.0719986px">The Salish Sea is home to a large population of Canadians living in coastal communities at risk to ocean related hazards. There is an ongoing need to assess the impact of these hazards on human and marine environments through a multidisciplinary approach involving Canadian oceanographers, biologists, and social scientists. The Marine Environmental Observation Prediction and Response network (MEOPAR) provides a platform to accelerate this type of research. </flowPara><flowPara
+         style="font-size:34.0719986px"
+         id="flowPara5792" /><flowPara
+         style="font-size:34.0719986px"
+         id="flowPara5794">The Salish Sea MEOPAR project team is developing a three-dimensional ocean model for the Strait of Georgia and Salish Sea.  Using the NEMO modelling architecture the Salish Sea model will be used to evaluate storm surge risk in coastal communities.  Long term goals include data assimilation from the VENUS network and a coupled biogeochemical modelling component.  </flowPara><flowPara
+         id="flowPara5511"
+         style="font-size:34.0719986px" /><flowPara
+         id="flowPara5515"
+         style="font-size:34.0719986px" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5465"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion5467"><rect
+           id="rect5469"
+           width="565.06903"
+           height="325.21957"
+           x="113.82685"
+           y="605.72144" /></flowRegion><flowPara
+         id="flowPara5471" /></flowRoot>    <rect
+       id="rect3188-5"
+       width="1920"
+       height="479.99991"
+       x="1240"
+       y="-1707.6403"
+       style="fill:url(#linearGradient5550);fill-opacity:1;stroke:#002baa;stroke-width:6.05905512;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5567"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:72px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion5569"><rect
+           id="rect5571"
+           width="719.54834"
+           height="134.15308"
+           x="126.02259"
+           y="1638.2936"
+           style="font-size:72px" /></flowRegion><flowPara
+         id="flowPara5573" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1280"
+       y="-1627.6403"
+       id="text5575"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5577"
+         x="1280"
+         y="-1627.6403"
+         style="font-size:72px">The Tools</tspan></text>
+    <rect
+       id="rect3188-77"
+       width="1080"
+       height="1120"
+       x="80"
+       y="-707.64032"
+       style="fill:url(#linearGradient6491);fill-opacity:1;stroke:#002baa;stroke-width:6.05905512;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <image
+       y="-697.64032"
+       x="88.994751"
+       id="image5622"
+       xlink:href="file:///home/nsoontie/Documents/Presentations/StateofOceanFeb19/bathy.png"
+       height="1089.3224"
+       width="1055.0052" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5625"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion5627"><rect
+           id="rect5629"
+           width="28.456713"
+           height="48.782936"
+           x="1101.6813"
+           y="1727.729" /></flowRegion><flowPara
+         id="flowPara5631" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5633"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion5635"><rect
+           id="rect5637"
+           width="36.587204"
+           height="40.652447"
+           x="626.04767"
+           y="1715.5332" /></flowRegion><flowPara
+         id="flowPara5639" /></flowRoot>    <rect
+       id="rect3188-5-3"
+       width="1080"
+       height="519.99994"
+       x="80"
+       y="452.35971"
+       style="fill:url(#linearGradient5657);fill-opacity:1;stroke:#002baa;stroke-width:6.05905512;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5689"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-26.34375,-2165.5625)"><flowRegion
+         id="flowRegion5691"><rect
+           id="rect5693"
+           width="533.65118"
+           height="133.85205"
+           x="146.34882"
+           y="2626.1479" /></flowRegion><flowPara
+         id="flowPara5695"
+         style="font-size:72px">The Domain</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5697"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion5699"><rect
+           id="rect5701"
+           width="463.4379"
+           height="93.500626"
+           x="-40.652447"
+           y="2561.1042" /></flowRegion><flowPara
+         id="flowPara5703" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5705"
+       style="font-size:36px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-18.21875,-2114.7108)"><flowRegion
+         id="flowRegion5707"><rect
+           id="rect5709"
+           width="1040.0005"
+           height="435.8786"
+           x="138.21832"
+           y="2691.1919"
+           style="font-size:36px" /></flowRegion><flowPara
+         id="flowPara5711">The model domain includes the Strait of Juan de Fuca, Puget Sound, and the Strait of Georgia, as displayed in the figure above.  The computational domain is divided into 900 by 400 by 40 grid cells. The model includes fresh water input from 150 rivers, forcing by eight tidal constituents, open boundary conditions at the Juan de Fuca and Johnstone Strait boundaries, and atmospheric wind and pressure forcing at the ocean surface. </flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="126.02259"
+       y="2719.6487"
+       id="text5713"
+       sodipodi:linespacing="125%"
+       transform="translate(0,-2187.6403)"><tspan
+         sodipodi:role="line"
+         id="tspan5715"
+         x="126.02259"
+         y="2719.6487" /><tspan
+         sodipodi:role="line"
+         x="126.02259"
+         y="2769.6487"
+         id="tspan5721" /><tspan
+         sodipodi:role="line"
+         id="tspan5717"
+         x="126.02259"
+         y="2819.6487" /><tspan
+         sodipodi:role="line"
+         x="126.02259"
+         y="2869.6487"
+         id="tspan5719" /></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 640,2680 0,0"
+       id="path5723"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="3"
+       transform="translate(0,-2187.6403)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5733"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion5735"><rect
+           id="rect5737"
+           width="1138.2686"
+           height="617.91718"
+           x="-1248.0302"
+           y="1382.1831" /></flowRegion><flowPara
+         id="flowPara5739" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5741"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(2580.875,-789.46075)"><flowRegion
+         id="flowRegion5743"><rect
+           id="rect5745"
+           width="880.0033"
+           height="479.88535"
+           x="-1300.8783"
+           y="1365.9221" /></flowRegion><flowPara
+         id="flowPara5747"
+         style="font-size:36px">This multidisciplinary project funded by MEOPAR involves collaboration among scientists across Canada. The Salish Sea modelling component is led by Dr. Susan Allen in the Department of Earth, Ocean, and Atmospheric Sciences at the University of British Columbia. Up-to-date model details can be found here:</flowPara><flowPara
+         id="flowPara5782"
+         style="font-size:36px">http://salishsea-meopar-docs.readthedocs.org</flowPara><flowPara
+         id="flowPara5749"
+         style="font-size:36px" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5784"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-927.4375,-2100.5)"><flowRegion
+         id="flowRegion5786"><rect
+           id="rect5788"
+           width="792.57202"
+           height="118.89575"
+           x="2207.428"
+           y="2561.1042"
+           style="font-size:72px" /></flowRegion><flowPara
+         id="flowPara5790">The Details</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5958"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion5960"><rect
+           id="rect5962"
+           width="764.26599"
+           height="508.15558"
+           x="1382.1832"
+           y="2044.818" /></flowRegion><flowPara
+         id="flowPara5964" /></flowRoot>    <rect
+       id="rect3188-7"
+       width="1916"
+       height="1600"
+       x="1244"
+       y="-1187.6403"
+       style="fill:url(#linearGradient6409);fill-opacity:1;stroke:#002baa;stroke-width:6.05905512;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <image
+       y="-490.2605"
+       x="1290"
+       id="image6292"
+       xlink:href="file:///home/nsoontie/Documents/Presentations/StateofOceanFeb19/currents.png"
+       height="894.62018"
+       width="894.62018" />
+    <image
+       y="-1167.4709"
+       x="1261.4924"
+       id="image6211"
+       xlink:href="file:///home/nsoontie/Documents/Presentations/StateofOceanFeb19/thalweg.png"
+       height="719.8775"
+       width="2371.3613" />
+    <image
+       y="-489.64029"
+       x="2240"
+       id="image6354"
+       xlink:href="file:///home/nsoontie/Documents/Presentations/StateofOceanFeb19/plume.png"
+       height="894"
+       width="903.58875" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6508"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion6510"><rect
+           id="rect6512"
+           width="874.02765"
+           height="329.28482"
+           x="1272.4216"
+           y="609.78668" /></flowRegion><flowPara
+         id="flowPara6514" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1435.0314"
+       y="678.89581"
+       id="text6516"
+       sodipodi:linespacing="125%"
+       transform="translate(0,-2187.6403)"><tspan
+         sodipodi:role="line"
+         id="tspan6518"
+         x="1435.0314"
+         y="678.89581" /></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6520"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(15.71875,-2197.1795)"><flowRegion
+         id="flowRegion6522"><rect
+           id="rect6524"
+           width="879.99011"
+           height="363.88303"
+           x="1264.2911"
+           y="601.65619" /></flowRegion><flowPara
+         id="flowPara6526"
+         style="font-size:36px">To facilitate collaboration, the team uses a combination of the IPython Notebook, distributed version control, and the Notebook Viewer service (nbviewer.ipython.org). This set of tools enables sharing of model output, including visualization and analysis of results. Several examples are highlighted in the figures below. </flowPara><flowPara
+         style="font-size:36px"
+         id="flowPara6532" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6536"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion6538"><rect
+           id="rect6540"
+           width="605.7215"
+           height="219.52321"
+           x="2357.842"
+           y="605.72144" /></flowRegion><flowPara
+         id="flowPara6542" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6550"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion6552"><rect
+           id="rect6554"
+           width="898.41907"
+           height="353.6763"
+           x="2203.3625"
+           y="556.93848" /></flowRegion><flowPara
+         id="flowPara6556" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="2227.7542"
+       y="581.32996"
+       id="text6558"
+       sodipodi:linespacing="125%"
+       transform="translate(0,-2187.6403)"><tspan
+         sodipodi:role="line"
+         id="tspan6560"
+         x="2227.7542"
+         y="581.32996" /></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6562"
+       style="font-size:36px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(0,-2187.6403)"><flowRegion
+         id="flowRegion6564"><rect
+           id="rect6566"
+           width="569.13428"
+           height="215.45798"
+           x="2223.689"
+           y="589.46045"
+           style="font-size:36px" /></flowRegion><flowPara
+         id="flowPara6568" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6570"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(0,-2161.5233)"><flowRegion
+         id="flowRegion6572"><rect
+           id="rect6574"
+           width="960"
+           height="451.883"
+           x="2200"
+           y="480" /></flowRegion><flowPara
+         style="font-size:36px"
+         id="flowPara6586"><flowSpan
+   style="font-weight:bold"
+   id="flowSpan3190">Top:</flowSpan> Salinity field along the thalweg after several weeks of spinup. The thalweg is indicated by the black curve in the bathymetry image on the far left.</flowPara><flowPara
+         style="font-size:36px"
+         id="flowPara3947"> </flowPara><flowPara
+         style="font-size:36px"
+         id="flowPara6590"><flowSpan
+   style="font-weight:bold"
+   id="flowSpan3192">Bottom left:</flowSpan> Surface currents during the ebb tide.</flowPara><flowPara
+         style="font-size:36px"
+         id="flowPara3949" /><flowPara
+         style="font-size:36px"
+         id="flowPara6592"><flowSpan
+   style="font-weight:bold"
+   id="flowSpan3194">Bottom right:</flowSpan> Surface salinity field demonstrating the evolution of the fresh water plume from the Fraser River.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6578"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion6580"><rect
+           id="rect6582"
+           width="211.39273"
+           height="138.21832"
+           x="2187.1016"
+           y="548.80798" /></flowRegion><flowPara
+         id="flowPara6584" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3156"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(0.6875,-2176.617)"><flowRegion
+         id="flowRegion3158"><rect
+           id="rect3160"
+           width="960.70264"
+           height="288.63245"
+           x="2199.2974"
+           y="2935.1067" /></flowRegion><flowPara
+         id="flowPara3162"
+         style="font-size:36px">This project has been developed in collaboration with the Dr. Youyu Lu group at the Bedford Institute of Oceanography and the Dr. Keith Thompson group at Dalhousie University.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3178"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:24px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3180"><rect
+           id="rect3182"
+           width="321.95096"
+           height="80.48774"
+           x="2865.9385"
+           y="376.93613"
+           style="font-size:24px" /></flowRegion><flowPara
+         id="flowPara3184" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="2880"
+       y="-1773.6403"
+       id="text3186"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3188"
+         x="2880"
+         y="-1773.6403"
+         style="font-size:24px">*nsoontie@eos.ubc.ca</tspan></text>
+    <image
+       y="532.35968"
+       x="2728.7974"
+       id="image3464"
+       xlink:href="file:///home/nsoontie/Documents/Presentations/StateofOceanFeb19/MEOPAR_logo.png"
+       height="172.19878"
+       width="311.20264" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3970"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3972"><rect
+           id="rect3974"
+           width="126.48074"
+           height="97.735115"
+           x="1940.3295"
+           y="831.11694" /></flowRegion><flowPara
+         id="flowPara3976" /></flowRoot>  </g>
+</svg>
