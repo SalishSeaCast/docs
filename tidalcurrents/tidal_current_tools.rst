@@ -92,13 +92,13 @@ This function outputs a dictionary object containing the ellipse parameters for 
 
 MATLAB Scripts
 ----------------
-Loading and processing of the observational data from the ONC VENUS Central, East and Delta nodes is done in MATLAB scripts written by Dr. Rich Pawlowicz. The processing is done in three parts and is tailors for each deployment at each node.
+Loading and processing of the observational data from the ONC VENUS Central, East and Delta nodes is done in MATLAB scripts written by Dr. Rich Pawlowicz. The processing is done in three parts and is tailored for each deployment at each node.
 
 Processing scripts
 ~~~~~~~~~~~~~~~~~~~~~
 
 * The first part is :file:`GET_DATA_fun.m` This script will get the data that is directly output from the ADCP. It
- does this for the two days before the day indicated. It will put this data in a directory at pth/raw/ and organize it by year and month. This function calls to a script written by Marlene Jeffries at Ocean Network Canada :file:`getSoGAdcpDataMay15_mod`. This script contains many functions that are used to ultimately retrieve the raw data from the ONC website.
+ does this for the two days before the day indicated. It will put this data in a directory at pth/raw/ and organize it by year and month. This function calls a script written by Marlene Jeffries at Ocean Network Canada :file:`getSoGAdcpDataMay15_mod`. This script contains many functions that are used to ultimately retrieve the raw data from the ONC website.
 
  * The next step is to run :file:`GET_DEPL_fun.m` goes through all the data in the raw directory gathered by GETDATA_fun and bins it into 30 minutes bins. .
 
