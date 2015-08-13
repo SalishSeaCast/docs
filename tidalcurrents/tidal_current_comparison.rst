@@ -86,6 +86,45 @@ Comparison of the K1 harmonic constituent
 CODAR
 ~~~~~~~~
 * The Fraser River plume creates some very interesting surface currents where it meets the Georgia Strait. These currents can be studied using the two High Frequency coastal radars installed by ONC that measure surface current velocities. The system is called the Coastal Ocean Dynamics Applications Radar system (CODAR).
+
+* The tidal ellipses at 0.5 m depth at both nodes are very large and for the M2 constituent but there is quite a good agreement for the K1 values.
+
++---------+------------+------------+-----------------+
+|         | Major-Axis | Minor-Axis |  Inclination    |
+|         |    (m/s)   |   (m/s)    |  (deg ccw E)    |
++---------+------------+------------+-----------------+
+| M2 - Central - (0.5m)                               |
++---------+------------+------------+-----------------+
+| Model   | 0.20       | -0.076     | 135             |
++---------+------------+------------+-----------------+
+| CODAR   | 0.11       | 0.008      | 126             |
++---------+------------+------------+-----------------+
+| M2 - East - (0.5m)                                  |
++---------+------------+------------+-----------------+
+| Model   | 0.39       | -0.187     | 125             |
++---------+------------+------------+-----------------+
+| CODAR   | 0.14       | -0.037     | 134             |
++---------+------------+------------+-----------------+
+| K1 - Central - (0.5m)                               |
++---------+------------+------------+-----------------+
+| Model   | 0.07       | -0.001     | 111             |
++---------+------------+------------+-----------------+
+| CODAR   | 0.07       | 0.006      | 134             |
++---------+------------+------------+-----------------+
+| K1 - East - (0.5m)                                  |
++---------+------------+------------+-----------------+
+| Model   | 0.11       | -0.009     | 107             |
++---------+------------+------------+-----------------+
+| CODAR   | 0.08       | -0.009     | 129             |
++---------+------------+------------+-----------------+
+
+.. _CODAR_ellipse:
+
+.. figure:: surfaceM2.png
+
+.. figure:: surfaceK1.png
+
+
 * The figure below is the phase of the M2 tidal constituents from the model output at 0.5 m depth throughout the CODAR region compared to the observational values processed by Dr. Mark Halverson.
 .. _CODAR_phase:
 
