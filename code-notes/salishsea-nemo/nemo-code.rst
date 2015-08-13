@@ -804,11 +804,16 @@ and NEMO & XIOS executables into the test directory:
 
 .. code-block:: bash
 
-    $ ln -s $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SHARED/domain_def.xml
     $ ln -s $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SHARED/field_def.xml
     $ ln -s $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SHARED/namelist_ref
     $ ln -s $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/nemo.exe
     $ ln -s $HOME/MEOPAR/XIOS/bin/xios_server.exe
+
+Symlink the SalishSea output domain definition file:
+
+.. code-block:: bash
+
+    $ ln -s $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/domain_def.xml
 
 Copy the :file:`iodef.xml` file generated for the :kbd:`SalishSea` configuration into the test directory:
 
