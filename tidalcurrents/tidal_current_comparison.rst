@@ -1,14 +1,14 @@
 Tidal current comparisons
 ===========================================
 
-* Comparisons of the model to observations and other models is very important in evalutating the model output.
-* It gives information about which physical processes are poorly represented and may even give hints towards how we can improve these.
+* Comparisons of the model to observations and other models is very important in evaluating the model output.
+* These comparisons give information about which physical processes are poorly represented and may even give hints towards how we can improve model performance.
 
 
 Ocean Networks Canada VENUS nodes
 -----------------------------------
 
-* ONC VENUS had three seafloor nodes in the Salish Sea; Central, East and Delta. The nodes are equipped with an extensive amount of equipment.
+* ONC VENUS has three seafloor nodes in the Salish Sea; Central, East and Delta. The nodes are equipped with many sensors.
 * The comparisons below use the Acoustic Doppler Current Profiler (ADCP) at the Central and East nodes.
 
 
@@ -86,13 +86,13 @@ Comparison of the K1 harmonic constituent
 
 CODAR
 ~~~~~~~~
-* The Fraser River plume creates some very interesting surface currents where it meets the Georgia Strait. These currents can be studied using the two High Frequency coastal radars installed by ONC that can measure surface current velocities, the system is called the Coastal Ocean Dynamics Applications Radar system (CODAR).
+* The Fraser River plume creates some very interesting surface currents where it meets the Georgia Strait. These currents can be studied using the two High Frequency coastal radars installed by ONC that measure surface current velocities. The system is called the Coastal Ocean Dynamics Applications Radar system (CODAR).
 * The figure below is the phase of the M2 tidal constituents from the model output throughout the CODAR region compared to the observational values processed by Dr. Mark Halverson.
 .. _CODAR_phase:
 
 .. figure:: CODARM2pha.png
 
-* We can see that the model and the observations are in the same range of values, however the observations has steep gradients and variations in the center of the Strait of Georgia unlike the model. The accuracy of the CODAR values are still in the process of being determined therefor it is unwise to pull any conclusions from this.
+* We can see that the model and the observations are in the same range of values, however, the observations has steep gradients and variations in the center of the Strait of Georgia unlike the model. The accuracy of the CODAR values are still in the process of being determined therefore it is unwise to pull any conclusions from this.
 
 * This figure below is the phase of the K1 tidal constituent.
 
@@ -102,13 +102,13 @@ CODAR
 
 Foreman Model (2004)
 ------------------------
-A two dimensional, high-resolution barotropic model of the Puget Sound and around Vancouver Island. We use this model and a comparison tool because it can help identify which aspects we are representing similarly or differently to the Foreman model which of these are or aren't comparable to the observations he has reported from current meter deployments. 
+In addition to observations, we have compared with a two dimensional, high-resolution barotropic model of the Puget Sound and around Vancouver Island (Foreman et al, 2004). We use this model and a comparison tool because it can help identify which aspects we are represented similarly or differently to the Foreman model and which of these are or aren't comparable to the observations he has reported from current meter deployments. 
 
 Along the thalweg
 ~~~~~~~~~~~~~~~~~~~~~
 * The thalweg is the set of grid points that follow along the deepest point of the Strait of Georgia from every cross section. 
 
-* When looking along the thalweg we can see that both models are resonable through the Juan de Fuca Strait, the Salish Sea model is a bit closer to the observations. Through Haro Strait both models seem to be off by 0.3 m/s. Through the center of the Strait both model have very low velocities as expected. The northern part of the Strait is better resolved by the Foreman model. The Salish Sea model is more focused on getting the southern area correct and many rivers and passages are closed off in this model which causes this discrepancy. Foreman (2004) says the differences in the northern Strait is due to either the grid resolution being too corse and/or the observations being inaccurate.
+* When looking along the thalweg we can see that both models are reasonable through the Juan de Fuca Strait. The Salish Sea model is a bit closer to the observations. Through Haro Strait both models seem to be off by 0.3 m/s in the semi-major axis. Through the center of the Strait both models have very low velocities as expected. The northern part of the Strait is better resolved by the Foreman model. The Salish Sea model is more focused on getting the southern area correct and many rivers and passages are closed off in this model which causes this discrepancy. Foreman et al (2004) reports that their discrepancies in the northern Strait either due to either the grid resolution being too coarse and/or the observations being inaccurate.
 
 .. figure:: Foremanthalwegcomp.png
 
