@@ -40,7 +40,7 @@ Comparison of the M2 harmonic constituent
 
 * The figure shows that the depth averaged observational and model output values agree quite well.
 * The model output's semi-minor axis is larger than the observations, this informs us that the model flow is too circular.
-* Also the Salish Sea model output is angled slightly more to the West. This may be due to too much mixing or the Fraser River outflow.
+* Also the Salish Sea model output is angled slightly more to the West, this discrepancy is within a resonable error window.
 
 * Scale = 50
 
@@ -74,7 +74,6 @@ Comparison of the K1 harmonic constituent
 | ADCP    | 0.17       | -0.011     | 122             |
 +---------+------------+------------+-----------------+
 
-
 .. _K1_node_comparison:
 
 .. figure:: depavnodecompK1.png
@@ -87,7 +86,7 @@ Comparison of the K1 harmonic constituent
 CODAR
 ~~~~~~~~
 * The Fraser River plume creates some very interesting surface currents where it meets the Georgia Strait. These currents can be studied using the two High Frequency coastal radars installed by ONC that measure surface current velocities. The system is called the Coastal Ocean Dynamics Applications Radar system (CODAR).
-* The figure below is the phase of the M2 tidal constituents from the model output throughout the CODAR region compared to the observational values processed by Dr. Mark Halverson.
+* The figure below is the phase of the M2 tidal constituents from the model output at 0.5 m depth throughout the CODAR region compared to the observational values processed by Dr. Mark Halverson.
 .. _CODAR_phase:
 
 .. figure:: CODARM2pha.png
