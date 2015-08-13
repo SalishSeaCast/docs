@@ -88,7 +88,7 @@ Length
     * The smaller surface currents indicates that it averages out some of the surface currents that are due to winds or Fraser River outflow.
     * The smoother variations throughout the water column. It is not logical for the flow to fluctuate every couple of meters throughout the water column.
       
-* A longer time series enables us to separate and resolve the individual harmonic constituents, we can be certain that we are only looking at the M2 tidal constituent.
+* A longer time series enables us to separate and resolve the individual harmonic constituents so that we can be certain that we are only looking at the M2 tidal constituent.
 * We observe the benefits of a longer time series at the ONC VENUS East node as well.
 
 
@@ -150,7 +150,7 @@ Table 2: The effect of seasonality on tidal ellipse parameters
 
 .. figure:: seasonal.png
 
-* The Central node has similar but muted differences between the seasons. 
+* The Central node has a similar but muted difference between the seasons. 
 * The bottom ~150m are mostly the same throughout winter and spring. We expect this because there isn't much movement there.
 * The semi-major and semi-minor axis are larger throughout the upper part of the water column in the spring. 
 
