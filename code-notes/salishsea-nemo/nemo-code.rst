@@ -833,14 +833,17 @@ Symlink the SalishSea output domain definition file:
 
     $ ln -s $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/domain_def.xml
 
-Copy the :file:`iodef.xml` file generated for the :kbd:`SalishSea` configuration into the test directory:
+You also required an :file:`iodef.xml` file. A basic one generated for the :kbd:`SalishSea` configuration can be copied into the test directory:
 
 .. code-block:: bash
 
     $ cp $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/EXP00/iodef.xml ./
 
 If you wish,
-edit that file to adjust the output interval(s) for various variables.
+edit that file to adjust the output interval(s) for various variables.  A more complicated example, including 1/2 hour tidal-point output can be copied from the tides SS-run-sets instead:
+
+
+    $ cp $HOME/MEOPAR/SS-run-sets/SalishSea/nemo3.6/tides/iodef.xml ./
 
 Create a :file:`namelist_cfg` configuration namelist file for the run by running:
 
