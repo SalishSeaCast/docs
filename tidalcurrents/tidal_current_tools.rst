@@ -86,7 +86,7 @@ This function outputs a dictionary object containing the ellipse parameters for 
     
     plot_ellipses(params, x, y, depth='None', numellips=1, imin=0, imax=398, jmin=0, jmax=898)
     
-* In this notebook: `TidalEllipseTools.ipynb`_  there are simple examples of the functions above.
+* In this notebook: `UsingEllipse.py.ipynb`_  there are simple examples of the functions above.
 
 .. _UsingEllipse.py.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Muriel/UsingEllipse.py.ipynb
 
