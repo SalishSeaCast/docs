@@ -49,6 +49,7 @@ please see the :ref:`QuickStartGuide` for instructions on setting working enviro
    bash_config
    hg_version_control
    anaconda_python
+   python3_conda_environment
    salishsea_pkgs
    python_notes
    sphinx_docs
