@@ -296,7 +296,7 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
      where days is the run duration in days
 
    * :kbd:`nn_date0`: the date when :kbd:`nn_it000` was 1;
-     i.e. :kbd:`20021026`
+     i.e. :kbd:`20021026` *Note that this convention changes in NEMO 3.6*
 
    * :kbd:`nit000_han`: the first time step for tidal harmonic analysis,
      typically the same value as :kbd:`nn_it000`
