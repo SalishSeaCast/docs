@@ -19,7 +19,7 @@ To activate the environment:
 
 .. code-block:: bash
 
-   conda activate mypython3
+   source activate mypython3
 
 To get all the goodies (e.g. `IPython Notebook`_, `NumPy`_, `matplotlib`_)
 you can install `Anaconda`_, which will auto-magically use Python 3.
