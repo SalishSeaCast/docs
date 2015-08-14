@@ -243,6 +243,8 @@ Preparing the :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/` Filespace
       $ ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/GETDATA_fun.m
       $ ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/GETDEPL_fun.m
       $ ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/LTIM_fun.m
+      $ ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/get_VENUS_ADCP.m
+      $ ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/get_VENUS_ADCP.cron.sh
 
 * Copy the ONC-provided data download script into the filespace:
 
