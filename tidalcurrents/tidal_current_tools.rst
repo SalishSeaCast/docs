@@ -107,7 +107,9 @@ Adjustments for running daily
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  When running these scripts for a single day of data at a time to have daily comparisons a few modifications have to be done to keep the scripts running.
  * :file:`compare_daily(day, node, ndays)` This script is designed to facilitate running these processing scripts, that are designed for bulk runs, daily. For a daily run day is the after the last day you will retrieve data for. Generally for running it daily you would put the current day's date so that it gets data from before 00:00:00 of today. Node is either 'central', 'east', or 'ddl' and ndays is the amount of days before 'day' you want to retrive raw data for. 
- Ex. if day='10-Aug-2105' and ndays=5, it will retreive data from August 5th 2015 00:00:00 to August 10th 2015 00:00:00.
+ 
+   Ex. if day='10-Aug-2105' and ndays=5, it will retreive data from August 5th 2015 00:00:00 to August 10th 2015 00:00:00.
+ 
  * Note that GETDEPL_fun creates a new deployment file with the new updated raw data that was loaded by GETDATA_fun however LTIM_fun needs only one mat file per deployment in the directory where it looks. The :file:`compare_daily.m` functions works helps seamlessy join the new update deployment file and the previous deployment file.
  
 New deployment
