@@ -128,6 +128,170 @@ If you will be running the processing in a new directory for the first time ther
 * 3. In :file:`GET_DATA_fun` change the firstdate variable to be at least 3 days before the lastdate. This is because the filter length in :file:`LTIM_fun` needs at least that much data for the processing.
 
 
+Setup of the :file:`/ocean/` ONC ADCP Data Filespace
+----------------------------------------------------
+
+This section describes the setup of the storage filespace on :file:`/ocean/` containing the accumulated raw and processed ONC ADCP data.
+Those data are from the Strait of Georgia Central,
+East,
+and Delta Dynamics Laboratory (DDL) nodes.
+Also described in this section is the software automation that updates those data daily with the observations from the previous day.
+
+The data and processing scripts are stored in :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/`.
+The accumulated,
+processed data for the 3 nodes are in the files:
+
+* :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/ADCPcentral`
+* :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/ADCPddl`
+* :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/ADCPeast`
+
+The raw data downloaded from ONC are in directory trees organized by year and month number;
+e.g. :file:`2015/07/` in the directories:
+
+* :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/central/raw/`
+* :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/ddl/raw/`
+* :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/east/raw/`
+
+The other files in the :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/` tree are the processing scripts,
+sensor deployment data files,
+etc.
+Many of those files are symlinked from version controlled files in the :ref:`private-tools-repo`.
+
+
+Preparing the :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/` Filespace
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Create the directory and make it group writable for the :kbd:`sallen` group:
+
+  .. code-block:: bash
+
+      $ mkdir /ocean/dlatorne/MEOPAR/ONC_ADCP
+      $ cd /ocean/dlatorne/MEOPAR/ONC_ADCP
+      $ chgrp sallen
+      $ chmod g+w .
+
+* Copy the accumulated-to-date processed data files into the filespace:
+
+  .. code-block:: bash
+
+      $ cp --preserve=timestamps /ocean/mdunn/MEOPAR/analysis/Muriel/TidalEllipseData/Nodes/ADCPcentral.mat ./
+      $ cp --preserve=timestamps /ocean/mdunn/MEOPAR/analysis/Muriel/TidalEllipseData/Nodes/ADCPddl.mat ./
+      $ cp --preserve=timestamps /ocean/mdunn/MEOPAR/analysis/Muriel/TidalEllipseData/Nodes/ADCPeast.mat ./
+
+* Create directories for the raw data and per-node processing files,
+  and make them group writable for the :kbd:`sallen` group:
+
+  .. code-block:: bash
+
+      $ mkdir central ddl east
+      $ chgrp sallen central ddl east
+      $ chmod g+w cental ddl east
+
+* Symlink the historic sensor deployment data files for each node into their respective directories:
+
+  .. code-block:: bash
+
+      $ cd central
+      $ for n in {01..10}; do
+      > ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/central/DEPL${n}*.mat
+      > done
+
+      $ cd ../ddl
+      $ for n in {1..2}; do
+      > ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/ddl/DEPL0${n}*.mat
+      > done
+
+      $ cd ../east
+      $ for n in {01..12}; do
+      > ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/east/DEPL${n}*.mat
+      > done
+      $ cd ..
+
+* Copy the current sensor deployment data files for each node into their respective directories:
+
+  .. code-block:: bash
+
+      $ cp --preserve=timestamps /ocean/mdunn/MEOPAR/analysis/Muriel/TidalEllipseData/Nodes/central/DEPL11VIP-12-11.mat central/
+      $ cp --preserve=timestamps /ocean/mdunn/MEOPAR/analysis/Muriel/TidalEllipseData/Nodes/ddl/DEPL03BBL-SG-03-03.mat ddl/
+      $ cp --preserve=timestamps /ocean/mdunn/MEOPAR/analysis/Muriel/TidalEllipseData/Nodes/east/DEPL13VIP-02-13.mat east/
+
+* Copy the accumulated-to-date raw data file trees for each node into their respective directories and make the directories group writable for the :kbd:`sallen` group:
+
+  .. code-block:: bash
+
+      $ mkdir central/raw
+      $ chgrp sallen central/raw
+      $ cp -r --preserve=timestamps /ocean/mdunn/MEOPAR/analysis/Muriel/TidalEllipseData/Nodes/central/raw/2015 central/raw/
+      $ find central/raw -type d | xargs chmod g+w
+
+      $ mkdir ddl/raw
+      $ chgrp sallen ddl/raw
+      $ cp -r --preserve=timestamps /ocean/mdunn/MEOPAR/analysis/Muriel/TidalEllipseData/Nodes/ddl/raw/2015 ddl/raw/
+      $ find ddl/raw -type d | xargs chmod g+w
+
+      $ mkdir east/raw
+      $ chgrp sallen east/raw
+      $ cp -r --preserve=timestamps /ocean/mdunn/MEOPAR/analysis/Muriel/TidalEllipseData/Nodes/east/raw/2015 east/raw/
+      $ find east/raw -type d | xargs chmod g+w
+
+
+* Create symlinks to the version-controlled processing scripts:
+
+  .. code-block:: bash
+
+      $ ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/compare_daily.m
+      $ ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/GETDATA_fun.m
+      $ ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/GETDEPL_fun.m
+      $ ln -s /data/dlatorne/MEOPAR/private-tools/ONC_ADCP/LTIM_fun.m
+
+* Copy the ONC-provided data download script into the filespace:
+
+  .. code-block:: bash
+
+      $ cp --preserve=timestamps /ocean/mdunn/MEOPAR/analysis/Muriel/TidalEllipseData/Nodes/getSogAdcpDataMay15_mod.m ./
+
+  **TODO:** That script should be symlinked from a version controlled copy
+
+* Create a :command:`matlab` function in :file:`get_VENUS_ADCP.m` to run :file:`compare_daily.m` for each node:
+
+  .. code-block:: matlab
+
+      function get_VENUS_ADCP
+        % Run the compare_daily.m script for each ONC VENUS node of interest
+        % to download and process the ADCP data for the previous day
+        % using Rich Pawlowicz's scripts.
+
+        compare_daily(date, 'central')
+        compare_daily(date, 'ddl')
+        compare_daily(date, 'east')
+      end
+
+* Create a :command:`bash` script called :file:`get_VENUS_ADCP.cron.sh` for :command:`cron` to execute to run :file:`get_VENUS_ADCP.m`:
+
+  .. code-block:: bash
+
+      # Download and process VENUS nodes ADCP data for the previous day
+      # using matlab scripts written by Muriel Dunn and Rich Pawlowicz.
+      #
+      # usage:   0 14 * * *  /ocean/dlatorne/MEOPAR/ONC_ADCP/get_VENUS_ADCP.cron.sh
+
+      ONC_ADCP_DIR=/ocean/dlatorne/MEOPAR/ONC_ADCP
+      matlab -nodesktop -nodisplay -r ${ONC_ADCP_DIR}get_VENUS_ADCP
+
+* Make :file:`get_VENUS_ADCP.cron.sh` owner and group executable:
+
+  .. code-block:: bash
+
+      $ chmod ug+x get_VENUS_ADCP.cron.sh
+
+* Add a line to the :file:`crontab` on :kbd:`salish` to execute :file:`get_VENUS_ADCP.cron.sh` daily:
+
+  .. code-block:: bash
+
+      OCEAN_MEOPAR=/ocean/dlatorne/MEOPAR
+        0 10 * * *  ${OCEAN_MEOPAR}/ONC_ADCP/get_VENUS_ADCP.cron.sh
+
+
 References
 ^^^^^^^^^^^^
 
