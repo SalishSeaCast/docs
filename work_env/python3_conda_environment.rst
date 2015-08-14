@@ -3,10 +3,10 @@
 Building a Python 3 Conda Environment
 =====================================
 
-In the first stages of our move to python 3, some important tools we use will
-still be in python 2.  To facilitate the change, you may find it useful to
-have python 3 in a separate environment. If you are doing EOSC 511 this year
-you will need a python 3 environment.  This section explain how to set one up
+In the first stages of our move to Python 3, some important tools we use will
+still be in Python 2.  To facilitate the change, you may find it useful to
+have Python 3 in a separate environment. If you are doing EOSC 511 this year
+you will need a Python 3 environment.  This section explains how to set one up
 assuming you already have conda and anaconda installed.
 
 At the command line create your new environment, here called "mypython3" but you can call it what you wish:
@@ -22,7 +22,7 @@ To activate the environment:
    conda activate mypython3
 
 To get all the goodies (e.g. `IPython Notebook`_, `NumPy`_, `matplotlib`_)
-you can install `Anaconda`_, which will auto-magically use python 3.
+you can install `Anaconda`_, which will auto-magically use Python 3.
 
 .. _Anaconda: https://store.continuum.io/cshop/anaconda/
 .. _IPython Notebook: http://ipython.org/ipython-doc/dev/index.html
@@ -41,13 +41,13 @@ and then our additional install, `netcdf4-python`_
 
 .. _netcdf4-python: http://netcdf4-python.googlecode.com/svn/trunk/docs/netCDF4-module.html
 
-Now you have set-up your python 3 environment.  To start it in a new terminal
+Now you have set-up your Python 3 environment.  To start it in a new terminal
 
 .. code-block:: bash
 
    source activate mypython3
 
-When you are using that environment your prompt will change and will include (mypython3).  To return to using your "base" environment you can de-activate the cond environment with:
+When you are using that environment your prompt will change and will include (mypython3).  To return to using your "base" environment you can de-activate the conda environment with:
 
 .. code-block:: bash
 
