@@ -263,9 +263,9 @@ Preparing the :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/` Filespace
         % to download and process the ADCP data for the previous day
         % using Rich Pawlowicz's scripts.
 
-        compare_daily(date, 'central')
-        compare_daily(date, 'ddl')
-        compare_daily(date, 'east')
+        compare_daily(date, 'central', 2)
+        compare_daily(date, 'ddl', 2)
+        compare_daily(date, 'east', 2)
       end
 
 * Create a :command:`bash` script called :file:`get_VENUS_ADCP.cron.sh` for :command:`cron` to execute to run :file:`get_VENUS_ADCP.m`:
