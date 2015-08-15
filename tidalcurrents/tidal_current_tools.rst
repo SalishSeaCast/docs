@@ -277,8 +277,8 @@ Preparing the :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/` Filespace
       #
       # usage:   0 14 * * *  /ocean/dlatorne/MEOPAR/ONC_ADCP/get_VENUS_ADCP.cron.sh
 
-      ONC_ADCP_DIR=/ocean/dlatorne/MEOPAR/ONC_ADCP
-      matlab -nodesktop -nodisplay -r ${ONC_ADCP_DIR}get_VENUS_ADCP
+      cd /ocean/dlatorne/MEOPAR/ONC_ADCP
+      matlab -nodesktop -nodisplay -r get_VENUS_ADCP
 
 * Make :file:`get_VENUS_ADCP.cron.sh` owner and group executable:
 
