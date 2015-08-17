@@ -380,6 +380,23 @@ was used to update the :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository 
 #. The :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository was Mercurial-tagged with :kbd:`b4_nemo_v3_6_stable`.
 
 #. The :command:`svn` revisions to :kbd:`r5518` were applied a few at a time using the :ref:`Marlin` and the process described in :ref:`PullChangesFromNEMOsvn`.
+   Revisions that add or delete files,
+   or copy files in from another :command:`svn` branch were handled individually,
+   using :command:`hg add`,
+   or :command:`hg rm` as necessary to add and remove files,
+   followed by :command:`hg commit --amend` to update the changeset to reflect that additions/deletions.
+
+#. The commands:
+
+   .. code:: bash
+
+       $ svn switch http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE
+       $ svn update -r 5519
+
+   were used to change the :command:`svn` URL to point at the 3.6-stable branch and update to the earliest revision on that branch,
+   :kbd:`r5519`
+
+#. The :command:`svn` revisions to :kbd:`r5628` were applied a few at a time using the proceedure described above for early revisions.
 
 The following sections are in-process notes about getting to a running Salish Sea NEMO-3.6 model on various platforms.
 
@@ -705,7 +722,7 @@ Important things to note:
 
 
 Testing the GYRE Configuration on :kbd:`salish`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A new NEMO-3.6 GYRE configuration was created on :kbd:`salish` with:
 
