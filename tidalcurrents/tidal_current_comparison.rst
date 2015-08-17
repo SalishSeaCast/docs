@@ -87,7 +87,7 @@ CODAR
 ~~~~~~~~
 * The Fraser River plume creates some very interesting surface currents where it meets the Georgia Strait. These currents can be studied using the two High Frequency coastal radars installed by ONC that measure surface current velocities. The system is called the Coastal Ocean Dynamics Applications Radar system (CODAR).
 
-* The tidal ellipses at 0.5 m depth at both nodes are very large for the M2 constituent but there is quite a good agreement for the K1 values.
+* The tidal ellipses at 0.5 m depth at both nodes are very large for the M2 constituent but there is quite a good agreement for the K1 values. These ellipses were calculated over a 5 months period, form November 26th 2014 to April 26th 2015, to avoid the freshet. The ellipses with the freshet, 8 month time series, are slighter wider and the inclination does not match the observations as well as the values without the freshet.
 
 +---------+------------+------------+-----------------+
 |         | Major-Axis | Minor-Axis |  Inclination    |
@@ -95,25 +95,25 @@ CODAR
 +---------+------------+------------+-----------------+
 | M2 - Central - (0.5m)                               |
 +---------+------------+------------+-----------------+
-| Model   | 0.20       | -0.076     | 135             |
+| Model   | 0.18       | -0.057     | 139             |
 +---------+------------+------------+-----------------+
 | CODAR   | 0.11       | 0.008      | 126             |
 +---------+------------+------------+-----------------+
 | M2 - East - (0.5m)                                  |
 +---------+------------+------------+-----------------+
-| Model   | 0.39       | -0.187     | 125             |
+| Model   | 0.39       | -0.187     | 129             |
 +---------+------------+------------+-----------------+
 | CODAR   | 0.14       | -0.037     | 134             |
 +---------+------------+------------+-----------------+
 | K1 - Central - (0.5m)                               |
 +---------+------------+------------+-----------------+
-| Model   | 0.07       | -0.001     | 111             |
+| Model   | 0.06       | -0.003     | 130             |
 +---------+------------+------------+-----------------+
 | CODAR   | 0.07       | 0.006      | 134             |
 +---------+------------+------------+-----------------+
 | K1 - East - (0.5m)                                  |
 +---------+------------+------------+-----------------+
-| Model   | 0.11       | -0.009     | 107             |
+| Model   | 0.10       |  0.007     | 119             |
 +---------+------------+------------+-----------------+
 | CODAR   | 0.08       | -0.009     | 129             |
 +---------+------------+------------+-----------------+
