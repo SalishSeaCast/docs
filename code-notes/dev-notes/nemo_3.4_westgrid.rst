@@ -24,7 +24,7 @@ Making a Project
 
       cd dev_v3_4_STABLE_2012/NEMOGCM/ARCH
 
-* NEMO ships with a number of different arch files.  So far, however, what works is one based on the jasper file from P. Myers GEOTRACES code:
+* NEMO ships with a number of different arch files.  After changes to Jasper's operating system and updated arch file is needed:
 
   .. code-block:: sh
 
@@ -43,21 +43,23 @@ Making a Project
       # USER_INC    additional include files for the compiler,  e.g. -I<include dir>
       # USER_LIB    additional libraries to pass to the linker, e.g. -l<library>
 
-
-      %NCDF_INC     -I/lustre/jasper/software/netcdf/netcdf-4.1.3/include -lhdf5_hl -lhdf5 -lz -lsz
-      %NCDF_LIB     -L/lustre/jasper/software/netcdf/netcdf-4.1.3/lib -lnetcdf -lnetcdff -lhdf5_hl -lhdf5 -lz -lsz
+      %NCDF_HOME    /global/software/netcdf/netcdf-4.1.3
+      %HDF5_HOME    /global/software/hdf5/hdf5-1.8.9
+      %NCDF_INC     -I%NCDF_HOME/include
+      %NCDF_LIB     -L%NCDF_HOME/lib -lnetcdff -lnetcdf -L%HDF5_HOME/lib -lhdf5_hl -lhdf5 -lhdf5
+      %CPP          cpp
       %FC           mpif90
       %FCFLAGS      -c -fpp -r8 -O3 -assume byterecl -convert big_endian -heap-arrays
       %LD           mpif90
-      %PC           cpp
+      %FFLAGS       %FCFLAGS
+      %LDFLAGS      -lstdc++
       %FPPFLAGS     -P -C -traditional
-      %LDFLAGS
       %AR           ar
       %ARFLAGS      -r
       %MK           make
       %USER_INC     %NCDF_INC
       %USER_LIB     %NCDF_LIB
-      %MODDIR       ../../../lib
+      
 
 *   then change directory and make a project, e.g.
     then for a new GYRE configuration using your new arch file ocean
