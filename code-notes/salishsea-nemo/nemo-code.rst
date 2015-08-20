@@ -398,6 +398,12 @@ was used to update the :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository 
 
 #. The :command:`svn` revisions to :kbd:`r5628` were applied a few at a time using the proceedure described above for early revisions.
 
+#. The :command:`svn` updates were merged with our :ref:`NEMO-3.6-code-repo` and the result tagged as :kbd:`NEMO-3.6r5628`.
+
+Initial testing revealed that :kbd:`NEMO-3.6r5628` could not be compiled against :kbd:`XIOS-1.0r548`.
+That issue was resolved by updating and merging :ref:`XIOS-repo` to :command:`svn` revision :kbd:`r648`.
+The result was confirmed to enable a successful build of :kbd:`NEMO-3.6r5628` and was tagged as :kbd:`XIOS-1.0r648`.
+
 The following sections are in-process notes about getting to a running Salish Sea NEMO-3.6 model on various platforms.
 
 
