@@ -404,21 +404,6 @@ The following sections are in-process notes about getting to a running Salish Se
 Building and Testing XIOS
 -------------------------
 
-Building XIOS_ fails with a confusing collection of errors about missing :kbd:`main` modules when the `XIOS build instructions`_ are followed.
-The root cause of those errors appears to be the fact that the :kbd:`parse_xml.exe` in :file:`bld.cfg` is based on a C++ :kbd:`main` function while the :kbd:`xios_server.exe` and other targets are based on Fortran :kbd:`main` subroutines.
-That means that building :kbd:`parse_xml.exe` requires a :kbd:`-nofor-main` linker argument while building the other targets *must not* use that argument.
-It is unclear how the build system is meant to handle those incompatible requirements.
-For the purposes of the SalishSea MEOPAR project NEMO model it appear that :kbd:`parse_xml.exe` is not required,
-so it is removed from line 33 of :file:`bld.cfg`::
-
-  bld::target xios_server.exe test_client.exe test_complete.exe test_xios_interface.exe
-
-In fact,
-the :kbd:`test_*` targets could probably also be eliminated.
-
-.. _XIOS build instructions: http://forge.ipsl.jussieu.fr/ioserver/wiki/documentation
-
-
 Building on :kbd:`salish`
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
