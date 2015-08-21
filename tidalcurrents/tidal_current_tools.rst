@@ -47,15 +47,17 @@ Python Scripts
 Tidal ellipse calculation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Some python functions have been written to facilitate calculating amplitude and phase from velocity vectors and to calculate the ellipse parameters from these values. These scripts are found in :file:`tools/SalishSeaTools/salishsea_tools/ellipse.py`
+Some python functions have been written to facilitate calculating amplitude and phase from velocity vectors and to calculate the ellipse parameters from these values. These scripts are found in :file:`tools/SalishSeaTools/salishsea_tools/ellipse.py` and :file:`tools/SalishSeaTools/salishsea_tools/tidetools.py`
 
-* :file:`fittit` - This script fits a velocity vector time series to a formula and extracts the amplitude and phase of each component in the formula.::
+* :file:`tidetools.fittit` - This script fits a time series to a tide curve and extracts the amplitude and phase of each tidal constituent in the tide curve.::
 
-   fittit(uaus, time, nconst)
+   tidetools.fittit(uaus, time, nconst)
 
-This function finds tidal parameters from a tidal current component across a specified area of the grid at a single depth, at a single point through the water column or a single depth averaged grid point. Must perform twice, once for each tidal current vector in order to complete the analysis.
-The nconst input sets how many tidal harmonic constituents will be analysed. They come in pairs and in order of importance the domain. It returns a dictionary object containing the phase and amplitude for each component for the velocity given. The fit performed in fittit is based on Xu, Z. (2000).
+This function finds tidal parameters from a tidal constituent across a specified area of the grid at a single depth, at a single point through the water column or a single depth averaged grid point. For currents, this function must perform twice, once for each tidal current vector in order to complete the analysis. This function should also work with water level analysis.
 
+The nconst input sets how many tidal constituents will be analysed. They come in pairs and in order of importance the domain. It returns a dictionary object containing the phase and amplitude for each component for the input array.
+
+The fitting routine solves for a set of amplitude and phase parameters (one set for each tidal constituent) by finding the best match between the model's time series and a tidal curve that is predetermined by the tidal constituents that it will be solving for. Below is an example of the equation for the u and v tidal curves for the M2 and K1 constituents:
 
     	.. math::
 	  u = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(\omega_{K1}t-\theta_{K1})
@@ -63,28 +65,22 @@ The nconst input sets how many tidal harmonic constituents will be analysed. The
 	  v = mean + A_{M2}cos(\omega_{M2}t-\theta_{M2}) + A_{K1}cos(\omega_{K1}t-\theta_{K1})
 
 
-where :math:`\omega_{M2}` and :math:`\omega_{K1}`, :math:`\theta_{M2}` and :math:`\theta_{K1}` and :math:`A_{M2}` and :math:`A_{K1}` are the frequencies, phase lags and amplitudes for the M2 and K1 components.
+where :math:`\omega_{M2}` and :math:`\omega_{K1}`, :math:`\theta_{M2}` and :math:`\theta_{K1}` and :math:`A_{M2}` and :math:`A_{K1}` are the frequencies, phase lags and amplitudes for the M2 and K1 components. "Mean" is an unknown values that the fitting routine will solve for however it is not used in the tidal ellipse calculations.
 
+* :file:`ellipse.ellipse_params` - This script converts from the amplitude and phase lag parameters to the tidal current ellipse parameters.::
 
-* :file:`ellipse_params` - This script converts from the amplitude and phase lag parameters to the tidal current ellipse parameters.::
-
-    ellipse_params(uamp, upha, vamp, vpha)
+    ellipse.ellipse_params(uamp, upha, vamp, vpha)
 
 This function calculates the tidal ellipse parameters based on the conversions shown in Xu, Z. (2000). It outputs the positively and negatively rotating amplitude and phase, as well as the major and minor axis and the axis tilt and phase.
 
-* :file:`get_params_nowcast` - This script gives the tidal ellipse parameters for a given date range and location based on the hourly model output values.::
+* :file:`ellipse.get_params_nowcast` - This script gives the tidal ellipse parameters for a given date range and location based on the hourly model output values.::
 
-    get_params_nowcast(to, tf, i, j, path, nconst, depthrange='None', depav=False, tidecorr=CorrTides)
+    ellipse.get_params_nowcast(to, tf, i, j, path, nconst, depthrange='None', depav=False, tidecorr=CorrTides)
 
 This function loads all the data between the start and the end date that contains hourly velocity netCDF4 files. Then it mask, unstaggers and rotates the velocities by component about the grid point described by the i and j. Lastly it fits the velcities and caculates the tidal ellipse parameters for that date range using the fittit and ellipse_param functions above.
-After finding the amplitude and phase of the orthogonal vector by using fittit it does a tide correction  which is set to September 10th 2014 by the nowcast. These values values and other constituents tide corrections can be found in: /data/dlatorne/MEOPAR/SalishSea/nowcast/08jul15/ocean.output/.
+
+After finding the amplitude and phase of the orthogonal vector by using fittit it does a nodal correction, determined by the start date of the nowcasts, Sept 10, 2014. These values values and other constituents tide corrections can be found in: /data/dlatorne/MEOPAR/SalishSea/nowcast/08jul15/ocean.output/.
 This function outputs a dictionary object containing the ellipse parameters for each tidal harmonic constituent.
-
-* :file:`plot_ellipses_area`  &  :file:`plot_ellipses` - These scripts are used to plot the tidal ellipses on a map based on the parameters calculated by the functions above.::
-
-    plot_ellipses_area(params, depth='None', imin=0, imax=398, jmin=0, jmax=898)
-
-    plot_ellipses(params, x, y, depth='None', numellips=1, imin=0, imax=398, jmin=0, jmax=898)
 
 * In this notebook: `UsingEllipse.py.ipynb`_  there are simple examples of the functions above.
 
