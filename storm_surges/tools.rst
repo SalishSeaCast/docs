@@ -80,7 +80,7 @@ These scripts are found in the :file:`analysis/storm_surges/data/` repository an
 
 * :file:`get_ttide_8_filter.m` - This script does most of the work. ::
 
-   get_ttide_8_filter(csvfilename, location, starts, ends, type)
+   get_ttide_8_filter(csvfilename, location, starts, ends, type, exlcude_long)
 
 This function uses water level observations stored in csvfilename to calculate tidal harmonics and tidal predictions over a time period defined by date strings :file:`starts` and :file:`ends`.
 Water level observations can either be from the DFO website or the NOAA website, as specified by the type argument.
@@ -93,6 +93,8 @@ This file contains three types of tidal predictions:
     + pred_all - predictions with all constituents except shallow water and ones with low signal to noise
     + pred_8 - predictions with only eight constituents
     + pred_noshallow - like pred_all but with no shallow water constituents.
+
+exclude_long is a flag that specifies whether or not long period constituents should be exlcuded from the tidal predictions. exclude_long = 1 means the exlcude long period constituents like Sa, Ssa, etc from the tidal prediction. exclude_long = 0 means include long period constituents in tidal predictions. Note that if exclude_long=0 then a lot of the variability long period between pred_all and pred_8 is due to because pred_all uses long period constituents but pred_8 does not.
 
 * :file:`calculate_harmonics.m` and :file:`calculate_harmonics_NOAA.m` - these files perform the harmonics analysis for DFO and NOAA data respectively.
 * :file:`filter_tides.m` and :file:`filter_tides_NOAA.m` - these files do the filtering work.
