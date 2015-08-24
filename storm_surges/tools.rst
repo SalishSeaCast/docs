@@ -78,48 +78,34 @@ MATLAB Scripts
 Serveral MATLAB scripts have been designed to calculate the tidal predictions as described above.
 These scripts are found in the :file:`analysis/storm_surges/data/` repository and are described below.
 
-* :file:`get_ttide_8_filter.m` - This script does most of the work. ::
+* :file:`generate_tidal_predictions.m` - This script does most of the work. ::
 
-   get_ttide_8_filter(csvfilename, location, starts, ends, type, exlcude_long)
+   generate_tidal_predictions(filename, location, starts, ends, type, exlcude_long, cut_off)
 
-This function uses water level observations stored in csvfilename to calculate tidal harmonics and tidal predictions over a time period defined by date strings :file:`starts` and :file:`ends`.
-Water level observations can either be from the DFO website or the NOAA website, as specified by the type argument.
-The calculated haromincs are saved in :file:`location_harmonics_date1_date2_filter.csv` where location is one of the arguments of :file:`get_ttide_8`.
-:file:`date1` and :file:`date2` are string representations of the start and end date of the observation time series.
-
-This function also saves a file called :file:`location_t_tide_compare8_starts_ends_snr2_filter.csv` where :file:`starts` and :file:`ends` are arguments of :file:`get_ttide_8_filter`.
-This file contains three types of tidal predictions:
+  - This function uses water level observations or harmonic constituents stored in filename to calculate tidal predictions over a time period defined by date strings :file:`starts` and :file:`ends`.
+  - Water level observations can either be from the DFO website or the NOAA website, as specified by the type argument. Or a file with harmonic constitents from CHS can be used, in which case type is set to 'CHS'.
+  - If a harmonic analysis is necessary, the calculated haromincs are saved in :file:`location_harmonics_date1_date2_filter.csv` where location is one of the arguments of :file:`generate_tidal_predictions.m`.
+  - :file:`date1` and :file:`date2` are string representations of the start and end date of the observation time series. Note that this time series should be less than one year but long enough to separate the important constituents. Typcally, one year is a reasonable length.
+  - The tidal predictions are stored in  a file called :file:`location_tidal_prediction_starts_ends.csv` where :file:`starts` and :file:`ends` are arguments of :file:`generate_tidal_predictions.m`. This file contains three types of tidal predictions:
 
     + pred_all - predictions with all constituents except shallow water and ones with low signal to noise
     + pred_8 - predictions with only eight constituents
     + pred_noshallow - like pred_all but with no shallow water constituents.
 
-exclude_long is a flag that specifies whether or not long period constituents should be exlcuded from the tidal predictions. exclude_long = 1 means the exlcude long period constituents like Sa, Ssa, etc from the tidal prediction. exclude_long = 0 means include long period constituents in tidal predictions. Note that if exclude_long=0 then a lot of the variability long period between pred_all and pred_8 is due to because pred_all uses long period constituents but pred_8 does not.
+  - exclude_long is a flag that specifies whether or not long period constituents should be exlcuded from the tidal predictions. exclude_long = 1 means exlcude long period constituents like Sa, Ssa, etc from the tidal prediction. exclude_long = 0 means include long period constituents in tidal predictions. Note that if exclude_long=0 then a lot of the variability between pred_all and pred_8 because pred_all uses long period constituents but pred_8 does not.
+
+  - cut_off is the amplitude at which non-tidal energy is removed from the harmonic analysis. Time periods for which the filtered time series is greater than cut_off are removed from the water level time series and then the harmonic analysis is performed. A reasonable value is 0.3. If filtering is not desired then set cut_off very high (>1).
 
 * :file:`calculate_harmonics.m` and :file:`calculate_harmonics_NOAA.m` - these files perform the harmonics analysis for DFO and NOAA data respectively.
 * :file:`filter_tides.m` and :file:`filter_tides_NOAA.m` - these files do the filtering work.
 * :file:`get_ttide_8.m` and :file:`calculate_harmonics.m` - these files only work for DFO data and do not apply the filtering or removal of shallow water/ long period constituents.
+* :file:`read_CHS_harmonics.m` - read the CHS tidal harmonics from a file.
+
 
 .. note::
 
   The NOAA observations csv files should have the station's latitude in the second row, second column of the file.
 
-Other tidal predictions
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-A few other files have been developed to generate tidal predictions based on Canadian Hydrographic Service constituents.
-These methods do not remove the long period/shallow water constituents.
-These files are in a private repository :file:`private-tools/tides`.
-
-* :file:`tide_pred8.m` - generate tidal prediction with all CHS constituents and with only eight.
-
-The function works in a similar manner to the other ones.  ::
-
-   tide_pred8(tidefile,location,starts, ends)
-
-Predictions are saved in a file :file:`location_atide_compare8_starts_ends.csv`.
-
-* :file:`read_harmonics.m` - read the CHS tidal harmonics from a file.
 
 Storm surge forcing files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
