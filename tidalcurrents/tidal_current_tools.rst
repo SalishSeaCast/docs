@@ -93,8 +93,7 @@ Loading and processing of the observational data from the ONC VENUS Central, Eas
 Processing scripts
 ~~~~~~~~~~~~~~~~~~~~~
 
-* The first part is :file:`GET_DATA_fun.m` This script will get the data that is directly output from the ADCP. It
- does this for the two days before the day indicated. It will put this data in a directory at pth/raw/ and organize it by year and month. This function calls a script written by Marlene Jeffries at Ocean Network Canada :file:`getSoGAdcpDataMay15_mod`. This script contains many functions that are used to ultimately retrieve the raw data from the ONC website.
+* The first part is :file:`GET_DATA_fun.m` This script will get the data that is directly output from the ADCP. It does this for the two days before the day indicated. It will put this data in a directory at pth/raw/ and organize it by year and month. This function calls a script written by Marlene Jeffries at Ocean Network Canada :file:`getSoGAdcpDataMay15_mod`. This script contains many functions that are used to ultimately retrieve the raw data from the ONC website.
 * The next step is to run :file:`GET_DEPL_fun.m` goes through all the data in the raw directory gathered by GETDATA_fun and bins it into 30 minutes bins. .
 * Lastly, the bulk of the processing is done in :file:`LTIM_fun.m`. This script filters out the tides, corrects the angles for the velocities to get major axis in the direction of the flood current.
 
