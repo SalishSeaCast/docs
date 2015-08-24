@@ -32,7 +32,7 @@ Table 1: Sensitivity to Frequency and Length Comparison
 | Central |  Quarter-Hourly                         | Hourly                                  | Hourly (6months)                        |
 |         |                                         |                                         |                                         |
 +=========+============+============+===============+============+============+===============+============+============+===============+
-| Depth   | Major-Axis | Minor-Axis |  Inclination  | Major-Axis | Minor-Axis |  Inclination  | Major-Axis | Minor-Axis |  Inclination  |  
+| Depth   | Major-Axis | Minor-Axis |  Inclination  | Major-Axis | Minor-Axis |  Inclination  | Major-Axis | Minor-Axis |  Inclination  |
 | (m)     |  (m/s)     |   (m/s)    | (deg. ccw E)  |  (m/s)     |   (m/s)    | (deg. ccw E)  |  (m/s)     |   (m/s)    | (deg. ccw E)  |
 +---------+------------+------------+---------------+------------+------------+---------------+------------+------------+---------------+
 | 0.5     | 0.29       | -0.13      | 129           | 0.29       | -0.13      | 129           | 0.20       | -0.08      | 135           |
