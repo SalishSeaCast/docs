@@ -126,6 +126,7 @@ CODAR
 
 
 * The figure below is the phase of the M2 tidal constituents from the model output at 0.5 m depth throughout the CODAR region compared to the observational values processed by Dr. Mark Halverson.
+
 .. _CODAR_phase:
 
 .. figure:: CODARM2pha.png
