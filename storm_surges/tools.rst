@@ -11,7 +11,7 @@ The Surge
 
 We are often interested in the behaviour of the surge component of the water level, that is, the anomaly after the tides have been removed.
 Further, we could like to compare the modelled surge to the observed surge.
-To determine the modelled surge, we perform two simulations: one with all of our forcing conditions, including the tides, atmopsheric conditions, rivers, and sea surface height at the open boundaries and another with only the tidal forcing and rivers.
+To determine the modelled surge, we perform two simulations: one with all of our forcing conditions, including the tides, atmospheric conditions, rivers, and sea surface height at the open boundaries and another with only the tidal forcing and rivers.
 We define the modelled surge as the difference between the sea surface height of these two simulations.
 
 To calculate the observed surge, we need water level observations and tidal predictions.
@@ -32,10 +32,10 @@ Tidal predictions
 ^^^^^^^^^^^^^^^^^^
 
 Tidal predictions are generated using a MATLAB package called `t_tide`_.
-The general prodcedure is as follows:
+The general procedure is as follows:
 
 1. Perform a harmonic analysis on a year-long time series using :file:`t_tide`.
-2. Use the tidal constituents produced by the harmonic analysis to generate a tidal prediction. Typically, 67 constituents are anlayzed with :file:`t_tide`
+2. Use the tidal constituents produced by the harmonic analysis to generate a tidal prediction. Typically, 67 constituents are analyzed with :file:`t_tide`
 
 However, there are some subtleties that need to be considered before we generate the tidal predictions for use in residual calculations.
 
@@ -45,13 +45,13 @@ Filtering
 ~~~~~~~~~~~~~~~~~
 
 In a year with many storm surges, the harmonic analysis may result in over predicted constituents due to the large surges.
-As such, before the harmonic analysis is perfomed, we filter the time series by applying a Doodson tide filter (Parker, 2007) and we remove periods with large non-tidal energy.
+As such, before the harmonic analysis is performed, we filter the time series by applying a Doodson tide filter (Parker, 2007) and we remove periods with large non-tidal energy.
 The harmonic analysis is then applied to the filtered time series.
 
 Long Period Constituents
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-In a harmonic analysis, long period constituents (Sa, Ssa, etc) in this region are often contaminated by non-tidal energy due to seasonal meteoroligcal events. We would like to represent this seasonal variability in our residual forcing. As such, we do not include long period constituents in our tidal predictions.
+In a harmonic analysis, long period constituents (Sa, Ssa, etc) in this region are often contaminated by non-tidal energy due to seasonal meteorological events. We would like to represent this seasonal variability in our residual forcing. As such, we do not include long period constituents in our tidal predictions.
 
 Constituents with low signal to noise ratio
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,7 +65,7 @@ Model Correction
 Because our model is forced with only 8 tidal constituents, our water level predictions are missing some tidal energy.
 We have attempted to correct for the missing energy in the following way.
 
-1. Generate a tidal prediction with constituents from the harmonic analysis (excluding long period constitents, constituents with low signal to noise ratio, and shallow water constituents).
+1. Generate a tidal prediction with constituents from the harmonic analysis (excluding long period constituents, constituents with low signal to noise ratio, and shallow water constituents).
 2. Generate a tidal prediction with only the eight constituents used to force the model.
 3. Calculate the difference between these two predictions and add to the model sea surface height as a correction.
 
@@ -75,24 +75,23 @@ The shallow water constituents are excluded from the tidal prediction because th
 MATLAB Scripts
 ~~~~~~~~~~~~~~~
 
-Serveral MATLAB scripts have been designed to calculate the tidal predictions as described above.
+Several MATLAB scripts have been designed to calculate the tidal predictions as described above.
 These scripts are found in the :file:`analysis/storm_surges/data/` repository and are described below.
 
 * :file:`generate_tidal_predictions.m` - This script does most of the work. ::
 
-   generate_tidal_predictions(filename, location, starts, ends, type, exlcude_long, cut_off)
+   generate_tidal_predictions(filename, location, starts, ends, type, exclude_long, cut_off)
 
   - This function uses water level observations or harmonic constituents stored in filename to calculate tidal predictions over a time period defined by date strings :file:`starts` and :file:`ends`.
-  - Water level observations can either be from the DFO website or the NOAA website, as specified by the type argument. Or a file with harmonic constitents from CHS can be used, in which case type is set to 'CHS'.
-  - If a harmonic analysis is necessary, the calculated haromincs are saved in :file:`location_harmonics_date1_date2_filter.csv` where location is one of the arguments of :file:`generate_tidal_predictions.m`.
-  - :file:`date1` and :file:`date2` are string representations of the start and end date of the observation time series. Note that this time series should be less than one year but long enough to separate the important constituents. Typcally, one year is a reasonable length.
+  - Water level observations can either be from the DFO website or the NOAA website, as specified by the type argument. Or a file with harmonic constituents from CHS can be used, in which case type is set to 'CHS'.
+  - If a harmonic analysis is necessary, the calculated harmonics are saved in :file:`location_harmonics_date1_date2_filter.csv` where location is one of the arguments of :file:`generate_tidal_predictions.m`. :file:`date1` and :file:`date2` are string representations of the start and end date of the observation time series. Note that this time series should be less than one year but long enough to separate the important constituents. Typically, one year is a reasonable length.
   - The tidal predictions are stored in  a file called :file:`location_tidal_prediction_starts_ends.csv` where :file:`starts` and :file:`ends` are arguments of :file:`generate_tidal_predictions.m`. This file contains three types of tidal predictions:
 
     + pred_all - predictions with all constituents except shallow water and ones with low signal to noise
     + pred_8 - predictions with only eight constituents
     + pred_noshallow - like pred_all but with no shallow water constituents.
 
-  - exclude_long is a flag that specifies whether or not long period constituents should be exlcuded from the tidal predictions. exclude_long = 1 means exlcude long period constituents like Sa, Ssa, etc from the tidal prediction. exclude_long = 0 means include long period constituents in tidal predictions. Note that if exclude_long=0 then a lot of the variability between pred_all and pred_8 because pred_all uses long period constituents but pred_8 does not.
+  - exclude_long is a flag that specifies whether or not long period constituents should be excluded from the tidal predictions. exclude_long = 1 means exclude long period constituents like Sa, Ssa, etc from the tidal prediction. exclude_long = 0 means include long period constituents in tidal predictions. Note that if exclude_long=0 then a lot of the variability between pred_all and pred_8 because pred_all uses long period constituents but pred_8 does not.
 
   - cut_off is the amplitude at which non-tidal energy is removed from the harmonic analysis. Time periods for which the filtered time series is greater than cut_off are removed from the water level time series and then the harmonic analysis is performed. A reasonable value is 0.3. If filtering is not desired then set cut_off very high (>1).
 
