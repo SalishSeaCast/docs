@@ -11,7 +11,7 @@ Tidal current sensitivity
 
 
 * We wonder if it is beneficial to compile the quarter-hourly data for the velocities and whether or not it would produce a more accurate tidal ellipse.
-* The quarter-hourly output has started on May 9th 2015, where as the hourly output has been produced with the current tidal configuration since November 26th 2014. 
+* The quarter-hourly output has started on May 9th 2015, where as the hourly output has been produced with the current tidal configuration since November 26th 2014.
 * The separation of harmonic tidal constituents is important when we want to look at a single constituent's effect on the current. This is accomplished with a long time series. Therefore, we want to see the effects of the length of a time series on the tidal ellipses.
 * The figure below is a comparison of the depth profile of tidal ellipses for one month of quarter-hourly output, one month of hourly output and 6 months hourly output.
 
@@ -22,7 +22,7 @@ Tidal current sensitivity
 
 
 
-* The table below is populated with the values that were used to create the figure above. 
+* The table below is populated with the values that were used to create the figure above.
 
 Table 1: Sensitivity to Frequency and Length Comparison
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -53,7 +53,7 @@ Table 1: Sensitivity to Frequency and Length Comparison
 +---------+------------+------------+---------------+------------+------------+---------------+------------+------------+---------------+
 | 16.8    | 0.17       | -0.05      | 131           | 0.17       | -0.05      | 131           | 0.16       | -0.04      | 136           |
 +---------+------------+------------+---------------+------------+------------+---------------+------------+------------+---------------+
-| 19.5    | 0.16       | -0.04      | 129           | 0.16       | -0.04      | 129           | 0.16       | -0.03      | 135           |  
+| 19.5    | 0.16       | -0.04      | 129           | 0.16       | -0.04      | 129           | 0.16       | -0.03      | 135           |
 +---------+------------+------------+---------------+------------+------------+---------------+------------+------------+---------------+
 | 24.1    | 0.15       | -0.02      | 125           | 0.15       | -0.02      | 125           | 0.16       | -0.02      | 132           |
 +---------+------------+------------+---------------+------------+------------+---------------+------------+------------+---------------+
@@ -71,8 +71,8 @@ Table 1: Sensitivity to Frequency and Length Comparison
 +---------+------------+------------+---------------+------------+------------+---------------+------------+------------+---------------+
 | 306.8   | 0.15       | 0.05       | 109           | 0.15       | 0.05       | 109           | 0.14       | 0.06       | 110           |
 +---------+------------+------------+---------------+------------+------------+---------------+------------+------------+---------------+
-  
- 
+
+
 Frequency
 ~~~~~~~~~~
 
@@ -87,7 +87,7 @@ Length
 
     * The smaller surface currents indicates that it averages out some of the surface currents that are due to winds or Fraser River outflow.
     * The smoother variations throughout the water column. It is not logical for the flow to fluctuate every couple of meters throughout the water column.
-      
+
 * A longer time series enables us to separate and resolve the individual harmonic constituents so that we can be certain that we are only looking at the M2 tidal constituent.
 * We observe the benefits of a longer time series at the ONC VENUS East node as well.
 
@@ -110,21 +110,21 @@ Table 2: The effect of seasonality on tidal ellipse parameters
 | Depth   | Major-Axis | Minor-Axis| Inclination  |  Major-Axis | Minor-Axis| Inclination  |
 | (m)     |  (m/s)     |   (m/s)   | (deg. ccw E) |    (m/s)    |   (m/s)   | (deg. ccw E) |
 +---------+------------+-----------+--------------+-------------+-----------+--------------+
-| 0.5     | 0.38       | -0.14     | 127          | 0.40        | -0.20     | 128          | 
+| 0.5     | 0.38       | -0.14     | 127          | 0.40        | -0.20     | 128          |
 +---------+------------+-----------+--------------+-------------+-----------+--------------+
 | 2.5     | 0.33       | -0.11     | 127          | 0.35        | -0.16     | 128          |
 +---------+------------+-----------+--------------+-------------+-----------+--------------+
 | 4.5     | 0.29       | -0.06     | 125          | 0.30        | -0.09     | 126          |
 +---------+------------+-----------+--------------+-------------+-----------+--------------+
-| 6.5     | 0.27       | -0.04     | 122          | 0.26        | -0.04     | 124          | 
+| 6.5     | 0.27       | -0.04     | 122          | 0.26        | -0.04     | 124          |
 +---------+------------+-----------+--------------+-------------+-----------+--------------+
-| 8.5     | 0.27       | -0.03     | 118          | 0.24        | -0.01     | 122          | 
+| 8.5     | 0.27       | -0.03     | 118          | 0.24        | -0.01     | 122          |
 +---------+------------+-----------+--------------+-------------+-----------+--------------+
-| 10.5    | 0.27       | -0.03     | 115          | 0.24        | 0.01      | 119          | 
+| 10.5    | 0.27       | -0.03     | 115          | 0.24        | 0.01      | 119          |
 +---------+------------+-----------+--------------+-------------+-----------+--------------+
-| 12.5    | 0.28       | -0.04     | 115          | 0.24        | 0.01      | 117          | 
+| 12.5    | 0.28       | -0.04     | 115          | 0.24        | 0.01      | 117          |
 +---------+------------+-----------+--------------+-------------+-----------+--------------+
-| 14.6    | 0.29       | -0.04     | 116          | 0.25        | 0.00      | 116          | 
+| 14.6    | 0.29       | -0.04     | 116          | 0.25        | 0.00      | 116          |
 +---------+------------+-----------+--------------+-------------+-----------+--------------+
 | 16.8    | 0.30       | -0.05     | 117          | 0.26        | -0.01     | 117          |
 +---------+------------+-----------+--------------+-------------+-----------+--------------+
@@ -150,7 +150,7 @@ Table 2: The effect of seasonality on tidal ellipse parameters
 
 .. figure:: seasonal.png
 
-* The Central node has a similar but muted difference between the seasons. 
+* The Central node has a similar but muted difference between the seasons.
 * The bottom ~150m are mostly the same throughout winter and spring. We expect this because there isn't much movement there.
-* The semi-major and semi-minor axis are larger throughout the upper part of the water column in the spring. 
+* The semi-major and semi-minor axis are larger throughout the upper part of the water column in the spring.
 
