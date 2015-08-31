@@ -69,6 +69,7 @@ In addition to the configurations from the NEMO :program:`svn` checkout,
 the repo contains:
 
 * :file:`SalishSea`: The initial full domain Salish Sea development configuration
+* :file:`SalishSea_TRC`: SalishSea above plus passive tracers
 * :file:`SalishSea_no_IOM`: A copy of the :file:`SalishSea` configuration compiled without the :kbd:`key_iom_put` CPP key
 * :file:`SALISH_amm`: A very early stepping-stone configuration created during the learning process of creating a Salish Sea configuration based on the :file:`AMM12` configuration
 * :file:`SALISH_JPP`: The Salish Sea sub-domain configuration used to compare with CONCEPTS-110
