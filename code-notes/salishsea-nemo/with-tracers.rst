@@ -1,8 +1,8 @@
 .. _With-Tracers:
 
-*************************************
+****************************************
 Adding Passive Tracers to SalishSea
-*************************************
+****************************************
 
 This page provides instructions on how a configuration including
 tracers was built for the Salish Sea model and how to use it and
@@ -10,7 +10,7 @@ modify it.
 
 
 SalishSea_TRC Configuration
------------------------
+----------------------------
 
 The configuration including the tracers is in SalishSea_TRC.  Provided
 you have an upto date clone of the NEMO 3.4 code, you can
@@ -23,7 +23,7 @@ In :kbd:`NEMO-code/NEMOGCM/CONFIG`
     ./makenemo -n SalishSea_TRC
 
 New MY_SRC Files
---------------
+-----------------
 
 There are three extra modified fortran files to be found in MY_SRC (all
 the other files are symlinked to the main SalishSea configuration).
@@ -44,7 +44,7 @@ that cells are defined by lats and lons.  Specifying grid locations
 plays havoc when running mpi.
 
 New Namelist Files
----------------
+------------------
 
 Two new namelist files are included: `namlist_top` and
 `namelist_my_trc`.  The main `namelist` should be copied or symlinked
@@ -58,13 +58,13 @@ could also add tracer damping using this namelist.  Also change this
 file to use a restart file for the tracers.
 
 New IODEF.xml
-------------
+---------------
 
 Writing out of the tracers goes into its own nc file, prtc.  The
 example give writes out 1h data.
 
 Grid/Input Files
--------------
+----------------
 
 Use appropriate files from the SalishSea configuration.
 
