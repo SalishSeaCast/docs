@@ -46,22 +46,22 @@ plays havoc when running mpi.
 New Namelist Files
 ------------------
 
-Two new namelist files are included: `namlist_top` and
-`namelist_my_trc`.  The main `namelist` should be copied or symlinked
+Two new namelist files are included: :kbd:`namlist_top` and
+:kbd:`namelist_my_trc`.  The main :kbd:`namelist` should be copied or symlinked
 from an appropriate SalishSea namelist.
 
-`namelist_my_trc` is blank.  If one wanted to define the depths and
+:kbd:`namelist_my_trc` is blank.  If one wanted to define the depths and
 locations of outflows in a namelist, this would be the one to do it.
 
-`namelist_top` defines the output names of the five tracers.  You
+:kbd:`namelist_top` defines the output names of the five tracers.  You
 could also add tracer damping using this namelist.  Also change this
 file to use a restart file for the tracers.
 
 New IODEF.xml
 ---------------
 
-Writing out of the tracers goes into its own nc file, prtc.  The
-example give writes out 1h data.
+Writing out of the tracers goes into its own netcdf4 file with key prtc.  The
+example given writes out 1h data.
 
 Grid/Input Files
 ----------------
