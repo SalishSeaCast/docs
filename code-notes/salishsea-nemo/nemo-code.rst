@@ -408,8 +408,12 @@ The result was confirmed to enable a successful build of :kbd:`NEMO-3.6r5628` an
 The following sections are in-process notes about getting to a running Salish Sea NEMO-3.6 model on various platforms.
 
 
+.. _BuildingAndTestingXIOS:
+
 Building and Testing XIOS
 -------------------------
+
+.. _BuildingXIOS-OnSalish:
 
 Building on :kbd:`salish`
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -461,6 +465,8 @@ As :kbd:`salish` has only 16 physical cores,
 running multiple :file:`xios_server.exe` processes that use parallel output is unnecessary,
 so the :kbd:`--netcdf_lib netcdf4_seq` option is used.
 
+
+.. _BuildingXIOS-OnJasper:
 
 Building on :kbd:`jasper`
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -518,6 +524,75 @@ At present,
 :kbd:`jasper` lacks the parallel versions of the netCDF4 library that is required to build XIOS_ so that it produces a single output file,
 hence the :kbd:`--netcdf_lib netcdf4_seq` option.
 
+
+.. _BuildingXIOS-OnOrcinus:
+
+Building on :kbd:`orcinus`
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+    These build notes for :kbd:`orcinus` are provisional.
+    They include hard-coded library version numbers and paths for new netCDF and HDF5 libary builds that were created in early October 2015.
+    The details below will change when those new libaries have been integrated into modules on :kbd:`orcinus`.
+
+On :kbd:`orcinus`,
+XIOS_ was successfully built with the following :file:`arch/arch-*` files:
+
+:file:`arch/arch-X64_ORCINUS.env`:
+
+.. code-block:: bash
+
+    module load intel
+
+:file:`arch/arch-X64_ORCINUS.path`:
+
+.. code-block:: bash
+
+    NETCDF_INC_DIR="/global/software/lib64/intel/ncsa-tools/netcdf-4.3.3.1/include"
+    NETCDF_INCDIR="-I $NETCDF_INC_DIR"
+    NETCDF_LIB_DIR="/global/software/lib64/intel/ncsa-tools/netcdf-4.3.3.1/lib"
+    NETCDF_LIB="-L$NETCDF_LIB_DIR -lirc -lnetcdf"
+
+    HDF5_LIB_DIR="/global/software/lib64/intel/ncsa-tools/hdf5-1.8.15p1/lib"
+    HDF5_LIB="-L$HDF5_LIB_DIR -lhdf5_hl -lhdf5 -lz"
+
+:file:`arch/arch-X64_ORCINUS.fcm`:
+
+.. code-block:: bash
+
+    %CCOMPILER      mpicc
+    %FCOMPILER      mpif90
+    %LINKER         mpif90
+
+    %BASE_CFLAGS    -diag-disable 1125 -diag-disable 279
+    %PROD_CFLAGS    -O3 -D BOOST_DISABLE_ASSERTS
+    %DEV_CFLAGS     -g -traceback
+    %DEBUG_CFLAGS   -DBZ_DEBUG -g -traceback -fno-inline
+
+    %BASE_FFLAGS    -D__NONE__
+    %PROD_FFLAGS    -O3
+    %DEV_FFLAGS     -g -O2 -traceback
+    %DEBUG_FFLAGS   -g -traceback
+
+    %BASE_INC       -D__NONE__
+    %BASE_LD        -lstdc++ -lirc -shared-intel
+
+    %CPP            mpicc -EP
+    %FPP            cpp -P
+    %MAKE           make
+
+using the command:
+
+.. code-block:: bash
+
+    $ ./make_xios --arch X64_ORCINUS --netcdf_lib netcdf4_seq --job 4
+
+Although :kbd:`orcinus` has the parallel versions of the netCDF4 library that is required to build XIOS_ so that it produces a single output file,
+only the output file per processor has been tested at time of writing,
+hence the :kbd:`--netcdf_lib netcdf4_seq` option.
+
+
+.. _TestingXIOS:
 
 Testing
 ~~~~~~~
@@ -616,8 +691,12 @@ on one of the files produces by the above test reduces the file size to 33% or i
 Note that the present build of NCO on :kbd:`jasper` is against the netCDF3 library so it cannot be used to do this deflation.
 
 
+.. _BuildingAndTesting-NEMO-3.6:
+
 Building and Testing NEMO-3.6
 -----------------------------
+
+.. _BuildingNEMO3.6OnSalish:
 
 Building on :kbd:`salish`
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -711,6 +790,66 @@ Important things to note:
   * Our :kbd:`arch` files are contained in the institution-specific directory :file:`NEMOGCM/ARCH/UBC_EOAS/`
   * The :kbd:`%XIOS_HOME` build variable uses the :envvar:`HOME` environment variable to locate the XIOS_ library to link with NEMO.
     It is assumed that XIOS_ is installed and built in :file:`$HOME/MEOPAR/XIOS/` on :kbd:`jasper`.
+
+
+.. _BuildingNEMO3.6OnOrcinus:
+
+Building on :kbd:`orcinus`
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+    These build notes for :kbd:`orcinus` are provisional.
+    They include hard-coded library version numbers and paths for new netCDF and HDF5 libary builds that were created in early October 2015.
+    The details below will change when those new libaries have been integrated into modules on :kbd:`orcinus`.
+
+On :kbd:`orcinus`,
+NEMO-3.6 was successfully built with the following :file:`NEMOGCM/ARCH/` file:
+
+:file:`NEMOGCM/ARCH/UBC_EOAS/arch-X64_ORCINUS.fcm`:
+
+.. code-block:: bash
+
+    %NCDF_HOME           /global/software/lib64/intel/ncsa-tools/netcdf-4.3.3.1
+    %HDF5_HOME           /global/software/lib64/intel/ncsa-tools/hdf5-1.8.15p1
+    %XIOS_HOME           $HOME/MEOPAR/XIOS
+
+    %NCDF_INC            -I%NCDF_HOME/include -I /global/software/lib64/intel/ncsa-tools/netcdf-fortran-4.4.0/include
+    %NCDF_LIB            -L%NCDF_HOME/lib -lnetcdf -L /global/software/lib64/intel/ncsa-tools/netcdf-fortran-4.4.0/lib -lnetcdff -L%HDF5_HOME/lib -lhdf5_hl -lhdf5
+    %XIOS_INC            -I%XIOS_HOME/inc
+    %XIOS_LIB            -L%XIOS_HOME/lib -lxios
+
+    %CPP               cpp
+    %FC                  mpif90
+    %FCFLAGS             -c -fpp -r8 -O3 -assume byterecl -heap-arrays
+    %FFLAGS              %FCFLAGS
+    %LD                  mpif90
+    %LDFLAGS             -lstdc++ -shared-intel
+    %FPPFLAGS            -P -C -traditional
+    %AR                  ar
+    %ARFLAGS             rcs
+    %MK                  make
+    %USER_INC            %XIOS_INC %NCDF_INC
+    %USER_LIB            %XIOS_LIB %NCDF_LIB
+
+using the commands:
+
+.. code-block:: bash
+
+    $ cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea
+    $ source orcinus_build.sh
+
+Important things to note:
+
+  * Our :kbd:`arch` files are contained in the institution-specific directory :file:`NEMOGCM/ARCH/UBC_EOAS/`
+  * The :kbd:`%XIOS_HOME` build variable uses the :envvar:`HOME` environment variable to locate the XIOS_ library to link with NEMO.
+    It is assumed that XIOS_ is installed and built in :file:`$HOME/MEOPAR/XIOS/` on :kbd:`orcinus`.
+
+The :command:`rebuild_nemo.exe` tool should also be built with the commands:
+
+.. .. code-block:: bash
+
+    $ cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS/REBUILD_NEMO
+    $ source orcinus_build.sh
 
 
 Testing the GYRE Configuration on :kbd:`salish`
