@@ -13,7 +13,7 @@ At the command line create your new environment, here called "mypython3" but you
 
 .. code-block:: bash
 
-   conda create -n mypython3 python=3.4
+   conda create -n mypython3 python=3
 
 To activate the environment:
 
