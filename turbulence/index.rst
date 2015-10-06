@@ -6,5 +6,6 @@ Configuring NEMO to model the Salish Sea requires careful consideration of the a
 .. toctree::
    :maxdepth: 2
   
+   literature
    lateral_viscosity
    vertical_mixing
