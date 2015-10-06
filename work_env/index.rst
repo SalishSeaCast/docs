@@ -50,6 +50,7 @@ please see the :ref:`QuickStartGuide` for instructions on setting working enviro
    hg_version_control
    anaconda_python
    python3_conda_environment
+   porting_to_python3
    salishsea_pkgs
    python_notes
    sphinx_docs
