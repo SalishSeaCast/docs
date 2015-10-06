@@ -8,11 +8,11 @@ This section documents modelling choices from other studies in this region or si
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
 | Study                    |Region           |  Model    | Horizontal Grid  | Vertical Grid          |Horizontal Mixing        | Vertical Mixing                 | Bottom Friction    |
 +==========================+=================+===========+==================+========================+=========================+=================================+====================+
-|Sutherland et al (2011)   | Salish Sea      | ROMS      | - min 280 m grid |- 20 terrain-following  | - constant diff 20 m2/s |- k-eps with Canuto A functions  |- quadratic  3e-3   |
-|                          | and Puget Sound |           | spacing          | - smoothing dh/h<0.4   | - no explicit viscosity |- background diff/visc 5e-6 m2/s |                    |
+|Sutherland et al (2011)   | Salish Sea      | ROMS      | - min 280 m res  |- 20 terrain-following  | - constant diff 20 m2/s |- k-eps with Canuto A functions  |- quadratic  3e-3   |
+|                          | and Puget Sound |           |                  | - smoothing dh/h<0.4   | - no explicit viscosity |- background diff/visc 5e-6 m2/s |                    |
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
-|Masson and Cummins (2004) | Salish Sea      | POM       | - 2km grid       |- 31 sigma levels       | - Smagorinsky           | - Mellor Yamada 2.5             |                    |
-|                          |                 |           | spacing          |                        | - sensitivity to HORCON |                                 |                    |
+|Masson and Cummins (2004) | Salish Sea      | POM       | - 2km res        |- 31 sigma levels       | - Smagorinsky           | - Mellor Yamada 2.5             |                    |
+|                          |                 |           |                  |                        | - sensitivity to HORCON |                                 |                    |
 |                          |                 |           |                  |                        | - HORCON = 0.03 or 0.06 |                                 |                    |
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
 | Foreman et al (2012)     | Discovery       | FVCOM     | - triangular     | - 21 sigma levels      | - Smagorinsky           | - q-eps (Tian and Chen, 2006)   |- log layer         |
@@ -20,7 +20,7 @@ This section documents modelling choices from other studies in this region or si
 |                          |                 |           |                  |                        |                         |                                 |- min 0.0025        |
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
 | Stacey et al (1995)      | Knight Inlet    | 2D        |                  |                        | - constant diff/visc    | - Mellor Yamada 2.5             | - quadratic        |
-|                          |                 |           |                  |                        | - choosen for stability | -adjustment for internal waves  |                    |
+|                          |                 |           |                  |                        | - choosen for stability | - adjustment for internal waves |                    |
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
 | Foreman et al (2006)     | Broughton       | ELCIRC    |                  | - z-coordinate         |                         | - GLS                           | - quadratic 0.003  |
 |                          | Archipelago     |           |                  | - smoothing dh/h<1     |                         |                                 |                    |
