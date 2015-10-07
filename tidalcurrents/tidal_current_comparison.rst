@@ -124,6 +124,10 @@ CODAR
 
 .. figure:: surfaceK1.png
 
+Full Surface Comparisons
+************************
+
+We have performed additional comparisons of the model phase over the full CODAR region. In the following plots, a harmonic analysis was performeder at the model surface grid cells (0.5m) from Nov. 26, 2014 to Apr. 26, 2015.
 
 * The figure below is the phase of the M2 tidal constituents from the model output at 0.5 m depth throughout the CODAR region compared to the observational values processed by Dr. Mark Halverson.
 
