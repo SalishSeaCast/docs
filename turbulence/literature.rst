@@ -9,7 +9,7 @@ This section documents modelling choices from other studies in this region or si
 | Study                    |Region           |  Model    | Horizontal Grid  | Vertical Grid          |Horizontal Mixing        | Vertical Mixing                 | Bottom Friction    |
 +==========================+=================+===========+==================+========================+=========================+=================================+====================+
 |Sutherland et al (2011)   | Salish Sea      | ROMS      | - min 280 m res  |- 20 terrain-following  | - constant diff 20 m2/s |- k-eps with Canuto A functions  |- quadratic  3e-3   |
-|                          | and Puget Sound |           |                  | - smoothing dh/h<0.4   | - no explicit viscosity |- background diff/visc 5e-6 m2/s |                    |
+|                          | and Puget Sound |           |                  |- smoothing dh/h<0.4    | - no explicit viscosity |- background diff/visc 5e-6 m2/s |                    |
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
 |Masson and Cummins (2004) | Salish Sea      | POM       | - 2km res        |- 31 sigma levels       | - Smagorinsky           | - Mellor Yamada 2.5             |                    |
 |                          |                 |           |                  |                        | - sensitivity to HORCON |                                 |                    |
