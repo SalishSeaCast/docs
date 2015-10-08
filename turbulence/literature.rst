@@ -33,6 +33,7 @@ This section documents modelling choices from other studies in this region or si
 |                          |  estuary        |           |   & estuary      | - smoothing dh/h<0.8   |                         | - K-eps with Canuto A functions | - quadratic 3e-3   |
 |                          |                 |           |                  | - 20 sigma levels      |                         | - background diff/visc 5e-6 m2/s|                    |       
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
+
 References
 ==========
 
