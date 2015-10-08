@@ -29,7 +29,10 @@ This section documents modelling choices from other studies in this region or si
 |                          | Archipelago     |           |                  | - higher res at surface| - coefficient 0.2       | - background diff 1e-6 m2/s     | - cd0 = 0.003      |
 |                          |                 |           |                  | - higher res at bottom |                         | - surface wave mixing param     | - roughness=0.005m |
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
-
+| MacCready et al (2009)   |  Columbia River |  ROMS     | -400m res plume  |  -s-coordinate         |                         |  -GLS                           |    -log layer      |  
+|                          |  estuary        |           |   & estuary      |  -smoothing dh/h<0.8   |                         |  -K-eps with Canuto A functions |    -quadratic 3e-3 |
+|                          |                 |           |                  |  -20 sigma levels      |                         |  -background diff/visc 5e-6 m2/s|                    |       
++--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
 References
 ==========
 
@@ -39,3 +42,4 @@ References
 - Masson and Cummins (2004). Observations and modeling of seasonal variability in the Straits of Georgia and Juan de Fuca. Journal of Marine Research.
 - Sutherland  et al (2011). A Model Study of the Salish Sea Estuarine Circulation. Journal of Physical Oceanography.
 - Stacey et al (1995). A Numerical Model of the Circulation in Knight Inlet, British Columbia, Canada. Journal of Physical Oceanography.
+- MacCready e al (2009). A model study of tide- and wind-induced mixing in the COlumbia River Estuary and plume. Continental Shelf Research.
