@@ -35,7 +35,7 @@ This section documents modelling choices from other studies in this region or si
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
 
 References
-==========
+----------
 
 - Foreman et al (2006). Estuarine and Tidal Currents in the Broughton Archipelago. Atmosphere-Ocean.
 - Foreman et al (2009). A finite volume model simulation for the Broughton Archipelago, Canada. Ocean Modelling. 
