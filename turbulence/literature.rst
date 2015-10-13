@@ -43,4 +43,4 @@ References
 - Masson and Cummins (2004). Observations and modeling of seasonal variability in the Straits of Georgia and Juan de Fuca. Journal of Marine Research.
 - Sutherland  et al (2011). A Model Study of the Salish Sea Estuarine Circulation. Journal of Physical Oceanography.
 - Stacey et al (1995). A Numerical Model of the Circulation in Knight Inlet, British Columbia, Canada. Journal of Physical Oceanography.
-- MacCready et al (2009). A model study of tide- and wind-induced mixing in the Columbia River Estuary and plume. Continental Shelf Research.
+- MacCready et al (2008). A model study of tide- and wind-induced mixing in the Columbia River Estuary and plume. Continental Shelf Research.
