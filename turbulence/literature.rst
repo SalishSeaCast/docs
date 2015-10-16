@@ -8,7 +8,7 @@ This section documents modelling choices from other studies in this region or si
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
 | Study                    |Region           |  Model    | Horizontal Grid  | Vertical Grid          |Horizontal Mixing        | Vertical Mixing                 | Bottom Friction    |
 +==========================+=================+===========+==================+========================+=========================+=================================+====================+
-|Sutherland et al (2011)   | Salish Sea      | ROMS      | - min 280 m res  |- 20 sigma levels       | - constant diff 2 m2/s  |- k-eps with Canuto A functions  |- quadratic  3e-3   |
+|Sutherland et al (2011)   | Salish Sea      | ROMS      | - min 280 m res  |- 20 terrain-following  | - constant diff 20 m2/s |- k-eps with Canuto A functions  |- quadratic  3e-3   |
 |                          | and Puget Sound |           |                  |- smoothing dh/h<0.4    | - no explicit viscosity |- background diff/visc 5e-6 m2/s |                    |
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
 |Masson and Cummins (2004) | Salish Sea      | POM       | - 2km res        |- 31 sigma levels       | - Smagorinsky           | - Mellor Yamada 2.5             |                    |
@@ -33,9 +33,13 @@ This section documents modelling choices from other studies in this region or si
 |                          |  estuary        |           |   & estuary      | - smoothing dh/h<0.8   |                         | - K-eps with Canuto A functions | - quadratic 3e-3   |
 |                          |                 |           |                  | - 20 sigma levels      |                         | - background diff/visc 5e-6 m2/s|                    |       
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
+| Baptista et al (2005)    | Columbia River  |  ELCIRC   |                  | - z-coordinate         |                         |   - kkl closure                 | - spatially varying|
+|                          |                 |  within   |                  |                        |                         |   - max diff 5e-5 m2/s          |    cd0             |
+|                          |                 |  CORIE    |                  |                        |                         |                                 |                    |
++--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
 
 References
-----------
+==========
 
 - Foreman et al (2006). Estuarine and Tidal Currents in the Broughton Archipelago. Atmosphere-Ocean.
 - Foreman et al (2009). A finite volume model simulation for the Broughton Archipelago, Canada. Ocean Modelling. 
@@ -43,4 +47,5 @@ References
 - Masson and Cummins (2004). Observations and modeling of seasonal variability in the Straits of Georgia and Juan de Fuca. Journal of Marine Research.
 - Sutherland  et al (2011). A Model Study of the Salish Sea Estuarine Circulation. Journal of Physical Oceanography.
 - Stacey et al (1995). A Numerical Model of the Circulation in Knight Inlet, British Columbia, Canada. Journal of Physical Oceanography.
-- MacCready et al (2008). A model study of tide- and wind-induced mixing in the Columbia River Estuary and plume. Continental Shelf Research.
+- MacCready et al (2009). A model study of tide- and wind-induced mixing in the Columbia River Estuary and plume. Continental Shelf Research.
+- Baptista et al (2005). A cross-scale model for 3D baroclinic circulation in estuary-plume-shelf systems: II. Application to the Columbia River. Continental Shelf Research.
