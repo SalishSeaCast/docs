@@ -1,3 +1,5 @@
+.. _RiverInput:
+
 River Input
 ===========
 
