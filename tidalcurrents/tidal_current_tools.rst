@@ -1,11 +1,11 @@
 .. _TidalCurrentsTools:
 
-Tidal currents tools
-=========================
-
+********************
+Tidal Currents Tools
+********************
 
 Tidal currents
------------------------
+==============
 
 Tidal currents are tightly knit with the hydrodynamics. When the currents are averaged over a long period of time what we have left is the tidal effect on the currents. We can average out the winds and surface currents anomalies. It is deeply dependant on bottom friction and mixing (Parker, 2007). Evaluating tidal currents enables one to see these effects at a chosen locations.
 
@@ -13,7 +13,7 @@ To calculate and evaluate tidal currents we need long (many months) currents tim
 
 
 Observations
----------------
+============
 
 * Current data can be obtained or seen at `Ocean Networks Canada`_ (ONC) website.
 * The ONC data is then processed by Dr. Rich Pawlowicz.
@@ -23,29 +23,30 @@ Observations
 .. _Ocean Networks Canada: http://venus.uvic.ca/data/data-plots/#strait-of-georgia-plots
 
 
-Tidal ellipses
-----------------
+Tidal Ellipses
+==============
 
 We perform a harmonic analysis on the time series in order to extract the tidal harmonic constants. From the speed and direction of the tidal current at one location over time we can construct harmonic constituents ellipse which are used to describe the motion of the water due to one tidal constituent (eg. M2).
 
-Separating the constituents
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Separating the Constituents
+---------------------------
 
 Similarly to tides, tidal currents are composed of many different harmonic constituents. When calculating and comparing tidal ellipses it is of one constituents at one location, it is important to have a long enough time series to be able to fully separate the constituents.
 
 
-Freshet and changing shorelines
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Freshet and Changing Shorelines
+-------------------------------
 
 It is important to avoid using data for a tidal analysis during the Fraser River freshet. The outflow from the river is very larger from the end of may to mid June and this skews the tidal ellipses.
 The bathymetry and shoreline drastically effects the tidal currents. However, they can change over time. It is important to select data that would have a consistent shoreline and bathymetry across datasets that are being compared.
 
 
 Python Scripts
-----------------
+==============
 
-Tidal ellipse calculation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tidal Ellipse Calculation
+-------------------------
 
 Some python functions have been written to facilitate calculating amplitude and phase from velocity vectors and to calculate the ellipse parameters from these values. These scripts are found in :file:`tools/SalishSeaTools/salishsea_tools/ellipse.py` and :file:`tools/SalishSeaTools/salishsea_tools/tidetools.py`
 
@@ -86,24 +87,29 @@ This function outputs a dictionary object containing the ellipse parameters for 
 
 .. _UsingEllipse.py.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Muriel/UsingEllipse.py.ipynb
 
+
 MATLAB Scripts
-----------------
+==============
+
 Loading and processing of the observational data from the ONC VENUS Central, East and Delta nodes is done in MATLAB scripts written by Dr. Rich Pawlowicz. The processing is done in three parts and is tailored for each deployment at each node.
 
-Processing scripts
-~~~~~~~~~~~~~~~~~~~~~
+
+Processing Scripts
+------------------
 
 * The first part is :file:`GET_DATA_fun.m` This script will get the data that is directly output from the ADCP. It does this for the two days before the day indicated. It will put this data in a directory at pth/raw/ and organize it by year and month. This function calls a script written by Marlene Jeffries at Ocean Network Canada :file:`getSoGAdcpDataMay15_mod`. This script contains many functions that are used to ultimately retrieve the raw data from the ONC website.
 * The next step is to run :file:`GET_DEPL_fun.m` goes through all the data in the raw directory gathered by GETDATA_fun and bins it into 30 minutes bins. .
 * Lastly, the bulk of the processing is done in :file:`LTIM_fun.m`. This script filters out the tides, corrects the angles for the velocities to get major axis in the direction of the flood current.
 
-Adjustments for running daily
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Adjustments for Running Daily
+-----------------------------
 
 * When running these scripts for a single day of data at a time to have daily comparisons a few modifications have to be done to keep the scripts running. First of all, GETDEPL_fun creates a new deployment file with the new updated raw data that was loaded by GETDATA_fun however LTIM_fun needs only one mat file per deployment in the directory where it looks. The :file:`compare_daily` functions works helps seamlessy join the new update deployment file and the previous deployment file.
 
+
 New deployment
-~~~~~~~~~~~~~~~
+--------------
 
 * Every few months to a year the nodes need maintenance or for whatever reason a new deployment with new devices get installed. This requires a lot of effort because the numbers in :file:`LTIM_fun` have previously been found manually. These values are based on the tilt, depth, angle and other physical aspects of the node. The processing that is done may need weeks of data from a new deployement to accurately get the information to realign the ADCP output into usable data.
 
@@ -111,8 +117,10 @@ New deployment
 
 * Contact Marlene Jeffries at Ocean Networks Canada for an updated :file:`getSoGAdcpDataMay15_mod.m` script that contains the correct device and sensor IDs of the new deployment.
 
+
 Changing users
-~~~~~~~~~~~~~~~
+--------------
+
 If you will be running the processing in a new directory for the first time there are a couple things to change in order to facilitate the transitions.
 
 * 1. In :file:`compare_daily.m` change the path to be where you want everything to be saved. Many extra files will appear in this directory every time you run the scripts.
@@ -123,7 +131,7 @@ If you will be running the processing in a new directory for the first time ther
 
 
 Setup of the :file:`/ocean/` ONC ADCP Data Filespace
-----------------------------------------------------
+====================================================
 
 This section describes the setup of the storage filespace on :file:`/ocean/` containing the accumulated raw and processed ONC ADCP data.
 Those data are from the Strait of Georgia Central,
@@ -153,7 +161,7 @@ Many of those files are symlinked from version controlled files in the :ref:`pri
 
 
 Preparing the :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/` Filespace
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------------------------
 
 * Create the directory and make it group writable for the :kbd:`sallen` group:
 
@@ -289,7 +297,7 @@ Preparing the :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/` Filespace
 
 
 References
-^^^^^^^^^^^^
+----------
 
 * Parker, B. B., 2007. Tidal analysis and prediction. US Department of Commerce, National Oceanic and Atmospheric Administration, National Ocean Service, Centre for Operational Oceanographic Products and Services, 378 pages.
 
