@@ -64,7 +64,9 @@ Fraser
 
 	 * Main South Arm cells based on map are i=414,415,416 and j=334
 	 * Assumed that 75% goes into the main South Arm (Thomson, 1981)
-	 * Southern South Arm 5% (aka Canoe Pass, although that is not open), cells i= 411,412 j=324
+	 * Southern South Arm 5% (aka Canoe Pass, although that is not
+	   open), cells i= 409,410 j=315 . This position was corrected
+	   in November 2015.
 	 * Main Arm 5%, cells i=434,435, j=318
 	 * North Arm 15%, cells i=440, j=323,324
 
@@ -106,7 +108,8 @@ Percent drained from each river was proportional to its drainage area versus the
 
 Below, rivers marked with '+' means I made up the name.
 
- * Oyster River is at 705,121: area 363 km2 (according to EC)
+ * Oyster River is at 705,122: area 363 km2 (according to EC) -
+   corrected in November 2015 to move it off land
 
  * Qunisam River flows into Campbell River. #08HD003 is Campbell River at the town, drainage area 1470 km2 (EC) Latitude: 50.0353065 Longitude: -125.2629857, Lat/Lon of mouth -125.2601, 50.0510 for the mouth gives two points 123 749 and 750
 
@@ -355,9 +358,12 @@ Jervis
 * Crabapple Creek accounts for 4% of Jervis only, enters at 50.1207422, -123.8436382
 * Osgood Creek accounts for 4% of Jervis only, enters at 50.0371886, -123.8964722
 * Skwawka/Hunaechin/Lausmann/Slane/Smanit/Loquilts/Potato/Deserted/Crabapple/Stakawus/Osgood all enter
-* domain at the same point 50.0894746,-123.7828011, i = 648, j = 318
-* Glacial Creek accounts for 5% of Jervis only, enters at 50.0062107, -123.9070838, i = 647, j = 317
-* Seshal Creek accounts for 5% of Jervis only, enters at 50.0246890, -123.9260495, i = 650, j = 317
+* domain at the same point 50.0894746,-123.7828011, i = 650, j = 309 -
+  moved off land in November 2015
+* Glacial Creek accounts for 5% of Jervis only, enters at 50.0062107,
+  -123.9070838, i = 649, j = 310 - moved off land in November 2015
+* Seshal Creek accounts for 5% of Jervis only, enters at 50.0246890,
+  -123.9260495, i = 651, j = 307 - moved off land in November 2015
 * Brittain River/Treth Creek accounts for 10% of Jervis only, enters at 49.9958119. -124.0119219, i = 650, j = 301
 * Assume Vancouver River/High Creek accounts for 10% of Jervis only and  enter at 49.9219882, -123.8696986, i = 626, j = 311
 * Assume Perketts Creek accounts for 5% of Jervis only and enters at 49.8799903, -123.8681308, i = 619, j = 307
@@ -383,19 +389,23 @@ Toba
 * Source used: Maps
 * Assume Toba is 100% of watershed (i=746, j= 240-242)
 
-Creating input files for NEMO
------------------------------
+Temperature
+--------------
 
-The grid point of the location of each river mouth was found. The ipython notebook 'AddRivers' creates a NetCDF files containing the river flow at the respective grid cell for each river throughout the domain. Where the river mouth was not included in the domain, the river was added to the closest grid point to the river mouth.
+Temperature records are available for a number of the Rivers but at
+this point we are only using the record from Hope (originally from
+Water Office data, as compiled by Allen and Wolfe, 2013).
 
-In some cases (e.g. the end of Jervis inlet, Puget Sound) numerous rivers were not included in the domain, so the sum of all the omitted rivers' flow was added to the closest grid point.
 
 References
 ----------
 
+* Allen and Wolfe, 2013. Hindcast of the timing of the spring phytoplankton bloom in the Strait of Georgia, 1968-2010. Progress in Oceanography, 115, 6-13.
+* Enviroment Canada Water Office. `https://wateroffice.ec.gc.ca`_
 * J. Morrison , M. G. G. Foreman and D. Masson, 2012. A method for estimating monthly freshwater discharge affecting British Columbia coastal waters, Atmosphere-Ocean, 50:1, 1-8, DOI: `10.1080/07055900.2011.637667`_
 * Sanderson et al (1986)
 * Thomson, 1982: Physical Oceanography of the BC Coast.
 
+.. _https://wateroffice.ec.gc.ca: https://wateroffice.ec.gc.ca 
 .. _10.1080/07055900.2011.637667: http://dx.doi.org/10.1080/07055900.2011.637667
 
