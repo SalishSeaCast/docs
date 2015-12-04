@@ -84,6 +84,8 @@ You should create or edit your :file:`$HOME/.hgrc` file to contain:
     graphlog =
     pager =
     rebase =
+    progress =
+    strip =
 
     [pager]
     pager = LESS='FRX' less
