@@ -43,6 +43,7 @@ Contents
    repos_organization
    work_env/index
    code-notes/salishsea-nemo/index
+   realtimeNEMO36/index
    tides/index
    tidalcurrents/index
    rivers/index
