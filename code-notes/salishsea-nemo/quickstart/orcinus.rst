@@ -120,7 +120,7 @@ Download and install pip
     curl -LO https://bootstrap.pypa.io/get-pip.py
     python get-pip.py --user
 
-and install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python packages:
+and install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python packages:
 
 .. code-block:: bash
 

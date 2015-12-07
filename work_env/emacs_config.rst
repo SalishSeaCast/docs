@@ -184,6 +184,8 @@ Configure :program:`emacs` to use :kbd:`python-mode` automatically whenever you 
     (autoload 'python-mode "python-mode" "Python editing mode." t)
 
 
+.. _PythonSourceCodeCheckingViaFlake8:
+
 Python Source Code Checking via Flake8
 --------------------------------------
 
