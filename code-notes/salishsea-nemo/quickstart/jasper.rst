@@ -33,7 +33,7 @@ There is no need to clone the :file:`docs` or :file:`analysis` repos on :kbd:`ja
 Install Tools and Command Processor Packages
 ============================================
 
-Create a :file:`$HOME/.local/` file space for per-user installation of Python packages and install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` Python packages:
+Create a :file:`$HOME/.local/` file space for per-user installation of Python packages and install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python packages:
 
 .. code-block:: bash
 

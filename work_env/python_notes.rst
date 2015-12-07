@@ -80,7 +80,7 @@ IPython Notebook, netCDF, and Model Results
 We have an ongoing project to develop a collection of `IPython notebooks`__ that provide discussion,
 examples,
 and best practices for plotting various kinds of model results from `netCDF`_ files.
-There are code examples in the notebooks and also examples of the use of functions from the :ref:`salishsea_tools package<SalishSeaTools>`.
+There are code examples in the notebooks and also examples of the use of functions from the :ref:`SalishSeaToolsPackage`.
 
 __ ipynb_
 .. _ipynb: http://ipython.org/notebook.html

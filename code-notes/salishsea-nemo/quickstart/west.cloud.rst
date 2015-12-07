@@ -328,7 +328,7 @@ and tools repos from Bitbucket:
     $ hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     $ hg clone ssh://hg@bitbucket.org/salishsea/tools tools
 
-Install the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` as editable user packages and add :file:`$HOME/.local/bin/`:
+Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` as editable user packages and add :file:`$HOME/.local/bin/`:
 
 .. code-block:: bash
 
@@ -358,7 +358,7 @@ Because the provisioning and configuration has been done on a small flavour inst
 Compute Node Configuration
 --------------------------
 
-On an instance launched from the head node image remove the installation of the :ref:`SalishSeaTools` and :ref:`SalishSeaCmdProcessor` as editable user packages and the :file:`$HOME/.local/bin/`:
+On an instance launched from the head node image remove the installation of the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` as editable user packages and the :file:`$HOME/.local/bin/`:
 
 .. code-block:: bash
 

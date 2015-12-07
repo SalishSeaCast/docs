@@ -103,10 +103,10 @@ There are several important things to understand about this directory structure:
   As indicated in the :file:`README` in that directory,
   *please do not add files or change this part of the directory tree* without corresponding changes in the SoG-bloomcast codebase.
 * Likewise,
-  the :file:`site/_static/nemo/results_figures/` directory tree is managed by the :ref:`salishsea_tools.nowcast` automation scripts.
+  the :file:`site/_static/nemo/results_figures/` directory tree is managed by the :ref:`SalishSeaNowcastPackage` automation scripts.
   As indicated in the :file:`README` files in that directory tree,
-  *please do not add files or change this part of the directory tree* without corresponding changes in the :ref:`salishsea_tools.nowcast` codebase.
-* The automation scripts in the SoG-bloomcast project and the :ref:`salishsea_tools.nowcast` also generate files that are stored in the :file:`site/bloomcast/` and the :file:`site/nemo/results/` and :file:`site/storm-surge/` directories,
+  *please do not add files or change this part of the directory tree* without corresponding changes in the :ref:`SalishSeaNowcastPackage` codebase.
+* The automation scripts in the SoG-bloomcast project and the :ref:`SalishSeaNowcastPackage` also generate files that are stored in the :file:`site/bloomcast/` and the :file:`site/nemo/results/` and :file:`site/storm-surge/` directories,
   respectively.
   After those automation scripts have generated their files,
   they:
@@ -328,6 +328,6 @@ To use the :command:`make rsync-salishsea` command you need to have a :kbd:`Host
          IdentityFile ~/.ssh/SalishSeaNEMO-nowcast_id_rsa
 
 Your :kbd:`User` and :kbd:`IdentityFile` values may differ.
-The ones shown are those required for the :ref:`salishsea_tools.nowcast` automation.
+The ones shown are those required for the :ref:`SalishSeaNowcastPackage` automation.
 The :kbd:`User` value must be a user account on :kbd:`shelob` created by EOAS compstaff,
 and the :kbd:`IdentityFile` value must be an ssh private key whose corresponding public key is in the :file:`$HOME/.ssh/authorized_keys` file of the :kbd:`User` account on :kbd:`shelob`.

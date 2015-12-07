@@ -36,7 +36,7 @@ etc.
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
 
 Next,
-install the :ref:`SalishSeaTools` and the :ref:`SalishSeaCmdProcessor`:
+install the :ref:`SalishSeaToolsPackage` and the :ref:`SalishSeaCmdProcessor`:
 
 .. code-block:: bash
 

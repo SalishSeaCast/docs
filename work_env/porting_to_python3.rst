@@ -5,7 +5,7 @@ Porting Code to Python 3
 ************************
 
 While there are many differences between Python 2 and Python 3 few of them impact most of the code that we write in the Salish Sea project.
-This section describes the types of changes that had to be made in order to convert (also known as "port") the :ref:`SalishSeaTools` to Python 3.
+This section describes the types of changes that had to be made in order to convert (also known as "port") the :ref:`SalishSeaToolsPackage` to Python 3.
 
 If you encounter other changes that you need to make to port our code to Python 3,
 please feel free to add them below.
@@ -20,7 +20,7 @@ If you are interested in the details of the differences between Python 2 and Pyt
 Porting the :py:obj:`SalishSeaTools` Package
 ============================================
 
-This section describes the types of changes that had to be made to port the :ref:`SalishSeaTools`
+This section describes the types of changes that had to be made to port the :ref:`SalishSeaToolsPackage`
 (including the :py:obj:`nowcast` codebase)
 from Python 2.7 to Python 3.5 in October 2015.
 
