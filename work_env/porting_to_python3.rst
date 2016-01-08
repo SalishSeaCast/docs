@@ -14,6 +14,15 @@ If you are interested in the details of the differences between Python 2 and Pyt
 
 .. _What's New in Python: https://docs.python.org/3/whatsnew/
 
+Part of the move to Python 3 was a reorganization of the standard library.
+That means that some :kbd:`import` need to be changed when code is ported from Python 2 to Python 3.
+Specific instances of that
+(like the :py:mod:`StringIO` module)
+are described below.
+The description of all of the standard library changes is contained in `PEP 3108`_.
+
+.. _PEP 3108: https://www.python.org/dev/peps/pep-3108/
+
 
 .. _PortingTheSalishSeaToolsPackage:
 
