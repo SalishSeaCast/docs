@@ -194,3 +194,35 @@ To link to a rendered representation of an IPython Notebook that has been pushed
   * `SalishSeaBathy.ipynb`_: Documents the full domain bathymetry used for the Salish Sea NEMO runs.
 
   .. _SalishSeaBathy.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/bathymetry/SalishSeaBathy.ipynb
+
+
+Forcing Line Breaks
+-------------------
+
+In most cases your should just let Sphinx take care of inserting line breaks in the rendered docs;
+it will almost always do the right thing by putting breaks between paragraphs,
+between list items,
+around block quotations and code examples,
+etc.
+
+Occasionally though you may need to force line breaks.
+The most common case for this is to add line breaks within table cells so as as to avoid excessive sideways scrolling of the rendered table.
+You can force a line break in the HTML that Sphinx renders by defining a substitution that will insert a break tag (:kbd:`<br>`).
+Here's an example of doing that and using the substitution in a table cell::
+
+  .. |br| raw:: html
+
+      <br>
+
+  ===========  ===================================================  ==============  ==================
+   Date                       Change                                New Value       Changeset
+  ===========  ===================================================  ==============  ==================
+  27-Oct-2014  1st :file:`nowcast/` run results                     N/A
+  20-Nov-2014  1st :file:`forecast/` run results                    N/A
+  26-Nov-2014  Changed to tidal forcing tuned for better |br|       see changeset   efa8c39a9a7c_
+               accuracy at Point Atkinson
+  ===========  ===================================================  ==============  ==================
+
+
+
+.. note:: The :kbd:`|br|` substitution needs to be defined once (but *only* once) per file.
