@@ -105,10 +105,6 @@ The :kbd:`[extensions]` section enables several useful Mercurial extensions:
 
 * :kbd:`pager` sends output of Mercurial commands through the pager that you specify in the :kbd:`[pager]` section so that long output is displayed one page at a time
 
-  .. note::
-
-      The version of Mercurial on :kbd:`jasper` does not include the :kbd:`pager` extension and this extension should not be used there.
-
 * :kbd:`rebase` enables rebasing which is particularly useful when working in repositories to which several contributors are pushing changes.
   As described below,
   :kbd:`rebase` allows changes that have been pushed by other contributors to be pulled into your cloned repo while you have committed changes that have not been pushed without having to do frivolous branch merges.
