@@ -10,4 +10,4 @@ The `AMM12-BDY-analysis.ipynb`_ Jupyter Notebook is an analysis of the differenc
 
 That analysis lead to our decision to use boundary coordinate calculations driven by the :kbd:`nambdy_index` namelist for :ref:`SalishSeaNEMO`.
 
-.. _AMM12-BDY-analysis.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/docs/raw/tip/code-notes/dev-notes/AMM12-BDY-analysis.ipynb
+.. _AMM12-BDY-analysis.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/docs/raw/tip/code-notes/dev-notes/AMM12-BDY-analysis.ipynb

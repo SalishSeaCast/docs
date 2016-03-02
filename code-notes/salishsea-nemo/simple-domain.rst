@@ -83,7 +83,7 @@ Bathymetry
 A simplifed 2D bathymetry was created by smoothing the bathymetry along the thalweg.
 See `Generate_2D_bathy.ipynb`_
 
-.. _Generate_2D_bathy.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/2d-domain/raw/tip/notebooks/Generate_2D_bathy.ipynb
+.. _Generate_2D_bathy.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/2d-domain/raw/tip/notebooks/Generate_2D_bathy.ipynb
 
 Initial Conditions
 -------------------
@@ -94,7 +94,7 @@ Winter and summer stratifications were created using `Generate_2D_T+S.ipynb`_.
 Note that a test run with basic namelists was used to create the 2D :file:`mesh_mask.nc`.
 This file was used to ensure the initial temperature and salinity covered the full 2D domain.
 
-.. _Generate_2D_T+S.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/2d-domain/raw/tip/notebooks/Generate_2D_T+S.ipynb
+.. _Generate_2D_T+S.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/2d-domain/raw/tip/notebooks/Generate_2D_T+S.ipynb
 
 Tides
 ------
@@ -105,7 +105,7 @@ Tidal currents for V are ignored.
 Some adjustments to the tidal currents are made to enforce rapid velocties over the sill since the horizontal constriction is not present in the 2D domain.
 See `Generate_2D_Tides.ipynb`_ for generation of tide forcing files.
 
-.. _Generate_2D_Tides.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/2d-domain/raw/tip/notebooks/Generate_2D_Tides.ipynb
+.. _Generate_2D_Tides.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/2d-domain/raw/tip/notebooks/Generate_2D_Tides.ipynb
 
 River
 ------
@@ -114,7 +114,7 @@ A simple representation of the Fraser River was added to replace mixed stratific
 A constant flow rate was used.
 Details in `Generate_rivers_forcing.ipynb`_.
 
-.. _Generate_rivers_forcing.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/2d-domain/raw/tip/notebooks/Generate_rivers_forcing.ipynb
+.. _Generate_rivers_forcing.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/2d-domain/raw/tip/notebooks/Generate_rivers_forcing.ipynb
 
 
 Namelists

@@ -84,7 +84,7 @@ These scripts are found in the :file:`analysis/storm_surges/data/` repository an
        generate_tidal_predictions(filename, location, starts, ends, type, exclude_long, cut_off)
 
   - Uses water level observations or harmonic constituents stored in :file:`filename` to calculate tidal predictions over a time period defined by date strings :file:`starts` and :file:`ends`. Water level observations can either be from the DFO website or the NOAA website, as specified by the :file:`type` argument. Or a file with harmonic constituents from CHS can be used, in which case type is set to 'CHS'.
-  - If a harmonic analysis is necessary, the calculated harmonics are saved in :file:`location_harmonics_date1_date2_filter.csv` where location is one of the arguments of :file:`generate_tidal_predictions.m`. :file:`date1` and :file:`date2` are string representations of the start and end date of the observation time series. 
+  - If a harmonic analysis is necessary, the calculated harmonics are saved in :file:`location_harmonics_date1_date2_filter.csv` where location is one of the arguments of :file:`generate_tidal_predictions.m`. :file:`date1` and :file:`date2` are string representations of the start and end date of the observation time series.
   - The tidal predictions are stored in a file called :file:`location_tidal_prediction_starts_ends.csv` where :file:`starts` and :file:`ends` are arguments of :file:`generate_tidal_predictions.m`. This file contains three types of tidal predictions:
 
     + :file:`pred_all` - predictions with all constituents except shallow water and ones with low signal to noise
@@ -121,9 +121,9 @@ Several notebooks have been developed for generating the anomaly forcing files u
 * `SSH_Tofino.ipynb`_
 * `SSH_PortHardy.ipynb`_
 
-.. _SSH_Tofino.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_Tofino.ipynb
+.. _SSH_Tofino.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_Tofino.ipynb
 
-.. _SSH_PortHardy.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_PortHardy.ipynb
+.. _SSH_PortHardy.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_PortHardy.ipynb
 
 
 Analysis

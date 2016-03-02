@@ -116,4 +116,4 @@ Notebooks
 =========
 * `Ariane_Tracers.ipynb`_
 
-.. _Ariane_Tracers.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/Ariane_Tracers.ipynb
+.. _Ariane_Tracers.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/Ariane_Tracers.ipynb

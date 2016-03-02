@@ -26,7 +26,7 @@ The cross-section of the northern boundary is larger than the cross-section wher
 
 * Jupyter Notebook: `Analysis8Components.ipynb`_
 
-.. _Analysis8Components.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Tides/johnstone_strait_tides.ipynb
+.. _Analysis8Components.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Tides/johnstone_strait_tides.ipynb
 
 This run was called CBase2.
 
@@ -97,5 +97,5 @@ And final results can be seen in:
 
 * Jupyter Notebook: `Analysis8Components`_
 
-.. _Analysis8Components: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/compare_tides/Analysis8Components.ipynb`
+.. _Analysis8Components: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/compare_tides/Analysis8Components.ipynb`
 

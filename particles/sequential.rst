@@ -39,18 +39,18 @@ Input File Directory
 
 New Input Filename
 ------------------
-Previously, we have been entering the full filename, *SalishSea_t_yyyymmdd_yyyymmdd_grid_T.nc*, into :kbd:`c_prefix_X`. 
+Previously, we have been entering the full filename, *SalishSea_t_yyyymmdd_yyyymmdd_grid_T.nc*, into :kbd:`c_prefix_X`.
 
 Now that we have formatted the filenames as *prefix_number_suffix*, :kbd:`c_prefix_me` takes on the value of the *prefix* and :kbd:`c_suffix_me` takes the value of *suffix*.
 
-:kbd:`ind0_X` is the *number* for the earliest input file and :kbd:`indn_X` is the latest. 
+:kbd:`ind0_X` is the *number* for the earliest input file and :kbd:`indn_X` is the latest.
 
 :kbd:`maxsize_X` is the number of digits in *number*.
 
 For example, the **ZONALCRT** section would look like the following for input files **SalishSea_01_grid_U.nc** and **SalishSea_02_grid_U.nc** :
- 
+
  .. code-block:: fortran
-        
+
         &ZONALCRT
         	c_dir_zo ='/ocean/imachuca/MEOPAR/Ariane/results/drifter_compare/sequential/',
         	c_prefix_zo ='SalishSea_',
@@ -73,14 +73,14 @@ Under the **ARIANE** section in :kbd:`namelist`, change :kbd:`key_sequential` to
 Namelist: Add Section
 ======================
 
-Add a **SEQUENTIAL** section in namelist. This section has one parameter, :kbd:`maxcycles`. We recommend the value of this parameter to be 1 since this tells Ariane to stop generating trajectory points once it has run out of input data. 
+Add a **SEQUENTIAL** section in namelist. This section has one parameter, :kbd:`maxcycles`. We recommend the value of this parameter to be 1 since this tells Ariane to stop generating trajectory points once it has run out of input data.
 
 
 Sequential
 ----------
 
  .. code-block:: fortran
-        
+
 	&SEQUENTIAL
 	maxcycles =1,
 	/
@@ -99,5 +99,5 @@ Notebooks
 =========
 * `Ariane_Sequential.ipynb`_
 
-.. _Ariane_Sequential.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/Ariane_Sequential.ipynb
+.. _Ariane_Sequential.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/Ariane_Sequential.ipynb
 
