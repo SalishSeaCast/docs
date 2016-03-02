@@ -5,12 +5,12 @@ Tidal comparisons
 Harmonics comparisons
 -------------------------------------------
 
-Water level 
+Water level
 ************
 
-* All 8 components (M2, K1, O1, S2, P1, N2, Q1 and K2) computed by NEMO can be compared to harmonics from water level (calculated by Mike Foreman, Institute of Ocean Sciences and for M2 and K1 shown in his papers Foreman et al (1995, 2000)). 
+* All 8 components (M2, K1, O1, S2, P1, N2, Q1 and K2) computed by NEMO can be compared to harmonics from water level (calculated by Mike Foreman, Institute of Ocean Sciences and for M2 and K1 shown in his papers Foreman et al (1995, 2000)).
 
-* ipython notebook: `Analysis8Components.ipynb`_
+* Jupyter Notebook: `Analysis8Components.ipynb`_
 
 .. _Analysis8Components.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/compare_tides/Analysis8Components.ipynb
 
@@ -36,9 +36,9 @@ Water level
 
 .. _alltidecomparison:
 
-.. figure:: alltidecomparison.png 
-	
-In the above figure, green circles represent errors less than 5 cm, yellow circles represent errors between 5 and 10 cm and red circles mark errors greater than 10 cm.	
+.. figure:: alltidecomparison.png
+
+In the above figure, green circles represent errors less than 5 cm, yellow circles represent errors between 5 and 10 cm and red circles mark errors greater than 10 cm.
 
 
 Currents

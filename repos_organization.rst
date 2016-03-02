@@ -91,7 +91,7 @@ analysis
 * public
 * Apache v2.0 license, copyright project contributors and UBC
 * analyses of the results of the Salish Sea MEOPAR NEMO model;
-  most of the files are IPython Notebooks
+  most of the files are Jupyter Notebooks
 * Bitbucket: https://bitbucket.org/salishsea/analysis/
 
 

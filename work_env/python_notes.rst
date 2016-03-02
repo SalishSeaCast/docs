@@ -74,24 +74,24 @@ A few differences you will see compared to our Python code:
 .. _Matplotlib: http://matplotlib.org/
 
 
-IPython Notebook, netCDF, and Model Results
+Jupyter Notebook, netCDF, and Model Results
 ===========================================
 
-We have an ongoing project to develop a collection of `IPython notebooks`__ that provide discussion,
+We have an ongoing project to develop a collection of `Jupyter Notebooks`__ that provide discussion,
 examples,
 and best practices for plotting various kinds of model results from `netCDF`_ files.
 There are code examples in the notebooks and also examples of the use of functions from the :ref:`SalishSeaToolsPackage`.
 
-__ ipynb_
-.. _ipynb: http://ipython.org/notebook.html
+__ jupyter_
+.. _jupyter: https://jupyter.org/
 .. _netCDF: http://www.unidata.ucar.edu/software/netcdf/
 
 If you are new to the Salish Sea project,
-or to `IPython Notebook`__,
+or to `Jupyter Notebook`__,
 netCDF_,
 and Matplotlib_ you should read the notebooks in the following order:
 
-__ ipynb_
+__ jupyter_
 
 
 * `Exploring netCDF Files.ipynb`_
