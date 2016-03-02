@@ -8,7 +8,7 @@ River Implementation
 Creating input files for NEMO
 -----------------------------
 
-The grid point of the location of each river mouth was found. A large dictionary of the grid points and flow mapping is the `rivertools.py`_ script. The ipython notebook `Add Rivers Month and Constant.ipynb`_ creates a NetCDF files containing the river flow at the respective grid cell for each river throughout the domain. Where the river mouth was not included in the domain, the river was added to the closest grid point to the river mouth. 
+The grid point of the location of each river mouth was found. A large dictionary of the grid points and flow mapping is the `rivertools.py`_ script. The Jupyter Notebook `Add Rivers Month and Constant.ipynb`_ creates a NetCDF files containing the river flow at the respective grid cell for each river throughout the domain. Where the river mouth was not included in the domain, the river was added to the closest grid point to the river mouth.
 
 .. _rivertools.py: https://bitbucket.org/salishsea/tools/src/tip/SalishSeaTools/salishsea_tools/rivertools.py
 .. _Add Rivers Month and Constant.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/Rivers/Add%20Rivers%20Month%20and%20Constant.ipynb
@@ -27,6 +27,6 @@ Two files are created `rivers_month.nc`_ and `rivers_const.nc`_.  The first cont
 Nowcast Files
 ----------------
 
-For the nowcast runs, the Fraser River is split into the amount that enters at Hope and amount downstream of that.  The amount at Hope is taken from the published measurements (Environment Canada, WaterOffice via `data mart`_) and distributed appropriately to the Fraser River mouths.  All other freshwater is set to climatology. 
+For the nowcast runs, the Fraser River is split into the amount that enters at Hope and amount downstream of that.  The amount at Hope is taken from the published measurements (Environment Canada, WaterOffice via `data mart`_) and distributed appropriately to the Fraser River mouths.  All other freshwater is set to climatology.
 
 .. _data mart: http://dd.meteo.gc.ca/about_dd_apropos.txt

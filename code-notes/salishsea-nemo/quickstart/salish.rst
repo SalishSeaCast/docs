@@ -124,7 +124,7 @@ go to the top level directory of the :file:`analysis` repo on your local machine
 
 .. code-block:: bash
 
-    ipython notebook
+    jupyter notebook
 
 At this points alot of information will appear in your terminal.
 This terminal session is now running a server and cannot be used for anything else until you are finished with the notebooks.
@@ -137,7 +137,7 @@ find the ip address, something like:
 
 .. code-block:: bash
 
-    The IPython Notebook is running at: http://127.0.0.1:8888/
+    The Jupyter Notebook is running at: http://127.0.0.1:8888/
 
 and put that number in your browser.
 From this initial window you can open the notebooks in :file:`analysis_tools` directory and look around.

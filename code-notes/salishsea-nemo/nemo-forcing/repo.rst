@@ -125,7 +125,7 @@ The sea surface height climatology is taken from 2000-2010 hourly sea surface he
 
 * :file:`SS2_SSH_climatology.nc`
 
-Preparation of the file was done in ipython notebook `I_ForcingFiles/OBC/SSH.ipynb`_
+Preparation of the file was done in Jupyter Notebook `I_ForcingFiles/OBC/SSH.ipynb`_
 
 .. _http://tides.gc.ca/eng/data: http://tides.gc.ca/eng/data
 .. _I_ForcingFiles/OBC/SSH.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH.ipynb
@@ -141,7 +141,7 @@ Currently there are two complete sets of files that specify eight tidal componen
 
 where bathy is one of *SalishSea* or *SalishSea2*, the latter specifying the bathymetry with the smoothed mouth of JdF, component is one of *M2*, *K1*, *O1*, *Q1*, *K2*, *P1*, *S2*, *N2* specifying which of the eight tidal components and TUV is one of *T*, *U*, *V* specifying the parameter in the file.
 
-The tidal components come from `Webtide`_ and are prepared in the ipython notebook `I_ForcingFiles/Tides/Prepare Tide Files.ipynb`_
+The tidal components come from `Webtide`_ and are prepared in the Jupyter Notebook `I_ForcingFiles/Tides/Prepare Tide Files.ipynb`_
 
 .. _Webtide: http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-eng.php
 .. _I_ForcingFiles/Tides/Prepare Tide Files.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Tides/Prepare%20Tide%20Files.ipynb

@@ -10,7 +10,7 @@ in getting NEMO to run on a mac running OSX.
 Get Your Libraries
 ==================
 
-Unless you are already using a different package manager, use brew.  First, as you probably have Anaconda set-up so you can do analysis in ipython notebooks on your mac, remove anaconda from your path.
+Unless you are already using a different package manager, use brew.  First, as you probably have Anaconda set-up so you can do analysis in Jupyter Notebooks on your mac, remove anaconda from your path.
 
 .. code-block:: bash
 
@@ -67,7 +67,7 @@ Get the Correct Arch File
 If you are on our SalishSea MEOPAR team, if you cloned the NEMO-code
 repo you will get the arch file you need: arch-gfortran_osx.fcm with
 the one modification from the standard file.  If you are not a member, our macosx arch file is:
- 
+
 :file:`arch-gfortran_osx.fcm`:
 
 .. code-block:: bash
@@ -89,11 +89,11 @@ the one modification from the standard file.  If you are not a member, our macos
     %NCDF_INC            -I/usr/local/include
     %NCDF_LIB            -L/usr/local/lib -lnetcdf -lnetcdff
     %FC                  gfortran
-    %FCFLAGS             -fdefault-real-8 -O3 -funroll-all-loops -fcray-pointer -ffree-line-length-none 
+    %FCFLAGS             -fdefault-real-8 -O3 -funroll-all-loops -fcray-pointer -ffree-line-length-none
     %FFLAGS              %FCFLAGS
     %LD                  gfortran
     %LDFLAGS
-    %FPPFLAGS            -P -C -traditional 
+    %FPPFLAGS            -P -C -traditional
     %AR                  libtool
     %ARFLAGS             -c -s -o
     %MK                  make

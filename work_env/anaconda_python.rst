@@ -5,14 +5,14 @@ Anaconda Python Distribution
 
 The the Anaconda Python distribution is the easiest way to install Python and a collection of scientific libraries and other tools
 (`Sphinx`_,
-`IPython Notebook`_,
+`Jupyter Notebook`_,
 `NumPy`_,
 `matplotlib`_,
 to name a few)
 that we use in the Salish Sea MEOPAR project.
 
 .. _Sphinx: http://sphinx-doc.org/
-.. _IPython Notebook: http://ipython.org/ipython-doc/dev/index.html
+.. _Jupyter Notebook: https://jupyter.org/
 .. _NumPy: http://docs.scipy.org/doc/numpy/reference/index.html
 .. _matplotlib: http://matplotlib.org/contents.html
 

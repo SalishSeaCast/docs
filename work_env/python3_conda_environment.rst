@@ -26,11 +26,11 @@ To activate the environment:
 
    source activate mypython3
 
-To get all the goodies (e.g. `IPython Notebook`_, `NumPy`_, `matplotlib`_)
+To get all the goodies (e.g. `Jupyter Notebook`_, `NumPy`_, `matplotlib`_)
 you can install `Anaconda`_, which will auto-magically use Python 3.
 
 .. _Anaconda: https://store.continuum.io/cshop/anaconda/
-.. _IPython Notebook: http://ipython.org/ipython-doc/dev/index.html
+.. _Jupyter Notebook: https://jupyter.org/
 .. _NumPy: http://docs.scipy.org/doc/numpy/reference/index.html
 .. _matplotlib: http://matplotlib.org/contents.html
 

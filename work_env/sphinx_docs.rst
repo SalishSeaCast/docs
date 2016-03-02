@@ -186,10 +186,10 @@ when section headings are changed,
 and for all builders that support cross-references.
 
 
-Links to Rendered IPython Notebooks
+Links to Rendered Jupyter Notebooks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To link to a rendered representation of an IPython Notebook that has been pushed to a Bitbucket repo use markup like::
+To link to a rendered representation of an Jupyter Notebook that has been pushed to a Bitbucket repo use markup like::
 
   * `SalishSeaBathy.ipynb`_: Documents the full domain bathymetry used for the Salish Sea NEMO runs.
 
