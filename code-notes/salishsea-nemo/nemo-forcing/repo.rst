@@ -26,7 +26,7 @@ The :file:`atmospheric/` directory contains forcing data that supports the :ref:
 
 :file:`no_snow.nc`: A :ref:`CGRF-Dataset`-like file that can be used as annual climatology to impose the :ref:`NoSnowConstraint`. Created by the :ref:`tools-repo` repo `I_ForcingFiles/Atmos/NoSnow.ipynb`_ notebook.
 
-.. _I_ForcingFiles/Atmos/NoSnow.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Atmos/NoSnow.ipynb
+.. _I_ForcingFiles/Atmos/NoSnow.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Atmos/NoSnow.ipynb
 
 
 .. _grid-directory:
@@ -96,8 +96,8 @@ Two files keep the original TS until the model starts and then move the Thomson 
 The preparation of the NetCDF files is done by the python notebook `I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb`_
 and the soft start combination is done in the python notebook `I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb`_
 
-.. _I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb
-.. _I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb
+.. _I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/PrepareSimpleOBC.ipynb
+.. _I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/TS_OBC_Softstart.ipynb
 
 ***Seasonal TS Climatology***
 
@@ -115,9 +115,9 @@ Then the partial cells had their TS corrected to the proper depth (depth-correct
 
 The three steps are done in the python notebooks `Tools/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb`_ and `Tools/I_ForcingFiles/OBC/MassonClimatology.ipynb`_ and `Tools/I_ForcingFiles/OBC/MassonClimDC.ipynb`_ respectively.
 
-.. _Tools/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb
-.. _Tools/I_ForcingFiles/OBC/MassonClimatology.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MassonClimatology.ipynb
-.. _Tools/I_ForcingFiles/OBC/MassonClimDC.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MassonClimDC.ipynb
+.. _Tools/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MakeTSfromMasson.ipynb
+.. _Tools/I_ForcingFiles/OBC/MassonClimatology.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MassonClimatology.ipynb
+.. _Tools/I_ForcingFiles/OBC/MassonClimDC.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/MassonClimDC.ipynb
 
 *** ssh Climatology ***
 
@@ -128,7 +128,7 @@ The sea surface height climatology is taken from 2000-2010 hourly sea surface he
 Preparation of the file was done in Jupyter Notebook `I_ForcingFiles/OBC/SSH.ipynb`_
 
 .. _http://tides.gc.ca/eng/data: http://tides.gc.ca/eng/data
-.. _I_ForcingFiles/OBC/SSH.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH.ipynb
+.. _I_ForcingFiles/OBC/SSH.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH.ipynb
 
 :file:`open_boundaries/west/tides/` Directory
 ----------------------------------------------
@@ -144,7 +144,7 @@ where bathy is one of *SalishSea* or *SalishSea2*, the latter specifying the bat
 The tidal components come from `Webtide`_ and are prepared in the Jupyter Notebook `I_ForcingFiles/Tides/Prepare Tide Files.ipynb`_
 
 .. _Webtide: http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-eng.php
-.. _I_ForcingFiles/Tides/Prepare Tide Files.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Tides/Prepare%20Tide%20Files.ipynb
+.. _I_ForcingFiles/Tides/Prepare Tide Files.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Tides/Prepare%20Tide%20Files.ipynb
 
 :file:`initial_strat/` Directory
 --------------------------------
@@ -178,7 +178,7 @@ There are two files each for the Salish Sea domain (SS) and the Salish Sea domai
 
 The preparation of the NetCDF files is done by the python notebook `Tools/I_ForcingFiles/Initial/PrepareTS.ipynb`_
 
-.. _Tools/I_ForcingFiles/Initial/PrepareTS.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Inital/PrepareTS.ipynb
+.. _Tools/I_ForcingFiles/Initial/PrepareTS.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Inital/PrepareTS.ipynb
 
 :file:`Rivers/`: Directory
 --------------------------
@@ -195,7 +195,7 @@ and one that includes all three mouths of the Fraser, Burrard Inlet, Squamish Ri
 
 The preparation of these NetCDF files is done by the python notebook `Tools/I_ForcingFiles/Rivers/AddRivers.ipynb`_
 
-.. _Tools/I_ForcingFiles/Rivers/AddRivers.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Rivers/AddRivers.ipynb
+.. _Tools/I_ForcingFiles/Rivers/AddRivers.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Rivers/AddRivers.ipynb
 
 Morrison et al, 2011 prepared climatologies of a number of river watersheds in the Salish Sea region.  These are in the files
 
@@ -204,7 +204,7 @@ Morrison et al, 2011 prepared climatologies of a number of river watersheds in t
 
 The construction of these NetCDF files is done by the python notebook `Tools/I_ForcingFiles/Rivers/Prep_Seasonal_Rivers.ipynb`_
 
-.. _Tools/I_ForcingFiles/Rivers/Prep_Seasonal_Rivers.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Rivers/Prep_Seasonal_Rivers.ipynb
+.. _Tools/I_ForcingFiles/Rivers/Prep_Seasonal_Rivers.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Rivers/Prep_Seasonal_Rivers.ipynb
 
 and then this information is downscaled onto 150 rivers to give the forcing files:
 
@@ -213,7 +213,7 @@ and then this information is downscaled onto 150 rivers to give the forcing file
 
 The preparation of these NetCDF files is done by the python notebook `Tools/I_ForcingFiles/Rivers/Add Rivers Month and Constant.ipynb`_
 
-.. _Tools/I_ForcingFiles/Rivers/Add Rivers Month and Constant.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Rivers/Add\%20Rivers%20Month%20and%20Constant.ipynb
+.. _Tools/I_ForcingFiles/Rivers/Add Rivers Month and Constant.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Rivers/Add\%20Rivers%20Month%20and%20Constant.ipynb
 
 
 :file:`bdydta/` Directory

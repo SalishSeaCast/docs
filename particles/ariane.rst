@@ -123,7 +123,7 @@ For instance, try:
        ariane
 
 .. note::
-   
+
    If you get an error about :kbd:`initial_positions.txt`, you may have to rename :kbd:`initial_positions` as :kbd:`initial_positions.txt` and remove all the the lines with the @ symbol.
 
 You should notice several new files, such as :kbd:`ariane_trajectories_qualitative.nc` and :kbd:`traj.txt`.
@@ -158,8 +158,8 @@ The :kbd:`initial_positions.txt` file is where you will specify the initial posi
 	310	370	-1.5 	0.5    	1.0
 	310	380   	-2.0  	1.5    	1.0
 	310  	410   	-1.0  	0.5    	1.0
-	331  	415	-1.0 	0.5    	1.0 
- 
+	331  	415	-1.0 	0.5    	1.0
+
 This simulation, for example, will have 5 particles.
 
 * Column 1: Spatial grid index (X)
@@ -339,7 +339,7 @@ If you would like to see more examples of particle tracking, feel free to look a
 
 * `ParticleTracking.ipynb`_
 
-.. _ParticleTracking.ipynb: http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/ParticleTracking.ipynb
+.. _ParticleTracking.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/ParticleTracking.ipynb
 
 
 
