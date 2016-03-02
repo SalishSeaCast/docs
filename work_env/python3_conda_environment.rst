@@ -3,6 +3,11 @@
 Building a Python 3 Conda Environment
 =====================================
 
+.. note::
+    If you followed the :ref:`AnacondaPythonDistro` instructions to install a Python 3 environment,
+    you can skip this section.
+    It is about creating a Python 3 environment when your default environment is Python 2.
+
 In the first stages of our move to Python 3, some important tools we use will
 still be in Python 2.  To facilitate the change, you may find it useful to
 have Python 3 in a separate environment. If you are doing EOSC 511 this year
