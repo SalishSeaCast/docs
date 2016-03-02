@@ -121,9 +121,9 @@ Several notebooks have been developed for generating the anomaly forcing files u
 * `SSH_Tofino.ipynb`_
 * `SSH_PortHardy.ipynb`_
 
-.. _SSH_Tofino.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_Tofino.ipynb
+.. _SSH_Tofino.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_Tofino.ipynb
 
-.. _SSH_PortHardy.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_PortHardy.ipynb
+.. _SSH_PortHardy.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_PortHardy.ipynb
 
 
 Analysis

@@ -100,19 +100,19 @@ __ jupyter_
 * `Plotting Velocity Fields on Horizontal Planes.ipynb`_
 * `Plotting Velocities and Tracers on Vertical Planes.ipynb`_
 
-.. _Exploring netCDF Files.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Exploring%20netCDF%20Files.ipynb
+.. _Exploring netCDF Files.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Exploring%20netCDF%20Files.ipynb
 
-.. _Plotting Bathymetry Colour Meshes.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Bathymetry%20Colour%20Meshes.ipynb
+.. _Plotting Bathymetry Colour Meshes.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Bathymetry%20Colour%20Meshes.ipynb
 
-.. _Plotting Tracers on Horizontal Planes.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Tracers%20on%20Horizontal%20Planes.ipynb
+.. _Plotting Tracers on Horizontal Planes.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Tracers%20on%20Horizontal%20Planes.ipynb
 
-.. _Plotting Velocity Fields on Horizontal Planes.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Velocity%20Fields%20on%20Horizontal%20Planes.ipynb
+.. _Plotting Velocity Fields on Horizontal Planes.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Velocity%20Fields%20on%20Horizontal%20Planes.ipynb
 
-.. _Plotting Velocities and Tracers on Vertical Planes.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Velocities%20and%20Tracers%20on%20Vertical%20Planes.ipynb
+.. _Plotting Velocities and Tracers on Vertical Planes.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Velocities%20and%20Tracers%20on%20Vertical%20Planes.ipynb
 
 The links above are to static renderings of the notebooks via
 `nbviewer.jupyter.org`_ .
 The notebook source files are in the `analysis_tools`_ directory of the :ref:`tools-repo` repo.
 
-.. _nbviewer.jupyter.org: http://nbviewer.jupyter.org/
+.. _nbviewer.jupyter.org: https://nbviewer.jupyter.org/
 .. _analysis_tools: https://bitbucket.org/salishsea/tools/src/tip/analysis_tools/
