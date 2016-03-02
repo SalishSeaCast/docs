@@ -83,4 +83,4 @@ Topography Smoothing
 
 Topography was hand smoothed in Chatham Islands region, Porlier Pass and in a deep basin south of Victoria.  Details available in `SalishSeaSubdomainBathy.ipynb`_.
 
-.. _SalishSeaSubdomainBathy.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/bathymetry/SalishSeaSubdomainBathy.ipynb
+.. _SalishSeaSubdomainBathy.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/bathymetry/SalishSeaSubdomainBathy.ipynb

@@ -339,7 +339,7 @@ If you would like to see more examples of particle tracking, feel free to look a
 
 * `ParticleTracking.ipynb`_
 
-.. _ParticleTracking.ipynb: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/ParticleTracking.ipynb
+.. _ParticleTracking.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/ParticleTracking.ipynb
 
 
 
