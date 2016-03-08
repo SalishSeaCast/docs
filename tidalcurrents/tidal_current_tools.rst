@@ -111,11 +111,230 @@ Adjustments for Running Daily
 New deployment
 --------------
 
-* Every few months to a year the nodes need maintenance or for whatever reason a new deployment with new devices get installed. This requires a lot of effort because the numbers in :file:`LTIM_fun` have previously been found manually. These values are based on the tilt, depth, angle and other physical aspects of the node. The processing that is done may need weeks of data from a new deployement to accurately get the information to realign the ADCP output into usable data.
+Once or twice a year ONC performs maintenance on the nodes that involves bringing the ADCP package to the surface and redeploying the same or a different sensor to the bottom a few hours later.
+Each deployment has its own unique set of data and metadata including:
 
-* All the raw data will have to be deleted so that only the present deployment gets reloaded every time.
+* date/time range (resolved to the hour)
+* sensor serial number (also known as id)
+* number of data bins
+* data bin size
+* data bin 1 distance
+* vertical offset
+* rotation angle
 
-* Contact Marlene Jeffries at Ocean Networks Canada for an updated :file:`getSoGAdcpDataMay15_mod.m` script that contains the correct device and sensor IDs of the new deployment.
+Values for those data and metadata are required in order for the automated daily download and processing of the ADCP data to be restarted following a new deployment.
+Those values have to be added to arrays in the :file:`GETDATA_fun.m`,
+:file:`GETDEPL_fun.m`,
+and :file:`LTIM_fun.m`
+Matlab scripts
+(details below).
+Some of the values must be determined by graphical analysis of data from the new sensor deployment,
+and there must be enough data available for that analysis that the tidal signal can be averaged out.
+So,
+at least a week's data must be collected after a new deployment before the graphical analysis can be done.
+Once the analysis has been completed the data since the beginning of the deployment must be re-processed with the newly obtained sensor data and metadata values.
+
+As of October 2015,
+downloading that data from ONC is accomplished via a Matlab script
+(:file:`getSogAdcpData*.m`)
+provided after each deployment by Marlene Jefferies of ONC.
+
+The notes that follow were written during the process of restarting the daily download automation following the new deployments at the end of August 2015.
+
+
+Obtain and Modify the :file:`getSogAdcpData.m` Script from ONC
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Obtain the new version of the :file:`getSogAdcpData.m` Matlab script for the deployment from Marlene Jefferies at ONC,
+and store it in :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/` with the deployment date added to the file name;
+e.g. :file:`getSogAdcpData_2Sep2015.m`.
+
+Change the :kbd:`email` and :kbd:`userId` lines near line 180 to the email address and 5-digit ONC user id of the user that owns the automation cron job,
+for example:
+
+.. code-block:: matlab
+
+    p.addParamValue('email','dlatornell@eos.ubc.ca', @ischar);
+    p.addParamValue('userId', ddddd, @isnumeric);
+
+The :kbd:`LocationName` comment blocks starting at about line 50 in the :file:`getSogAdcpData.m` script provide the site name
+(e.g. :kbd:`VIP-13`)
+and sensor serial number
+(e.g. :kbd:`8497`)
+for all of the deployments to date.
+Those values for the most recent deployments are required to update the :file:`GETDATA_fun.m` and :file:`GETDEPL_fun.m` scripts.
+Also required are the end date/time for the previous deployment,
+and the start date/time for the present deployment from the :kbd:`switch` statement at about line 430.
+
+
+Update the :file:`GETDATA_fun.m` Script
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Add the new deployment numbers,
+start date/times,
+and sensor serial numbers to the :kbd:`history` arrays in the :kbd:`switch` statement that starts at about line 35 in the copy of :file:`private-tools/ONC-ADCP/GETDATA_fun.m` that is symlinked into :file:`/ocean/dlatorne/MEOPAR/ONC-ADCP/`.
+The :kbd:`history` arrays also require deployment end date/times;
+choose a value in the future beyond the expected duration of the deployment.
+
+The updates made for the late-August 2015 deployments are highlighted below:
+
+.. code-block:: matlab
+    :emphasize-lines: 8,18,28,30
+
+    switch nodloc,
+      case 'east',
+        node='SOG-East-Node';
+        history=[...
+        01    2007 10 19 00     2008 09 25 00 8497;
+        ...
+        2     2015 03 31 22     2015 08 27 16 8497;
+        13    2015 08 27 22     2016 12 31 00 8497];  % or present
+
+      ...
+
+      case 'central',
+        node='SOG-Central-Node';
+        history=[...
+        01    2008 09 24 00     2009 09 27 00 8580;
+        ...
+        12    2014 09 20 02     2015 08 30 15 8580;
+        13    2015 08 31 02     2016 12 31 00 8580];  % or present
+
+      ...
+
+      case 'ddl',
+       node='SOG-Delta-Node';
+       history=[...
+       08    2013 10 23 17     2014 03 06 17 2940;   % DDL 148m
+       02    2014 03 08 21     2014 09 20 18 17955;  % BBL-SG-02 at 142m
+       03    2014 09 22 00     2015 08 28 15 17955;  % BBL-SG-03 at 149m
+       04    2015 08 30 19     2016 12 31 00 17955]; % BBL-SG-04 at ???m
+
+       depname={'DDL-','BBL-SG-','BBL-SG-','BBL-SG-'};
+
+
+Download Raw Data from Deployment Date to Present
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Run the :file:`GETDATA_fun.m` script to download the raw data for each node for the days from the deployment to present.
+That can be accomplished by running Matlab in command-line mode on :kbd:`salish`:
+
+.. code-block:: bash
+
+    $ cd /ocean/dlatorne/MEOPAR/ONC_ADCP/
+    $ matlab -nodesktop -nodisplay
+    ...
+    >> GETDATA_fun('08-Sep-2015', 'central', '/ocean/dlatorne/MEOPAR/ONC_ADCP/', 10)
+
+The data download takes about 10 minutes per day requested,
+so it is advisable to start Matlab in 3 separate terminal sessions and run commands like the above for each of the nodes:
+:kbd:`central`,
+:kbd:`east`,
+and :kbd:`ddl`.
+The :file:`GETDATA_fun.m` script handles breaking the requested number of days into 7 day chunks
+(the maximum that the ONC hardware can handle).
+The :file:`getSogAdcpData*.m` script downloads the data into the :file:`{path}/{mode}/raw/` directory;
+i.e. :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/central/raw/` in the example above.
+
+The :file:`get_VENUS_ADCP_raw.cron.sh` and :file:`get_VENUS_ADCP_raw.m` scripts can be used to automate daily downloading of the raw data during the period required to obtain enough data to complete the analysis required to get the variable values to facilitiate fully automated processing.
+
+
+Update the :file:`GETDEPL_fun.m` Script
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The :file:`GETDEPL_fun.m` script must be updated with the same deployment numbers,
+start date/times,
+and sensor serial numbers that were added to the :file:`GETDATA_fun.m` script.
+Also required are the number of bins,
+the bin size,
+and the bin 1 distances values from one of the sensor metadata files that is generated for each download request.
+The easiest way to obtain those values is to follow the link to the metadata HTML file that is included in the download completion email message generated by the ONC system.
+Add those values to the :kbd:`history` arrays in the :kbd:`switch` statement that starts at about line 22 in the copy of :file:`private-tools/ONC-ADCP/GETDEPL_fun.m` that is symlinked into :file:`/ocean/dlatorne/MEOPAR/ONC-ADCP/`.
+The :kbd:`history` arrays also require vertical offset values for the deployment;
+use the same value as for the previous deployment to start with,
+it will be tuned later.
+
+The updates made for the late-August 2015 deployments are highlighted below:
+
+.. code-block:: matlab
+    :emphasize-lines: 8,18,29,31
+
+    switch nodloc,
+      case 'east',
+        node='SOG-East-Node';
+        history=[...                         %  ID  #bins binsize bin1distance (one that 'best' works) offset
+        01    2007 10 19 00     2008 09 25 00 8497  85 2 6.14 0;
+        ...
+        2     2015 03 31 22     2015 12 31 00 8497  85 2 6.39 +3;
+        13    2015 08 27 22     2016 12 31 00 8497  85 2 6.40 +3];
+
+      ...
+
+         case 'central',
+          node='SOG-Central-Node';
+          history=[...
+          01    2008 09 24 00     2009 09 27 00 8580 38 8 12.47 0;
+          ...
+          12    2014 10 01 00     2015 12 31 00 8580 60 5 9.24  0;   % <- change in parameters here (same VIP)
+          13    2015 08 31 02     2016 12 31 00 8580 60 5 9.25  0];
+
+        ...
+
+        case 'ddl',
+
+          node='SOG-Delta-Node';
+          history=[...
+          08    2013 10 23 16     2014 03 06 17 2940  75  2    4.3  0;   % DDL 148m
+          02    2014 03 08 21     2014 09 20 18 17955 115 1.33 3.96 0;  % BBL-SG-02 at 142m
+          03    2014 09 22 00     2015 12 31 00 17955 115 1.33 3.96 0; % BBL-SG-03 at 149m
+          04    2015 08 30 19     2016 12 31 00 17955 115 1.33 3.96 0]; % BBL-SG-04 at 147m
+
+          depname={'DDL-','BBL-SG-','BBL-SG-','BBL-SG-'};
+
+
+Update the :file:`LTIM_fun.m` Script
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The :file:`LTIM_fun.m` script must be updated with the rotation angles of the ADCPs for the new deployments.
+Initially the angles are set to the same values as for the previous deployments so that the :file:`LTIM_fun.m` script can be run.
+
+The updates for the late-August 2015 deployments are highlighted below:
+
+.. code-block:: matlab
+    :emphasize-lines: 7,18,27
+
+    switch nodloc,
+      case 'central',
+        rotang=[0;  % VIP 01
+                  22;  %  02
+                  ...
+                  58+180; % 12- v2
+                  58+180; % 13
+                ]-61;
+
+      ...
+
+      case 'east',
+        rotang=[57;
+                  0; % VIP 02  - can not start with 1!!
+                  50;  %  03
+                  ...
+                  72;  % east2
+                  72;  % 13
+                ]-106;
+
+      ...
+
+      case 'ddl',
+        rotang=[-60;     % DDL-08
+                   35;   % BBL-SG-02
+                   -20;  % BBL-SG-03
+                   -20;  % BBL-SG-04
+                ];
+
+After at least 7 to 10 days of data have been downloaded and processed by the :file:`GETDEPL_fun.m` script,
+the :file:`LTIM_fun.m` script will be run interactively to to produce plots that will allow the instrument rotation angles for the deployment to be determined.
+Once that has been done the values highlighted above will be updated.
 
 
 Changing users
@@ -125,7 +344,7 @@ If you will be running the processing in a new directory for the first time ther
 
 * 1. In :file:`compare_daily.m` change the path to be where you want everything to be saved. Many extra files will appear in this directory every time you run the scripts.
 
-* 2. Make an account on http://www.oceannetworks.ca/information to get userId. In :file:`getSoGAdcpDataMay15_mod.m` insert your email and userId at lines 173 and 174 of the script. You will receive an email everytime you load raw data from the website.
+* 2. Make an account on http://www.oceannetworks.ca/information to get userId. In :file:`getSoGAdcpDataMay15_mod.m` insert your email and userId at lines 173 and 174 of the script. You will receive an email every time you load raw data from the website.
 
 * 3. In :file:`GET_DATA_fun` change the firstdate variable to be at least 3 days before the lastdate. This is because the filter length in :file:`LTIM_fun` needs at least that much data for the processing.
 
