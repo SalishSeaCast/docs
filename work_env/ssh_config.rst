@@ -6,7 +6,7 @@
 
 This section assumes that you have completed the :command:`ssh-keygen` step of the `Bitbucket ssh Set-up`_ instructions referenced in the :ref:`vc-with-hg` section.
 
-.. _Bitbucket ssh Set-up: https://confluence.atlassian.com/pages/viewpage.action?pageId=270827678
+.. _Bitbucket ssh Set-up: https://confluence.atlassian.com/bitbucket/set-up-ssh-for-mercurial-728138122.html
 
 If you set up working environments to run the Salish Sea NEMO model on :kbd:`salish` or on a Westgrid cluster,
 or need to access model results files from a Westgrid cluster,
