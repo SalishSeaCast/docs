@@ -1,7 +1,7 @@
 .. _TidalCurrentsTools:
 
 ********************
-Tidal Currents Tools
+Tidal currents tools
 ********************
 
 Tidal currents
@@ -42,11 +42,11 @@ It is important to avoid using data for a tidal analysis during the Fraser River
 The bathymetry and shoreline drastically effects the tidal currents. However, they can change over time. It is important to select data that would have a consistent shoreline and bathymetry across datasets that are being compared.
 
 
-Python Scripts
-==============
+Python Tools for Tidal Analysis
+===============================
 
-Tidal Ellipse Calculation
--------------------------
+Tidal Analysis and Ellipse Calculation
+--------------------------------------
 
 Some python functions have been written to facilitate calculating amplitude and phase from velocity vectors and to calculate the ellipse parameters from these values. These scripts are found in :file:`tools/SalishSeaTools/salishsea_tools/ellipse.py` and :file:`tools/SalishSeaTools/salishsea_tools/tidetools.py`
 
@@ -55,6 +55,13 @@ Some python functions have been written to facilitate calculating amplitude and 
    tidetools.fittit(uaus, time, nconst)
 
 This function finds tidal parameters from a tidal constituent across a specified area of the grid at a single depth, at a single point through the water column or a single depth averaged grid point. For currents, this function must perform twice, once for each tidal current vector in order to complete the analysis. This function should also work with water level analysis.
+
+.. note::
+
+   This function can be used to analyze a time series of sea surface height, u velocity, or v velocity. In fact, it can be used for any scalar variable. But it does not handle important things like inference or nodal corrections. In those cases, it is much better to use ttide_ or apply inference and nodal corrections on your own.
+
+.. _ttide: http://www.eos.ubc.ca/~rich/#T_Tide
+
 
 The nconst input sets how many tidal constituents will be analysed. They come in pairs and in order of importance the domain. It returns a dictionary object containing the phase and amplitude for each component for the input array.
 
@@ -88,8 +95,59 @@ This function outputs a dictionary object containing the ellipse parameters for 
 .. _UsingEllipse.py.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Muriel/UsingEllipse.py.ipynb
 
 
-MATLAB Scripts
-==============
+MATLAB Scripts for Tidal Analysis
+===========================================
+
+Some MATLAB tools have been written for analyzing barotropic and baroclinic tidal currents from NEMO u/v output.
+The scripts load NEMO data and then apply ttide_ to perform a harmonic analysis.
+The advantage of using ttide is that it can analyze many constituents and easily handles nodal corrections and inference.
+Several scripts for baroclinic, barotropic and surface currents analysis have been written.
+These scripts take care of masking, unstaggering, rotating and depth averaging as needed.
+
+.. note::
+
+    The NEMO u and v output are expected to be contained in a single netCDF file. Remember that u and v are stored on slightly different lat and lon grids. The longitude and latitude grid stored in the netCDF file should correspond to the T-grid.
+
+.. note::
+
+    Depending on the length of your time series and size of your subdomain, it may be very memory intensive to load your files.
+
+These scripts and their dependencies are stored in :file:`analysis/Nancy/currents/t_tide_analysis`.
+
+* :file:`area_surface_tides.m` - This script analyzes the full tidal current at the surface. It saves the ellipse parameters for each constituent in a file. ::
+
+    area_surface_tides(filename, outfile, t0, ref_time, time_units)
+
+    * filename is the name of the netCDF file where the u/v/grid/time information is stored.
+    * outfile is the name of the file where the output is to be saved
+    * t0 is the time index for beginning the tidal anlaysis. e.g t0=1 for analysis at the beginning of the time series or t0=241 to skip the first 240 records in the time series.
+    * ref_time is a matlab date vector that specifies the reference time for the time variable. e.g ref_time=[2014 9 10] means that the time measurement in the netCDF file is measured relative to Sept 10, 2014.
+    * time_units is the units that the time variable is measured in. e.g 'h' for hours or 's' for seconds.
+
+* :file:`area_depav_tides.m` - This script analyzes the depth-averaged tidal currents. ::
+
+    area_depav_tides(filename, outfile, depthfile, t0, ref_time, time_units, use_mask)
+
+    * depthfile is the mesh_mask file, where actual NEMO depths are stored.
+    * use_mask indicates if the depth averaging should be calculated with depths stored in the mesh_mask file (1) or with depths stored with u/v in the netCDF file
+    * all other inputs are the same as those described in area_surface_tides.m
+
+ * :file:`area_baroclinic_tides.m` - This script analyzes the baroclinic tidal currents. The baroclinic tidal currents are defined as the full current subtract the depth-averaged current. This definition may be inaccurate in regions where boundary layer effects are important. ::
+
+    area_baroclinic_tides(filename, outfile, depthfile, t0, ref_time, time_units, use_mask)
+
+    * all inputs are the same as those in area_depav_tides.m
+
+
+Output
+-------
+
+This notebook_ gives an example of loading the output from these scripts in python. It makes use of functions in :file:`analysis/Nancy/currents/baroclinic.py`.
+
+.. _notebook: http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Nancy/currents/Baroclinic%20Tides%20-%20CODAR%20region%20-%20phase%20and%20inclination.ipynb
+
+MATLAB Scripts for ONC Data
+===========================
 
 Loading and processing of the observational data from the ONC VENUS Central, East and Delta nodes is done in MATLAB scripts written by Dr. Rich Pawlowicz. The processing is done in three parts and is tailored for each deployment at each node.
 
@@ -515,8 +573,11 @@ Preparing the :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/` Filespace
         0 10 * * *  ${OCEAN_MEOPAR}/ONC_ADCP/get_VENUS_ADCP.cron.sh
 
 
+
 References
 ----------
+
+* Pawlowicz, R., B. Beardsley, and S. Lentz, 2002. Classical tidal harmonic analysis including error estimates in MATLAB using T_TIDE, Computers and Geosciences, 28, 929-937
 
 * Parker, B. B., 2007. Tidal analysis and prediction. US Department of Commerce, National Oceanic and Atmospheric Administration, National Ocean Service, Centre for Operational Oceanographic Products and Services, 378 pages.
 
