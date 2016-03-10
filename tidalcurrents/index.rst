@@ -9,3 +9,4 @@ Tidal currents evaluation
    tidal_current_sensitivity
    tidal_current_comparison
    tidal_current_tools
+   onc_adcp
