@@ -1,9 +1,9 @@
-*************************************
-Working on :kbd:`orcinus`: NEMO v3.6
-*************************************
+.. _OrcinusNEMO34:
+*************************
+Working on :kbd:`orcinus`: NEMO v3.4 (old)
+*************************
 
-This section describes *very* briefly the steps to set up and run the Salish Sea NEMO version 3.6 code on the `orcinus.westgrid.ca`_ HPC cluster.
-To set up NEMO version 3.4, go :ref:`here<OrcinusNEMO34>`.
+This section describes *very* briefly the steps to set up and run the Salish Sea NEMO version 3.4 code on the `orcinus.westgrid.ca`_ HPC cluster.
 This guide assumes that your :ref:`WorkingEnvironment` is set up,
 and that you are familiar with :ref:`WorkingOnSalish`.
 
@@ -98,8 +98,7 @@ Clone the repos needed to run the model:
 .. code-block:: bash
 
     cd $HOME/MEOPAR
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-3.6-code NEMO-3.6-code
-    hg clone ssh://hg@bitbucket.org/salishsea/xios XIOS
+    hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     hg clone ssh://hg@bitbucket.org/salishsea/tools
@@ -130,40 +129,23 @@ and install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Py
     pip install --user -e SalishSeaTools
     pip install --user -e SalishSeaCmd
 
-Compile XIOS
-============
 
-Compile XIOS server.
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/XIOS
-    ./make_xios --arch X64_ORCINUS --netcdf_lib netcdf4_seq --job 8
-
-Compile NEMO
-============
+Compile the Code
+================
 
 Compile the Salish Sea NEMO configuration,
 and the :program:`rebuild_nemo` tool:
 
 .. code-block:: bash
 
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    source orcinus_build.sh SalishSea
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS/REBUILD_NEMO
+    cd $HOME/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea
+    source orcinus_build.sh
+    cd $HOME/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO
     source orcinus_build.sh
 
 Both invocations of the :file:`orcinus_build.sh` script will produce lots of output that mentions build failures,
 but they should end with success messages and show the newly created executables.
-
-To build a configuration other than :kbd:`SalishSea`, replace :kbd:`SalishSea` with the name of the configuration to be built, e.g. :kbd:`SOG`:
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    source orcinus_build.sh SOG
-    
-For :file:`CONFIG/orcinus_build.sh` the output should end something like:
+For :file:`CONFIG/SalishSea/orcinus_build.sh` the output should end something like:
 
 .. code-block:: bash
 
@@ -229,7 +211,6 @@ the output of :file:`TOOLS/REBUILD_NEMO/orcinus_build.sh` should end like:
     rebuild_nemo executable symlinked in /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/ at Mon Aug 18 12:56:08 PDT 2014
     lrwxrwxrwx 1 dlatorne dlatorne 83 Aug 18 12:56 /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/rebuild_nemo.exe -> /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/bin/rebuild_nemo.exe*
 
-The command :program:`./makenemo clean` works as usual.  
 
 Prepare and Execute Runs
 ========================
