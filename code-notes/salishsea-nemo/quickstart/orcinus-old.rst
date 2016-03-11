@@ -1,7 +1,8 @@
 .. _OrcinusNEMO34:
-*************************
+
+******************************************
 Working on :kbd:`orcinus`: NEMO v3.4 (old)
-*************************
+******************************************
 
 This section describes *very* briefly the steps to set up and run the Salish Sea NEMO version 3.4 code on the `orcinus.westgrid.ca`_ HPC cluster.
 This guide assumes that your :ref:`WorkingEnvironment` is set up,
@@ -109,19 +110,7 @@ There is no need to clone the :file:`docs` or :file:`analysis` repos on :kbd:`or
 Install Tools and Command Processor Packages
 ============================================
 
-Install pip
------------
-
-Create a :file:`$HOME/.local/` file space for per-user installation of Python packages.
-Download and install pip
-
-.. code-block:: bash
-
-    mkdir -p $HOME/.local
-    curl -LO https://bootstrap.pypa.io/get-pip.py
-    python get-pip.py --user
-
-and install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python packages:
+Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python packages:
 
 .. code-block:: bash
 
