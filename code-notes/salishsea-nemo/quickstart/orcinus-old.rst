@@ -1,8 +1,8 @@
 .. _OrcinusNEMO34:
 
-******************************************
-Working on :kbd:`orcinus`: NEMO v3.4 (old)
-******************************************
+************************************
+Working on :kbd:`orcinus`: NEMO v3.4
+************************************
 
 This section describes *very* briefly the steps to set up and run the Salish Sea NEMO version 3.4 code on the `orcinus.westgrid.ca`_ HPC cluster.
 This guide assumes that your :ref:`WorkingEnvironment` is set up,
