@@ -49,7 +49,7 @@ You will also need access to scripts in the analysis_ repository and the nowcast
    * The input file can either be a year-long water level time series from NOAA/DFO or a constituent file from DFO.
    * If using a water level time series, be sure that the time zone is PST and the latitude is added to the second row, second column of the csv file.
    * Use :file:`exclude_long=1`, :file:`cut_off=0.3`.
-   * Copy the tidal predictions output file to :file:`tools/SalishSeaNowcast/nowcast/tidal_predictions/`.
+   * Copy the tidal predictions output file to :file:`tools/SalishSeaNowcast/tidal_predictions/`. Add this file to the repostiroy, commit and push.
    * See :ref:`StormTools` for a description of how to use the MATLAB scripts.
    * You will need ttide_ to run these scripts.
 
