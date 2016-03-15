@@ -116,3 +116,29 @@ The notebook source files are in the `analysis_tools`_ directory of the :ref:`to
 
 .. _nbviewer.jupyter.org: https://nbviewer.jupyter.org/
 .. _analysis_tools: https://bitbucket.org/salishsea/tools/src/tip/analysis_tools/
+
+
+ERDDAP and :kbd:`xarray`
+------------------------
+
+From late-2013 until early-2016 we used the `netCDF4-python`_ library to open locally stored files.
+The notebooks above describe that way of working.
+In early-2016 we set up and `ERDDAP server`_  to provide public access to our model results.
+The `netCDF4-python`_ library can open datasets from ERDDAP URLs just as easily as it can open them from local files.
+So,
+here is a reworking of the `Exploring netCDF Files.ipynb`_ using ERDDAP:
+
+* `Exploring netCDF Datasets from ERDDAP.ipynb`_
+
+.. _netCDF4-python: http://unidata.github.io/netcdf4-python/
+.. _ERDDAP server: https://salishsea.eos.ubc.ca/erddap/
+.. _Exploring netCDF Datasets from ERDDAP.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Exploring%20netCDF%20Datasets%20from%20ERDDAP.ipynb
+
+One reason that you might want to use ERDDAP to access our model results is if you don't have access to our results files stored on the UBC EOAS Ocean cluster.
+Our ERDDAP server is public.
+
+Another reason to use ERDDAP is that it provides access to the daily model results as continuous data streams,
+hiding the fact that they are stored in per-day files.
+ERDDAP makes it much easier to work with a dataset that spans multiple days because it removes the task of opening each day's file(s) and splicing the variable values into arrays.
+You can just ask for a slice of the dataset in time and space and ERDDAP takes care of the slicing and splicing
+(provided that the resulting dataset is less than 2Gb in size).
