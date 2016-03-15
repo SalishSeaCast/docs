@@ -15,7 +15,7 @@ The sections below describe *very* briefly the steps to set up and run the Salis
     west.cloud
     macOSX
 
-Details of what this all means and why the steps below are what they are can be found in the following sections:
+Details of what this all means and why the steps in the sections linked from this page are what they are can be found in the following sections:
 
 * :ref:`NEMO-code`
 * :ref:`NEMO-forcing`
@@ -24,7 +24,7 @@ Details of what this all means and why the steps below are what they are can be 
 Running NEMO-3.4
 ================
 
-The sections below briefly describe how to set up and run the NEMO v3.4 version of the Salish Sea NEMO code on various platforms. 
+The sections below briefly describe how to set up and run the NEMO v3.4 version of the Salish Sea NEMO code on various platforms.
 
 .. toctree::
     :maxdepth: 2

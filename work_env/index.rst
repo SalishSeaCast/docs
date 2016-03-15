@@ -49,13 +49,13 @@ please see the :ref:`QuickStartGuide` for instructions on setting working enviro
    bash_config
    hg_version_control
    anaconda_python
-   python3_conda_environment
-   porting_to_python3
    salishsea_pkgs
    python_notes
    sphinx_docs
    ssh_config
    emacs_config
+   python3_conda_environment
+   porting_to_python3
 
 It is also possible to set up a working environment for most things other than running the NEMO model on your own laptop,
 if you wish.

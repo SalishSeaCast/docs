@@ -10,7 +10,7 @@ Building a Python 3 Conda Environment
 
 In the first stages of our move to Python 3, some important tools we use will
 still be in Python 2.  To facilitate the change, you may find it useful to
-have Python 3 in a separate environment. If you are doing EOSC 511 this year
+have Python 3 in a separate environment. If you are doing EOSC 511 in 2015 or later
 you will need a Python 3 environment.  This section explains how to set one up
 assuming you already have conda and anaconda installed.
 
