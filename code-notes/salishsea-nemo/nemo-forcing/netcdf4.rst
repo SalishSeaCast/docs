@@ -12,7 +12,7 @@ Use of the `netCDF4-python`_ library
 (included in :ref:`AnacondaPythonDistro`)
 is assumed.
 
-.. _netCDF4: http://www.unidata.ucar.edu/software/netcdf/
+.. _netCDF4: http://unidata.github.io/netcdf4-python/
 .. _NetCDF Climate and Forecast (CF) Metadata Conventions, Version 1.6, 5 December, 2011: http://cf-pcmdi.llnl.gov/documents/cf-conventions/1.6/cf-conventions.html
 .. _netCDF4-python: http://netcdf4-python.googlecode.com/
 

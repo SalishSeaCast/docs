@@ -84,7 +84,7 @@ There are code examples in the notebooks and also examples of the use of functio
 
 __ jupyter_
 .. _jupyter: https://jupyter.org/
-.. _netCDF: http://www.unidata.ucar.edu/software/netcdf/
+.. _netCDF: http://unidata.github.io/netcdf4-python/
 
 If you are new to the Salish Sea project,
 or to `Jupyter Notebook`__,
@@ -110,7 +110,7 @@ __ jupyter_
 
 .. _Plotting Velocities and Tracers on Vertical Planes.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Velocities%20and%20Tracers%20on%20Vertical%20Planes.ipynb
 
-The links above are to static renderings of the notebooks via
+The links here are to static renderings of the notebooks via
 `nbviewer.jupyter.org`_ .
 The notebook source files are in the `analysis_tools`_ directory of the :ref:`tools-repo` repo.
 
