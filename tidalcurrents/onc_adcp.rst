@@ -1,4 +1,4 @@
-.. _ONCADCP
+.. _ONCADCP:
 
 ***********************************
 Ocean Networks Canada ADCP Currents
