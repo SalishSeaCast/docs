@@ -4,7 +4,7 @@
 Particle Tracking
 ********************
 
-This page outlines the tools we are using for offline particle tracking with NEMO model output. 
+This page outlines the tools we are using for offline particle tracking with NEMO model output.
 
 .. toctree::
    :maxdepth: 2
@@ -14,3 +14,4 @@ This page outlines the tools we are using for offline particle tracking with NEM
    tracers
    sequential
    sensitivity
+   quantitative
