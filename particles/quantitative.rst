@@ -136,9 +136,9 @@ Pay special attention to the following options:
 
 * :kbd:`nmax`: The maximum number of particles. This parameter is typically much higher in quantitative mode.
 * :kbd:`key_eco`: Setting to :kbd:`.TRUE.` reduces CPU time.
-* :kbd:`key_reducmem`: Settin to :kbd:`.TRUE.` reduces memory by only reading model data over selected region.
+* :kbd:`key_reducmem`: Setting to :kbd:`.TRUE.` reduces memory by only reading model data over selected region.
 * :kbd:`key_unitm3`: Setting to :kbd:`.TRUE.` prints transport calcualtion in m^3/s instead of Sverdrups.
-* :kbd:`max_transport`: Maxmimum transport (in m^3/s) that should not be exceeded by the transport associated with each initial particle. A lower values means more initial particles and higher accuracy. Example values are 1e9 for one particle in one model cell and 1e4 for typical experiments.
+* :kbd:`max_transport`: Maximum transport (in m^3/s) that should not be exceeded by the transport associated with each initial particle. A lower values means more initial particles and higher accuracy. Example values are 1e9 for one particle in one model cell and 1e4 for typical experiments.
 * :kbd:`lmin`: First time step to generate particles.
 * :kbd:`lmax`: Last time step to generate particles.
 * :kbd:`key_alltracers`: :kbd:`.TRUE.` to print tracer information in diagnostics.
@@ -153,7 +153,7 @@ You must define a closed region in your domain for transport calculations.
 Ariane calculates the mass transport between an initial section in your region and the other sections.
 Ariane provides a couple of useful tools for defining the sections.
 
-* :kbd:`mkseg0`: This program reads your land-ocean mask and writes it as a text file. Run this program in the same directory as your namelist.
+* :kbd:`mkseg0`: This program reads your land-ocean mask and writes it as a text file. Run this program in the same directory as your namelist. You may need to add the ariane executables to your path. 
 
 .. code::
 
@@ -207,10 +207,10 @@ You can rename :kbd:`"1section"` and :kbd:`"2section"` to something more intuiti
 
      initial state                #  20380
       stats. for:          x         y         z         a
-        min:   -123.457    48.946     0.500     0.000
-        max:   -123.134    49.063   226.275     0.000
-       mean:   -123.347    48.986    74.893     0.000
-     std. dev.:      0.062     0.022    61.722     0.000
+             min:   -123.457    48.946     0.500     0.000
+             max:   -123.134    49.063   226.275     0.000
+            mean:   -123.347    48.986    74.893     0.000
+       std. dev.:      0.062     0.022    61.722     0.000
 
      meanders        166079.1572 0
      1section        .0000 1
@@ -301,7 +301,7 @@ You can also impose a density and/or salinity and/or temperature criteria on the
 * Once again, you must remake and install ariane.
 * You'll also need to make sure that :kbd:`key_alltracers` and :kbd:`key_computesigma` are :kbd:`.TRUE.` and :kbd:`zsigma` are defined in your namelist.
 * Now particles will be initialized with salinity less than 29.
-* There are other examples of useful criteri in :file:`mod_criter0.f90`.
+* There are other examples of useful criteria in :file:`mod_criter0.f90`.
 * Once again, the output of :file:`stats.txt` will be different. Here is an example of part of :file:`stats.txt`:
 
 .. code-block:: fortran
