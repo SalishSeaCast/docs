@@ -244,7 +244,8 @@ You can rename :kbd:`"1section"` and :kbd:`"2section"` to something more intuiti
            mean:   -123.192    48.929    25.504     1.715
       std. dev.:      0.068     0.025    25.477     1.639
 
-* :kbd:`meanders` are the particles not intercepted by any section.
+* :kbd:`lost` are the particles not intercepted by any section.
+* :kbd:`meanders` are the particles that go back out the source section.
 
 
 Time considerations
