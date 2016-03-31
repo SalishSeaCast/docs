@@ -1,3 +1,5 @@
+.. _DocumentationWithSphinx:
+
 Documentation with Sphinx
 =========================
 
