@@ -51,6 +51,7 @@ please see the :ref:`QuickStartGuide` for instructions on setting working enviro
    anaconda_python
    salishsea_pkgs
    python_notes
+   bitbucket_notebook_readme
    sphinx_docs
    ssh_config
    emacs_config
