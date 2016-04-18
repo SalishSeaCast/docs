@@ -33,7 +33,6 @@ etc.
     hg clone ssh://hg@bitbucket.org/salishsea/docs
     hg clone ssh://hg@bitbucket.org/salishsea/tools
     hg clone ssh://hg@bitbucket.org/salishsea/analysis
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
 
 Next,
 install the :ref:`SalishSeaToolsPackage` and the :ref:`SalishSeaCmdProcessor`:

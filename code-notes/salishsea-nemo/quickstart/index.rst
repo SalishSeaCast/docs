@@ -29,4 +29,5 @@ The sections below briefly describe how to set up and run the NEMO v3.4 version 
 .. toctree::
     :maxdepth: 2
 
+    salish-old
     orcinus-old

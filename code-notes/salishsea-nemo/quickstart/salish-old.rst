@@ -1,13 +1,10 @@
-.. _WorkingOnSalish:
+.. _SalishNEMO34:
 
-************************************
-Working on :kbd:`salish` : NEMO v3.6
-************************************
+************************
+Working on :kbd:`salish`
+************************
 
-This section describes *very* briefly the steps to set up and run the NEMO version 3.6 code on out group's development machine,
-:kbd:`salish`.
-To set up NEMO version 3.4,
-go :ref:`here<SalishNEMO34>`.
+This section describes *very* briefly the steps to set up and run the Salish Sea NEMO code.
 Details of what this all means and why the steps below are what they are can be found in subsequent sections.
 
 
@@ -40,55 +37,39 @@ Clone the Repos
 
 Assuming that you are using SSH key authentication on Bitbucket
 (see :ref:`vc-with-hg`),
-clone the :ref:`NEMO-3.6-code-repo`,
-:ref:`XIOS-repo`,
-:ref:`NEMO-forcing-repo`,
-and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
+clone the :ref:`NEMO-code <NEMO-code>`,
+:ref:`NEMO-forcing <NEMO-forcing>`,
+and :ref:`SS-run-sets <SS-run-sets>` repos into your workspace on :file:`/data/`:
 
 .. code-block:: bash
 
     cd /data/$USER/MEOPAR/
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-3.6-code NEMO-3.6-code
-    hg clone ssh://hg@bitbucket.org/salishsea/xios XIOS
+    hg clone ssh://hg@bitbucket.org/salishsea/nemo-code NEMO-code
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
 
 
-Compile XIOS
-============
-
-Compile the XIOS inuot/output server.
-
-.. code-block:: bash
-
-    cd /data/$USER/MEOPAR//XIOS
-    ./make_xios --arch GCC_SALISH --netcdf_lib netcdf4_seq --job 8
-
-
-Compile NEMO-3.6
+Compile the Code
 ================
 
-Compile and link the Salish Sea NEMO configuration and the XIOS server with the :kbd:`salish` architecture definitions,
-distributing the compilation over 8 cores.
+Compile and link the full domain Salish Sea NEMO configuration and the IOM output server with the :kbd:`salish` architecture definitions with the compilation distributed over 8 cores.
 
 .. code-block:: bash
 
-    cd NEMO-3.6-code/NEMOGCM/CONFIG
-    ./makenemo -n SalishSea -m GCC_SALISH -j8
+    cd NEMO-code/NEMOGCM/CONFIG
+    ./makenemo -n SalishSea -m salish -j8
 
-The resulting executables are located in :file:`NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/`.
+The resulting executables are located in :file:`NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/`.
 
 Compile and link the :program:`rebuild_nemo` tool:
 
 .. code-block:: bash
 
-    cd NEMO-3.6-code/NEMOGCM/TOOLS
-    ./maketools -m GCC_SALISH -n REBUILD_NEMO
+    cd NEMO-code/NEMOGCM/TOOLS
+    ./maketools -m salish -n REBUILD_NEMO
 
 See :ref:`rebuild-nemo-tool` for more information about it.
 
-
-.. _PrepareRun:
 
 Prepare and Execute Runs
 ========================
@@ -99,9 +80,9 @@ edit,
 and version control those files to define the run that you want to execute.
 
 The run description file is described in the :ref:`RunDescriptionFileStructure` section of the :ref:`project tools documentation <SalishSeaToolsDocs>`.
-The namelists are described in the `NEMO-3.6 Book`_.
+The namelists are described in the `NEMO-3.4 Book`_.
 
-.. _NEMO-3.6 Book: http://www.nemo-ocean.eu/content/download/178055/725078/file/NEMO_book_V36stable.pdf
+.. _NEMO-3.4 Book: http://www.nemo-ocean.eu/content/download/21612/97924/file/NEMO_book_3_4.pdf
 
 Use :program:`salishsea` :ref:`salishsea-run` to prepare,
 execute,
@@ -109,7 +90,7 @@ and gather the results for a run:
 
 .. code-block:: bash
 
-    salishsea run SalishSea.yaml iodef.xml /data/$USER/MEOPAR/SalishSea/results/my_excellent_results
+    salishsea run --nemo3.4 SalishSea.yaml iodef.xml /data/$USER/MEOPAR/SalishSea/results/my_excellent_results
 
 :command:`salishsea run` returns the relative path and name of the temporary run directory,
 and the job identifier assigned by the queue manager,
@@ -135,7 +116,7 @@ When the job completes the results should have been gathered in the directory yo
 Look at the Results
 ===================
 
-A number of notebooks that look at NetCDF files are available in :file:`tools/analysis_tools/`.
+A number of notebooks that look at NetCDF files are available in :file:`analysis/analysis_tools/`.
 To start these,
 go to the top level directory of the :file:`analysis` repo on your local machine
 (not on :kbd:`salish`) and type:
@@ -144,7 +125,7 @@ go to the top level directory of the :file:`analysis` repo on your local machine
 
     jupyter notebook
 
-At this point lots of information will appear in your terminal.
+At this points alot of information will appear in your terminal.
 This terminal session is now running a server and cannot be used for anything else until you are finished with the notebooks.
 At that point you need to CTRL-C to get out.
 
@@ -157,7 +138,7 @@ find the ip address, something like:
 
     The Jupyter Notebook is running at: http://127.0.0.1:8888/
 
-and put that UTL into your browser.
+and put that number in your browser.
 From this initial window you can open the notebooks in :file:`analysis_tools` directory and look around.
 The links to the various files will probably not work.
 Change them to point to your file space.
