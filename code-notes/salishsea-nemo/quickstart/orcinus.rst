@@ -1,3 +1,5 @@
+.. _WorkingOnOrcinus:
+
 *************************************
 Working on :kbd:`orcinus`: NEMO v3.6
 *************************************
@@ -115,8 +117,10 @@ Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python
 .. code-block:: bash
 
     cd tools
+    pip install --user pathlib
     pip install --user -e SalishSeaTools
     pip install --user -e SalishSeaCmd
+
 
 Compile XIOS
 ============
@@ -128,8 +132,9 @@ Compile XIOS server.
     cd $HOME/MEOPAR/XIOS
     ./make_xios --arch X64_ORCINUS --netcdf_lib netcdf4_seq --job 8
 
-Compile NEMO
-============
+
+Compile NEMO-3.6
+================
 
 Compile the Salish Sea NEMO configuration,
 and the :program:`rebuild_nemo` tool:
@@ -150,7 +155,7 @@ To build a configuration other than :kbd:`SalishSea`, replace :kbd:`SalishSea` w
 
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
     source orcinus_build.sh SOG
-    
+
 For :file:`CONFIG/orcinus_build.sh` the output should end something like:
 
 .. code-block:: bash
@@ -185,7 +190,11 @@ For :file:`CONFIG/orcinus_build.sh` the output should end something like:
     NEMO executable symlinked in SalishSea/EXP00/ as opa at Mon Aug 18 12:34:25 PDT 2014
     lrwxrwxrwx 1 dlatorne dlatorne 73 Aug 18 12:34 /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/EXP00/opa -> /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/nemo.exe*
 
-Similarily,
+The :kbd:`Build failed...` message on the 10th to last line is deceptive.
+It is an artifact of the slightly convoluted build process that is required on :kbd:`orcinus`.
+The important result is that the last line shows a newly created symbolic link between :file:`.../EXP00/opa` and :file:`.../BLD/bin/nemo.exe`.
+
+Similarly,
 the output of :file:`TOOLS/REBUILD_NEMO/orcinus_build.sh` should end like:
 
 .. code-block:: bash
@@ -217,7 +226,12 @@ the output of :file:`TOOLS/REBUILD_NEMO/orcinus_build.sh` should end like:
     rebuild_nemo executable symlinked in /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/ at Mon Aug 18 12:56:08 PDT 2014
     lrwxrwxrwx 1 dlatorne dlatorne 83 Aug 18 12:56 /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/rebuild_nemo.exe -> /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/bin/rebuild_nemo.exe*
 
-The command :program:`./makenemo clean` works as usual.  
+As was the case for the NEMO build above,
+the :kbd:`Build failed...` message on the 10th to last line is a deceptive artifact of the build process that is required on :kbd:`orcinus`.
+The important result is that the last line shows a newly created symbolic link between :file:`.../REBUILD_NEMO/rebuild_nemo.exe` and :file:`.../BLD/bin/rebuild_nemo.exe`.
+
+The command :program:`./makenemo clean` works as usual.
+
 
 Prepare and Execute Runs
 ========================
@@ -228,9 +242,9 @@ edit,
 and version control those files to define the runs that you want to execute.
 
 The run description file is described in the :ref:`RunDescriptionFileStructure` section of the :ref:`project tools documentation <SalishSeaToolsDocs>`.
-The namelists are described in the `NEMO-3.4 Book`_.
+The namelists are described in the `NEMO-3.6 Book`_.
 
-.. _NEMO-3.4 Book: http://www.nemo-ocean.eu/content/download/21612/97924/file/NEMO_book_3_4.pdf
+.. _NEMO-3.6 Book: http://www.nemo-ocean.eu/content/download/178055/725078/file/NEMO_book_V36stable.pdf
 
 Use :program:`salishsea` :ref:`salishsea-run` to prepare,
 execute,
