@@ -75,7 +75,7 @@ The :file:`$HOME/bin/` directory is the conventional place keep your own scripts
 
 The :file:`$HOME/.local/bin/` directory is where Python scripts installed via the :kbd:`--user` option are stored so it should be near the beginning of your :envvar:`PATH`:
 
-.. .. code-block:: bash
+.. code-block:: bash
 
     export PATH=$HOME/.local/bin:$PATH
 
@@ -83,7 +83,7 @@ If you are using the Anaconda Python distribution you should add its :file:`bin/
 
 .. code-block:: bash
 
-    export PATH=$HOME/anaconda/bin:$PATH
+    export PATH=$HOME/anaconda3/bin:$PATH
 
 Aliases allow you to run commands with different names or with particular option flags set.
 
@@ -182,12 +182,26 @@ The required modules vary from machine to machine:
 
 .. _LoadingModulesOnOrcinus:
 
-* On :kbd:`orcinus` the list of :command:`module load` commands is:
+* On :kbd:`orcinus` the only :command:`module load` command you should include in your :file:`$HOME/.bashrc` is:
 
   .. code-block:: bash
 
       module load python
+
+  Other module provide the Intel Fortran compiler,
+  the netCDF libraries,
+  etc.
+  Unfortunately an issue with the :kbd:`orcinus` module system will cause NEMO build to fail if you load those module via your :file:`$HOME/.bashrc` file.
+  Most of our tools load the necessary modules as required,
+  but if you need to load them manually,
+  here is the list of :command:`module load` commands:
+
+  .. code-block:: bash
+
       module load intel
+      module load intel/14.0/netcdf-4.3.3.1_mpi
+      module load intel/14.0/netcdf-fortran-4.4.0_mpi
+      module load intel/14.0/hdf5-1.8.15p1_mpi
 
 You can inspect the collection of modules that are loaded with the :command:`module list` command; for example,
 on :kbd:`jasper`:
