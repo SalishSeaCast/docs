@@ -14,7 +14,7 @@ The Mercurial site includes `beginner's guides`_,
 but `Mercurial - The Definitive Guide`_
 (also known as "the redbean book") is the go-to reference.
 If you are new to version control you should read at least Chapters 1_ and 2_.
-Users experiences with other version control tools
+Users experienced with other version control tools
 (e.g :command:`svn` or :command:`git`)
 can get up to speed with Mercurial by reading `Chapter 2`_.
 
@@ -31,8 +31,7 @@ you should:
 * Create a `Bitbucket.org`_ account.
   If you use an academic domain email address (like :kbd:`@eos.ubc.ca`) you will get perks like unlimited private repo collaboration.
 * Send your Bitbucket user id to dlatornell@eos.ubc.ca so that you can be added to the `SalishSea-MEOPAR`_ team account.
-* Follow the `Bitbucket ssh Set-up`_ instructions to enable key authentication.
-  You probably won't need to do steps 7 and 8 at the end.
+* Follow the `Bitbucket ssh Set-up`_ instructions to enable :command:`ssh` key authentication.
 
   .. note::
 
@@ -109,6 +108,11 @@ The :kbd:`[extensions]` section enables several useful Mercurial extensions:
   As described below,
   :kbd:`rebase` allows changes that have been pushed by other contributors to be pulled into your cloned repo while you have committed changes that have not been pushed without having to do frivolous branch merges.
   See :ref:`PullingAndRebaseingChangesFromUpstream` for more details.
+
+* :kbd:`progress` provides progress bars in the output of commands that are going to take more than a second or two to complete
+
+* :kbd:`strip` provides the :kbd:`strip` command to remove changesets and their descendants from a repository.
+  We very occasionally need to use this for repository maintenance.
 
 The :kbd:`[ui]` section configures the Mercurial user interface:
 
