@@ -44,3 +44,37 @@ install the :ref:`SalishSeaToolsPackage` and the :ref:`SalishSeaCmdProcessor`:
     pip install -e SalishSeaCmd
 
 The links above contain information about the contents of those packages.
+
+Next,
+you need a repo to store you analysis notebooks and other bits of code,
+text,
+etc. in.
+We used to all share a single `analysis`_ repo,
+but it got too big.
+So,
+we broke it up so that each team member has their own analysis repo,
+and there are a few special pupose analysis repos.
+You can find them all at https://bitbucket.org/account/user/salishsea/projects/SSM_ANALYSIS.
+The original analysis repo is now read-only.
+
+.. _analysis: https://bitbucket.org/salishsea/analysis
+
+If you are joining the team as a researcher there should be an analysis repo already set up for you.
+Its name will be something like :kbd:`analysis-james`,
+but with your name.
+Go ahead and clone that repo too:
+
+.. code-block:: bash
+
+    cd /ocean/$USER/MEOPAR/
+    hg clone ssh://hg@bitbucket.org/salishsea/analysis-james
+
+If you are joining the team for a sprint,
+please clone the :kbd:`analysis-sprints` repo:
+
+.. code-block:: bash
+
+    cd /ocean/$USER/MEOPAR/
+    hg clone ssh://hg@bitbucket.org/salishsea/analysis-sprints
+
+and create a directory in it named after yourself to work in.
