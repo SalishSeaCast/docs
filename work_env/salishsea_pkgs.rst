@@ -32,7 +32,6 @@ etc.
     cd /ocean/$USER/MEOPAR/
     hg clone ssh://hg@bitbucket.org/salishsea/docs
     hg clone ssh://hg@bitbucket.org/salishsea/tools
-    hg clone ssh://hg@bitbucket.org/salishsea/analysis
 
 Next,
 install the :ref:`SalishSeaToolsPackage` and the :ref:`SalishSeaCmdProcessor`:
