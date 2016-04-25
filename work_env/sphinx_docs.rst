@@ -21,18 +21,18 @@ for which PDFs must be rendered,
 uploaded,
 and linked into other documentation to make them available online.
 
-All documentation is under :ref:`vc-with-hg` and stored in either the docs_ or `private-docs`_ project documentation repos,
+All documentation is under :ref:`vc-with-hg` and stored in either the docs_ repo,
 or in the docs directory of another appropriate project repo
 (see :ref:`team-repos`).
 Most notably,
 the tools_ repo includes a large public documentation tree.
-When changes that have been committed to the docs_ and tools_ repos are pushed to Bitbucket a signal is sent to readthedocs.org to automatically rebuild and render the docs at
+When changes that have been committed to the docs_ and tools_ repos are pushed to Bitbucket a signal is sent to `readthedocs.org`_ to automatically rebuild and render the docs at
 http://salishsea-meopar-docs.readthedocs.org/ and http://salishsea-meopar-tools.readthedocs.org/,
 respectively.
 
 .. _docs: https://bitbucket.org/salishsea/docs/
-.. _private-docs: https://bitbucket.org/salishsea/private-docs/
 .. _tools: https://bitbucket.org/salishsea/tools/
+.. _readthedocs.org: https://readthedocs.org/
 
 Sphinx_ uses reStructuredText
 (reST),
@@ -76,7 +76,7 @@ use the command:
 
 to build the docs.
 You will be notified of any syntax or consistency errors.
-The HTML pages produced byt the :command:`make html` command are stored in the :file:`_build/html/` subdirectory and you can use your browser to open the :file:`index.html` file in that directory to preview them.
+The HTML pages produced by the :command:`make html` command are stored in the :file:`_build/html/` subdirectory and you can use your browser to open the :file:`index.html` file in that directory to preview them.
 You can keep a browser tab open to the rendered docs and refresh after each build to see updates.
 
 .. note::
@@ -90,7 +90,7 @@ You can keep a browser tab open to the rendered docs and refresh after each buil
     and the directory :file:`_static/`.
     After the docs have been built it will also contain the :file:`_build/` directory.
 
-The result of running :command:`make html` should look something link::
+The result of running :command:`make html` should look something like::
 
   sphinx-build -b html -d _build/doctrees   . _build/html
   Running Sphinx v1.1.3
