@@ -123,7 +123,7 @@ ERDDAP and :kbd:`xarray`
 
 From late-2013 until early-2016 we used the `netCDF4-python`_ library to open locally stored files.
 The notebooks above describe that way of working.
-In early-2016 we set up and `ERDDAP server`_  to provide public access to our model results.
+In early-2016 we set up an `ERDDAP server`_  to provide public access to our model results.
 The `netCDF4-python`_ library can open datasets from ERDDAP URLs just as easily as it can open them from local files.
 So,
 here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using ERDDAP:
@@ -165,7 +165,7 @@ Here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using :kbd:`
 .. _Exploring netCDF Datasets Using xarray.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Exploring%20netCDF%20Datasets%20Using%20xarray.ipynb
 
 `xarray`_ uses the `netCDF4-python`_ library so it is capable of accessing netCDF datasets from either local files or from ERDDAP servers.
-The :py:class:`xarray.Dataset` object hides many of the low level details of the :py:class:`netcdf$.Dataset` objects to provide a more Pythonic interface to the dataset that is heavily inspired by `pandas`_. Like :kbd:`panada` variables,
+The :py:class:`xarray.Dataset` object hides many of the low level details of the :py:class:`netcdf4.Dataset` objects to provide a more Pythonic interface to the dataset that is heavily inspired by `pandas`_. Like :kbd:`panada` variables,
 :kbd:`xarray` variables have a :py:meth:`plot` method that makes quick visualization of datasets very easy.
 
 :kbd:`xarray` provides sophisticated handling of the time coordinate of datasets.
