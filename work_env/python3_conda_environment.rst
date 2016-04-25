@@ -44,7 +44,7 @@ and then our additional install, `netcdf4-python`_
 
    conda install netcdf4
 
-.. _netcdf4-python: http://netcdf4-python.googlecode.com/svn/trunk/docs/netCDF4-module.html
+.. _netcdf4-python: http://unidata.github.io/netcdf4-python/
 
 Now you have set-up your Python 3 environment.  To start it in a new terminal
 
