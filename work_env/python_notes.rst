@@ -176,3 +176,9 @@ you can think of ERDDAP as a higher level abstraction for storage of our model r
 and :kbd:`xarray` as a higher level abstraction for working with the results as Python objects.
 The ERDDAP abstraction hides some of the discrete daily runs storage details,
 and the :kbd:`xarray` abstraction hides some of the netCDF4 file structure details.
+
+Here is a notebook that demonstrates some of the features of `xarray`_ combined with accessing model results from our `ERDDAP server`_:
+
+* `Exploring a Nowcast Time Series from ERDDAP.ipynb`_
+
+.. _Exploring a Nowcast Time Series from ERDDAP.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Exploring%20a%20Nowcast%20Time%20Series%20from%20ERDDAP.ipynb
