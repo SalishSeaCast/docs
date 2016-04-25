@@ -35,7 +35,7 @@ There is are a few packages that we use extensively that is not included in the 
 * `xarray`_
 * `bottleneck`_
 
-.. _netcdf4-python: http://netcdf4-python.googlecode.com/svn/trunk/docs/netCDF4-module.html
+.. _netcdf4-python: http://unidata.github.io/netcdf4-python/
 .. _bottleneck: https://pypi.python.org/pypi/Bottleneck
 .. _xarray: http://xarray.pydata.org/en/stable/index.html
 
