@@ -3,7 +3,7 @@
 Anaconda Python Distribution
 ============================
 
-The the Anaconda Python distribution is the easiest way to install Python and a collection of scientific packages and other tools
+The Anaconda Python distribution is the easiest way to install Python and a collection of scientific packages and other tools
 (`Sphinx`_,
 `Jupyter Notebook`_,
 `NumPy`_,
