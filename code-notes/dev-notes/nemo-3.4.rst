@@ -106,3 +106,11 @@ Running the Code
 
    cd MY_GYRE/EXP00
    nice ./opa
+
+Notes on NEMO 3.6
+------------------
+When getting the code, follow the instructions for NEMO 3.4 but instead type:
+
+  .. code-block:: bash
+
+      svn --username "username@eos.ubc.ca" co http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE/NEMOGCM
