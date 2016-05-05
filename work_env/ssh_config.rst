@@ -12,6 +12,18 @@ If you set up working environments to run the Salish Sea NEMO model on :kbd:`sal
 or need to access model results files from a Westgrid cluster,
 you should set up :command:`ssh-agent` forwarding to minimize the need to repeatedly type your :command:`ssh` key pass phrase and to minimize the number of machines on which your private key is stored.
 
+ssh keys work by having a public key and a private key pair with the public key on remote machines and the private key
+on the local machine you log into first.
+Your private key is usually protected by a long passphrase that you only have to enter once per login session on the local machine.
+After that an ssh-agent program on the local machine uses the private key to exchange encrypted authentication information
+with the remote machines.
+
+The public key needs to be stored in the :file:`.ssh/authorized_keys` file on every machine that you want to ssh into.
+Because your home directory is shared across all of the Waterhole machines (and salish, and skookum)
+you only need to put your public key in :file:`.ssh/authorized_keys` on any one of those machines.
+On WestGrid you need to put your public key in :file:`.ssh/authorized_keys` on each machine that you use
+(orcinus, jasper, bugaboo, etc.).
+
 
 :command:`ssh-agent` Forwarding for :kbd:`salish`
 =================================================
