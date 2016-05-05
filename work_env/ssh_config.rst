@@ -37,7 +37,7 @@ To set up agent forwarding for :kbd:`salish` create a :file:`$HOME/.ssh/config` 
       User  userid
       ForwardAgent  yes
 
-where :kbd:`<userid>` is your EOAS user id.
+where :kbd:`userid` is your EOAS user id.
 
 The first two lines establish :kbd:`salish` as a short alias for :kbd:`salish.eos.ubc.ca` so that you can just type :command:`ssh salish`.
 
@@ -73,7 +73,7 @@ To set up agent forwarding for :kbd:`jasper` append the following to the :file:`
       User  userid
       ForwardAgent  yes
 
-where :kbd:`<userid>` is your Westgrid user id.
+where :kbd:`userid` is your Westgrid user id.
 
 Install your :command:`ssh` public key on :kbd:`jasper`:
 
