@@ -34,7 +34,7 @@ To set up agent forwarding for :kbd:`salish` create a :file:`$HOME/.ssh/config` 
 
     Host salish
       Hostname  salish.eos.ubc.ca
-      User  <userid>
+      User  userid
       ForwardAgent  yes
 
 where :kbd:`<userid>` is your EOAS user id.
@@ -70,7 +70,7 @@ To set up agent forwarding for :kbd:`jasper` append the following to the :file:`
 
     Host jasper
       Hostname  jasper.westgrid.ca
-      User  <userid>
+      User  userid
       ForwardAgent  yes
 
 where :kbd:`<userid>` is your Westgrid user id.
