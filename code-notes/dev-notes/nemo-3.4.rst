@@ -80,6 +80,7 @@ Making a Project
         ./makenemo -m ocean -r GYRE -n MY_GYRE add_key "key_nosignedzero key_netcdf4"
         
     *   If you are compiling version 3.6 on :file:`salish` use the following command instead:
+    
         .. code-block:: bash
 
             cd ../CONFIG
