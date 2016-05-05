@@ -78,6 +78,12 @@ Making a Project
 
         cd ../CONFIG
         ./makenemo -m ocean -r GYRE -n MY_GYRE add_key "key_nosignedzero key_netcdf4"
+        
+    *   If you are compiling version 3.6 on :file:`salish` use the following command instead:
+        .. code-block:: bash
+
+            cd ../CONFIG
+           ./makenemo -m GCC_SALISH -r GYRE -n MY_GYRE -j8
 
 *   If the following error comes up:
 
@@ -106,11 +112,3 @@ Running the Code
 
    cd MY_GYRE/EXP00
    nice ./opa
-
-Notes on NEMO 3.6
-------------------
-When getting the code, follow the same instructions as NEMO 3.4, except type (enter your personal username into USERNAME):
-
-  .. code-block:: bash
-
-      svn --username "USERNAME@eos.ubc.ca" co http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE/NEMOGCM
