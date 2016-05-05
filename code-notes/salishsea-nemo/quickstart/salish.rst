@@ -64,8 +64,10 @@ Compile the XIOS inuot/output server.
     cd /data/$USER/MEOPAR//XIOS
     ./make_xios --arch GCC_SALISH --netcdf_lib netcdf4_seq --job 8
 
-Note: if you have chosen to store XIOS in a different directory (i.e. :file:`/ocean/$USER/MEOPAR//XIOS`) then you need to create a symbolic link to :file:`/data/$USER/MEOPAR//XIOS`.
+Note: if you have chosen to store XIOS in :file:`ocean`(i.e. :file:`/ocean/$USER/MEOPAR//XIOS`) then you need to create a symbolic link to :file:`/data/$USER/MEOPAR//XIOS`.
 This is because the NEMO code attempts to find XIOS in :file:`/data/$USER/MEOPAR//XIOS`.
+
+If you have XIOS stored under :file:`/data/$USER/MEOPAR' you don't have to worry about this.
 
 .. code-block:: bash
 
