@@ -75,6 +75,14 @@ To set up agent forwarding for :kbd:`jasper` append the following to the :file:`
 
 where :kbd:`userid` is your Westgrid user id.
 
+If you do not have a Westgrid account follow the instructions on this page to create one:
+
+https://www.westgrid.ca/support/accounts/registering_ccdb
+
+When prompted to select an institution, choose :kbd:`Westgrid: University of British Columbia`.
+If you are creating an account as a sponsored user ask your supervisor for their CCRI code.
+
+
 Install your :command:`ssh` public key on :kbd:`jasper`:
 
 .. code-block:: bash
