@@ -39,8 +39,8 @@ install the :ref:`SalishSeaToolsPackage` and the :ref:`SalishSeaCmdProcessor`:
 .. code-block:: bash
 
     cd tools
-    pip install -e SalishSeaTools
-    pip install -e SalishSeaCmd
+    pip install --user -e SalishSeaTools
+    pip install --user -e SalishSeaCmd
 
 The links above contain information about the contents of those packages.
 
