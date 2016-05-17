@@ -59,6 +59,7 @@ please see the :ref:`QuickStartGuide` for instructions on setting working enviro
    salishsea_pkgs
    python_notes
    bitbucket_notebook_readme
+   westgrid_account
    sphinx_docs
    ssh_config
    emacs_config
