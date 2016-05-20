@@ -25,6 +25,7 @@ etc. to the Salish Sea MEOPAR project repositories hosted on Bitbucket_:
 * Muriel Dunn <mdunn@eos.ubc.ca>
 * Jie Liu <jieliu@eos.ubc.ca>
 * Ben Moore-Maley <bmoorema@eos.ubc.ca>
+* James Petrie <jpetrie@eos.ubc.ca>
 * Karina Ramos Musalem <kramosmusalem@eos.ubc.ca>
 * Yingkai (Kyle) Sha <yingkai@eos.ubc.ca>
 * Xiaoxin (Cindy) Yu <xiaoxiny@eos.ubc.ca>
