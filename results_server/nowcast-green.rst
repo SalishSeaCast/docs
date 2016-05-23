@@ -58,6 +58,28 @@ Date                       Change                                 New Value     
              files. |br|
              Remove snowfall rate from :file:`*_grid_T.nc` |br|                   71946bd297a4_
              output files.
+
+07-Feb-2016  Restart biology and physics |br|                     |br|
+             Use deepened grid. |br|                              |br|
+             Use N36_D tides |br|                                 |br|
+             Reduce minimum vertical diffusivity |br|             1e-6 |br|
+             Reduce lateral viscosity |br|                        2 |br|
+             Reduce lateral diffusivity |br|                      2 |br|
+             Increase rn_shlat |br|                               0.5 |br|
+             Switch to TEOS10, Relative Salinity |br|             |br|
+             Bottom Friction, drag coefficient up |br|            1.25e-2 |br|
+             Bottom roughness up |br|                             0.28 |br|
+             First day time step |br|                             20 s |br|
+             Corrected biology code |br|                          |br|
+             -- note we reran from here to correct biology etc    .
+
+08-Feb-2016  Second day time step                                 30 s
+
+09-Feb-2016  Back to full time step                               40 s
+
+21-Mar-2016  Linked biology solar radiation to physical heating
+
+26-Apr-2016  In restart file of 25apr made Oxygen <= 180
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
