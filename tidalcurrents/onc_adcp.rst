@@ -132,6 +132,18 @@ The updates made for the late-August 2015 deployments are highlighted below:
 
        depname={'DDL-','BBL-SG-','BBL-SG-','BBL-SG-'};
 
+Finally,
+update the name used to call the :file:`getSogAdcpData.m` script at the end of the :file:`GETDATA_fun.m` script
+(about line 173).
+The update made for the late-August 2015 deployments was:
+
+.. code-block:: matlab
+    :emphasize-lines: 1
+
+    getSogAdcpData_2Sep2015('locationName',node,'siteName',deploy,'deviceName',instr,...
+                   'dateStart',sdate,'dateEnd',edate,'maxTimeout',120,...
+                  'outputdirectory',outdir);
+
 
 Download Raw Data from Deployment Date to Present
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
