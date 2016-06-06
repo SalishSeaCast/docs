@@ -71,7 +71,8 @@ Date                       Change                                 New Value     
              Bottom roughness up |br|                             0.28 |br|
              First day time step |br|                             20 s |br|
              Corrected biology code |br|                          |br|
-             -- note we reran from here to correct biology etc    .
+             Note we reran from here to correct biology etc |br|  |br|
+             running in hindcast mode
 
 08-Feb-2016  Second day time step                                 30 s
 
@@ -80,6 +81,17 @@ Date                       Change                                 New Value     
 21-Mar-2016  Linked biology solar radiation to physical heating
 
 26-Apr-2016  In restart file of 25apr made Oxygen <= 180
+
+03-May-2016  Reset Oxygen <=180 and Nitrate <= 30.45
+
+12-May-2016  Reset Oxygen and Nitrate
+
+31-May-2016  changed trb->trn in p4zsbc for rivers |br| 
+             when value not specified 
+
+03-Jun-2016  ran as nowcast on orcinus
+
+04-Jun-2016  started running as nowcast on Salish
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
