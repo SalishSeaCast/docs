@@ -93,8 +93,9 @@ Date                       Change                                 New Value     
 
 04-Jun-2016  started running as nowcast on Salish
 
-19-Jun-2016  incorporated code modifications: |br|
-             - correction to p4zopt to comment out line |br|
+19-Jun-2016  incorporated bio model code modifications:
+
+             - corrected p4zopt - commented out line |br|
                adjusting k_PAR based on uninitialized river |br|
                flow parameter
              - changed p4zopt nksrp to 35 (z=307m)
