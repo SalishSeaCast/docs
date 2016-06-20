@@ -92,6 +92,17 @@ Date                       Change                                 New Value     
 03-Jun-2016  ran as nowcast on orcinus
 
 04-Jun-2016  started running as nowcast on Salish
+
+19-Jun-2016  incorporated code modifications: |br|
+             - correction to p4zopt to comment out line |br|
+               adjusting k_PAR based on uninitialized river |br|
+               flow parameter
+             - changed p4zopt nksrp to 35 (z=307m)
+             - removed zz_rate_*_Si_ratio from p4zmort |br|
+               (and from p4zmort namelist) and instead use |br|
+               the value set in p4zprod
+             - added MESZ (mesozooplankton) as output |br|
+               variable
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
