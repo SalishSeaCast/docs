@@ -86,8 +86,8 @@ Date                       Change                                 New Value     
 
 12-May-2016  Reset Oxygen and Nitrate
 
-31-May-2016  changed trb->trn in p4zsbc for rivers |br| 
-             when value not specified 
+31-May-2016  changed trb->trn in p4zsbc for rivers |br|
+             when value not specified
 
 03-Jun-2016  ran as nowcast on orcinus
 
@@ -104,6 +104,9 @@ Date                       Change                                 New Value     
                the value set in p4zprod
              - added MESZ (mesozooplankton) as output |br|
                variable
+
+06-Jul-2016  Updated NEMO code to NEMO-3.6r5912+ |br|
+             (specifically, changeset 421738d4896d)
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
