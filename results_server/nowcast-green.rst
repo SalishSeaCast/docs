@@ -107,6 +107,10 @@ Date                       Change                                 New Value     
 
 06-Jul-2016  Updated NEMO code to NEMO-3.6r5912+ |br|
              (specifically, changeset 421738d4896d)
+
+09-Jul-2016  Updated NEMO code to changeset 7f8414960de2 |br|
+             re: corrected PAR extinction coefficients
+             calculation
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
