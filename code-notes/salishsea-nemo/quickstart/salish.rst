@@ -176,3 +176,62 @@ From this initial window you can open the notebooks in :file:`analysis_tools` di
 The links to the various files will probably not work.
 Change them to point to your file space.
 You will probably want to build your own notebook but these notebooks give you lots of examples to copy from.
+
+
+Profiling with the GNU Profiler
+===============================
+
+The GNU profiler allows you to find out which parts of the code are taking the longest to run. 
+
+1. Compile the code with the -pg flag. 
+
+This requires adding -pg to the two lines in your arch file that start with %FCFLAGS and %LDFLAGS (as in the following excerpt from :file:`NEMO-3.6-code/NEMOGCM/ARCH/UBC_EOAS/arch-GCC_SALISH_ocean_gprof.fcm`):
+
+.. code-block:: bash
+
+    %XIOS_HOME           /ocean/$USER/MEOPAR/XIOS
+    
+    %NCDF_INC            -I/usr/include
+    %NCDF_LIB            -L/usr/lib -lnetcdff -lnetcdf
+    
+    %XIOS_INC            -I%XIOS_HOME/inc
+    %XIOS_LIB            -L%XIOS_HOME/lib -lxios -lstdc++
+    
+    %CPP	             cpp
+    %FC                  mpif90
+    %FCFLAGS             -cpp -O3 -fdefault-real-8 -funroll-all-loops -fcray-pointer -ffree-line-length-none -pg
+    %FFLAGS              %FCFLAGS
+    %LD                  mpif90
+    %LDFLAGS             -lstdc++ -pg
+    %FPPFLAGS            -P -C -traditional
+    %AR                  ar
+    %ARFLAGS             -rs
+    %MK                  make
+    %USER_INC            %XIOS_INC %NCDF_INC
+    %USER_LIB            %XIOS_LIB %NCDF_LIB
+    
+Using the modified arch file, compile your NEMO configuration, e.g.:
+
+.. code-block:: bash
+
+    ./makenemo -n SalishSea -m GCC_SALISH_ocean_gprof
+
+
+2. Run the model as usual from your prepared run directory. 
+\*Not tested with the salishsea run command.
+
+.. code-block:: bash
+
+    mpirun -n 7 ./nemo.exe : -n 1 ./xios_server.exe > stdout 2>stderr &
+
+A file called gmon.out will be created in your run directory.
+
+
+3. Use the :program:`gprof` command with the executable name and gmon.out as input to create a readable summary of the timing output. Redirect the output to a text file to save it; you can then view this file using :program:`less`.
+
+.. code-block:: bash
+
+    gprof nemo.exe gmon.out > gprof_out.txt
+    less gprof_out.txt
+
+For more information, see http://www.ibm.com/developerworks/library/l-gnuprof.html
