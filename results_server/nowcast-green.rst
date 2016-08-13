@@ -78,23 +78,10 @@ Date                       Change                                 New Value     
 
 09-Feb-2016  Back to full time step                               40 s
 
-21-Mar-2016  Linked biology solar radiation to physical heating
-
-26-Apr-2016  In restart file of 25apr made Oxygen <= 180
-
-03-May-2016  Reset Oxygen <=180 and Nitrate <= 30.45
-
-12-May-2016  Reset Oxygen and Nitrate
-
-31-May-2016  changed trb->trn in p4zsbc for rivers |br|
-             when value not specified
-
-03-Jun-2016  ran as nowcast on orcinus
-
-04-Jun-2016  started running as nowcast on Salish
-
-19-Jun-2016  incorporated bio model code modifications:
-
+21-Mar-2016  - Linked biology solar radiation to physical |br|
+               heating
+             - Changed trb->trn in p4zsbc for rivers |br|
+               when value not specified
              - corrected p4zopt - commented out line |br|
                adjusting k_PAR based on uninitialized river |br|
                flow parameter
@@ -104,13 +91,43 @@ Date                       Change                                 New Value     
                the value set in p4zprod
              - added MESZ (mesozooplankton) as output |br|
                variable
+             - Updated NEMO code to NEMO-3.6r5912+ |br|
+               (specifically, changeset 421738d4896d)
+             - Updated NEMO code to changeset 7f8414960de2 |br|
+               re: corrected red/blue extinction coefficients
+               calculation
+             - changed to Orlanski boundary conditions for |br|
+               baroclinic velocity
+             - changed to downbyone2 bathymetry with a |br|
+               smoothed mouth at both north and west |br|
+               boundaries
+             - First day time step, 20 s |br|                           
 
-06-Jul-2016  Updated NEMO code to NEMO-3.6r5912+ |br|
-             (specifically, changeset 421738d4896d)
+22-Mar-2016  Second day time step                                 30 s
 
-09-Jul-2016  Updated NEMO code to changeset 7f8414960de2 |br|
-             re: corrected PAR extinction coefficients
-             calculation
+23-Mar-2016  Back to full time step                               40 s
+
+06-May-2016  Blew up at 40 s, 30 s, ran at 20s                    20 s
+
+07-May-2016  Second day time step (in case)                       30 s
+
+08-May-2106  Back to full time step                               40 s
+
+06-Jun-2016  Blew at 40 s, ran at 30 s                            30 s
+
+07-Jun-2016  Back to full time step                               40 s  
+
+19-Jun-2016  Blew at 40 s, ran at 30 s                            30 s
+
+20-Jun-2016  Back to full time step                               40 s
+
+23-Jun-2016  Blew at 40 s, ran at 30 s                            30 s
+
+24-Jun-2016  Back to full time step                               40 s
+
+20-Jul-2016  Ran as nowcast on orcinus    
+
+22-Jul-2016  Salish automation started  
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
