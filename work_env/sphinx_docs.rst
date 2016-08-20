@@ -60,6 +60,8 @@ Installing Sphinx
 Sphinx and the packages that it depends on are included in the :ref:`AnacondaPythonDistro` that you should already have installed.
 
 
+.. _BuildingAndPreviewingDocumentation:
+
 Building and Previewing Documentation
 -------------------------------------
 
