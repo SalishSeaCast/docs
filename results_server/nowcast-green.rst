@@ -92,16 +92,16 @@ Date                       Change                                 New Value     
              - added MESZ (mesozooplankton) as output |br|
                variable
              - Updated NEMO code to NEMO-3.6r5912+ |br|
-               (specifically, changeset 421738d4896d)
-             - Updated NEMO code to changeset 7f8414960de2 |br|
-               re: corrected red/blue extinction coefficients
-               calculation
+               changeset 421738d4896d_
+             - Corrected red/blue extinction |br|
+               coefficients calculation |br|
+               changeset 7f8414960de2_
              - changed to Orlanski boundary conditions for |br|
                baroclinic velocity
              - changed to downbyone2 bathymetry with a |br|
                smoothed mouth at both north and west |br|
                boundaries
-             - First day time step, 20 s |br|                           
+             - First day time step, 20 s |br|
 
 22-Mar-2016  Second day time step                                 30 s
 
@@ -115,7 +115,7 @@ Date                       Change                                 New Value     
 
 06-Jun-2016  Blew at 40 s, ran at 30 s                            30 s
 
-07-Jun-2016  Back to full time step                               40 s  
+07-Jun-2016  Back to full time step                               40 s
 
 19-Jun-2016  Blew at 40 s, ran at 30 s                            30 s
 
@@ -125,10 +125,15 @@ Date                       Change                                 New Value     
 
 24-Jun-2016  Back to full time step                               40 s
 
-20-Jul-2016  Ran as nowcast on orcinus    
+20-Jul-2016  Ran as nowcast on orcinus
 
-22-Jul-2016  Salish automation started  
+22-Jul-2016  Salish automation started
+
+20-Aug-2016  Updated NEMO code to NEMO-3.6r6036+                                  a9d5c04f7fea_
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
 .. _71946bd297a4: https://bitbucket.org/salishsea/ss-run-sets/commits/71946bd297a4
+.. _421738d4896d: https://bitbucket.org/salishsea/NEMO-3.6-code/commits/421738d4896d
+.. _7f8414960de2: https://bitbucket.org/salishsea/NEMO-3.6-code/commits/7f8414960de2
+.. _a9d5c04f7fea: https://bitbucket.org/salishsea/NEMO-3.6-code/commits/a9d5c04f7fea
