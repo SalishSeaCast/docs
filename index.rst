@@ -49,6 +49,7 @@ Contents
    tidalcurrents/index
    rivers/index
    stability/index
+   smelt_sensitivity_analysis/index
    storm_surges/index
    turbulence/index
    particles/index
