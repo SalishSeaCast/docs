@@ -24,3 +24,15 @@ This script was run on the local computer 'Salish'. It would start up simulation
 The various datasets created using this method are currently stored in /data/jpetrie/MEOPAR/SalishSea/results/ on the local filesystem. All individual result directories are stored with the long name name of the parameter and the value used for that parameter, eg. "nampismezo_zz_rate_mesozoo_alpha_0.5". Detailed biological parameter information for the run can be found in the file namelist_pisces_cfg stored in the run directory. The combined dataset contains results for every parameter that doesn't contain the string "zz_frac_waste" in its name and does not have a default value of 0. 
 
 The same modifications were made with February, April, and June initial conditions. The April and June result directories are stored in all_params_AprIC_june_22 and all_params_JunIC_june_23 respectively. The February results are stored differently- they are sorted by section and the file names do not explicitly say that they are using February initial conditions. The following list details the directories the February runs are split into: nampiszoo_june_14/, nampisopt_june_14/, nampismes_june_14/, nampissink_june_17/, nampisprod_june_16/, nampismort_june_17/, nampisrem_june_17, nampismezo_june_20/. They have a format of [section name]_[date computed]. 
+
+If the model is changed and the results need to be regenerated follow the steps below:
+
+	- Compile the 5x5 model if you haven't already
+        - Open the script linked at the top of this page
+	- Create a modified version of the reference yaml file to match your directory organisation
+	- Change the reference_yaml variable in the script to point to your new yaml file
+	- Change the results_dir variable to wherever you want the output
+	- If only certain parameters are needed, modify the first for loop to only include these in the patch list
+	- ssh onto Salish (optional)
+	- Run the script (using "python batch_5x5.py")
+
