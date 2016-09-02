@@ -17,3 +17,4 @@ For every parameter there are 6 simulation results, each created using a differe
 
     Facetplot showing tracer concentration vs. time at certain depths, with a coloured line for each of the six parameter values
 
+`This <http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-james/raw/tip/notebooks/nampisrem_old_IC_june_17_analysis/nampisrem_zz_remin_d_pon.ipynb/>`_ is an example notebook
