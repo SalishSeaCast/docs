@@ -28,7 +28,7 @@ The same modifications were made with February, April, and June initial conditio
 If the model is changed and the results need to be regenerated follow the steps below:
 
 	- Compile the 5x5 model if you haven't already
-        - Open the script linked at the top of this page
+        - Open the python `script <https://bitbucket.org/salishsea/analysis-james/src/tip/batch_5x5.py?fileviewer=file-view-default/>`_
 	- Create a modified version of the reference yaml file to match your directory organisation
 	- Change the reference_yaml variable in the script to point to your new yaml file
 	- Change the results_dir variable to wherever you want the output
