@@ -1,5 +1,5 @@
 SMELT Sensitivity Analysis: Applications
-=======================
+========================================
 
 The results of this analysis can be used to tune the full model to better match observational data.
 

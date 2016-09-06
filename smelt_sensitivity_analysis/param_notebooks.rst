@@ -1,8 +1,8 @@
 .. _param_notebooks:
 
-=======================
+===============================================
 SMELT Sensitivity Analysis: Parameter Notebooks
-=======================
+===============================================
 
 
 Batch notebook creation:
