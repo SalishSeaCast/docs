@@ -15,7 +15,7 @@ The notebook linked above uses a list of result directories and a list of metric
 
     - The next type of plot is a horizontal bar plot. As before there is an individual axes for every metric/season combination. These bar plots show the scaled partial derivative of that metric with respect to every parameter (with the specified start month). The bars are coloured by parameter section to more easily group together similar parameters. The bar plots give a quick overview of what parameters change each metric the most. They are a useful place to start when trying to tune the model.
 
-All of the metric functions used in the linked notebook are found in this `python file <https://bitbucket.org/salishsea/tools/src/cab0513c8041d6dd6423fcf6cd0bffcf9c260273/SalishSeaTools/salishsea_tools/metric_tools_5x5.py?at=default&fileviewer=file-view-default/>`_. They all take 'grid_t' as the only input, where grid_t is an xarray object containing the tracer data found in *ptrc_t.nc files.
+All of the metric functions used in the linked notebook are found in this `python file <https://bitbucket.org/salishsea/tools/src/cab0513c8041d6dd6423fcf6cd0bffcf9c260273/SalishSeaTools/salishsea_tools/metric_tools_5x5.py?at=default&fileviewer=file-view-default/>`_. They all take 'grid_t' as the only input, where grid_t is an xarray object containing the tracer data found in :file:`*ptrc_t.nc` files.
 
 Using a new metric is fairly easy: define a function that takes grid_t as input and add this function to metric_func_list. Next run the entire notebook (this may take a while because the notebook has to load 1800 xarray datasets and calculate each metric for every dataset).
 
