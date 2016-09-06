@@ -50,6 +50,7 @@ and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
     cd /data/$USER/MEOPAR/
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-3.6-code NEMO-3.6-code
     hg clone ssh://hg@bitbucket.org/salishsea/xios XIOS
+    hg clone ssh://hg@bitbucket.org/salishsea/xios-arch XIOS-ARCH
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
 
@@ -57,26 +58,38 @@ and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
 Compile XIOS
 ============
 
-Compile the XIOS inuot/output server.
+Symlink the XIOS build configuration files for :kbd:`salish` from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS/arch/` directory:
+
+.. code-block:: bash
+
+    cd $HOME/MEOPAR/XIOS/arch
+    ln -sf $HOME/MEOPAR/XIOS-ARCH/UBC_EOAS/arch-GCC_SALISH.fcm
+    ln -sf $HOME/MEOPAR/XIOS-ARCH/UBC_EOAS/arch-GCC_SALISH.path
+
+Compile the XIOS input/output server:
 
 .. code-block:: bash
 
     cd /data/$USER/MEOPAR//XIOS
     ./make_xios --arch GCC_SALISH --netcdf_lib netcdf4_seq --job 8
 
-Note: if you have chosen to store XIOS on :file:`ocean`
-(i.e. :file:`/ocean/$USER/MEOPAR/XIOS` )
-then you need to create a symbolic link to :file:`/data/$USER/MEOPAR/XIOS` .
-This is because the NEMO code attempts to find XIOS in :file:`/data/$USER/MEOPAR/XIOS` .  
-Or you can use the NEMO :file:`GCC_SALISH_ocean` arch file,
-which will look for XIOS on :file:`ocean`.
+.. note::
+    If you have chosen to store XIOS on :file:`ocean`
+    (i.e. :file:`/ocean/$USER/MEOPAR/XIOS` )
+    then you need to create a symbolic link to :file:`/data/$USER/MEOPAR/XIOS`:
 
-If you have XIOS stored under :file:`/data/$USER/MEOPAR` you don't have to worry about this.
+    .. code-block:: bash
 
-.. code-block:: bash
+        cd /data/$USER/MEOPAR
+        ln -s /ocean/$USER/MEOPAR/XIOS
 
-    cd /data/$USER/MEOPAR
-    ln -s /ocean/$USER/MEOPAR/XIOS
+    This is because the NEMO code attempts to find XIOS in :file:`/data/$USER/MEOPAR/XIOS`.
+    Alternatively,
+    you can use the NEMO :file:`GCC_SALISH_ocean` arch file,
+    which will look for XIOS on :file:`ocean`.
+
+    If you have XIOS stored under :file:`/data/$USER/MEOPAR`,
+    you don't have to worry about this.
 
 
 Compile NEMO-3.6
@@ -181,22 +194,22 @@ You will probably want to build your own notebook but these notebooks give you l
 Profiling with the GNU Profiler
 ===============================
 
-The GNU profiler allows you to find out which parts of the code are taking the longest to run. 
+The GNU profiler allows you to find out which parts of the code are taking the longest to run.
 
-1. Compile the code with the -pg flag. 
+1. Compile the code with the -pg flag.
 
 This requires adding -pg to the two lines in your arch file that start with %FCFLAGS and %LDFLAGS (as in the following excerpt from :file:`NEMO-3.6-code/NEMOGCM/ARCH/UBC_EOAS/arch-GCC_SALISH_ocean_gprof.fcm`):
 
 .. code-block:: bash
 
     %XIOS_HOME           /ocean/$USER/MEOPAR/XIOS
-    
+
     %NCDF_INC            -I/usr/include
     %NCDF_LIB            -L/usr/lib -lnetcdff -lnetcdf
-    
+
     %XIOS_INC            -I%XIOS_HOME/inc
     %XIOS_LIB            -L%XIOS_HOME/lib -lxios -lstdc++
-    
+
     %CPP	             cpp
     %FC                  mpif90
     %FCFLAGS             -cpp -O3 -fdefault-real-8 -funroll-all-loops -fcray-pointer -ffree-line-length-none -pg
@@ -209,7 +222,7 @@ This requires adding -pg to the two lines in your arch file that start with %FCF
     %MK                  make
     %USER_INC            %XIOS_INC %NCDF_INC
     %USER_LIB            %XIOS_LIB %NCDF_LIB
-    
+
 Using the modified arch file, compile your NEMO configuration, e.g.:
 
 .. code-block:: bash
@@ -217,7 +230,7 @@ Using the modified arch file, compile your NEMO configuration, e.g.:
     ./makenemo -n SalishSea -m GCC_SALISH_ocean_gprof
 
 
-2. Run the model as usual from your prepared run directory. 
+2. Run the model as usual from your prepared run directory.
 \*Not tested with the salishsea run command.
 
 .. code-block:: bash
