@@ -17,6 +17,7 @@ Set-up SSH key-forwarding
 
 See orcinus instructions at the bottom of :ref:`sshConfiguration`.
 
+
 :file:`.bash_profile` and :file:`.bashrc`
 =========================================
 
@@ -88,6 +89,7 @@ Change the :kbd:`lpath` line in the :kbd:`modify search path` section of :file:`
 
     lpath=$HOME/.local/bin:$HOME/bin
 
+
 Create a Workspace and Clone the Repos
 ======================================
 
@@ -102,6 +104,7 @@ Clone the repos needed to run the model:
     cd $HOME/MEOPAR
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-3.6-code NEMO-3.6-code
     hg clone ssh://hg@bitbucket.org/salishsea/xios XIOS
+    hg clone ssh://hg@bitbucket.org/salishsea/xios-arch XIOS-ARCH
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     hg clone ssh://hg@bitbucket.org/salishsea/tools
@@ -125,7 +128,16 @@ Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python
 Compile XIOS
 ============
 
-Compile XIOS server.
+Symlink the XIOS build configuration files for :kbd:`orcinus` from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS/arch/` directory:
+
+.. code-block:: bash
+
+    cd $HOME/MEOPAR/XIOS/arch
+    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_ORCINUS.env
+    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_ORCINUS.fcm
+    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_ORCINUS.path
+
+Compile the XIOS input/output server:
 
 .. code-block:: bash
 
