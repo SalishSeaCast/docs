@@ -1,8 +1,8 @@
 .. _smelt_sensitivity_analysis:
 
-*********
+**************************
 SMELT Sensitivity Analysis
-*********
+**************************
 
 .. toctree::
    :maxdepth: 2
