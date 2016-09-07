@@ -16,4 +16,4 @@ Three main types of plots are used in these notebooks:
 
 `This <http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-james/raw/tip/notebooks/nampisrem_old_IC_june_17_analysis/nampisrem_zz_remin_d_pon.ipynb/>`_ is an example notebook.
 
-A notebook was automatically created for every parameter using a python script. Some of these notebooks have been uploaded to Bitbucket, and all of them can be found on the local filesystem at /ocean/jpetrie/MEOPAR/analysis-james/notebooks/.
+A notebook was automatically created for every parameter using this `python script <https://bitbucket.org/salishsea/analysis-james/src/tip/generate_analysis_notebooks.py?at=default&fileviewer=file-view-default/>`_. Some of these notebooks have been uploaded to Bitbucket, and all of them can be found on the local filesystem at /ocean/jpetrie/MEOPAR/analysis-james/notebooks/.
