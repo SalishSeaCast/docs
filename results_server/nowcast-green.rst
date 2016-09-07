@@ -130,6 +130,10 @@ Date                       Change                                 New Value     
 22-Jul-2016  Salish automation started
 
 20-Aug-2016  Updated NEMO code to NEMO-3.6r6036+                                  a9d5c04f7fea_
+
+07-Sep-2016  Changed west & north temperature & salinity |br|
+             boundary conditions to TEOS-10 conservative |br|
+             temperature and reference salinity
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
