@@ -7,5 +7,4 @@ An example use case is a discrepancy found between measured and predicted nitrat
 
 
 
-There already exists a large dataset of 5x5 model results. To determine what parameters are most useful to tune a 'Nitrate at 20m' metric is created.
-This metric is defined as the integral of Nitrate between 15 and 25 metres depth for all times of the model run.
+To determine what parameters are most useful to tune a 'Nitrate at 20m' metric is created. This metric is defined as the integral of Nitrate between 15 and 25 metres depth for all times of the model run. The value of this metric is then calculated for every one of the existing 5x5 model results in this `notebook <http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-james/raw/tip/notebooks/nitrate_at_20m_param_gradient.ipynb/>`_. The notebook shows that there are only a few parameters that have a substantial impact on the nitrate concentration at a depth of 20m, and only when the simulation is started in the winter. The reason the parameters don't impact nitrate in later months is that by that time it has already been depleted by the spring bloom.
