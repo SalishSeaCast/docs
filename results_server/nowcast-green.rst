@@ -134,6 +134,13 @@ Date                       Change                                 New Value     
 07-Sep-2016  Changed west & north temperature & salinity |br|
              boundary conditions to TEOS-10 conservative |br|
              temperature and reference salinity
+
+11-Sep-2016  - Changed to new tides (N36_J) |br|                   |br|
+             - Corrected bottom formulation so friction |br|       |br|
+               in very shallow water stays high |br|               |br|
+               maximum bottom friction |br|                        2 |br|
+               minimum bottom friction |br|                        1.2e-2 |br|
+               bottom roughness  |br|                              0.25 m |br|
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
