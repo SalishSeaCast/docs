@@ -17,12 +17,13 @@ etc. to the Salish Sea MEOPAR project repositories hosted on Bitbucket_:
 .. _Bitbucket: https://bitbucket.org/salishsea/
 
 * Susan Allen <sallen@eos.ubc.ca>
-* Doug Latornell <dlatornell@eos.ubc.ca>
+* Doug Latornell <dlatornell@eoas.ubc.ca>
 * Nancy Soontiens <nsoontiens@eos.ubc.ca>
 * Kate Le Souef <klesouef@eos.ubc.ca>
 * Idalia Machuca <imachuca@eos.ubc.ca>
 * Elise Olson <eolson@eos.ubc.ca>
 * Muriel Dunn <mdunn@eos.ubc.ca>
+* Tereza Jarníková <tjarniko@eos.ubc.ca>
 * Jie Liu <jieliu@eos.ubc.ca>
 * Ben Moore-Maley <bmoorema@eos.ubc.ca>
 * James Petrie <jpetrie@eos.ubc.ca>
