@@ -34,22 +34,23 @@ Steps for adding a new station to nowcast
 
 Adding new tidal stations requires access to the Salish Sea tools_ repository.
 Most of the work will be on editing figures.py in the SalishSeaNowcast package.
-You will also need access to scripts in the analysis_ repository and the nowcast :file:`iodef.xml` file in SS-run-sets_.
+You will also need access to scripts in the analysis-storm-surges_ repository and the nowcast :file:`iodef.xml` file in SS-run-sets_.
 
 .. _tools: https://bitbucket.org/salishsea/tools
 
-.. _analysis: https://bitbucket.org/salishsea/analysis
+.. _analysis: https://bitbucket.org/salishsea/analysis-storm-surges
 
 .. _SS-run-sets: https://bitbucket.org/salishsea/SS-run-sets
 
+
 1. Add extreme water level, mean sea level, latitude and longitude for this location in the SITES dictionary object of :file:`figures.py`.
 2. Add location name to TIDAL_SITES list in :file:`figures.py`.
-3. Use the MATLAB scripts in :file:`analysis/storm_surges/data/generate_tidal_predictions.m` to generate Jan 1, 2015 to Jan 1, 2020 tidal predictions for your location.
+3. Use the MATLAB scripts in :file:`analysis-storm_surges/tide_analysis_scripts/generate_tidal_predictions.m` to generate Jan 1, 2015 to Jan 1, 2020 tidal predictions for your location.
 
    * The input file can either be a year-long water level time series from NOAA/DFO or a constituent file from DFO.
    * If using a water level time series, be sure that the time zone is PST and the latitude is added to the second row, second column of the csv file.
    * Use :file:`exclude_long=1`, :file:`cut_off=0.3`.
-   * Copy the tidal predictions output file to :file:`tools/SalishSeaNowcast/tidal_predictions/`. Add this file to the repostiroy, commit and push.
+   * Copy the tidal predictions output file to :file:`tools/SalishSeaNowcast/tidal_predictions/`. Add this file to the repository, commit and push.
    * See :ref:`StormTools` for a description of how to use the MATLAB scripts.
    * You will need ttide_ to run these scripts.
 
