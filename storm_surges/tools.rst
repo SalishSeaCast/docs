@@ -76,14 +76,14 @@ MATLAB Scripts
 ~~~~~~~~~~~~~~~
 
 Several MATLAB scripts have been designed to calculate the tidal predictions as described above.
-These scripts are found in the :file:`analysis/storm_surges/data/` repository and are described below.
+These scripts are found in the :file:`analysis-storm-surges/tide_analysis_scripts/` repository and are described below.
 
 :file:`generate_tidal_predictions.m`
    This script does most of the work. The end result is a series of tidal predictions. ::
 
        generate_tidal_predictions(filename, location, starts, ends, type, exclude_long, cut_off)
 
-  - Uses water level observations or harmonic constituents stored in :file:`filename` to calculate tidal predictions over a time period defined by date strings :file:`starts` and :file:`ends`. Water level observations can either be from the DFO website or the NOAA website, as specified by the :file:`type` argument. Or a file with harmonic constituents from CHS can be used, in which case type is set to 'CHS'.
+  - Uses water level observations or harmonic constituents stored in :file:`filename` to calculate tidal predictions over a time period defined by date strings :file:`starts` and :file:`ends`. Water level observations can either be from the DFO website or the NOAA website, as specified by the :file:`type` argument. Or a file with harmonic constituents from CHS can be used, in which case type is set to 'CHS'. Also, a file with NOAA constituents can be used, in which case type is 'NOAA_const'.
   - If a harmonic analysis is necessary, the calculated harmonics are saved in :file:`location_harmonics_date1_date2_filter.csv` where location is one of the arguments of :file:`generate_tidal_predictions.m`. :file:`date1` and :file:`date2` are string representations of the start and end date of the observation time series.
   - The tidal predictions are stored in a file called :file:`location_tidal_prediction_starts_ends.csv` where :file:`starts` and :file:`ends` are arguments of :file:`generate_tidal_predictions.m`. This file contains three types of tidal predictions:
 
@@ -107,6 +107,8 @@ These scripts are found in the :file:`analysis/storm_surges/data/` repository an
 :file:`read_CHS_harmonics.m`
    Read the CHS tidal harmonics from a file.
 
+:file:`read_NOAA_harmonics.m`
+   Read the NOAA tidal harmonics from a file.
 
 .. note::
 
