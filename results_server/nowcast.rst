@@ -61,6 +61,16 @@ Model Parameter Changes Over Time
              files. |br|
              Remove snowfall rate from :file:`*_grid_T.nc` |br|                   71946bd297a4_
              output files.
+15-Oct-2016  Changed to NEMO-3.6 at SVN revision 6036. |br|
+             Changed to :file:`bathy_downonegrid2.nc` |br|
+             bathymetry and mesh mask. |br|
+             Changed to conservative temperature for rivers |br|
+             runoff and boundary conditions. |br|
+             Changed to TEOS-10 reference salinity for |br|
+             boundary conditions. |br|
+             Restart file was |br|
+             :file:`SalishSea_00553680_restart.nc` from |br|
+             :file:`nowcast-green/14oct16/` run results.
 ===========  ===================================================  ==============  ==================
 
 .. _efa8c39a9a7c: https://bitbucket.org/salishsea/ss-run-sets/commits/efa8c39a9a7c
