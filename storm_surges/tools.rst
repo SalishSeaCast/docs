@@ -35,7 +35,7 @@ Tidal predictions are generated using a MATLAB package called `t_tide`_.
 The general procedure is as follows:
 
 1. Perform a harmonic analysis on a year-long time series using :file:`t_tide`.
-2. Use the tidal constituents produced by the harmonic analysis to generate a tidal prediction. Typically, 67 constituents are analyzed with :file:`t_tide`
+2. Use the tidal constituents produced by the harmonic analysis to generate a tidal prediction. Typically, 67 constituents are analyzed with :file:`t_tide` for a year-long time series.
 
 However, there are some subtleties that need to be considered before we generate the tidal predictions for use in residual calculations.
 
@@ -81,7 +81,7 @@ These scripts are found in the :file:`analysis-storm-surges/tide_analysis_script
 :file:`generate_tidal_predictions.m`
    This script does most of the work. The end result is a series of tidal predictions. ::
 
-       generate_tidal_predictions(filename, location, starts, ends, type, exclude_long, cut_off)
+       generate_tidal_predictions(filename, location, starts, ends, type, exclude_long, cut_off, ssh_units, time_zone)
 
   - Uses water level observations or harmonic constituents stored in :file:`filename` to calculate tidal predictions over a time period defined by date strings :file:`starts` and :file:`ends`. Water level observations can either be from the DFO website or the NOAA website, as specified by the :file:`type` argument. Or a file with harmonic constituents from CHS can be used, in which case type is set to 'CHS'. Also, a file with NOAA constituents can be used, in which case type is 'NOAA_const'.
   - If a harmonic analysis is necessary, the calculated harmonics are saved in :file:`location_harmonics_date1_date2_filter.csv` where location is one of the arguments of :file:`generate_tidal_predictions.m`. :file:`date1` and :file:`date2` are string representations of the start and end date of the observation time series.
@@ -94,6 +94,10 @@ These scripts are found in the :file:`analysis-storm-surges/tide_analysis_script
   - :file:`exclude_long` is a flag that specifies whether or not long period constituents should be excluded from the tidal predictions. :file:`exclude_long` = 1 means exclude long period constituents like Sa, Ssa, etc from the tidal prediction. :file:`exclude_long` = 0 means include long period constituents in tidal predictions. Note that if :file:`exclude_long` = 0 then a lot of the variability between :file:`pred_all` and :file:`pred_8` because :file:`pred_all` uses long period constituents but :file:`pred_8` does not.
 
   - :file:`cut_off` is the amplitude at which non-tidal energy is removed from the harmonic analysis. Time periods for which the filtered time series is greater than :file:`cut_off` are removed from the water level time series and then the harmonic analysis is performed. A reasonable value is 0.3. If filtering is not desired then set :file:`cut_off` very high (>1).
+
+  - :file:`ssh_units` is the units of the water level information in the harmonics or time series file (eg. 'm' or 'feet')
+
+  - :file:`time_zone` is the time zone of the time information stored in the harmonics or time series files. For example, if :file:`time_zone` is 'PST' then the phase in the harmonics files is relative to PST time or the time in the time series file is relative to PST. 
 
 .. note::
 
@@ -113,6 +117,10 @@ These scripts are found in the :file:`analysis-storm-surges/tide_analysis_script
 .. note::
 
   The NOAA observations csv files should have the station's latitude in the second row, second column of the file.
+
+.. note::
+
+  See :file:`/ocean/nsoontie/MEOPAR/tides/NOAA_tidal_constituents/NeahBay_harmonics.csv` for an example of how the NOAA harmonics files should be formatted.
 
 
 Storm surge forcing files
