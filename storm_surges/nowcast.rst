@@ -22,7 +22,7 @@ Points 1 and 2 require that a tide gauge was in operation at this location at so
 The reason we need this information is to calculate appropriate thresholds for high water based on historical values.
 We also calculate a correction to the model water level using tidal predictions.
 
-To search for this information, you can visti the DFO_ and NOAA_ websites.
+To search for this information, you can visit the DFO_ and NOAA_ websites.
 
 .. _DFO: http://www.isdm-gdsi.gc.ca/isdm-gdsi/twl-mne/index-eng.htm
 
@@ -43,11 +43,11 @@ You will also need access to scripts in the analysis-storm-surges_ repository an
 .. _SS-run-sets: https://bitbucket.org/salishsea/SS-run-sets
 
 
-1. Add extreme water level, mean sea level, latitude and longitude for this location in the SITES dictionary object of :file:`figures.py`.
+1. Add extreme water level, mean sea level, latitude and longitude for this location in the PLACES dictionary object of :file:`places.py`.
 2. Add location name to TIDAL_SITES list in :file:`figures.py`.
 3. Use the MATLAB scripts in :file:`analysis-storm_surges/tide_analysis_scripts/generate_tidal_predictions.m` to generate Jan 1, 2015 to Jan 1, 2020 tidal predictions for your location.
 
-   * The input file can either be a year-long water level time series from NOAA/DFO or a constituent file from DFO.
+   * The input file can either be a year-long water level time series from NOAA/DFO or a constituent file from DFO or NOAA.
    * If using a water level time series, be sure that the time zone is PST and the latitude is added to the second row, second column of the csv file.
    * Use :file:`exclude_long=1`, :file:`cut_off=0.3`.
    * Copy the tidal predictions output file to :file:`tools/SalishSeaNowcast/tidal_predictions/`. Add this file to the repository, commit and push.
