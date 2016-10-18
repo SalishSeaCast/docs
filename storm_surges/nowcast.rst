@@ -56,6 +56,11 @@ You will also need access to scripts in the analysis-storm-surges_ repository an
 
 .. _ttide: https://www.eoas.ubc.ca/~rich/#T_Tide
 
+.. warning::
+
+  Some of the constituents published on the NOAA_ website are not recognized by ttide_. So, it is best to use a time-series to produce tidal predictions at a NOAA site.
+
+
 4. Look up the grid point indices of your station and add a 15 minute ssh output to :file:`SS-run-sets/SalishSea/nowcast/iodef.xml`
 5. Test ssh plotting calls with your new station in OutTemplate.ipynb_
 
