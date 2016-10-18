@@ -41,6 +41,11 @@ However, there are some subtleties that need to be considered before we generate
 
 .. _t_tide: http://www.eos.ubc.ca/~rich/#T_Tide
 
+.. note::
+
+  In order to use these tools, you need to download `t_tide`_ and add the t_tide directory to you MATLAB path.
+
+
 Filtering
 ~~~~~~~~~~~~~~~~~
 
