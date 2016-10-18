@@ -53,7 +53,7 @@ private-docs
 * meeting notes, plans, work-in-progress reports and papers, presentations, etc.
 * anything that might go in docs repo but are not ready for release,
   or which cannot be released for some reason
-* ideally at least some of this repo’s will eventually be moved to the public docs repo
+* ideally at least some of this repo will eventually be moved to the public docs repo
 
 
 .. _tools-repo:
@@ -66,7 +66,7 @@ tools
 * scripts and docs for
   preparing, running, and post-processing NEMO runs,
   and any other support task that we write software for
-* documentation is rendered at http://salishsea-meopar-tools.readthedocs.org/
+* documentation is rendered at https://salishsea-meopar-tools.readthedocs.io/en/latest/
 * Bitbucket: https://bitbucket.org/salishsea/tools/
 
 
@@ -171,7 +171,7 @@ NEMO-forcing
   * etc.
 
 * Bitbucket: https://bitbucket.org/salishsea/nemo-forcing/
-* documentation: http://salishsea-meopar-docs.readthedocs.org/nemo-forcing.html
+* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-forcing/index.html
 
 
 .. _SS-run-sets-repo:
@@ -194,7 +194,7 @@ salishsea-site
 * Apache v2.0 license, copyright project contributors and UBC
 * content and tool chain for the `salishsea.eos.ubc.ca`_ domain site static content
 * Bitbucket: https://bitbucket.org/salishsea/salishsea-site/
-* documentation: http://salishsea-meopar-docs.readthedocs.org/salishsea-site/index.html
+* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/salishsea-site/index.html
 
   .. _salishsea.eos.ubc.ca: https://salishsea.eos.ubc.ca/
 
