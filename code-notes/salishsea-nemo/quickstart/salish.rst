@@ -63,8 +63,8 @@ Symlink the XIOS build configuration files for :kbd:`salish` from the :file:`XIO
 .. code-block:: bash
 
     cd /data/$USER/MEOPAR/XIOS/arch
-    ln -sf /data/$USER/MEOPAR/XIOS-ARCH/UBC_EOAS/arch-GCC_SALISH.fcm
-    ln -sf /data/$USER/MEOPAR/XIOS-ARCH/UBC_EOAS/arch-GCC_SALISH.path
+    ln -sf /data/$USER/MEOPAR/XIOS-ARCH/UBC-EOAS/arch-GCC_SALISH.fcm
+    ln -sf /data/$USER/MEOPAR/XIOS-ARCH/UBC-EOAS/arch-GCC_SALISH.path
 
 Compile the XIOS input/output server:
 
