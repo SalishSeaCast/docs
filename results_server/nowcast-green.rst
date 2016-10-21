@@ -141,6 +141,12 @@ Date                       Change                                 New Value     
                maximum bottom friction |br|                        2 |br|
                minimum bottom friction |br|                        1.2e-2 |br|
                bottom roughness  |br|                              0.25 m |br|
+               
+03-Oct-2016  Changed river input to conservative |br|              |br|
+             temperature, set ln_useCT on |br|                     .true. |br|
+               
+14-Oct-2016  Reverse barometer is in our Neah Bay ssh |br|         |br|
+             set ln_apr_obs off |br|                               .false. |br|
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
