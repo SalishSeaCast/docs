@@ -124,6 +124,17 @@ Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python
     pip install --user -e SalishSeaTools
     pip install --user -e SalishSeaCmd
 
+Load modules
+============
+
+Load the following modules (specific to orcinus):
+
+.. code-block:: bash
+
+    module load intel/14.0.2
+    module load intel/14.0/netcdf-4.3.3.1
+    module load intel/14.0/netcdf-fortran-4.4.0
+    module load intel/14.0/hdf5-1.8.15p1
 
 Compile XIOS
 ============
@@ -137,7 +148,7 @@ Symlink the XIOS build configuration files for :kbd:`orcinus` from the :file:`XI
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_ORCINUS.fcm
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_ORCINUS.path
 
-Compile the XIOS input/output server:
+Compile XIOS:
 
 .. code-block:: bash
 
@@ -154,96 +165,16 @@ and the :program:`rebuild_nemo` tool:
 .. code-block:: bash
 
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    source orcinus_build.sh SalishSea
+    ./makenemo -n SalishSea -m X64_ORCINUS -j 8
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS/REBUILD_NEMO
-    source orcinus_build.sh
-
-Both invocations of the :file:`orcinus_build.sh` script will produce lots of output that mentions build failures,
-but they should end with success messages and show the newly created executables.
+    ./maketools -n REBUILD_NEMO -m X64_ORCINUS
 
 To build a configuration other than :kbd:`SalishSea`, replace :kbd:`SalishSea` with the name of the configuration to be built, e.g. :kbd:`SOG`:
 
 .. code-block:: bash
 
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    source orcinus_build.sh SOG
-
-For :file:`CONFIG/orcinus_build.sh` the output should end something like:
-
-.. code-block:: bash
-
-    mpif90 -o nemo.o -I/home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/inc -c -fpp -r8 -O3 -assume byterecl -heap-arrays -I/global/software/lib64/intel/ncsa-tools/include /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/WORK/nemo.f90
-    fcm_internal load:F nemo nemo.o nemo.exe
-    mpif90 -o server.exe /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/obj/server.o -L/home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/lib -l__fcm__server -shared-intel -lnetcdf -lnetcdff -lhdf5 -lhdf5_hl -lz -lsz
-    mpif90 -o nemo.exe /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/obj/nemo.o -L/home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/lib -l__fcm__nemo -shared-intel -lnetcdf -lnetcdff -lhdf5 -lhdf5_hl -lz -lsz
-    /global/software/lib64/intel/ncsa-tools/lib/libnetcdf.so: undefined reference to `__intel_cpu_feature_indicator_x'
-    /global/software/lib64/intel/ncsa-tools/lib/libnetcdf.so: undefined reference to `__intel_cpu_features_init_x'
-    /global/software/lib64/intel/ncsa-tools/lib/libnetcdf.so: undefined reference to `__intel_ssse3_memmove'
-    fcm_internal load failed (256)
-    make: *** [server.exe] Error 1
-    make: *** Waiting for unfinished jobs....
-    /global/software/lib64/intel/ncsa-tools/lib/libnetcdf.so: undefined reference to `__intel_cpu_feature_indicator_x'
-    /global/software/lib64/intel/ncsa-tools/lib/libnetcdf.so: undefined reference to `__intel_cpu_features_init_x'
-    /global/software/lib64/intel/ncsa-tools/lib/libnetcdf.so: undefined reference to `__intel_ssse3_memmove'
-    fcm_internal load failed (256)
-    make: *** [nemo.exe] Error 1
-    make -f /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/Makefile -j 8 all failed (2) at /global/home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/EXTERNAL/fcm/bin/../lib/Fcm/Build.pm line 597
-    ->Make: 56 seconds
-    ->TOTAL: 86 seconds
-    Build failed on Mon Aug 18 12:34:21 2014.
-    /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG
-    /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea
-    I/O server build succeeded at Mon Aug 18 12:34:23 PDT 2014
-    -rwxr-x--- 1 dlatorne dlatorne 9935884 Aug 18 12:34 /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/server.exe*
-    NEMO executable build succeeded at Mon Aug 18 12:34:25 PDT 2014
-    -rwxr-x--- 1 dlatorne dlatorne 16102827 Aug 18 12:34 /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/nemo.exe*
-    I/O server executable symlinked in SalishSeaEXP00/ at Mon Aug 18 12:34:25 PDT 2014
-    lrwxrwxrwx 1 dlatorne dlatorne 75 Aug 18 12:34 /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/EXP00/server.exe -> /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/server.exe*
-    NEMO executable symlinked in SalishSea/EXP00/ as opa at Mon Aug 18 12:34:25 PDT 2014
-    lrwxrwxrwx 1 dlatorne dlatorne 73 Aug 18 12:34 /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/EXP00/opa -> /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/nemo.exe*
-
-The :kbd:`Build failed...` message on the 10th to last line is deceptive.
-It is an artifact of the slightly convoluted build process that is required on :kbd:`orcinus`.
-The important result is that the last line shows a newly created symbolic link between :file:`.../EXP00/opa` and :file:`.../BLD/bin/nemo.exe`.
-
-Similarly,
-the output of :file:`TOOLS/REBUILD_NEMO/orcinus_build.sh` should end like:
-
-.. code-block:: bash
-
-    mpif90 -o rebuild_nemo.o -I/home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/inc -c -fpp -r8 -O3 -assume byterecl -heap-arrays -I/global/software/lib64/intel/ncsa-tools/include /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/src/rebuild_nemo.f90
-    touch /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/flags/LD.flags
-    touch /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/flags/LD__nemo.flags
-    touch /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/flags/LD__nemo__rebuild_nemo.flags
-    touch /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/flags/LDFLAGS.flags
-    touch /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/flags/LDFLAGS__nemo.flags
-    touch /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/flags/LDFLAGS__nemo__rebuild_nemo.flags
-    fcm_internal load:F nemo rebuild_nemo.o rebuild_nemo.exe
-    Use of uninitialized value in split at /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/EXTERNAL/fcm/bin/fcm_internal line 377.
-    mpif90 -o rebuild_nemo.exe /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/obj/rebuild_nemo.o -L/home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/lib -shared-intel -lnetcdf -lnetcdff -lhdf5 -lhdf5_hl -lz -lsz
-    /global/software/lib64/intel/ncsa-tools/lib/libnetcdf.so: undefined reference to `__intel_cpu_feature_indicator_x'
-    /global/software/lib64/intel/ncsa-tools/lib/libnetcdf.so: undefined reference to `__intel_cpu_features_init_x'
-    /global/software/lib64/intel/ncsa-tools/lib/libnetcdf.so: undefined reference to `__intel_ssse3_memmove'
-    fcm_internal load failed (256)
-    make: *** [rebuild_nemo.exe] Error 1
-    make -f /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/Makefile -j 1 all failed (2) at /global/home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/EXTERNAL/fcm/bin/../lib/Fcm/Build.pm line 597
-    ->Make: 4 seconds
-    ->TOTAL: 4 seconds
-    Build failed on Mon Aug 18 12:56:07 2014.
-    /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS
-    ls: cannot access /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/bin/*.exe: No such file or directory
-    /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO
-    rebuild_nemo build succeeded at Mon Aug 18 12:56:08 PDT 2014
-    -rwxr-x--- 1 dlatorne dlatorne 108611 Aug 18 12:56 /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/bin/rebuild_nemo.exe*
-    rebuild_nemo executable symlinked in /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/ at Mon Aug 18 12:56:08 PDT 2014
-    lrwxrwxrwx 1 dlatorne dlatorne 83 Aug 18 12:56 /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/rebuild_nemo.exe -> /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/bin/rebuild_nemo.exe*
-
-As was the case for the NEMO build above,
-the :kbd:`Build failed...` message on the 10th to last line is a deceptive artifact of the build process that is required on :kbd:`orcinus`.
-The important result is that the last line shows a newly created symbolic link between :file:`.../REBUILD_NEMO/rebuild_nemo.exe` and :file:`.../BLD/bin/rebuild_nemo.exe`.
-
-The command :program:`./makenemo clean` works as usual.
-
+    ./makenemo -n SOG -m X64_ORCINUS -j 8
 
 Prepare and Execute Runs
 ========================
