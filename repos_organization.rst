@@ -40,7 +40,7 @@ docs
 * public
 * Creative Commons Attribution license, copyright project contributors and UBC
 * project level documentation, reports, etc.
-* rendered at https://salishsea-meopar-docs.readthedocs.org/
+* rendered at https://salishsea-meopar-docs.readthedocs.io/en/latest/
 * Bitbucket: https://bitbucket.org/salishsea/docs/
 
 
@@ -116,7 +116,7 @@ NEMO-code
 * a merge of the :kbd:`http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012` branch and our local code
 * maintenance of the repo to handle the merges is decribed in :ref:`NEMO-MirrorMaintenance`
 * Bitbucket: https://bitbucket.org/salishsea/nemo-code/
-* documentation: http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo-code.html
+* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
 
 
 .. _NEMO-3.6-code-repo:
@@ -131,22 +131,22 @@ NEMO-3.6-code
 * a merge of the :kbd:`http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE` and our local code
 * maintenance of the repo to handle the merges is decribed in :ref:`NEMO-MirrorMaintenance`
 * Bitbucket: https://bitbucket.org/salishsea/nemo-3.6-code/
-* documentation: http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo-code.html
+* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
 
 
 .. _XIOS-repo:
 
-XIOS
+XIOS (XML I/O Server)
 ~~~~
 
 * private
   (because the canonical source for this code is :kbd:`http://forge.ipsl.jussieu.fr/ioserver/wiki`)
 * CeCILL_V2 license, copyright Centre National de la Recherche Scientifique CNRS
-* XIOS input/output server code that we run with NEMO-3.6
+* XIOS-1.0 code that we run with NEMO-3.6
 * a checkout of the :kbd:`http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/branchs/xios-1.0` branch
 * maintenance of the repo to handle the merging in changes from upstream is decribed in :ref:`NEMO-MirrorMaintenance`
 * Bitbucket: https://bitbucket.org/salishsea/xios/
-* documentation: http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo-code.html
+* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
 
 
 .. _NEMO-forcing-repo:
@@ -301,7 +301,7 @@ NEMO-3.1
 * CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
 * NEMO-3.1 reference repo
 * a Mercurial repo of SVN checkouts of modipsl trunk, the NEMO-3.1 tag, and supporting repos that are believed to be the basis on which the 2-Oct-2013 CONCEPTS-110 CODE tarball was built
-* documentation rendered at http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo31-concepts110.html
+* documentation rendered at https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo31-concepts110.html
 * Bitbucket: https://bitbucket.org/salishsea/nemo-3.1/
 
 
@@ -315,5 +315,5 @@ CONCEPTS-110
 * CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
 * CONCEPTS-110 reference repo
 * a Mercurial repo of the CODE.tar tarball received from J-P Paquin on 2-Oct-2013
-* documentation rendered at http://salishsea-meopar-docs.readthedocs.org/en/latest/code-notes/nemo31-concepts110.html
+* documentation rendered at https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo31-concepts110.html
 * Bitbucket: https://bitbucket.org/salishsea/concepts-110/
