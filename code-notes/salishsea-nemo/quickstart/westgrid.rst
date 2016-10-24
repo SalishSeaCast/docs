@@ -4,7 +4,7 @@
 Working on :kbd:`westgrid`: NEMO v3.6
 *************************************
 
-This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on WestGrid machines `bugaboo.westgrid.ca`_, `jasper.westgrid.ca`, `nestor.westgrid.ca` and `orcinus.westgrid.ca`.
+This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on WestGrid machines `bugaboo.westgrid.ca`_, `jasper.westgrid.ca`_, `nestor.westgrid.ca`_ and `orcinus.westgrid.ca`_.
 
 This guide assumes that your :ref:`WorkingEnvironment` is set up and that you are familiar with :ref:`WorkingOnSalish`.
 
