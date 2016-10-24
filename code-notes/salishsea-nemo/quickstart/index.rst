@@ -10,8 +10,7 @@ The sections below describe *very* briefly the steps to set up and run the Salis
     :maxdepth: 2
 
     salish
-    jasper
-    orcinus
+    westgrid
     west.cloud
     macOSX
 
@@ -31,3 +30,4 @@ The sections below briefly describe how to set up and run the NEMO v3.4 version 
 
     salish-old
     orcinus-old
+    jasper-old
