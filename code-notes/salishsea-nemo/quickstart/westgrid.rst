@@ -147,6 +147,8 @@ First symlink the XIOS build configuration files for :kbd:`orcinus` from the :fi
 :kbd:`orcinus`:
 ---------------
 
+.. code-block:: bash
+
     cd $HOME/MEOPAR/XIOS/arch
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_ORCINUS.env
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_ORCINUS.fcm
@@ -192,6 +194,8 @@ Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
 
 :kbd:`orcinus`:
 ---------------
+
+.. code-block:: bash
 
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
     ./makenemo -n SalishSea -m X64_ORCINUS -j 8
