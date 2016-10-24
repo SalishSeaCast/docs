@@ -8,10 +8,10 @@ This section describes the steps to set up and run the Salish Sea NEMO version 3
 
 This guide assumes that your :ref:`WorkingEnvironment` is set up and that you are familiar with :ref:`WorkingOnSalish`.
 
-.. _bugaboo.westgrid.ca: https://www.westgrid.ca/bugaboo
-.. _jasper.westgrid.ca: https://www.westgrid.ca/jasper
-.. _nestor.westgrid.ca: https://www.westgrid.ca/nestor
-.. _orcinus.westgrid.ca: https://www.westgrid.ca/orcinus
+.. _bugaboo.westgrid.ca: https://www.westgrid.ca/support/systems/bugaboo
+.. _jasper.westgrid.ca: https://www.westgrid.ca/support/systems/jasper
+.. _nestor.westgrid.ca: https://www.westgrid.ca/support/systems/hermesnestor
+.. _orcinus.westgrid.ca: https://www.westgrid.ca/support/systems/orcinus
 
 
 Modules setup

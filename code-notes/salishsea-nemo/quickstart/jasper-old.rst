@@ -6,7 +6,7 @@ This section describes *very* briefly the steps to set up and run the Salish Sea
 This guide assumes that your :ref:`WorkingEnvironment` is set up,
 and that you are familiar with :ref:`WorkingOnSalish`.
 
-.. _jasper.westgrid.ca: https://www.westgrid.ca/jasper
+.. _jasper.westgrid.ca: https://www.westgrid.ca/support/systems/jasper
 
 Follow the instructions in :ref:`LoadingModulesOnWestgridClusters` to manually load the necessary software component modules or edit your :kbd:`jasper` :file:`$HOME/.bashrc` to make them load automatically when you :program:`ssh` into :kbd:`jasper`.
 
