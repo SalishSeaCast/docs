@@ -191,7 +191,6 @@ The required modules vary from machine to machine:
   Other module provide the Intel Fortran compiler,
   the netCDF libraries,
   etc.
-  Unfortunately an issue with the :kbd:`orcinus` module system will cause NEMO build to fail if you load those module via your :file:`$HOME/.bashrc` file.
   Most of our tools load the necessary modules as required,
   but if you need to load them manually,
   here is the list of :command:`module load` commands:
