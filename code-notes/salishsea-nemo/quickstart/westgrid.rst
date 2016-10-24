@@ -45,7 +45,7 @@ The modules needed for each cluster are:
 
 .. code-block:: bash
 
-    application/python/2.7.8
+    module load application/python/2.7.8
     module load compiler/intel/13.0.1
     module load library/hdf5/1.8.9
     module load library/netcdf/4.1.3
