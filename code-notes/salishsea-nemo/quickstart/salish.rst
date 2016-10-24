@@ -136,7 +136,7 @@ and gather the results for a run:
 
 .. code-block:: bash
 
-    salishsea run SalishSea.yaml iodef.xml /data/$USER/MEOPAR/SalishSea/results/my_excellent_results
+    salishsea run SalishSea.yaml /data/$USER/MEOPAR/SalishSea/results/my_excellent_results
 
 :command:`salishsea run` returns the relative path and name of the temporary run directory,
 and the job identifier assigned by the queue manager,
