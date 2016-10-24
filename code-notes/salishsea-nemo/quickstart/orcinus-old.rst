@@ -8,7 +8,7 @@ This section describes *very* briefly the steps to set up and run the Salish Sea
 This guide assumes that your :ref:`WorkingEnvironment` is set up,
 and that you are familiar with :ref:`WorkingOnSalish`.
 
-.. _orcinus.westgrid.ca: https://www.westgrid.ca/orcinus
+.. _orcinus.westgrid.ca: https://www.westgrid.ca/support/systems/orcinus
 
 
 Set-up SSH key-forwarding
