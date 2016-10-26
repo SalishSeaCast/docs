@@ -38,7 +38,7 @@ You will also need access to scripts in the analysis-storm-surges_ repository an
 
 .. _tools: https://bitbucket.org/salishsea/tools
 
-.. _analysis: https://bitbucket.org/salishsea/analysis-storm-surges
+.. _analysis-storm-surges: https://bitbucket.org/salishsea/analysis-storm-surges
 
 .. _SS-run-sets: https://bitbucket.org/salishsea/SS-run-sets
 

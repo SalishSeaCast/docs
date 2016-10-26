@@ -102,7 +102,7 @@ These scripts are found in the :file:`analysis-storm-surges/tide_analysis_script
 
   - :file:`ssh_units` is the units of the water level information in the harmonics or time series file (eg. 'm' or 'feet')
 
-  - :file:`time_zone` is the time zone of the time information stored in the harmonics or time series files. For example, if :file:`time_zone` is 'PST' then the phase in the harmonics files is relative to PST time or the time in the time series file is relative to PST. 
+  - :file:`time_zone` is the time zone of the time information stored in the harmonics or time series files. For example, if :file:`time_zone` is 'PST' then the phase in the harmonics files is relative to PST time or the time in the time series file is relative to PST.
 
 .. note::
 
@@ -131,6 +131,9 @@ These scripts are found in the :file:`analysis-storm-surges/tide_analysis_script
 .. warning::
 
   Some of the constituents published on the NOAA_ website are not recognized by ttide_. We have attempted to match these constituents to once valid in ttide but this approach can lead to errors in the nodal corrections. It is best to use a time-series when producing tidal predictions for a NOAA station.
+
+  .. _ttide: https://www.eoas.ubc.ca/~rich/#T_Tide
+
 
 Storm surge forcing files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
