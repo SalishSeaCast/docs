@@ -71,6 +71,8 @@ Model Parameter Changes Over Time
              Restart file was |br|
              :file:`SalishSea_00553680_restart.nc` from |br|
              :file:`nowcast-green/14oct16/` run results.
+
+26-Oct-2016  Updated NEMO code to NEMO-3.6r6204+                                  967d5a19d820_
 ===========  ===================================================  ==============  ==================
 
 .. _efa8c39a9a7c: https://bitbucket.org/salishsea/ss-run-sets/commits/efa8c39a9a7c
@@ -83,3 +85,4 @@ Model Parameter Changes Over Time
 .. _65ce47429291: https://bitbucket.org/salishsea/tools/commits/65ce47429291
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
 .. _71946bd297a4: https://bitbucket.org/salishsea/ss-run-sets/commits/71946bd297a4
+.. _967d5a19d820: https://bitbucket.org/salishsea/nemo-3.6-code/commits/967d5a19d820
