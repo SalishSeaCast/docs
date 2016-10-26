@@ -137,7 +137,7 @@ NEMO-3.6-code
 .. _XIOS-repo:
 
 XIOS (XML I/O Server)
-~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 * private
   (because the canonical source for this code is :kbd:`http://forge.ipsl.jussieu.fr/ioserver/wiki`)
