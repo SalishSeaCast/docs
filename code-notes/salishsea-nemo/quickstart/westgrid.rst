@@ -169,7 +169,7 @@ Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
 
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
     ./makenemo -n SalishSea -m X64_BUGABOO -j 8
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS/REBUILD_NEMO
+    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
     ./maketools -n REBUILD_NEMO -m X64_BUGABOO
 
 :kbd:`jasper`:
@@ -179,7 +179,7 @@ Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
 
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
     ./makenemo -n SalishSea -m X64_JASPER -j 8
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS/REBUILD_NEMO
+    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
     ./maketools -n REBUILD_NEMO -m X64_JASPER
 
 :kbd:`nestor`:
@@ -189,7 +189,7 @@ Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
 
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
     ./makenemo -n SalishSea -m X64_NESTOR -j 8
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS/REBUILD_NEMO
+    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
     ./maketools -n REBUILD_NEMO -m X64_NESTOR
 
 :kbd:`orcinus`:
@@ -199,7 +199,7 @@ Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
 
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
     ./makenemo -n SalishSea -m X64_ORCINUS -j 8
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS/REBUILD_NEMO
+    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
     ./maketools -n REBUILD_NEMO -m X64_ORCINUS
 
 To build a configuration other than :kbd:`SalishSea`, replace :kbd:`SalishSea` with the name of the configuration to be built, e.g. :kbd:`SOG`:
