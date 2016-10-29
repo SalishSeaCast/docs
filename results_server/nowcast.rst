@@ -73,6 +73,12 @@ Model Parameter Changes Over Time
              :file:`nowcast-green/14oct16/` run results.
 
 26-Oct-2016  Updated NEMO code to NEMO-3.6r6204+                                  967d5a19d820_
+29-Oct-2016  Moved :kbd:`nowcast` run results since |br|
+             15oct16 into :file:`nowcast-blue/` directory. |br|
+             Moved :kbd:`forecast` run results prior to |br|
+             15oct16 into :file:`forecast-3.4/` directory. |br|
+             Moved :kbd:`forecast2` run results prior to |br|
+             15oct16 into :file:`forecast2-3.4/` directory.
 ===========  ===================================================  ==============  ==================
 
 .. _efa8c39a9a7c: https://bitbucket.org/salishsea/ss-run-sets/commits/efa8c39a9a7c

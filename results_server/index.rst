@@ -131,24 +131,30 @@ The :file:`/results/` file system is organized as follows::
    |       `-- ...
    `-- SalishSea/
        |-- forecast/
+       |   |-- 15oct16/
+       |   `-- ...
+       |-- forecast-3.4/
        |   |-- 20nov14/
        |   |-- ...
-       |   |-- 13nov15/
-       |   `-- ...
+       |   `-- 14oct16/
        |-- forecast2/
-       |   |-- 28nov14/
-       |   |-- ...
-       |   |-- 12nov15/
+       |   |-- 15oct16/
        |   `-- ...
+       |-- forecast2-3.4/
+       |   |-- 20nov14/
+       |   |-- ...
+       |   `-- 14oct16/
        |-- nowcast/
        |   |-- 27oct14/
-       |   |-- ...
-       |   |-- 13nov15/
        |   |-- ...
        |   `-- early-days/
        |       |-- 24-26sep14/
        |       |-- ...
        |       `-- 25-26oct14/
+       |-- nowcast-3.4/
+       |-- nowcast-blue/
+       |   |-- 15oct16/
+       |   `-- ...
        |-- nowcast-green/
        |   |-- 05dec15/
        |   `-- ...
@@ -181,12 +187,28 @@ The Salish Sea NEMO Model results from "production" runs of the model are stored
 The sub-directories there are:
 
 * :file:`/results/SalishSea/forecast/`
-    Results from the nowcast system daily forecast runs.
+    Results from the nowcast system daily forecast runs using NEMO-3.6 since 2016-10-15.
     Forecast for :kbd:`day + 1` based on restart file from nowcast run for :kbd:`day`,
     same atmospheric and river run-off forcing,
     and updated western boundary sea surface height forcing.
 
-    Earliest daily results directory is :file:`/results/SalishSea/forecast/20nov14/`.
+    Earliest daily results directory is :file:`/results/SalishSea/forecast/15oct16/`.
+    Most,
+    but not all dates since then are available.
+    :file:`forecast/` runs are secondary priority
+    (below :file:`nowcast/`)
+    when the nowcast automation system has difficulties.
+
+    See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
+
+* :file:`/results/SalishSea/forecast-3.4/`
+    Results from the nowcast system daily forecast runs using NEMO-3.4 between 2014-11-20 and 2016-10-14.
+    Forecast for :kbd:`day + 1` based on restart file from nowcast run for :kbd:`day`,
+    same atmospheric and river run-off forcing,
+    and updated western boundary sea surface height forcing.
+
+    Earliest daily results directory is :file:`/results/SalishSea/forecast-3.4/20nov14/`.
+    Latest daily results directory is :file:`/results/SalishSea/forecast-3.4/14oct16/`.
     Most,
     but not all dates since then are available.
     :file:`forecast/` runs are secondary priority
@@ -196,13 +218,30 @@ The sub-directories there are:
     See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
 
 * :file:`/results/SalishSea/forecast2/`
-    Results from the nowcast system daily forecast2 runs.
+    Results from the nowcast system daily forecast2 runs using NEMO-3.6 since 2016-10-15.
+    Forecast for :kbd:`day + 2` based on restart file from forecast run for :kbd:`day + 1`,
+    updated atmospheric,
+    river run-off forcing,
+    and western boundary sea surface height forcing.
+
+    Earliest daily results directory is :file:`/results/SalishSea/forecast2/15oct16/`.
+    Most,
+    but not all dates since then are available.
+    :file:`forecast2/` runs are lowest priority
+    (below :file:`forecast/`)
+    when the nowcast automation system has difficulties.
+
+    See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
+
+* :file:`/results/SalishSea/forecast2-3.4/`
+    Results from the nowcast system daily forecast2 runs using NEMO-3.4 between 2014-11-28 and 2016-10-14.
     Forecast for :kbd:`day + 2` based on restart file from forecast run for :kbd:`day + 1`,
     updated atmospheric,
     river run-off forcing,
     and western boundary sea surface height forcing.
 
     Earliest daily results directory is :file:`/results/SalishSea/forecast2/28nov14/`.
+    Latest daily results directory is :file:`/results/SalishSea/forecast2/14oct16/`.
     Most,
     but not all dates since then are available.
     :file:`forecast2/` runs are lowest priority
@@ -212,9 +251,17 @@ The sub-directories there are:
     See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
 
 * :file:`/results/SalishSea/nowcast/`
-    Results from the nowcast system daily nowcast runs.
+    Results from the nowcast system daily nowcast runs using NEMO-3.4 between 2014-10-27 and 2016-10-14.
 
     Earliest daily results directory is :file:`/results/SalishSea/nowcast/27oct14/`.
+    Latest daily results directory is :file:`/results/SalishSea/nowcast/14oct16/`.
+
+    See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
+
+* :file:`/results/SalishSea/nowcast-blue/`
+    Results from the nowcast system daily nowcast runs using NEMO-3.6 since 2016-10-15.
+
+    Earliest daily results directory is :file:`/results/SalishSea/nowcast/15oct16/`.
 
     See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
 
