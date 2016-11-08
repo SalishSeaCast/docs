@@ -48,7 +48,7 @@ Here is a prototype :file:`make_readme.py` module that provides that automation:
     import re
 
 
-    NBVIEWER = 'http://nbviewer.jupyter.org/urls'
+    NBVIEWER = 'https://nbviewer.jupyter.org/urls'
     REPO = 'bitbucket.org/salishsea/tools/raw/tip'
     REPO_DIR = 'SalishSeaNowcast/notebooks/figures/publish'
     TITLE_PATTERN = re.compile('#{1,6} ?')
