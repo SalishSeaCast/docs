@@ -13,7 +13,7 @@ We can use that feature in directories that contain `Jupyter Notebook`_ files to
 Doing so makes the notebooks easily visible to anyone without having to run Jupyter Notebook.
 It is also an easy way to generate notebook viewer links to paste into the Google Drive "whiteboard" documents for weekly group meetings.
 
-.. _Jupyter Notebook: http://jupyter.org/
+.. _Jupyter Notebook: https://jupyter.org/
 .. _Jupyter Notebook Viewer: https://nbviewer.jupyter.org/
 
 You could hand edit the :file:`README.md` file,
@@ -31,7 +31,7 @@ Here is a prototype :file:`make_readme.py` module that provides that automation:
     # you may not use this file except in compliance with the License.
     # You may obtain a copy of the License at
 
-    #    http://www.apache.org/licenses/LICENSE-2.0
+    #    https://www.apache.org/licenses/LICENSE-2.0
 
     # Unless required by applicable law or agreed to in writing, software
     # distributed under the License is distributed on an "AS IS" BASIS,
@@ -61,7 +61,7 @@ Here is a prototype :file:`make_readme.py` module that provides that automation:
     the results figures generation modules of the Salish Sea model nowcast system.
 
     The links below are to static renderings of the notebooks via
-    [nbviewer.jupyter.org](http://nbviewer.jupyter.org/).
+    [nbviewer.jupyter.org](https://nbviewer.jupyter.org/).
     Descriptions under the links below are from the first cell of the notebooks
     (if that cell contains Markdown or raw text).
 
@@ -77,7 +77,7 @@ Here is a prototype :file:`make_readme.py` module that provides that automation:
     and The University of British Columbia.
 
     They are licensed under the Apache License, Version 2.0.
-    http://www.apache.org/licenses/LICENSE-2.0
+    https://www.apache.org/licenses/LICENSE-2.0
     Please see the LICENSE file for details of the license.
     """.format(this_year=datetime.date.today().year)
         with open('README.md', 'wt') as f:
