@@ -16,7 +16,7 @@ It is also an easy way to generate notebook viewer links to paste into the Googl
 .. _Jupyter Notebook: http://jupyter.org/
 .. _Jupyter Notebook Viewer: https://nbviewer.jupyter.org/
 
-You could hand edit the :file:`REAADME.md` file,
+You could hand edit the :file:`README.md` file,
 but that's tedious and error prone,
 so it is an obvious candidate for code automation.
 Here is a prototype :file:`make_readme.py` module that provides that automation:
