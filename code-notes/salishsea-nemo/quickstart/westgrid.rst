@@ -69,6 +69,7 @@ The modules needed for each cluster are:
     module load intel/14.0/netcdf-4.3.3.1
     module load intel/14.0/netcdf-fortran-4.4.0
     module load intel/14.0/hdf5-1.8.15p1
+    module load intel/14.0/netcdf_hdf5
 
 Create a Workspace and Clone the Repositories
 =============================================
