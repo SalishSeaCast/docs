@@ -13,6 +13,7 @@ This section documents the NEMO code and supporting files used to model the Sali
    nemo-code
    nemo-forcing/index
    ss-run-sets
+   land-processor-elimination/index
    outputserver
    spinup
    simple-domain
