@@ -7,7 +7,7 @@ Salish Sea MEOPAR Project Contributors
 The Salish Sea MEOPAR project is lead by `Susan Allen`_ in the Department of Earth, Ocean, and Atmospheric Sciences at the University of British Columbia.
 It is funded by the `Marine Environment Observation Prediction And Response`_ National Centre of Excellence.
 
-.. _Susan Allen: http://eos.ubc.ca/~sallen/
+.. _Susan Allen: https://www.eoas.ubc.ca/~sallen/
 .. _Marine Environment Observation Prediction And Response: http://meopar.ca/
 
 The following people have contributed code,

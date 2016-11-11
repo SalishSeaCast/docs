@@ -7,7 +7,7 @@ Included are a description of the design of the site,
 instructions on how to build the site locally to test new content,
 and how the site is deployed to EOAS department web server.
 
-.. _salishsea.eos.ubc.ca: http://salishsea.eos.ubc.ca/
+.. _salishsea.eos.ubc.ca: https://salishsea.eos.ubc.ca
 
 The source files for the site are in the :ref:`salishsea-site-repo` repo.
 
@@ -20,11 +20,11 @@ the same tools as are used for the :ref:`docs-repo` repo and the :ref:`tools-rep
 The vastly different appearance of the salishsea site from the renderings of those repos on `readthedocs.org`_ is thanks to CSS and Javascript support files provided by the `sphinx-bootstrap-theme`_ package and the `Bootswatch`_ `Superhero`_ theme.
 
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
-.. _Sphinx: http://sphinx-doc.org/
-.. _sphinx-bootstrap-theme: http://ryan-roemer.github.io/sphinx-bootstrap-theme/README.html
-.. _readthedocs.org: http://salishsea-meopar-docs.readthedocs.org/
-.. _Bootswatch: http://bootswatch.com/
-.. _Superhero: http://bootswatch.com/superhero/
+.. _Sphinx: http://sphinx-doc.org
+.. _sphinx-bootstrap-theme: https://ryan-roemer.github.io/sphinx-bootstrap-theme/README.html
+.. _readthedocs.org: https://salishsea-meopar-docs.readthedocs.io/en/latest/
+.. _Bootswatch: https://bootswatch.com
+.. _Superhero: https://bootswatch.com/superhero/
 
 The directory structure of the repo looks like::
 
