@@ -13,14 +13,14 @@ that we use in the Salish Sea MEOPAR project.
 
 .. _Sphinx: http://sphinx-doc.org/
 .. _Jupyter Notebook: https://jupyter.org/
-.. _NumPy: http://docs.scipy.org/doc/numpy/reference/index.html
+.. _NumPy: https://docs.scipy.org/doc/numpy/reference/index.html
 .. _matplotlib: http://matplotlib.org/contents.html
 
 Choose the *Python 3* download from the `installation instructions`_ for your operating system,
 follow the rest of those instructions,
 and accept the option at the end of the installation to make Anaconda your default Python.
 
-.. _installation instructions: http://www.continuum.io/downloads
+.. _installation instructions: https://www.continuum.io/downloads
 
 If you are installing Anaconda Python on a Waterhole machine,
 choose the *Python 3 Linux 64-bit* download.
@@ -35,7 +35,7 @@ There is are a few packages that we use extensively that is not included in the 
 * `xarray`_
 * `bottleneck`_
 
-.. _netcdf4-python: http://unidata.github.io/netcdf4-python/
+.. _netcdf4-python: https://unidata.github.io/netcdf4-python/
 .. _bottleneck: https://pypi.python.org/pypi/Bottleneck
 .. _xarray: http://xarray.pydata.org/en/stable/index.html
 

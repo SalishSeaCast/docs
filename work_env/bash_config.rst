@@ -27,8 +27,8 @@ send an email request to support@westgrid.ca.
 If you are new to :command:`bash` or the Linux command line the copy of "The Linux Command Line" by William E. Shotts, Jr. in the Waterhole will help you,
 as will this `Unix Shell Quick Reference`_ page from `Software Carpentry`_.
 
-.. _Unix Shell Quick Reference: http://douglatornell.github.io/2013-09-26-ubc/lessons/ref/shell.html
-.. _Software Carpentry: http://software-carpentry.org/
+.. _Unix Shell Quick Reference: https://douglatornell.github.io/2013-09-26-ubc/lessons/ref/shell.html
+.. _Software Carpentry: https://software-carpentry.org/
 
 
 .. _.bashrc-snippets:

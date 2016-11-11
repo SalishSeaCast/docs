@@ -10,7 +10,7 @@ Intro to Python
 Most of the analysis and tools in the Salish Sea MEOPAR project are written in `Python`_,
 though Matlab makes occasional guest appearances.
 
-.. _Python: http://python.org/
+.. _Python: https://python.org/
 
 `This slide deck`_ from a `physics course`_ at Cornell University provides a good,
 fairly detailed,
@@ -84,7 +84,7 @@ There are code examples in the notebooks and also examples of the use of functio
 
 __ jupyter_
 .. _jupyter: https://jupyter.org/
-.. _netCDF: http://unidata.github.io/netcdf4-python/
+.. _netCDF: https://unidata.github.io/netcdf4-python/
 
 If you are new to the Salish Sea project,
 or to `Jupyter Notebook`__,
@@ -130,7 +130,7 @@ here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using ERDDAP
 
 * `Exploring netCDF Datasets from ERDDAP.ipynb`_
 
-.. _netCDF4-python: http://unidata.github.io/netcdf4-python/
+.. _netCDF4-python: https://unidata.github.io/netcdf4-python/
 .. _ERDDAP server: https://salishsea.eos.ubc.ca/erddap/
 .. _Exploring netCDF Datasets from ERDDAP.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Exploring%20netCDF%20Datasets%20from%20ERDDAP.ipynb
 
@@ -156,7 +156,7 @@ Quoting from the introduction to its documentation:
 
 .. _xarray: http://xarray.pydata.org/
 .. _pandas: http://pandas.pydata.org/
-.. _Common Data Model: http://www.unidata.ucar.edu/software/thredds/current/netcdf-java/CDM
+.. _Common Data Model: https://www.unidata.ucar.edu/software/thredds/current/netcdf-java/CDM
 
 Here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using :kbd:`xarray`:
 

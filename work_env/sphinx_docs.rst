@@ -13,8 +13,8 @@ Sphinx_ provides:
 * optional PDF rendering
 
 .. _Sphinx: http://sphinx-doc.org/
-.. _LaTeX: http://www.latex-project.org/
-.. _MathJax: http://www.mathjax.org/
+.. _LaTeX: https://www.latex-project.org/
+.. _MathJax: https://www.mathjax.org/
 
 LaTeX_ should be used for manuscripts of publications,
 for which PDFs must be rendered,
@@ -27,7 +27,7 @@ or in the docs directory of another appropriate project repo
 Most notably,
 the tools_ repo includes a large public documentation tree.
 When changes that have been committed to the docs_ and tools_ repos are pushed to Bitbucket a signal is sent to `readthedocs.org`_ to automatically rebuild and render the docs at
-http://salishsea-meopar-docs.readthedocs.org/ and http://salishsea-meopar-tools.readthedocs.org/,
+https://salishsea-meopar-docs.readthedocs.io/en/latest/ and https://salishsea-meopar-tools.readthedocs.io/en/latest/,
 respectively.
 
 .. _docs: https://bitbucket.org/salishsea/docs/
