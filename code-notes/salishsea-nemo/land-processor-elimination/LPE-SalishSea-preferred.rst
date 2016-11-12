@@ -1,6 +1,10 @@
-************************
-Preferred decompositions
-************************
+.. _Preferred-MPI-LPE-Decompositions:
+
+********************************
+Preferred MPI LPE Decompositions
+********************************
+
+This table shows the preferred MPI decompositions that optimize :ref:`LandProcessorElimination` for the SalishSea and SMELT configuration running in NEMO-3.6 with the :file:`bathy_downonegrid2.nc` bathymetry.
 
 =============  =====  ====  =====  ===============  ===========
 MPI breakdown  Water  Land  r      Tile size        Tile aspect
