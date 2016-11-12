@@ -28,11 +28,11 @@ given a domain and a decomposition,
 is the forward problem.
 NEMO includes a tool under TOOLS/MPP_PREP that computes the number of water processors for all possible decompositions
 (up to a maximum number of processors).
-The results of this calculation are embedded in the salishsea command
+The results of this calculation are embedded in the :ref:`SalishSeaCmdProcessor`
 (in `salish.csv`_)
 such that specifying a decomposition
 (4x9, 8x18, etc)
-is enough information for the salishsea command to set jpnij and to request the correct number of water processors.
+is enough information for the :command:`salishsea run` and :command:`salishsea prepare` commands to set :kbd:`jpnij` and to request the correct number of water processors.
 
 .. _salish.csv: https://bitbucket.org/salishsea/tools/raw/tip/SalishSeaCmd/salishsea_cmd/salish.csv
 
