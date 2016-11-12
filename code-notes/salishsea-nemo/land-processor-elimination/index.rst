@@ -29,12 +29,12 @@ is the forward problem.
 NEMO includes a tool under TOOLS/MPP_PREP that computes the number of water processors for all possible decompositions
 (up to a maximum number of processors).
 The results of this calculation are embedded in the salishsea command
-(in salish.csv_)
+(in `salish.csv`_)
 such that specifying a decomposition
 (4x9, 8x18, etc)
 is enough information for the salishsea command to set jpnij and to request the correct number of water processors.
 
-.. _salish.csv: https://bitbucket.org/salishsea/tools/raw/198ffbc7b9126add7dd518620f24e383d609ec3e/SalishSeaCmd/salishsea_cmd/salish.csv
+.. _salish.csv: https://bitbucket.org/salishsea/tools/raw/tip/SalishSeaCmd/salishsea_cmd/salish.csv
 
 
 Reverse problem
@@ -56,7 +56,7 @@ and then for most land eliminated
 The second table is not filtered and included for completeness.
 The scripts here_ produce the tables.
 
-.. _here: https://bitbucket.org/salishsea/analysis-michael/src/5b1b7ea73ba0af2bae824a32b21b2150935e60f6/land-processor-elimination/
+.. _here: https://bitbucket.org/salishsea/analysis-michael/src/tip/land-processor-elimination/
 
 
 .. toctree::
