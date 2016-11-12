@@ -1,6 +1,11 @@
-******************
-All decompositions
-******************
+.. _All-MPI-LPE-Decompositions:
+
+**************************
+All MPI LPE Decompositions
+**************************
+
+This table shows an exhaustive collection of :ref:`LandProcessorElimination` statistics for the SalishSea and SMELT configuration running in NEMO-3.6 with the :file:`bathy_downonegrid2.nc` bathymetry.
+Please see the :ref:`Preferred-MPI-LPE-Decompositions` table for the MPI decompositions that are recommended to use.
 
 =============  =====  ====  =====  ===============  ===========
 MPI breakdown  Water  Land  r      Tile size        Tile aspect
