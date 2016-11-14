@@ -1,0 +1,12 @@
+# conda environment description file for docs build envioronment
+# on readthedocs.org
+
+name: sphinx-build
+
+dependencies:
+  - ipython
+  - python=3
+  - sphinx
+
+  - pip:
+    - nbsphinx
