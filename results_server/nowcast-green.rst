@@ -149,6 +149,10 @@ Date                       Change                                 New Value     
              set ln_apr_obs off |br|                               .false. |br|
 
 26-Oct-2016  Updated NEMO code to NEMO-3.6r6204+                                  d39437beec6c_
+
+20 Nov-2016  Updated NEMO code to NEMO-3.6r6459+ |br|                             a79d64786baa_
+             Change to rebuild_nemo that writes |br|
+             deflated netcdf4/hdf5 files directly.                                f9a8d03de741_
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
@@ -157,3 +161,5 @@ Date                       Change                                 New Value     
 .. _7f8414960de2: https://bitbucket.org/salishsea/NEMO-3.6-code/commits/7f8414960de2
 .. _a9d5c04f7fea: https://bitbucket.org/salishsea/NEMO-3.6-code/commits/a9d5c04f7fea
 .. _d39437beec6c: https://bitbucket.org/salishsea/nemo-3.6-code/commits/d39437beec6c
+.. _a79d64786baa: https://bitbucket.org/salishsea/nemo-3.6-code/commits/a79d64786baa
+.. _f9a8d03de741: https://bitbucket.org/salishsea/nemo-3.6-code/commits/f9a8d03de741
