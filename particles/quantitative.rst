@@ -153,15 +153,15 @@ You must define a closed region in your domain for transport calculations.
 Ariane calculates the mass transport between an initial section in your region and the other sections.
 Ariane provides a couple of useful tools for defining the sections.
 
-* :kbd:`mkseg0`: This program reads your land-ocean mask and writes it as a text file. Run this program in the same directory as your namelist. You may need to add the ariane executables to your path. 
+* :kbd:`mkseg0`: This program reads your land-ocean mask and writes it as a text file. Run this program in the same directory as your namelist. You may need to add the ariane executables to your path.
 
-.. code::
+.. code:: bash
 
     mkseg0
 
 * :file:`segrid`: After you run :kbd:`mkseg0`, you should see a new file called :file:`segrid`. Edit this file with
 
-.. code::
+.. code:: bash
 
    nedit segrid
 
@@ -177,13 +177,11 @@ Land points are :kbd:`#` and ocean points are :kbd:`-`.
 
 * Run :kbd:`mkseg`
 
-.. code::
+.. code:: bash
 
     mkseg
 
-* Copy the section definitions into a file called :file:`sections.txt`. The section definitions can be found from the output of :kbd:`mkseg`. :file:`sections.txt` should look something like this:
-
-.. code::
+* Copy the section definitions into a file called :file:`sections.txt`. The section definitions can be found from the output of :kbd:`mkseg`. :file:`sections.txt` should look something like this::
 
      1   250   313  -409  -409     1    40 "1section"
      2   264   312   386   386     1    40 "2section"
@@ -193,13 +191,11 @@ You can rename :kbd:`"1section"` and :kbd:`"2section"` to something more intuiti
 
 * Run :file:`ariane`. Remember to check that you have added the :file:`ariane` executable to your path.
 
-.. code::
+.. code:: bash
 
     ariane
 
-* The output on the screen should indicate that ariane completed successfully. You should also see a new file called :file:`stats.txt`. This file contains statistics about the initial and final particles through each section and the transport calculations. It might look something like this:
-
-.. code-block:: fortran
+* The output on the screen should indicate that ariane completed successfully. You should also see a new file called :file:`stats.txt`. This file contains statistics about the initial and final particles through each section and the transport calculations. It might look something like this::
 
      total transport (in m3/s):    230033.88767527405       ( x lmt =   5520813.3042065771      )
      max_transport (in m3/s)  :    1000000000.0000000
@@ -303,9 +299,7 @@ You can also impose a density and/or salinity and/or temperature criteria on the
 * You'll also need to make sure that :kbd:`key_alltracers` and :kbd:`key_computesigma` are :kbd:`.TRUE.` and :kbd:`zsigma` are defined in your namelist.
 * Now particles will be initialized with salinity less than 29.
 * There are other examples of useful criteria in :file:`mod_criter0.f90`.
-* Once again, the output of :file:`stats.txt` will be different. Here is an example of part of :file:`stats.txt`:
-
-.. code-block:: fortran
+* Once again, the output of :file:`stats.txt` will be different. Here is an example of part of :file:`stats.txt`::
 
      total transport (in m3/s):    76419.982459495324       ( x lmt =   1834079.5790278877      )
      max_transport (in m3/s)  :    1000000000.0000000
