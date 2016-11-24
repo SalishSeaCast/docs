@@ -34,16 +34,18 @@ There is are a few packages that we use extensively that is not included in the 
 * `netcdf4-python`_
 * `xarray`_
 * `bottleneck`_
+* `basemap`_
 
 .. _netcdf4-python: https://unidata.github.io/netcdf4-python/
 .. _bottleneck: https://pypi.python.org/pypi/Bottleneck
 .. _xarray: http://xarray.pydata.org/en/stable/index.html
+.. _basemap: http://matplotlib.org/basemap/
 
 To install them,
 do:
 
 .. code-block:: bash
 
-    conda install netcdf4 xarray bottleneck
+    conda install netcdf4 xarray bottleneck basemap
 
 and follow the prompts.
