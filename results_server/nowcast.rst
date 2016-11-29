@@ -79,6 +79,11 @@ Model Parameter Changes Over Time
              15oct16 into :file:`forecast-3.4/` directory. |br|
              Moved :kbd:`forecast2` run results prior to |br|
              15oct16 into :file:`forecast2-3.4/` directory.
+
+28-Nov-2016  Updated NEMO code to NEMO-3.6r6459+ |br|                             a79d64786baa_ |br|
+             Change to rebuild_nemo that writes |br|                              f9a8d03de741_ |br|
+             deflated netcdf4/hdf5 files directly. |br|
+             Start using land processor elimination in runs.                      fb724851d9f7_
 ===========  ===================================================  ==============  ==================
 
 .. _efa8c39a9a7c: https://bitbucket.org/salishsea/ss-run-sets/commits/efa8c39a9a7c
@@ -92,3 +97,6 @@ Model Parameter Changes Over Time
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
 .. _71946bd297a4: https://bitbucket.org/salishsea/ss-run-sets/commits/71946bd297a4
 .. _967d5a19d820: https://bitbucket.org/salishsea/nemo-3.6-code/commits/967d5a19d820
+.. _a79d64786baa: https://bitbucket.org/salishsea/nemo-3.6-code/commits/a79d64786baa
+.. _f9a8d03de741: https://bitbucket.org/salishsea/nemo-3.6-code/commits/f9a8d03de741
+.. _fb724851d9f7: https://bitbucket.org/salishsea/tools/commits/fb724851d9f7
