@@ -150,7 +150,7 @@ Date                       Change                                 New Value     
 
 26-Oct-2016  Updated NEMO code to NEMO-3.6r6204+                                  d39437beec6c_
 
-20 Nov-2016  Updated NEMO code to NEMO-3.6r6459+ |br|                             a79d64786baa_
+20-Nov-2016  Updated NEMO code to NEMO-3.6r6459+ |br|                             a79d64786baa_
              Change to rebuild_nemo that writes |br|
              deflated netcdf4/hdf5 files directly.                                f9a8d03de741_
 ===========  ===================================================  ==============  ==================
