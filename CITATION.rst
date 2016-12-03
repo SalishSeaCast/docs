@@ -128,5 +128,5 @@ Submitted to Ocean Modelling.
         author = "Soontiens, N. and Allen, S.",
         title = "Modelling sensitivities to mixing and advection in a sill-basin estuarine system",
         year = "2016",
-        note = "Submitted to Ocean Modelling",
+        note = "Under revision for Ocean Modelling",
     }
