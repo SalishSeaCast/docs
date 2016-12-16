@@ -55,6 +55,8 @@ and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
 
 
+.. _CompileXIOS-salish:
+
 Compile XIOS
 ============
 

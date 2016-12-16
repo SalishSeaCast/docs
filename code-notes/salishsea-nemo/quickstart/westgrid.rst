@@ -23,7 +23,7 @@ The required modules (and their names) vary from cluster to cluster.
 You can manually load the modules each time you log in,
 or you can add the lines to your :file:`.bashrc` file so that they are automatically loaded upon login.
 
-Lastly, you need to modify your search path such that your shell can find python scripts installed with :kbd:`pip --user`. 
+Lastly, you need to modify your search path such that your shell can find python scripts installed with :kbd:`pip --user`.
 Change the :kbd:`lpath` line in the :kbd:`modify search path` section of :file:`.bash_profile` to include :file:`$HOME/.local/bin` and :file:`$HOME/bin` in your search path:
 
 .. code-block:: bash
@@ -49,7 +49,7 @@ The modules needed for each cluster are:
     module load compiler/intel/13.0.1
     module load library/hdf5/1.8.9
     module load library/netcdf/4.1.3
-    
+
 :kbd:`nestor`:
 --------------
 
@@ -70,6 +70,7 @@ The modules needed for each cluster are:
     module load intel/14.0/netcdf-fortran-4.4.0
     module load intel/14.0/hdf5-1.8.15p1
     module load intel/14.0/nco-4.5.2
+
 
 Create a Workspace and Clone the Repositories
 =============================================
@@ -92,6 +93,7 @@ Clone the repos needed to run the model:
 
 There is no need to clone the :file:`docs` or :file:`analysis` repos at WestGrid.
 
+
 Install Tools and Command Processor Packages
 ============================================
 
@@ -104,10 +106,13 @@ Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python
     pip install --user -e SalishSeaTools
     pip install --user -e SalishSeaCmd
 
+
+.. _CompileXIOS-westgrid:
+
 Compile XIOS
 ============
 
-First symlink the XIOS build configuration files for :kbd:`orcinus` from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS/arch/` directory, then compile XIOS:
+First symlink the XIOS build configuration files for the machine that you are working on from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS/arch/` directory, then compile XIOS:
 
 :kbd:`bugaboo`:
 ---------------
@@ -209,6 +214,7 @@ To build a configuration other than :kbd:`SalishSea`, replace :kbd:`SalishSea` w
 
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
     ./makenemo -n SOG -m X64_ORCINUS -j 8
+
 
 Prepare and Execute Runs
 ========================
