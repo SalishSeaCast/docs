@@ -149,6 +149,19 @@ XIOS (XML I/O Server)
 * documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
 
 
+.. _XIOS-ARCH-repo:
+
+XIOS-ARCH
+~~~~~~~~~
+
+* public
+* Apache v2.0 license, copyright project contributors and UBC
+* XIOS build configuration arch files for use with NEMO-3.6
+* Bitbucket: https://bitbucket.org/salishsea/xios-arch
+* documentation: for :ref:`salish <CompileXIOS-salish>`,
+  for :ref:`westgrid machines <CompileXIOS-westgrid>`
+
+
 .. _NEMO-forcing-repo:
 
 NEMO-forcing
