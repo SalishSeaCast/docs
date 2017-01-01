@@ -155,13 +155,13 @@ Ariane provides a couple of useful tools for defining the sections.
 
 * :kbd:`mkseg0`: This program reads your land-ocean mask and writes it as a text file. Run this program in the same directory as your namelist. You may need to add the ariane executables to your path.
 
-.. code:: bash
+.. code-block:: bash
 
     mkseg0
 
 * :file:`segrid`: After you run :kbd:`mkseg0`, you should see a new file called :file:`segrid`. Edit this file with
 
-.. code:: bash
+.. code-block:: bash
 
    nedit segrid
 
@@ -177,7 +177,7 @@ Land points are :kbd:`#` and ocean points are :kbd:`-`.
 
 * Run :kbd:`mkseg`
 
-.. code:: bash
+.. code-block:: bash
 
     mkseg
 
@@ -191,7 +191,7 @@ You can rename :kbd:`"1section"` and :kbd:`"2section"` to something more intuiti
 
 * Run :file:`ariane`. Remember to check that you have added the :file:`ariane` executable to your path.
 
-.. code:: bash
+.. code-block:: bash
 
     ariane
 
