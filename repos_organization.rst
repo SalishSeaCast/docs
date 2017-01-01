@@ -82,6 +82,50 @@ private-tools
 * Bitbucket: https://bitbucket.org/salishsea/private-tools/
 
 
+.. _SalishSeaCmd-repo:
+
+SalishSeaCmd
+~~~~~~~~~~~~
+
+* public
+* Apache v2.0 license, copyright project contributors and UBC
+* The Salish Sea NEMO command processor,
+  :command:`salishsea`,
+  a command line tool for doing various operations associated with the Salish Sea NEMO model.
+  It is a domain-specific command processor tool for the Salish Sea model that uses plug-ins from the :ref:`NEMO-Cmd-repo` package.
+* documentation is rendered at https://salishseacmd.readthedocs.io/en/latest/
+* Bitbucket: https://bitbucket.org/salishsea/salishseacmd/
+
+
+.. _NEMO-Cmd-repo:
+
+NEMO-Cmd
+~~~~~~~~
+
+* public
+* Apache v2.0 license, copyright project contributors and UBC
+* The NEMO command processor, :command:`nemo`,
+  a command line tool for doing various operations associated with running the NEMO ocean model.
+* documentation is rendered at https://nemo-cmd.readthedocs.io/en/latest/
+* Bitbucket: https://bitbucket.org/salishsea/nemo-cmd/
+
+
+.. _SalishSeaNowcast-repo:
+
+SalishSeaNowcast
+~~~~~~~~~~~~~~~~
+
+* public
+* Apache v2.0 license, copyright project contributors and UBC
+* The :kbd:`SalishSeaNowcast` package is a collection of Python modules associated with running the Salish Sea NEMO model in a daily nowcast/forecast mode.
+  The runs use as-recent-as-available
+  (typically previous day)
+  forcing data for the western boundary sea surface height and the Fraser River flow,
+  and atmospheric forcing from the four-times-daily produced forecast results from the Environment Canada High Resolution Deterministic Prediction System (HRDPS) operational GEM 2.5km resolution model.
+* documentation is rendered at https://salishsea-nowcast.readthedocs.io/en/latest/
+* Bitbucket: https://bitbucket.org/salishsea/salishseanowcast/
+
+
 .. _analysis-repo:
 
 analysis
