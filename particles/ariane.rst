@@ -39,7 +39,7 @@ Configure the installation:
 
 .. code-block:: bash
 
-	./configure --prefix=/ocean/username/MEOPAR/Ariane
+	./configure --prefix=/ocean/$USER/MEOPAR/Ariane
 
 The :kbd:`prefix` argument overwrites the default install directory into a customized directory.
 
