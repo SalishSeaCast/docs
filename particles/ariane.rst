@@ -17,13 +17,13 @@ On :kbd:`salish` create an Ariane working directory:
 
 .. code-block:: bash
 
-	mkdir /ocean/username/MEOPAR/Ariane
+	mkdir /ocean/$USER/MEOPAR/Ariane
 
 Place the :kbd:`ariane-2.2.6_00.tar.gz` package in that directory and unpack it
 
 .. code-block:: bash
 
-	cd /ocean/username/MEOPAR/Ariane
+	cd /ocean/$USER/MEOPAR/Ariane
 	gunzip ariane-2.2.6_00.tar.gz
 	tar -xf ariane-2.2.6_00.tar
 
@@ -57,7 +57,7 @@ Add the path for the Ariane executable to your :kbd:`PATH` environment variable:
 
 .. code-block:: bash
 
-	export PATH=/ocean/username/MEOPAR/Ariane/bin:$PATH
+	export PATH=/ocean/$USER/MEOPAR/Ariane/bin:$PATH
 
 Now you can run Ariane from any directory by typing :kbd:`ariane`.
 
