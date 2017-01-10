@@ -153,6 +153,8 @@ Date                       Change                                 New Value     
 20-Nov-2016  Updated NEMO code to NEMO-3.6r6459+ |br|                             a79d64786baa_
              Change to rebuild_nemo that writes |br|
              deflated netcdf4/hdf5 files directly.                                f9a8d03de741_
+
+10-Jan-2017  Updated NEMO code to NEMO-3.6r6770+ |br|                             3b0accb0e693_ |br|
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
@@ -163,3 +165,4 @@ Date                       Change                                 New Value     
 .. _d39437beec6c: https://bitbucket.org/salishsea/nemo-3.6-code/commits/d39437beec6c
 .. _a79d64786baa: https://bitbucket.org/salishsea/nemo-3.6-code/commits/a79d64786baa
 .. _f9a8d03de741: https://bitbucket.org/salishsea/nemo-3.6-code/commits/f9a8d03de741
+.. _3b0accb0e693: https://bitbucket.org/salishsea/nemo-3.6-code/commits/3b0accb0e693
