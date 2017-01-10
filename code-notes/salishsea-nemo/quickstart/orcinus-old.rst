@@ -169,9 +169,7 @@ For :file:`CONFIG/SalishSea/orcinus_build.sh` the output should end something li
     lrwxrwxrwx 1 dlatorne dlatorne 73 Aug 18 12:34 /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/EXP00/opa -> /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/nemo.exe*
 
 Similarily,
-the output of :file:`TOOLS/REBUILD_NEMO/orcinus_build.sh` should end like:
-
-.. code-block:: bash
+the output of :file:`TOOLS/REBUILD_NEMO/orcinus_build.sh` should end like::
 
     mpif90 -o rebuild_nemo.o -I/home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/inc -c -fpp -r8 -O3 -assume byterecl -heap-arrays -I/global/software/lib64/intel/ncsa-tools/include /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/src/rebuild_nemo.f90
     touch /home/dlatorne/MEOPAR/NEMO-code/NEMOGCM/TOOLS/REBUILD_NEMO/BLD/flags/LD.flags

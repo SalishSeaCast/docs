@@ -28,9 +28,7 @@ On WestGrid you need to put your public key in :file:`.ssh/authorized_keys` on e
 :command:`ssh-agent` Forwarding for :kbd:`salish`
 =================================================
 
-To set up agent forwarding for :kbd:`salish` create a :file:`$HOME/.ssh/config` file on your Waterhole machine containing the following (or append the following if :file:`$HOME/.ssh.config` already exists):
-
-.. code-block:: cfg
+To set up agent forwarding for :kbd:`salish` create a :file:`$HOME/.ssh/config` file on your Waterhole machine containing the following (or append the following if :file:`$HOME/.ssh.config` already exists)::
 
     Host salish
       Hostname  salish.eos.ubc.ca
@@ -64,9 +62,7 @@ Thanks to shared storage between the Waterhole machines and :kbd:`salish` that i
 
 Orcinus is exactly the same as jasper, just change the name throughout.
 
-To set up agent forwarding for :kbd:`jasper` append the following to the :file:`$HOME/.ssh/config` file on your Waterhole machine:
-
-.. code-block:: cfg
+To set up agent forwarding for :kbd:`jasper` append the following to the :file:`$HOME/.ssh/config` file on your Waterhole machine::
 
     Host jasper
       Hostname  jasper.westgrid.ca

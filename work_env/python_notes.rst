@@ -30,19 +30,19 @@ A few differences you will see compared to our Python code:
 
   .. code-block:: python
 
-      print ‘value of %s = %s’ % (name, val)
+      print 'value of %s = %s' % (name, val)
 
   In our notebooks and code you are more likely to see that spelled like:
 
   .. code-block:: python
 
-      print(‘value of {n} = {v}’.format(n=name, v=val))
+      print('value of {n} = {v}'.format(n=name, v=val))
 
   or perhaps:
 
   .. code-block:: python
 
-      print(‘value of {0} = {1}’.format(name, val))
+      print('value of {0} = {1}'.format(name, val))
 
 * The :py:obj:`scipy.array` syntax discussed on slides 25 through 28 is a synonym for :py:obj:`numpy.ndarray` and you will see it used in our code as:
 
@@ -68,7 +68,7 @@ A few differences you will see compared to our Python code:
       yvals = xvals**3
       fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
       ax1.plot(xvals, yvals)
-      ax2.plot(xvals, yvals, ‘r.’)
+      ax2.plot(xvals, yvals, 'r.')
       ax3.hist(yvals)
 
 .. _Matplotlib: http://matplotlib.org/
