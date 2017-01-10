@@ -84,6 +84,9 @@ Model Parameter Changes Over Time
              Change to rebuild_nemo that writes |br|                              f9a8d03de741_ |br|
              deflated netcdf4/hdf5 files directly. |br|
              Start using land processor elimination in runs.                      fb724851d9f7_
+
+09-Jan-2017  Updated NEMO code to NEMO-3.6r6770+ |br|                             3b0accb0e693_ |br|
+             Change to Ceph/NFS shared storage on west.cloud.
 ===========  ===================================================  ==============  ==================
 
 .. _efa8c39a9a7c: https://bitbucket.org/salishsea/ss-run-sets/commits/efa8c39a9a7c
@@ -100,3 +103,4 @@ Model Parameter Changes Over Time
 .. _a79d64786baa: https://bitbucket.org/salishsea/nemo-3.6-code/commits/a79d64786baa
 .. _f9a8d03de741: https://bitbucket.org/salishsea/nemo-3.6-code/commits/f9a8d03de741
 .. _fb724851d9f7: https://bitbucket.org/salishsea/tools/commits/fb724851d9f7
+.. _3b0accb0e693: https://bitbucket.org/salishsea/nemo-3.6-code/commits/3b0accb0e693
