@@ -194,9 +194,7 @@ You can list the keys that the agent is managing for you with:
 
     $ ssh-add -l
 
-You can simplify logins to the instance by adding the following lines to your :file:`$HOME/.ssh/config` file:
-
-.. code-block:: ini
+You can simplify logins to the instance by adding the following lines to your :file:`$HOME/.ssh/config` file::
 
     Host west.cloud
         Hostname        <ip-address>
