@@ -16,7 +16,7 @@ key_bdy key_dynspg_ts  key_vvl key_diainstant key_mpp_mpi key_iomput
 key_netcdf4 key_nosignedzero  key_zdfgls key_ldfslp
 key_top key_pisces key_tide
 
-Namelists, iodef.xml and field_def.xml  are in SS-run-set/SalishSea/nemo3.5/nowcast
+Namelists, iodef.xml and field_def.xml  are in SS-run-set/SalishSea/nemo3.6/nowcast
 
 Currently running in /data/sallen/MEOPAR/nowcast-green
 
