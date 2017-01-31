@@ -90,6 +90,8 @@ Clone the repos needed to run the model:
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     hg clone ssh://hg@bitbucket.org/salishsea/tools
+    hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
+    hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
 
 There is no need to clone the :file:`docs` or :file:`analysis` repos at WestGrid.
 
@@ -101,10 +103,11 @@ Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python
 
 .. code-block:: bash
 
-    cd $HOME/MEOPAR/tools
-    pip install --user pathlib
-    pip install --user -e SalishSeaTools
-    pip install --user -e SalishSeaCmd
+    mkdir -p $HOME/.local
+    cd $HOME/MEOPAR/
+    pip install --user --editable tools/SalishSeaTools
+    pip install --user --editable NEMO-Cmd
+    pip install --user --editable SalishSeaCmd
 
 
 .. _CompileXIOS-westgrid:
