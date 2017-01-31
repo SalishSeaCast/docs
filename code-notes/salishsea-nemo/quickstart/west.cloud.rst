@@ -325,14 +325,17 @@ and tools repos from Bitbucket:
     $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     $ hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     $ hg clone ssh://hg@bitbucket.org/salishsea/tools tools
+    hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
+    hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
 
 Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` as editable user packages and add :file:`$HOME/.local/bin/`:
 
 .. code-block:: bash
 
-    $ cd $HOME/MEOPAR/tools/
-    $ pip install --user -e SalishSeaTools
-    $ pip install --user -e SalishSeaCmd
+    mkdir -p $HOME/.local
+    pip install --user --editable tools/SalishSeaTools
+    pip install --user --editable NEMO-Cmd
+    pip install --user --editable SalishSeaCmd
     $ export PATH=$HOME/.local/bin:$PATH
 
 Unmount the SSHFS:
@@ -431,6 +434,8 @@ Set up the shared storage:
     $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     $ hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     $ hg clone ssh://hg@bitbucket.org/salishsea/tools tools
+    $ hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
+    $ hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
 
 
 Command-line Interface

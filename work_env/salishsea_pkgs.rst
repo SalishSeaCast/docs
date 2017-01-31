@@ -32,15 +32,17 @@ etc.
     cd /ocean/$USER/MEOPAR/
     hg clone ssh://hg@bitbucket.org/salishsea/docs
     hg clone ssh://hg@bitbucket.org/salishsea/tools
+    hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
+    hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
 
 Next,
 install the :ref:`SalishSeaToolsPackage` and the :ref:`SalishSeaCmdProcessor`:
 
 .. code-block:: bash
 
-    cd tools
-    pip install --user -e SalishSeaTools
-    pip install --user -e SalishSeaCmd
+    pip install --user --editable tools/SalishSeaTools
+    pip install --user --editable NEMO-Cmd
+    pip install --user --editable SalishSeaCmd
 
 The links above contain information about the contents of those packages.
 
