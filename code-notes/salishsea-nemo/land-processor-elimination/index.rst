@@ -34,7 +34,7 @@ such that specifying a decomposition
 (4x9, 8x18, etc)
 is enough information for the :command:`salishsea run` and :command:`salishsea prepare` commands to set :kbd:`jpnij` and to request the correct number of water processors.
 
-.. _salish.csv: https://bitbucket.org/salishsea/tools/raw/tip/SalishSeaCmd/salishsea_cmd/salish.csv
+.. _salish.csv: https://bitbucket.org/salishsea/salishseacmd/raw/tip/salishsea_cmd/salish.csv
 
 
 Reverse problem
