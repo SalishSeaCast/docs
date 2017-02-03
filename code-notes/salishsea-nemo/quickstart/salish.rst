@@ -160,6 +160,44 @@ A convenient command to monitor the memory use of a run and its time step progre
 
 When the job completes the results should have been gathered in the directory you specified in the :command:`salishsea run` command and the temporary run directory should have been deleted.
 
+You should receive and email something like::
+
+  Date: Thu, 2 Feb 2017 15:51:05 -0800
+  From: <adm@salish.eos.ubc.ca>
+  To: <dlatornell@eoas.ubc.ca>
+  Subject: PBS JOB 3926.master
+
+  PBS Job Id: 3926.master
+  Job Name:   test-cmd
+  Exec host:  master/0
+  Begun execution
+
+when your run starts execution
+(usually immediately).
+
+When the run finishes you should receive an email something like::
+
+  Date: Thu, 2 Feb 2017 15:53:46 -0800
+  From: <adm@salish.eos.ubc.ca>
+  To: <dlatornell@eoas.ubc.ca>
+  Subject: PBS JOB 3926.master
+
+  PBS Job Id: 3926.master
+  Job Name:   test-cmd
+  Exec host:  master/0
+  Execution terminated
+  Exit_status=0
+  resources_used.cput=00:13:54
+  resources_used.mem=21567708kb
+  resources_used.vmem=24704876kb
+  resources_used.walltime=00:02:41
+
+You may also receive a email when the run finishes that talks about::
+
+  Unable to copy file /var/spool/torque/spool/...
+
+Please see the :ref:`GettingStdoutAndStderrIntoYourResultsDirectory` section for instructions on how to resolve that issue.
+
 
 Look at the Results
 ===================
@@ -250,3 +288,73 @@ A file called gmon.out will be created in your run directory.
     less gprof_out.txt
 
 For more information, see http://www.ibm.com/developerworks/library/l-gnuprof.html
+
+
+.. _GettingStdoutAndStderrIntoYourResultsDirectory:
+
+Getting :file:`stdout` and :file:`stderr` into Your Results Directory
+=====================================================================
+
+If you receive email messages like::
+
+  Date: Thu, 2 Feb 2017 15:53:55 -0800
+  From: <adm@salish.eos.ubc.ca>
+  To: <dlatornell@eoas.ubc.ca>
+  Subject: PBS JOB 3926.master
+
+  PBS Job Id: 3926.master
+  Job Name:   test-cmd
+  Exec host:  master/0
+  An error has occurred processing your job, see below.
+  Post job file processing error; job 3926.master on host master/0
+
+  Unable to copy file /var/spool/torque/spool/3926.master.OU to dlatorne@salish.eos.ubc.ca:/data/dlatorne/MEOPAR/test-cmd/test-fspath2/stdout
+  *** error from copy
+  Permission denied (publickey,password).
+  lost connection
+  *** end error output
+  Output retained on that host in: /var/spool/torque/undelivered/3926.master.OU
+
+  Unable to copy file /var/spool/torque/spool/3926.master.ER to dlatorne@salish.eos.ubc.ca:/data/dlatorne/MEOPAR/test-cmd/test-fspath2/stderr
+  *** error from copy
+  Permission denied (publickey,password).
+  lost connection
+  *** end error output
+  Output retained on that host in: /var/spool/torque/undelivered/3926.master.ER
+
+when your runs on salish finish,
+the system is telling you that it can copy :file:`master.OU` (:file:`stdout`) and :file:`master.ER` (:file:`stderr`) files from your run to your results directory.
+You can manually retrieve them from the paths given in the email.
+
+To resolve the copy error and get the files to be renames to :file:`stdout` and :file:`stderr` in your results directory you need to set up an ssh key pair *without a passphrase*,
+configure :command:`ssh` to be able to use them,
+and make the key pair trusted on :kbd:`salish`.
+The steps to do that are:
+
+#. Create a passphrase-less ssh key pair:
+
+   .. code-block:: bash
+
+       cd $HOME/.ssh
+       ssh-keygen -C"salish-torque" -f $HOME/.ssh/salish_torque_id_rsa
+
+   Just hit :kbd:`Enter` twice when you are prompted to enter and confirm a passphrase::
+
+     Generating public/private rsa key pair.
+     Enter passphrase (empty for no passphrase):
+     Enter same passphrase again:
+
+#. Configure :command:`ssh` to use the key pair with the user and hostname that the system uses to copy files from the :program:`torque` spool to your results directory by adding a block like the following to your :file:`$HOME/.ssh/config` file::
+
+    Host salish.eos.ubc.ca
+         Hostname salish.eos.ubc.ca
+         User dlatorne
+         IdentityFile ~/.ssh/salish_torque_id_rsa
+
+   replacing :kbd:`dlatorne` with your user id.
+
+#. Make the key pair trusted on :kbd:`salish` by appending the public key to your :file:`$HOME/.ssh/authorized_keys` file:
+
+   .. code-block:: bash
+
+       cat $HOME/.ssh/salish_torque_id_rsa.pub >> $HOME/.ssh/authorized_keys
