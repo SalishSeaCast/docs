@@ -66,9 +66,9 @@ The modules needed for each cluster are:
 
     module load python
     module load intel/14.0.2
-    module load intel/14.0/netcdf-4.3.3.1
-    module load intel/14.0/netcdf-fortran-4.4.0
-    module load intel/14.0/hdf5-1.8.15p1
+    module load intel/14.0/netcdf-4.3.3.1_mpi
+    module load intel/14.0/netcdf-fortran-4.4.0_mpi
+    module load intel/14.0/hdf5-1.8.15p1_mpi
     module load intel/14.0/nco-4.5.2
 
 
@@ -163,7 +163,7 @@ First symlink the XIOS build configuration files for the machine that you are wo
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_ORCINUS.fcm
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_ORCINUS.path
     cd $HOME/MEOPAR/XIOS
-    ./make_xios --arch X64_ORCINUS --netcdf_lib netcdf4_seq --job 8
+    ./make_xios --arch X64_ORCINUS --netcdf_lib netcdf4_par --job 8
 
 
 Compile NEMO-3.6
