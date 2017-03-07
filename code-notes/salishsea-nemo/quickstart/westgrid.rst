@@ -127,7 +127,7 @@ First symlink the XIOS build configuration files for the machine that you are wo
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_BUGABOO.fcm
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_BUGABOO.path
     cd $HOME/MEOPAR/XIOS
-    ./make_xios --arch X64_BUGABOO --netcdf_lib netcdf4_seq --job 8
+    ./make_xios --arch X64_BUGABOO --netcdf_lib netcdf4_par --job 8
 
 :kbd:`jasper`:
 --------------
