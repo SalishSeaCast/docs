@@ -1,0 +1,38 @@
+SOG Name, SMELT Name, Description, SOG Value, Units, Notes
+,,,,,
+rate_micro%R, zz_rate_R_diat,micro-phyto maximum growth rate, 0.600E-04, 1/s,Hitchcock 1980: 1.4 d-1 for T. nordenskelii at 10degrees
+rate_nano%R, zz_rate_R_myri,M. rubrum maximum growth rate, 0.250E-04, 1/s,Yih 2004: 0.5 d-1 for Mesodinium rubrum (at 15 degrees) and Q10**2 tuned up and at Q10**1
+rate_pico%R, zz_rate_R_nano,nanoflagellate maximum growth rate, 0.250E-04, 1/s,
+rate_micro%maxtemp, zz_rate_maxtemp_diat,high temperature limit,35, deg C,Durbin 1974: T. nordenskelli cannot grow at 18 degrees; general diatoms increase this
+rate_nano%maxtemp, zz_rate_maxtemp_myri,high temperature limit,35, deg C,"Mesodinium, Cloern 1977"
+rate_pico%maxtemp, zz_rate_maxtemp_nano,high temperature limit,35, deg C,
+rate_micro%temprange, zz_rate_temprange_diat,growth limit range below max temperature,5, deg C,equal growth at 10 and 15 so range down 8 (which Q10 should be about const)
+rate_nano%temprange, zz_rate_temprange_myri,growth limit range below max temperature,5, deg C,starts turning over earlier
+rate_pico%temprange, zz_rate_temprange_nano,growth limit range below max temperature,5, deg C,
+rate_micro%Iopt, zz_rate_Iopt_diat,micro-phyto growth optimal light level,42,  W/m^2,Durbin 1974: 3.3 lg/s for T. nordenskelii at 10 degrees
+rate_nano%Iopt, zz_rate_Iopt_myri,M. rubrum growth optimal light level,37,  W/m^2,Yih plus Cloern 1977 Half-sat very similar
+rate_pico%Iopt, zz_rate_Iopt_nano,pico-phyto growth optimal light level,10,  W/m^2,
+rate_micro%gamma, zz_rate_gamma_diat,growth light limitation loss parameter,0,,
+rate_nano%gamma, zz_rate_gamma_myri,growth light limitation loss parameter,0,,
+rate_pico%gamma, zz_rate_gamma_nano,growth light limitation loss parameter,0,,
+rate_micro%K_Si, zz_rate_K_Si_diat,Si half saturation constant,0.6,,
+rate_nano%K_Si, zz_rate_K_Si_myri,Si half saturation constant,0,,
+rate_pico%K_Si, zz_rate_K_Si_nano,Si half saturation constant,0,,
+rate_micro%gamma_o, zz_rate_gamma_o_diat,exponential NH inhibition of NO3 uptake,0,,
+rate_nano%gamma_o, zz_rate_gamma_o_myri,exponential NH inhibition of NO3 uptake,0,,
+rate_pico%gamma_o, zz_rate_gamma_o_nano,exponential NH inhibition of NO3 uptake,0,,
+rate_micro%kapa, zz_rate_kapa_diat,preference for NO3 over NH factor,1,,
+rate_nano%kapa, zz_rate_kapa_myri,preference for NO3 over NH factor,0.5,,
+rate_pico%kapa, zz_rate_kapa_nano,preference for NO3 over NH factor,0.3,,
+rate_micro%k, zz_rate_k_diat,NO3 half-saturation constant,2,,
+rate_nano%k, zz_rate_k_myri,NO3 half-saturation constant,0.5,,
+rate_pico%k, zz_rate_k_nano,NO3 half-saturation constant,0.1,,
+rate_micro%N_x, zz_rate_N_x_diat,N inhibition exponent,0,,
+rate_nano%N_x, zz_rate_N_x_myri,N inhibition exponent,0,,
+rate_pico%N_x, zz_rate_N_x_nano,N inhibition exponent,0,,
+rate_micro%N_o, zz_rate_N_o_diat,overal half-saturation constant,0,,
+rate_nano%N_o, zz_rate_N_o_myri,overal half-saturation constant,0,,
+rate_pico%N_o, zz_rate_N_o_nano,overal half-saturation constant,0,,
+rate_micro%Si_ratio, zz_rate_Si_ratio_diat,micro-phyto silicon/nitrogen ratio,2,,
+rate_nano%Si_ratio, zz_rate_Si_ratio_myri,silicon/nitrogen ratio,0,,
+rate_pico%Si_ratio, zz_rate_Si_ratio_nano,silicon/nitrogen ratio,0,,
