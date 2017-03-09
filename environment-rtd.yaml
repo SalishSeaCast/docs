@@ -6,7 +6,7 @@ name: sphinx-build
 dependencies:
   - ipython
   - jupyter_client
-  - python=3
+  - python=3.5
 
   - pip:
     - nbsphinx
