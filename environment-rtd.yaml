@@ -7,7 +7,6 @@ dependencies:
   - ipython
   - jupyter_client
   - python=3.5
-  - sphinx
 
   - pip:
     - nbsphinx
