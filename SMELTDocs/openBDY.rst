@@ -3,20 +3,21 @@
 Open Boundary Conditions for Tracers
 ====================================
 
-Initially, several adaptations to the NEMO code were necessary in order to use BDY open boundary conditions on tracers. 
+Initially, several adaptations to the NEMO code were necessary in order to use BDY open boundary conditions on tracers.
 These were carried out using the NEMO development branch, `dev_r5144_CMCC5_BDY_for_TOP
-<https://forge.ipsl.jussieu.fr/nemo/browser/branches/2015/dev_r5144_CMCC5_BDY_for_TOP>`_, as a template. The `ticket 
-<https://forge.ipsl.jussieu.fr/nemo/ticket/1441>`_ associated 
-with that branch has since been closed. 
+<https://forge.ipsl.jussieu.fr/nemo/browser/branches/2015/dev_r5144_CMCC5_BDY_for_TOP>`_, as a template. The `ticket
+<https://forge.ipsl.jussieu.fr/nemo/ticket/1441>`_ associated
+with that branch has since been closed.
 
 Code Changes
 ------------
 
-Currently, our code differs from the distribution in the following ways. The output of diff operations 
+Currently, our code differs from the distribution in the following ways. The output of diff operations
 between our configuration version and the standard version of each file is shown.
 
-MY_SRC$ diff bdy_oce.F90 ../../../NEMO/OPA_SRC/BDY/bdy_oce.F90 
+MY_SRC$ diff bdy_oce.F90 ../../../NEMO/OPA_SRC/BDY/bdy_oce.F90
 ::
+
     73,78d72
     < #if defined key_top
     < 	  CHARACTER(LEN=20)                   :: cn_obc  !: type of boundary condition to apply
@@ -27,8 +28,9 @@ MY_SRC$ diff bdy_oce.F90 ../../../NEMO/OPA_SRC/BDY/bdy_oce.F90
     111d104
     <    REAL(wp),    DIMENSION(jp_bdy) ::   rn_max_sponge          !: Maximum viscosity for sponge (m2/s)
 
-MY_SRC$ diff trc.F90 ../../../NEMO/TOP_SRC/trc.F90 
+MY_SRC$ diff trc.F90 ../../../NEMO/TOP_SRC/trc.F90
 ::
+
     16,18d15
     < #if defined key_bdy
     <    USE bdy_oce, only: nb_bdy, OBC_DATA
@@ -56,12 +58,13 @@ MY_SRC$ diff trc.F90 ../../../NEMO/TOP_SRC/trc.F90
     < #endif
     <          &      STAT = trc_alloc  )
     ---
-    >          &      ln_trc_ini(jptra)     , ln_trc_wri(jptra)     , qsr_mean(jpi,jpj)     ,  STAT = trc_alloc  )  
-    > 
+    >          &      ln_trc_ini(jptra)     , ln_trc_wri(jptra)     , qsr_mean(jpi,jpj)     ,  STAT = trc_alloc  )
+    >
 
 
-MY_SRC$ diff trcini.F90 ../../../NEMO/TOP_SRC/trcini.F90 
+MY_SRC$ diff trcini.F90 ../../../NEMO/TOP_SRC/trcini.F90
 ::
+
     34d33
     <    USE trcbc,   only : trc_bc_init ! generalized Boundary Conditions
     113,116c112
@@ -70,8 +73,9 @@ MY_SRC$ diff trcini.F90 ../../../NEMO/TOP_SRC/trcini.F90
     <       CALL trc_bc_init(jptra)
     < #endif
 
-MY_SRC$ diff trcnam.F90 ../../../NEMO/TOP_SRC/trcnam.F90 
+MY_SRC$ diff trcnam.F90 ../../../NEMO/TOP_SRC/trcnam.F90
 ::
+
     306,310d305
     <           !#if defined key_bdy
     <          ln_trc_sbc(jn) =       sn_tracer(jn)%llsbc
@@ -79,8 +83,9 @@ MY_SRC$ diff trcnam.F90 ../../../NEMO/TOP_SRC/trcnam.F90
     <          ln_trc_obc(jn) =       sn_tracer(jn)%llobc
     <            !#endif
 
-MY_SRC$ diff trcnxt.F90 ../../../NEMO/TOP_SRC/TRP/trcnxt.F90 
+MY_SRC$ diff trcnxt.F90 ../../../NEMO/TOP_SRC/TRP/trcnxt.F90
 ::
+
     35,38d34
     < # if defined key_bdy
     <    USE trcbdy          ! BDY open boundaries
@@ -91,36 +96,37 @@ MY_SRC$ diff trcnxt.F90 ../../../NEMO/TOP_SRC/TRP/trcnxt.F90
     ---
     > !!      CALL bdy_trc( kt )               ! BDY open boundaries
 
-MY_SRC$ diff trctrp.F90 ../../../NEMO/TOP_SRC/TRP/trctrp.F90 
+MY_SRC$ diff trctrp.F90 ../../../NEMO/TOP_SRC/TRP/trctrp.F90
 ::
+
     29,32c29
     < #if defined key_bdy
     <    USE trcbdy          ! BDY open boundaries
     <    USE bdy_par, only: lk_bdy
     < #endif
     ---
-    > 
+    >
     72,75d68
     <          IF( ln_trcdmp_clo )    CALL trc_dmp_clo( kstp )        ! internal damping trends on closed seas only
-    < #if defined key_bdy         
+    < #if defined key_bdy
     <                                 CALL trc_bdy_dmp( kstp )        ! BDY damping trends
-    < #endif         
+    < #endif
     85a79
     >          IF( ln_trcdmp_clo )    CALL trc_dmp_clo( kstp )        ! internal damping trends on closed seas only
 
 
-We also use a modified trcbc.F90 file and additional file trcbdy.F90 (March 8, 2017 versions). 
+We also use a modified trcbc.F90 file and additional file trcbdy.F90 (March 8, 2017 versions).
 
 .. toctree::
    :maxdepth: 1
 
    showtrcbcF90
    showtrcbdyF90
-   
+
 Namelist contents
 -----------------
 
-We have two open boundaries, one northern and one western. 
+We have two open boundaries, one northern and one western.
 
 Boundary-related sections from our namelist_top_cfg::
 
@@ -271,9 +277,9 @@ Corresponding boundary options in namelist_cfg::
 Boundary condition file formats
 -------------------------------
 
-Our western and northern boundary forcing files for passive tracers contain variables of shape (52, 40, 1, 870) and (2, 40, 1, 300), respectively. 
-The first dimension is time; the second is depth; the third is always 1; and the fourth is the length of the boundary multiplied by the rimwidth, 
-both of which are defined in namelist_cfg. The boundary data is repeated nn_rimwidth times in the along-boundary direction. 
+Our western and northern boundary forcing files for passive tracers contain variables of shape (52, 40, 1, 870) and (2, 40, 1, 300), respectively.
+The first dimension is time; the second is depth; the third is always 1; and the fourth is the length of the boundary multiplied by the rimwidth,
+both of which are defined in namelist_cfg. The boundary data is repeated nn_rimwidth times in the along-boundary direction.
 
 Sample files:
 
