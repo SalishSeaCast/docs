@@ -129,6 +129,7 @@ Namelist contents
 We have two open boundaries, one northern and one western.
 
 Boundary-related sections from our namelist_top_cfg; note additional columns in namtrc::
+
  !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
  &namtrc     !   tracers definition
  !,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
