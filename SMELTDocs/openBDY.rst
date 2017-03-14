@@ -128,7 +128,9 @@ Namelist contents
 
 We have two open boundaries, one northern and one western.
 
-Boundary-related sections from our namelist_top_cfg; note additional columns in namtrc::
+Boundary-related sections from our namelist_top_cfg are reproduced below.
+
+namtrc (note additional columns)::
 
  !'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
  &namtrc     !   tracers definition
@@ -150,6 +152,9 @@ Boundary-related sections from our namelist_top_cfg; note additional columns in 
    ln_trcdta = .true.
    ln_trcdmp = .false.
  /
+
+nambdy_bc (first boundary)::
+
  !----------------------------------------------------------------------
  ! nambdy_bc       !   data for BDY boundary conditions: 1st boundary
  !-----------------------------------------------------------------------
@@ -181,6 +186,9 @@ Boundary-related sections from our namelist_top_cfg; note additional columns in 
    rn_trofac(10)  =  1.0  !  -      -      -     -
    rn_trofac(11)  =  1.0  !  -      -      -     -
  /
+
+nambdy_bc (second boundary)::
+
  !----------------------------------------------------------------------
  ! nambdy_bc       !   data for BDY boundary conditions: 2nd boundary
  !-----------------------------------------------------------------------
