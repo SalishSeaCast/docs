@@ -323,7 +323,7 @@ If you receive email messages like::
   Output retained on that host in: /var/spool/torque/undelivered/3926.master.ER
 
 when your runs on salish finish,
-the system is telling you that it can copy :file:`master.OU` (:file:`stdout`) and :file:`master.ER` (:file:`stderr`) files from your run to your results directory.
+the system is telling you that it can't copy the :file:`master.OU` (:file:`stdout`) and :file:`master.ER` (:file:`stderr`) files from your run to your results directory.
 You can manually retrieve them from the paths given in the email.
 
 To resolve the copy error and get the files to be renames to :file:`stdout` and :file:`stderr` in your results directory you need to set up an ssh key pair *without a passphrase*,
