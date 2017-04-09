@@ -385,9 +385,17 @@ Jervis
 Toba
 ^^^^
 
-* Source used: All just put in at truncated head.
-* Source used: Maps
-* Assume Toba is 100% of watershed (i=746, j= 240-242)
+* Source used: Toporama Maps 
+* Toba River 50% at 50.492 124.365
+* Theodosia River 12% at 50.080 124.66
+* Quatam River 9% at 50.380 124.942
+* Brem River 9% at 50.435 124.663
+* Tahumming River 8% at 50.493 124.387
+* Racine Creek (with neighbours) 4% at 50.399 124.555
+* Homfray Creek (wn) 3% at 50.293 124.635
+* Forbes Creek wn 3% at 50.242 124.591
+* Chusan Creek wn 2% at 50.473 124.381
+
 
 Temperature
 --------------
