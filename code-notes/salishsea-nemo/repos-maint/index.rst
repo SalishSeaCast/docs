@@ -13,7 +13,7 @@ The docs below are about how those repos are created and kept in sync with the u
 .. toctree::
    :maxdepth: 2
 
+   nemo-3.6
    xios-2
 ..    xios-1
-..    nemo-3.6
 ..    nemo-3.4
