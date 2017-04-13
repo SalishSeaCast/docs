@@ -15,7 +15,7 @@ It was initialized with:
 .. code-block:: bash
 
     $ cd /ocean/sallen/hg_repos
-    $ svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/trunk XIOS-2-hg-mirror
+    $ svn co -r 1066 http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/trunk XIOS-2-hg-mirror
     $ hg init XIOS-2-hg-mirror
     $ cd XIOS-2-hg-mirror
     $ cat > .hgignore
@@ -23,7 +23,7 @@ It was initialized with:
     .svn
     ctrl-d
     $ hg add
-    $ hg ci -m"Initialize XIOS-2 svn mirror at r1078 of ^/trunk."
+    $ hg ci -m"Initialize XIOS-2 svn mirror at r1066 of ^/trunk."
 
 :command:`svn` v1.8.8 was used on :kbd:`skookum` for the :command:`svn` part of the initialization.
 
