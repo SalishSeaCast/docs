@@ -80,7 +80,7 @@ Skagit
 	* Baker River and lake drains 8% of WRIA4 but does not enter ocean (24.7)... but Morrison spreadsheet is for coastal runoff therefore assume Skagit River drains 100% of WRIA4 and then enters WRIA3
 * WRIA3 represents 17% of Skagit Watershed
 
-	* Skagit River drains 70% of WRIA3
+	* Skagit River drains 75% of WRIA3
 
 		* assume 50% enters at 48.297470, -122.390614 (i = 207, j = 326)
 		* assume 50% enters at 48.370163,-122.497387 (i = 229, j = 319)
