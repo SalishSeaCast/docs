@@ -86,8 +86,8 @@ The workflow to pull changes from the master XIOS :command:`svn` repo and commit
    .. code-block:: bash
 
        (marlin)$ marlin incoming
-
-   **TODO** Add sample output
+       r1062 2017-02-23 17:32:17 UTC
+         Bug fix in interpolation for cell boundaries generation.
 
    The :kbd:`--limit` option can be used to see more incoming revisions;
    see :command:`marlin help incoming` for details.
@@ -97,8 +97,9 @@ The workflow to pull changes from the master XIOS :command:`svn` repo and commit
    .. code-block:: bash
 
        (marlin)$ marlin update
+       Update to svn r1062.
 
-   **TODO** Add sample output
+       Bug fix in interpolation for cell boundaries generation.
 
    The :kbd:`--to-rev` option can be used to apply a series of upstream updates,
    committing them to Mercurial one at a time;
