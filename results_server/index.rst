@@ -25,13 +25,15 @@ Model Results & Forcing Files Storage
 
 The :file:`/results/` file system on :kbd:`skookum` houses the storage used for:
 
-* the :ref:`NowcastProductionDeployment`
+* the `Nowcast Production Deployment`
 * the nowcast system run results
 * the Salish Sea NEMO model spin-up run results
 * results from the Environment Canada GEM 2.5km HRDPS operational model runs that are used to force the nowcast system runs,
   and results from the research deployment of that model that are periodically evaluated
 * Fraser River run-off forcing files produced from data downloaded from the Environment Canada Wateroffice service that are used to force the nowcast system runs
 * Neah Bay sea surface height forcing files produced from data downloaded from the NOAA water level observations and forecast service that are used to force the nowcast system runs
+
+  .. _Nowcast Production Deployment: https://salishsea-nowcast.readthedocs.io/en/latest/deployment/
 
 The :file:`/results/` file system is organized as follows::
 
