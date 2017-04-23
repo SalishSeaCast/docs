@@ -25,7 +25,7 @@ Model Results & Forcing Files Storage
 
 The :file:`/results/` file system on :kbd:`skookum` houses the storage used for:
 
-* the `Nowcast Production Deployment`
+* the `Nowcast Production Deployment`_
 
   .. _Nowcast Production Deployment: https://salishsea-nowcast.readthedocs.io/en/latest/deployment/
 
