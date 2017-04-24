@@ -67,7 +67,7 @@ The workflow sections below explain how these 4 repo clones are used to pull cha
 .. _PullChangesFromNEMO-3.6svn:
 
 Workflow to Pull Changes from NEMO-3.6 :command:`svn` Repo
-----------------------------------------------------------
+==========================================================
 
 The workflow to pull changes from the master NEMO :command:`svn` repo and commit them to our :file:`NEMO-3.6-hg-mirror` repo is somewhat automated by the :ref:`Marlin`.
 
@@ -113,7 +113,7 @@ The workflow to pull changes from the master NEMO :command:`svn` repo and commit
 
 
 Workflow to Merge NEMO-3.6 :command:`svn` Repo and Salish Sea Revisions
------------------------------------------------------------------------
+=======================================================================
 
 Merging changes from NEMO :command:`svn` and the `Salish Sea team NEMO-3.6-code repo`_ on Bitbucket is done in a repo that is used for only that purpose.
 Doug does the merges on his laptop.

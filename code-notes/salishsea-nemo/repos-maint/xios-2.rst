@@ -67,7 +67,7 @@ The workflow sections below explain how these 4 repo clones are used to pull cha
 .. _PullChangesFromXIOS-2svn:
 
 Workflow to Pull Changes from XIOS-2 :command:`svn` Repo
---------------------------------------------------------
+========================================================
 
 The workflow to pull changes from the master XIOS :command:`svn` repo and commit them to our :file:`XIOS-2-hg-mirror` repo is somewhat automated by the :ref:`Marlin`.
 
@@ -107,7 +107,7 @@ The workflow to pull changes from the master XIOS :command:`svn` repo and commit
 
 
 Workflow to Merge XIOS-2 :command:`svn` Repo and Salish Sea Revisions
----------------------------------------------------------------------
+=====================================================================
 
 Merging changes from NEMO :command:`svn` and the `Salish Sea team XIOS-2 repo`_ on Bitbucket is done in a repo that is used for only that purpose.
 Doug does the merges on his laptop.
