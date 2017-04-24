@@ -34,6 +34,7 @@ extensions = [
 intersphinx_mapping = {
     'salishsseatools': ('http://salishsea-meopar-tools.readthedocs.org/en/latest/', None),
     'salishsseacmd': ('http://salishseacmd.readthedocs.org/en/latest/', None),
+    'salishsseanowcast': ('https://salishsea-nowcast.readthedocs.io/en/latest/', None),
 }
 
 todo_include_todos = True
