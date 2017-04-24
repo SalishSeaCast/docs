@@ -25,10 +25,7 @@ Model Results & Forcing Files Storage
 
 The :file:`/results/` file system on :kbd:`skookum` houses the storage used for:
 
-* the `Nowcast Production Deployment`_
-
-  .. _Nowcast Production Deployment: https://salishsea-nowcast.readthedocs.io/en/latest/deployment/
-
+* the :ref:`NowcastProductionDeployment`
 * the nowcast system run results
 * the Salish Sea NEMO model spin-up run results
 * results from the Environment Canada GEM 2.5km HRDPS operational model runs that are used to force the nowcast system runs,
