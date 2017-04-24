@@ -56,8 +56,52 @@ unless otherwise specified.
 The `Salish Sea team XIOS-2 repo`_ on Bitbucket was created via the Bitbucket web interface and populated there by an :command:`hg push` from Doug's :file:`XIOS-2-mirror-merge` repo.
 
 A working copy was then created by cloning the `Salish Sea team XIOS-2 repo`_ on Bitbucket as :file:`XIOS-2`.
-The workflow sections below explain how these 4 repo clones are used to pull changes from upstream and merge them with changes that Salish Sea team members push to Bitbucket.
 
+Getting the `Salish Sea team XIOS-2 repo`_ on Bitbucket to a state in which team members can clone it and easily build XIOS is annoyingly fiddly.
+The difficulties largely stem from the fact that the svn checkout includes compressed tarballs in the :file:`archive/` directory.
+On the first build,
+those tarballs are decompressed into :file:`extern/` and :file:`tools/FCM/`.
+Subsequent builds check to see if the tarballs have been decompressed,
+so the tarballs can't be removed,
+only their compressed forms.
+
+Here are the steps that were done in a working copy on :kbd:`salish` cloned from the `Salish Sea team XIOS-2 repo`_ on Bitbucket:
+
+* Tag :kbd:`XIOS-2r1066`
+* Add :file:`README.rst` by copying and editing the one from the :file:`XIOS-1` repo
+* Symlink the :file:`XIOS-ARCH/UBC-EOAS/arch-GCC_SALISH.*` files into :file:`arch/`
+* Run :command:`make_xios`
+* :command:`hg forget tools/archive/FCM.tar.gz tools/archive/blitz.tar.gz tools/archive/boost.tar.gz tools/archive/rapidxml.tar.gz`
+* Add :kbd:`tools/archive/*.tar.gz` to :file:`.hgignore`
+* :command:`hg add tools/archive/*.tar tools/FCM/ extern/blitz/ extern/boost/ extern/rapidxml/`
+* :command:`hg commit -m"Replace tools/archive compressed tarballs with their extracted contents."`
+* :command:`hg push`
+* Clone the `Salish Sea team XIOS-2 repo`_ on Bitbucket on :kbd:`orcinus`
+* Confirm that XIOS-2 builds successfully
+* Return to the working copy on :kbd:`salish`
+* Add the following lines to :file:`.hgignore`
+  (it is *critical* that this not be done earlier because it will prevent needed files from being pushed to Bitbucket)::
+
+    .cache/
+    .void_file
+    Makefile
+    arch.*
+    bin/
+    cfg/
+    config.fcm
+    done/
+    etc/libxios.cfg
+    extern/netcdf4
+    fcm_env.*
+    flags/
+    inc/
+    lib/
+    obj/
+    ppsrc/
+
+* :command:`hg commit -m"Don't track build products files and directories."`
+
+The workflow sections below explain how these 4 repo clones are used to pull changes from upstream and merge them with changes that Salish Sea team members push to Bitbucket.
 
 .. figure:: XIOS-2CodeRepoMaint.svg
 
