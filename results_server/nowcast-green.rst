@@ -155,6 +155,8 @@ Date                       Change                                 New Value     
              deflated netcdf4/hdf5 files directly.                                f9a8d03de741_
 
 10-Jan-2017  Updated NEMO code to NEMO-3.6r6770+ |br|                             3b0accb0e693_ |br|
+
+25-Apr-2017  Increase lateral viscosity and diffusivity            2.2 m2/s       2c892a5bae80_ |br| 
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
@@ -166,3 +168,4 @@ Date                       Change                                 New Value     
 .. _a79d64786baa: https://bitbucket.org/salishsea/nemo-3.6-code/commits/a79d64786baa
 .. _f9a8d03de741: https://bitbucket.org/salishsea/nemo-3.6-code/commits/f9a8d03de741
 .. _3b0accb0e693: https://bitbucket.org/salishsea/nemo-3.6-code/commits/3b0accb0e693
+.. _2c892a5bae80: https://bitbucket.org/salishsea/ss-run-sets/commits/2c892a5bae80
