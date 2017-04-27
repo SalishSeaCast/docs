@@ -25,7 +25,8 @@ https://dx.doi.org/10.1080/07055900.2015.1108899
         Thompson, K. and Korabel, V.",
         journal = "Atmosphere-Ocean",
         publisher = "Taylor and Francis",
-        title = "Storm surges in the Strait of Georgia simulated with a regional model",
+        title = "Storm surges in the Strait of Georgia simulated with a regional
+    model",
         year = "2016",
         number = "1",
         volume = "54",
@@ -75,7 +76,7 @@ https://dx.doi.org/10.1002/2015JC011118
     @article {Moore-Maley-etal-2016,
         author = "Moore-Maley, Ben L. and Allen, Susan E. and Ianson, Debby",
         title = "Locally driven interannual variability of near-surface pH and ΩA
-        in the Strait of Georgia",
+    in the Strait of Georgia",
         journal = "Journal of Geophysical Research: Oceans",
         volume = "121",
         number = "3",
@@ -130,7 +131,8 @@ https://dx.doi.org/10.1016/j.ocemod.2017.02.008
 
     @article{Soontiens-Allen-2017,
         author = "Soontiens, N. and Allen, S.",
-        title = "Modelling sensitivities to mixing and advection in a sill-basin estuarine system",
+        title = "Modelling sensitivities to mixing and advection in a sill-basin
+    estuarine system",
         journal = "Ocean Modelling",
         volume = "112",
         number = "",
@@ -138,27 +140,28 @@ https://dx.doi.org/10.1016/j.ocemod.2017.02.008
         url = "https://dx.doi.org/10.1002/2015JC011118",
         doi = "10.1002/2015JC011118",
         pages = "17--32",
-        keywords = "Hollingsworth instability, Vertical mixing, Deep water renewal, Turbulence closures, Advection schemes, NEMO"
+        keywords = "Hollingsworth instability, Vertical mixing, Deep water renewal,
+    Turbulence closures, Advection schemes, NEMO"
         year = "2017",
         abstract = "<p>This study investigates the sensitivity of a high
-resolution regional ocean model to several choices in mixing and advection.
-The oceanographic process examined is a deep water renewal event in the
-Juan de Fuca Strait–Strait of Georgia sill-basin estuarine system located on
-the west coast of North America. Previous observational work has shown that the
-timing of the renewal events is linked to the spring/neap tidal cycle, and in
-turn, is sensitive to the amount of vertical mixing induced by tidal currents
-interacting with sills and complicated bathymetry. It is found that the model’s
-representation of deep water renewal is relatively insensitive to several
-mixing choices, including the vertical turbulence closure and direction of
-lateral mixing. No significant difference in deep or intermediate salinity was
-found between cases that used k−ϵk−ϵ versus k−ωk−ω closures and isoneutral
-versus horizontal lateral mixing. Modifications that had a stronger effect
-included those that involved advection such as modifying the salinity of the
-open boundary conditions which supply the source waters for the renewal event.
-The strongest impact came from the removal of the Hollingsworth instability,
-a kinetic energy sink in the energy-enstrophy discretization of the momentum
-equations. A marked improvement to the salinity of the deep water renewal
-suggests that the removal of the Hollingsworth instability will correct a fresh
-drift in the deep and intermediate waters in an operational version of this
-model.</p>",
-    }
+    resolution regional ocean model to several choices in mixing and advection.
+    The oceanographic process examined is a deep water renewal event in the
+    Juan de Fuca Strait–Strait of Georgia sill-basin estuarine system located on
+    the west coast of North America. Previous observational work has shown that the
+    timing of the renewal events is linked to the spring/neap tidal cycle, and in
+    turn, is sensitive to the amount of vertical mixing induced by tidal currents
+    interacting with sills and complicated bathymetry. It is found that the model’s
+    representation of deep water renewal is relatively insensitive to several
+    mixing choices, including the vertical turbulence closure and direction of
+    lateral mixing. No significant difference in deep or intermediate salinity was
+    found between cases that used k−ϵk−ϵ versus k−ωk−ω closures and isoneutral
+    versus horizontal lateral mixing. Modifications that had a stronger effect
+    included those that involved advection such as modifying the salinity of the
+    open boundary conditions which supply the source waters for the renewal event.
+    The strongest impact came from the removal of the Hollingsworth instability,
+    a kinetic energy sink in the energy-enstrophy discretization of the momentum
+    equations. A marked improvement to the salinity of the deep water renewal
+    suggests that the removal of the Hollingsworth instability will correct a fresh
+    drift in the deep and intermediate waters in an operational version of this
+    model.</p>",
+        }
