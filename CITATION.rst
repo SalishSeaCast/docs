@@ -67,7 +67,7 @@ Strait of Georgia and their drivers were determined using a 1-D coupled
 biochemical-physical model in:
 
 Moore-Maley, B. L., S. E. Allen, and D. Ianson, 2016.
-Locally-driven interannual variability of near-surface pH and ΩA in the Strait of Georgia,
+Locally-driven interannual variability of near-surface pH and ΩA in the Strait of Georgia.
 J. Geophys. Res. Oceans, 121(3), 1600–1625.
 https://dx.doi.org/10.1002/2015JC011118
 
@@ -123,7 +123,6 @@ affecting both turbulence and advection has been determined in:
 
 Soontiens, N. and Allen, S.
 Modelling sensitivities to mixing and advection in a sill-basin estuarine system.
-Submitted to Ocean Modelling.
 Ocean Modelling, 112, 17-32.
 https://dx.doi.org/10.1016/j.ocemod.2017.02.008
 
