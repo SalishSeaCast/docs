@@ -28,10 +28,10 @@ https://dx.doi.org/10.1080/07055900.2015.1108899
         title = "Storm surges in the Strait of Georgia simulated with a regional
     model",
         year = "2016",
-        number = "1",
         volume = "54",
-        url = "https://dx.doi.org/10.1080/07055900.2015.1108899",
+        number = "1",
         pages = "1-21",
+        url = "https://dx.doi.org/10.1080/07055900.2015.1108899",
         abstract = "<p>The Strait of Georgia is a large, semi-enclosed body
     of water between Vancouver Island and the mainland of British Columbia
     connected to the Pacific Ocean via Juan de Fuca Strait at the south and
@@ -78,17 +78,16 @@ https://dx.doi.org/10.1002/2015JC011118
         title = "Locally driven interannual variability of near-surface pH and ΩA
     in the Strait of Georgia",
         journal = "Journal of Geophysical Research: Oceans",
+        year = "2016",
         volume = "121",
         number = "3",
+        pages = "1600--1625",
         issn = "2169-9291",
         url = "https://dx.doi.org/10.1002/2015JC011118",
-        doi = "10.1002/2015JC011118",
-        pages = "1600--1625",
         keywords = "Biogeochemical cycles, processes, and modeling, Carbon cycling,
     Estuarine processes, Marginal and semi-enclosed seas, Ecosystems, structure,
     dynamics, and modeling, acidification, estuarine, ecosystem, modeling, shellfish,
     rivers",
-        year = "2016",
         abstract = "<p>Declines in mean ocean pH and aragonite saturation state (ΩA)
     driven by anthropogenic CO2 emissions have raised concerns regarding the trends
     of pH and ΩA in estuaries. Low pH and ΩA can be harmful to a variety of marine
@@ -111,6 +110,7 @@ https://dx.doi.org/10.1002/2015JC011118
     variability. These results establish the mechanisms behind the emerging
     observations of highly variable near-surface carbonate chemistry in the
     Strait.</p>",
+        doi = "10.1002/2015JC011118",
     }
 
 
@@ -133,15 +133,14 @@ https://dx.doi.org/10.1016/j.ocemod.2017.02.008
         title = "Modelling sensitivities to mixing and advection in a sill-basin
     estuarine system",
         journal = "Ocean Modelling",
+        year = "2017",
         volume = "112",
         number = "",
+        pages = "17--32",
         issn = "1463-5003",
         url = "https://dx.doi.org/10.1002/2015JC011118",
-        doi = "10.1002/2015JC011118",
-        pages = "17--32",
         keywords = "Hollingsworth instability, Vertical mixing, Deep water renewal,
     Turbulence closures, Advection schemes, NEMO"
-        year = "2017",
         abstract = "<p>This study investigates the sensitivity of a high
     resolution regional ocean model to several choices in mixing and advection.
     The oceanographic process examined is a deep water renewal event in the
@@ -163,4 +162,5 @@ https://dx.doi.org/10.1016/j.ocemod.2017.02.008
     suggests that the removal of the Hollingsworth instability will correct a fresh
     drift in the deep and intermediate waters in an operational version of this
     model.</p>",
-        }
+        doi = "10.1002/2015JC011118",
+    }
