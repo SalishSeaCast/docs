@@ -14,7 +14,8 @@ that occurred between 2002 and 2011 in:
 Soontiens, N., Allen, S., Latornell, D., Le Souef, K., Machuca, I.,
 Paquin, J.-P., Lu, Y., Thompson, K., Korabel, V., 2016.
 Storm surges in the Strait of Georgia simulated with a regional model.
-Atmosphere-Ocean 54 1-21. https://dx.doi.org/10.1080/07055900.2015.1108899
+Atmosphere-Ocean 54 1-21.
+https://dx.doi.org/10.1080/07055900.2015.1108899
 
 .. code-block:: tex
 
@@ -66,11 +67,12 @@ biochemical-physical model in:
 
 Moore-Maley, B. L., S. E. Allen, and D. Ianson, 2016.
 Locally-driven interannual variability of near-surface pH and ΩA in the Strait of Georgia,
-J. Geophys. Res. Oceans, 121(3), 1600–1625. http://dx.doi.org/10.1002/2015JC011118
+J. Geophys. Res. Oceans, 121(3), 1600–1625.
+https://dx.doi.org/10.1002/2015JC011118
 
 .. code-block:: tex
 
-    ﻿@article {Moore-Maley-etal-2016,
+    @article {Moore-Maley-etal-2016,
         author = "Moore-Maley, Ben L. and Allen, Susan E. and Ianson, Debby",
         title = "Locally driven interannual variability of near-surface pH and ΩA
         in the Strait of Georgia",
@@ -78,7 +80,7 @@ J. Geophys. Res. Oceans, 121(3), 1600–1625. http://dx.doi.org/10.1002/2015JC01
         volume = "121",
         number = "3",
         issn = "2169-9291",
-        url = "http://dx.doi.org/10.1002/2015JC011118",
+        url = "https://dx.doi.org/10.1002/2015JC011118",
         doi = "10.1002/2015JC011118",
         pages = "1600--1625",
         keywords = "Biogeochemical cycles, processes, and modeling, Carbon cycling,
@@ -121,12 +123,42 @@ affecting both turbulence and advection has been determined in:
 Soontiens, N. and Allen, S.
 Modelling sensitivities to mixing and advection in a sill-basin estuarine system.
 Submitted to Ocean Modelling.
+Ocean Modelling, 112, 17-32.
+https://dx.doi.org/10.1016/j.ocemod.2017.02.008
 
 .. code-block:: tex
 
-    @unpublished{Soontiens-Allen-2016,
+    @article{Soontiens-Allen-2017,
         author = "Soontiens, N. and Allen, S.",
         title = "Modelling sensitivities to mixing and advection in a sill-basin estuarine system",
-        year = "2016",
-        note = "Under revision for Ocean Modelling",
+        journal = "Ocean Modelling",
+        volume = "112",
+        number = "",
+        issn = "1463-5003",
+        url = "https://dx.doi.org/10.1002/2015JC011118",
+        doi = "10.1002/2015JC011118",
+        pages = "17--32",
+        keywords = "Hollingsworth instability, Vertical mixing, Deep water renewal, Turbulence closures, Advection schemes, NEMO"
+        year = "2017",
+        abstract = "<p>This study investigates the sensitivity of a high
+resolution regional ocean model to several choices in mixing and advection.
+The oceanographic process examined is a deep water renewal event in the
+Juan de Fuca Strait–Strait of Georgia sill-basin estuarine system located on
+the west coast of North America. Previous observational work has shown that the
+timing of the renewal events is linked to the spring/neap tidal cycle, and in
+turn, is sensitive to the amount of vertical mixing induced by tidal currents
+interacting with sills and complicated bathymetry. It is found that the model’s
+representation of deep water renewal is relatively insensitive to several
+mixing choices, including the vertical turbulence closure and direction of
+lateral mixing. No significant difference in deep or intermediate salinity was
+found between cases that used k−ϵk−ϵ versus k−ωk−ω closures and isoneutral
+versus horizontal lateral mixing. Modifications that had a stronger effect
+included those that involved advection such as modifying the salinity of the
+open boundary conditions which supply the source waters for the renewal event.
+The strongest impact came from the removal of the Hollingsworth instability,
+a kinetic energy sink in the energy-enstrophy discretization of the momentum
+equations. A marked improvement to the salinity of the deep water renewal
+suggests that the removal of the Hollingsworth instability will correct a fresh
+drift in the deep and intermediate waters in an operational version of this
+model.</p>",
     }
