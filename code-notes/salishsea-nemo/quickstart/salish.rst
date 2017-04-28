@@ -105,7 +105,7 @@ distributing the compilation over 8 cores.
     cd NEMO-3.6-code/NEMOGCM/CONFIG
     ./makenemo -n SalishSea -m GCC_SALISH -j8
 
-The resulting executables are located in :file:`NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/`.
+The resulting executable is located in :file:`NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/`.
 
 Compile and link the :program:`rebuild_nemo` tool:
 
