@@ -31,21 +31,29 @@ Start a new shell session and confirm that :file:`$HOME/anaconda3/bin/` is on yo
 
 There is are a few packages that we use extensively that is not included in the base Anaconda installation:
 
-* `netcdf4-python`_
-* `xarray`_
-* `bottleneck`_
 * `basemap`_
+* `nbsphinx`_
+* `netcdf4-python`_
+* `sphinx_rtd_theme`_
+* `xarray`_
 
+
+.. _basemap: https://matplotlib.org/basemap/
+.. _nbsphinx: https://nbsphinx.readthedocs.io/
 .. _netcdf4-python: https://unidata.github.io/netcdf4-python/
-.. _bottleneck: https://pypi.python.org/pypi/Bottleneck
-.. _xarray: http://xarray.pydata.org/en/stable/index.html
-.. _basemap: http://matplotlib.org/basemap/
+.. _sphinx_rtd_theme: https://docs.readthedocs.io/en/latest/theme.html
+.. _xarray: http://xarray.pydata.org/
 
 To install them,
 do:
 
 .. code-block:: bash
 
-    conda install netcdf4 xarray bottleneck basemap
+    conda install basemap netcdf4 xarray
 
 and follow the prompts.
+Then do:
+
+.. code-block:: bash
+
+    pip install nbsphinx
