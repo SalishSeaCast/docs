@@ -54,7 +54,6 @@ Contents
    storm_surges/index
    turbulence/index
    particles/index
-   salishsea-site/index
    code-notes/dev-notes/index
    CITATION
    CONTRIBUTORS
