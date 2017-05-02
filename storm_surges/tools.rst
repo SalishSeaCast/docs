@@ -153,7 +153,7 @@ Analysis
 
 Some analysis functions are stored in a module `salishsea_tools/stormtools`_.
 
-.. _salishsea_tools/stormtools: http://salishsea-meopar-tools.readthedocs.org/en/latest/SalishSeaTools/salishsea-tools.html#module-stormtools
+.. _salishsea_tools/stormtools: https://salishsea-meopar-tools.readthedocs.io/en/latest/SalishSeaTools/api.html#module-salishsea_tools.stormtools
 
 Examples include functions that calculate the observed residual, modelled residual, error statistics, and so on.
 
