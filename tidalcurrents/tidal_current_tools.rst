@@ -99,8 +99,8 @@ MATLAB Scripts for Tidal Analysis
 ===========================================
 
 Some MATLAB tools have been written for analyzing barotropic and baroclinic tidal currents from NEMO u/v output.
-The scripts load NEMO data and then apply ttide_ to perform a harmonic analysis.
-The advantage of using ttide is that it can analyze many constituents and easily handles nodal corrections and inference.
+The scripts load NEMO data and then apply t_tide_ to perform a harmonic analysis.
+The advantage of using t_tide_ is that it can analyze many constituents and easily handles nodal corrections and inference.
 Several scripts for baroclinic, barotropic and surface currents analysis have been written.
 These scripts take care of masking, unstaggering, rotating and depth averaging as needed.
 
