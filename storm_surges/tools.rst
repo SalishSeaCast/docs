@@ -39,7 +39,7 @@ The general procedure is as follows:
 
 However, there are some subtleties that need to be considered before we generate the tidal predictions for use in residual calculations.
 
-.. _t_tide: http://www.eos.ubc.ca/~rich/#T_Tide
+.. _t_tide: https://www.eoas.ubc.ca/~rich/#T_Tide
 
 .. note::
 
