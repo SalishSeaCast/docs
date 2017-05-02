@@ -122,7 +122,7 @@ See :ref:`rebuild-nemo-tool` for more information about it.
 Prepare and Execute Runs
 ========================
 
-The :file:`SS-run-sets/` :ref:`SS-run-sets-SalishSea` contains version controlled sample run description files and namelist segment files.
+The :file:`SS-run-sets/` :ref:`SS-run-sets-SalishSea`/nemo3.6 contains version controlled sample run description files and namelist segment files.
 Create your own directory in that repo where you can copy,
 edit,
 and version control those files to define the run that you want to execute.
