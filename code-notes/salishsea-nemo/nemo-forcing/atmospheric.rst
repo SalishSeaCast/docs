@@ -327,11 +327,11 @@ The altiude of each grid cell is stored in a file :file:`altitude_CGRF.nc` in th
 
 Ths sea level pressure calculation is performed in :file:`nc_tools.generate_pressure_file`, which is used in `get_cgrf`_ to correct pressure files on download.
 Corrected pressure files are named :file:`slp_corr_y0000m00d00.nc`.
-See the `tools docs`_ for details on :file:`nc_tools.generate_pressure_file` method..
+See the `tools docs`_ for details on :file:`nc_tools.generate_pressure_file` method.
 
-.. _get_cgrf: http://salishsea-meopar-tools.readthedocs.org/en/latest/SalishSeaCmd/salishsea-cmd.html#salishsea-get-cgrf
+.. _get_cgrf: https://salishseacmd.readthedocs.io/en/latest/subcommands.html#salishsea-get-cgrf
 
-.. _tools docs: http://salishsea-meopar-tools.readthedocs.org/en/latest/SalishSeaTools/salishsea-tools.html#module-nc_tools
+.. _tools docs: https://salishsea-meopar-tools.readthedocs.io/en/latest/SalishSeaTools/api.html#salishsea_tools.nc_tools.generate_pressure_file
 
 .. note::
 
