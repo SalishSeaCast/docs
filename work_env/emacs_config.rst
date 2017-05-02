@@ -167,14 +167,14 @@ Python Mode
 :program:`emacs` includes a Python editing mode,
 but these instructions are for installing a more comprehensive :kbd:`python-mode` that is maintained by the Python community.
 
-Download :file:`python-mode.el` from http://bazaar.launchpad.net/~python-mode-devs/python-mode/python-mode/view/head:/python-mode.el and move it into your :file:`$HOME/elisp/` directory.
+Download :file:`python-mode.el` from https://gitlab.com/python-mode-devs/python-mode/raw/master/python-mode.el and move it into your :file:`$HOME/elisp/` directory.
 
 Configure :program:`emacs` to use :kbd:`python-mode` automatically whenever you visit a file with the extension :kbd:`.py`:
 
 .. code-block:: scheme
 
     ;; add better Python mode
-    ;; http://bazaar.launchpad.net/~python-mode-devs/python-mode/python-mode/view/head:/python-mode.el
+    ;; https://gitlab.com/python-mode-devs/python-mode/raw/master/python-mode.el
     (setq auto-mode-alist
           (cons '("\\.py$" . python-mode)
            auto-mode-alist))
