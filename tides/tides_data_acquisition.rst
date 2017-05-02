@@ -6,7 +6,9 @@ Tidal forcing is required on the boundaries of the NEMO model. Also, to evaluate
 DFO modelled tidal predictions
 ---------------------------------------
 
-`WebTide <http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-eng.php>`_ is an online tidal prediction tool developed by DFO. The predictions for the North East Pacific region are based on the model of :ref:`foremanetal00`. Tidal currents and elevations can be predicted from the model. 
+WebTide_ is an online tidal prediction tool developed by DFO. The predictions for the North East Pacific region are based on the model of :ref:`foremanetal00`. Tidal currents and elevations can be predicted from the model.
+
+.. _WebTide: http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-en.php
 
 WebTide was used for the Juan de Fuca boundary conditions in the preliminary runs of the NEMO model. WebTide doesn't quite include our Johnstone Strait boundary, which is around -126.5 deg, 50.5 deg. Webtide cuts out around -126.8 deg, 50.6 deg... so it's close!
 
