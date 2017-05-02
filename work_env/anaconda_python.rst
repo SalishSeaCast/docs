@@ -49,7 +49,7 @@ do:
 
 .. code-block:: bash
 
-    conda install basemap hdf4=4.1.12 netcdf4 xarray
+    conda install basemap hdf4 netcdf4 xarray
 
 and follow the prompts.
 Then do:
