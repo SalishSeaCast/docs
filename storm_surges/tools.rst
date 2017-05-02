@@ -130,9 +130,7 @@ These scripts are found in the :file:`analysis-storm-surges/tide_analysis_script
 
 .. warning::
 
-  Some of the constituents published on the NOAA_ website are not recognized by ttide_. We have attempted to match these constituents to once valid in ttide but this approach can lead to errors in the nodal corrections. It is best to use a time-series when producing tidal predictions for a NOAA station.
-
-  .. _ttide: https://www.eoas.ubc.ca/~rich/#T_Tide
+  Some of the constituents published on the NOAA_ website are not recognized by t_tide_. We have attempted to match these constituents to once valid in ttide but this approach can lead to errors in the nodal corrections. It is best to use a time-series when producing tidal predictions for a NOAA station.
 
 
 Storm surge forcing files
