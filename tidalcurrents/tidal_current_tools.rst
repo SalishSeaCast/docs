@@ -58,9 +58,9 @@ This function finds tidal parameters from a tidal constituent across a specified
 
 .. note::
 
-   This function can be used to analyze a time series of sea surface height, u velocity, or v velocity. In fact, it can be used for any scalar variable. But it does not handle important things like inference or nodal corrections. In those cases, it is much better to use ttide_ or apply inference and nodal corrections on your own.
+   This function can be used to analyze a time series of sea surface height, u velocity, or v velocity. In fact, it can be used for any scalar variable. But it does not handle important things like inference or nodal corrections. In those cases, it is much better to use t_tide_ or apply inference and nodal corrections on your own.
 
-.. _ttide: http://www.eos.ubc.ca/~rich/#T_Tide
+.. _t_tide: https://www.eoas.ubc.ca/~rich/#T_Tide
 
 
 The nconst input sets how many tidal constituents will be analysed. They come in pairs and in order of importance the domain. It returns a dictionary object containing the phase and amplitude for each component for the input array.
