@@ -97,5 +97,5 @@ And final results can be seen in:
 
 * Jupyter Notebook: `Analysis8Components`_
 
-.. _Analysis8Components: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/compare_tides/Analysis8Components.ipynb`
+.. _Analysis8Components: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/compare_tides/Analysis8Components.ipynb
 
