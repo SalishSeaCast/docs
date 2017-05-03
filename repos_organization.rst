@@ -332,7 +332,7 @@ SoG-obs
 * private
 * a collection of observations made in the Salish Sea
 * This repo is a vestige of an experiment that didn't work out because storing large binary files under Mercurial version control is not a good idea.
-* Bitbucket: https://bitbucket.org/salishsea/SoG-obs/
+* Bitbucket: https://bitbucket.org/salishsea/sog-obs/
 
 
 .. _NEMO_EastCoast-repo:
