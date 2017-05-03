@@ -8,7 +8,7 @@ We use Mercurial_ (:command:`hg`) for version control of code,
 documentation,
 and pretty much any other important computer files in the Salish Sea MEOPAR project.
 
-.. _Mercurial: http://mercurial.selenic.com/
+.. _Mercurial: http://mercurial-scm.org/
 
 The Mercurial site includes `beginner's guides`_,
 but `Mercurial - The Definitive Guide`_
@@ -18,7 +18,7 @@ Users experienced with other version control tools
 (e.g :command:`svn` or :command:`git`)
 can get up to speed with Mercurial by reading `Chapter 2`_.
 
-.. _beginner's guides: http://mercurial.selenic.com/wiki/BeginnersGuides
+.. _beginner's guides: http://mercurial-scm.org/wiki/BeginnersGuides
 .. _Mercurial - The Definitive Guide: http://hgbook.red-bean.com/
 .. _1: http://hgbook.red-bean.com/read/how-did-we-get-here.html
 .. _2: http://hgbook.red-bean.com/read/a-tour-of-mercurial-the-basics.html
@@ -52,7 +52,7 @@ It is already installed on the Waterhole workstations,
 :kbd:`sable`,
 and :kbd:`salish` at UBC.
 It is also installed on :kbd:`bugaboo`, :kbd:`jasper`, and :kbd:`orcinus` on WestGrid.
-If you have administrator privileges on your workstation or laptop you can download and install Mercurial for your operating system from http://mercurial.selenic.com/downloads/,
+If you have administrator privileges on your workstation or laptop you can download and install Mercurial for your operating system from http://mercurial-scm.org/downloads/,
 otherwise,
 contact your IT support to have it installed for you.
 
@@ -204,7 +204,7 @@ That reserves branching and merging for the relatively rare occasions when tempo
 
 The `rebase extension docs`_ have more information and diagrams of what's going on in this `common rebase use case`_.
 
-.. _rebase extension docs: http://mercurial.selenic.com/wiki/RebaseExtension
+.. _rebase extension docs: http://mercurial-scm.org/wiki/RebaseExtension
 .. _common rebase use case: http://mercurial.selenic.com/wiki/RebaseExtension#A_common_case
 
 
