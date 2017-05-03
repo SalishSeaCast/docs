@@ -178,7 +178,7 @@ There are two files each for the Salish Sea domain (SS) and the Salish Sea domai
 
 The preparation of the NetCDF files is done by the python notebook `Tools/I_ForcingFiles/Initial/PrepareTS.ipynb`_
 
-.. _Tools/I_ForcingFiles/Initial/PrepareTS.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Inital/PrepareTS.ipynb
+.. _Tools/I_ForcingFiles/Initial/PrepareTS.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Initial/PrepareTS.ipynb
 
 :file:`Rivers/`: Directory
 --------------------------
