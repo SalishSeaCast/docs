@@ -57,5 +57,4 @@ The scripts here_ produce the tables.
 
    LPE-SalishSea-preferred
    LPE-SalishSea-complete
-:wq
 
