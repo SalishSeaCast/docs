@@ -52,7 +52,7 @@ It is already installed on the Waterhole workstations,
 :kbd:`sable`,
 and :kbd:`salish` at UBC.
 It is also installed on :kbd:`bugaboo`, :kbd:`jasper`, and :kbd:`orcinus` on WestGrid.
-If you have administrator privileges on your workstation or laptop you can download and install Mercurial for your operating system from http://mercurial-scm.org/downloads/,
+If you have administrator privileges on your workstation or laptop you can download and install Mercurial for your operating system from http://mercurial-scm.org/downloads,
 otherwise,
 contact your IT support to have it installed for you.
 
