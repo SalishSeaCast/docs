@@ -28,14 +28,8 @@ given a domain and a decomposition,
 is the forward problem.
 NEMO includes a tool under TOOLS/MPP_PREP that computes the number of water processors for all possible decompositions
 (up to a maximum number of processors).
-The results of this calculation are embedded in the :ref:`SalishSeaCmdProcessor`
-(in `salish.csv`_)
-such that specifying a decomposition
-(4x9, 8x18, etc)
-is enough information for the :command:`salishsea run` and :command:`salishsea prepare` commands to set :kbd:`jpnij` and to request the correct number of water processors.
-
-.. _salish.csv: https://bitbucket.org/salishsea/salishseacmd/raw/tip/salishsea_cmd/salish.csv
-
+The calculation is unique to each bathymetry file, and we store the calculation results in a .csv file under NEMO-forcing/grid.
+The :command:`salishsea run` and :command:`salishsea prepare` commands from the :ref:`SalishSeaCmdProcessor` can use the .csv file as a lookup table in order to request the correct number of water processors for the domain decomposition that you set.
 
 Reverse problem
 ===============
@@ -63,4 +57,5 @@ The scripts here_ produce the tables.
 
    LPE-SalishSea-preferred
    LPE-SalishSea-complete
+:wq
 
