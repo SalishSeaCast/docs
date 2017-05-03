@@ -281,7 +281,7 @@ Storm-Surge
   Storm surges in the Strait of Georgia simulated with a regional model.
   Atmosphere-Ocean, volume 54, issue 1.
   https://dx.doi.org/10.1080/07055900.2015.1108899
-* Bitbucket: https://bitbucket.org/salishsea/Storm-Surge/
+* Bitbucket: https://bitbucket.org/salishsea/storm-surge/
 
 
 .. _barotropic-tides:
