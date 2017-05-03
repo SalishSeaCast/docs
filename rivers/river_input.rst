@@ -16,9 +16,9 @@ Next, we split the freshwater runoff from each watershed between the rivers in t
 
 * For BC, maps of rivers can be found on the Atlas of Canada - `Toporama site <http://atlas.nrcan.gc.ca/site/english/toporama/index.html>`_.
 
-* For some areas of BC, maps of watersheds that include rivers where wild steelhead live are available from the `BCCF <http://www.bccf.com/steelhead/watersheds.htm>`_ .
+* For BC, maps of watersheds are available `at this site <http://www.env.gov.bc.ca/fish/pdf/prov_wsgs.pdf>`_.
 
-* In Washington, maps of watersheds are available `at this site <http://www.ecy.wa.gov/apps/watersheds/wriapages/>`_.
+* In Washington, maps of watersheds are available `at this site <https://cfpub.epa.gov/surf/state.cfm?statepostal=WA>`_.
 
 * For the Fraser River, the split between the arms is given in Thomson, 1981, available `here <http://www.dfo-mpo.gc.ca/Library/487.pdf>`_
 
