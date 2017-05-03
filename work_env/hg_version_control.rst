@@ -205,7 +205,7 @@ That reserves branching and merging for the relatively rare occasions when tempo
 The `rebase extension docs`_ have more information and diagrams of what's going on in this `common rebase use case`_.
 
 .. _rebase extension docs: http://mercurial-scm.org/wiki/RebaseExtension
-.. _common rebase use case: http://mercurial.selenic.com/wiki/RebaseExtension#A_common_case
+.. _common rebase use case: https://mercurial-scm.org/wiki/RebaseExtension#Scenario_A
 
 
 Rebasing an Accidental Branch
@@ -219,7 +219,7 @@ providing a way of visualizing branches.
 :kbd:`hg rebase` can be used to move the changes on an accidental branch to the tip of the repo.
 See the `scenarios section`_ of the `rebase extension docs`_ for diagrams and rebase command options for moving branches around in various ways.
 
-.. _scenarios section: http://mercurial.selenic.com/wiki/RebaseExtension#Scenarios
+.. _scenarios section: https://mercurial-scm.org/wiki/RebaseExtension#Scenarios
 
 
 Aborting a Merge
