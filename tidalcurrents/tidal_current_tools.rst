@@ -92,7 +92,7 @@ This function outputs a dictionary object containing the ellipse parameters for 
 
 * In this notebook: `UsingEllipse.py.ipynb`_  there are simple examples of the functions above.
 
-.. _UsingEllipse.py.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Muriel/UsingEllipse.py.ipynb
+.. _UsingEllipse.py.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-muriel/raw/tip/notebooks/TidalEllipse/UsingEllipses.py.ipynb
 
 
 MATLAB Scripts for Tidal Analysis
