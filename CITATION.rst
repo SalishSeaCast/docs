@@ -4,10 +4,10 @@
 Citations
 *********
 
-Model Configuation, Evaluation, and Storm Surge Hindcasting
-===========================================================
+Model Configuration, Evaluation, and Storm Surge Hindcasting
+============================================================
 
-The Salish Sea NEMO model configuation and its ability to calculate
+The Salish Sea NEMO model configuration and its ability to calculate
 tides and sea surface height was evaluated by hindcasting storm surge events
 that occurred between 2002 and 2011 in:
 
