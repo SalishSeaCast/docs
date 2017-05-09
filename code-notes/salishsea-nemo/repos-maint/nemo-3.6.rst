@@ -155,3 +155,18 @@ After the :ref:`PullChangesFromNEMOsvn` has been completed the workflow to merge
 #. Notify team members of the upstream merge,
    especially if manual merges of :file:`MY_SRC/` files were required,
    so that they can manage merging changes into any untracked :file:`MY_SRC/` files they may have.
+
+Local commits
+=======================================================================
+We are maintaining several local commits to files that do not fit in :file:`MY_SRC/` directories. They are:
+
+#. Import changeset 7751 from upstream NEMO: `900e1ce4066f2a64223b502167a9a15a6d7c7b2d`_
+#. Make :file:`rebuild_nemo` write compressed netCDF4 restart files: `28e2d9cd2a82b88e475a16804837eee22ea342f2`_
+#. Sort cfg.txt in :file:`makenemo`, `9f0335b59c780d055b7466e5ffd641d4ab0234aa`_
+#. Escape 'ls' in :file:`Fmake_WORK.sh`, `4979fc15317c1c899697c1b89d5a64d688917253`_
+
+.. _900e1ce4066f2a64223b502167a9a15a6d7c7b2d: https://bitbucket.org/salishsea/nemo-3.6-code/commits/900e1ce4066f2a64223b502167a9a15a6d7c7b2d
+.. _28e2d9cd2a82b88e475a16804837eee22ea342f2: https://bitbucket.org/salishsea/nemo-3.6-code/commits/28e2d9cd2a82b88e475a16804837eee22ea342f2
+.. _9f0335b59c780d055b7466e5ffd641d4ab0234aa: https://bitbucket.org/salishsea/nemo-3.6-code/commits/9f0335b59c780d055b7466e5ffd641d4ab0234aa
+.. _4979fc15317c1c899697c1b89d5a64d688917253: https://bitbucket.org/salishsea/nemo-3.6-code/commits/4979fc15317c1c899697c1b89d5a64d688917253
+
