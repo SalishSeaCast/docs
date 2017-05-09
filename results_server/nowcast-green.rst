@@ -154,9 +154,11 @@ Date                       Change                                 New Value     
              Change to rebuild_nemo that writes |br|
              deflated netcdf4/hdf5 files directly.                                f9a8d03de741_
 
-10-Jan-2017  Updated NEMO code to NEMO-3.6r6770+ |br|                             3b0accb0e693_ |br|
+10-Jan-2017  Updated NEMO code to NEMO-3.6r6770+                                  3b0accb0e693_
 
-25-Apr-2017  Increase lateral viscosity and diffusivity            2.2 m2/s       2c892a5bae80_ |br| 
+25-Apr-2017  Increase lateral viscosity and diffusivity            2.2 m2/s       2c892a5bae80_
+
+29-Apr-2017  Restored missing light attenuation with depth term                   fd69c1dc91be_
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
@@ -169,3 +171,4 @@ Date                       Change                                 New Value     
 .. _f9a8d03de741: https://bitbucket.org/salishsea/nemo-3.6-code/commits/f9a8d03de741
 .. _3b0accb0e693: https://bitbucket.org/salishsea/nemo-3.6-code/commits/3b0accb0e693
 .. _2c892a5bae80: https://bitbucket.org/salishsea/ss-run-sets/commits/2c892a5bae80
+.. _fd69c1dc91be: https://bitbucket.org/salishsea/nemo-3.6-code/commits/fd69c1dc91be
