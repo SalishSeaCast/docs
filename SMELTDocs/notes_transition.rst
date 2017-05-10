@@ -3,7 +3,7 @@
 Transition from SOG/PISCES to SMELT
 ======================================
 The biological model dynamics are adapted from the 1-d SOG model with some modifications 
-for the 3-d domain, as described in the following secionts.
+for the 3-d domain, as described in the following sections.
 
 
 Differences in Mesozooplankton Closure implementation

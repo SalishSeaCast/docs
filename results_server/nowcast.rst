@@ -44,7 +44,7 @@ Model Parameter Changes Over Time
 29-Sep-2015  Vertical background turbulent viscosity |br|         1.0e-5          9fdb426ea91f_
              reduced from 1.0e-4
 03-Nov-2015  Increased deep salinity of western boundary |br|     see changeset   956b5587d773_
-             conditions based onclimatological comparisons |br|
+             conditions based on climatological comparisons |br|
              with IOS & WOD data
 22-Nov-2015  Corrected and moved river run-off grid |br|          see changeset   5d1e00c2f44e_
              locations: |br|

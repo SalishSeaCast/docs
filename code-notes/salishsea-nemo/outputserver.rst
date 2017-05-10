@@ -3,14 +3,14 @@ Output Server Configuration
 ***************************
 
 This section describes how to control the output files from NEMO.
-We will disucss how to output certain fields at a specific grid point.
-First, some overview on the NEMO output configuation file :file:`iodef.xml` is provided.
+We will discuss how to output certain fields at a specific grid point.
+First, some overview on the NEMO output configuration file :file:`iodef.xml` is provided.
 
 
 :file:`iodef.xml`
 ==================
 
-NEMO's output confinguration is controlled by a file called :file:`iodef.xml`.  
+NEMO's output configuration is controlled by a file called :file:`iodef.xml`.  
 It is found in the :file:`SS-run-sets/SalishSea/` directory along with all of the namelists.
 This file allows the user to specify which fields should be outputted, how often, and at which grid points. 
 It is written in an xml language and the details can be found in section 11.2 of the NEMO documentation.

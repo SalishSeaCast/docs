@@ -397,7 +397,7 @@ was used to update the :file:`/ocean/sallen/hg_repos/NEMO-hg-mirror` repository 
    were used to change the :command:`svn` URL to point at the 3.6-stable branch and update to the earliest revision on that branch,
    :kbd:`r5519`
 
-#. The :command:`svn` revisions to :kbd:`r5628` were applied a few at a time using the proceedure described above for early revisions.
+#. The :command:`svn` revisions to :kbd:`r5628` were applied a few at a time using the procedure described above for early revisions.
 
 #. The :command:`svn` updates were merged with our :ref:`NEMO-3.6-code-repo` and the result tagged as :kbd:`NEMO-3.6r5628`.
 
@@ -532,8 +532,8 @@ Building on :kbd:`orcinus`
 
 .. note::
     These build notes for :kbd:`orcinus` are provisional.
-    They include hard-coded library version numbers and paths for new netCDF and HDF5 libary builds that were created in early October 2015.
-    The details below will change when those new libaries have been integrated into modules on :kbd:`orcinus`.
+    They include hard-coded library version numbers and paths for new netCDF and HDF5 library builds that were created in early October 2015.
+    The details below will change when those new libraries have been integrated into modules on :kbd:`orcinus`.
 
 On :kbd:`orcinus`,
 XIOS_ was successfully built with the following :file:`arch/arch-*` files:
@@ -799,8 +799,8 @@ Building on :kbd:`orcinus`
 
 .. note::
     These build notes for :kbd:`orcinus` are provisional.
-    They include hard-coded library version numbers and paths for new netCDF and HDF5 libary builds that were created in early October 2015.
-    The details below will change when those new libaries have been integrated into modules on :kbd:`orcinus`.
+    They include hard-coded library version numbers and paths for new netCDF and HDF5 library builds that were created in early October 2015.
+    The details below will change when those new libraries have been integrated into modules on :kbd:`orcinus`.
 
 On :kbd:`orcinus`,
 NEMO-3.6 was successfully built with the following :file:`NEMOGCM/ARCH/` file:
@@ -953,7 +953,7 @@ Testing the :kbd:`SalishSea` Configuration on :kbd:`jasper`
 .. note::
     This section describes how to manually set up a run directory for the NEMO-3.6 :kbd:`SalishSea` configuration and submit the run to the job queue on :kbd:`jasper`.
     The steps described here will eventually be incorporated into the :ref:`SalishSeaCmdProcessor`.
-    Once the command processor is capable of working with NEMO-3.6 the recommendedation is that it be used rather than doing manual run setups.
+    Once the command processor is capable of working with NEMO-3.6 the recommendation is that it be used rather than doing manual run setups.
 
 After successfully :ref:`BuildingNEMO3.6OnJasper`,
 create a test directory outside the :file:`NEMO-3.6-code` repo:

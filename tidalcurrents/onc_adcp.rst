@@ -168,7 +168,7 @@ The :file:`GETDATA_fun.m` script handles breaking the requested number of days i
 The :file:`getSogAdcpData*.m` script downloads the data into the :file:`{path}/{mode}/raw/` directory;
 i.e. :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/central/raw/` in the example above.
 
-The :file:`get_VENUS_ADCP_raw.cron.sh` and :file:`get_VENUS_ADCP_raw.m` scripts can be used to automate daily downloading of the raw data during the period required to obtain enough data to complete the analysis required to get the variable values to facilitiate fully automated processing.
+The :file:`get_VENUS_ADCP_raw.cron.sh` and :file:`get_VENUS_ADCP_raw.m` scripts can be used to automate daily downloading of the raw data during the period required to obtain enough data to complete the analysis required to get the variable values to facilitate fully automated processing.
 
 
 Update the :file:`GETDEPL_fun.m` Script
