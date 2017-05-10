@@ -20,6 +20,6 @@ Namelists, iodef.xml and field_def.xml  are in SS-run-set/SalishSea/nemo3.6/nowc
 
 Currently running in /data/sallen/MEOPAR/nowcast-green
 
-Results are (hand-moved) to /results/SalsishSea/nowcast-green
+Results are (hand-moved) to /results/SalishSea/nowcast-green
 
 more details in the tools docs results section.
