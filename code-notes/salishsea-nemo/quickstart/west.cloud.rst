@@ -181,7 +181,7 @@ To resolve the issue delete the prior host key from your :file:`$HOME/.ssh/known
 The message will tell you what line it is on.
 
 You will also be prompted for the pasphrase that you assigned to the ssh key pair when you created it.
-On Linux and OS/X authenticating the ssh key with your pasphrase has the side-effect of adding it to the :command:`ssh-agent` instance that was started when you logged into the system.
+On Linux and OS/X authenticating the ssh key with your passphrase has the side-effect of adding it to the :command:`ssh-agent` instance that was started when you logged into the system.
 You can add the key to the agent yourself with the command:
 
 .. code-block:: bash
@@ -398,7 +398,7 @@ Shared Storage via SSHFS
     if an SSHFS is mounted when an instance is rebooted,
     the instance will be unreachable.
     Likewise,
-    inatances booted from an image created from an instance with an SSHFS mounted are unreachable.
+    instances booted from an image created from an instance with an SSHFS mounted are unreachable.
 
 Shared, persistent storage accessible via SSHFS is set up for user :kbd:`nemo` on :kbd:`nemo@ncnfs1.neptune.uvic.ca`.
 It is only accessible from :kbd:`west.cloud` instances.

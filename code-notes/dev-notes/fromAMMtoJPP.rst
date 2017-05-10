@@ -84,7 +84,7 @@ Changes from AMM12 namelist file
 
 * vertical coordinate **ln_zps** **ln_sco**
 * minimum depth of ocean **rn_hmin**
-* partial step thickenss **rn_e3sps_min** **rn_e3zps_rat**
+* partial step thickness **rn_e3sps_min** **rn_e3zps_rat**
 
 * time step for the dynamics **rn_rdt**
 * zero surface forcing **ln_ana** **ln_flx**  **rn_utau0** *to be changed later!!*
@@ -114,16 +114,16 @@ Changes from AMM12 namelist file
 * treatment of hydrostatic pressure **ln_phg_sco** **ln_phg_prj**
 * bilaplacian operator **ln_dynldf_bilap**
 * horizontal laplacian eddy viscosity **rn_ahm_0_lap**
-* vertical eddy viscosity and diffusitivity **rn_avm0** **rn_avt0**
+* vertical eddy viscosity and diffusivity **rn_avm0** **rn_avt0**
 * enhanced vertical diffusion and coefficient **ln_zdfevd** **rn_avevd**
 * surface tke input coefficient **rn_ebb**
 * surface mixing length scale, Langmuir parameterization **ln_mx10**, **ln_lc**
 * penetration of tke below mixed layer and its exponential decrease **nn_etau** **nn_htau**
 
-* maximum interations for the SOR solver and its coefficient **nn_nmax** **rn_sor**
+* maximum iterations for the SOR solver and its coefficient **nn_nmax** **rn_sor**
 
 * number of processors in various directions **jpni** **jpnj** **jpnij**
-* control sumes **nn_ictlX** **nn_jctlX**
+* control sums **nn_ictlX** **nn_jctlX**
 
 * time step frequency for dynamics and tracer trends **nn_trd**
 * time steps used for harmonic analysis **nit000_han** **nitend_han** **nstep_han**

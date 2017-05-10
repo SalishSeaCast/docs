@@ -319,11 +319,11 @@ where :math:`g` is the acceleration due to gravity, :math:`R` is the ideal gas c
 
 To arrive at this formula we have made a few assumptions:
 
-1. The atmopshere is in hydrostatic equilibrium: :math:`\frac{d p}{d z} = -\rho g`
+1. The atmosphere is in hydrostatic equilibrium: :math:`\frac{d p}{d z} = -\rho g`
 2. The atmosphere is an ideal gas: :math:`p = \rho R T`
 3. The temperature of the atmosphere decreases with height at a constant rate: :math:`\frac{dT}{dz} = -\gamma`
 
-The altiude of each grid cell is stored in a file :file:`altitude_CGRF.nc` in the :file:`tools/I_ForcingFiles/Atmos` repository.
+The altitude of each grid cell is stored in a file :file:`altitude_CGRF.nc` in the :file:`tools/I_ForcingFiles/Atmos` repository.
 
 Ths sea level pressure calculation is performed in :file:`nc_tools.generate_pressure_file`, which is used in `get_cgrf`_ to correct pressure files on download.
 Corrected pressure files are named :file:`slp_corr_y0000m00d00.nc`.

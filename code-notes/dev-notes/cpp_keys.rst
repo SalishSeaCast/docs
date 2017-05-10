@@ -33,7 +33,7 @@ Decisions
 ---------
 * AMM12 uses **key_dynspg_ts** Time splitting free surface.  CONCEPTS 110 uses **key_dynspg_ts2**.  We my need to return here.
 * Turbulence scheme.  CONCEPTS uses **key_zdftke**.  AMM12 uses **key_zdfgls**.  Start with tke and consider later.
-* AMM12 uses **key_diainstant** which gives instantaeous fields rather than averages.
+* AMM12 uses **key_diainstant** which gives instantaneous fields rather than averages.
 * CONCEPTS uses **key_dtatem/key_dtasal** Read climatology initial temperature and salinity fields.  Might be the best way to put in initial profile.
 * **key_flx_core** Use short/long wave radiation forcing.  Need to return to this issue later.
 * Start with **key_traldf_c2d** horizontal eddy mixing of tracers from CONCEPTS

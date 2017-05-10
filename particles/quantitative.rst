@@ -137,7 +137,7 @@ Pay special attention to the following options:
 * :kbd:`nmax`: The maximum number of particles. This parameter is typically much higher in quantitative mode.
 * :kbd:`key_eco`: Setting to :kbd:`.TRUE.` reduces CPU time.
 * :kbd:`key_reducmem`: Setting to :kbd:`.TRUE.` reduces memory by only reading model data over selected region.
-* :kbd:`key_unitm3`: Setting to :kbd:`.TRUE.` prints transport calcualtion in m^3/s instead of Sverdrups.
+* :kbd:`key_unitm3`: Setting to :kbd:`.TRUE.` prints transport calculation in m^3/s instead of Sverdrups.
 * :kbd:`max_transport`: Maximum transport (in m^3/s) that should not be exceeded by the transport associated with each initial particle. A lower values means more initial particles and higher accuracy. Example values are 1e9 for one particle in one model cell and 1e4 for typical experiments.
 * :kbd:`lmin`: First time step to generate particles.
 * :kbd:`lmax`: Last time step to generate particles.
@@ -165,7 +165,7 @@ Ariane provides a couple of useful tools for defining the sections.
 
    nedit segrid
 
-* If you turn off text wrapping, you might see somthing like this:
+* If you turn off text wrapping, you might see something like this:
 
 .. figure:: images/segrid.png
 

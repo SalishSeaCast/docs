@@ -13,12 +13,12 @@ NEMO parameterizes vertical turbulence using eddy coefficients. There are severa
 3. Turbulent kinetic energy closure
 4. Generalized length scale
 
-The most relevent options for our purposes are the 3 and 4. Currently we are using the generelized length scale with a :math:`k-\epsilon` closure. 
+The most relevent options for our purposes are the 3 and 4. Currently we are using the generalized length scale with a :math:`k-\epsilon` closure.
 
 
 Turbulent kinetic energy
 ^^^^^^^^^^^^^^^^^^^^^^^^
-The turbulent kinetic energy closure schemes involve a prognostic equation for the turbulent kinetic energy. The eddy coefficients are proportional to the turblent kinetic energy and a turbulent length scale. The details are explained in the NEMO documentation.
+The turbulent kinetic energy closure schemes involve a prognostic equation for the turbulent kinetic energy. The eddy coefficients are proportional to the turbulent kinetic energy and a turbulent length scale. The details are explained in the NEMO documentation.
 
 This method includes options for dealing with strongly stratified regions and unstable stratifications which are attractive features for this project due to the strong mixing in the island regions. At this point, we have not attempted any simulations with this method of turbulence closure.
 
@@ -35,7 +35,7 @@ The behaviour of each of the closure methods in GLS has been examined by Warren 
 Convection
 ------------------------------------------
 
-The NEMO model is hydrostatic and thus cannot directly handle unstable density stratifications that arise due to convection or overturning. There are several ways to parameterize this process which include enhanced vertical diffusion and a non-penetrative convective algorithm. Tests with the non-penetretative convective algorithm have not been successful.
+The NEMO model is hydrostatic and thus cannot directly handle unstable density stratifications that arise due to convection or overturning. There are several ways to parameterize this process which include enhanced vertical diffusion and a non-penetrative convective algorithm. Tests with the non-penetrative convective algorithm have not been successful.
 
 Enhanced Vertical Diffusion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
