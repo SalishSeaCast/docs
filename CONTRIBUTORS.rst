@@ -28,15 +28,22 @@ etc. to the Salish Sea MEOPAR project repositories hosted on Bitbucket_:
 * Jie Liu <jieliu@eos.ubc.ca>
 * Ben Moore-Maley <bmoorema@eos.ubc.ca>
 * James Petrie <jpetrie@eos.ubc.ca>
+* Georgio Sgarbi <gsgarbi@eos.ubc.ca>
+* Vicky Do <vdo@eos.ubc.ca>
 * Karina Ramos Musalem <kramosmusalem@eos.ubc.ca>
+* Saurav Sahu <ssahu@eoas.ubc.ca>
+* Birgit Rogalla <brogalla@eos.ubc.ca>
 * Yingkai (Kyle) Sha <yingkai@eos.ubc.ca>
 * Xiaoxin (Cindy) Yu <xiaoxiny@eos.ubc.ca>
+* Melanie Grenier <mgrenier@eos.ubc.ca>
 * Mark Halverson <mhalvers@eos.ubc.ca>
 * Alex Huang
 * Alyssia Law
+* Dan Robb <drobb@eos.ubc.ca>
 * Fatemeh Chegini <fatemeh.chegini@dal.ca>
 * J-P Paquin <paquin.jeanphilippe@gmail.com>
 * Youyu Lu <youyu.lu@dfo-mpo.gc.ca>
 * Keith Thompson <keith.thompson@dal.ca>
 * Vasily Korabel <v.korabel@dal.ca>
 * Pramod Thupaki <pramod.thupaki@dfo-mpo.gc.ca>
+
