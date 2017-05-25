@@ -39,22 +39,18 @@ given a domain and target number of processors,
 is the reverse problem.
 It turns out that there are often multiple decompositions that yield the same number of water processors.
 
-A good decomposition will have a high fraction of land eliminated and a tile aspect ratio near unity.
-Two decomposition tables are included below,
-sorted by number of water processors.
-The first table contains the preferred decompositions,
-selected by filtering for small aspect ratio
+A good decomposition has a high fraction of land eliminated and a tile aspect ratio near unity.
+We select the preferred decompositions by filtering for small aspect ratio
 (ar <= 1.15)
 and then for most land eliminated
 (smallest r = ratio of water processors to total).
-The second table is not filtered and included for completeness.
+The tables linked below list the preferred decompositions for bathymetries "downbyone2" and "201702".
 The scripts here_ produce the tables.
 
 .. _here: https://bitbucket.org/salishsea/analysis-michael/src/tip/land-processor-elimination/
 
-
 .. toctree::
 
-   LPE-SalishSea-preferred
-   LPE-SalishSea-complete
+   LPE-SalishSea-downonegrid2
+   LPE-SalishSea-201702
 
