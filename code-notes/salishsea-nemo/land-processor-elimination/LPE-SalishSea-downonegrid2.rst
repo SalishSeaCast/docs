@@ -1,8 +1,8 @@
-.. _Preferred-MPI-LPE-Decompositions:
+.. _Preferred-MPI-LPE-Decompositions_bathy_downonegrid2:
 
-********************************
-Preferred MPI LPE Decompositions
-********************************
+************************************************************
+Preferred MPI LPE Decompositions for bathymetry downonegrid2
+************************************************************
 
 This table shows the preferred MPI decompositions that optimize :ref:`LandProcessorElimination` for the SalishSea and SMELT configuration running in NEMO-3.6 with the :file:`bathy_downonegrid2.nc` bathymetry.
 
