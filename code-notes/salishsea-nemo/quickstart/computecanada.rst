@@ -4,12 +4,12 @@
 Working on :kbd:`computecanada`: NEMO v3.6
 ******************************************
 
-This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on the new compute canada machines `graham.westgrid.ca`_ and `cedar.westgrid.ca`_.
+This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on the new compute canada machines `graham.computecanada.ca`_ and `cedar.computecanada.ca`_.
 
 This guide assumes that your :ref:`WorkingEnvironment` is set up and that you are familiar with :ref:`WorkingOnSalish`.
 
-.. _graham.westgrid.ca: https://docs.computecanada.ca/wiki/Graham
-.. _cedar.westgrid.ca: https://docs.computecanada.ca/wiki/Cedar
+.. _graham.computecanada.ca: https://docs.computecanada.ca/wiki/Graham
+.. _cedar.computecanada.ca: https://docs.computecanada.ca/wiki/Cedar
 
 Modules setup
 =============
