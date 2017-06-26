@@ -12,8 +12,8 @@ Use of the `netCDF4-python`_ library
 (included in :ref:`AnacondaPythonDistro`)
 is assumed.
 
-.. _netCDF4: http://unidata.github.io/netcdf4-python/
+.. _netCDF4: https://www.unidata.ucar.edu/software/netcdf/
 .. _NetCDF Climate and Forecast (CF) Metadata Conventions, Version 1.6, 5 December, 2011: http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.pdf
-.. _netCDF4-python: http://netcdf4-python.googlecode.com/
+.. _netCDF4-python: https://unidata.github.io/netcdf4-python/
 
 The :ref:`salishsea_tools.nc_tools` in the :ref:`SalishSeaToolsPackage` is a library of Python functions for exploring and managing the attributes of netCDF files.
