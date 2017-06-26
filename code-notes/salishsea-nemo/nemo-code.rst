@@ -19,8 +19,8 @@ The `NEMO-code`_ repo is a Mercurial repository in which is maintained the merge
     please contact `Susan Allen`_,
     the Salish Sea MEOPAR project leader.
 
-    .. _NEMO: http://www.nemo-ocean.eu/
-    .. _registration: http://www.nemo-ocean.eu/user/register
+    .. _NEMO: https://www.nemo-ocean.eu/
+    .. _registration: http://forge.ipsl.jussieu.fr/nemo/register
     .. _Susan Allen: mailto://sallen@eos.ubc.ca
 
 
