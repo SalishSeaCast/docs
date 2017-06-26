@@ -60,7 +60,7 @@ Clone the repos needed to run the model:
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
     hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
 
-There is no need to clone the :file:`docs` or :file:`analysis` repos at WestGrid.
+There is no need to clone the :file:`docs` or :file:`analysis` repos at Cedar or Graham.
 
 
 Install Tools and Command Processor Packages
