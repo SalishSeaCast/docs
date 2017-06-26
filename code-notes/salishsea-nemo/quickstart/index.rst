@@ -11,6 +11,7 @@ The sections below describe *very* briefly the steps to set up and run the Salis
 
     salish
     westgrid
+    computecanada
     west.cloud
     macOSX
 
