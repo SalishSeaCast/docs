@@ -239,7 +239,7 @@ Global Deterministic Prediction System
 (GDPS)
 Reforecasts
 (CGRF)
-dataset is a relatively high-resolution forcing dataset for ocean models [Smith_etal2013].
+dataset is a relatively high-resolution forcing dataset for ocean models [Smith_etal2013]_.
 The dataset is hosted on an :program:`rsync` server at :kbd:`goapp.ocean.dal.ca`.
 User id and password credentials are required to access it.
 
@@ -300,6 +300,7 @@ and non-executable with:
 
 See the :command:`salishsea` :ref:`salishsea-get_cgrf` docs for details of a tool that automates this process.
 
+
 .. _Pressure-Correction:
 
 Pressure Correction
@@ -307,10 +308,8 @@ Pressure Correction
 
 The CGRF atmospheric model uses a terrain following vertical coordinate system which means that the lowest grid cells are not at sea level in mountainous regions such as those surrounding the Salish Sea.
 As such, we have developed an algorithm to adjust CGRF pressure files to sea level.
-Given the altitude :math:`z_1`,  temperature :math:`T_1` and pressure :math:`p_1` of an air parcel, we can estimate the sea level pressure as [Holton 1992]:
-
 First, the altitude of each grid cell is computed since this is not given in the CGRF output.
-Given the of an air parcel, we can approximate its height :math:`z_1` above sea level using the following formula [Holton, 1992]:
+Given the of an air parcel, we can approximate its height :math:`z_1` above sea level using the following formula [Holton1992]_:
 
 .. math::
    p_s = p_1\left(\gamma\frac{z_1}{T_1} +1 \right)^\frac{g}{\gamma R}
