@@ -4,21 +4,24 @@
 Initializing T+S with a restart file
 ************************************
 
-This section describes how to initialize the salinity and temperature fields with data from a restart file. 
-This is useful for taking the stratification from a spin up run. 
+This section describes how to initialize the salinity and temperature fields with data from a restart file.
+This is useful for taking the stratification from a spin-up or nowcast run.
 
-First, in the :file:`SalishSea.yaml` file edit the initial conditions section to the path of the directory that contains the restart file. For example, the restart file :file:`SalishSea_00069120_restart.nc` is in :file:`/ocean/dlatorne/MEOPAR/SalishSea/results/spin-up/18oct25oct/` so the forcing section of the :file:`.yaml` files should look like: 
+First,
+in the :file:`SalishSea.yaml` file provide an initial conditions forcing link that points to the path of the directory that contains the restart file.
+For example, the restart file :file:`SalishSea_00069120_restart.nc` is in :file:`/ocean/dlatorne/MEOPAR/SalishSea/results/spin-up/18oct25oct/`,
+so the forcing section of the :file:`.yaml` files should contain:
 
-.. code-block:: fortran
+.. code-block:: yaml
 
-	forcing:
-	# If relative, paths are taken from forcing path above 
-	atmospheric: /ocean/dlatorne/MEOPAR/CGRF/NEMO-atmos/
-	initial conditions: /ocean/dlatorne/MEOPAR/SalishSea/results/spin-up/18oct25oct/
-	open boundaries: open_boundaries/
-	rivers: rivers/
+    forcing:
+      ...
+      initial_strat:
+        link to: /ocean/dlatorne/MEOPAR/SalishSea/results/spin-up/18oct25oct/
+	     ...
 
-Next, modify the :file:`&namtsd` section of :file:`namelist.domain` so that NEMO reads in the restart file. 
+Next,
+modify the :file:`&namtsd` section of :file:`namelist.domain` so that NEMO reads in the restart file.
 For example:
 
  .. code-block:: fortran
@@ -33,12 +36,15 @@ For example:
 	ln_tsd_init   = .true.            ! Initialisation of ocean T & S with T &S input data (T) or not (F)
 	ln_tsd_tradmp = .false.           ! damping of ocean T & S toward T &S input data (T) or not (F)
 	/
-	
+
 The file name must be modified to the restart file's name.
-Additionally, since restart files have a different naming convention for the field variables, ensure that :file:`'tb'` and :file:`'sb'` are used for temperature and salinity in the variable name section.
+Additionally,
+since restart files have a different naming convention for the field variables,
+ensure that :file:`'tb'` and :file:`'sb'` are used for temperature and salinity in the variable name section.
 
 Considerations
 ==================
 
 * Bathymetry should be consistent between the restart file and the run you are initializing.
-* There may be issues of continuity between the restart T + S data and the boundary conditions at Juan de Fuca, depending on the date chosen for a restart.  
+* There may be issues of continuity between the restart T + S data and the boundary conditions at Juan de Fuca,
+  depending on the date chosen for a restart.
