@@ -4,13 +4,14 @@
 Working on :kbd:`westgrid`: NEMO v3.6
 *************************************
 
-This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on WestGrid machines `bugaboo.westgrid.ca`_, `jasper.westgrid.ca`_, `nestor.westgrid.ca`_ and `orcinus.westgrid.ca`_.
+This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on WestGrid machines `bugaboo.westgrid.ca`_,
+`jasper.westgrid.ca`_,
+and `orcinus.westgrid.ca`_.
 
 This guide assumes that your :ref:`WorkingEnvironment` is set up and that you are familiar with :ref:`WorkingOnSalish`.
 
 .. _bugaboo.westgrid.ca: https://www.westgrid.ca/support/systems/bugaboo
 .. _jasper.westgrid.ca: https://www.westgrid.ca/support/systems/jasper
-.. _nestor.westgrid.ca: https://www.westgrid.ca/support/systems/hermesnestor
 .. _orcinus.westgrid.ca: https://www.westgrid.ca/support/systems/orcinus
 
 
@@ -49,15 +50,6 @@ The modules needed for each cluster are:
     module load compiler/intel/13.0.1
     module load library/hdf5/1.8.9
     module load library/netcdf/4.1.3
-
-:kbd:`nestor`:
---------------
-
-.. code-block:: bash
-
-    module load python
-    module load gcc/5.1.0
-    module load intel/12.0.2.137
 
 :kbd:`orcinus`:
 ---------------
@@ -117,6 +109,7 @@ Compile XIOS
 
 First symlink the XIOS build configuration files for the machine that you are working on from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS/arch/` directory, then compile XIOS:
 
+
 :kbd:`bugaboo`:
 ---------------
 
@@ -128,6 +121,7 @@ First symlink the XIOS build configuration files for the machine that you are wo
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_BUGABOO.path
     cd $HOME/MEOPAR/XIOS
     ./make_xios --arch X64_BUGABOO --netcdf_lib netcdf4_par --job 8
+
 
 :kbd:`jasper`:
 --------------
@@ -141,17 +135,6 @@ First symlink the XIOS build configuration files for the machine that you are wo
     cd $HOME/MEOPAR/XIOS
     ./make_xios --arch X64_JASPER --netcdf_lib netcdf4_seq --job 8
 
-:kbd:`nestor`:
---------------
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/XIOS/arch
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_NESTOR.env
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_NESTOR.fcm
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_NESTOR.path
-    cd $HOME/MEOPAR/XIOS
-    ./make_xios --arch X64_NESTOR --netcdf_lib netcdf4_seq --job 8
 
 :kbd:`orcinus`:
 ---------------
@@ -171,6 +154,7 @@ Compile NEMO-3.6
 
 Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
 
+
 :kbd:`bugaboo`:
 ---------------
 
@@ -180,6 +164,7 @@ Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
     ./makenemo -n SalishSea -m X64_BUGABOO -j 8
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
     ./maketools -n REBUILD_NEMO -m X64_BUGABOO
+
 
 :kbd:`jasper`:
 --------------
@@ -191,15 +176,6 @@ Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
     ./maketools -n REBUILD_NEMO -m X64_JASPER
 
-:kbd:`nestor`:
---------------
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    ./makenemo -n SalishSea -m X64_NESTOR -j 8
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
-    ./maketools -n REBUILD_NEMO -m X64_NESTOR
 
 :kbd:`orcinus`:
 ---------------
