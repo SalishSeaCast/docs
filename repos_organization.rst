@@ -131,7 +131,8 @@ SalishSeaNowcast
 analysis
 ~~~~~~~~
 
-* public, read-only
+* **Read-only** legacy repo
+* public
 * Apache v2.0 license, copyright project contributors and UBC
 * analyses of the results of the Salish Sea MEOPAR NEMO model;
   most of the files are Jupyter Notebooks
@@ -139,7 +140,7 @@ analysis
 
 .. note::
     This was the project's original analysis repo.
-    It got so big that it was in danger of hitting the Bitbucket 2Gb limit at which changeset would no longer be accepted.
+    It got so big that it was in danger of hitting the Bitbucket 2Gb limit at which changesets would no longer be accepted.
     In April 2016 it was split into a collection of personal analysis repos for each team member,
     as well as some other application-specific analysis repos.
     They are all public with the same license and copyright a the original analysis repo.
@@ -206,11 +207,77 @@ XIOS-ARCH
   for :ref:`westgrid machines <CompileXIOS-westgrid>`
 
 
+.. _grid-repo:
+
+grid
+~~~~
+
+* public
+* Apache v2.0 license, copyright project contributors and UBC
+* Coordinates,
+  bathymetry,
+  mesh mask,
+  land processor elimination,
+  and atmospheric forcing weights files for the Salish Sea NEMO model.
+  Also included is the file that imposed the "no snow" atmospheric forcing condition.
+  Files for AGRIF sub-grids are in appropriately names sub-directories of the :file:`subgrids/` directory.
+
+  Many of these files originated in the (private) :ref:`NEMO-forcing-repo` repository.
+  The commit message history of files from that repository is included in their initial commit messages.
+* Bitbucket: https://bitbucket.org/salishsea/grid
+
+
+.. _rivers-repo:
+
+rivers
+~~~~~~
+
+* public
+* Apache v2.0 license, copyright project contributors and UBC
+* Rivers runoff climatology files for the Salish Sea NEMO model.
+  Included are discharge, temperature, nutrients & biological tracers, and depths over which river quantities are introduced into model grid.
+  Files for AGRIF sub-grids are in appropriately names sub-directories of the :file:`subgrids/` directory.
+
+  Many of these files originated in the (private) :ref:`NEMO-forcing-repo` repository.
+  The commit message history of files from that repository is included in their initial commit messages.
+* Bitbucket: https://bitbucket.org/salishsea/rivers
+
+
+.. _tides-repo:
+
+tides
+~~~~~
+
+* public
+* Apache v2.0 license, copyright project contributors and UBC
+* Tide boundary condition files for the Salish Sea NEMO model.
+
+  Many of these files originated in the (private) :ref:`NEMO-forcing-repo` repository.
+  The commit message history of files from that repository is included in their initial commit messages.
+* Bitbucket: https://bitbucket.org/salishsea/tides
+
+
+.. _tracers-repo:
+
+tracers
+~~~~~~~
+
+* public
+* Apache v2.0 license, copyright project contributors and UBC
+* Tracer boundary condition climatology files and domain initialization files for the Salish Sea NEMO model.
+  Included are temperature, salinity, nutrients, and biological tracers.
+
+  Many of these files originated in the (private) :ref:`NEMO-forcing-repo` repository.
+  The commit message history of files from that repository is included in their initial commit messages.
+* Bitbucket: https://bitbucket.org/salishsea/tracers
+
+
 .. _NEMO-forcing-repo:
 
 NEMO-forcing
 ~~~~~~~~~~~~
 
+* **Read-only** legacy repo
 * private to SalishSea-MEOPAR team members
 * private because the files are from project initialization tarballs received from J-P Paquin on 2013-10-02
 * domain-specific set-up,
@@ -229,6 +296,26 @@ NEMO-forcing
 
 * Bitbucket: https://bitbucket.org/salishsea/nemo-forcing/
 * documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-forcing/index.html
+
+.. note::
+    This was the project's original repo of initial conditions, forcing, etc. files.
+    It got so big that it was in danger of hitting the Bitbucket 2Gb limit at which changesets would no longer be accepted.
+    It also contained multiple copies large binary files which are no longer used.
+    Together,
+    these factors make this repo very time consuming to clone and update.
+    In August 2017 the repo was split into 4 smaller repos:
+
+    * :ref:`grid-repo`
+    * :ref:`rivers-repo`
+    * :ref:`tides-repo`
+    * :ref:`tracers-repo`
+
+    They are all public,
+    licensed under Apache v2.0 license,
+    and copyright by the project contributors and UBC.
+    They can be found in the `SalishSea-MEOPAR NEMO Model Runs`_ collection of repos on Bitbucket.
+
+    .. _SalishSea-MEOPAR NEMO Model Runs: https://bitbucket.org/account/user/salishsea/projects/SSM_NEMO_RUNS
 
 
 .. _SS-run-sets-repo:

@@ -11,6 +11,7 @@ This guide assumes that your :ref:`WorkingEnvironment` is set up and that you ar
 .. _graham.computecanada.ca: https://docs.computecanada.ca/wiki/Graham
 .. _cedar.computecanada.ca: https://docs.computecanada.ca/wiki/Cedar
 
+
 Modules setup
 =============
 
@@ -39,6 +40,7 @@ At present, both Graham and Cedar are configured similarly. The modules needed a
     module load netcdf-fortran-mpi/4.4.4
     module load netcdf-mpi/4.4.1.1
 
+
 Create a Workspace and Clone the Repositories
 =============================================
 
@@ -54,8 +56,11 @@ Clone the repos needed to run the model:
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-3.6-code NEMO-3.6-code
     hg clone ssh://hg@bitbucket.org/salishsea/xios XIOS
     hg clone ssh://hg@bitbucket.org/salishsea/xios-arch XIOS-ARCH
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
+    hg clone ssh://hg@bitbucket.org/salishsea/grid
+    hg clone ssh://hg@bitbucket.org/salishsea/rivers
+    hg clone ssh://hg@bitbucket.org/salishsea/tides
+    hg clone ssh://hg@bitbucket.org/salishsea/tracers
     hg clone ssh://hg@bitbucket.org/salishsea/tools
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
     hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
@@ -84,6 +89,7 @@ Compile XIOS
 
 First symlink the XIOS build configuration files for the machine that you are working on from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS/arch/` directory, then compile XIOS:
 
+
 :kbd:`graham`:
 ---------------
 
@@ -95,6 +101,7 @@ First symlink the XIOS build configuration files for the machine that you are wo
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.path
     cd $HOME/MEOPAR/XIOS
     ./make_xios --arch X64_GRAHAM --netcdf_lib netcdf4_par --job 8
+
 
 :kbd:`cedar`:
 --------------
@@ -108,10 +115,12 @@ First symlink the XIOS build configuration files for the machine that you are wo
     cd $HOME/MEOPAR/XIOS
     ./make_xios --arch X64_CEDAR --netcdf_lib netcdf4_seq --job 8
 
+
 Compile NEMO-3.6
 ================
 
 Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
+
 
 :kbd:`graham`:
 --------------
@@ -122,6 +131,7 @@ Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
     ./makenemo -n SalishSea -m X64_GRAHAM -j 8
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
     ./maketools -n REBUILD_NEMO -m X64_GRAHAM
+
 
 :kbd:`cedar`:
 ---------------
@@ -145,7 +155,7 @@ To build a configuration other than :kbd:`SalishSea`, replace :kbd:`SalishSea` w
 Prepare and Execute Runs
 ========================
 
-The :file:`SS-run-sets/nemo3.6` :ref:`SS-run-sets-SalishSea` contains version controlled sample run description files and namelist segment files.
+The :file:`SS-run-sets/v201702/` directory in the :ref:`SS-run-sets-SalishSea` repo contains version controlled sample run description files and namelist segment files.
 In your own directory in that repo copy, edit,
 and version control those files to define the runs that you want to execute.
 

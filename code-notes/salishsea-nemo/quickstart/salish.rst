@@ -51,8 +51,11 @@ and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-3.6-code NEMO-3.6-code
     hg clone ssh://hg@bitbucket.org/salishsea/xios XIOS
     hg clone ssh://hg@bitbucket.org/salishsea/xios-arch XIOS-ARCH
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
+    hg clone ssh://hg@bitbucket.org/salishsea/grid
+    hg clone ssh://hg@bitbucket.org/salishsea/rivers
+    hg clone ssh://hg@bitbucket.org/salishsea/tides
+    hg clone ssh://hg@bitbucket.org/salishsea/tracers
 
 
 .. _CompileXIOS-salish:
@@ -122,7 +125,7 @@ See :ref:`rebuild-nemo-tool` for more information about it.
 Prepare and Execute Runs
 ========================
 
-The :file:`SS-run-sets` :ref:`SS-run-sets-SalishSea` contains a subdirectory called :file:`nemo3.6` that contains a version controlled sample run description file and namelist segment files.
+The :file:`SS-run-sets` :ref:`SS-run-sets-SalishSea` contains a subdirectory called :file:`v201702/` that contains a version controlled sample run description file and namelist segment files.
 Create your own directory in that repo where you can copy,
 edit,
 and version control those files to define the run that you want to execute.

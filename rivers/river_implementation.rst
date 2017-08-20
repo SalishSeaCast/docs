@@ -19,10 +19,10 @@ Everywhere the depth of freshwater is set to 3 m so that the freshwater is distr
 
 Everywhere the temperature of the freshwater is set to the temperature of the Fraser at Hope.
 
-Two files are created `rivers_month.nc`_ and `rivers_const.nc`_.  The first contains the monthly climatology, the second the yearly average.
+Two files are created `rivers_month_201702.nc`_ and `rivers_cnst_201702.nc`_.  The first contains the monthly climatology, the second the yearly average.
 
-.. _rivers_month.nc: https://bitbucket.org/salishsea/nemo-forcing/src/tip/rivers/rivers_month.nc
-.. _rivers_const.nc: https://bitbucket.org/salishsea/nemo-forcing/src/tip/rivers/rivers_const.nc
+.. _rivers_month_201702.nc: https://bitbucket.org/salishsea/rivers/src/tip/rivers_month_201702.nc
+.. _rivers_cnst_201702.nc: https://bitbucket.org/salishsea/rivers/src/tip/rivers_cnst_201702.nc
 
 Nowcast Files
 ----------------
