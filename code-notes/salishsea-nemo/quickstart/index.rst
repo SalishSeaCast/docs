@@ -12,7 +12,6 @@ The sections below describe *very* briefly the steps to set up and run the Salis
     salish
     westgrid
     computecanada
-    macOSX
 
 Details of what this all means and why the steps in the sections linked from this page are what they are can be found in the following sections:
 
