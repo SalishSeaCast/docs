@@ -18,7 +18,7 @@ To satisfy that requirement the following file management strategy has been esta
 
   * :file:`rsync-mirror/` is a collection of :file:`yyyy-mm-dd/` directories that contain uncompressed CGRF files for the day identified by the directory name
   * :file:`NEMO-atmos/` is a collection of symbolic links to the CGRF files using the names required by the NEMO CORE bulk interface.
-    The :file:`NEMO-atmos/` directory also contains symbolic links to the :ref:`AtmosphericForcingInterpolationWeights` file and the :ref:`NoSnowConstraint` file in the :ref:`NEMO-forcing-repo` repo.
+    The :file:`NEMO-atmos/` directory also contains symbolic links to the :ref:`AtmosphericForcingInterpolationWeights` file and the :ref:`NoSnowConstraint` file in the :ref:`grid-repo` repo.
 
 * The files in the :file:`/ocean/dlatorne/MEOPAR/CGRF/` directory are managed by the :command:`salishsea get_cgrf` tool;
   see the :ref:`salishsea-get_cgrf` docs.
@@ -61,7 +61,7 @@ No-Snow Constraint
 ==================
 
 The NEMO CORE bulk interface requires a snow file but it has been decided to impose a constraint on the Salish Sea model whereby all precipitation falls in liquid phase.
-That constraint is provided by the :file:`atmospheric/no_snow.nc` file in the :ref:`NEMO-forcing-repo` repo.
+That constraint is provided by the :file:`no_snow.nc` file in the :ref:`grid-repo` repo.
 That file ensures that the solid phase precipitation is zero at all times and locations.
 It is used as annual climatology forcing in the :kbd:`namsbc_core` name list.
 
@@ -74,7 +74,7 @@ Interpolation Weights
 JP Paquin created a weights file that allows NEMO's Interpolation On the Fly
 (IOF)
 feature to be used to take atmospheric forcing values from the :ref:`CGRF-Dataset`.
-It is in the :file:`4_weights_ATMOS/` directory of the 2-Oct-2013 WC3_PREP tarball and has been added to the :ref:`grid-directory` of the :ref:`NEMO-forcing-repo` repo.
+It is in the :file:`4_weights_ATMOS/` directory of the 2-Oct-2013 WC3_PREP tarball and has been added to the :file:`grid/` of the :ref:`NEMO-forcing-repo` repo.
 Those weight values were subsequently used to create a netCDF4 weights file with :kbd:`zlib` compression enabled and CF-1.6 conventions compliant attributes using the `I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb`_ notebook.
 
 .. _I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb

@@ -8,25 +8,45 @@ The collection of domain-specific set-up,
 initial conditions, open boundary conditions,
 forcing,
 etc.
-files used to run NEMO for the Salish Sea are maintained in the `NEMO-forcing repo`_.
+files used to run NEMO for the Salish Sea are maintained in 4 repositories:
 
-.. _NEMO-forcing repo: https://bitbucket.org/salishsea/nemo-forcing/
+* :ref:`grid-repo`
+* :ref:`rivers-repo`
+* :ref:`tides-repo`
+* :ref:`tracers-repo`
 
-.. note::
+They can be found in the `SalishSea-MEOPAR NEMO Model Runs`_ collection of repos on Bitbucket.
 
-    The `NEMO-forcing`_ repository is a private repository for members of the Salish Sea MEOPAR project team.
-    That is because it contains files for which permission and/or licensing for public release have not been obtained.
+.. _SalishSea-MEOPAR NEMO Model Runs: https://bitbucket.org/account/user/salishsea/projects/SSM_NEMO_RUNS
 
-    If you would like access to `NEMO-forcing`_,
-    please contact `Susan Allen`_,
-    the Salish Sea MEOPAR project leader.
+If you have set up SSH key authentication on Bitbucket,
+you can clone the :ref:`grid-repo`,
+:ref:`rivers-repo`,
+:ref:`tides-repo`,
+and :ref:`tracers-repo` repos with:
 
-    .. _Susan Allen: mailto://sallen@eos.ubc.ca
+.. code-block:: bash
+
+    hg clone ssh://hg@bitbucket.org/salishsea/grid
+    hg clone ssh://hg@bitbucket.org/salishsea/rivers
+    hg clone ssh://hg@bitbucket.org/salishsea/tides
+    hg clone ssh://hg@bitbucket.org/salishsea/tracers
+
+For password authentication use:
+
+.. code-block:: bash
+
+    hg clone https://<you>@bitbucket.org/salishsea/grid
+    hg clone https://<you>@bitbucket.org/salishsea/rivers
+    hg clone https://<you>@bitbucket.org/salishsea/tides
+    hg clone https://<you>@bitbucket.org/salishsea/tracers
+
+where :kbd:`<you>` is your Bitbucket user id.
+
 
 .. toctree::
    :maxdepth: 2
 
-   repo
    atmospheric
    TSrestart
    obc

@@ -28,8 +28,9 @@ given a domain and a decomposition,
 is the forward problem.
 NEMO includes a tool under TOOLS/MPP_PREP that computes the number of water processors for all possible decompositions
 (up to a maximum number of processors).
-The calculation is unique to each bathymetry file, and we store the calculation results in a .csv file under NEMO-forcing/grid.
-The :command:`salishsea run` and :command:`salishsea prepare` commands from the :ref:`SalishSeaCmdProcessor` can use the .csv file as a lookup table in order to request the correct number of water processors for the domain decomposition that you set.
+The calculation is unique to each bathymetry file, and we store the calculation results in a :file:`.csv` files in the :ref:`grid-repo`.
+The :command:`salishsea run` and :command:`salishsea prepare` commands from the :ref:`SalishSeaCmdProcessor` can use the :file:`.csv` file as a lookup table in order to request the correct number of water processors for the domain decomposition that you set.
+
 
 Reverse problem
 ===============

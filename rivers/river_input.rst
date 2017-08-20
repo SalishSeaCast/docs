@@ -8,7 +8,7 @@ Sources
 
 River input provides a significant volume of freshwater to the Salish Sea and can influence stratification, circulation and primary productivity. We need to parametrise the rivers that flow into the Salish Sea throughout the domain.
 
-Morrison et al. (2011) provides a method for estimating freshwater runoff in the Salish Sea region based on precipitation. We acquired the exact data from Morrison, which includes the runoff volumes for each watershed for each year from 1970 to 2012, as well as monthly averages. These data are saved in netcdf files in the nemo-forcing/rivers directory.
+Morrison et al. (2011) provides a method for estimating freshwater runoff in the Salish Sea region based on precipitation. We acquired the exact data from Morrison, which includes the runoff volumes for each watershed for each year from 1970 to 2012, as well as monthly averages. These data are saved in netcdf files in the :ref:`rivers-repo`.
 
 Figure 1 of Morrison et al. (2011) shows the watershed boundaries but for more precise detail, some of these boundaries coincide with watershed boundaries shown `on this ArcGIS map <http://www.arcgis.com/home/webmap/viewer.html?services=aeef4efc47e842a59ea11431fcffa2bd>`_.
 
@@ -385,7 +385,7 @@ Jervis
 Toba
 ^^^^
 
-* Source used: Toporama Maps 
+* Source used: Toporama Maps
 * Toba River 50% at 50.492 124.365
 * Theodosia River 12% at 50.080 124.66
 * Quatam River 9% at 50.380 124.942
@@ -414,6 +414,6 @@ References
 * Sanderson et al (1986)
 * Thomson, 1982: Physical Oceanography of the BC Coast.
 
-.. _https://wateroffice.ec.gc.ca: https://wateroffice.ec.gc.ca 
+.. _https://wateroffice.ec.gc.ca: https://wateroffice.ec.gc.ca
 .. _10.1080/07055900.2011.637667: http://dx.doi.org/10.1080/07055900.2011.637667
 

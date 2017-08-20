@@ -79,8 +79,11 @@ Clone the repos needed to run the model:
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-3.6-code NEMO-3.6-code
     hg clone ssh://hg@bitbucket.org/salishsea/xios XIOS
     hg clone ssh://hg@bitbucket.org/salishsea/xios-arch XIOS-ARCH
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-forcing NEMO-forcing
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
+    hg clone ssh://hg@bitbucket.org/salishsea/grid
+    hg clone ssh://hg@bitbucket.org/salishsea/rivers
+    hg clone ssh://hg@bitbucket.org/salishsea/tides
+    hg clone ssh://hg@bitbucket.org/salishsea/tracers
     hg clone ssh://hg@bitbucket.org/salishsea/tools
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
     hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
@@ -198,7 +201,7 @@ To build a configuration other than :kbd:`SalishSea`, replace :kbd:`SalishSea` w
 Prepare and Execute Runs
 ========================
 
-The :file:`SS-run-sets/nemo3.6` :ref:`SS-run-sets-SalishSea` contains version controlled sample run description files and namelist segment files.
+The :file:`SS-run-sets/v201702/` directory in the :ref:`SS-run-sets-SalishSea` repo contains version controlled sample run description files and namelist segment files.
 In your own directory in that repo copy, edit,
 and version control those files to define the runs that you want to execute.
 
