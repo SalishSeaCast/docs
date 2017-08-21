@@ -50,6 +50,12 @@ The scripts here_ produce the tables.
 
 .. _here: https://bitbucket.org/salishsea/analysis-michael/src/tip/land-processor-elimination/
 
+
+.. _Preferred-MPI-LPE-Decompositions:
+
+Preferred MPI LPE Decompositions
+================================
+
 .. toctree::
 
    LPE-SalishSea-downonegrid2
