@@ -159,9 +159,24 @@ NEMO-3.6-code
 * CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
 * NEMO-3.6 code that we run
 * a merge of the :kbd:`http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE` and our local code
-* maintenance of the repo to handle the merges is decribed in :ref:`NEMO-MirrorMaintenance`
+* maintenance of the repo to handle the merges is decribed in :ref:`NEMO-3.6CodeRepoMaintenance`
 * Bitbucket: https://bitbucket.org/salishsea/nemo-3.6-code/
-* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
+* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/repos-maint/nemo-3.6.html
+
+
+.. _XIOS-2-repo:
+
+XIOS-2 (XML I/O Server)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* private
+  (because the canonical source for this code is :kbd:`http://forge.ipsl.jussieu.fr/ioserver/wiki`)
+* CeCILL_V2 license, copyright Centre National de la Recherche Scientifique CNRS
+* XIOS-2.0 code that we run with NEMO-3.6
+* a checkout of :kbd:`http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/trunk`
+* maintenance of the repo to handle the merging in changes from upstream is decribed in :ref:`XIOS-2CodeRepoMaintenance`
+* Bitbucket: https://bitbucket.org/salishsea/xios-2/
+* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/repos-maint/xios-2.html
 
 
 .. _XIOS-ARCH-repo:

@@ -41,7 +41,7 @@ Clone the Repos
 Assuming that you are using SSH key authentication on Bitbucket
 (see :ref:`vc-with-hg`),
 clone the :ref:`NEMO-3.6-code-repo`,
-:ref:`XIOS-repo`,
+:ref:`XIOS-2-repo`,
 :ref:`NEMO-forcing-repo`,
 and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
 
@@ -49,7 +49,7 @@ and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
 
     cd /data/$USER/MEOPAR/
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-3.6-code NEMO-3.6-code
-    hg clone ssh://hg@bitbucket.org/salishsea/xios XIOS
+    hg clone ssh://hg@bitbucket.org/salishsea/xios-2 XIOS-2
     hg clone ssh://hg@bitbucket.org/salishsea/xios-arch XIOS-ARCH
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     hg clone ssh://hg@bitbucket.org/salishsea/grid
@@ -60,40 +60,40 @@ and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
 
 .. _CompileXIOS-salish:
 
-Compile XIOS
-============
+Compile XIOS-2
+==============
 
-Symlink the XIOS build configuration files for :kbd:`salish` from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS/arch/` directory:
+Symlink the XIOS-2 build configuration files for :kbd:`salish` from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS-2/arch/` directory:
 
 .. code-block:: bash
 
-    cd /data/$USER/MEOPAR/XIOS/arch
+    cd /data/$USER/MEOPAR/XIOS-2/arch
     ln -sf /data/$USER/MEOPAR/XIOS-ARCH/UBC-EOAS/arch-GCC_SALISH.fcm
     ln -sf /data/$USER/MEOPAR/XIOS-ARCH/UBC-EOAS/arch-GCC_SALISH.path
 
-Compile the XIOS input/output server:
+Compile the XIOS-2 input/output server:
 
 .. code-block:: bash
 
-    cd /data/$USER/MEOPAR/XIOS
+    cd /data/$USER/MEOPAR/XIOS-2
     ./make_xios --arch GCC_SALISH --netcdf_lib netcdf4_seq --job 8
 
 .. note::
-    If you have chosen to store XIOS on :file:`ocean`
+    If you have chosen to store XIOS-2 on :file:`ocean`
     (i.e. :file:`/ocean/$USER/MEOPAR/XIOS` )
     then you need to create a symbolic link to :file:`/data/$USER/MEOPAR/XIOS`:
 
     .. code-block:: bash
 
         cd /data/$USER/MEOPAR
-        ln -s /ocean/$USER/MEOPAR/XIOS
+        ln -s /ocean/$USER/MEOPAR/XIOS-2
 
     This is because the NEMO code attempts to find XIOS in :file:`/data/$USER/MEOPAR/XIOS`.
     Alternatively,
     you can use the NEMO :file:`GCC_SALISH_ocean` arch file,
     which will look for XIOS on :file:`ocean`.
 
-    If you have XIOS stored under :file:`/data/$USER/MEOPAR`,
+    If you have XIOS-2 stored under :file:`/data/$USER/MEOPAR`,
     you don't have to worry about this.
 
 
@@ -245,7 +245,7 @@ This requires adding -pg to the two lines in your arch file that start with %FCF
 
 .. code-block:: bash
 
-    %XIOS_HOME           /ocean/$USER/MEOPAR/XIOS
+    %XIOS_HOME           /ocean/$USER/MEOPAR/XIOS-2
 
     %NCDF_INC            -I/usr/include
     %NCDF_LIB            -L/usr/lib -lnetcdff -lnetcdf
