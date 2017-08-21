@@ -164,21 +164,6 @@ NEMO-3.6-code
 * documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
 
 
-.. _XIOS-repo:
-
-XIOS (XML I/O Server)
-~~~~~~~~~~~~~~~~~~~~~
-
-* private
-  (because the canonical source for this code is :kbd:`http://forge.ipsl.jussieu.fr/ioserver/wiki`)
-* CeCILL_V2 license, copyright Centre National de la Recherche Scientifique CNRS
-* XIOS-1.0 code that we run with NEMO-3.6
-* a checkout of the :kbd:`http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/branchs/xios-1.0` branch
-* maintenance of the repo to handle the merging in changes from upstream is decribed in :ref:`NEMO-MirrorMaintenance`
-* Bitbucket: https://bitbucket.org/salishsea/xios/
-* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
-
-
 .. _XIOS-ARCH-repo:
 
 XIOS-ARCH
@@ -394,6 +379,27 @@ plume-paper
 * private until paper is published
 * development of the Salish Sea NEMO plume paper
 * Bitbucket: https://bitbucket.org/salishsea/plume-paper
+
+
+.. _XIOS-repo:
+
+XIOS (XML I/O Server)
+~~~~~~~~~~~~~~~~~~~~~
+
+* private
+  (because the canonical source for this code is :kbd:`http://forge.ipsl.jussieu.fr/ioserver/wiki`)
+* CeCILL_V2 license, copyright Centre National de la Recherche Scientifique CNRS
+* XIOS-1.0 code that we run with NEMO-3.6
+* a checkout of the :kbd:`http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/branchs/xios-1.0` branch
+* maintenance of the repo to handle the merging in changes from upstream is decribed in :ref:`NEMO-MirrorMaintenance`
+* Bitbucket: https://bitbucket.org/salishsea/xios/
+* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
+
+.. note::
+    This is the XIOS-1.0 code.
+    It is archival.
+    The Salish Sea model now uses :ref:`XIOS-2-repo`,
+    and that is the recommended code for any new projects.
 
 
 .. _NEMO-code-repo:
