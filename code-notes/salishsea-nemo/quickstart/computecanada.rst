@@ -54,7 +54,7 @@ Clone the repos needed to run the model:
 
     cd $HOME/MEOPAR
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-3.6-code NEMO-3.6-code
-    hg clone ssh://hg@bitbucket.org/salishsea/xios XIOS
+    hg clone ssh://hg@bitbucket.org/salishsea/xios-2 XIOS-2
     hg clone ssh://hg@bitbucket.org/salishsea/xios-arch XIOS-ARCH
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     hg clone ssh://hg@bitbucket.org/salishsea/grid
@@ -84,42 +84,42 @@ Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python
 
 .. _CompileXIOS-computecanada:
 
-Compile XIOS
-============
+Compile XIOS-2
+==============
 
-First symlink the XIOS build configuration files for the machine that you are working on from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS/arch/` directory, then compile XIOS:
+First symlink the XIOS-2 build configuration files for the machine that you are working on from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS-2/arch/` directory, then compile XIOS-2:
 
 
 :kbd:`graham`:
----------------
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/XIOS/arch
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.env
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.fcm
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.path
-    cd $HOME/MEOPAR/XIOS
-    ./make_xios --arch X64_GRAHAM --netcdf_lib netcdf4_par --job 8
-
-
-:kbd:`cedar`:
 --------------
 
 .. code-block:: bash
 
-    cd $HOME/MEOPAR/XIOS/arch
+    cd $HOME/MEOPAR/XIOS-2/arch
+    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.env
+    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.fcm
+    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.path
+    cd $HOME/MEOPAR/XIOS-2
+    ./make_xios --arch X64_GRAHAM --netcdf_lib netcdf4_par --job 8
+
+
+:kbd:`cedar`:
+-------------
+
+.. code-block:: bash
+
+    cd $HOME/MEOPAR/XIOS-2/arch
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.env
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.fcm
     ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.path
-    cd $HOME/MEOPAR/XIOS
+    cd $HOME/MEOPAR/XIOS-2
     ./make_xios --arch X64_CEDAR --netcdf_lib netcdf4_seq --job 8
 
 
 Compile NEMO-3.6
 ================
 
-Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
+Compile the :kbd:`SalishSea` NEMO configuration and the :program:`rebuild_nemo` tool:
 
 
 :kbd:`graham`:
@@ -134,7 +134,7 @@ Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
 
 
 :kbd:`cedar`:
----------------
+-------------
 
 .. code-block:: bash
 
@@ -144,12 +144,12 @@ Compile the Salish Sea NEMO configuration and the :program:`rebuild_nemo` tool:
     ./maketools -n REBUILD_NEMO -m X64_CEDAR
 
 
-To build a configuration other than :kbd:`SalishSea`, replace :kbd:`SalishSea` with the name of the configuration to be built, e.g. :kbd:`SOG`:
+To build a configuration other than :kbd:`SalishSea`, replace :kbd:`SalishSea` with the name of the configuration to be built, e.g. :kbd:`SMELT`:
 
 .. code-block:: bash
 
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    ./makenemo -n SOG -m X64_CEDAR -j 8
+    ./makenemo -n SMELT -m X64_CEDAR -j 8
 
 
 Prepare and Execute Runs
