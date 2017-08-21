@@ -149,21 +149,6 @@ analysis
     .. _SalishSea-MEOPAR Analysis project: https://bitbucket.org/account/user/salishsea/projects/SSM_ANALYSIS
 
 
-.. _NEMO-code-repo:
-
-NEMO-code
-~~~~~~~~~
-
-* private
-  (because NEMO project requires sign-in to access code)
-* CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
-* NEMO-3.4 code that we run
-* a merge of the :kbd:`http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012` branch and our local code
-* maintenance of the repo to handle the merges is decribed in :ref:`NEMO-MirrorMaintenance`
-* Bitbucket: https://bitbucket.org/salishsea/nemo-code/
-* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
-
-
 .. _NEMO-3.6-code-repo:
 
 NEMO-3.6-code
@@ -409,6 +394,27 @@ plume-paper
 * private until paper is published
 * development of the Salish Sea NEMO plume paper
 * Bitbucket: https://bitbucket.org/salishsea/plume-paper
+
+
+.. _NEMO-code-repo:
+
+NEMO-code
+~~~~~~~~~
+
+* private
+  (because NEMO project requires sign-in to access code)
+* CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
+* NEMO-3.4 code that we run
+* a merge of the :kbd:`http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012` branch and our local code
+* maintenance of the repo to handle the merges is decribed in :ref:`NEMO-MirrorMaintenance`
+* Bitbucket: https://bitbucket.org/salishsea/nemo-code/
+* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
+
+.. note::
+    This is the NEMO-3.4 code.
+    It is archival.
+    The Salish Sea model is now based on :ref:`NEMO-3.6-code-repo`,
+    and that is the recommended code for any new projects.
 
 
 .. _SoG-obs-repo:
