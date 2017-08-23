@@ -287,3 +287,4 @@ Details of Configurations for Results
 
    nowcast
    nowcast-green
+   hindcast
