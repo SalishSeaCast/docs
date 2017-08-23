@@ -40,6 +40,7 @@ Date                       Change                                 New Value     
 12-Sep-2014   1st run results                                      N/A
 28-Dec-2014   Updated Fraser turbidity tracer code and reset       N/A
 31-Aug-2015   accidently switched to rivers for downbyone bathy    N/A
+05-Sep-2015   Increased vertical time stepping nn_traadv_tvd_zts   20
 05-Feb-2017   Switched back to correct rivers                      N/A
 05-Feb-2017   Switched to LiveOcean boundary conditions at JdF     N/A
 ===========  ===================================================  ==============  ==================
