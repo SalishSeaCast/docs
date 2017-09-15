@@ -170,3 +170,10 @@ We are maintaining several local commits to files that do not fit in :file:`MY_S
 .. _9f0335b59c780d055b7466e5ffd641d4ab0234aa: https://bitbucket.org/salishsea/nemo-3.6-code/commits/9f0335b59c780d055b7466e5ffd641d4ab0234aa
 .. _4979fc15317c1c899697c1b89d5a64d688917253: https://bitbucket.org/salishsea/nemo-3.6-code/commits/4979fc15317c1c899697c1b89d5a64d688917253
 
+Some of these are fixed in NEMO upstream:
+
+#. Escape 'ls' in :file:`Fmake_WORK.sh`, `Ticket 1895`_, `Changeset 8527`_
+
+.. _Changeset 8527: https://forge.ipsl.jussieu.fr/nemo/changeset/8527
+.. _Ticket 1895: https://forge.ipsl.jussieu.fr/nemo/ticket/1895
+
