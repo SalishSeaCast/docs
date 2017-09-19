@@ -14,10 +14,9 @@ To satisfy that requirement the following file management strategy has been esta
 
 * The Salish Sea MEOPAR repository of CGRF product files and their NEMO CORE bulk interface representation reside in :file:`/ocean/dlatorne/MEOPAR/CGRF/`
 
-* Within that directory are 2 sub-directories:
+* Within that directory is 1 sub-directory:
 
-  * :file:`rsync-mirror/` is a collection of :file:`yyyy-mm-dd/` directories that contain uncompressed CGRF files for the day identified by the directory name
-  * :file:`NEMO-atmos/` is a collection of symbolic links to the CGRF files using the names required by the NEMO CORE bulk interface.
+  * :file:`NEMO-atmos/` is a collection of CGRF files using the names required by the NEMO CORE bulk interface.
     The :file:`NEMO-atmos/` directory also contains symbolic links to the :ref:`AtmosphericForcingInterpolationWeights` file and the :ref:`NoSnowConstraint` file in the :ref:`grid-repo` repo.
 
 * The files in the :file:`/ocean/dlatorne/MEOPAR/CGRF/` directory are managed by the :command:`salishsea get_cgrf` tool;
@@ -337,6 +336,6 @@ See the `tools docs`_ for details on :file:`nc_tools.generate_pressure_file` met
    `get_cgrf`_ requires a link to :file:`altitude_CGRF.nc` in :file:`/NEMO-atmos/`.
 
 
-.. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and BÃ©lair, S. (2013), A new atmospheric dataset for forcing iceâ€“ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc.. doi: 10.1002/qj.2194 http://dx.doi.org/10.1002/qj.2194
+.. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and Bélair, S. (2013), A new atmospheric dataset for forcing ice–ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc.. doi: 10.1002/qj.2194 http://dx.doi.org/10.1002/qj.2194
 
 .. [Holton1992] Holton, J., An introduction to dynamic meteorology 3rd edition (Acadmeic Press: 1992)
