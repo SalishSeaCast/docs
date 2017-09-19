@@ -6,14 +6,17 @@ Adding Passive Tracers to SalishSea
 
 This page provides instructions on how a configuration including
 tracers was built for the Salish Sea model and how to use it and
-modify it.
+modify it. More information on adding passive tracers can also 
+be found `here_`. 
+
+.. _here: http://ccar-modeling-documentation.readthedocs.io/en/latest/code-notes/TRC/Tracer_define.html
 
 
 SalishSea_TRC Configuration
 ----------------------------
 
 The configuration including the tracers is in SalishSea_TRC.  Provided
-you have an upto date clone of the NEMO 3.4 code, you can
+you have an upto date clone of the NEMO 3.4 code (available on `Bitbucket`_), you can
 build it as
 
 In :kbd:`NEMO-code/NEMOGCM/CONFIG`
@@ -21,6 +24,8 @@ In :kbd:`NEMO-code/NEMOGCM/CONFIG`
 .. code-block:: bash
 
     ./makenemo -n SalishSea_TRC
+
+.. _Bitbucket: https://bitbucket.org/salishsea/nemo-code
 
 New MY_SRC Files
 -----------------
