@@ -108,7 +108,7 @@ To run Ariane, add the path for the Ariane executable to your :kbd:`PATH` enviro
 
 Now you can run Ariane from any directory by typing :kbd:`ariane`.
 
-On :kbd:`orcinus` Ariane runs can also be sumbitted to the queue.
+On :kbd:`orcinus` Ariane runs can also be submitted to the queue.
 An example :kbd:`.pbs` will be included soon.
 
 
