@@ -7,7 +7,7 @@ Adding Passive Tracers to SalishSea
 This page provides instructions on how a configuration including
 tracers was built for the Salish Sea model and how to use it and
 modify it. More information on adding passive tracers can also 
-be found `here_`. 
+be found `here`_. 
 
 .. _here: http://ccar-modeling-documentation.readthedocs.io/en/latest/code-notes/TRC/Tracer_define.html
 
