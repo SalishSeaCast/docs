@@ -34,11 +34,11 @@ Other machines that you may need working environments on later include:
 * :kbd:`salish.eos.ubc.ca`: Our group compute server that runs Linux and has several disk mounts in common with Waterhole workstations.
   :kbd:`salish` is primarily used for short development runs of the Salish Sea NEMO model.
   :kbd:`salish` has several terabytes of storage in its :file:`/data/` filesystem.
-  If your Waterhole workstation does not have access to :file:`/data/` you should open a ticket via the :kbd:`Helpdesk` link on https://my.eos.ubc.ca/ to request that EOAS Comp Staff add a :kbd:`salish /data/` mount on the workstation you are using.
+  If your Waterhole workstation does not have access to :file:`/data/` you should open a ticket via the :kbd:`Helpdesk` link on https://helpdesk.eoas.ubc.ca/ to request that EOAS Comp Staff add a :kbd:`salish /data/` mount on the workstation you are using.
   That will enable you to read/write files on the :kbd:`salish /data/` filesystem without have to sign on to :kbd:`salish` or copy the files from one machine to another.
 * :kbd:`skookum.eos.ubc.ca`: Our group results storage and web server.
   The Salish Sea Nowcast system results are stored on the :file:`/results/` file system on :kbd:`skookum`.
-  If your Waterhole workstation does not have access to :file:`/results/` you should open a ticket via the :kbd:`Helpdesk` link on https://my.eos.ubc.ca/ to request that EOAS Comp Staff add a :kbd:`skookum /results/` mount on the workstation you are using.
+  If your Waterhole workstation does not have access to :file:`/results/` you should open a ticket via the :kbd:`Helpdesk` link on https://helpdesk.eoas.ubc.ca/ to request that EOAS Comp Staff add a :kbd:`skookum /results/` mount on the workstation you are using.
   That will enable you to read files from the :kbd:`skookum /results/` filesystem without have to sign on to :kbd:`skookum` or copy the files from one machine to another.
 * One or more of the Westgrid_ HPC clusters such as :kbd:`jasper.westgrid.ca`, :kbd:`orcinus.westgrid.ca`, or :kbd:`bugaboo.westgrid.ca` that run Linux.
   The Westgrid clusters
