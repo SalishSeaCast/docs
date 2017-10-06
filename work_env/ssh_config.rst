@@ -22,7 +22,7 @@ The public key needs to be stored in the :file:`.ssh/authorized_keys` file on ev
 Because your home directory is shared across all of the Waterhole machines (and salish, and skookum)
 you only need to put your public key in :file:`.ssh/authorized_keys` on any one of those machines.
 On WestGrid you need to put your public key in :file:`.ssh/authorized_keys` on each machine that you use
-(orcinus, jasper, bugaboo, etc.).
+(:kbd:`bugaboo`, :kbd:`cedar`, :kbd:`graham`, :kbd:`orcinus`, etc.).
 
 
 :command:`ssh-agent` Forwarding for :kbd:`salish`

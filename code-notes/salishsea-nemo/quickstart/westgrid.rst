@@ -4,14 +4,11 @@
 Working on :kbd:`westgrid`: NEMO v3.6
 *************************************
 
-This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on WestGrid machines `bugaboo.westgrid.ca`_,
-`jasper.westgrid.ca`_,
-and `orcinus.westgrid.ca`_.
+This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on WestGrid machines `bugaboo.westgrid.ca`_ and `orcinus.westgrid.ca`_.
 
 This guide assumes that your :ref:`WorkingEnvironment` is set up and that you are familiar with :ref:`WorkingOnSalish`.
 
 .. _bugaboo.westgrid.ca: https://www.westgrid.ca/support/systems/bugaboo
-.. _jasper.westgrid.ca: https://www.westgrid.ca/support/systems/jasper
 .. _orcinus.westgrid.ca: https://www.westgrid.ca/support/systems/orcinus
 
 
@@ -41,15 +38,6 @@ The modules needed for each cluster are:
     module load python
     module load intel/15.0.2
 
-:kbd:`jasper`:
---------------
-
-.. code-block:: bash
-
-    module load application/python/2.7.8
-    module load compiler/intel/13.0.1
-    module load library/hdf5/1.8.9
-    module load library/netcdf/4.1.3
 
 :kbd:`orcinus`:
 ---------------
@@ -126,19 +114,6 @@ First symlink the XIOS-2 build configuration files for the machine that you are 
     ./make_xios --arch X64_BUGABOO --netcdf_lib netcdf4_par --job 8
 
 
-:kbd:`jasper`:
---------------
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/XIOS-2/arch
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_JASPER.env
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_JASPER.fcm
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_JASPER.path
-    cd $HOME/MEOPAR/XIOS-2
-    ./make_xios --arch X64_JASPER --netcdf_lib netcdf4_seq --job 8
-
-
 :kbd:`orcinus`:
 ---------------
 
@@ -167,17 +142,6 @@ Compile the :kbd:`SalishSea` NEMO configuration and the :program:`rebuild_nemo` 
     ./makenemo -n SalishSea -m X64_BUGABOO -j 8
     cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
     ./maketools -n REBUILD_NEMO -m X64_BUGABOO
-
-
-:kbd:`jasper`:
---------------
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    ./makenemo -n SalishSea -m X64_JASPER -j 8
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
-    ./maketools -n REBUILD_NEMO -m X64_JASPER
 
 
 :kbd:`orcinus`:

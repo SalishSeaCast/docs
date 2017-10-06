@@ -163,51 +163,25 @@ run,
 and work with the results of NEMO.
 The required modules vary from machine to machine:
 
-.. _LoadingModulesOnJasper:
-
-* On :kbd:`jasper`,
-  the following :command:`module load` commands should be added to your :file:`$HOME/.bashrc` file:
-
-  .. code-block:: bash
-
-      module load application/python/2.7.3
-      module load utility/mercurial/3.5
-      module load library/netcdf/4.1.3
-      module load application/nco/4.3.9
-      module load library/szip/2.1
-
-  The Intel Fortran compiler,
-  OpenMPI,
-  and HDF5 modules will be loaded as side-effects.
-
 .. _LoadingModulesOnOrcinus:
 
-* On :kbd:`orcinus` the only :command:`module load` command you should include in your :file:`$HOME/.bashrc` is:
+* On :kbd:`orcinus` the :command:`module load` commands you should include in your :file:`$HOME/.bashrc` are:
 
   .. code-block:: bash
 
       module load python
-
-  Other module provide the Intel Fortran compiler,
-  the netCDF libraries,
-  etc.
-  Most of our tools load the necessary modules as required,
-  but if you need to load them manually,
-  here is the list of :command:`module load` commands:
-
-  .. code-block:: bash
-
       module load intel
       module load intel/14.0/netcdf-4.3.3.1_mpi
       module load intel/14.0/netcdf-fortran-4.4.0_mpi
       module load intel/14.0/hdf5-1.8.15p1_mpi
+      module load intel/14.0/nco-4.5.2
 
 You can inspect the collection of modules that are loaded with the :command:`module list` command; for example,
-on :kbd:`jasper`:
+on :kbd:`orcinus`:
 
 .. code-block:: bash
 
     module list
     Currently Loaded Modulefiles:
-      1) compiler/intel/12.1           3) application/python/2.7.3      5) library/netcdf/4.1.3
-      2) library/openmpi/1.6.4-intel   4) library/hdf5/1.8.8            6) library/szip/2.1
+      1) python/2.7.3                      3) intel/14.0/netcdf-4.3.3.1         5) intel/14.0/hdf5-1.8.15p1
+      2) intel/14.0.2                      4) intel/14.0/netcdf-fortran-4.4.0   6) intel/14.0/nco-4.5.2

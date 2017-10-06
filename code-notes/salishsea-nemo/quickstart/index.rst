@@ -29,4 +29,3 @@ The sections below briefly describe how to set up and run the NEMO v3.4 version 
 
     salish-old
     orcinus-old
-    jasper-old
