@@ -21,8 +21,8 @@ Everywhere the temperature of the freshwater is set to the temperature of the Fr
 
 Two files are created `rivers_month_201702.nc`_ and `rivers_cnst_201702.nc`_.  The first contains the monthly climatology, the second the yearly average.
 
-.. _rivers_month_201702.nc: https://bitbucket.org/salishsea/rivers/src/tip/rivers_month_201702.nc
-.. _rivers_cnst_201702.nc: https://bitbucket.org/salishsea/rivers/src/tip/rivers_cnst_201702.nc
+.. _rivers_month_201702.nc: https://bitbucket.org/salishsea/rivers-climatology/src/tip/rivers_month_201702.nc
+.. _rivers_cnst_201702.nc: https://bitbucket.org/salishsea/rivers-climatology/src/tip/rivers_cnst_201702.nc
 
 Nowcast Files
 ----------------

@@ -53,7 +53,7 @@ and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
     hg clone ssh://hg@bitbucket.org/salishsea/xios-arch XIOS-ARCH
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     hg clone ssh://hg@bitbucket.org/salishsea/grid
-    hg clone ssh://hg@bitbucket.org/salishsea/rivers
+    hg clone ssh://hg@bitbucket.org/salishsea/rivers-climatology
     hg clone ssh://hg@bitbucket.org/salishsea/tides
     hg clone ssh://hg@bitbucket.org/salishsea/tracers
 

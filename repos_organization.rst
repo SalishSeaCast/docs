@@ -214,8 +214,8 @@ grid
 
 .. _rivers-repo:
 
-rivers
-~~~~~~
+rivers-climatology
+~~~~~~~~~~~~~~~~~~
 
 * public
 * Apache v2.0 license, copyright project contributors and UBC
@@ -225,7 +225,7 @@ rivers
 
   Many of these files originated in the (private) :ref:`NEMO-forcing-repo` repository.
   The commit message history of files from that repository is included in their initial commit messages.
-* Bitbucket: https://bitbucket.org/salishsea/rivers
+* Bitbucket: https://bitbucket.org/salishsea/rivers-climatology
 
 
 .. _tides-repo:
