@@ -57,32 +57,45 @@ Thanks to shared storage between the Waterhole machines and :kbd:`salish` that i
     cat id_rsa.pub >> authorized_keys
 
 
-:command:`ssh-agent` Forwarding for :kbd:`jasper` or for :kbd:`orcinus`
+:command:`ssh-agent` Forwarding for Westgrid and ComputeCanada Clusters
 =======================================================================
 
-Orcinus is exactly the same as jasper, just change the name throughout.
+To set up agent forwarding for a Westgrid or ComputeCanada machine append the appropriate block below to the :file:`$HOME/.ssh/config` file on your Waterhole machine::
 
-To set up agent forwarding for :kbd:`jasper` append the following to the :file:`$HOME/.ssh/config` file on your Waterhole machine::
-
-    Host jasper
-      Hostname  jasper.westgrid.ca
+    Host bugaboo
+      Hostname  bugaboo.westgrid.ca
       User  userid
       ForwardAgent  yes
 
-where :kbd:`userid` is your Westgrid user id.
+    Host cedar
+      Hostname  cedar.computecanada.ca
+      User  userid
+      ForwardAgent  yes
 
-.. note:: If you do not have a Westgrid account follow the instructions here to make one: :ref:`westgridAccount`.
+    Host graham
+      Hostname  graham.computecanada.ca
+      User  userid
+      ForwardAgent  yes
 
-Install your :command:`ssh` public key on :kbd:`jasper`:
+    Host orcinus
+      Hostname  orcinus.westgrid.ca
+      User  userid
+      ForwardAgent  yes
+
+where :kbd:`userid` is your Westgrid or ComputeCanada user id.
+
+.. note:: If you do not have a Westgrid or ComputeCanada account follow the instructions here to make one: :ref:`westgridAccount`.
+
+Install your :command:`ssh` public key on the remote machine;
+:kbd:`cedar`, for example:
 
 .. code-block:: bash
 
-    cd $HOME/.ssh/
-    scp id_rsa.pub jasper:.ssh/authorized_keys
+    ssh-copy-id -i $HOME/.ssh/id_rsa cedar
 
-Note: You may have to create the :file:`.ssh` directory in your home directory on :kbd:`jasper` first. You will be prompted for your Westgrid password,
-but after the key has been installed you should be able to use :command:`ssh`,
+You will be prompted for your Westgrid or ComputeCanada password.
+After the key has been installed you should be able to use :command:`ssh`,
 :command:`scp`,
-and :command:`sftp` to connect to :kbd:`jasper` without having to type your password.
+and :command:`sftp` to connect to the remote machine without having to type your password.
 Likewise,
-Mercurial commands on :kbd:`jasper` should not require your to type your :command:`ssh` key pass phrase.
+Mercurial commands on the remove machine should not require your to type your :command:`ssh` key pass phrase.
