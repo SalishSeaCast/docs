@@ -61,7 +61,6 @@ Clone the repos needed to run the model:
     hg clone ssh://hg@bitbucket.org/salishsea/rivers-climatology
     hg clone ssh://hg@bitbucket.org/salishsea/tides
     hg clone ssh://hg@bitbucket.org/salishsea/tracers
-    hg clone ssh://hg@bitbucket.org/salishsea/tools
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
     hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
 
@@ -77,7 +76,6 @@ Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python
 
     mkdir -p $HOME/.local
     cd $HOME/MEOPAR/
-    pip install --user --editable tools/SalishSeaTools
     pip install --user --editable NEMO-Cmd
     pip install --user --editable SalishSeaCmd
 
