@@ -4,7 +4,7 @@
 Working on :kbd:`computecanada`: NEMO v3.6
 ******************************************
 
-This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on the new compute canada machines `graham.computecanada.ca`_ and `cedar.computecanada.ca`_.
+This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on the ComputeCanada machines `graham.computecanada.ca`_ and `cedar.computecanada.ca`_.
 
 This guide assumes that your :ref:`WorkingEnvironment` is set up and that you are familiar with :ref:`WorkingOnSalish`.
 
@@ -15,20 +15,13 @@ This guide assumes that your :ref:`WorkingEnvironment` is set up and that you ar
 Modules setup
 =============
 
-When working on the Compute Canada clusters, the :command:`module load` command must be used to load extra software components.
-The required modules (and their names) typically vary from cluster to cluster.
+When working on the ComputeCanada clusters, the :command:`module load` command must be used to load extra software components.
 
 You can manually load the modules each time you log in,
-or you can add the lines to your :file:`.bashrc` file so that they are automatically loaded upon login.
+or you can add the lines to your :file:`$HOME/.bashrc` file so that they are automatically loaded upon login.
 
-Lastly, you need to modify your search path such that your shell can find python scripts installed with :kbd:`pip --user`.
-Change the :kbd:`lpath` line in the :kbd:`modify search path` section of :file:`.bash_profile` to include :file:`$HOME/.local/bin` and :file:`$HOME/bin` in your search path:
-
-.. code-block:: bash
-
-    lpath=$HOME/.local/bin:$HOME/bin
-
-At present, both Graham and Cedar are configured similarly. The modules needed are:
+At present, :kbd:`cedar` and :kbd:`graham` are configured similarly.
+The modules needed are:
 
 .. code-block:: bash
 
@@ -44,9 +37,31 @@ At present, both Graham and Cedar are configured similarly. The modules needed a
 Create a Workspace and Clone the Repositories
 =============================================
 
+:kbd:`cedar` and :kbd:`graham` provide `several different types of file storage`_.
+We use project space for our working environments because it is large,
+high performance,
+and backed up.
+Scratch space is even larger,
+also high performance,
+but not backed up,
+so we use that as the space to execute NEMO runs in,
+but generally move the run results to project space.
+
+Both systems provide environment variables that are more convenient that remembering full paths to access your project and scratch spaces:
+
+* Your project space is at :file:`$PROJECT/$USER/`
+* Your scratch space is at :file:`$SCRATCH/`
+* Daily atmospheric,
+  river,
+  and west boundary forcing files are in the :file:`$PROJECT/SalishSea/forcing/` tree
+
+.. _several different types of file storage: https://docs.computecanada.ca/wiki/Storage_and_file_management
+
+Create a :file:`MEOPAR/` directory tree in your project space:
+
 .. code-block:: bash
 
-    mkdir -p $HOME/MEOPAR/SalishSea/results
+    mkdir -p $PROJECT/$USER/MEOPAR/SalishSea/results
 
 Clone the repos needed to run the model:
 
@@ -64,18 +79,15 @@ Clone the repos needed to run the model:
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
     hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
 
-There is no need to clone the :file:`docs` or :file:`analysis` repos at Cedar or Graham.
 
+Install the Command Processor Packages
+======================================
 
-Install Tools and Command Processor Packages
-============================================
-
-Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python packages:
+Install the :ref:`NEMO-CommandProcessor` and :ref:`SalishSeaCmdProcessor` Python packages:
 
 .. code-block:: bash
 
-    mkdir -p $HOME/.local
-    cd $HOME/MEOPAR/
+    cd $PROJECT/$USER/MEOPAR/
     pip install --user --editable NEMO-Cmd
     pip install --user --editable SalishSeaCmd
 
@@ -85,7 +97,20 @@ Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python
 Compile XIOS-2
 ==============
 
-First symlink the XIOS-2 build configuration files for the machine that you are working on from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS-2/arch/` directory, then compile XIOS-2:
+First symlink the XIOS-2 build configuration files for the machine that you are working on from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS-2/arch/` directory,
+then compile XIOS-2:
+
+:kbd:`cedar`:
+-------------
+
+.. code-block:: bash
+
+    cd $PROJECT/$USER/MEOPAR/XIOS-2/arch
+    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.env
+    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.fcm
+    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.path
+    cd $PROJECT/$USER/MEOPAR/XIOS-2
+    ./make_xios --arch X64_CEDAR --job 8
 
 
 :kbd:`graham`:
@@ -93,25 +118,12 @@ First symlink the XIOS-2 build configuration files for the machine that you are 
 
 .. code-block:: bash
 
-    cd $HOME/MEOPAR/XIOS-2/arch
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.env
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.fcm
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.path
-    cd $HOME/MEOPAR/XIOS-2
-    ./make_xios --arch X64_GRAHAM --netcdf_lib netcdf4_par --job 8
-
-
-:kbd:`cedar`:
--------------
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/XIOS-2/arch
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.env
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.fcm
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.path
-    cd $HOME/MEOPAR/XIOS-2
-    ./make_xios --arch X64_CEDAR --netcdf_lib netcdf4_seq --job 8
+    cd $PROJECT/$USER/MEOPAR/XIOS-2/arch
+    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.env
+    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.fcm
+    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.path
+    cd $PROJECT/$USER/MEOPAR/XIOS-2
+    ./make_xios --arch X64_GRAHAM --job 8
 
 
 Compile NEMO-3.6
@@ -119,34 +131,33 @@ Compile NEMO-3.6
 
 Compile the :kbd:`SalishSea` NEMO configuration and the :program:`rebuild_nemo` tool:
 
+:kbd:`cedar`:
+-------------
+
+.. code-block:: bash
+
+    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+    ./makenemo -n SalishSea -m X64_CEDAR -j 8
+    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
+    ./maketools -n REBUILD_NEMO -m X64_CEDAR
+
 
 :kbd:`graham`:
 --------------
 
 .. code-block:: bash
 
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
     ./makenemo -n SalishSea -m X64_GRAHAM -j 8
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
+    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
     ./maketools -n REBUILD_NEMO -m X64_GRAHAM
-
-
-:kbd:`cedar`:
--------------
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    ./makenemo -n SalishSea -m X64_CEDAR -j 8
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
-    ./maketools -n REBUILD_NEMO -m X64_CEDAR
 
 
 To build a configuration other than :kbd:`SalishSea`, replace :kbd:`SalishSea` with the name of the configuration to be built, e.g. :kbd:`SMELT`:
 
 .. code-block:: bash
 
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
     ./makenemo -n SMELT -m X64_CEDAR -j 8
 
 
@@ -168,7 +179,7 @@ and gather the results for a run:
 
 .. code-block:: bash
 
-    salishsea run SalishSea.yaml $HOME/MEOPAR/SalishSea/results/my_excellent_results
+    salishsea run SalishSea.yaml $PROJECT/$USER/MEOPAR/SalishSea/results/my_excellent_results
 
 :command:`salishsea run` returns the relative path and name of the temporary run directory,
 and the job identifier assigned by the queue manager,
@@ -176,12 +187,10 @@ something like:
 
 .. code-block:: bash
 
-    salishsea_cmd.prepare INFO: Created run directory /home/dlatorne/MEOPAR/SalishSea/a90d391c-0e1e-11e4-aa4e-6431504adba6
-    salishsea_cmd.run INFO: 3544250.orca2.ibb
+    salishsea_cmd.run INFO: Created run directory /scratch/dlatorne/20mar17nowcast16x34_2017-10-06T101548.694389-0700
+    salishsea_cmd.run INFO: Submitted batch job 1578481
 
-You can use the job identifier with :program:`qstat`,
-:program:`showstart`,
-and :program:`checkjob` to monitor the execution status of your job.
+You can use the batch job number with :command:`squeue --job` and :command:`sacct --job` to monitor the execution status of your job.
 
 When the job completes the results should have been gathered in the directory you specified in the :command:`salishsea run` command and the temporary run directory should have been deleted.
 
