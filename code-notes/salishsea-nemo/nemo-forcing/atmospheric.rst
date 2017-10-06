@@ -19,8 +19,7 @@ To satisfy that requirement the following file management strategy has been esta
   * :file:`NEMO-atmos/` is a collection of CGRF files using the names required by the NEMO CORE bulk interface.
     The :file:`NEMO-atmos/` directory also contains symbolic links to the :ref:`AtmosphericForcingInterpolationWeights` file and the :ref:`NoSnowConstraint` file in the :ref:`grid-repo` repo.
 
-* The files in the :file:`/ocean/dlatorne/MEOPAR/CGRF/` directory are managed by the :command:`salishsea get_cgrf` tool;
-  see the :ref:`salishsea-get_cgrf` docs.
+* The files in the :file:`/ocean/dlatorne/MEOPAR/CGRF/` directory are managed by the :command:`salishsea get_cgrf` tool.
 
 * The namelist that directs NEMO to use the files in :file:`NEMO-atmos/` looks like:
 
@@ -297,7 +296,7 @@ and non-executable with:
 
     chmod 664 2002-09-15/*
 
-See the :command:`salishsea` :ref:`salishsea-get_cgrf` docs for details of a tool that automates this process.
+The :command:`salishsea get_cgrf` tool automates this process.
 
 
 .. _Pressure-Correction:
@@ -323,19 +322,17 @@ To arrive at this formula we have made a few assumptions:
 
 The altitude of each grid cell is stored in a file :file:`altitude_CGRF.nc` in the :file:`tools/I_ForcingFiles/Atmos` repository.
 
-Ths sea level pressure calculation is performed in :file:`nc_tools.generate_pressure_file`, which is used in `get_cgrf`_ to correct pressure files on download.
+Ths sea level pressure calculation is performed in :file:`nc_tools.generate_pressure_file`, which is used in :command:`salishsea get_cgrf` to correct pressure files on download.
 Corrected pressure files are named :file:`slp_corr_y0000m00d00.nc`.
 See the `tools docs`_ for details on :file:`nc_tools.generate_pressure_file` method.
-
-.. _get_cgrf: https://salishseacmd.readthedocs.io/en/latest/subcommands.html#salishsea-get-cgrf
 
 .. _tools docs: https://salishsea-meopar-tools.readthedocs.io/en/latest/SalishSeaTools/api.html#salishsea_tools.nc_tools.generate_pressure_file
 
 .. note::
 
-   `get_cgrf`_ requires a link to :file:`altitude_CGRF.nc` in :file:`/NEMO-atmos/`.
+   :command:`salishsea get_cgrf` requires a link to :file:`altitude_CGRF.nc` in :file:`/NEMO-atmos/`.
 
 
-.. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and Bélair, S. (2013), A new atmospheric dataset for forcing ice–ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc.. doi: 10.1002/qj.2194 http://dx.doi.org/10.1002/qj.2194
+.. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and BÃ©lair, S. (2013), A new atmospheric dataset for forcing iceâ€“ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc.. doi: 10.1002/qj.2194 http://dx.doi.org/10.1002/qj.2194
 
 .. [Holton1992] Holton, J., An introduction to dynamic meteorology 3rd edition (Acadmeic Press: 1992)
