@@ -160,6 +160,11 @@ Date                       Change                                 New Value     
 
 29-Apr-2017  Restored missing light attenuation with depth term                   fd69c1dc91be_
 
+25-Aug-2017  Changed to v201702 bathymetry and parameters
+             (see :ref:`HindcastResults` for details).
+             Restart files from :file:`hindcast/24aug17`.
+             *nowcast-green is now the daily "run of record".*
+
 07-Oct-2017  Updated bathymetry to correct smoothing in Puget
              Sound, etc.
 ===========  ===================================================  ==============  ==================
