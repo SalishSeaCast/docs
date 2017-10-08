@@ -159,6 +159,9 @@ Date                       Change                                 New Value     
 25-Apr-2017  Increase lateral viscosity and diffusivity            2.2 m2/s       2c892a5bae80_
 
 29-Apr-2017  Restored missing light attenuation with depth term                   fd69c1dc91be_
+
+07-Oct-2017  Updated bathymetry to correct smoothing in Puget
+             Sound, etc.
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34

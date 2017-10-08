@@ -88,7 +88,10 @@ Model Parameter Changes Over Time
 09-Jan-2017  Updated NEMO code to NEMO-3.6r6770+ |br|                             3b0accb0e693_ |br|
              Change to Ceph/NFS shared storage on west.cloud.
 
-27-Apr-2017  Increase lateral viscosity and diffusivity            2.2 m2/s       2c892a5bae80_
+27-Apr-2017  Increased lateral viscosity and diffusivity          2.2 m2/s        2c892a5bae80_
+
+07-Oct-2017  Updated bathymetry to correct smoothing in Puget
+             Sound, etc.
 ===========  ===================================================  ==============  ==================
 
 .. _efa8c39a9a7c: https://bitbucket.org/salishsea/ss-run-sets/commits/efa8c39a9a7c
