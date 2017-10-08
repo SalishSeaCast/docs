@@ -90,6 +90,12 @@ Model Parameter Changes Over Time
 
 27-Apr-2017  Increased lateral viscosity and diffusivity          2.2 m2/s        2c892a5bae80_
 
+27-Aug-2017  Changed to v201702 bathymetry and parameters
+             (see :ref:`HindcastResults` for details).
+             Restart file from :file:`nowcast-green/26aug17`.
+             nowcast-blue and nowcast-dev runs henceforth use
+             previous day's nowcast-green restart file.
+
 07-Oct-2017  Updated bathymetry to correct smoothing in Puget
              Sound, etc.
 ===========  ===================================================  ==============  ==================
