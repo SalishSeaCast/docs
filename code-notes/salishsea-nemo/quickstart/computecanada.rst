@@ -194,4 +194,4 @@ You can use the batch job number with :command:`squeue --job` and :command:`sacc
 
 When the job completes the results should have been gathered in the directory you specified in the :command:`salishsea run` command and the temporary run directory should have been deleted.
 
-To view and analyze the run results copy them to your :file:`/ocean/` workspace with :program:`scp`, :program:`sftp` or :program:`rsync`.
+To view and analyze the run results copy them to your :file:`/data/$USER/results/` workspace with :program:`scp`, :program:`sftp` or :program:`rsync`.
