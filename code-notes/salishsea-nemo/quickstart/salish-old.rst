@@ -101,6 +101,9 @@ something like:
     salishsea_cmd.prepare INFO: Created run directory ../../SalishSea/38e87e0c-472d-11e3-9c8e-0025909a8461
     salishsea_cmd.run INFO: 57.master
 
+:command:`salishsea run` has a number of command-line option flags that are useful for controlling details of how runs are executed,
+and for debugging your YAML files and the symlinks in the temporary run directory.
+Please see :command:`salishsea help run` or the :ref:`SalishSeaCmd package docs <salishseacmd:salishsea-run>`.
 
 You can use the :program:`qstat` command to monitor the execution status of your job.
 
