@@ -230,6 +230,10 @@ something like:
     salishsea_cmd.prepare INFO: Created run directory /home/dlatorne/MEOPAR/SalishSea/a90d391c-0e1e-11e4-aa4e-6431504adba6
     salishsea_cmd.run INFO: 3544250.orca2.ibb
 
+:command:`salishsea run` has a number of command-line option flags that are useful for controlling details of how runs are executed,
+and for debugging your YAML files and the symlinks in the temporary run directory.
+Please see :command:`salishsea help run` or the :ref:`SalishSeaCmd package docs <salishseacmd:salishsea-run>`.
+
 You can use the job identifier with :program:`qstat`,
 :program:`showstart`,
 and :program:`checkjob` to monitor the execution status of your job.

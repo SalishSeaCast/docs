@@ -190,6 +190,10 @@ something like:
     salishsea_cmd.run INFO: Created run directory /scratch/dlatorne/20mar17nowcast16x34_2017-10-06T101548.694389-0700
     salishsea_cmd.run INFO: Submitted batch job 1578481
 
+:command:`salishsea run` has a number of command-line option flags that are useful for controlling details of how runs are executed,
+and for debugging your YAML files and the symlinks in the temporary run directory.
+Please see :command:`salishsea help run` or the :ref:`SalishSeaCmd package docs <salishseacmd:salishsea-run>`.
+
 You can use the batch job number with :command:`squeue --job` and :command:`sacct --job` to monitor the execution status of your job.
 
 When the job completes the results should have been gathered in the directory you specified in the :command:`salishsea run` command and the temporary run directory should have been deleted.
