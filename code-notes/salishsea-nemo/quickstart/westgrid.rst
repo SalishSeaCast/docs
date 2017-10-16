@@ -199,4 +199,4 @@ and :program:`checkjob` to monitor the execution status of your job.
 
 When the job completes the results should have been gathered in the directory you specified in the :command:`salishsea run` command and the temporary run directory should have been deleted.
 
-To view and analyze the run results copy them to your :file:`/data/$USER/results/` workspace with :program:`scp`, :program:`sftp` or :program:`rsync`.
+To view and analyze the run results copy them to your EOAS :file:`/data/$USER/results/` workspace with :program:`scp`, :program:`sftp` or :program:`rsync`.
