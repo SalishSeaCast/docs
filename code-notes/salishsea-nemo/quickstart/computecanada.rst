@@ -182,6 +182,9 @@ The namelists are described in the `NEMO-3.6 Book`_.
 
 .. _NEMO-3.6 Book: https://www.nemo-ocean.eu/wp-content/uploads/NEMO_book.pdf
 
+Please see the sections below for details of using forcing climatology and shared daily forcing files in your runs,
+and examples of run description and namelist file sections.
+
 Use :program:`salishsea` :ref:`salishsea-run` to prepare,
 execute,
 and gather the results for a run:
@@ -208,3 +211,25 @@ You can use the batch job number with :command:`squeue --job` and :command:`sacc
 When the job completes the results should have been gathered in the directory you specified in the :command:`salishsea run` command and the temporary run directory should have been deleted.
 
 To view and analyze the run results copy them to your EOAS :file:`/data/$USER/results/` workspace with :program:`scp`, :program:`sftp` or :program:`rsync`.
+
+
+Forcing Climatology and Daily Files
+===================================
+
+Model runs use a mixture of climatologies and daily forcing from other operational models or observations:
+
+* Atmospheric forcing is almost always from the Environment and Climate Change Canada (ECCC) `High Resolution Deterministic Prediction System`_ (HRDPS) model hourly forecasts.
+
+.. _High Resolution Deterministic Prediction System: https://weather.gc.ca/grib/grib2_HRDPS_HR_e.html
+
+* Tides are,
+  by definition,
+  climatological.
+
+* Most of the river run-offs are climatological,
+  but daily average discharge and turbidity for the Fraser River may also be used.
+
+* Tracers at the northern boundary in Johnstone Strait are climatological.
+  At the western boundary at the mouth of the Juan de Fuca Strait we have hourly tracer fields from the University of Washington `LiveOcean model`_ since 4-Feb-2017 as well as climatologies.
+
+  .. _LiveOcean model: https://faculty.washington.edu/pmacc/LO/LiveOcean.html
