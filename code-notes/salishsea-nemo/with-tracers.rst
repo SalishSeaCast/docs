@@ -17,7 +17,7 @@ SalishSea_TRC Configuration
 
 The configuration including the tracers is in SalishSea_TRC.  Provided
 you have an upto date clone of the NEMO 3.6 code (available on `Bitbucket`_), you can
-build it on Salish in :kbd:`NEMO-3.6-code/NEMOGCM/CONFIG as
+build it on Salish in :kbd:`NEMO-3.6-code/NEMOGCM/CONFIG` as
 
 .. code-block:: bash
 
@@ -61,7 +61,7 @@ Two new namelist files are included: :kbd:`namlist_top_ref` and
 :kbd:`namelist_top_cfg`.  The main :kbd:`namelist_ref` and :kbd:`namelist_cfg`
 should be copied or symlinked from an appropriate SalishSea namelist.
 
-:kbd:`namelist_top_red` defines the output names of the tracer.  You
+:kbd:`namelist_top_ref` defines the output names of the tracer.  You
 could also add tracer damping using this namelist.  Also change this
 file to use a restart file for the tracers.
 
