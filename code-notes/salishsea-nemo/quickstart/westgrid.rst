@@ -124,6 +124,15 @@ First symlink the XIOS-2 build configuration files for the machine that you are 
     cd $HOME/MEOPAR/XIOS-2
     ./make_xios --arch X64_ORCINUS --netcdf_lib netcdf4_par --job 8
 
+If you need to do a clean build of XIOS-2,
+you can use:
+
+.. code-block:: bash
+
+    ./tools/FCM/bin/fcm build --clean
+
+to clear away all artifacts of the previous build.
+
 
 Compile NEMO-3.6
 ================
