@@ -96,6 +96,15 @@ Compile the XIOS-2 input/output server:
     If you have XIOS-2 stored under :file:`/data/$USER/MEOPAR`,
     you don't have to worry about this.
 
+If you need to do a clean build of XIOS-2,
+you can use:
+
+.. code-block:: bash
+
+    ./tools/FCM/bin/fcm build --clean
+
+to clear away all artifacts of the previous build.
+
 
 Compile NEMO-3.6
 ================

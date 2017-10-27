@@ -125,6 +125,15 @@ then compile XIOS-2:
     cd $PROJECT/$USER/MEOPAR/XIOS-2
     ./make_xios --arch X64_GRAHAM --job 8
 
+If you need to do a clean build of XIOS-2,
+you can use:
+
+.. code-block:: bash
+
+    ./tools/FCM/bin/fcm build --clean
+
+to clear away all artifacts of the previous build.
+
 
 Compile NEMO-3.6
 ================
