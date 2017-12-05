@@ -31,14 +31,14 @@ New MY_SRC Files
 There are three extra modified fortran files to be found in MY_SRC (most of
 the other files are symlinked to the SalishSea and SMELT configuration).
 
-The file :kbd:`par_my_trc.F90` specifies that one passive tracer is
-to be used and will have the last index of jpmyt1.
+The file :kbd:`par_my_trc.F90` specifies that six passive tracers are
+to be used and will have the last index of jpmyt1, jpmyt2, jpmty3, jpmty4, jpmty5, jpmty6 respectively.
 
 The file :kbd:`trcini_my_trc.F90` has been barely changed from the
 original (in :kbd:`NEMO-3.6-code/NEMOGCM/NEMO/TOP_SRC/MY_TRC`).  It now 
-writes out the number of tracers and sets the tracer to 1 below 
-depth level 20.  If you wished to initialize tracers differently, 
-that would go here.
+writes out the number of tracers and sets the tracer concentration to 1 below 
+depth level 10, 15, 19, 22, 24, and 25 corresponding to depths 10, 15, 20, 30, 45, and 60 m respectively.  
+If you wished to initialize the tracers differently, that would go here.
 
 The file :kbd:`trcsms_my_trc.F90` defines the chemistry/biology to be
 done to the tracers. It has been left mostly unchanged from the original
