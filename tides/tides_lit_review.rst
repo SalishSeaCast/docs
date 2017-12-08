@@ -146,7 +146,7 @@ Group's website: http://faculty.washington.edu/pmacc/MoSSea/index.html
 
 References
 -------------------------
-* Egbert, G.D. and S.Y. Erofeeva, 2002. Efficient inverse modeling of barotropic ocean tides, Joundal of Atmospheric and Oceanic Technology, 19, 183-204.
+* Egbert, G.D. and S.Y. Erofeeva, 2002. Efficient inverse modeling of barotropic ocean tides, Jounal of Atmospheric and Oceanic Technology, 19, 183-204.
 
 * Foreman, M.G.G., R.A. Walters, R.F. Henry, C.P. Keller and A.G. Dolling, 1995. A tidal model for eastern Juan de Fuca Strait and the southern Strait of Georgia, Journal of Geophysical Research, 100, 721-740.
 
