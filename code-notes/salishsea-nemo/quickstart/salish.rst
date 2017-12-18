@@ -78,24 +78,6 @@ Compile the XIOS-2 input/output server:
     cd /data/$USER/MEOPAR/XIOS-2
     ./make_xios --arch GCC_SALISH --netcdf_lib netcdf4_seq --job 8
 
-.. note::
-    If you have chosen to store XIOS-2 on :file:`ocean`
-    (i.e. :file:`/ocean/$USER/MEOPAR/XIOS` )
-    then you need to create a symbolic link to :file:`/data/$USER/MEOPAR/XIOS`:
-
-    .. code-block:: bash
-
-        cd /data/$USER/MEOPAR
-        ln -s /ocean/$USER/MEOPAR/XIOS-2
-
-    This is because the NEMO code attempts to find XIOS in :file:`/data/$USER/MEOPAR/XIOS`.
-    Alternatively,
-    you can use the NEMO :file:`GCC_SALISH_ocean` arch file,
-    which will look for XIOS on :file:`ocean`.
-
-    If you have XIOS-2 stored under :file:`/data/$USER/MEOPAR`,
-    you don't have to worry about this.
-
 If you need to do a clean build of XIOS-2,
 you can use:
 
@@ -109,13 +91,17 @@ to clear away all artifacts of the previous build.
 Compile NEMO-3.6
 ================
 
-Compile and link the Salish Sea NEMO configuration and the XIOS server with the :kbd:`salish` architecture definitions,
+Compile the :kbd:`SalishSea` NEMO configuration and link it to XIOS-2 using the :kbd:`salish` architecture definitions,
 distributing the compilation over 8 cores.
+The NEMO ARCH files use the :envvar:`XIOS_HOME` environment variable to find the XIOS-2 library you built above.
+:envvar:`XIOS_HOME` *must* be an absolute path to your XIOS-2 clone directory.
+You can set :envvar:`XIOS_HOME` on the command-line before the :command:`makenemo` and :command:`maketools` commands as shown below,
+or you can set and export the value of :envvar:`XIOS_HOME` in your :file:`$HOME/.bashrc` file.
 
 .. code-block:: bash
 
     cd NEMO-3.6-code/NEMOGCM/CONFIG
-    ./makenemo -n SalishSea -m GCC_SALISH -j8
+    XIOS_HOME=/data/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSea -m GCC_SALISH -j8
 
 The resulting executable is located in :file:`NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/`.
 
@@ -124,7 +110,7 @@ Compile and link the :program:`rebuild_nemo` tool:
 .. code-block:: bash
 
     cd NEMO-3.6-code/NEMOGCM/TOOLS
-    ./maketools -m GCC_SALISH -n REBUILD_NEMO
+    XIOS_HOME=/data/$USER/MEOPAR/XIOS-2/ ./maketools -m GCC_SALISH -n REBUILD_NEMO
 
 See :ref:`rebuild-nemo-tool` for more information about it.
 
@@ -282,7 +268,7 @@ Using the modified arch file, compile your NEMO configuration, e.g.:
 
 .. code-block:: bash
 
-    ./makenemo -n SalishSea -m GCC_SALISH_ocean_gprof
+    XIOS_HOME=/data/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSea -m GCC_SALISH_ocean_gprof
 
 
 2. Run the model as usual from your prepared run directory.
