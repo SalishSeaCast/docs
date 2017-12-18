@@ -156,8 +156,10 @@ After the :ref:`PullChangesFromNEMOsvn` has been completed the workflow to merge
    especially if manual merges of :file:`MY_SRC/` files were required,
    so that they can manage merging changes into any untracked :file:`MY_SRC/` files they may have.
 
+
 Local commits
-=======================================================================
+=============
+
 We are maintaining several local commits to files that do not fit in :file:`MY_SRC/` directories. They are:
 
 #. Import changeset 7751 from upstream NEMO: `900e1ce4066f2a64223b502167a9a15a6d7c7b2d`_
