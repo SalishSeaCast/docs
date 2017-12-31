@@ -167,6 +167,9 @@ Date                       Change                                 New Value     
 
 07-Oct-2017  Updated bathymetry to correct smoothing in Puget
              Sound, etc.
+             
+30-Dec-2017  New LiveOcean boundary condition processor with
+             longer western boundary and NO3 from LiveOcean
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
