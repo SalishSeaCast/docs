@@ -45,6 +45,7 @@ Contents
    code-notes/salishsea-nemo/index
    results_server/index
    realtimeNEMO36/index
+   NEMO36ModelEvaluation201702/index
    tides/index
    tidalcurrents/index
    rivers/index
