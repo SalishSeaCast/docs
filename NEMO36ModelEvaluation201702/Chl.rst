@@ -1,13 +1,14 @@
-.. _Chloryphyll:
+.. _Chlorophyll:
 
 ********************
-Chloryphyll
+Chlorophyll
 ********************
 
 Citizen Science
 ====================
 
-2016 chloryphyll measurements from the Citizen Science program was compared with the model. Samples with quality flag of 4 were not compared, leading to 99 usuable sample. 
+2016 chlorophyll measurements from the Citizen Science program was compared with the model. 
+Samples with quality flag of 4 were not compared, leading to 99 usuable sample. 
 
 +-------------------------+-----------------+
 |    Statistic            | Value           |
@@ -28,7 +29,8 @@ Citizen Science
 Ferry
 =======================
 
-In addition to not using chloryphyll data where the one or more of longitude, latitude, chloryphyll, or time is masked, ferry chloryphyll values > 25 :math:`\mu` g / L were excluded. 
+In addition to not using chlorophyll data where the one or more of longitude, 
+latitude, chlorophyll, or time is masked, ferry chlorophyll values > 25 :math:`\mu` g / L were excluded. 
 
 +-------------------------+-----------------+
 |    Statistic            | Value           |
