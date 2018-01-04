@@ -12,18 +12,20 @@ be found `here`_.
 .. _here: http://ccar-modeling-documentation.readthedocs.io/en/latest/code-notes/TRC/Tracer_define.html
 
 
-SalishSea_TRC Configuration
+Compile SalishSea_TRC
 ----------------------------
 
-The configuration including the tracers is in SalishSea_TRC.  Provided
-you have an upto date clone of the NEMO 3.6 code (available on `Bitbucket`_), you can
-build it on Salish in :kbd:`NEMO-3.6-code/NEMOGCM/CONFIG` as
+The configuration including the tracers is SalishSea_TRC.  
+The NEMO ARCH files use the :envvar:`XIOS_HOME` environment variable to find the XIOS-2 library you built above.
+:envvar:`XIOS_HOME` *must* be an absolute path to your XIOS-2 clone directory.
+You can set :envvar:`XIOS_HOME` on the command-line before the :command:`makenemo` and :command:`maketools` commands as shown below,
+or you can set and export the value of :envvar:`XIOS_HOME` in your :file:`$HOME/.bashrc` file.
 
 .. code-block:: bash
 
-    ./makenemo -n SalishSea_TRC -m GCC_SALISH -j8
+    cd NEMO-3.6-code/NEMOGCM/CONFIG
+    XIOS_HOME=/data/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSea_TRC -m GCC_SALISH -j8
 
-.. _Bitbucket: https://bitbucket.org/salishsea/nemo-3.6-code
 
 New MY_SRC Files
 -----------------
