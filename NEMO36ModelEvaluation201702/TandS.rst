@@ -76,6 +76,17 @@ Below, statistics and plots are for model surface, and the observation - model p
 .. figure:: images/waterqualitybuoyts.png
 .. figure:: images/waterqualitybuoyom.png
 
-`Water quality buoy notebook`_
+`Water quality buoy notebook (daily averages)`_
 
-.. _Water quality buoy notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/waterqualitybuoy-daily.ipynb
+`Water quality buoy notebook (hourly interpolated averages)`_
+
+.. _Water quality buoy notebook (daily averages): https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/waterqualitybuoy-daily.ipynb
+.. _Water quality buoy notebook (hourly interpolated averages): https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/waterqualitybuoy-hourly.ipynb
+
+VENUS nodes
+======================
+
+Comparison to the observed salinity were made to the model's (then called hindcast) salinity. 
+
+.. figure:: images/ComparisonHindcastVENUS.png
+

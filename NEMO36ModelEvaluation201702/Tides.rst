@@ -4,4 +4,4 @@
 Tides
 **************
 
-VENUS nodes
+.. figure:: images/CompareVENUSTides.png
