@@ -20,7 +20,7 @@ Samples with quality flag of 4 were not compared, leading to 99 usuable sample.
 | Willmott Skill Score    | 0.512476372038  |
 +-------------------------+-----------------+
 
-.. figure:: images/chlcs.png
+.. figure:: images/CitSciChl.png
 
 `CitSci Chl notebook`_
 
