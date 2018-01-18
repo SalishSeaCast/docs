@@ -6,26 +6,24 @@ Temperature and Salinity
 
 Ferry
 =================
-Only samples with valid times, longitude, latitude, and salinity values were used in the compairson. 
+Only samples with valid times, longitude, latitude, and salinity values were used in the comparison. 
 
 +-------------------------+-----------------+
 |    Statistic            | Value           |
 +=========================+=================+
-| bias                    | 1.31896498726   |
+| bias                    | 1.66856979031   |
 +-------------------------+-----------------+
-| RMSE                    | 4.87441305346   |
+| RMSE                    | 4.92462599804   |
 +-------------------------+-----------------+
-| Willmott Skill Score    | 0.826853348807  |
+| Willmott Skill Score    | 0.782013448965  |
 +-------------------------+-----------------+
 
 .. figure:: images/ferrysalinity.png
 
 `Ferry salinity notebook`_
 
-`Ferry salinity separted by longitude notebook`_
 
-.. _Ferry salinity notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ferrysalinityvsnowcastgreen.ipynb
-.. _Ferry salinity separated by longitude notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/ferrysalinityvsnowcastgreen-by-longitude.ipynb 
+.. _Ferry salinity notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/ferrysalinityvsnowcastgreen-by-longitude.ipynb 
 
 Fraser Plume ctd
 ========================
@@ -60,7 +58,8 @@ In addition to an observation - model plot that includes both 2015 and 2016, sep
 Water quality buoy
 =========================
 
-Comparison to the model temperature was made at the model's surface and depth = 1.5m, as well as daily and hourly averaged values. 
+Comparison to the model temperature was made at the model's surface and depth = 1.5m, 
+as well as daily and hourly averaged values. 
 Below, statistics and plots are for model surface, and the observation - model plot is using the daily average. 
 
 +-----------------------+-----------------+-------------------+
