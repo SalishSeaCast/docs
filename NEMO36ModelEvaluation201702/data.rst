@@ -42,4 +42,13 @@ Water quality buoy
 
 A water quality buoy, maintained by Enviroment Canada and the BC Ministry of Enviroment, is located in the Fraser River.
 The raw data was processed by Rich and covers January 2009 to November 2017. 
-Data collected include temperature, salinity, conductivity, pH, dissolved oxygen, stream velocity, and some atmospheric fields such as wind speed, wind direction, air temperature, humidity, and pressure. 
+Data collected include temperature, salinity, conductivity, pH, dissolved oxygen, stream velocity, and some atmospheric fields such as wind speed, wind direction, air temperature, humidity, and pressure.
+
+Drifters
+========================================
+
+During various trips to the Salish Sea, `drifters`_ are deployed and left to drift.
+They are all tracked with GPS devices and sometimes are picked up by bystanders and returned. 
+As of present, there have been 21 deployments in the Salish Sea and the Juan de Fuca, each releasing up to ten drifters.
+
+.. _drifters: https://drifters.eos.ubc.ca/ 

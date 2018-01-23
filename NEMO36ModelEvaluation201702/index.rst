@@ -14,3 +14,4 @@ Evaluating NEMO3.6 v201702
    Nutrients 
    Chl
    Tides
+   Drifters
