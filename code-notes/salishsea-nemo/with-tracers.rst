@@ -43,8 +43,12 @@ depth level 10, 15, 19, 22, 24, and 25 corresponding to depths 10, 15, 20, 30, 4
 If you wished to initialize the tracers differently, that would go here.
 
 The file :kbd:`trcsms_my_trc.F90` defines the chemistry/biology to be
-done to the tracers. It has been left mostly unchanged from the original
-in :kbd:`NEMO-3.6-code/NEMOGCM/NEMO/TOP_SRC/MY_TRC`. 
+done to the tracers. It now dictates that the tracers decay when they are 
+above depths 10, 15, 20, 30, 45, and 60 m respectively. 
+For example, if a tracer was at concentration 1 in the 'decay' zone,
+after one model day, their concentration would be ~0.3679 (1/e).
+The decay time for each tracer could be modified by changing the factor used to multiply 
+the trb array on lines 73, 78, 83, 88, 93, and 98 in the file. 
 
 An old version of this file is available at `nemo-code`_ in 
 :kbd:`NEMOGCM/CONFIG/SalishSea_TRC/MY_SRC`. Here we just specify 
