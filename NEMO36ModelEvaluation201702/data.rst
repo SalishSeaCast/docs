@@ -25,7 +25,7 @@ Citizen Science
 The Salish Sea Marine Survival Project, with the support of the Pacific Salmon Foundation, have volunteer citizen scientists to take CTD casts and water samples at various stations in the Strait of Georgia. 
 Data collected include temperature and salinity for all stations and nitrate, silicon, and chlorophyll for select stations.
 These trips take place between Febuary and October and was done for 2015, 2016, and 2017. 
-The stations are grouped by region, wchcih include Lund, Powell River, Irvine, Baynes Sound, Nanaimo, Campbell River, Steveston, Victoria, Cowichan Bay, and Ladysmith. 
+The stations are grouped by region, which include Lund, Powell River, Irvine, Baynes Sound, Nanaimo, Campbell River, Steveston, Victoria, Cowichan Bay, and Ladysmith. 
 The raw data was processed by Rich and additional edits were made by Colin of PSF and Elise.
 
 Fraser Plume CTD casts
