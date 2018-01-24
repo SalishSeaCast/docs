@@ -28,7 +28,7 @@ On WestGrid you need to put your public key in :file:`.ssh/authorized_keys` on e
 :command:`ssh-agent` Forwarding for :kbd:`salish`
 =================================================
 
-To set up agent forwarding for :kbd:`salish` create a :file:`$HOME/.ssh/config` file on your Waterhole machine containing the following (or append the following if :file:`$HOME/.ssh.config` already exists)::
+To set up agent forwarding for :kbd:`salish` create a :file:`$HOME/.ssh/config` file on your Waterhole machine containing the following (or append the following if :file:`$HOME/.ssh/config` already exists)::
 
     Host salish
       Hostname  salish.eos.ubc.ca
