@@ -271,8 +271,13 @@ Using the modified arch file, compile your NEMO configuration, e.g.:
     XIOS_HOME=/data/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSea -m GCC_SALISH_ocean_gprof
 
 
-2. Run the model as usual from your prepared run directory.
-\*Not tested with the salishsea run command.
+2. Submit the model run from your prepared run directory with the :command:`no-submit` option
+
+.. code-block:: bash
+
+    salishsea run --no-submit example.yaml /path/to/results
+    
+and then, from the temporary run directory, run 
 
 .. code-block:: bash
 
@@ -288,7 +293,7 @@ A file called gmon.out will be created in your run directory.
     gprof nemo.exe gmon.out > gprof_out.txt
     less gprof_out.txt
 
-For more information, see http://www.ibm.com/developerworks/library/l-gnuprof.html
+For more information, see https://sourceware.org/binutils/docs/gprof/Call-Graph.html#Call-Graph
 
 
 .. _GettingStdoutAndStderrIntoYourResultsDirectory:
