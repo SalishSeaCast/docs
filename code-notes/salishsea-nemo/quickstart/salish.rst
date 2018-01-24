@@ -286,7 +286,9 @@ and then, from the temporary run directory, run
 A file called gmon.out will be created in your run directory.
 
 
-3. Use the :program:`gprof` command with the executable name and gmon.out as input to create a readable summary of the timing output. Redirect the output to a text file to save it; you can then view this file using :program:`less`.
+3. In the temporary run directory, sse the :program:`gprof` command with the executable name and 
+gmon.out as input to create a readable summary of the timing output. 
+Redirect the output to a text file to save it; you can then view this file using :program:`less`.
 
 .. code-block:: bash
 
