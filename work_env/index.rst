@@ -17,7 +17,7 @@ and Roger Pieters.
 They are maintained by EOAS Comp Staff,
 primarily Charles Krzysik.
 They are mostly located in ESB 3024/3026 but some are located in users' offices.
-The Waterhole machines are nominally identically configured so that your should be able to log-in on all of them and find the same software available for use.
+The Waterhole machines are nominally identically configured so that you should be able to log-in on all of them and find the same software available for use.
 They are set up so that your user configuration is identical on all machines.
 All machines have a :file:`/ocean/` partition which provides storage that is large
 (several terabytes),
