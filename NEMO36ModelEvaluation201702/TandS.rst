@@ -40,7 +40,8 @@ An example depth profile from May 31, 2017 is shown below.
 Citizen Science
 ======================
 
-In addition to an observation - model plot that includes both 2015 and 2016, separate comparisons were also made fo each region. The Victoria stations are shows below. 
+In addition to an observation - model plot that includes both 2015 and 2016, separate comparisons were also made for each region. 
+The Victoria stations are shown below. 
 
 .. figure:: images/csphysicsall.png
 .. figure:: images/citsciphysics.png
