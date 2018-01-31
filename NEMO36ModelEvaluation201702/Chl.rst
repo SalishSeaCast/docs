@@ -29,7 +29,7 @@ Samples with quality flag of 4 were not compared, leading to 99 usuable sample.
 Ferry
 =======================
 
-In addition to not using chlorophyll data where the one or more of longitude, 
+In addition to not using chlorophyll data where one or more of longitude, 
 latitude, chlorophyll, or time is masked, ferry chlorophyll values > 25 :math:`\mu` g / L were excluded. 
 
 +-------------------------+-----------------+
