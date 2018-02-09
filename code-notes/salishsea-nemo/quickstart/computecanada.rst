@@ -67,7 +67,7 @@ Clone the repos needed to run the model:
 
 .. code-block:: bash
 
-    cd $HOME/MEOPAR
+    cd $PROJECT/$USER/MEOPAR
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-3.6-code NEMO-3.6-code
     hg clone ssh://hg@bitbucket.org/salishsea/xios-2 XIOS-2
     hg clone ssh://hg@bitbucket.org/salishsea/xios-arch XIOS-ARCH
