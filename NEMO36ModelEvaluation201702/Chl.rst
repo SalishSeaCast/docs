@@ -46,7 +46,5 @@ latitude, chlorophyll, or time is masked, ferry chlorophyll values > 25 :math:`\
 
 `Ferry Chl notebook`_
 
-`Ferry Chl separated by longitude notebook`_
 
-.. _Ferry Chl notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/FerryChlVsNowcastGreen.ipynb
-.. _Ferry Chl separated by longitude notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/FerryChlVsNowcastGreen-bylongitude.ipynb
+.. _Ferry Chl notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/FerryChlVsNowcastGreen-bylongitude-Copy1.ipynb
