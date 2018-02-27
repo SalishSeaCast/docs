@@ -44,7 +44,9 @@ Available to us, we have nutrient data from the start of 201702 hindcast to unti
 NANOOS San Jaun Dataset
 ======================================
 
-Downloaded from nanoos.org, we have temperature and salinity data from the San Juans islands from fall 2014 - fall 2017. 
+Downloaded from `Nanoos`_, we have temperature and salinity data from the San Juans islands from fall 2014 - fall 2017. 
+
+.. _Nanoos: https://www.nanoos.org
 
 ONC ferries
 ======================================
