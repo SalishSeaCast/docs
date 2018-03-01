@@ -4,11 +4,10 @@
 Working on :kbd:`westgrid`: NEMO v3.6
 *************************************
 
-This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on WestGrid machines `bugaboo.westgrid.ca`_ and `orcinus.westgrid.ca`_.
+This section describes the steps to set up and run the Salish Sea NEMO version 3.6 code on the WestGrid machine `orcinus.westgrid.ca`_.
 
 This guide assumes that your :ref:`WorkingEnvironment` is set up and that you are familiar with :ref:`WorkingOnSalish`.
 
-.. _bugaboo.westgrid.ca: https://www.westgrid.ca/support/systems/bugaboo
 .. _orcinus.westgrid.ca: https://www.westgrid.ca/support/systems/orcinus
 
 
@@ -28,19 +27,7 @@ Change the :kbd:`lpath` line in the :kbd:`modify search path` section of :file:`
 
     lpath=$HOME/.local/bin:$HOME/bin
 
-The modules needed for each cluster are:
-
-:kbd:`bugaboo`:
----------------
-
-.. code-block:: bash
-
-    module load python
-    module load intel/15.0.2
-
-
-:kbd:`orcinus`:
----------------
+The modules are:
 
 .. code-block:: bash
 
@@ -98,23 +85,6 @@ Compile XIOS-2
 
 First symlink the XIOS-2 build configuration files for the machine that you are working on from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS-2/arch/` directory, then compile XIOS-2:
 
-
-:kbd:`bugaboo`:
----------------
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/XIOS-2/arch
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_BUGABOO.env
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_BUGABOO.fcm
-    ln -sf $HOME/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_BUGABOO.path
-    cd $HOME/MEOPAR/XIOS-2
-    ./make_xios --arch X64_BUGABOO --netcdf_lib netcdf4_par --job 8
-
-
-:kbd:`orcinus`:
----------------
-
 .. code-block:: bash
 
     cd $HOME/MEOPAR/XIOS-2/arch
@@ -142,21 +112,6 @@ The NEMO ARCH files use the :envvar:`XIOS_HOME` environment variable to find the
 :envvar:`XIOS_HOME` *must* be an absolute path to your XIOS-2 clone directory.
 You can set :envvar:`XIOS_HOME` on the command-line before the :command:`makenemo` and :command:`maketools` commands as shown below,
 or you can set and export the value of :envvar:`XIOS_HOME` in your :file:`$HOME/.bashrc` file.
-
-
-:kbd:`bugaboo`:
----------------
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    XIOS_HOME=$HOME/MEOPAR/XIOS-2/ ./makenemo -n SalishSea -m X64_BUGABOO -j 8
-    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
-    XIOS_HOME=$HOME/MEOPAR/XIOS-2/ ./maketools -n REBUILD_NEMO -m X64_BUGABOO
-
-
-:kbd:`orcinus`:
----------------
 
 .. code-block:: bash
 
