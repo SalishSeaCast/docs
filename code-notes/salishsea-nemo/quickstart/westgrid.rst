@@ -14,18 +14,10 @@ This guide assumes that your :ref:`WorkingEnvironment` is set up and that you ar
 Modules setup
 =============
 
-When working on WestGrid clusters the :command:`module load` command must be used to load extra software components.
-The required modules (and their names) vary from cluster to cluster.
+Similar to when working on ComputeCandada clusters the :command:`module load` command must be used to load extra software components on :kbd:`orcinus`.
 
 You can manually load the modules each time you log in,
 or you can add the lines to your :file:`.bashrc` file so that they are automatically loaded upon login.
-
-Lastly, you need to modify your search path such that your shell can find python scripts installed with :kbd:`pip --user`.
-Change the :kbd:`lpath` line in the :kbd:`modify search path` section of :file:`.bash_profile` to include :file:`$HOME/.local/bin` and :file:`$HOME/bin` in your search path:
-
-.. code-block:: bash
-
-    lpath=$HOME/.local/bin:$HOME/bin
 
 The modules are:
 
@@ -37,6 +29,17 @@ The modules are:
     module load intel/14.0/netcdf-fortran-4.4.0_mpi
     module load intel/14.0/hdf5-1.8.15p1_mpi
     module load intel/14.0/nco-4.5.2
+
+
+:envvar:`PATH` Additions
+========================
+
+Lastly, you need to modify your search path such that your shell can find python scripts installed with :kbd:`pip --user`.
+Change the :kbd:`lpath` line in the :kbd:`modify search path` section of :file:`.bash_profile` to include :file:`$HOME/.local/bin` and :file:`$HOME/bin` in your search path:
+
+.. code-block:: bash
+
+    lpath=$HOME/.local/bin:$HOME/bin
 
 
 Create a Workspace and Clone the Repositories
@@ -83,7 +86,7 @@ Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python
 Compile XIOS-2
 ==============
 
-First symlink the XIOS-2 build configuration files for the machine that you are working on from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS-2/arch/` directory, then compile XIOS-2:
+First symlink the XIOS-2 build configuration files for :kbd:`orcinus` from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS-2/arch/` directory, then compile XIOS-2:
 
 .. code-block:: bash
 

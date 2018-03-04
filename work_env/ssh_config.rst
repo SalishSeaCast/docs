@@ -18,11 +18,13 @@ Your private key is usually protected by a long passphrase that you only have to
 After that an ssh-agent program on the local machine uses the private key to exchange encrypted authentication information
 with the remote machines.
 
-The public key needs to be stored in the :file:`.ssh/authorized_keys` file on every machine that you want to ssh into.
-Because your home directory is shared across all of the Waterhole machines (and salish, and skookum)
-you only need to put your public key in :file:`.ssh/authorized_keys` on any one of those machines.
-On WestGrid you need to put your public key in :file:`.ssh/authorized_keys` on each machine that you use
-(:kbd:`bugaboo`, :kbd:`cedar`, :kbd:`graham`, :kbd:`orcinus`, etc.).
+The public key needs to be stored on every machine that you want to ssh into.
+Because your home directory is shared across all of the Waterhole machines
+(and :kbd:`salish`, and :kbd:`skookum`)
+you only need to put your public key on any one of those machines.
+On WestGrid and ComputeCanada you need to put your public key on each machine that you use
+(:kbd:`cedar`, :kbd:`graham`, :kbd:`orcinus`, etc.).
+The sections below include instructions for how to store your public key on various machines.
 
 
 :command:`ssh-agent` Forwarding for :kbd:`salish`
@@ -61,11 +63,6 @@ Thanks to shared storage between the Waterhole machines and :kbd:`salish` that i
 =======================================================================
 
 To set up agent forwarding for a Westgrid or ComputeCanada machine append the appropriate block below to the :file:`$HOME/.ssh/config` file on your Waterhole machine::
-
-    Host bugaboo
-      Hostname  bugaboo.westgrid.ca
-      User  userid
-      ForwardAgent  yes
 
     Host cedar
       Hostname  cedar.computecanada.ca

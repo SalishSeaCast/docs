@@ -51,7 +51,7 @@ you need to have Mercurial installed on your computer.
 It is already installed on the Waterhole workstations,
 :kbd:`sable`,
 and :kbd:`salish` at UBC.
-It is also installed on :kbd:`bugaboo` and :kbd:`orcinus` on WestGrid,
+It is also installed on :kbd:`orcinus` on WestGrid,
 and :kbd:`cedar` and :kbd:`graham` on ComputeCanada.
 If you have administrator privileges on your workstation or laptop you can download and install Mercurial for your operating system from http://mercurial-scm.org/downloads,
 otherwise,

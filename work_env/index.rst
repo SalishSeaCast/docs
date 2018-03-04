@@ -36,23 +36,23 @@ Other machines that you may need working environments on later include:
   :kbd:`salish` has several terabytes of storage in its :file:`/data/` filesystem.
   If your Waterhole workstation does not have access to :file:`/data/` you should open a ticket via the :kbd:`Helpdesk` link on https://helpdesk.eoas.ubc.ca/ to request that EOAS Comp Staff add a :kbd:`salish /data/` mount on the workstation you are using.
   That will enable you to read/write files on the :kbd:`salish /data/` filesystem without have to sign on to :kbd:`salish` or copy the files from one machine to another.
-* :kbd:`skookum.eos.ubc.ca`: Our group results storage and web server.
-  The Salish Sea Nowcast system results are stored on the :file:`/results/` file system on :kbd:`skookum`.
-  If your Waterhole workstation does not have access to :file:`/results/` you should open a ticket via the :kbd:`Helpdesk` link on https://helpdesk.eoas.ubc.ca/ to request that EOAS Comp Staff add a :kbd:`skookum /results/` mount on the workstation you are using.
-  That will enable you to read files from the :kbd:`skookum /results/` filesystem without have to sign on to :kbd:`skookum` or copy the files from one machine to another.
-* One or more of the Westgrid_ or `ComputeCanada`_ HPC clusters such as :kbd:`bugaboo.westgrid.ca`,
-  :kbd:`orcinus.westgrid.ca`,
+* One or more of the Westgrid_ or `ComputeCanada`_ HPC clusters such as :kbd:`orcinus.westgrid.ca`,
   :kbd:`cedar.computecanada.ca`,
   or :kbd:`graham.computecanada.ca` that run Linux.
-  The Westgrid clusters
-  (primarily :kbd:`orcinus`)
-  are used for longer research runs of the model.
+  Those machines are used for longer research runs of the model.
 
   .. _Westgrid: https://www.westgrid.ca/
   .. _ComputeCanada: https://www.computecanada.ca/
 
 When you are ready to run on those machines,
 please see the :ref:`QuickStartGuide` for instructions on setting working environments on them.
+
+:kbd:`skookum.eos.ubc.ca` is our group results storage and web server.
+The Salish Sea Nowcast system results are stored on the :file:`/results/` file system on :kbd:`skookum`,
+and the Strait of Georgia WaveWatch3 model results and Vancouver Harbour/Fraser River FVCOM model results are stored on the :file:`/opp/` file system on :kbd:`skokkum`.
+If your Waterhole workstation does not have access to :file:`/results/` and/or :file:`/opp/` you should open a ticket via the :kbd:`Helpdesk` link on https://helpdesk.eoas.ubc.ca/ to request that EOAS Comp Staff add :kbd:`skookum /results/` and/or :file:`/opp/` mount(s) on the workstation you are using.
+That will enable you to read files from the :kbd:`skookum /results/` and or :file:`/opp/` filesystem(s) without have to sign on to :kbd:`skookum` or copy the files from one machine to another.
+
 
 .. toctree::
    :maxdepth: 2
