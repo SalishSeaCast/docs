@@ -13,7 +13,7 @@ The `NEMO-code`_ repo is a Mercurial repository in which is maintained the merge
 
     The `NEMO-code`_ repository is a private repository for members of the Salish Sea MEOPAR project team.
     That is because it contains parts of the NEMO_ codebase.
-    Although that codebase is openly licensed it's developers require registration_ to access the code.
+    Although that codebase is openly licensed its developers require registration_ to access the code.
 
     If you have completed that registration and would like access to the `NEMO-code`_,
     please contact `Susan Allen`_,
