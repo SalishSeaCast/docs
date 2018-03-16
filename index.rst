@@ -27,7 +27,7 @@ provides a platform to accelerate this type of research.
 
 The Salish Sea MEOPAR project team is developing a three-dimensional ocean model for the Strait of Georgia and Salish Sea.
 Using the NEMO_ modelling architecture the Salish Sea model will be used to evaluate storm surge risk in coastal communities.
-Long term goals include data assimilation from the VENUS network and a coupled biogeochemical modelling component.
+A long term goal is to include a coupled biogeochemical modelling component.
 
 .. _NEMO: http://www.nemo-ocean.eu/
 
