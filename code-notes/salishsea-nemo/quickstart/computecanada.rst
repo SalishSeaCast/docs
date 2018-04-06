@@ -97,42 +97,7 @@ Install the :ref:`NEMO-CommandProcessor` and :ref:`SalishSeaCmdProcessor` Python
 Compile XIOS-2
 ==============
 
-First symlink the XIOS-2 build configuration files for the machine that you are working on from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS-2/arch/` directory,
-then compile XIOS-2:
-
-:kbd:`cedar`:
--------------
-
-.. code-block:: bash
-
-    cd $PROJECT/$USER/MEOPAR/XIOS-2/arch
-    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.env
-    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.fcm
-    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_CEDAR.path
-    cd $PROJECT/$USER/MEOPAR/XIOS-2
-    ./make_xios --arch X64_CEDAR --job 8
-
-
-:kbd:`graham`:
---------------
-
-.. code-block:: bash
-
-    cd $PROJECT/$USER/MEOPAR/XIOS-2/arch
-    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.env
-    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.fcm
-    ln -sf $PROJECT/$USER/MEOPAR/XIOS-ARCH/WESTGRID/arch-X64_GRAHAM.path
-    cd $PROJECT/$USER/MEOPAR/XIOS-2
-    ./make_xios --arch X64_GRAHAM --job 8
-
-If you need to do a clean build of XIOS-2,
-you can use:
-
-.. code-block:: bash
-
-    ./tools/FCM/bin/fcm build --clean
-
-to clear away all artifacts of the previous build.
+Please see the :ref:`moaddocs:XIOS-2-docs` section of the :ref:`UBC-EOAS-MOAD-docs`.
 
 
 Compile NEMO-3.6
