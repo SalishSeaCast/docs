@@ -63,29 +63,7 @@ and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
 Compile XIOS-2
 ==============
 
-Symlink the XIOS-2 build configuration files for :kbd:`salish` from the :file:`XIOS-ARCH` repo clone into the :file:`XIOS-2/arch/` directory:
-
-.. code-block:: bash
-
-    cd /data/$USER/MEOPAR/XIOS-2/arch
-    ln -sf /data/$USER/MEOPAR/XIOS-ARCH/UBC-EOAS/arch-GCC_SALISH.fcm
-    ln -sf /data/$USER/MEOPAR/XIOS-ARCH/UBC-EOAS/arch-GCC_SALISH.path
-
-Compile the XIOS-2 input/output server:
-
-.. code-block:: bash
-
-    cd /data/$USER/MEOPAR/XIOS-2
-    ./make_xios --arch GCC_SALISH --netcdf_lib netcdf4_seq --job 8
-
-If you need to do a clean build of XIOS-2,
-you can use:
-
-.. code-block:: bash
-
-    ./tools/FCM/bin/fcm build --clean
-
-to clear away all artifacts of the previous build.
+Please see the :ref:`moaddocs:XIOS-2-docs` section of the :ref:`UBC-EOAS-MOAD-docs`.
 
 
 Compile NEMO-3.6
@@ -276,8 +254,8 @@ Using the modified arch file, compile your NEMO configuration, e.g.:
 .. code-block:: bash
 
     salishsea run --no-submit example.yaml /path/to/results
-    
-and then, from the temporary run directory, run 
+
+and then, from the temporary run directory, run
 
 .. code-block:: bash
 
@@ -286,8 +264,8 @@ and then, from the temporary run directory, run
 A file called gmon.out will be created in your run directory.
 
 
-3. In the temporary run directory, sse the :program:`gprof` command with the executable name and 
-gmon.out as input to create a readable summary of the timing output. 
+3. In the temporary run directory, sse the :program:`gprof` command with the executable name and
+gmon.out as input to create a readable summary of the timing output.
 Redirect the output to a text file to save it; you can then view this file using :program:`less`.
 
 .. code-block:: bash
