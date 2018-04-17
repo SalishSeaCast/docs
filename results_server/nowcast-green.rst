@@ -167,9 +167,11 @@ Date                       Change                                 New Value     
 
 07-Oct-2017  Updated bathymetry to correct smoothing in Puget
              Sound, etc.
-             
+
 30-Dec-2017  New LiveOcean boundary condition processor with
              longer western boundary and NO3 from LiveOcean
+
+18-Apr-2018  Reduce bSi and PON sinking rates                     5.6e-5 m/2      e9a5bc834f46_
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
@@ -183,3 +185,4 @@ Date                       Change                                 New Value     
 .. _3b0accb0e693: https://bitbucket.org/salishsea/nemo-3.6-code/commits/3b0accb0e693
 .. _2c892a5bae80: https://bitbucket.org/salishsea/ss-run-sets/commits/2c892a5bae80
 .. _fd69c1dc91be: https://bitbucket.org/salishsea/nemo-3.6-code/commits/fd69c1dc91be
+.. _e9a5bc834f46: https://bitbucket.org/salishsea/ss-run-sets/commits/e9a5bc834f46
