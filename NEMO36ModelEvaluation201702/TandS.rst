@@ -7,6 +7,18 @@ Temperature and Salinity
 Citizen Science
 ======================
 
+2015 - 2017 observations
+
++-------------------------+----------------------+----------------------+
+|    Statistic            | Temperature          | Salinity             |
++=========================+======================+======================+
+| bias                    | 0.007755027337250198 | 0.14123996754318213  |
++-------------------------+----------------------+----------------------+
+| RMSE                    | 0.5471593228637162   | 0.7216391340774553   |
++-------------------------+----------------------+----------------------+
+| Willmott Skill Score    | 0.9711890035275378   | 0.933523068047556    |
++-------------------------+----------------------+----------------------+
+
 In addition to an observation - model plot that includes both 2015 and 2016, separate comparisons were also made for each region. 
 The Victoria stations are shown below. 
 
@@ -19,9 +31,13 @@ The Victoria stations are shown below.
 
 `CitSci - single depth profiles notebook`_
 
+`CitSci - 2017 TandS notebook`_
+
 .. _CitSci - full notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/updated-nowcast-comparisons.ipynb
 .. _CitSci - single days notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/updated-nowcast-comparisons-singledays.ipynb
 .. _CitSci - single depth profiles notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/CitSci-single-depth-profiles.ipynb
+
+.. _CitSci - 2017 TandS notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/PSFBlue2017.ipynb
 
 Ferry
 =================
@@ -59,6 +75,8 @@ An example depth profile from May 31, 2017 is shown below.
 IOS cruises
 ======================
 
+Surface refers to depths less than 15m, intermediate refers to depths ebwteen 15 and 30m, and deep refers to depths greater than 30m. 
+
 +-------------------------+----------------------+----------------------+
 |    Statistic            | Temperature          | Salinity             |
 +=========================+======================+======================+
@@ -68,6 +86,9 @@ IOS cruises
 +-------------------------+----------------------+----------------------+
 | Willmott Skill Score    | 0.9684729188294054   | 0.954343789715143    |
 +-------------------------+----------------------+----------------------+
+
+.. figure:: images/dfo_temp.png
+.. figure:: images/dfo_sal.png
 
 `comparison notebook`_
 
@@ -79,7 +100,7 @@ San Juan Islands
 +-------------------------+----------------------+----------------------+
 |    Statistic            | Temperature          | Salinity             |
 +=========================+======================+======================+
-| bias                    | -0.4300265998100876  | 0.13353483468716476 |
+| bias                    | -0.4300265998100876  | 0.13353483468716476  |
 +-------------------------+----------------------+----------------------+
 | RMSE                    | 0.5960042238649761   | 0.41932263796326535  |
 +-------------------------+----------------------+----------------------+
@@ -98,6 +119,9 @@ Sentry Shoal
 +-------------------------+----------------------+----------------------+
 | Willmott Skill Score    | 0.9424725482806958   | 0.8290720829792324   |
 +-------------------------+----------------------+----------------------+
+
+.. figure:: images/SSTem.png
+.. figure:: images/SSSal.png
 
 `Time series notebook`_
 
