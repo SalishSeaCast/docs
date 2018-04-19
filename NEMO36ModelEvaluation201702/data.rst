@@ -13,7 +13,7 @@ Data collected include temperature and salinity for all stations and nitrate, si
 These trips take place between Febuary and October and was done for 2015, 2016, and 2017. 
 The stations are grouped by region, which include Lund, Powell River, Irvine, Baynes Sound, Nanaimo, Campbell River, Steveston, 
 Victoria, Cowichan Bay, and Ladysmith. 
-The 2015 nutrient dataset and 2015 and 2016 CTD datasets were processed by Rich and additional edits were made by Colin of PSF and Elise.
+The 2015 nutrient dataset and 2015, 2016, and 2017 CTD datasets were processed by Rich and additional edits were made by Colin of PSF and Elise.
 Datasets for 2016 and 2017 nutrients and 2015, 2016, and 2017 chlorophyll were also made available to us. 
 Edits of these datasets were made by Colin of PSF and Elise.
 
@@ -61,6 +61,12 @@ ONC nodes
 =======================================
 
 Refer to `tidal current comparison <http://salishsea-meopar-docs.readthedocs.io/en/latest/tidalcurrents/tidal_current_comparison.html>`_.
+
+Sentry Shoal
+======================================
+
+Temperature, salinity, and nitrate data at Sentry Shoal was made available to us by Stephanie King and Katie Pocock. 
+The data was processed by Katie Pocock. The dataset covers most of 2015, 2016, and 2017. 
 
 Water quality buoy
 ======================================
