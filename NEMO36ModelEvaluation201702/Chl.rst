@@ -7,25 +7,31 @@ Chlorophyll
 Citizen Science
 ====================
 
-2016 chlorophyll measurements from the Citizen Science program was compared with the model. 
-Samples with quality flag of 4 were not compared, leading to 99 usuable sample. 
+2015-2017 chlorophyll measurements from the Citizen Science program was compared with the model. 
 
-+-------------------------+-----------------+
-|    Statistic            | Value           |
-+=========================+=================+
-| bias                    | -0.250162993682 |
-+-------------------------+-----------------+
-| RMSE                    | 5.88331979575   |
-+-------------------------+-----------------+
-| Willmott Skill Score    | 0.512476372038  |
-+-------------------------+-----------------+
++-------------------------+-------------------+
+|    Statistic            | Value             |
++=========================+===================+
+| bias                    | 0.864778575809408 |
++-------------------------+-------------------+
+| RMSE                    | 4.599369232848489 |
++-------------------------+-------------------+
+| Willmott Skill Score    | 0.5048541500786355|
++-------------------------+-------------------+
 
-.. figure:: images/CitSciChl.png
+.. figure:: images/cs_chl.png
 
-`CitSci Chl notebook`_
+`CitSci Chl 2015`_
 
-.. _CitSci Chl notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/CitSciChl2016-hourly.ipynb
+`CitSci Chl 2016`_
 
+`CitSci Chl 2017`_
+
+.. _CitSci Chl 2015: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/CitSciChl2015.ipynb
+
+.. _CitSci Chl 2016: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/CitSciChl2016-hourly.ipynb
+
+.. _CitSci Chl 2017: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/CitSciChl2017-hourly.ipynb
 Ferry
 =======================
 
@@ -46,5 +52,23 @@ latitude, chlorophyll, or time is masked, ferry chlorophyll values > 25 :math:`\
 
 `Ferry Chl notebook`_
 
+`Time series notebook`_
 
 .. _Ferry Chl notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/FerryChlVsNowcastGreen-bylongitude-Copy1.ipynb
+
+.. _Time series notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/FerryChl2017-lon.ipynb
+
+IOS cruises
+=====================
+
++-------------------------+--------------------+
+|    Statistic            | Value              |
++=========================+====================+
+| bias                    | 1.1295675984707625 |
++-------------------------+--------------------+
+| RMSE                    | 3.1130318776174235 |
++-------------------------+--------------------+
+| Willmott Skill Score    | 0.6498509292361905 |
++-------------------------+--------------------+
+
+.. figure:: images/dfo_chl.png
