@@ -107,6 +107,13 @@ San Juan Islands
 | Willmott Skill Score    | 0.7320908904807624   | 0.8433595642923585   |
 +-------------------------+----------------------+----------------------+
 
+.. figure:: images/SanJuanS.png
+.. figure:: images/SanJuanT.png
+
+`San Juan notebook`_
+
+.. _San Juan notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/SanJuan-blue.ipynb
+
 Sentry Shoal
 ======================
 
