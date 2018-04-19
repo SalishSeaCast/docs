@@ -4,6 +4,25 @@
 Temperature and Salinity
 *************************
 
+Citizen Science
+======================
+
+In addition to an observation - model plot that includes both 2015 and 2016, separate comparisons were also made for each region. 
+The Victoria stations are shown below. 
+
+.. figure:: images/csphysicsall.png
+.. figure:: images/citsciphysics.png
+
+`CitSci - full notebook`_
+
+`CitSci - single days notebook`_
+
+`CitSci - single depth profiles notebook`_
+
+.. _CitSci - full notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/updated-nowcast-comparisons.ipynb
+.. _CitSci - single days notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/updated-nowcast-comparisons-singledays.ipynb
+.. _CitSci - single depth profiles notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/CitSci-single-depth-profiles.ipynb
+
 Ferry
 =================
 Only samples with valid times, longitude, latitude, and salinity values were used in the comparison. 
@@ -37,24 +56,48 @@ An example depth profile from May 31, 2017 is shown below.
 
 .. _CTD casts notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/CTDvsNowcastgreen.ipynb
 
-Citizen Science
+IOS cruises
 ======================
 
-In addition to an observation - model plot that includes both 2015 and 2016, separate comparisons were also made for each region. 
-The Victoria stations are shown below. 
++-------------------------+----------------------+----------------------+
+|    Statistic            | Temperature          | Salinity             |
++=========================+======================+======================+
+| bias                    | 0.05512010187655747  | -0.041040355046526145|
++-------------------------+----------------------+----------------------+
+| RMSE                    | 0.7015201515771843   | 1.066426061995313    |
++-------------------------+----------------------+----------------------+
+| Willmott Skill Score    | 0.9684729188294054   | 0.954343789715143    |
++-------------------------+----------------------+----------------------+
 
-.. figure:: images/csphysicsall.png
-.. figure:: images/citsciphysics.png
+`comparison notebook`_
 
-`CitSci - full notebook`_
+.. _comparison notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/DFO-comparison-blue.ipynb
 
-`CitSci - single days notebook`_
 
-`CitSci - single depth profiles notebook`_
+Sentry Shoal
+======================
 
-.. _CitSci - full notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/updated-nowcast-comparisons.ipynb
-.. _CitSci - single days notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/updated-nowcast-comparisons-singledays.ipynb
-.. _CitSci - single depth profiles notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/CitSci-single-depth-profiles.ipynb
++-------------------------+----------------------+----------------------+
+|    Statistic            | Temperature          | Salinity             |
++=========================+======================+======================+
+| bias                    | 0.4049012974465036   | -0.28715771259387424 |
++-------------------------+----------------------+----------------------+
+| RMSE                    | 1.4453098826255502   | 1.1850808771660581   |
++-------------------------+----------------------+----------------------+
+| Willmott Skill Score    | 0.9424725482806958   | 0.8290720829792324   |
++-------------------------+----------------------+----------------------+
+
+`Time series notebook`_
+
+.. _Time series notebook: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/SentryShoalTS.ipynb
+
+
+VENUS nodes
+======================
+
+Comparison to the observed salinity were made to the model's (then called hindcast) salinity. 
+
+.. figure:: images/ComparisonHindcastVENUS.png
 
 Water quality buoy
 =========================
@@ -82,11 +125,4 @@ Below, statistics and plots are for model surface, and the observation - model p
 
 .. _Water quality buoy notebook (daily averages): https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/waterqualitybuoy-daily.ipynb
 .. _Water quality buoy notebook (hourly interpolated averages): https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/waterqualitybuoy-hourly.ipynb
-
-VENUS nodes
-======================
-
-Comparison to the observed salinity were made to the model's (then called hindcast) salinity. 
-
-.. figure:: images/ComparisonHindcastVENUS.png
 
