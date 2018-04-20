@@ -6,40 +6,29 @@ Ariane is a Fortran code used to compute 3D streamlines in a given velocity fiel
 
 Getting the code
 --------------------------------------
-* Go to  http://stockage.univ-brest.fr/~grima/Ariane/
-* Under “What's new”, choose Ariane-v2.2.6
 
-* Register and use your username and password to download the zip file with Ariane's source code
+.. code-block:: bash
+
+    cd /ocean/$USER/MEOPAR/
+    hg clone ssh://hg@bitbucket.org/UBC_MOAD/ariane-2.2.6_00
 
 Installing on :kbd:`salish`
 ------------------------------------------
-On :kbd:`salish` create an Ariane working directory:
-
-.. code-block:: bash
-
-	mkdir /ocean/$USER/MEOPAR/Ariane
-
-Place the :kbd:`ariane-2.2.6_00.tar.gz` package in that directory and unpack it
-
-.. code-block:: bash
-
-	cd /ocean/$USER/MEOPAR/Ariane
-	gunzip ariane-2.2.6_00.tar.gz
-	tar -xf ariane-2.2.6_00.tar
 
 Specify the locations of the :kbd:`netcdf` libraries to help the :kbd:`configure` script find them:
 
 .. code-block:: bash
 
-	cd ariane-2.2.6_00
-        export NETCDF_INC=/usr/include
-        export NETCDF_LIB=/usr/lib
+	cd /ocean/$USER/MEOPAR/ariane-2.2.6_00/ariane-2.2.6_00
+    export NETCDF_INC=/usr/include
+    export NETCDF_LIB=/usr/lib
 
 Configure the installation:
 
 .. code-block:: bash
 
-	./configure --prefix=/ocean/$USER/MEOPAR/Ariane
+    cd /ocean/$USER/MEOPAR/ariane-2.2.6_00/ariane-2.2.6_00
+	./configure --prefix=/ocean/$USER/MEOPAR/ariane-2.2.6_00
 
 The :kbd:`prefix` argument overwrites the default install directory into a customized directory.
 
@@ -47,6 +36,7 @@ Make and install Ariane:
 
 .. code-block:: bash
 
+    cd /ocean/$USER/MEOPAR/ariane-2.2.6_00/ariane-2.2.6_00
 	make
 	make check
 	make install
@@ -57,13 +47,19 @@ Add the path for the Ariane executable to your :kbd:`PATH` environment variable:
 
 .. code-block:: bash
 
-	export PATH=/ocean/$USER/MEOPAR/Ariane/bin:$PATH
+	export PATH=/ocean/$USER/MEOPAR/ariane-2.2.6_00/bin:$PATH
 
 Now you can run Ariane from any directory by typing :kbd:`ariane`.
 
 
 Installing on :kbd:`orcinus`
 ------------------------------------------
+
+.. note::
+
+      This section is a remnant of a previous version of the documentation.
+	  Most users find using `salish` is sufficient.  
+	  
 On :kbd:`orcinus` create an Ariane working directory:
 
 .. code-block:: bash
@@ -119,18 +115,15 @@ For instance, try:
 
 .. code-block:: bash
 
-       cd examples/qualitative
+       cd /ocean/$USER/MEOPAR/ariane-2.2.6_00/examples/qualitative
        ariane
-
-.. note::
-
-   If you get an error about :kbd:`initial_positions.txt`, you may have to rename :kbd:`initial_positions` as :kbd:`initial_positions.txt` and remove all the the lines with the @ symbol.
 
 You should notice several new files, such as :kbd:`ariane_trajectories_qualitative.nc` and :kbd:`traj.txt`.
 These files contain the trajectory information.
 
 * :kbd:`ariane_trajectories_qualitative.nc` can be loaded into a notebook to plot the particle locations over time and starting/finishing points, etc.
-* :kbd:`traj.txt` is helpful if you want to get a general idea of what the resulting trajectory coordinates look like or to check if the simulation ran properly.
+* :kbd:`traj.txt` is helpful if you want to get a general idea of what the resulting trajectory coordinates look like or to check 
+if the simulation ran properly.
 
 
 Running Ariane: An example for Salish Sea model
@@ -149,16 +142,17 @@ Type :kbd:`ariane` to  run the code.
 
 :kbd:`intitial_positions.txt`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :kbd:`initial_positions.txt` file is where you will specify the initial positions and initial times of the particles you are tracking. It contains 5 columns and as many rows as there are particles in the simulation you are running.
+The :kbd:`initial_positions.txt` file is where you will specify the initial positions and initial times of the particles you are tracking. 
+It contains 5 columns and as many rows as there are particles in the simulation you are running.
 
 
    .. code-block:: text
 
-      	310	360	-1.0	0.5	1.0
-	310	370	-1.5 	0.5    	1.0
-	310	380   	-2.0  	1.5    	1.0
-	310  	410   	-1.0  	0.5    	1.0
-	331  	415	-1.0 	0.5    	1.0
+    310	360	-1.0 0.5 1.0
+	310	370	-1.5 0.5 1.0
+	310	380 -2.0 1.5 1.0
+	310 410 -1.0 0.5 1.0
+	331 415	-1.0 0.5 1.0
 
 This simulation, for example, will have 5 particles.
 
@@ -166,8 +160,13 @@ This simulation, for example, will have 5 particles.
 * Column 2: Spatial grid index (Y)
 * Column 3: Spatial grid index (Z)
 
-	* A negative value tells Ariane to confine the particle to its original depth throughout its trajectory. If you would like to have the particle trajectory include vertical movement, enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data.
-	* Since Ariane starts counting from 1, a "1" or "-1" here means the first depth grid box. The NEMO output grid boxes are 1 metre in height for the first few metres. This means that the second particle in this example (whose Z index is -1.5) would have a trajectory identical to that of a particle with Z index -1 if they shared the same X, Y, and T indices.
+	* A negative value tells Ariane to confine the particle to its original depth throughout its trajectory. 
+	If you would like to have the particle trajectory include vertical movement, 
+	enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data.
+	* Since Ariane starts counting from 1, a "1" or "-1" here means the first depth grid box. 
+	The NEMO output grid boxes are 1 metre in height for the first few metres. 
+	This means that the second particle in this example (whose Z index is -1.5) would have a trajectory identical to that of a particle with Z index -1 
+	if they shared the same X, Y, and T indices.
 * Column 4: Time index or :kbd:`fl`
 
 	* Use "0.5" if you want to start at NEMO time 00:00. Use "1" if you want to start at NEMO time 00:30.
@@ -175,7 +174,8 @@ This simulation, for example, will have 5 particles.
 
 .. note::
 
-    Ariane uses FORTAN indexing, which counts starting at 1. If you used Python to look up initial positions, which starts counting at 0, then you should add 1 to your initial positions.
+    Ariane uses FORTAN indexing, which counts starting at 1. 
+	If you used Python to look up initial positions, which starts counting at 0, then you should add 1 to your initial positions.
 
 :kbd:`namelist`
 ^^^^^^^^^^^^^^^
@@ -295,11 +295,13 @@ For a more detailed description of the parameters, please refer to the Ariane do
 
       **Condition 2: delta_t × frequency × nb_output < tunit × ntfic × (lmt + 0.5 - max(fl))**
 
-      Condition 1 must be satisfied if the maximum time index is 0.5. Condition 2 must also be satisfied if any inital time index :kbd:`fl` is greater than 0.5.
+      Condition 1 must be satisfied if the maximum time index is 0.5. 
+	  Condition 2 must also be satisfied if any inital time index :kbd:`fl` is greater than 0.5.
 
 
 We must also specify where Salish Sea model output is stored in sections **ZONALCRT** and **MERIDCRT**.
-You can also input the vertical velocity component (recommended if using NEMO data) under **VERTICRT** or Ariane can compute it using the horizontal components.
+You can also input the vertical velocity component (recommended if using NEMO data) under **VERTICRT** 
+or Ariane can compute it using the horizontal components.
 There is also the option of specifying temperature, salinity, and density in the sections **TEMPERAT**, **SALINITY**, and **DENSITY** respectively.
 
 +----------------------------------------+---------------------------------------+
@@ -326,7 +328,9 @@ This is a large file not under version control but can be found in :file:`/ocean
 
 Ariane output
 ------------------------
-The trajectories can be plotted in a python notebook. Different colours are used to distinguish the different trajectories and their initial positions are marked by a gray square. A 3D plot may be helpful in viewing particles at varying depths.
+The trajectories can be plotted in a python notebook. 
+Different colours are used to distinguish the different trajectories and their initial positions are marked by a gray square. 
+A 3D plot may be helpful in viewing particles at varying depths.
 
 
 .. figure:: images/Trajectories2D.png
