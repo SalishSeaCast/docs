@@ -57,8 +57,7 @@ Installing on :kbd:`orcinus`
 
 .. note::
 
-      This section is a remnant of a previous version of the documentation.
-	  Most users find using `salish` is sufficient.  
+      This section is a remnant of a previous version of the documentation. Most users find using `salish` is sufficient.  
 	  
 On :kbd:`orcinus` create an Ariane working directory:
 
@@ -86,7 +85,7 @@ Like :kbd:`salish`, we need to specify the locations of the :kbd:`netcdf` librar
 Make and install Ariane:
 
 .. code-block:: bash
-
+	
 	cd ariane-2.2.6_00
 	./configure --prefix=$HOME/MEOPAR/Ariane
 	make
@@ -114,9 +113,9 @@ To test that you have everything set up correctly, run one of the Ariane example
 For instance, try:
 
 .. code-block:: bash
-
-       cd /ocean/$USER/MEOPAR/ariane-2.2.6_00/examples/qualitative
-       ariane
+	
+	cd /ocean/$USER/MEOPAR/ariane-2.2.6_00/examples/qualitative
+    ariane
 
 You should notice several new files, such as :kbd:`ariane_trajectories_qualitative.nc` and :kbd:`traj.txt`.
 These files contain the trajectory information.
@@ -148,11 +147,11 @@ It contains 5 columns and as many rows as there are particles in the simulation 
 
    .. code-block:: text
 
-    310	360	-1.0 0.5 1.0
-	310	370	-1.5 0.5 1.0
-	310	380 -2.0 1.5 1.0
-	310 410 -1.0 0.5 1.0
-	331 415	-1.0 0.5 1.0
+    310	360 1.0 0.5 1.0
+	310	370	1.5 0.5 1.0
+	310	380 2.0 1.5 1.0
+	310 410 1.0 0.5 1.0
+	331 415	1.0 0.5 1.0
 
 This simulation, for example, will have 5 particles.
 
@@ -160,13 +159,8 @@ This simulation, for example, will have 5 particles.
 * Column 2: Spatial grid index (Y)
 * Column 3: Spatial grid index (Z)
 
-	* A negative value tells Ariane to confine the particle to its original depth throughout its trajectory. 
-	If you would like to have the particle trajectory include vertical movement, 
-	enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data.
-	* Since Ariane starts counting from 1, a "1" or "-1" here means the first depth grid box. 
-	The NEMO output grid boxes are 1 metre in height for the first few metres. 
-	This means that the second particle in this example (whose Z index is -1.5) would have a trajectory identical to that of a particle with Z index -1 
-	if they shared the same X, Y, and T indices.
+	* A negative value tells Ariane to confine the particle to its original depth throughout its trajectory. If you would like to have the particle trajectory include vertical movement, enter positive values and provide Ariane with the W velocity components in :kbd:`namelist` if using NEMO data.
+	* Since Ariane starts counting from 1, a "1" or "-1" here means the first depth grid box. The NEMO output grid boxes are 1 metre in height for the first few metres. This means that the second particle in this example (whose Z index is -1.5) would have a trajectory identical to that of a particle with Z index -1 if they shared the same X, Y, and T indices.
 * Column 4: Time index or :kbd:`fl`
 
 	* Use "0.5" if you want to start at NEMO time 00:00. Use "1" if you want to start at NEMO time 00:30.
@@ -174,8 +168,7 @@ This simulation, for example, will have 5 particles.
 
 .. note::
 
-    Ariane uses FORTAN indexing, which counts starting at 1. 
-	If you used Python to look up initial positions, which starts counting at 0, then you should add 1 to your initial positions.
+    Ariane uses FORTAN indexing, which counts starting at 1. If you used Python to look up initial positions, which starts counting at 0, then you should add 1 to your initial positions.
 
 :kbd:`namelist`
 ^^^^^^^^^^^^^^^
