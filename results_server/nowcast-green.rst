@@ -172,6 +172,9 @@ Date                       Change                                 New Value     
              longer western boundary and NO3 from LiveOcean
 
 18-Apr-2018  Reduce bSi and PON sinking rates                     5.6e-5 m/2      e9a5bc834f46_
+
+25-Apr-2018  Change rivers climatology PON and DON to be based
+             on model-derived profiles
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
