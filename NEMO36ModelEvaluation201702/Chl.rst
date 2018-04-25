@@ -7,7 +7,7 @@ Chlorophyll
 Citizen Science
 ====================
 
-2015-2017 chlorophyll measurements from the Citizen Science program was compared with the model. 
+2015-2017 chlorophyll measurements from the Citizen Science program was compared with the model.
 
 +-------------------------+-------------------+
 |    Statistic            | Value             |
@@ -32,11 +32,13 @@ Citizen Science
 .. _CitSci Chl 2016: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/CitSciChl2016-hourly.ipynb
 
 .. _CitSci Chl 2017: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-vicky/raw/tip/notebooks/ModelEvaluations/CitSciChl2017-hourly.ipynb
-Ferry
-=======================
 
-In addition to not using chlorophyll data where one or more of longitude, 
-latitude, chlorophyll, or time is masked, ferry chlorophyll values > 25 :math:`\mu` g / L were excluded. 
+
+Ferry
+=====
+
+In addition to not using chlorophyll data where one or more of longitude,
+latitude, chlorophyll, or time is masked, ferry chlorophyll values > 25 :math:`\mu` g / L were excluded.
 
 +-------------------------+-----------------+
 |    Statistic            | Value           |
