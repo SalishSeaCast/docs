@@ -57,8 +57,8 @@ Installing on :kbd:`orcinus`
 
 .. note::
 
-      This section is a remnant of a previous version of the documentation. Most users find using `salish` is sufficient.  
-	  
+      This section is a remnant of a previous version of the documentation. Most users find using `salish` is sufficient.
+
 On :kbd:`orcinus` create an Ariane working directory:
 
 .. code-block:: bash
@@ -85,7 +85,7 @@ Like :kbd:`salish`, we need to specify the locations of the :kbd:`netcdf` librar
 Make and install Ariane:
 
 .. code-block:: bash
-	
+
 	cd ariane-2.2.6_00
 	./configure --prefix=$HOME/MEOPAR/Ariane
 	make
@@ -113,7 +113,7 @@ To test that you have everything set up correctly, run one of the Ariane example
 For instance, try:
 
 .. code-block:: bash
-	
+
 	cd /ocean/$USER/MEOPAR/ariane-2.2.6_00/examples/qualitative
     ariane
 
@@ -121,8 +121,7 @@ You should notice several new files, such as :kbd:`ariane_trajectories_qualitati
 These files contain the trajectory information.
 
 * :kbd:`ariane_trajectories_qualitative.nc` can be loaded into a notebook to plot the particle locations over time and starting/finishing points, etc.
-* :kbd:`traj.txt` is helpful if you want to get a general idea of what the resulting trajectory coordinates look like or to check 
-if the simulation ran properly.
+* :kbd:`traj.txt` is helpful if you want to get a general idea of what the resulting trajectory coordinates look like or to check if the simulation ran properly.
 
 
 Running Ariane: An example for Salish Sea model
@@ -141,7 +140,7 @@ Type :kbd:`ariane` to  run the code.
 
 :kbd:`intitial_positions.txt`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The :kbd:`initial_positions.txt` file is where you will specify the initial positions and initial times of the particles you are tracking. 
+The :kbd:`initial_positions.txt` file is where you will specify the initial positions and initial times of the particles you are tracking.
 It contains 5 columns and as many rows as there are particles in the simulation you are running.
 
 
@@ -288,12 +287,12 @@ For a more detailed description of the parameters, please refer to the Ariane do
 
       **Condition 2: delta_t × frequency × nb_output < tunit × ntfic × (lmt + 0.5 - max(fl))**
 
-      Condition 1 must be satisfied if the maximum time index is 0.5. 
+      Condition 1 must be satisfied if the maximum time index is 0.5.
 	  Condition 2 must also be satisfied if any inital time index :kbd:`fl` is greater than 0.5.
 
 
 We must also specify where Salish Sea model output is stored in sections **ZONALCRT** and **MERIDCRT**.
-You can also input the vertical velocity component (recommended if using NEMO data) under **VERTICRT** 
+You can also input the vertical velocity component (recommended if using NEMO data) under **VERTICRT**
 or Ariane can compute it using the horizontal components.
 There is also the option of specifying temperature, salinity, and density in the sections **TEMPERAT**, **SALINITY**, and **DENSITY** respectively.
 
@@ -321,8 +320,8 @@ This is a large file not under version control but can be found in :file:`/ocean
 
 Ariane output
 ------------------------
-The trajectories can be plotted in a python notebook. 
-Different colours are used to distinguish the different trajectories and their initial positions are marked by a gray square. 
+The trajectories can be plotted in a python notebook.
+Different colours are used to distinguish the different trajectories and their initial positions are marked by a gray square.
 A 3D plot may be helpful in viewing particles at varying depths.
 
 
