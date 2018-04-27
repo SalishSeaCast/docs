@@ -171,10 +171,13 @@ Date                       Change                                 New Value     
 30-Dec-2017  New LiveOcean boundary condition processor with
              longer western boundary and NO3 from LiveOcean
 
-18-Apr-2018  Reduce bSi and PON sinking rates                     5.6e-5 m/2      e9a5bc834f46_
+18-Apr-2018  Reduced bSi and PON sinking rates                    5.6e-5 m/2      e9a5bc834f46_
 
 25-Apr-2018  Change rivers climatology PON and DON to be based
              on model-derived profiles
+             
+28-Apr-2018  Changed phytoplankton growth temperature |br|
+             dependence parameter values                                          f253dfb8277b_
 ===========  ===================================================  ==============  ==================
 
 .. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
@@ -189,3 +192,4 @@ Date                       Change                                 New Value     
 .. _2c892a5bae80: https://bitbucket.org/salishsea/ss-run-sets/commits/2c892a5bae80
 .. _fd69c1dc91be: https://bitbucket.org/salishsea/nemo-3.6-code/commits/fd69c1dc91be
 .. _e9a5bc834f46: https://bitbucket.org/salishsea/ss-run-sets/commits/e9a5bc834f46
+.. _f253dfb8277b: https://bitbucket.org/salishsea/ss-run-sets/commits/f253dfb8277b
