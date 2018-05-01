@@ -173,9 +173,9 @@ Date                       Change                                 New Value     
 
 18-Apr-2018  Reduced bSi and PON sinking rates                    5.6e-5 m/2      e9a5bc834f46_
 
-25-Apr-2018  Change rivers climatology PON and DON to be based
-             on model-derived profiles
-             
+25-Apr-2018  Change boundary PON and DON climatologies to be
+             based on model-derived profiles
+
 28-Apr-2018  Changed phytoplankton growth temperature |br|
              dependence parameter values                                          f253dfb8277b_
 ===========  ===================================================  ==============  ==================
