@@ -4,6 +4,13 @@
 Data Used
 ******************
 
+Canadian Hydrographic Service (CHS) Realtime Water Level 
+============================================================================
+CHS maintains a number of water level observation sites.  `Water level data`_ are downloaded and compared to water levels at the nearest 
+model grid point.  Comparison in this document is for Sandy Cove from Aug 2017 - May 2018.
+
+.. _Water level data: http://www.waterlevels.gc.ca/eng/data#s2
+
 Citizen Science 
 ======================================
 
