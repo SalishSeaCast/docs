@@ -14,5 +14,5 @@ Evaluating NEMO3.6 v201702
    Nutrients
    Chl
    Tides
-   Storm Surge
+   StormSurge
    Drifters
