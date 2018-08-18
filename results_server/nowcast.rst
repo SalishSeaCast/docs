@@ -100,7 +100,10 @@ Model Parameter Changes Over Time
              Sound, etc.
              
 30-Dec-2017  New LiveOcean boundary condition processor with 
-             longer western boundary and NO3 from LiveOcean 
+             longer western boundary and NO3 from LiveOcean
+             
+19-Jun-2018  Apply Neah Bay ssh to north boundary as well as                       6b89d1af1aec
+             west boundary
              
 16-Aug-2018  Change Orlanksi boundary conditions to calculate                      7c6a30e8bbf0
              along boundary wave on the boundary not one grid
@@ -123,4 +126,5 @@ Model Parameter Changes Over Time
 .. _fb724851d9f7: https://bitbucket.org/salishsea/tools/commits/fb724851d9f7
 .. _3b0accb0e693: https://bitbucket.org/salishsea/nemo-3.6-code/commits/3b0accb0e693
 .. _2c892a5bae80: https://bitbucket.org/salishsea/ss-run-sets/commits/2c892a5bae80
-.. _7c6a30e8bbf0  https://bitbucket.org/salishsea/nemo-3.6-code/commits/7c6a30e8bbf0
+.. _6b89d1af1aec: https://bitbucket.org/salishsea/ss-run-sets/commits/6b89d1af1aec
+.. _7c6a30e8bbf0: https://bitbucket.org/salishsea/nemo-3.6-code/commits/7c6a30e8bbf0
