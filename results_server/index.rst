@@ -81,9 +81,9 @@ The :file:`/results/` file system is organized as follows::
    |   |           |-- ...
    |   |           `-- weights-2.5kmGEM.nc@ -> /results/nowcast-sys/NEMO-forcing/grid/weights-2.5kmGEM.nc
    |   |-- rivers/
-   |   |   |-- RFraserCElse_y2014m09d01.nc
+   |   |   |-- R201702DFraCElse_y2014m09d01.nc
    |   |   |-- ..
-   |   |   |-- RFraserCElse_y2015m11d12.nc
+   |   |   |-- R201702DFraCElse_y2018m08d18.nc
    |   |   `-- ..
    |   `-- sshNeahBay/
    |       |-- fcst/
@@ -105,7 +105,13 @@ The :file:`/results/` file system is organized as follows::
    |           `-- ...
    |-- lost+found/
    |-- nowcast-sys/
-   |   |-- NEMO-forcing/
+   |   |-- grid
+   |   |   `-- ...
+   |   |-- rivers_climatology
+   |   |   `-- ...
+   |   |-- tides
+   |   |   `-- ...
+   |   |-- tracers
    |   |   `-- ...
    |   |-- nowcast/
    |   |   |-- nowcast.yaml@ -> /results/nowcast-sys/tools/SalishSeaNowcast/nowcast.yaml
@@ -134,44 +140,15 @@ The :file:`/results/` file system is organized as follows::
        |-- forecast/
        |   |-- 15oct16/
        |   `-- ...
-       |-- forecast-3.4/
-       |   |-- 20nov14/
-       |   |-- ...
-       |   `-- 14oct16/
        |-- forecast2/
        |   |-- 15oct16/
        |   `-- ...
-       |-- forecast2-3.4/
-       |   |-- 20nov14/
-       |   |-- ...
-       |   `-- 14oct16/
-       |-- nowcast/
+       |-- nowcast-blue/
        |   |-- 27oct14/
        |   |-- ...
-       |   `-- early-days/
-       |       |-- 24-26sep14/
-       |       |-- ...
-       |       `-- 25-26oct14/
-       |-- nowcast-3.4/
-       |-- nowcast-blue/
-       |   |-- 15oct16/
-       |   `-- ...
        |-- nowcast-green/
        |   |-- 05dec15/
        |   `-- ...
-       `-- spin-up/
-           |-- 2002/
-           |   |-- 16sep/
-           |   |-- 17sep/
-           |   ...
-           |   |-- 2oct3oct/
-           |   |-- 4oct5oct/
-           |   ...
-           |   |-- 20dec25dec/
-           |   `-- 26dec31dec/
-           |-- 1jan5jan/
-           |-- ...
-           `-- 27dec31dec/
 
 The :file:`/results/lost+found/` directory is a `filesystem maintenance directory used by Linux`_.
 Don't worry about it.
@@ -202,21 +179,6 @@ The sub-directories there are:
 
     See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
 
-* :file:`/results/SalishSea/forecast-3.4/`
-    Results from the nowcast system daily forecast runs using NEMO-3.4 between 2014-11-20 and 2016-10-14.
-    Forecast for :kbd:`day + 1` based on restart file from nowcast run for :kbd:`day`,
-    same atmospheric and river run-off forcing,
-    and updated western boundary sea surface height forcing.
-
-    Earliest daily results directory is :file:`/results/SalishSea/forecast-3.4/20nov14/`.
-    Latest daily results directory is :file:`/results/SalishSea/forecast-3.4/14oct16/`.
-    Most,
-    but not all dates since then are available.
-    :file:`forecast/` runs are secondary priority
-    (below :file:`nowcast/`)
-    when the nowcast automation system has difficulties.
-
-    See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
 
 * :file:`/results/SalishSea/forecast2/`
     Results from the nowcast system daily forecast2 runs using NEMO-3.6 since 2016-10-15.
@@ -234,30 +196,7 @@ The sub-directories there are:
 
     See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
 
-* :file:`/results/SalishSea/forecast2-3.4/`
-    Results from the nowcast system daily forecast2 runs using NEMO-3.4 between 2014-11-28 and 2016-10-14.
-    Forecast for :kbd:`day + 2` based on restart file from forecast run for :kbd:`day + 1`,
-    updated atmospheric,
-    river run-off forcing,
-    and western boundary sea surface height forcing.
 
-    Earliest daily results directory is :file:`/results/SalishSea/forecast2/28nov14/`.
-    Latest daily results directory is :file:`/results/SalishSea/forecast2/14oct16/`.
-    Most,
-    but not all dates since then are available.
-    :file:`forecast2/` runs are lowest priority
-    (below :file:`forecast/`)
-    when the nowcast automation system has difficulties.
-
-    See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
-
-* :file:`/results/SalishSea/nowcast/`
-    Results from the nowcast system daily nowcast runs using NEMO-3.4 between 2014-10-27 and 2016-10-14.
-
-    Earliest daily results directory is :file:`/results/SalishSea/nowcast/27oct14/`.
-    Latest daily results directory is :file:`/results/SalishSea/nowcast/14oct16/`.
-
-    See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
 
 * :file:`/results/SalishSea/nowcast-blue/`
     Results from the nowcast system daily nowcast runs using NEMO-3.6 since 2016-10-15.
@@ -273,11 +212,6 @@ The sub-directories there are:
 
     See :ref:`NowcastGreenResults` for details of the configuration and model parameter values changes over time.
 
-    The :file:`/results/SalishSea/nowcast/early-days/` directory contains results from multi-day runs between :file:`24-26sep14/` and :file:`25-26oct14/` that were the spin-up of the nowcast system.
-
-* :file:`/results/SalishSea/spin-up/`
-    Results from the Salish Sea model spin-up runs.
-
 
 Details of Configurations for Results
 =====================================
@@ -286,5 +220,3 @@ Details of Configurations for Results
    :maxdepth: 2
 
    nowcast
-   nowcast-green
-   hindcast
