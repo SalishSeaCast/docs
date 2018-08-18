@@ -1,22 +1,34 @@
 .. _NowcastResults:
 
-*********************
+***************************
 Nowcast Model Results
-*********************
+***************************
 
-:file:`/results/SalishSea/nowcast/` holds the results from the daily nowcast runs.
+:file:`/results/SalishSea/nowcast-green/` holds the results from the daily nowcast green ocean runs.
 
-:file:`/results/SalishSea/forecast/` holds the results from the daily forecast runs.
+From 12-Sep-2014 until 24-Aug-2017 these results were produced from a hindcast (201702).  From the 25-Aug-2017 on, these results come from the daily nowcast, started on the 24-Aug-2017 hindcast result.
 
-:file:`/results/SalishSea/forecast2/` holds the results from the daily forecast2 runs.
+Note that hindcast runs were typically done 10 days at a time.  The first day directory includes the configuration etc files.  The last day includes restarts from day 5 and day 10.
 
-Initial run used:
+These runs started 12-Sep-2014 using physical and biological initial conditions from the previous nowcast-green run at 11-Sep-2016.
 
-* NEMO-3.4
-* Bathymetry #2 (truncated Fraser River)
-* TS4 tides
-* practical salinity
 
+* NEMO-3.6
+* coordinates v201702 (expanded resolution for Fraser River)
+* bathymetry v201702 (based on DFO, Cascadia and ABC, included datum and extended Fraser River)
+* jetty with enhanced bottom friction over it
+* R201702 rivers (daily Fraser, climatology else)
+* river biology and temperature (all the same, based on Fraser)
+* N36_AF tides
+* TEOS-10 and reworked Juan de Fuca TEOS-10 boundary conditions
+* SMELT biological model
+* passive turbidity
+* Hollingsworth + energy and enstrophy conserving
+* 5-step substepping vertical advection
+* Orlanski with sponge open boundaries on baroclinic T&S
+* decreased horizontal diffusivity (1 m2/s) and viscosity (1.1 m2/s)
+* horizontal diffusivity (so can increase values for sponge near boundaries)
+* decreased bottom friction (7 cm bottom roughness)
 
 Model Parameter Changes Over Time
 =================================
@@ -26,105 +38,47 @@ Model Parameter Changes Over Time
     <br>
 
 ===========  ===================================================  ==============  ==================
- Date                       Change                                New Value       Changeset
+Date                       Change                                 New Value       Changeset
 ===========  ===================================================  ==============  ==================
-27-Oct-2014  1st :file:`nowcast/` run results                     N/A
-20-Nov-2014  1st :file:`forecast/` run results                    N/A
-26-Nov-2014  Changed to tidal forcing tuned for better |br|       see changeset   efa8c39a9a7c_
-             accuracy at Point Atkinson
-28-Nov-2014  1st :file:`forecast2/` run results                   N/A
-07-Dec-2014  Changed temperature of run-off from all rivers |br|  see changeset   e691e0c99dff_
-             to that of the Fraser (one day only)
-14-Dec-2014  Changed temperature of run-off from all rivers |br|  see changeset   e691e0c99dff_
-             to that of the Fraser (ongoing)
-28-Mar-2015  Horizontal turbulent diffusivity (kappa) |br|        10              89d2c2653d9e_
-             reduced from 20.5
-06-Aug-2015  Changed lateral momentum diffusion from |br|         see changeset   064a3be69f54_
-             horizontal to iso-neutral direction
-29-Sep-2015  Vertical background turbulent viscosity |br|         1.0e-5          9fdb426ea91f_
-             reduced from 1.0e-4
-03-Nov-2015  Increased deep salinity of western boundary |br|     see changeset   956b5587d773_
-             conditions based on climatological comparisons |br|
-             with IOS & WOD data
-22-Nov-2015  Corrected and moved river run-off grid |br|          see changeset   5d1e00c2f44e_
-             locations: |br|
-             Oyster & 4 Jervis Inlet rivers were on land, |br|
-             southern-most Fraser portion corrected from |br|
-             Deas Slough to Canoe Pass
-27-Nov-2015  Changed from using Neah Bay forecast residuals |br|  see changeset   65ce47429291_
-             to using that forecast and calculating our own |br|
-             residuals via ttide
-15-Dec-2015  One day only: no weather available, used |br|        N/A             N/A
-             14-Dec-2015 forecast
-24-Jan-2016  Add vertical eddy viscosity & diffusion |br|         see changesets  e927e26ebe34_ |br|
-             coefficients to :file:`*grid_W.nc` output |br|
-             files. |br|
-             Remove snowfall rate from :file:`*_grid_T.nc` |br|                   71946bd297a4_
-             output files.
-15-Oct-2016  Changed to NEMO-3.6 at SVN revision 6036. |br|
-             Changed to :file:`bathy_downonegrid2.nc` |br|
-             bathymetry and mesh mask. |br|
-             Changed to conservative temperature for rivers |br|
-             runoff and boundary conditions. |br|
-             Changed to TEOS-10 reference salinity for |br|
-             boundary conditions. |br|
-             Restart file was |br|
-             :file:`SalishSea_00553680_restart.nc` from |br|
-             :file:`nowcast-green/14oct16/` run results.
+12-Sep-2014   1st run results                                      N/A
+28-Dec-2014   Updated Fraser turbidity tracer code and reset       N/A
+31-Aug-2015   accidently switched to rivers for downbyone bathy    N/A
+05-Sep-2015   Increased vertical time stepping nn_traadv_tvd_zts   20
+05-Feb-2017   Switched back to correct rivers                      N/A
+05-Feb-2017   Switched to LiveOcean boundary conditions at JdF     N/A
 
-26-Oct-2016  Updated NEMO code to NEMO-3.6r6204+                                  967d5a19d820_
-29-Oct-2016  Moved :kbd:`nowcast` run results since |br|
-             15oct16 into :file:`nowcast-blue/` directory. |br|
-             Moved :kbd:`forecast` run results prior to |br|
-             15oct16 into :file:`forecast-3.4/` directory. |br|
-             Moved :kbd:`forecast2` run results prior to |br|
-             15oct16 into :file:`forecast2-3.4/` directory.
+25-Aug-2017   Started running as nowcast
 
-28-Nov-2016  Updated NEMO code to NEMO-3.6r6459+ |br|                             a79d64786baa_ |br|
-             Change to rebuild_nemo that writes |br|                              f9a8d03de741_ |br|
-             deflated netcdf4/hdf5 files directly. |br|
-             Start using land processor elimination in runs.                      fb724851d9f7_
+07-Oct-2017   Updated bathymetry to correct smoothing in |br|
+              Puget Sound, etc.
 
-09-Jan-2017  Updated NEMO code to NEMO-3.6r6770+ |br|                             3b0accb0e693_ |br|
-             Change to Ceph/NFS shared storage on west.cloud.
+30-Dec-2017   New LiveOcean boundary condition processor |br|
+              with longer western boundary and NO3 from |br|
+              LiveOcean
 
-27-Apr-2017  Increased lateral viscosity and diffusivity          2.2 m2/s        2c892a5bae80_
+18-Apr-2018   Reduced bSi and PON sinking rates                    5.6e-5 m/2      e9a5bc834f46_
 
-27-Aug-2017  Changed to v201702 bathymetry and parameters
-             (see :ref:`HindcastResults` for details).
-             Restart file from :file:`nowcast-green/26aug17`.
-             nowcast-blue and nowcast-dev runs henceforth use
-             previous day's nowcast-green restart file.
+25-Apr-2018   Change boundary PON and DON climatologies |br|
+              to be based on model-derived profiles
 
-07-Oct-2017  Updated bathymetry to correct smoothing in Puget
-             Sound, etc.
-             
-30-Dec-2017  New LiveOcean boundary condition processor with 
-             longer western boundary and NO3 from LiveOcean
-             
-19-Jun-2018  Apply Neah Bay ssh to north boundary as well as                       6b89d1af1aec
-             west boundary
-             
-16-Aug-2018  Change Orlanksi boundary conditions to calculate                      7c6a30e8bbf0
-             along boundary wave on the boundary not one grid
-             cell in.
+28-Apr-2018   Changed phytoplankton growth temperature |br|
+              dependence parameter values                                          f253dfb8277b_
+
+19-Jun-2018  Apply Neah Bay ssh to north boundary as well |br|                     6b89d1af1aec_
+             as west boundary
+
+16-Aug-2018  Reflect part of the PON/DON from the bottom |br|                      d1017236fff0_
+             boundary
+
+16-Aug-2018  Change Orlanksi boundary conditions to |br|                           7c6a30e8bbf0_
+             caculate along boundary wave on the boundary |br|
+             not one grid cell in.
 ===========  ===================================================  ==============  ==================
 
-.. _efa8c39a9a7c: https://bitbucket.org/salishsea/ss-run-sets/commits/efa8c39a9a7c
-.. _e691e0c99dff: https://bitbucket.org/salishsea/ss-run-sets/commits/e691e0c99dff
-.. _89d2c2653d9e: https://bitbucket.org/salishsea/ss-run-sets/commits/89d2c2653d9e
-.. _064a3be69f54: https://bitbucket.org/salishsea/ss-run-sets/commits/064a3be69f54
-.. _9fdb426ea91f: https://bitbucket.org/salishsea/ss-run-sets/commits/9fdb426ea91f
-.. _956b5587d773: https://bitbucket.org/salishsea/ss-run-sets/commits/956b5587d773
-.. _5d1e00c2f44e: https://bitbucket.org/salishsea/nemo-forcing/commits/5d1e00c2f44e
-.. _65ce47429291: https://bitbucket.org/salishsea/tools/commits/65ce47429291
-.. _e927e26ebe34: https://bitbucket.org/salishsea/ss-run-sets/commits/e927e26ebe34
-.. _71946bd297a4: https://bitbucket.org/salishsea/ss-run-sets/commits/71946bd297a4
-.. _967d5a19d820: https://bitbucket.org/salishsea/nemo-3.6-code/commits/967d5a19d820
-.. _a79d64786baa: https://bitbucket.org/salishsea/nemo-3.6-code/commits/a79d64786baa
-.. _f9a8d03de741: https://bitbucket.org/salishsea/nemo-3.6-code/commits/f9a8d03de741
-.. _fb724851d9f7: https://bitbucket.org/salishsea/tools/commits/fb724851d9f7
-.. _3b0accb0e693: https://bitbucket.org/salishsea/nemo-3.6-code/commits/3b0accb0e693
-.. _2c892a5bae80: https://bitbucket.org/salishsea/ss-run-sets/commits/2c892a5bae80
+
+.. _e9a5bc834f46: https://bitbucket.org/salishsea/ss-run-sets/commits/e9a5bc834f46
+.. _f253dfb8277b: https://bitbucket.org/salishsea/ss-run-sets/commits/f253dfb8277b
 .. _6b89d1af1aec: https://bitbucket.org/salishsea/ss-run-sets/commits/6b89d1af1aec
+.. _d1017236fff0: https://bitbucket.org/salishsea/nemo-3.6-code/commits/d1017236fff0
 .. _7c6a30e8bbf0: https://bitbucket.org/salishsea/nemo-3.6-code/commits/7c6a30e8bbf0
+
