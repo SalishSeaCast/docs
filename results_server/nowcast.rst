@@ -98,6 +98,13 @@ Model Parameter Changes Over Time
 
 07-Oct-2017  Updated bathymetry to correct smoothing in Puget
              Sound, etc.
+             
+30-Dec-2017  New LiveOcean boundary condition processor with 
+             longer western boundary and NO3 from LiveOcean 
+             
+16-Aug-2018  Change Orlanksi boundary conditions to calculate                      7c6a30e8bbf0
+             along boundary wave on the boundary not one grid
+             cell in.
 ===========  ===================================================  ==============  ==================
 
 .. _efa8c39a9a7c: https://bitbucket.org/salishsea/ss-run-sets/commits/efa8c39a9a7c
@@ -116,3 +123,4 @@ Model Parameter Changes Over Time
 .. _fb724851d9f7: https://bitbucket.org/salishsea/tools/commits/fb724851d9f7
 .. _3b0accb0e693: https://bitbucket.org/salishsea/nemo-3.6-code/commits/3b0accb0e693
 .. _2c892a5bae80: https://bitbucket.org/salishsea/ss-run-sets/commits/2c892a5bae80
+.. _7c6a30e8bbf0  https://bitbucket.org/salishsea/nemo-3.6-code/commits/7c6a30e8bbf0
