@@ -25,11 +25,8 @@ The modules needed are:
 
 .. code-block:: bash
 
-    module load python27-scipy-stack/2017a
+    module load python/3.7.0
     module load perl/5.22.2
-    module load intel/2016.4
-    module load hdf5-mpi/1.8.18
-    module load netcdf-c++4-mpi/4.3.0
     module load netcdf-fortran-mpi/4.4.4
     module load netcdf-mpi/4.4.1.1
 
