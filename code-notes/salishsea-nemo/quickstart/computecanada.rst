@@ -26,9 +26,7 @@ The modules needed are:
 .. code-block:: bash
 
     module load python/3.7.0
-    module load perl/5.22.2
     module load netcdf-fortran-mpi/4.4.4
-    module load netcdf-mpi/4.4.1.1
 
 
 Create a Workspace and Clone the Repositories

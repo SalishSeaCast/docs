@@ -7,7 +7,7 @@ Getting your Jasper Shell Ready
 -------------------------------
 
 * make sure your shell is bash (echo $SHELL), if its not, write to Westgrid support and get it changed.
-* follow the instructions in :ref:`LoadingModulesOnWestgridClusters` to manually load the necessary software component modules or edit your :kbd:`jasper` :file:`$HOME/.bashrc` to make them load automatically when you :program:`ssh` into :kbd:`jasper`.
+* follow the instructions in :ref:`LoadingModulesOnHPCClusters` to manually load the necessary software component modules or edit your :kbd:`jasper` :file:`$HOME/.bashrc` to make them load automatically when you :program:`ssh` into :kbd:`jasper`.
 
 
 Getting the Code
@@ -59,7 +59,7 @@ Making a Project
       %MK           make
       %USER_INC     %NCDF_INC
       %USER_LIB     %NCDF_LIB
-      
+
 
 *   then change directory and make a project, e.g.
     then for a new GYRE configuration using your new arch file ocean
