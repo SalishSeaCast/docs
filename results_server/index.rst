@@ -210,7 +210,7 @@ The sub-directories there are:
 
     Earliest daily results directory is :file:`/results/SalishSea/nowcast-green/05dec15/`.
 
-    See :ref:`NowcastGreenResults` for details of the configuration and model parameter values changes over time.
+    See :ref:`NowcastResults` for details of the configuration and model parameter values changes over time.
 
 
 Details of Configurations for Results
