@@ -152,16 +152,25 @@ To ensure that :command:`.bashrc` is executed when you login via ssh create a fi
     fi
 
 
-.. _LoadingModulesOnWestgridClusters:
+.. _LoadingModulesOnHPCClusters:
 
-Loading Modules on Westgrid Clusters
-------------------------------------
+Loading Modules on HPC Clusters
+-------------------------------
 
-When working on Westgrid clusters the :command:`module` command must be used to load several software components required to
+When working on ComputeCanada or Westgrid clusters the :command:`module` command must be used to load several software components required to
 compile,
 run,
 and work with the results of NEMO.
 The required modules vary from machine to machine:
+
+.. _LoadingModulesOnCedarGraham:
+
+* On :kbd:`cedar` and :kbd:`graham` the :command:`module load` commands you should include in your :file:`$HOME/.bashrc` are:
+
+  .. code-block:: bash
+
+      module load python/3.7.0
+      module load netcdf-fortran-mpi/4.4.4
 
 .. _LoadingModulesOnOrcinus:
 
@@ -177,11 +186,18 @@ The required modules vary from machine to machine:
       module load intel/14.0/nco-4.5.2
 
 You can inspect the collection of modules that are loaded with the :command:`module list` command; for example,
-on :kbd:`orcinus`:
+on :kbd:`cedar`::
 
-.. code-block:: bash
+  module list
+  Currently Loaded Modules:
+    1) nixpkgs/16.09   (S)   4) ifort/.2016.4.258 (H)      7) openmpi/2.1.1 (m)  10) hdf5-mpi/1.8.18          (io)
+    2) icc/.2016.4.258 (H)   5) intel/2016.4      (t)      8) StdEnv/2016.4 (S)  11) netcdf-mpi/4.4.1.1       (io)
+    3) gcccore/.5.4.0  (H)   6) imkl/11.3.4.258   (math)   9) python/3.7.0  (t)  12) netcdf-fortran-mpi/4.4.4 (io)
 
-    module list
-    Currently Loaded Modulefiles:
-      1) python/2.7.3                      3) intel/14.0/netcdf-4.3.3.1         5) intel/14.0/hdf5-1.8.15p1
-      2) intel/14.0.2                      4) intel/14.0/netcdf-fortran-4.4.0   6) intel/14.0/nco-4.5.2
+    Where:
+     S:     Module is Sticky, requires --force to unload or purge
+     m:     MPI implementations / Implémentations MPI
+     math:  Mathematical libraries / Bibliothèques mathématiques
+     io:    Input/output software / Logiciel d'écriture/lecture
+     t:     Tools for development / Outils de développement
+     H:                Hidden Module
