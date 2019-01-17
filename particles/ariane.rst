@@ -6,11 +6,14 @@ Ariane is a Fortran code used to compute 3D streamlines in a given velocity fiel
 
 Getting the code
 --------------------------------------
+The primary location to get the code is via the
+.. _Ariane website: http://stockage.univ-brest.fr/~grima/Ariane/download.php
 
+You can get modifications that we've made to the source files for our usage here (we're working with version 2.2.8_04):
 .. code-block:: bash
 
-    cd /ocean/$USER/MEOPAR/
-    hg clone ssh://hg@bitbucket.org/UBC_MOAD/ariane-2.2.6_00
+    cd /ocean/$USER/$PROJECT/
+    hg clone ssh://hg@bitbucket.org/eliseolsen/arianesrc-2.2.8_04
 
 Installing on :kbd:`salish`
 ------------------------------------------
@@ -19,27 +22,27 @@ Specify the locations of the :kbd:`netcdf` libraries to help the :kbd:`configure
 
 .. code-block:: bash
 
-	cd /ocean/$USER/MEOPAR/ariane-2.2.6_00/ariane-2.2.6_00
+        cd /ocean/$USER/$PROJECT/ariane-2.2.8_04/
     export NETCDF_INC=/usr/include
     export NETCDF_LIB=/usr/lib
 
-Configure the installation:
+Configure the installation by going to the folder of your downloaded Ariane code from their website:
 
 .. code-block:: bash
 
-    cd /ocean/$USER/MEOPAR/ariane-2.2.6_00/ariane-2.2.6_00
-	./configure --prefix=/ocean/$USER/MEOPAR/ariane-2.2.6_00
+    cd /ocean/$USER/$PROJECT/ariane-2.2.8_04
+        ./configure --prefix=/ocean/$USER/$PROJECT/ariane-2.2.8_04
 
 The :kbd:`prefix` argument overwrites the default install directory into a customized directory.
 
-Make and install Ariane:
+Make and install Ariane (you will need to do this every time you make changes to the code):
 
 .. code-block:: bash
 
-    cd /ocean/$USER/MEOPAR/ariane-2.2.6_00/ariane-2.2.6_00
-	make
-	make check
-	make install
+    cd /ocean/$USER/$PROJECT/ariane-2.2.8_04
+        make
+        make check
+        make install
 
 :kbd:`make` compiles source files, :kbd:`make check` tests Ariane's qualitative and quantitative modes, and :kbd:`make install` installs Ariane.
 
@@ -47,65 +50,9 @@ Add the path for the Ariane executable to your :kbd:`PATH` environment variable:
 
 .. code-block:: bash
 
-	export PATH=/ocean/$USER/MEOPAR/ariane-2.2.6_00/bin:$PATH
+        export PATH=/ocean/$USER/$PROJECT/ariane-2.2.8_04/bin:$PATH
 
 Now you can run Ariane from any directory by typing :kbd:`ariane`.
-
-
-Installing on :kbd:`orcinus`
-------------------------------------------
-
-.. note::
-
-      This section is a remnant of a previous version of the documentation. Most users find using `salish` is sufficient.
-
-On :kbd:`orcinus` create an Ariane working directory:
-
-.. code-block:: bash
-
-	mkdir $HOME/MEOPAR/Ariane
-
-Place the :kbd:`ariane-2.2.6_00.tar.gz` package in that directory and unpack it:
-
-.. code-block:: bash
-
-	cd $HOME/MEOPAR/Ariane
-	gunzip ariane-2.2.6_00.tar.gz
-	tar -xf ariane-2.2.6_00.tar
-
-Like :kbd:`salish`, we need to specify the locations of the :kbd:`netcdf` libraries on :kbd:`orcinus`:
-
-.. code-block:: bash
-
-	module load intel
-    module load intel/14.0/netcdf_hdf5
-    export NETCDF_INC=/global/software/lib64/intel/ncsa-tools/include
-    export NETCDF_LIB=/global/software/lib64/intel/ncsa-tools/lib
-
-Make and install Ariane:
-
-.. code-block:: bash
-
-	cd ariane-2.2.6_00
-	./configure --prefix=$HOME/MEOPAR/Ariane
-	make
-	make check
-	make install
-
-The :kbd:`prefix` flag indicates where Ariane will be installed.
-Here we have chosen :kbd:`$HOME/MEOPAR/Ariane`.
-There should be several new directories in this folder: :kbd:`bin:`, :kbd:`docs`, :kbd:`examples`.
-To run Ariane, add the path for the Ariane executable to your :kbd:`PATH` environment variable:
-
-.. code-block:: bash
-
-	export PATH=$HOME/MEOPAR/Ariane/bin:$PATH
-
-Now you can run Ariane from any directory by typing :kbd:`ariane`.
-
-On :kbd:`orcinus` Ariane runs can also be submitted to the queue.
-An example :kbd:`.pbs` will be included soon.
-
 
 Testing Ariane
 ------------------------
@@ -114,7 +61,7 @@ For instance, try:
 
 .. code-block:: bash
 
-	cd /ocean/$USER/MEOPAR/ariane-2.2.6_00/examples/qualitative
+        cd /ocean/$USER/$PROJECT/ariane-2.2.8_04/examples/qualitative
     ariane
 
 You should notice several new files, such as :kbd:`ariane_trajectories_qualitative.nc` and :kbd:`traj.txt`.
