@@ -83,8 +83,8 @@ Install the :ref:`NEMO-CommandProcessor` and :ref:`SalishSeaCmdProcessor` Python
 .. code-block:: bash
 
     cd $PROJECT/$USER/MEOPAR/
-    pip install --user --editable NEMO-Cmd
-    pip install --user --editable SalishSeaCmd
+    python3.7 -m pip install --user --editable NEMO-Cmd
+    python3.7 -m pip install --user --editable SalishSeaCmd
 
 
 .. _CompileXIOS-computecanada:
