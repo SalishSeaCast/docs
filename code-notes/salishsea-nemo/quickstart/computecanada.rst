@@ -27,6 +27,7 @@ The modules needed are:
 
     module load python/3.7.0
     module load netcdf-fortran-mpi/4.4.4
+    module load perl/5.22.4
 
 
 Create a Workspace and Clone the Repositories
