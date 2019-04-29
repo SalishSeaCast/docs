@@ -20,15 +20,19 @@ When working on the ComputeCanada clusters, the :command:`module load` command m
 You can manually load the modules each time you log in,
 or you can add the lines to your :file:`$HOME/.bashrc` file so that they are automatically loaded upon login.
 
-At present, :kbd:`cedar` and :kbd:`graham` are configured similarly.
+At present, :kbd:`beluga`,
+:kbd:`cedar`,
+and :kbd:`graham` are configured similarly.
 The modules needed are:
 
 .. code-block:: bash
 
-    module load python/3.7.0
     module load netcdf-fortran-mpi/4.4.4
     module load perl/5.22.4
+    module load python/3.7.0
 
+
+.. _CreateWorkspaceAndCloneRepositories:
 
 Create a Workspace and Clone the Repositories
 =============================================
