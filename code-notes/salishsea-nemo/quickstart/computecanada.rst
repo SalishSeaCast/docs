@@ -80,6 +80,8 @@ Clone the repos needed to run the model:
     hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
 
 
+.. _InstallCommandProcessorPackages:
+
 Install the Command Processor Packages
 ======================================
 
