@@ -102,39 +102,52 @@ Compile XIOS-2
 Please see the :ref:`moaddocs:XIOS-2-docs` section of the :ref:`UBC-EOAS-MOAD-docs`.
 
 
+.. _CompileNEMO-3.6-computecanada:
+
 Compile NEMO-3.6
 ================
 
-Compile the :kbd:`SalishSea` NEMO configuration and link it to XIOS-2, and compile the :program:`rebuild_nemo` tool.
+Compile the :kbd:`SalishSeaCast` NEMO configuration and link it to XIOS-2, and compile the :program:`rebuild_nemo` tool.
 The NEMO ARCH files use the :envvar:`XIOS_HOME` environment variable to find the XIOS-2 library you built above.
 :envvar:`XIOS_HOME` *must* be an absolute path to your XIOS-2 clone directory.
 You can set :envvar:`XIOS_HOME` on the command-line before the :command:`makenemo` and :command:`maketools` commands as shown below,
 or you can set and export the value of :envvar:`XIOS_HOME` in your :file:`$HOME/.bashrc` file.
 
 
-:kbd:`cedar`:
+:kbd:`beluga`
 -------------
 
 .. code-block:: bash
 
     cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSea -m X64_CEDAR -j 8
+    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m X64_BELUGA -j 8
     cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./maketools -n REBUILD_NEMO -m X64_CEDAR
+    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./maketools -n REBUILD_NEMO -m X64_BELUGA
 
 
-:kbd:`graham`:
---------------
+:kbd:`cedar`
+------------
 
 .. code-block:: bash
 
     cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSea -m X64_GRAHAM -j 8
+    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m X64_CEDAR -j 8
+    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
+    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./maketools -n REBUILD_NEMO -m X64_CEDAR
+
+
+:kbd:`graham`
+-------------
+
+.. code-block:: bash
+
+    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m X64_GRAHAM -j 8
     cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
     XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./maketools -n REBUILD_NEMO -m X64_GRAHAM
 
 
-To build a configuration other than :kbd:`SalishSea`, replace :kbd:`SalishSea` with the name of the configuration to be built, e.g. :kbd:`SMELT`:
+To build a configuration other than :kbd:`SalishSeaCast`, replace :kbd:`SalishSeaCast` with the name of the configuration to be built, e.g. :kbd:`SMELT`:
 
 .. code-block:: bash
 
