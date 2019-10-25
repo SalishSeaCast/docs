@@ -95,4 +95,4 @@ After the key has been installed you should be able to use :command:`ssh`,
 :command:`scp`,
 and :command:`sftp` to connect to the remote machine without having to type your password.
 Likewise,
-Mercurial commands on the remove machine should not require your to type your :command:`ssh` key pass phrase.
+Mercurial commands on the remote machine should not require your to type your :command:`ssh` key pass phrase.
