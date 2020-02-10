@@ -59,6 +59,23 @@ Both systems provide environment variables that are more convenient that remembe
 
 Create a :file:`MEOPAR/` directory tree in your project space:
 
+:kbd:`beluga`
+-------------
+
+.. code-block:: bash
+
+    mkdir -p ~/projects/def-allen/$USER/MEOPAR/SalishSea/results
+    
+:kbd:`cedar`
+-------------
+
+.. code-block:: bash
+
+    mkdir -p $PROJECT/$USER/MEOPAR/SalishSea/results
+    
+:kbd:`graham`
+-------------
+
 .. code-block:: bash
 
     mkdir -p $PROJECT/$USER/MEOPAR/SalishSea/results
