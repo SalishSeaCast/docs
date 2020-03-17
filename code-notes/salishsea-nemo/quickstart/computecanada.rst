@@ -65,14 +65,14 @@ Create a :file:`MEOPAR/` directory tree in your project space:
 .. code-block:: bash
 
     mkdir -p ~/projects/def-allen/$USER/MEOPAR/SalishSea/results
-    
+
 :kbd:`cedar`
 -------------
 
 .. code-block:: bash
 
     mkdir -p $PROJECT/$USER/MEOPAR/SalishSea/results
-    
+
 :kbd:`graham`
 -------------
 
@@ -85,13 +85,14 @@ Clone the repos needed to run the model:
 .. code-block:: bash
 
     cd $PROJECT/$USER/MEOPAR
+    git clone git@github.com:SalishSeaCast/tides.git
+
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-3.6-code NEMO-3.6-code
     hg clone ssh://hg@bitbucket.org/salishsea/xios-2 XIOS-2
     hg clone ssh://hg@bitbucket.org/salishsea/xios-arch XIOS-ARCH
     hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
     hg clone ssh://hg@bitbucket.org/salishsea/grid
     hg clone ssh://hg@bitbucket.org/salishsea/rivers-climatology
-    hg clone ssh://hg@bitbucket.org/salishsea/tides
     hg clone ssh://hg@bitbucket.org/salishsea/tracers
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
     hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd

@@ -15,11 +15,15 @@ files used to run NEMO for the Salish Sea are maintained in 4 repositories:
 * :ref:`tides-repo`
 * :ref:`tracers-repo`
 
-They can be found in the `SalishSea-MEOPAR NEMO Model Runs`_ collection of repos on Bitbucket.
+They can be found in the `SalishSeaCast organization`_ collection of repos on GitHub
+(preferred)
+or the `SalishSea-MEOPAR NEMO Model Runs`_ collection of repos on Bitbucket
+(being migrated to GitHub in spring 2020).
 
+.. _SalishSeaCast organization: https://github.com/SalishSeaCast
 .. _SalishSea-MEOPAR NEMO Model Runs: https://bitbucket.org/account/user/salishsea/projects/SSM_NEMO_RUNS
 
-If you have set up SSH key authentication on Bitbucket,
+If you have set up SSH key authentication on GitHub and Bitbucket,
 you can clone the :ref:`grid-repo`,
 :ref:`rivers-repo`,
 :ref:`tides-repo`,
@@ -29,7 +33,7 @@ and :ref:`tracers-repo` repos with:
 
     hg clone ssh://hg@bitbucket.org/salishsea/grid
     hg clone ssh://hg@bitbucket.org/salishsea/rivers-climatology
-    hg clone ssh://hg@bitbucket.org/salishsea/tides
+    git clone git@github.com:SalishSeaCast/tides.git
     hg clone ssh://hg@bitbucket.org/salishsea/tracers
 
 For password authentication use:
@@ -38,7 +42,7 @@ For password authentication use:
 
     hg clone https://<you>@bitbucket.org/salishsea/grid
     hg clone https://<you>@bitbucket.org/salishsea/rivers-climatology
-    hg clone https://<you>@bitbucket.org/salishsea/tides
+    git clone https://github.com/SalishSeaCast/tides.git
     hg clone https://<you>@bitbucket.org/salishsea/tracers
 
 where :kbd:`<you>` is your Bitbucket user id.
