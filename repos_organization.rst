@@ -239,7 +239,7 @@ tides
 
   Many of these files originated in the (private) :ref:`NEMO-forcing-repo` repository.
   The commit message history of files from that repository is included in their initial commit messages.
-* Bitbucket: https://bitbucket.org/salishsea/tides
+* GitHub: https://github.com/SalishSeaCast/tides
 
 
 .. _tracers-repo:
