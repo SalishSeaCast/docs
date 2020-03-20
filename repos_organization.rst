@@ -187,9 +187,8 @@ XIOS-ARCH
 * public
 * Apache v2.0 license, copyright project contributors and UBC
 * XIOS build configuration arch files for use with NEMO-3.6
-* Bitbucket: https://bitbucket.org/salishsea/xios-arch
-* documentation: for :ref:`salish <CompileXIOS-salish>`,
-  for :ref:`westgrid machines <CompileXIOS-westgrid>`
+* GitHub: https://github.com/SalishSeaCast/XIOS-ARCH
+* documentation: :ref:`moaddocs:XIOS-2-docs`
 
 
 .. _grid-repo:
