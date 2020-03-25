@@ -107,7 +107,7 @@ NEMO-Cmd
 * The NEMO command processor, :command:`nemo`,
   a command line tool for doing various operations associated with running the NEMO ocean model.
 * documentation is rendered at https://nemo-cmd.readthedocs.io/en/latest/
-* Bitbucket: https://bitbucket.org/salishsea/nemo-cmd/
+* GitHub: https://github.com/SalishSeaCast/NEMO-Cmd
 
 
 .. _SalishSeaNowcast-repo:
