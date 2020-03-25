@@ -123,7 +123,7 @@ SalishSeaNowcast
   forcing data for the western boundary sea surface height and the Fraser River flow,
   and atmospheric forcing from the four-times-daily produced forecast results from the Environment Canada High Resolution Deterministic Prediction System (HRDPS) operational GEM 2.5km resolution model.
 * documentation is rendered at https://salishsea-nowcast.readthedocs.io/en/latest/
-* Bitbucket: https://bitbucket.org/salishsea/salishseanowcast/
+* GitHub: https://github.com/SalishSeaCast/SalishSeaNowcast
 
 
 .. _analysis-repo:
