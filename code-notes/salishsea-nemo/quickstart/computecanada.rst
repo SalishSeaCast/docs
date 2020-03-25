@@ -85,6 +85,7 @@ Clone the repos needed to run the model:
 .. code-block:: bash
 
     cd $PROJECT/$USER/MEOPAR
+    git clone git@github.com:SalishSeaCast/NEMO-Cmd.git
     git clone git@github.com:SalishSeaCast/tides.git
     git clone git@github.com:SalishSeaCast/XIOS-ARCH.git
 
@@ -94,7 +95,6 @@ Clone the repos needed to run the model:
     hg clone ssh://hg@bitbucket.org/salishsea/grid
     hg clone ssh://hg@bitbucket.org/salishsea/rivers-climatology
     hg clone ssh://hg@bitbucket.org/salishsea/tracers
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
     hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
 
 

@@ -32,7 +32,7 @@ etc.
     cd /ocean/$USER/MEOPAR/
     hg clone ssh://hg@bitbucket.org/salishsea/docs
     hg clone ssh://hg@bitbucket.org/salishsea/tools
-    hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
+    git clone git@github.com:SalishSeaCast/NEMO-Cmd.git
     hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
 
 Next,
