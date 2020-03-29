@@ -12,34 +12,36 @@ It is funded by the `Marine Environment Observation Prediction And Response`_ Na
 
 The following people have contributed code,
 documentation,
-etc. to the Salish Sea MEOPAR project repositories hosted on Bitbucket_:
+etc. to the Salish Sea MEOPAR project repositories hosted on GitHub_ and Bitbucket_:
 
 .. _Bitbucket: https://bitbucket.org/salishsea/
+.. _GitHub: https://github.com/SalishSeaCast
 
-* Susan Allen <sallen@eos.ubc.ca>
+* Susan Allen <sallen@eoas.ubc.ca>
 * Doug Latornell <dlatornell@eoas.ubc.ca>
-* Nancy Soontiens <nsoontiens@eos.ubc.ca>
-* Kate Le Souef <klesouef@eos.ubc.ca>
-* Idalia Machuca <imachuca@eos.ubc.ca>
-* Elise Olson <eolson@eos.ubc.ca>
+* Nancy Soontiens <nsoontiens@eoas.ubc.ca>
+* Kate Le Souef <klesouef@eoas.ubc.ca>
+* Idalia Machuca <imachuca@eoas.ubc.ca>
+* Elise Olson <eolson@eoas.ubc.ca>
 * Michael Dunphy <mdunphy@eoas.ubc.ca>
-* Muriel Dunn <mdunn@eos.ubc.ca>
-* Tereza Jarníková <tjarniko@eos.ubc.ca>
-* Jie Liu <jieliu@eos.ubc.ca>
-* Ben Moore-Maley <bmoorema@eos.ubc.ca>
-* James Petrie <jpetrie@eos.ubc.ca>
-* Giorgio Sgarbi <gsgarbi@eos.ubc.ca>
-* Vicky Do <vdo@eos.ubc.ca>
-* Karina Ramos Musalem <kramosmusalem@eos.ubc.ca>
+* Muriel Dunn <mdunn@eoas.ubc.ca>
+* Tereza Jarníková <tjarniko@eoas.ubc.ca>
+* Jie Liu <jieliu@eoas.ubc.ca>
+* Ben Moore-Maley <bmoorema@eoas.ubc.ca>
+* James Petrie <jpetrie@eoas.ubc.ca>
+* Giorgio Sgarbi <gsgarbi@eoas.ubc.ca>
+* Vicky Do <vdo@eoas.ubc.ca>
+* Karina Ramos Musalem <kramosmusalem@eoas.ubc.ca>
 * Saurav Sahu <ssahu@eoas.ubc.ca>
-* Birgit Rogalla <brogalla@eos.ubc.ca>
-* Yingkai (Kyle) Sha <yingkai@eos.ubc.ca>
-* Xiaoxin (Cindy) Yu <xiaoxiny@eos.ubc.ca>
-* Melanie Grenier <mgrenier@eos.ubc.ca>
-* Mark Halverson <mhalvers@eos.ubc.ca>
+* Birgit Rogalla <brogalla@eoas.ubc.ca>
+* Yingkai (Kyle) Sha <yingkai@eoas.ubc.ca>
+* Xiaoxin (Cindy) Yu <xiaoxiny@eoas.ubc.ca>
+* Melanie Grenier <mgrenier@eoas.ubc.ca>
+* Rachael Mueller <rmuller@eoas.ubc.ca>
+* Mark Halverson <mhalvers@eoas.ubc.ca>
 * Alex Huang
 * Alyssia Law
-* Dan Robb <drobb@eos.ubc.ca>
+* Dan Robb <drobb@eoas.ubc.ca>
 * Fatemeh Chegini <fatemeh.chegini@dal.ca>
 * J-P Paquin <paquin.jeanphilippe@gmail.com>
 * Youyu Lu <youyu.lu@dfo-mpo.gc.ca>
