@@ -1,10 +1,12 @@
+# Configuration for builds on readthedocs.org
+
 version: 2
 
 # Only build HTML and JSON formats
 formats: []
 
 conda:
-  file: environment-rtd.yaml
+  environment: environment-rtd.yaml
 
 build:
   image: latest
