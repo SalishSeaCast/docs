@@ -30,7 +30,7 @@ When changes that have been committed to the docs_ and tools_ repos are pushed t
 https://salishsea-meopar-docs.readthedocs.io/en/latest/ and https://salishsea-meopar-tools.readthedocs.io/en/latest/,
 respectively.
 
-.. _docs: https://bitbucket.org/salishsea/docs/
+.. _docs: https://github.com/SalishSeaCast/docs
 .. _tools: https://bitbucket.org/salishsea/tools/
 .. _readthedocs.org: https://readthedocs.org/
 

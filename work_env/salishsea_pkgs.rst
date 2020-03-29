@@ -30,7 +30,7 @@ etc.
 .. code-block:: bash
 
     cd /ocean/$USER/MEOPAR/
-    hg clone ssh://hg@bitbucket.org/salishsea/docs
+    git clone git@github.com:SalishSeaCast/docs.git
     hg clone ssh://hg@bitbucket.org/salishsea/tools
     git clone git@github.com:SalishSeaCast/NEMO-Cmd.git
     hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
