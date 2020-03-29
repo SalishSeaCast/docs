@@ -1,12 +1,18 @@
 # conda environment description file for docs build envioronment
 # on readthedocs.org
 
-name: sphinx-build
+name: salishseacast-docs
+
+channels:
+  - defaults
 
 dependencies:
   - ipython
   - jupyter_client
-  - python=3.5
+  - pip
+  - python=3
+  - sphinx
+  - sphinx_rtd_theme
 
   - pip:
     - nbsphinx
