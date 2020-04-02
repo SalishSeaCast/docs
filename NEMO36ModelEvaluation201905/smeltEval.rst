@@ -15,9 +15,7 @@ The following links point to annual notebooks comparing model output to observat
   `2011`_  `2012`_  `2013`_  `2014`_ 
 
   `2015`_  `2016`_  `2017`_  `2018`_ 
-
-.. table::
-    :widths: 20, 80
+  
 
     +-------+----- -----+
     |   2   |    1      |
