@@ -16,6 +16,17 @@ The following links point to annual notebooks comparing model output to observat
 
   `2015`_  `2016`_  `2017`_  `2018`_ 
 
+.. table::
+    :widths: 20, 80
+
+    +-------+----- -----+
+    |   2   |    1      |
+    +-------+-----------+
+    |  Does | a         |
+    +  this +-----------|
+    |  work?| b      |
+    +-------+-----------+
+
 
 .. _IOS Ocean Sciences Data Archive: http://www.pac.dfo-mpo.gc.ca/science/oceans/data-donnees/search-recherche/profiles-eng.asp
 .. _2007: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2007.ipynb
