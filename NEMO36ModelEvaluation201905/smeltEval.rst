@@ -17,12 +17,12 @@ The following links point to annual notebooks comparing model output to observat
   `2015`_  `2016`_  `2017`_  `2018`_ 
   
 
-    +-------+----- -----+
+    +-------+-----------+
     |   2   |    1      |
     +-------+-----------+
     |  Does | a         |
     +  this +-----------|
-    |  work?| b      |
+    |  work?| b         |
     +-------+-----------+
 
 
