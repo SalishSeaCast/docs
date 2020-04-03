@@ -4,8 +4,9 @@
 SMELT Evaluation (With Paired Physical Tracers)
 *************************************************
 
-Comparisons to DFO/IOS Observations: Nitrate, Dissolved Silica, Chlorophyll, Temperature, and Salinity
-=======================================================================================================
+Comparisons to DFO/IOS Observations 
+===================================
+** Nitrate, Dissolved Silica, Chlorophyll, Temperature, and Salinity
 
 
 The following links point to annual notebooks comparing model output to observations from the `IOS Ocean Sciences Data Archive`_.
