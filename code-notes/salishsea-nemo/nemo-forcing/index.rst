@@ -34,7 +34,7 @@ and :ref:`tracers-repo` repos with:
     git clone git@github.com:SalishSeaCast/grid.git
     git clone git@github.com:SalishSeaCast/rivers-climatology.git
     git clone git@github.com:SalishSeaCast/tides.git
-    hg clone ssh://hg@bitbucket.org/salishsea/tracers
+    git clone git@github.com:SalishSeaCast/tracers.git
 
 For password authentication use:
 
@@ -43,7 +43,7 @@ For password authentication use:
     git clone https://github.com/SalishSeaCast/grid.git
     git clone https://github.com/SalishSeaCast/rivers-climatology.git
     git clone https://github.com/SalishSeaCast/tides.git
-    hg clone https://<you>@bitbucket.org/salishsea/tracers
+    git clone https://github.com/SalishSeaCast/tracers.git
 
 where :kbd:`<you>` is your Bitbucket user id.
 
