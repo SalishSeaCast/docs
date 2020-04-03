@@ -11,11 +11,9 @@ Comparisons to DFO/IOS Observations
 
 The following links point to annual notebooks comparing model output to observations from the `IOS Ocean Sciences Data Archive`_.
 
-  `2007`_  `2008`_  `2009`_  `2010`_ 
+  `2007`_    `2008`_    `2009`_    `2010`_    `2011`_    `2012`_  
 
-  `2011`_  `2012`_  `2013`_  `2014`_ 
-
-  `2015`_  `2016`_  `2017`_  `2018`_ 
+  `2013`_    `2014`_    `2015`_    `2016`_    `2017`_    `2018`_ 
   
 
 **Statistics**
