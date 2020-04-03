@@ -1,10 +1,10 @@
 .. _NEMO36ModelEvaluation201905:
 
 *********************************
-NEMO 3.6 Model Evaluation: 201905
+SalishSeaCast Evaluation: 201905
 *********************************
 
-Evaluating SalishSeaCast v201905
+Evaluation of SalishSeaCast version 201905
 
 .. toctree::
    :maxdepth: 2
