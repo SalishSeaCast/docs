@@ -33,16 +33,16 @@ etc.
     git clone git@github.com:SalishSeaCast/docs.git
     hg clone ssh://hg@bitbucket.org/salishsea/tools
     git clone git@github.com:SalishSeaCast/NEMO-Cmd.git
-    hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
+    git clone git@github.com:SalishSeaCast/SalishSeaCmd.git
 
 Next,
 install the :ref:`SalishSeaToolsPackage` and the :ref:`SalishSeaCmdProcessor`:
 
 .. code-block:: bash
 
-    pip install --user --editable tools/SalishSeaTools
-    pip install --user --editable NEMO-Cmd
-    pip install --user --editable SalishSeaCmd
+    python3 -m pip install --user --editable tools/SalishSeaTools
+    python3 -m pip install --user --editable NEMO-Cmd
+    python3 -m pip install --user --editable SalishSeaCmd
 
 The links above contain information about the contents of those packages.
 
@@ -68,7 +68,7 @@ Go ahead and clone that repo too:
 .. code-block:: bash
 
     cd /ocean/$USER/MEOPAR/
-    hg clone ssh://hg@bitbucket.org/salishsea/analysis-james
+    git clone git@github.com:SalishSeaCast/analysis-james.git
 
 If you are joining the team for a sprint,
 please clone the :kbd:`analysis-sprints` repo:
@@ -76,6 +76,6 @@ please clone the :kbd:`analysis-sprints` repo:
 .. code-block:: bash
 
     cd /ocean/$USER/MEOPAR/
-    hg clone ssh://hg@bitbucket.org/salishsea/analysis-sprints
+    git clone git@github.com:SalishSeaCast/analysis-sprints.git
 
 and create a directory in it named after yourself to work in.

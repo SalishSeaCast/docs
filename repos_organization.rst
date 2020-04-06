@@ -94,7 +94,7 @@ SalishSeaCmd
   a command line tool for doing various operations associated with the Salish Sea NEMO model.
   It is a domain-specific command processor tool for the Salish Sea model that uses plug-ins from the :ref:`NEMO-Cmd-repo` package.
 * documentation is rendered at https://salishseacmd.readthedocs.io/en/latest/
-* Bitbucket: https://bitbucket.org/salishsea/salishseacmd/
+* GitHub: https://github.com/SalishSeaCast/SalishSeaCmd
 
 
 .. _NEMO-Cmd-repo:
