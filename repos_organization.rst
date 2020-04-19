@@ -79,7 +79,7 @@ private-tools
 * scripts and docs that might go in tools repo but are not ready for release,
   or which cannot be released for some reason
 * ideally this repo will eventually empty out as its contents are moved to the public tools repo
-* Bitbucket: https://bitbucket.org/salishsea/private-tools/
+* GitHub: https://github.com/SalishSeaCast/private-tools
 
 
 .. _SalishSeaCmd-repo:
