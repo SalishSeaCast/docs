@@ -54,15 +54,15 @@ Date                       Change                                 New Value     
               with longer western boundary and NO3 from |br|
               LiveOcean
 
-18-Apr-2018   Reduced bSi and PON sinking rates                    5.6e-5 m/2      e9a5bc834f46_
+18-Apr-2018   Reduced bSi and PON sinking rates                    5.6e-5 m/2      2c38036328ee_
 
 25-Apr-2018   Change boundary PON and DON climatologies |br|
               to be based on model-derived profiles
 
 28-Apr-2018   Changed phytoplankton growth temperature |br|
-              dependence parameter values                                          f253dfb8277b_
+              dependence parameter values                                          133b261e46b1_
 
-19-Jun-2018  Apply Neah Bay ssh to north boundary as well |br|                     6b89d1af1aec_
+19-Jun-2018  Apply Neah Bay ssh to north boundary as well |br|                     f811c7b93bbf_
              as west boundary
 
 16-Aug-2018  Reflect part of the PON/DON from the bottom |br|                      d1017236fff0_
@@ -73,10 +73,9 @@ Date                       Change                                 New Value     
              not one grid cell in.
 ===========  ===================================================  ==============  ==================
 
-
-.. _e9a5bc834f46: https://bitbucket.org/salishsea/ss-run-sets/commits/e9a5bc834f46
-.. _f253dfb8277b: https://bitbucket.org/salishsea/ss-run-sets/commits/f253dfb8277b
-.. _6b89d1af1aec: https://bitbucket.org/salishsea/ss-run-sets/commits/6b89d1af1aec
+.. _2c38036328ee: https://github.com/SalishSeaCast/SS-run-sets/commit/2c38036328ee
+.. _133b261e46b1: https://github.com/SalishSeaCast/SS-run-sets/commit/133b261e46b1
+.. _f811c7b93bbf: https://github.com/SalishSeaCast/SS-run-sets/commit/f811c7b93bbf
 .. _d1017236fff0: https://bitbucket.org/salishsea/nemo-3.6-code/commits/d1017236fff0
 .. _7c6a30e8bbf0: https://bitbucket.org/salishsea/nemo-3.6-code/commits/7c6a30e8bbf0
 

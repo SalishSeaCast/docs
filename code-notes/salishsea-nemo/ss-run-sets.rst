@@ -29,15 +29,13 @@ If you use SSH key authentication on Bitbucket you may clone the `SS-run-sets`_ 
 
 .. code-block:: bash
 
-    hg clone ssh://hg@bitbucket.org/salishsea/ss-run-sets SS-run-sets
+    git clone git@github.com:SalishSeaCast/SS-run-sets.git
 
 For password authentication use:
 
 .. code-block:: bash
 
-    hg clone https://<you>@bitbucket.org/salishsea/ss-run-sets SS-run-sets
-
-where :kbd:`<you>` is your Bitbucket user id.
+    git clone https://github.com/SalishSeaCast/SS-run-sets.git
 
 
 Repo Contents

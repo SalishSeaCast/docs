@@ -38,9 +38,9 @@ You will also need access to scripts in the analysis-storm-surges_ repository an
 
 .. _tools: https://bitbucket.org/salishsea/tools
 
-.. _analysis-storm-surges: https://bitbucket.org/salishsea/analysis-storm-surges
+.. _analysis-storm-surges: https://github.com/SalishSeaCast/analysis-storm-surges
 
-.. _SS-run-sets: https://bitbucket.org/salishsea/ss-run-sets
+.. _SS-run-sets: https://github.com/SalishSeaCast/SS-run-sets
 
 
 1. Add extreme water level, mean sea level, latitude and longitude for this location in the PLACES dictionary object of :file:`places.py`.

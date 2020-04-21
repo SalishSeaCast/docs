@@ -63,7 +63,7 @@ In your CONFIG directory (assuming you are using SALISH_amm as your config name)
 Initialization Files
 --------------------
 
-Clone the nemo-forcing repository from here https://bitbucket.org/salishsea/nemo-forcing
+Clone the nemo-forcing repository from here https://github.com/SalishSeaCast/NEMO-forcing
 
 .. note::
 
@@ -131,7 +131,7 @@ Changes from AMM12 namelist file
 
 .. note::
 
-   Bottom Line: you need to clone the namelist from https://bitbucket.org/salishsea/ss-run-sets see JPP.  This run is based on hg changeset: b501af941889
+   Bottom Line: you need to clone the namelist from https://github.com/SalishSeaCast/SS-run-sets see JPP.  This run is based on git revision: 3647b5e84ad0.
 
 Run
 ---

@@ -310,7 +310,7 @@ SS-run-sets
 * public
 * Apache v2.0 license, copyright project contributors and UBC
 * a collection of namelists and run description files for various sets of NEMO runs
-* Bitbucket: https://bitbucket.org/salishsea/ss-run-sets/
+* GitHub: https://github.com/SalishSeaCast/SS-run-sets
 
 
 .. _salishsea-site-repo:
