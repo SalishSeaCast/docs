@@ -100,22 +100,22 @@ __ jupyter_
 * `Plotting Velocity Fields on Horizontal Planes.ipynb`_
 * `Plotting Velocities and Tracers on Vertical Planes.ipynb`_
 
-.. _Exploring netCDF Files.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Exploring%20netCDF%20Files.ipynb
+.. _Exploring netCDF Files.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Exploring%20netCDF%20Files.ipynb
 
-.. _Plotting Bathymetry Colour Meshes.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Bathymetry%20Colour%20Meshes.ipynb
+.. _Plotting Bathymetry Colour Meshes.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Plotting%20Bathymetry%20Colour%20Meshes.ipynb
 
-.. _Plotting Tracers on Horizontal Planes.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Tracers%20on%20Horizontal%20Planes.ipynb
+.. _Plotting Tracers on Horizontal Planes.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Plotting%20Tracers%20on%20Horizontal%20Planes.ipynb
 
-.. _Plotting Velocity Fields on Horizontal Planes.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Velocity%20Fields%20on%20Horizontal%20Planes.ipynb
+.. _Plotting Velocity Fields on Horizontal Planes.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Plotting%20Velocity%20Fields%20on%20Horizontal%20Planes.ipynb
 
-.. _Plotting Velocities and Tracers on Vertical Planes.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Plotting%20Velocities%20and%20Tracers%20on%20Vertical%20Planes.ipynb
+.. _Plotting Velocities and Tracers on Vertical Planes.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Plotting%20Velocities%20and%20Tracers%20on%20Vertical%20Planes.ipynb
 
 The links here are to static renderings of the notebooks via
 `nbviewer.jupyter.org`_ .
 The notebook source files are in the `analysis_tools`_ directory of the :ref:`tools-repo` repo.
 
 .. _nbviewer.jupyter.org: https://nbviewer.jupyter.org/
-.. _analysis_tools: https://bitbucket.org/salishsea/tools/src/tip/analysis_tools/
+.. _analysis_tools: https://github.com/SalishSeaCast/tools/tree/master/analysis_tools
 
 
 ERDDAP and :kbd:`xarray`
@@ -132,7 +132,7 @@ here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using ERDDAP
 
 .. _netCDF4-python: https://unidata.github.io/netcdf4-python/
 .. _ERDDAP server: https://salishsea.eos.ubc.ca/erddap/
-.. _Exploring netCDF Datasets from ERDDAP.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Exploring%20netCDF%20Datasets%20from%20ERDDAP.ipynb
+.. _Exploring netCDF Datasets from ERDDAP.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Exploring%20netCDF%20Datasets%20from%20ERDDAP.ipynb
 
 One reason that you might want to use ERDDAP to access our model results is if you don't have access to our results files stored on the UBC EOAS Ocean cluster.
 Our ERDDAP server is public.
@@ -162,7 +162,7 @@ Here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using :kbd:`
 
 * `Exploring netCDF Datasets Using xarray.ipynb`_
 
-.. _Exploring netCDF Datasets Using xarray.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Exploring%20netCDF%20Datasets%20Using%20xarray.ipynb
+.. _Exploring netCDF Datasets Using xarray.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Exploring%20netCDF%20Datasets%20Using%20xarray.ipynb
 
 `xarray`_ uses the `netCDF4-python`_ library so it is capable of accessing netCDF datasets from either local files or from ERDDAP servers.
 The :py:class:`xarray.Dataset` object hides many of the low level details of the :py:class:`netcdf4.Dataset` objects to provide a more Pythonic interface to the dataset that is heavily inspired by `pandas`_. Like :kbd:`panada` variables,
@@ -181,4 +181,4 @@ Here is a notebook that demonstrates some of the features of `xarray`_ combined 
 
 * `Exploring a Nowcast Time Series from ERDDAP.ipynb`_
 
-.. _Exploring a Nowcast Time Series from ERDDAP.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/analysis_tools/Exploring%20a%20Nowcast%20Time%20Series%20from%20ERDDAP.ipynb
+.. _Exploring a Nowcast Time Series from ERDDAP.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Exploring%20a%20Nowcast%20Time%20Series%20from%20ERDDAP.ipynb

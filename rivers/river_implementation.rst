@@ -10,8 +10,8 @@ Creating input files for NEMO
 
 The grid point of the location of each river mouth was found. A large dictionary of the grid points and flow mapping is the `rivertools.py`_ script. The Jupyter Notebook `Add Rivers Month and Constant.ipynb`_ creates a NetCDF files containing the river flow at the respective grid cell for each river throughout the domain. Where the river mouth was not included in the domain, the river was added to the closest grid point to the river mouth.
 
-.. _rivertools.py: https://bitbucket.org/salishsea/tools/src/tip/SalishSeaTools/salishsea_tools/rivertools.py
-.. _Add Rivers Month and Constant.ipynb: https://bitbucket.org/salishsea/tools/src/tip/I_ForcingFiles/Rivers/Add%20Rivers%20Month%20and%20Constant.ipynb
+.. _rivertools.py: https://github.com/SalishSeaCast/tools/blob/master/SalishSeaTools/salishsea_tools/rivertools.py
+.. _Add Rivers Month and Constant.ipynb: https://github.com/SalishSeaCast/tools/blob/master/I_ForcingFiles/Rivers/Add%20Rivers%20Month%20and%20Constant.ipynb
 
 In some cases (e.g. the end of Jervis inlet, Puget Sound) numerous rivers were not included in the domain, so the sum of all the omitted rivers' flow was added to the closest grid point.
 

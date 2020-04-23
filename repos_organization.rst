@@ -67,7 +67,7 @@ tools
   preparing, running, and post-processing NEMO runs,
   and any other support task that we write software for
 * documentation is rendered at https://salishsea-meopar-tools.readthedocs.io/en/latest/
-* Bitbucket: https://bitbucket.org/salishsea/tools/
+* GitHub: https://github.com/SalishSeaCast/tools
 
 
 .. _private-tools-repo:

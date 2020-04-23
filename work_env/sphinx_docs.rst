@@ -31,7 +31,7 @@ https://salishsea-meopar-docs.readthedocs.io/en/latest/ and https://salishsea-me
 respectively.
 
 .. _docs: https://github.com/SalishSeaCast/docs
-.. _tools: https://bitbucket.org/salishsea/tools/
+.. _tools: https://github.com/SalishSeaCast/tools
 .. _readthedocs.org: https://readthedocs.org/
 
 Sphinx_ uses reStructuredText
@@ -197,7 +197,7 @@ To link to a rendered representation of an Jupyter Notebook that has been pushed
 
   * `SalishSeaBathy.ipynb`_: Documents the full domain bathymetry used for the Salish Sea NEMO runs.
 
-  .. _SalishSeaBathy.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/bathymetry/SalishSeaBathy.ipynb
+  .. _SalishSeaBathy.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/bathymetry/SalishSeaBathy.ipynb
 
 
 Forcing Line Breaks

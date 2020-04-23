@@ -14,11 +14,11 @@ NEMO 3.4 uses tide files that give the tides only on the open boundary as cosine
 
 In `Prepare Forcing Files`_ I calculate the latter from the former.
 
-.. _Prepare Forcing Files: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Tides/Prepare%20Tide%20Files.ipynb
+.. _Prepare Forcing Files: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/I_ForcingFiles/Tides/Prepare%20Tide%20Files.ipynb
 
 This produces three files : JPP_bdytide_M2_grid_X.nc where X = T, U or V.  These files are available in the `nemo-forcing repository`_ in the bdydta folder.
 
-.. _nemo-forcing repository: https://bitbucket.org/salishsea/nemo-forcing
+.. _nemo-forcing repository: https://github.com/SalishSeaCast/NEMO-forcing
 
 cpp Keys
 --------
@@ -83,4 +83,4 @@ Topography Smoothing
 
 Topography was hand smoothed in Chatham Islands region, Porlier Pass and in a deep basin south of Victoria.  Details available in `SalishSeaSubdomainBathy.ipynb`_.
 
-.. _SalishSeaSubdomainBathy.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/bathymetry/SalishSeaSubdomainBathy.ipynb
+.. _SalishSeaSubdomainBathy.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/bathymetry/SalishSeaSubdomainBathy.ipynb

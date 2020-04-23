@@ -141,9 +141,9 @@ Several notebooks have been developed for generating the anomaly forcing files u
 * `SSH_Tofino.ipynb`_
 * `SSH_PortHardy.ipynb`_
 
-.. _SSH_Tofino.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_Tofino.ipynb
+.. _SSH_Tofino.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/I_ForcingFiles/OBC/SSH_Tofino.ipynb
 
-.. _SSH_PortHardy.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/OBC/SSH_PortHardy.ipynb
+.. _SSH_PortHardy.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/I_ForcingFiles/OBC/SSH_PortHardy.ipynb
 
 
 Analysis
@@ -158,6 +158,7 @@ Examples include functions that calculate the observed residual, modelled residu
 .. note::
 
   A different module was used for analysis in the AO storm surge paper. It is in a private repository :file:`storm-surge/stormtools_revisions.py`.The functions are almost identical as :file:`stormtools.py` but with a few minor changes
+
 
 References
 ^^^^^^^^^^

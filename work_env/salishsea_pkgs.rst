@@ -31,7 +31,7 @@ etc.
 
     cd /ocean/$USER/MEOPAR/
     git clone git@github.com:SalishSeaCast/docs.git
-    hg clone ssh://hg@bitbucket.org/salishsea/tools
+    git clone git@github.com:SalishSeaCast/tools.git
     git clone git@github.com:SalishSeaCast/NEMO-Cmd.git
     git clone git@github.com:SalishSeaCast/SalishSeaCmd.git
 

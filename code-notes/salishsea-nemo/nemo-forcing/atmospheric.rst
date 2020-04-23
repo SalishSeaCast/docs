@@ -75,7 +75,7 @@ feature to be used to take atmospheric forcing values from the :ref:`CGRF-Datase
 It is in the :file:`4_weights_ATMOS/` directory of the 2-Oct-2013 WC3_PREP tarball and has been added to the :file:`grid/` of the :ref:`NEMO-forcing-repo` repo.
 Those weight values were subsequently used to create a netCDF4 weights file with :kbd:`zlib` compression enabled and CF-1.6 conventions compliant attributes using the `I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb`_ notebook.
 
-.. _I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb
+.. _I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb
 
 
 Creating New Weights Files
@@ -223,7 +223,7 @@ and a :file:`met_gem_weight.nc` file should be created.
 Use the `I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb`_ notebook to transform :file:`met_gem_weight` into a netCDF4 file called :file:`weights-2.5kmGEM-ops.nc` with well-structured metadata
 (see :ref:`netCDF4FilesCreationAndConventions`).
 
-.. _I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/tools/raw/tip/I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb
+.. _I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/tools/blob/master/I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb
 
 
 .. _CGRF-Dataset:

@@ -36,7 +36,7 @@ Adding new tidal stations requires access to the Salish Sea tools_ repository.
 Most of the work will be on editing figures.py in the SalishSeaNowcast package.
 You will also need access to scripts in the analysis-storm-surges_ repository and the nowcast :file:`iodef.xml` file in SS-run-sets_.
 
-.. _tools: https://bitbucket.org/salishsea/tools
+.. _tools: https://github.com/SalishSeaCast/tools
 
 .. _analysis-storm-surges: https://github.com/SalishSeaCast/analysis-storm-surges
 
