@@ -160,7 +160,7 @@ NEMO-3.6-code
 * NEMO-3.6 code that we run
 * a merge of the :kbd:`http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE` and our local code
 * maintenance of the repo to handle the merges is decribed in :ref:`NEMO-3.6CodeRepoMaintenance`
-* Bitbucket: https://bitbucket.org/salishsea/nemo-3.6-code/
+* GitHub: https://github.com/SalishSeaCast/NEMO-3.6-code
 * documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/repos-maint/nemo-3.6.html
 
 

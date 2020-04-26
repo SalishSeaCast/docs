@@ -65,10 +65,10 @@ Date                       Change                                 New Value     
 19-Jun-2018  Apply Neah Bay ssh to north boundary as well |br|                     f811c7b93bbf_
              as west boundary
 
-16-Aug-2018  Reflect part of the PON/DON from the bottom |br|                      d1017236fff0_
+16-Aug-2018  Reflect part of the PON/DON from the bottom |br|                      9ca531ab3b7b_
              boundary
 
-16-Aug-2018  Change Orlanksi boundary conditions to |br|                           7c6a30e8bbf0_
+16-Aug-2018  Change Orlanksi boundary conditions to |br|                           c6badb12b94e_
              caculate along boundary wave on the boundary |br|
              not one grid cell in.
 ===========  ===================================================  ==============  ==================
@@ -76,6 +76,6 @@ Date                       Change                                 New Value     
 .. _2c38036328ee: https://github.com/SalishSeaCast/SS-run-sets/commit/2c38036328ee
 .. _133b261e46b1: https://github.com/SalishSeaCast/SS-run-sets/commit/133b261e46b1
 .. _f811c7b93bbf: https://github.com/SalishSeaCast/SS-run-sets/commit/f811c7b93bbf
-.. _d1017236fff0: https://bitbucket.org/salishsea/nemo-3.6-code/commits/d1017236fff0
-.. _7c6a30e8bbf0: https://bitbucket.org/salishsea/nemo-3.6-code/commits/7c6a30e8bbf0
+.. _9ca531ab3b7b: https://github.com/SalishSeaCast/NEMO-3.6-code/commit/9ca531ab3b7b
+.. _c6badb12b94e: https://github.com/SalishSeaCast/NEMO-3.6-code/commit/c6badb12b94e
 

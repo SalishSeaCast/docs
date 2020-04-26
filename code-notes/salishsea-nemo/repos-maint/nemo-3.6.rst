@@ -32,7 +32,7 @@ That repo is used to merge changes from the upstream Subversion repository that 
 and from the `Salish Sea team NEMO-3.6-code repo`_ on Bitbucket.
 The :file:`NEMO-3.6-mirror-merge` repo was created by cloning the :file:`/ocean/sallen/hg_repos/NEMO-3.6-hg-mirror` repo:
 
-.. _Salish Sea team NEMO-3.6-code repo: https://bitbucket.org/salishsea/NEMO-3.6-code
+.. _Salish Sea team NEMO-3.6-code repo: https://github.com/SalishSeaCast/NEMO-3.6-code
 
 .. code-block:: bash
 

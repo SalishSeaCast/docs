@@ -321,7 +321,7 @@ For NEMO:
 
 * :file:`/ocean/sallen/hg_repos/NEMO-3.6-hg-mirror`
 * :file:`/Users/doug/MEOPAR/NEMO-3.6-mirror-merge`
-* :file:`https://bitbucket.org/salishsea/nemo-3.6-code`
+* :file:`https://github.com/SalishSeaCast/NEMO-3.6-code`
 
 and for XIOS:
 
