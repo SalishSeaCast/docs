@@ -203,7 +203,7 @@ Install `flake8`_ into your local Python environment:
 
 .. code-block:: bash
 
-    $ pip install --user flake8
+    $ python3 -m pip install --user flake8
 
 and,
 if you have not already done so,

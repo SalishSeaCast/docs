@@ -56,4 +56,4 @@ Then do:
 
 .. code-block:: bash
 
-    pip install nbsphinx
+    python3 -m pip install nbsphinx

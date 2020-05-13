@@ -116,8 +116,8 @@ Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python
 .. code-block:: bash
 
     mkdir -p $HOME/.local
-    pip install --user --editable NEMO-Cmd
-    pip install --user --editable SalishSeaCmd
+    python3 -m pip install --user --editable NEMO-Cmd
+    python3 -m pip install --user --editable SalishSeaCmd
 
 
 Compile the Code

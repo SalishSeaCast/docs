@@ -77,8 +77,8 @@ Install the :ref:`SalishSeaToolsPackage` and :ref:`SalishSeaCmdProcessor` Python
 
     mkdir -p $HOME/.local
     cd $HOME/MEOPAR/
-    pip install --user --editable NEMO-Cmd
-    pip install --user --editable SalishSeaCmd
+    python3 -m pip install --user --editable NEMO-Cmd
+    python3 -m pip install --user --editable SalishSeaCmd
 
 
 .. _CompileXIOS-westgrid:
