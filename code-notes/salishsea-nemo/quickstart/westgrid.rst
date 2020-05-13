@@ -60,11 +60,10 @@ Clone the repos needed to run the model:
     git clone git@github.com:SalishSeaCast/rivers-climatology.git
     git clone git@github.com:SalishSeaCast/NEMO-3.6-code.git
     git clone git@github.com:SalishSeaCast/XIOS-ARCH.git
+    git clone git@github.com:SalishSeaCast/XIOS-2.git
     git clone git@github.com:SalishSeaCast/SS-run-sets.git
     git clone git@github.com:SalishSeaCast/NEMO-Cmd.git
     git clone git@github.com:SalishSeaCast/SalishSeaCmd.git
-
-    hg clone ssh://hg@bitbucket.org/salishsea/xios-2 XIOS-2
 
 There is no need to clone the :file:`docs` or :file:`analysis` repos at WestGrid.
 

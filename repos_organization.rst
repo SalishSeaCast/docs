@@ -175,7 +175,7 @@ XIOS-2 (XML I/O Server)
 * XIOS-2.0 code that we run with NEMO-3.6
 * a checkout of :kbd:`http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/trunk`
 * maintenance of the repo to handle the merging in changes from upstream is decribed in :ref:`XIOS-2CodeRepoMaintenance`
-* Bitbucket: https://bitbucket.org/salishsea/xios-2/
+* GitHub: https://github.com/SalishSeaCast/XIOS-2
 * documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/repos-maint/xios-2.html
 
 
