@@ -165,11 +165,13 @@ The required modules vary from machine to machine:
 
 .. _LoadingModulesOnCedarGraham:
 
-* On :kbd:`cedar` and :kbd:`graham` the :command:`module load` commands you should include in your :file:`$HOME/.bashrc` are:
+* On :kbd:`graham`,
+  :kbd:`cedar`,
+  or :kbd:`beluga` the :command:`module load` commands you should include in your :file:`$HOME/.bashrc` are:
 
   .. code-block:: bash
 
-      module load python/3.7.0
+      module load python/3.8.2
       module load netcdf-fortran-mpi/4.4.4
 
 .. _LoadingModulesOnOrcinus:
@@ -185,14 +187,15 @@ The required modules vary from machine to machine:
       module load intel/14.0/hdf5-1.8.15p1_mpi
       module load intel/14.0/nco-4.5.2
 
-You can inspect the collection of modules that are loaded with the :command:`module list` command; for example,
-on :kbd:`cedar`::
+You can inspect the collection of modules that are loaded with the :command:`module list` command.
+The response looks something like this example from :kbd:`graham`::
 
-  module list
   Currently Loaded Modules:
-    1) nixpkgs/16.09   (S)   4) ifort/.2016.4.258 (H)      7) openmpi/2.1.1 (m)  10) hdf5-mpi/1.8.18          (io)
-    2) icc/.2016.4.258 (H)   5) intel/2016.4      (t)      8) StdEnv/2016.4 (S)  11) netcdf-mpi/4.4.1.1       (io)
-    3) gcccore/.5.4.0  (H)   6) imkl/11.3.4.258   (math)   9) python/3.7.0  (t)  12) netcdf-fortran-mpi/4.4.4 (io)
+    1) nixpkgs/16.09     (S)      6) intel/2016.4       (t)   11) netcdf-fortran-mpi/4.4.4 (io)
+    2) imkl/11.3.4.258   (math)   7) openmpi/2.1.1      (m)   12) perl/5.22.4              (t)
+    3) gcccore/.5.4.0    (H)      8) StdEnv/2016.4      (S)   13) python/3.8.2             (t)
+    4) icc/.2016.4.258   (H)      9) hdf5-mpi/1.8.18    (io)
+    5) ifort/.2016.4.258 (H)     10) netcdf-mpi/4.4.1.1 (io)
 
     Where:
      S:     Module is Sticky, requires --force to unload or purge

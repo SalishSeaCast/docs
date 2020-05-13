@@ -29,7 +29,7 @@ The modules needed are:
 
     module load netcdf-fortran-mpi/4.4.4
     module load perl/5.22.4
-    module load python/3.7.0
+    module load python/3.8.2
 
 
 .. _CreateWorkspaceAndCloneRepositories:
