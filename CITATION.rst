@@ -164,3 +164,52 @@ https://dx.doi.org/10.1016/j.ocemod.2017.02.008
     model.</p>",
         doi = "10.1002/2015JC011118",
     }
+
+
+Salish Model Ecosystem-Lower Trophic (SMELT), the biological component of SalishSeaCast
+=======================================================================================
+
+The 3 nutrient- 3 phytoplankton- 1.5 zooplankton compartment model described in
+Moore-Maley et al . (2016) was adapted to three dimensions and coupled to the Salish
+Sea NEMO model described by Soontiens et al. (2016). Description and evaluation of the
+model can be found in:
+
+Olson, E. M., S. E. Allen, V. Do, M. Dunphy, and D. Ianson (in press).
+Assessment of Nutrient Supply by a Tidal Jet in the Northern Strait of Georgia Based on a Biogeochemical Model.
+J. Geophys. Res. Oceans.
+https://dx.doi.org/10.1029/2019JC015766
+
+.. code-block:: tex
+
+    @unpublished{Olson-etal-2020,
+        author = "Olson, E. M. and S. E. Allen and V. Do and M. Dunphy and D. Ianson",
+        title = "Assessment of Nutrient Supply by a Tidal Jet in the
+    Northern Strait of Georgia Based on a Biogeochemical Model",
+        journal = "Journal of Geophysical Research: Oceans",
+        year = "2020",
+        note = "(in press)",
+        url = "https://dx.doi.org/10.1029/2019JC015766",
+        keywords = "nitrate, tidal jet, Discovery Passage, Strait of Georgia,
+    biogeochemical model, new production",
+        abstract = "We present a coupled three-dimensional biological-physical model for
+    the Salish Sea and evaluate it by comparison to nitrate, silicate, and chlorophyll
+    observations. It accurately reproduces nitrate concentrations with Willmott skill
+    scores, root mean squared error, and bias ranging from 0.84–0.95, 4.02–6.5 μM,
+    and −2.33–1.84 μM, respectively, compared to three independent discrete sample
+    data sets. A prominent feature of the model output is a tidal jet emanating from
+    Discovery Passage producing a downstream plume of elevated surface nitrate.
+    The signal is present from April to September, when surface nitrate is otherwise
+    drawn down. It has a weak but statistically significant correlation to
+    Discovery Passage tidal velocity (R=0.37, p<0.01). Within the turbulent jet and
+    associated plume, the average rate of vertical nitrate supply due to mixing and
+    advection across a depth of roughly 6 m is 0.46 μmol m−2 s−1 between May 15, 2015,
+    and August 20, 2015, compared to 0.10 μmol m−2 s−1 for the northern Strait of Georgia
+    as a whole. Close to Discovery Passage, where velocities and shear are strongest,
+    the majority of the vertical nitrate flux is due to mixing. As velocities weaken
+    downstream, vertical advection becomes more important relative to mixing, but vertical
+    velocities also decrease. The tidal pulses out of Discovery Passage drive waves that
+    contribute net upward nitrate flux as far south as Cape Lazo, 40 km away. The nitrate
+    supply drives new production, consistent with existing observations. Similar dynamics
+    have been described in many other tidally influenced coastal systems.",
+        doi = "10.1029/2019JC015766",
+    }
