@@ -9,10 +9,8 @@ channels:
 dependencies:
   - ipython
   - jupyter_client
+  - nbsphinx
   - pip
   - python=3
   - sphinx
   - sphinx_rtd_theme
-
-  - pip:
-    - nbsphinx
