@@ -16,7 +16,7 @@ Next, we split the freshwater runoff from each watershed between the rivers in t
 
 * For BC, maps of rivers can be found on the Atlas of Canada - `Toporama site <http://atlas.nrcan.gc.ca/site/english/toporama/index.html>`_.
 
-* For BC, maps of watersheds are available at http://www.env.gov.bc.ca/fish/pdf/prov_wsgs.pdf.
+* For BC, maps of watersheds use to be available at http://www.env.gov.bc.ca/fish/pdf/prov_wsgs.pdf.
 
 * In Washington, maps of watersheds are available `at this site <https://cfpub.epa.gov/surf/state.cfm?statepostal=WA>`_.
 
