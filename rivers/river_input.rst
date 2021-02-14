@@ -16,7 +16,7 @@ Next, we split the freshwater runoff from each watershed between the rivers in t
 
 * For BC, maps of rivers can be found on the Atlas of Canada - `Toporama site <http://atlas.nrcan.gc.ca/site/english/toporama/index.html>`_.
 
-* For BC, maps of watersheds use to be available at http://www.env.gov.bc.ca/fish/pdf/prov_wsgs.pdf.
+* For BC, maps of watersheds use to be available at ``http://www.env.gov.bc.ca/fish/pdf/prov_wsgs.pdf``.
 
 * In Washington, maps of watersheds are available `at this site <https://cfpub.epa.gov/surf/state.cfm?statepostal=WA>`_.
 
@@ -347,7 +347,7 @@ Jervis
 * Source used: Toporama map,
 * See `this site <http://www.pac.dfo-mpo.gc.ca/science/oceans/BCinlets/jervis-eng.htm>`_
 * As there were no gauged rivers in the Jervis Inlet watershed, Trites (1955) estimated the freshwater discharge using  the area of the watershed (~1400 km2) and local precipitation data.   The estimated mean annual discharge of 180 m3 s-1 is considerably smaller than the discharge in most of the longer BC inlets.  Unlike many of the BC inlets where the main river enters at the head, there are many small rivers and streams distributed along the shores of Jervis Inlet.  The runoff cycle for Jervis Inlet more closely follows the local precipitation cycle as the area of snow fields which store winter precipitation is relatively small (Macdonald and Murray 1973).
-* Pickard (1961) (http://www.nrcresearchpress.com/doi/pdf/10.1139/f61-062): The chief difference between these inlets is that Jervis has less than 40% as much river runoff as Bute, and only one-quarter of this comes in at the head whereas in Bute three-quarters of the total enters at the head. The flushing effect of the large runoff into the head of Bute is expected to be greater on the whole of the inlet length than that of the smaller runoff distributed along the length of Jervis.
+* Pickard (1961) (https://doi.org/10.1139/f61-062): The chief difference between these inlets is that Jervis has less than 40% as much river runoff as Bute, and only one-quarter of this comes in at the head whereas in Bute three-quarters of the total enters at the head. The flushing effect of the large runoff into the head of Bute is expected to be greater on the whole of the inlet length than that of the smaller runoff distributed along the length of Jervis.
 * Flow out of Powell Lake taken from Sanderson et al. (1986)
 * Jervis Inlet only area = 1400km2 (Trites 1955) ==> 25% of Jervis watershed (5785km2)
 * Assume Skwawka/Hunaechin/Lausmann/Slane/Smanit/ account for 30% of Jervis only watershed
@@ -371,9 +371,9 @@ Jervis
 * Sechelt is about 66% of Jervis Inlet, based on values in Table II of Pickard (1961) (110m3/s / 180m3/s) ==> 17% of Jervis watershed
 * Sechelt Inlet isn't in the domain, assume the input enters at 49.770844,-123.955708, i = 604, j = 280
 * Outflow from Powell Lake is 3e9m3/year (Sanderson et al 1986) ==> 32% of Jervis watershed, enters at 49.874421,-124.565288, i = 666, j = 202
-* From Section 4 of this report http://www.powellriverrd.bc.ca/wp-content/uploads/2011/09/Community-Profile.pdf which is no longer available on the web.
+* From Section 4 of this report ``http://www.powellriverrd.bc.ca/wp-content/uploads/2011/09/Community-Profile.pdf`` which is no longer available on the web.
 * Lois Lake drains 45,000ha = 450km2 ==> 8% of Jervis watershed...make it 10% to account for little rivers nearby, enters at  49.771481, -124.332197, i = 629, j = 224
-* From Section 4 of this report http://www.powellriverrd.bc.ca/wp-content/uploads/2011/09/Community-Profile.pdf which is no longer available on the web.
+* From Section 4 of this report ``http://www.powellriverrd.bc.ca/wp-content/uploads/2011/09/Community-Profile.pdf`` which is no longer available on the web.
 * Haslam Lake drains 13,140ha = 131km2 ==> 2% of Jervis watershed, enters at 49.77356,-124.367173, i = 632, j = 219
 * estimate Chapman Creek drains about 2% of the catchment, enters at 49.4381655, -123.7229658, i = 522, j = 273
 * estimate Lapan Creek drains about 2% of the catchment, enters at 49.8368204, -123.9942065, i = 619, j = 282

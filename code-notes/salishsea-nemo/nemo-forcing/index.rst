@@ -15,13 +15,9 @@ files used to run NEMO for the Salish Sea are maintained in 4 repositories:
 * :ref:`tides-repo`
 * :ref:`tracers-repo`
 
-They can be found in the `SalishSeaCast organization`_ collection of repos on GitHub
-(preferred)
-or the `SalishSea-MEOPAR NEMO Model Runs`_ collection of repos on Bitbucket
-(being migrated to GitHub in spring 2020).
+They can be found in the `SalishSeaCast organization`_ collection of repos on GitHub.
 
 .. _SalishSeaCast organization: https://github.com/SalishSeaCast
-.. _SalishSea-MEOPAR NEMO Model Runs: https://bitbucket.org/account/user/salishsea/projects/SSM_NEMO_RUNS
 
 If you have set up SSH key authentication on GitHub and Bitbucket,
 you can clone the :ref:`grid-repo`,

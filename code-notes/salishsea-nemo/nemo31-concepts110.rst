@@ -4,8 +4,8 @@ NEMO-3.1 and CONCEPTS-110 Reference Repos
 
 These notes describe the `NEMO-3.1`_ and `CONCEPTS-110`_ reference repositories.
 
-.. _NEMO-3.1: https://bitbucket.org/salishsea/nemo-3.1/
-.. _CONCEPTS-110: https://bitbucket.org/salishsea/concepts-110/
+.. _NEMO-3.1: https://github.com/SalishSeaCast/NEMO-3.1/
+.. _CONCEPTS-110: https://github.com/SalishSeaCast/CONCEPTS-110/
 
 The construction of the `NEMO-3.1`_ repo is described in :ref:`nemo-3.1-repo-construction` below.
 The `CONCEPTS-110`_ repo was constructed from the :file:`CODE.tar` tarball received on 2-Oct-2013 from J-P Paquin.
@@ -18,13 +18,15 @@ Also included here is an :ref:`analysis of the differences <nemo31-concepts110-d
 NEMO-3.1
 ========
 
-The following steps took the `NEMO-3.1`_ repo from initialization to a checkout of https://forge.ipsl.jussieu.fr/nemo/svn/tags/nemo_v3_1 that could be built on :kbd:`jasper.westgrid.ca` and used to successfully run the :kbd:`GYRE` configuration:
+The following steps took the `NEMO-3.1`_ repo from initialization to a checkout of
+``https://forge.ipsl.jussieu.fr/nemo/svn/tags/nemo_v3_1`` that could be built on :kbd:`jasper.westgrid.ca` and used to successfully run the :kbd:`GYRE` configuration:
 
-* An :command:`svn` checkout of the trunk of the :kbd:`modipsl` framework was done from http://forge.ipsl.jussieu.fr/igcmg/svn/modipsl/trunk.
+* An :command:`svn` checkout of the trunk of the :kbd:`modipsl` framework was done from
+  ``http://forge.ipsl.jussieu.fr/igcmg/svn/modipsl/trunk``.
   That yielded revision 2163.
   The repo state was tagged as `modipsl-r2163`_.
 
-  .. _modipsl-r2163: https://bitbucket.org/salishsea/nemo-code/commits/tag/modipsl-r2163
+  .. _modipsl-r2163: https://github.com/SalishSeaCast/NEMO-3.1/releases/tag/modipsl-r2163
 
   .. note::
 

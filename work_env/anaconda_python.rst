@@ -20,7 +20,7 @@ Choose the *Python 3* download from the `installation instructions`_ for your op
 follow the rest of those instructions,
 and accept the option at the end of the installation to make Anaconda your default Python.
 
-.. _installation instructions: https://www.continuum.io/downloads
+.. _installation instructions: https://docs.anaconda.com/anaconda/install/index.html
 
 If you are installing Anaconda Python on a Waterhole machine,
 choose the *Python 3 Linux 64-bit* download.
@@ -41,7 +41,7 @@ There is are a few packages that we use extensively that is not included in the 
 .. _basemap: https://matplotlib.org/basemap/
 .. _nbsphinx: https://nbsphinx.readthedocs.io/
 .. _netcdf4-python: https://unidata.github.io/netcdf4-python/
-.. _sphinx_rtd_theme: https://docs.readthedocs.io/en/latest/theme.html
+.. _sphinx_rtd_theme: https://sphinx-rtd-theme.readthedocs.io/en/stable/
 .. _xarray: http://xarray.pydata.org/
 
 To install them,
@@ -49,7 +49,7 @@ do:
 
 .. code-block:: bash
 
-    conda install basemap hdf4 netcdf4 xarray
+    conda install basemap hdf4 netcdf4 sphinx-rtd-theme xarray
 
 and follow the prompts.
 Then do:

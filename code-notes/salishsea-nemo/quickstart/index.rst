@@ -13,11 +13,6 @@ The sections below describe *very* briefly the steps to set up and run the Salis
     westgrid
     computecanada
 
-Details of what this all means and why the steps in the sections linked from this page are what they are can be found in the following sections:
-
-* :ref:`NEMO-code`
-* :ref:`NEMO-forcing`
-* :ref:`SS-run-sets`
 
 Running NEMO-3.4
 ================

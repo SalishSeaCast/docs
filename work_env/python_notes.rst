@@ -156,7 +156,7 @@ Quoting from the introduction to its documentation:
 
 .. _xarray: http://xarray.pydata.org/
 .. _pandas: http://pandas.pydata.org/
-.. _Common Data Model: https://www.unidata.ucar.edu/software/thredds/current/netcdf-java/CDM
+.. _Common Data Model: https://www.unidata.ucar.edu/software/netcdf-java/v4.6/CDM/index.html
 
 Here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using :kbd:`xarray`:
 

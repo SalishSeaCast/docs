@@ -32,7 +32,7 @@ That repo is used to merge changes from the upstream Subversion repository that 
 and from the `Salish Sea team XIOS-2 repo`_ on Bitbucket.
 The :file:`XIOS-2-mirror-merge` repo was created by cloning the :file:`/ocean/sallen/hg_repos/XIOS-2-hg-mirror` repo:
 
-.. _Salish Sea team XIOS-2 repo: https://bitbucket.org/salishsea/xios-2
+.. _Salish Sea team XIOS-2 repo: https://github.com/SalishSeaCast/XIOS-2
 
 .. code-block:: bash
 
@@ -157,7 +157,7 @@ Merging changes from NEMO :command:`svn` and the `Salish Sea team XIOS-2 repo`_ 
 Doug does the merges on his laptop.
 The repo in which the merging is done was created by cloning the :file:`/ocean/sallen/hg_repos/XIOS-2-hg-mirror` repo as described in the :ref:`XIOS-2MaintSetup` section.
 
-After the :ref:`PullChangesFromNEMOsvn` has been completed the workflow to merge those changes with Salish Sea MEOPAR project revisions is:
+After the :ref:`PullChangesFromXIOS-2svn` has been completed the workflow to merge those changes with Salish Sea MEOPAR project revisions is:
 
 #. Pull and update recent changes from the `Salish Sea team XIOS-2 repo`_ on Bitbucket into :kbd:`XIOS-2-mirror-merge`:
 

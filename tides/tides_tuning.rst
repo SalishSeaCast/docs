@@ -85,17 +85,17 @@ Full run parameters are at:
 
 * spreadsheet: `TideTuningRunParameters.ods`_
 
-.. _TideTuningRunParameters.ods: https://bitbucket.org/salishsea/analysis/src/tip/compare_tides/TideTuningRunParameters.ods?at=default
+.. _TideTuningRunParameters.ods: https://github.com/SalishSeaCast/analysis/blob/master/compare_tides/TideTuningRunParameters.ods
 
 Newton-Ralphson Process is at:
 
 * spreadsheet: `diagnostics.ods`_
 
-.. _diagnostics.ods: https://bitbucket.org/salishsea/analysis/src/tip/Susan/diagnostics.ods?at=default
+.. _diagnostics.ods: https://github.com/SalishSeaCast/analysis/blob/master/Susan/diagnostics.ods
 
 And final results can be seen in:
 
 * Jupyter Notebook: `Analysis8Components`_
 
-.. _Analysis8Components: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/compare_tides/Analysis8Components.ipynb
+.. _Analysis8Components: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis/blob/master/compare_tides/Analysis8Components.ipynb
 

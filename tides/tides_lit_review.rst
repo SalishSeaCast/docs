@@ -1,7 +1,7 @@
 Literature review (tides)
 ===================================
 
-Evaluating the performance of the NEMO model of the Strait of Georgia will begin with an evaluation of its skill at reproducing the tides in the domain. 
+Evaluating the performance of the NEMO model of the Strait of Georgia will begin with an evaluation of its skill at reproducing the tides in the domain.
 
 (a) how are models evaluated in terms of tidal data?
 
@@ -9,15 +9,15 @@ Evaluating the performance of the NEMO model of the Strait of Georgia will begin
 
 .. _foremanetal95:
 
-Foreman et al. (1995) 
+Foreman et al. (1995)
 -------------------------
 Three dimensional, barotropic model of eastern Juan de Fuca Strait and southern Strait of Georgia, does not include stratification, wetting/drying or estuarine flow
 
 *(a) how is model evaluated?*
 
-* For tidal heights, amplitudes and phases of the eight major consituents at each tidal observation site were calculated by harmonic analysis (Foreman 1977) 
+* For tidal heights, amplitudes and phases of the eight major consituents at each tidal observation site were calculated by harmonic analysis (Foreman 1977)
 * For tidal currents, ellipse parameters from a similar analysis were used for comparisons
-* Used tidal data at 38 sites, subsampled from a list of 90 tidal stations (taken from Parker 1977) to only include stations with more than 120 days of records 
+* Used tidal data at 38 sites, subsampled from a list of 90 tidal stations (taken from Parker 1977) to only include stations with more than 120 days of records
 * Used current meter data from 10 sites
 * Model values at each observation location were interpolated between model node values
 * Differences calculated as distances in the complex plane:
@@ -26,7 +26,7 @@ Three dimensional, barotropic model of eastern Juan de Fuca Strait and southern 
 
 	where :math:`A_0`, :math:`A_m`, :math:`g_0` and :math:`g_m` are observed and modelled amplitudes and phases
 
-* M2 differences were between 0.8cm (Pedder Bay) and 8.7cm (Sidney), with average around 3cm 
+* M2 differences were between 0.8cm (Pedder Bay) and 8.7cm (Sidney), with average around 3cm
 * K1 differences were between 0.4cm (Pedder Bay) and 5.4cm (Sidney), with average around 2.5cm
 * M2 is too early at Sooke, possibly because of large frictional effects of mudflats, which are not considered in calculation
 * M2 is too small and too late at Clover Point and Sidney possibly because the interaction of estuarine flow with tides was not taken into effect
@@ -39,7 +39,7 @@ Three dimensional, barotropic model of eastern Juan de Fuca Strait and southern 
 	- rms phase differences all within 6.3 degrees
 
 * Plotted out co-amplitude and co-phase lines for major constituents to compare to Crean et al (1988)
-* Ellipses were compared (qualitatively?) between measured currents and modelled currents throughout the water column, but could not account for baroclinic effects such as internal tides which were probably affecting speed variations with depth 
+* Ellipses were compared (qualitatively?) between measured currents and modelled currents throughout the water column, but could not account for baroclinic effects such as internal tides which were probably affecting speed variations with depth
 * Observed M2 constituent was not constant throughout the year at Victoria, possibly due to the exclusion of estuarine flow
 
 *(b) how are tidal forcings applied at boundaries?*
@@ -68,7 +68,7 @@ Model of the north east Pacific Ocean, including Alaskan and BC shelf. Resolutio
 * Compared model :math:`M_2` and :math:`K_1` harmonics against those calculated from harmonic analysis of 5.3 years of altimeter observations (Topex/Poseidon), at locations of crossover of the two satellite paths within the model domain
 * Model accuracy was determined by calculating RMS differences between modelled and observed tidal harmonics at the crossover locations:
 
-	.. math:: 
+	.. math::
 	 D_{rms} = (C^2_{rms}+S^2_{rms})^{1/2}
 
 	 C_{rms} = [\sum_1^N(A_t \cos G_T - A_m \cos G_m)^2/N]^{1/2}
@@ -80,7 +80,7 @@ Model of the north east Pacific Ocean, including Alaskan and BC shelf. Resolutio
 * :math:`M_2` differences showed that modelled amplitude and phase lags were generally too small, possibly due to the existence of an amphidromic ridge near the south and west boundaries
 * :math:`K_1` amplitude and phase lags looked better
 * other semidiurnal and diurnal consituents had similar (but scaled down) inaccuracies
-* assimilated 
+* assimilated
 
 *(b) how are tidal forcings applied at boundaries?*
 
@@ -89,6 +89,7 @@ Model of the north east Pacific Ocean, including Alaskan and BC shelf. Resolutio
 * Strait of Georgia boundary (Northern boundaries) forced with identical amplitudes and phases to Foreman et al. (1995)
 * Queen Charlotte Strait forced with identical amplitudes and phases to Foreman et al. (1993)
 * All coastal boundaries were free slip
+
 
 Masson & Cummins (2004)
 ------------------------------------
@@ -101,7 +102,7 @@ POM model of southern Strait of Georgia and Juan de Fuca Strait
 * Calculated root-mean-square differences between all measured and modelled amplitudes and phase differences
 * Average relative and absolute rms differences (D) between observed and calculated amplitudes and phases at 44 tide gauge sites, calculated by:
 
-	.. math:: 
+	.. math::
 	 D = [\frac{1}{2} (A_m^2 + A_0^2) - A_m A_o \cos (\phi_m - \phi_o)]^{1/2}
 
 	where :math:`A_m` and :math:`A_o` are sea level amplitude of model and observations and :math:`\phi_m` and :math:`\phi_o` phases
@@ -110,27 +111,28 @@ POM model of southern Strait of Georgia and Juan de Fuca Strait
 
 *(b) how are tidal forcings applied at boundaries?*
 
-* Model is forced at two open boundaries with four tidal constituents (K1, O1, M2 and S2) through a 'forced gravity wave radiation condition on the normal component of the depth-integrated velocity (Flather 1987)' 
+* Model is forced at two open boundaries with four tidal constituents (K1, O1, M2 and S2) through a 'forced gravity wave radiation condition on the normal component of the depth-integrated velocity (Flather 1987)'
 * These four constituents account for about 70% of tidal stream velocity
+
 
 .. _sutherlandetal11:
 
 Sutherland et al. (2011)
--------------------------------------------
+------------------------
 
 ROMS model of Salish Sea and Puget Sound
 
-Group's website: http://faculty.washington.edu/pmacc/MoSSea/index.html
+Group's website: https://faculty.washington.edu/pmacc/LO/LiveOcean.html
 
 *(a) how is model evaluated?*
 
 * Calibrated their model with tidal data from NOAA tide gauges (none in BC, all in OR and WA)
 * Amplitude, phase and spring-neap variability of tidal signals
-* Calculated Skill Score (SS) and 
+* Calculated Skill Score (SS) and
 * Calculated correlation coeffienct (R2), which is the variance between two variables:
-	.. math:: 
+	.. math::
 	 R = \frac{1}{\sigma_m} \frac{1}{\sigma_o} \frac{1}{N} \sum^N_{i=1} (m_i-\bar{m})(o_i-\bar{o})
-	
+
 	where :math:`m_i` is the model variable at time or location i, :math:`o_i` is the observed variable at time or location i, N is the number of observations, math:`\sigma_m` and :math:`\sigma_o` are the standard deviations of model and observed variables and overbar indicates an average
 
 * Also compared ratios of modeled to observed amplitudes of M2, S2 and K1 constituents using t_tide (Pawlowicz et al 2002)
@@ -144,8 +146,10 @@ Group's website: http://faculty.washington.edu/pmacc/MoSSea/index.html
 
 * Open boundaries were offshore i.e. straight boundary along 127 degrees W and the northern boundary in the Strait of Georgia was closed
 
+
 References
--------------------------
+----------
+
 * Egbert, G.D. and S.Y. Erofeeva, 2002. Efficient inverse modeling of barotropic ocean tides, Jounal of Atmospheric and Oceanic Technology, 19, 183-204.
 
 * Foreman, M.G.G., R.A. Walters, R.F. Henry, C.P. Keller and A.G. Dolling, 1995. A tidal model for eastern Juan de Fuca Strait and the southern Strait of Georgia, Journal of Geophysical Research, 100, 721-740.

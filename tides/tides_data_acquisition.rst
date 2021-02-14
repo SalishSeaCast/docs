@@ -1,18 +1,18 @@
 Data acquisition (predicted tides and measured water level)
 ======================================================================================================
 
-Tidal forcing is required on the boundaries of the NEMO model. Also, to evaluate the performance of the NEMO model in reproducing the tides, modelled water level output must be compared to measured water level data. 
+Tidal forcing is required on the boundaries of the NEMO model. Also, to evaluate the performance of the NEMO model in reproducing the tides, modelled water level output must be compared to measured water level data.
 
 DFO modelled tidal predictions
 ---------------------------------------
 
 WebTide_ is an online tidal prediction tool developed by DFO. The predictions for the North East Pacific region are based on the model of :ref:`foremanetal00`. Tidal currents and elevations can be predicted from the model.
 
-.. _WebTide: http://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-en.php
+.. _WebTide: https://www.bio.gc.ca/science/research-recherche/ocean/webtide/index-en.php
 
 WebTide was used for the Juan de Fuca boundary conditions in the preliminary runs of the NEMO model. WebTide doesn't quite include our Johnstone Strait boundary, which is around -126.5 deg, 50.5 deg. Webtide cuts out around -126.8 deg, 50.6 deg... so it's close!
 
-Tidal constituents (amplitude and phase) can be output from Webtide for surface elevation and tidal currents. 
+Tidal constituents (amplitude and phase) can be output from Webtide for surface elevation and tidal currents.
 
 For tidal currents, these constituents are relative to compass north, south etc. However, firstly our grid is rotated 29 degrees and secondly, NEMO takes Z1 and Z2, where
 
@@ -20,7 +20,7 @@ For tidal currents, these constituents are relative to compass north, south etc.
 	 Z1 = A\cos\phi
 
 	 Z2 = A\sin\phi
-	
+
 So to go from Webtide constituents to grid constituents, with a rotation of theta (= 29 degrees), for U
 
 	.. math::
@@ -35,11 +35,11 @@ And for V
 
 	 Z2 = -u_a\sin\theta\sin\phi_u + v_a\cos\theta\cos\phi_v
 
-where 
+where
 
-	.. math:: 
+	.. math::
 	 u_a = \text{Webtide u amplitude}
-	
+
 	 v_a = \text{Webtide v amplitude}
 
 	 \phi_u = \text{Webtide u phase}
@@ -52,11 +52,11 @@ where
 Thomson & Huggett (1980) - Johnstone Strait
 ------------------------------------------------------------------
 
-Thomson & Huggett (1980) measured tidal elevations at 4 stations in Johnstone Strait 1976 and 1977. Tidal elevation harmonics for O1, K1, M2 and S2 are reported in Table 2 and stations are shown in Figure 4. 
+Thomson & Huggett (1980) measured tidal elevations at 4 stations in Johnstone Strait 1976 and 1977. Tidal elevation harmonics for O1, K1, M2 and S2 are reported in Table 2 and stations are shown in Figure 4.
 
-They also measured tidal currents at 11 stations (at various depths) in Johnstone Strait and report tidal current harmonics in Table 1. 
+They also measured tidal currents at 11 stations (at various depths) in Johnstone Strait and report tidal current harmonics in Table 1.
 
-Note that phase in these tables is reported as phase lag relative to 120 degrees W longitude. This means the measurements were probably in Pacific Standard Time (PST) and that's how the lags were calculated. 
+Note that phase in these tables is reported as phase lag relative to 120 degrees W longitude. This means the measurements were probably in Pacific Standard Time (PST) and that's how the lags were calculated.
 
 Now, 120 degrees W (Pacific Standard Time) is 8 hours different to GMT, so to convert M2 phase from PST to GMT:
 
@@ -75,7 +75,7 @@ Four months of current observations in Johnstone Strait
 TPXO7.1 modelled tidal predictions
 ----------------------------------------------
 
-`TPXO7.1 <http://www.esr.org/polar_tide_models/Model_TPXO71.html>`_ is an online tidal prediction tool funded by NASA. The predictions are based on the model by Egbert and Erofeeva (2002) at Oregon State University. The model is a 1/4 degree x 1/4 degree global inverse tide model. Predictions can be calculated using a Matlab based GUI called TMD (the Tide Model Driver).
+`TPXO7.1 <https://www.esr.org/research/polar-tide-models/tmd-software/>`_ is an online tidal prediction tool funded by NASA. The predictions are based on the model by Egbert and Erofeeva (2002) at Oregon State University. The model is a 1/4 degree x 1/4 degree global inverse tide model. Predictions can be calculated using a Matlab based GUI called TMD (the Tide Model Driver).
 
 TPXO7.1 was used for the boundary conditions of the model by :ref:`sutherlandetal11`... but resolution is coarse in Juan de Fuca Strait and the Strait of Georgia is an inland sea... Sutherland et al. (2011) used the tidal predictions for a straight boundary along 127 degrees W. The TPXO7.1 predictions are probably only useful when boundaries are offshore from the coast.
 
@@ -94,14 +94,14 @@ Permanent data stations
 Permanent DFO stations in Strait of Georgia and on Vancouver Island (station number, sampling interval, starting year):
 
 * 	`Point Atkinson <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7795&user=isdm-gdsi&region=PAC>`_ (7795, 1min, 1914)
-*	`Vancouver <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7735&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7735, 1min, 1909) 
+*	`Vancouver <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7735&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7735, 1min, 1909)
 *	`Patricia Bay <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7277&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7277, 1min, 1966)
 * 	`Victoria Harbour <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7120&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7120, 1min, 1909)
 *	`Bamfield <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=8545&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (8545, 1min, 1969)
 *	`Tofino <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=8615&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (8615, 1min, 1909)
 *	`Winter Harbour <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=8735&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (8735, 1min, 1989)
 *	`Port Hardy <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=8408&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (8408, 1min, 1964)
-*	`Campbell River <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=8074&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (8074, 1min, 1965) 
+*	`Campbell River <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=8074&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (8074, 1min, 1965)
 *	`New Westminster <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7654&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7654, 1min, 1969)
 
 Temporary data stations
@@ -113,7 +113,7 @@ Vancouver:
 *	station name  (num, ??min, year1, year2, numdays)
 *	`Point Grey <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7635&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7635, 60min, 1977, 1978, 552)
 *	`North Arm <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7634&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7634, 60min, 1969, 1969, 175)
-*	`Sand Heads (Stn Harry) <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp#divGoogleMaps>`_ (7604, 60min, 1968, 1969, 283)
+*	`Sand Heads (Stn Harry) <http://www.isdm-gdsi.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7604&user=isdm-gdsi&region=MEDS>`_ (7604, 60min, 1968, 1969, 283)
 *	`Sand Heads <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7594&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7594, 60min, 1969, 1969, 188)
 *	`Roberts Bank <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7592&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7592, 60min, 1981, 1982, 203)
 *	`Tsawwassen <http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7590&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7590, 60min, 1967, 1978, 4002)
@@ -270,7 +270,7 @@ Sunshine Coast
 *	Lund  (7885, ??min, year1, year2, numdays)
 *	Prideaux Haven  (8008, ??min, year1, year2, numdays)
 
-Mid Strait of Georgia 
+Mid Strait of Georgia
 
 *	Squitty Bay  (7980, ??min, year1, year2, numdays)
 *	Skerry Bay  (7985, ??min, year1, year2, numdays)
@@ -319,7 +319,7 @@ Northern Strait of Georgia
 Data format
 ````````````````````````````````````
 
-Data can be downloaded online until the end of the previous month. 
+Data can be downloaded online until the end of the previous month.
 
 Downloaded files have 8 header lines with station name, number, lat, long, datum, time zone, type of data and column headers. Data is then in the form::
 
@@ -344,19 +344,19 @@ For example::
 NOAA measured data
 -------------------------------
 
-Harmonic constituents and up to 31 days of measured water level data at NOAA tide gauges in the US can be downloaded `here <http://tidesandcurrents.noaa.gov/stations.html?type=Historic+Water+Levels>`_.
+Harmonic constituents and up to 31 days of measured water level data at NOAA tide gauges in the US can be downloaded `here <https://tidesandcurrents.noaa.gov/stations.html?type=Historic+Water+Levels>`_.
 
 (remember that tidal heights are in feet!)
 
 Tulare Beach, Port Susan 9448043
-May 20 2013 - present 
+May 20 2013 - present
 
 9447963 Tulalip Bay, WA
 - present
 
 Tulalip Bay 9447773
 Apr 8 1935 - Nov 13 1974
- 
+
 Toke Point 9440910
 Feb 20 1922 - present
 
@@ -383,7 +383,7 @@ Jan 1 1899 - present
 
 Shilshole Bay Gps Buoy 9447214
 Jan 1 2009 - present
- 
+
 Cherry Point 9449424
 Nov 7 1971 - present
 

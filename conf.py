@@ -39,6 +39,25 @@ intersphinx_mapping = {
     'salishseanowcast': ('https://salishsea-nowcast.readthedocs.io/en/latest/', None),
 }
 
+# Private GitHub repositories that linkcheck will ignore
+linkcheck_ignore = [
+    'https://github.com/SalishSeaCast/barotropic-tides',
+    'https://github.com/SalishSeaCast/CONCEPTS-110',
+    'https://github.com/SalishSeaCast/internal-tides',
+    'https://github.com/SalishSeaCast/jies-plume-paper',
+    'https://github.com/SalishSeaCast/mixing-paper',
+    'https://github.com/SalishSeaCast/NEMO-Forcing',
+    'https://github.com/SalishSeaCast/NEMO-3.1',
+    'https://github.com/SalishSeaCast/NEMO-3.4-Code',
+    'https://github.com/SalishSeaCast/NEMO-3.6-code',
+    'https://github.com/SalishSeaCast/private-tools',
+    # 'https://github.com/SalishSeaCast/rpn-to-gemlam',
+    'https://github.com/SalishSeaCast/SoG-Obs',
+    'https://github.com/SalishSeaCast/XIOS-1.0',
+    'https://github.com/SalishSeaCast/XIOS-2',
+    # 'https://github.com/UBC-MOAD/ariane-2.2.8-code',
+]
+
 todo_include_todos = True
 
 # Add any paths that contain templates here, relative to this directory.

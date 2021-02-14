@@ -23,10 +23,9 @@ Observations
 Water level observations for Canadian tide gauges are easily obtained from the `Fisheries and Oceans Canada`_ (DFO) website.
 We also use observations from `NOAA`_ tide gauges.
 
+.. _Fisheries and Oceans Canada: http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp?user=isdm-gdsi&region=MEDS&tst=1&perm=0
 
-.. _Fisheries and Oceans Canada: http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp
-
-.. _NOAA: http://tidesandcurrents.noaa.gov/stations.html?type=Water+Levels
+.. _NOAA: https://tidesandcurrents.noaa.gov/stations.html?type=Water+Levels
 
 Tidal predictions
 ^^^^^^^^^^^^^^^^^^

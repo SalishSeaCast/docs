@@ -86,7 +86,7 @@ The :program:`NEMO_Preparation/4_weights_ATMOS/get_weight_nemo` program in the :
 feature to use the atmospheric forcing values.
 An example of the use of :program:`get_weight_nemo` to create a weights file for datasets from the operational West deployment of Environment Canada's `High Resolution Deterministic Prediction System`_ (HRDPS) is presented here:
 
-.. _High Resolution Deterministic Prediction System: http://weather.gc.ca/grib/grib2_HRDPS_HR_e.html
+.. _High Resolution Deterministic Prediction System: https://weather.gc.ca/grib/grib2_HRDPS_HR_e.html
 
 Clone the :ref:`NEMO_EastCoast-repo` repo on :kbd:`salish` and edit the :file:`NEMO_Preparation/4_weights_ATMOS/make.sh` file to comment out the default build commands and enable the :kbd:`salish` ones:
 
@@ -333,6 +333,6 @@ See the `tools docs`_ for details on :file:`nc_tools.generate_pressure_file` met
    :command:`salishsea get_cgrf` requires a link to :file:`altitude_CGRF.nc` in :file:`/NEMO-atmos/`.
 
 
-.. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and Bélair, S. (2013), A new atmospheric dataset for forcing ice–ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc.. doi: 10.1002/qj.2194 http://dx.doi.org/10.1002/qj.2194
+.. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and Bélair, S. (2013), A new atmospheric dataset for forcing ice–ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc.. doi: 10.1002/qj.2194 https://dx.doi.org/10.1002/qj.2194
 
 .. [Holton1992] Holton, J., An introduction to dynamic meteorology 3rd edition (Acadmeic Press: 1992)

@@ -6,7 +6,7 @@ Storm Surge
 
 Sea level height for Sandy Cove was extracted from the CHS water level observations and compared to the model results using a `notebook`_.
 
-.. _notebook: http://nbviewer.jupyter.org/url/bitbucket.org/salishsea/analysis-susan/raw/default/notebooks/TideData/SandyCoveStats.ipynb
+.. _notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-susan/blob/master/notebooks/TideData/SandyCoveStats.ipynb
 
 Raw Sea level from the Model is well-correlated with the observations and when the unmodelled constituents are added, the correlation improves.  Even when removing the tides, the sea level is very well predicted.
 

@@ -58,7 +58,7 @@ and there are a few special pupose analysis repos.
 You can find them all at https://bitbucket.org/account/user/salishsea/projects/SSM_ANALYSIS.
 The original analysis repo is now read-only.
 
-.. _analysis: https://bitbucket.org/salishsea/analysis
+.. _analysis: https://github.com/SalishSeaCast/analysis
 
 If you are joining the team as a researcher there should be an analysis repo already set up for you.
 Its name will be something like :kbd:`analysis-james`,

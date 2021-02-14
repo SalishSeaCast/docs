@@ -14,7 +14,7 @@ That term is difficult for the laboratory modelers on the Salish Sea MEOPAR team
 The :program:`salishsea` command processor run description files are YAML_ files that are used by our :ref:`SalishSeaCmdProcessor` tool for managing NEMO runs and results.
 The :ref:`RunDescriptionFileStructure` section describes the file syntax.
 
-.. _YAML: http://pyyaml.org/wiki/PyYAMLDocumentation
+.. _YAML: https://pyyaml.org/wiki/PyYAMLDocumentation
 
 The namelist files contain collections of related namelists.
 They are concatenated to form a complete namelist for a NEMO run by the :program:`salishsea` :ref:`salishsea-prepare`.

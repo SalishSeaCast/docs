@@ -48,7 +48,7 @@ and then for most land eliminated
 The tables linked below list the preferred decompositions for bathymetries "downbyone2" and "201702".
 The scripts here_ produce the tables.
 
-.. _here: https://bitbucket.org/salishsea/analysis-michael/src/tip/land-processor-elimination/
+.. _here: https://github.com/SalishSeaCast/analysis-michael/tree/master/land-processor-elimination
 
 
 .. _Preferred-MPI-LPE-Decompositions:

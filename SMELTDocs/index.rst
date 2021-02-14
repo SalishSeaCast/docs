@@ -11,7 +11,7 @@ an ecosystem model for the Salish Sea. SMELT was derived from the 1-D SOG model 
 coupled to NEMO, using PISCES as a template.
 
 SMELT is implemented as a configuration of NEMO version 3.6 (revision 6770 as of March 8, 2017).
-The base NEMO 3.6 code and associated documentation can be accessed through the NEMO official site: http://www.nemo-ocean.eu/
+The base NEMO 3.6 code and associated documentation can be accessed through the NEMO official site: https://www.nemo-ocean.eu/
 
 Files that are modified from the base code are stored within our SMELT configuration directory in the MY_SRC subdirectory.
 These files are not currently publicly available.

@@ -1,12 +1,13 @@
 Notes on NEMO v3.1
 ==================
 
-These are notes on building and running NEMO v3.1 from https://forge.ipsl.jussieu.fr/nemo/browser/tags/nemo_v3_1.
+These are notes on building and running NEMO v3.1 from ``https://forge.ipsl.jussieu.fr/nemo/browser/tags/nemo_v3_1``.
 
-The `Installing NEMO using modipsl`_ instructions and the `modipsl documentation`_ provided some guidance for the creation of the notes below.
-
-.. _Installing NEMO using modipsl: http://www.nemo-ocean.eu/Using-NEMO/User-Guides/Basics/NEMO-Quick-Start-Guide
-.. _modipsl documentation: http://forge.ipsl.jussieu.fr/igcmg/wiki/platform/en/documentation/C_installation
+The "Installing NEMO using modipsl" instructions
+(``https://www.nemo-ocean.eu/Using-NEMO/User-Guides/Basics/NEMO-Quick-Start-Guide``)
+and the "modipsl documentation"
+(``http://forge.ipsl.jussieu.fr/igcmg/wiki/platform/en/documentation/C_installation``)
+provided some guidance for the creation of the notes below.
 
 
 Getting the Code

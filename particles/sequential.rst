@@ -99,5 +99,5 @@ Notebooks
 =========
 * `Ariane_Sequential.ipynb`_
 
-.. _Ariane_Sequential.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis/raw/tip/Idalia/Ariane_Sequential.ipynb
+.. _Ariane_Sequential.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis/blob/master/Idalia/Ariane_Sequential.ipynb
 

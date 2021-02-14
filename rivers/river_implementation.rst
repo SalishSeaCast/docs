@@ -5,6 +5,7 @@ River Implementation
 
 .. figure:: ../_static/rivers.png
 
+
 Creating input files for NEMO
 -----------------------------
 
@@ -24,9 +25,10 @@ Two files are created `rivers_month_201702.nc`_ and `rivers_cnst_201702.nc`_.  T
 .. _rivers_month_201702.nc: https://github.com/SalishSeaCast/rivers-climatology/blob/master/rivers_month_201702.nc
 .. _rivers_cnst_201702.nc: https://github.com/SalishSeaCast/rivers-climatology/blob/master/rivers_cnst_201702.nc
 
+
 Nowcast Files
-----------------
+-------------
 
 For the nowcast runs, the Fraser River is split into the amount that enters at Hope and amount downstream of that.  The amount at Hope is taken from the published measurements (Environment Canada, WaterOffice via `data mart`_) and distributed appropriately to the Fraser River mouths.  All other freshwater is set to climatology.
 
-.. _data mart: http://dd.meteo.gc.ca/about_dd_apropos.txt
+.. _data mart: https://dd.meteo.gc.ca/about_dd_apropos.txt

@@ -25,15 +25,17 @@ The :file:`CODE.tar` tarball unpacks to a directory called :file:`CONCEPTS110_WC
 as :command:`bash` script that runs the build tool chain described below,
 and the :file:`modipsl/` directory.
 
-modipsl_ is the framework that was used to obtain and build the NEMO code prior to NEMO up to v3.2.
-:kbd:`modipsl` is available via anonymous :command:`svn` checkout from http://forge.ipsl.jussieu.fr/igcmg/svn/modipsl/.
+:kbd:`modipsl`
+(``http://forge.ipsl.jussieu.fr/igcmg/wiki/platform/en/documentation/J_outils#modipsl``)
+is the framework that was used to obtain and build the NEMO code prior to NEMO up to v3.2.
+:kbd:`modipsl` is available via anonymous :command:`svn` checkout from
+``http://forge.ipsl.jussieu.fr/igcmg/svn/modipsl/``.
 However,
 it is unclear what revision/tag of :kbd:`modipsl` the tarball contains.
 
-.. _modipsl: http://forge.ipsl.jussieu.fr/igcmg/wiki/platform/en/documentation/J_outils#modipsl
-
 The documented
-(in "Notes on NEMO/OPA Usage" and in the `NEMO Quick Start Guide`_)
+(in "Notes on NEMO/OPA Usage" and in the "NEMO Quick Start Guide":
+``https://www.nemo-ocean.eu/Using-NEMO/User-Guides/Basics/NEMO-Quick-Start-Guide``)
 means of obtaining the NEMO code is to run:
 
 .. code-block:: bash
@@ -42,8 +44,6 @@ means of obtaining the NEMO code is to run:
     model NEMO
 
 which automates the process of doing checkouts of code from a collection of :command:`cvs` and :command:`svn` repositories.
-
-.. _NEMO Quick Start Guide: http://www.nemo-ocean.eu/Using-NEMO/User-Guides/Basics/NEMO-Quick-Start-Guide
 
 Examination of the :file:`modipsl/util/log` file that the :file:`modipsl/util/model` script creates and the the :file:`modipsl/util/mod.def` definitions file for the script indicate that :file:`model` was run on 18-Mar-2010 and that the :kbd:`nemo_v3_1` tag was used to obtain the NEMO code.
 

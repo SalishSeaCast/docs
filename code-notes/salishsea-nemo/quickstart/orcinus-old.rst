@@ -209,9 +209,8 @@ edit,
 and version control those files to define the runs that you want to execute.
 
 The run description file is described in the :ref:`RunDescriptionFileStructure` section of the :ref:`project tools documentation <SalishSeaToolsDocs>`.
-The namelists are described in the `NEMO-3.4 Book`_.
-
-.. _NEMO-3.4 Book: http://www.nemo-ocean.eu/content/download/21612/97924/file/NEMO_book_3_4.pdf
+The namelists are described in the "NEMO-3.4 Book"
+(``https://www.nemo-ocean.eu/content/download/21612/97924/file/NEMO_book_3_4.pdf``).
 
 Use :program:`salishsea` :ref:`salishsea-run` to prepare,
 execute,

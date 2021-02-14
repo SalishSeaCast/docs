@@ -8,13 +8,13 @@ The Salish Sea MEOPAR project is lead by `Susan Allen`_ in the Department of Ear
 It is funded by the `Marine Environment Observation Prediction And Response`_ National Centre of Excellence.
 
 .. _Susan Allen: https://www.eoas.ubc.ca/~sallen/
-.. _Marine Environment Observation Prediction And Response: http://meopar.ca/
+.. _Marine Environment Observation Prediction And Response: https://meopar.ca/
 
 The following people have contributed code,
 documentation,
 etc. to the Salish Sea MEOPAR project repositories hosted on GitHub_ and Bitbucket_:
 
-.. _Bitbucket: https://bitbucket.org/salishsea/
+.. _Bitbucket: https://github.com/SalishSeaCast/
 .. _GitHub: https://github.com/SalishSeaCast
 
 * Susan Allen <sallen@eoas.ubc.ca>

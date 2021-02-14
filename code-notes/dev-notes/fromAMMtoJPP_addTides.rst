@@ -18,7 +18,7 @@ In `Prepare Forcing Files`_ I calculate the latter from the former.
 
 This produces three files : JPP_bdytide_M2_grid_X.nc where X = T, U or V.  These files are available in the `nemo-forcing repository`_ in the bdydta folder.
 
-.. _nemo-forcing repository: https://github.com/SalishSeaCast/NEMO-forcing
+.. _nemo-forcing repository: https://github.com/SalishSeaCast/NEMO-Forcing
 
 cpp Keys
 --------

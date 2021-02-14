@@ -9,7 +9,7 @@ NEMO-3.6 Code Repo Maintenance
 Set-up
 ======
 
-The :file:`/ocean/sallen/hg_repos/NEMO-3.6-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012 and also a read-only Mercurial repository.
+The :file:`/ocean/sallen/hg_repos/NEMO-3.6-hg-mirror` repository is an :command:`svn` checkout of ``http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE`` and also a read-only Mercurial repository.
 It was initialized with:
 
 .. code-block:: bash
@@ -71,7 +71,7 @@ Workflow to Pull Changes from NEMO-3.6 :command:`svn` Repo
 
 The workflow to pull changes from the master NEMO :command:`svn` repo and commit them to our :file:`NEMO-3.6-hg-mirror` repo is somewhat automated by the :ref:`Marlin`.
 
-#. Review the upstream changes in the source browser at http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012 to select a range of changes to be pulled into our :file:`NEMO-3.6-hg-mirror` repo.
+#. Review the upstream changes in the source browser at ``http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE`` to select a range of changes to be pulled into our :file:`NEMO-3.6-hg-mirror` repo.
 
    .. note::
 
@@ -119,7 +119,7 @@ Merging changes from NEMO :command:`svn` and the `Salish Sea team NEMO-3.6-code 
 Doug does the merges on his laptop.
 The repo in which the merging is done was created by cloning the :file:`/ocean/sallen/hg_repos/NEMO-3.6-hg-mirror` repo as described in the :ref:`NEMO-3.6MaintSetup` section.
 
-After the :ref:`PullChangesFromNEMOsvn` has been completed the workflow to merge those changes with Salish Sea MEOPAR project revisions is:
+After the :ref:`PullChangesFromNEMO-3.6svn` has been completed the workflow to merge those changes with Salish Sea MEOPAR project revisions is:
 
 #. Pull and update recent changes from the `Salish Sea team NEMO-3.6-code repo`_ into :kbd:`NEMO-3.6-mirror-merge`:
 
@@ -167,10 +167,10 @@ We are maintaining several local commits to files that do not fit in :file:`MY_S
 #. Sort cfg.txt in :file:`makenemo`, `9f0335b59c780d055b7466e5ffd641d4ab0234aa`_
 #. Escape 'ls' in :file:`Fmake_WORK.sh`, `4979fc15317c1c899697c1b89d5a64d688917253`_
 
-.. _900e1ce4066f2a64223b502167a9a15a6d7c7b2d: https://bitbucket.org/salishsea/nemo-3.6-code/commits/900e1ce4066f2a64223b502167a9a15a6d7c7b2d
-.. _28e2d9cd2a82b88e475a16804837eee22ea342f2: https://bitbucket.org/salishsea/nemo-3.6-code/commits/28e2d9cd2a82b88e475a16804837eee22ea342f2
-.. _9f0335b59c780d055b7466e5ffd641d4ab0234aa: https://bitbucket.org/salishsea/nemo-3.6-code/commits/9f0335b59c780d055b7466e5ffd641d4ab0234aa
-.. _4979fc15317c1c899697c1b89d5a64d688917253: https://bitbucket.org/salishsea/nemo-3.6-code/commits/4979fc15317c1c899697c1b89d5a64d688917253
+.. _900e1ce4066f2a64223b502167a9a15a6d7c7b2d: https://github.com/SalishSeaCast/NEMO-3.6-code/commits/900e1ce4066f2a64223b502167a9a15a6d7c7b2d
+.. _28e2d9cd2a82b88e475a16804837eee22ea342f2: https://github.com/SalishSeaCast/NEMO-3.6-code/commits/28e2d9cd2a82b88e475a16804837eee22ea342f2
+.. _9f0335b59c780d055b7466e5ffd641d4ab0234aa: https://github.com/SalishSeaCast/NEMO-3.6-code/commits/9f0335b59c780d055b7466e5ffd641d4ab0234aa
+.. _4979fc15317c1c899697c1b89d5a64d688917253: https://github.com/SalishSeaCast/NEMO-3.6-code/commits/4979fc15317c1c899697c1b89d5a64d688917253
 
 Some of these are fixed in NEMO upstream:
 

@@ -62,11 +62,11 @@ You will also need access to scripts in the analysis-storm-surges_ repository an
 
 
 4. Look up the grid point indices of your station and add a 15 minute ssh output to :file:`SS-run-sets/SalishSea/nowcast/iodef.xml`
-5. Test ssh plotting calls with your new station in OutTemplate.ipynb_
+5. Test ssh plotting calls with your new station in `OutTemplate.ipynb`_
 
    * Testing won't be possible until we have a 15 minute output file for this station. You can test the process by linking one of the existing 15 minute files into a new file with the appropriate name. The plots will be gibberish but you can test the procedure.
 
-.. _OutTemplate.ipynb: https://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/salishseanowcast/raw/tip/notebooks/Out_Template.ipynb
+.. _OutTemplate.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/SalishSeaNowcast/blob/main/notebooks/Out_Template.ipynb
 
 6. Add appropriate calls to plotting functions and saving/displaying figures in :file:`tools/SalishSeaNowcast/nowcast/make_plots.py` and :file:`tools/SalishSeaNowcast/nowcast/make_site_page.py`.
 

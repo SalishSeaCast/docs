@@ -63,7 +63,7 @@ In your CONFIG directory (assuming you are using SALISH_amm as your config name)
 Initialization Files
 --------------------
 
-Clone the nemo-forcing repository from here https://github.com/SalishSeaCast/NEMO-forcing
+Clone the nemo-forcing repository from here https://github.com/SalishSeaCast/NEMO-Forcing
 
 .. note::
 

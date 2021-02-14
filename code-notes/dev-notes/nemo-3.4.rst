@@ -8,7 +8,7 @@ Note, this set-up runs on one core on one processor.
 Getting the Code
 ----------------
 
-* Goto http://www.nemo-ocean.eu/
+* Goto https://www.nemo-ocean.eu/
 * Logon.
 * Goto Using NEMO, then User Guides, the NEMO Quick Start Guide
 * locally switch to BASH as your shell (e.g. type bash)
@@ -78,9 +78,9 @@ Making a Project
 
         cd ../CONFIG
         ./makenemo -m ocean -r GYRE -n MY_GYRE add_key "key_nosignedzero key_netcdf4"
-        
+
     *   If you are compiling version 3.6 on :file:`salish` use the following command instead:
-    
+
         .. code-block:: bash
 
             cd ../CONFIG

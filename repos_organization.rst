@@ -6,20 +6,20 @@ Organization of Mercurial Repositories
 General
 -------
 
-* The central location for all repos is the `SalishSea-MEOPAR team account`_ on Bitbucket
+* The central location for all repos is the `SalishSeaCast organization`_ on GitHub
 
-  .. _SalishSea-MEOPAR team account: https://bitbucket.org/salishsea/
+  .. _SalishSeaCast organization: https://github.com/SalishSeaCast/
 
 * People are free to push changes to code and docs that they own,
   but they should fork repos and create pull requests to provide changes to stuff owned by others so that changes are reviewed
 
-* All repos have issue trackers enabled on Bitbucket
+* All repos have issue trackers enabled on GitHub
 
-* Bitbucket wikis are disabled on all repos to force documentation into repo docs directories
+* GitHub wikis are disabled on all repos to force documentation into repo docs directories
 
 * Docs use Sphinx_
 
-  .. _Sphinx: http://sphinx-doc.org/
+  .. _Sphinx: https://www.sphinx-doc.org/en/master/
 
 * Docs from public repos will be rendered as HTML on `readthedocs.org`_.
   readthedocs also provides PDF rendering.
@@ -136,7 +136,7 @@ analysis
 * Apache v2.0 license, copyright project contributors and UBC
 * analyses of the results of the Salish Sea MEOPAR NEMO model;
   most of the files are Jupyter Notebooks
-* Bitbucket: https://bitbucket.org/salishsea/analysis/
+* GitHub: https://github.com/SalishSeaCast/analysis/
 
 .. note::
     This was the project's original analysis repo.
@@ -144,9 +144,7 @@ analysis
     In April 2016 it was split into a collection of personal analysis repos for each team member,
     as well as some other application-specific analysis repos.
     They are all public with the same license and copyright a the original analysis repo.
-    They can be found in the `SalishSea-MEOPAR Analysis project`_ collection of repos on Bitbucket.
-
-    .. _SalishSea-MEOPAR Analysis project: https://bitbucket.org/account/user/salishsea/projects/SSM_ANALYSIS
+    They can be found in the `SalishSeaCast organization`_ on GitHub.
 
 
 .. _NEMO-3.6-code-repo:
@@ -278,7 +276,7 @@ NEMO-forcing
   * open boundary condition forcing
   * etc.
 
-* Bitbucket: https://bitbucket.org/salishsea/nemo-forcing/
+* GitHub: https://github.com/SalishSeaCast/NEMO-Forcing/
 * documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-forcing/index.html
 
 .. note::
@@ -297,9 +295,7 @@ NEMO-forcing
     They are all public,
     licensed under Apache v2.0 license,
     and copyright by the project contributors and UBC.
-    They can be found in the `SalishSea-MEOPAR NEMO Model Runs`_ collection of repos on Bitbucket.
-
-    .. _SalishSea-MEOPAR NEMO Model Runs: https://bitbucket.org/account/user/salishsea/projects/SSM_NEMO_RUNS
+    They can be found in the `SalishSeaCast organization`_ on GitHub.
 
 
 .. _SS-run-sets-repo:
@@ -335,7 +331,7 @@ results
 * public
 * all rights reserved, copyright project contributors and UBC
 * a collection of model results and analysis produced by the Salish Sea MEOPAR project
-* Bitbucket: https://bitbucket.org/salishsea/results/
+* GitHub: https://github.com/SalishSeaCast/results_for_others
 
 
 .. _storm-surge-repo:
@@ -352,7 +348,7 @@ Storm-Surge
   Storm surges in the Strait of Georgia simulated with a regional model.
   Atmosphere-Ocean, volume 54, issue 1.
   https://dx.doi.org/10.1080/07055900.2015.1108899
-* Bitbucket: https://bitbucket.org/salishsea/storm-surge/
+* GitHub: https://github.com/SalishSeaCast/storm-surge/
 
 
 .. _barotropic-tides:
@@ -362,7 +358,7 @@ Barotropic-Tides
 
 * private until paper is published
 * development of the Salish Sea NEMO barotropic tides paper
-* Bitbucket: https://bitbucket.org/salishsea/barotropic-tides
+* GitHub: https://github.com/SalishSeaCast/barotropic-tides
 
 
 .. _internal-tides:
@@ -372,7 +368,7 @@ internal-tides
 
 * private until paper is published
 * development of the Salish Sea NEMO interal tides paper
-* Bitbucket: https://bitbucket.org/salishsea/internal-tides
+* GitHub: https://github.com/SalishSeaCast/internal-tides
 
 
 .. _mixing-paper:
@@ -382,7 +378,7 @@ mixing-paper
 
 * private until paper is published
 * development of the Salish Sea NEMO mixing paper
-* Bitbucket: https://bitbucket.org/salishsea/mixing-paper
+* GitHub: https://github.com/SalishSeaCast/mixing-paper
 
 
 .. _plume-paper:
@@ -392,22 +388,20 @@ plume-paper
 
 * private until paper is published
 * development of the Salish Sea NEMO plume paper
-* Bitbucket: https://bitbucket.org/salishsea/plume-paper
+* GitHub: https://github.com/SalishSeaCast/jies-plume-paper
 
 
 .. _XIOS-repo:
 
-XIOS (XML I/O Server)
-~~~~~~~~~~~~~~~~~~~~~
+XIOS-1.0 (XML I/O Server)
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * private
   (because the canonical source for this code is :kbd:`http://forge.ipsl.jussieu.fr/ioserver/wiki`)
 * CeCILL_V2 license, copyright Centre National de la Recherche Scientifique CNRS
 * XIOS-1.0 code that we run with NEMO-3.6
 * a checkout of the :kbd:`http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/branchs/xios-1.0` branch
-* maintenance of the repo to handle the merging in changes from upstream is decribed in :ref:`NEMO-MirrorMaintenance`
-* Bitbucket: https://bitbucket.org/salishsea/xios/
-* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
+* GitHub: https://github.com/SalishSeaCast/XIOS-1.0
 
 .. note::
     This is the XIOS-1.0 code.
@@ -418,17 +412,15 @@ XIOS (XML I/O Server)
 
 .. _NEMO-code-repo:
 
-NEMO-code
-~~~~~~~~~
+NEMO-3.4-Code
+~~~~~~~~~~~~~
 
 * private
   (because NEMO project requires sign-in to access code)
 * CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
 * NEMO-3.4 code that we run
 * a merge of the :kbd:`http://forge.ipsl.jussieu.fr/nemo/svn/branches/2012/dev_v3_4_STABLE_2012` branch and our local code
-* maintenance of the repo to handle the merges is decribed in :ref:`NEMO-MirrorMaintenance`
-* Bitbucket: https://bitbucket.org/salishsea/nemo-code/
-* documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo-code.html
+* GitHub: https://github.com/SalishSeaCast/NEMO-3.4-Code
 
 .. note::
     This is the NEMO-3.4 code.
@@ -445,7 +437,7 @@ SoG-obs
 * private
 * a collection of observations made in the Salish Sea
 * This repo is a vestige of an experiment that didn't work out because storing large binary files under Mercurial version control is not a good idea.
-* Bitbucket: https://bitbucket.org/salishsea/sog-obs/
+* GitHub: https://github.com/SalishSeaCast/SoG-Obs
 
 
 .. _NEMO_EastCoast-repo:
@@ -458,7 +450,7 @@ NEMO_EastCoast
   running,
   and post-processing of numerical simulations with NEMO for MEOPAR project
   with primary focus on the Scotia Shelf deployment of the model
-* Bitbucket: https://bitbucket.org/salishsea/nemo_eastcoast/
+* GitHub: https://github.com/SalishSeaCast/NEMO-EastCoast/
 
 
 .. _NEMO-3.1-repo:
@@ -472,7 +464,7 @@ NEMO-3.1
 * NEMO-3.1 reference repo
 * a Mercurial repo of SVN checkouts of modipsl trunk, the NEMO-3.1 tag, and supporting repos that are believed to be the basis on which the 2-Oct-2013 CONCEPTS-110 CODE tarball was built
 * documentation rendered at https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo31-concepts110.html
-* Bitbucket: https://bitbucket.org/salishsea/nemo-3.1/
+* GitHub: https://github.com/SalishSeaCast/NEMO-3.1
 
 
 .. _CONCEPTS-110-repo:
@@ -486,4 +478,4 @@ CONCEPTS-110
 * CONCEPTS-110 reference repo
 * a Mercurial repo of the CODE.tar tarball received from J-P Paquin on 2-Oct-2013
 * documentation rendered at https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/nemo31-concepts110.html
-* Bitbucket: https://bitbucket.org/salishsea/concepts-110/
+* GitHub: https://github.com/SalishSeaCast/CONCEPTS-110/

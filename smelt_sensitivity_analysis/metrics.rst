@@ -7,7 +7,7 @@ An example of a metric would be peak primary producer biomass. This is defined a
 
 Then we can see how the value of this metric changes for different parameter modifications. This metric can be thought of as a function with inputs being the parameter values and a single valued output. Under this paradigm we can define partial derivatives.
 
-This `notebook <http://nbviewer.jupyter.org/urls/bitbucket.org/salishsea/analysis-james/raw/tip/notebooks/metric_gradient_multiple_seasons.ipynb/>`_ is used to compare the normalised partial derivatives of every parameter for 3 different starting months. The partial derivatives are normalised so that the impact of parameters is related to their percent change, not their magnitude change. This allows for better comparison of parameters that are several orders of magnitude apart.
+This `notebook <https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-james/blob/master/notebooks/metric_gradient_multiple_seasons.ipynb/>`_ is used to compare the normalised partial derivatives of every parameter for 3 different starting months. The partial derivatives are normalised so that the impact of parameters is related to their percent change, not their magnitude change. This allows for better comparison of parameters that are several orders of magnitude apart.
 
 The notebook linked above uses a list of result directories and a list of metric functions, it applies each metric function to every result within those directories. Then a dataset is created with columns for metric name, modified parameter name, percent change in parameter, start month, and metric value. This dataset is used to create two types of plots.
 

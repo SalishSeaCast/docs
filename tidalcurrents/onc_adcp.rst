@@ -6,7 +6,7 @@ Ocean Networks Canada ADCP Currents
 
 `Ocean Networks Canada`_ (ONC) maintains several deep water nodes with ADCP current meters in the Strait of Georgia. This page describes the scripts used to process their data.
 
-.. _`Ocean Networks Canada`: http://www.oceannetworks.ca/
+.. _`Ocean Networks Canada`: https://www.oceannetworks.ca/
 
 MATLAB Scripts for ONC Data
 ===========================
@@ -276,7 +276,7 @@ If you will be running the processing in a new directory for the first time ther
 
 * 1. In :file:`compare_daily.m` change the path to be where you want everything to be saved. Many extra files will appear in this directory every time you run the scripts.
 
-* 2. Make an account on http://www.oceannetworks.ca/information to get userId. In :file:`getSoGAdcpDataMay15_mod.m` insert your email and userId at lines 173 and 174 of the script. You will receive an email every time you load raw data from the website.
+* 2. Make an account on https://www.oceannetworks.ca/data-tools to get userId. In :file:`getSoGAdcpDataMay15_mod.m` insert your email and userId at lines 173 and 174 of the script. You will receive an email every time you load raw data from the website.
 
 * 3. In :file:`GET_DATA_fun` change the firstdate variable to be at least 3 days before the lastdate. This is because the filter length in :file:`LTIM_fun` needs at least that much data for the processing.
 

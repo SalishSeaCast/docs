@@ -23,13 +23,13 @@ The Marine Environmental Observation Prediction and Response network
 (MEOPAR_)
 provides a platform to accelerate this type of research.
 
-.. _MEOPAR: http://meopar.ca/
+.. _MEOPAR: https://meopar.ca/
 
 The Salish Sea MEOPAR project team is developing a three-dimensional ocean model for the Strait of Georgia and Salish Sea.
 Using the NEMO_ modelling architecture the Salish Sea model will be used to evaluate storm surge risk in coastal communities.
 A long term goal is to include a coupled biogeochemical modelling component.
 
-.. _NEMO: http://www.nemo-ocean.eu/
+.. _NEMO: https://www.nemo-ocean.eu/
 
 .. figure:: _static/SalishSeaImage.png
 
