@@ -121,7 +121,7 @@ The sensitivity of the deep water renewal into the Strait of Georgia
 and of fresh water pulses into Juan de Fuca Strait to modelling choices
 affecting both turbulence and advection has been determined in:
 
-Soontiens, N. and Allen, S.
+Soontiens, N. and Allen, S, 2017.
 Modelling sensitivities to mixing and advection in a sill-basin estuarine system.
 Ocean Modelling, 112, 17-32.
 https://dx.doi.org/10.1016/j.ocemod.2017.02.008
@@ -174,20 +174,22 @@ Moore-Maley et al . (2016) was adapted to three dimensions and coupled to the Sa
 Sea NEMO model described by Soontiens et al. (2016). Description and evaluation of the
 model can be found in:
 
-Olson, E. M., S. E. Allen, V. Do, M. Dunphy, and D. Ianson (in press).
+Olson, E. M., S. E. Allen, V. Do, M. Dunphy, and D. Ianson, 2020.
 Assessment of Nutrient Supply by a Tidal Jet in the Northern Strait of Georgia Based on a Biogeochemical Model.
-J. Geophys. Res. Oceans.
+J. Geophys. Res. Oceans, 25(8)
 https://dx.doi.org/10.1029/2019JC015766
 
 .. code-block:: tex
 
-    @unpublished{Olson-etal-2020,
+    @article{Olson-etal-2020,
         author = "Olson, E. M. and S. E. Allen and V. Do and M. Dunphy and D. Ianson",
         title = "Assessment of Nutrient Supply by a Tidal Jet in the
     Northern Strait of Georgia Based on a Biogeochemical Model",
         journal = "Journal of Geophysical Research: Oceans",
         year = "2020",
-        note = "(in press)",
+        volume = "25",
+        number = "8",
+        issn = "2169-9291",
         url = "https://dx.doi.org/10.1029/2019JC015766",
         keywords = "nitrate, tidal jet, Discovery Passage, Strait of Georgia,
     biogeochemical model, new production",
