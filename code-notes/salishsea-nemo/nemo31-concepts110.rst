@@ -122,7 +122,7 @@ Build and Run NEMO-3.1
        module load library/szip/2.1
 
    That only needs to be done once per login so you may wish to add those commands to your :file:`$HOME/.bashrc` file
-   (See :ref:`.bashrc-snippets`).
+   (See :ref:`moaddocs:bashConfiguration`).
 
 #. Compile and link the code:
 

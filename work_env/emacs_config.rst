@@ -208,7 +208,7 @@ Install `flake8`_ into your local Python environment:
 and,
 if you have not already done so,
 add :file:`$HOME/.local/bin` to your :envvar:`PATH`
-(see :ref:`.bashrc-snippets`).
+(see :ref:`moaddocs:Create-.bash_profile`).
 The additions to your :envvar:`PATH` should be such that :file:`$HOME/.local/bin` comes after :file:`$HOME/anaconda/bin`.
 
 Download :file:`flymake-cursor.el` from http://www.emacswiki.org/emacs/download/flymake-cursor.el into your :file:`$HOME/elisp/` directory:
