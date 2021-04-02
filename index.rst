@@ -56,6 +56,7 @@ Contents
    turbulence/index
    particles/index
    code-notes/dev-notes/index
+   bloom_timing/index
    CITATION
    CONTRIBUTORS
 
