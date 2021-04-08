@@ -1,18 +1,31 @@
-# conda environment description file for docs build envioronment
-# on readthedocs.org
+# conda environment description file for SalishSeaCast docs
+# development environment and for the docs build environment on readthedocs.
+#
+# Create a conda environment in which the SalishSeaCast docs can be built
+# with:
+#
+#   $ cd MEOPAR/docs
+#   $ conda env create -f environment-rtd.yaml
+#   $ source activate salishseacast-docs
+#
+# The environment will include all of the packages necessary to build
+# the docs locally so that you can preview them before you push to
+# GitHub and wait for readthedocs to build them.
+#
+# See the requirements.txt file for an exhaustive list of all of the
+# packages installed in the environment and their versions used in
+# recent development.
 
 name: salishseacast-docs
 
 channels:
-  - defaults
+  - conda-forge
+  - nodefaults
 
 dependencies:
   - ipython
-  - jupyter_client
+  - nbsphinx
   - pip
-  - python=3
+  - python>=3.6
   - sphinx
   - sphinx_rtd_theme
-
-  - pip:
-    - nbsphinx

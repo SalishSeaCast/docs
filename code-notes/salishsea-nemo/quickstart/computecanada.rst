@@ -27,8 +27,8 @@ The modules needed are:
 
 .. code-block:: bash
 
-    module load netcdf-fortran-mpi/4.4.4
-    module load perl/5.22.4
+    module load netcdf-fortran-mpi/4.5.2
+    module load perl/5.30.2
     module load python/3.8.2
 
 
