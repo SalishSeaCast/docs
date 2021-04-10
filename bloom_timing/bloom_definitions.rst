@@ -20,9 +20,8 @@ the surface to three meters in depth.
 
 Metric 2 is a definition from Olson et. al (2020) that describes the spring bloom as the first peak 
 in which mean upper-3-m chlorophyll concentrations are above 5 micrograms/L for more than 
-two consecutive days. [2]_ This definition was adapted for this analysis, and only surface 
-chlorophyll concentrations were considered. 
-
+two consecutive days. [2]_ 
+												
 Metric 3 is a method used by Suchy et. al in prep. For a given year, bloom initiation is 
 determined to be the week that first reaches the threshold value (by looking at weekly 
 averages), as long as one of the two following weeks was >70% of the threshold value. The 
@@ -55,7 +54,7 @@ year. In the same directory, there are also spring bloom time files containing v
 
 .. _here: https://github.com/SalishSeaCast/tools/blob/master/SalishSeaTools/salishsea_tools/bloomdrivers.py
 
-.. _notebook: bloom_notebooks/201905EnvironmentalDrivers_S3.ipynb#Bloom-date
+.. _notebook: bloom_notebooks/201905EnvironmentalDrivers_S3.ipynb#Bloom-Date-Time-Series
 
 
 
