@@ -53,7 +53,7 @@ surface phytoplankton concentration is reduced through dilution. In contrast, ea
 allows phytoplankton to remain concentrated near the surface and be exposed to greater light 
 levels than when mixed to greater depths, leading to an earlier bloom. 
 
-.. figure::wind_timeseries_S3.png
+.. figure:: wind_timeseries_S3.png
 
    **Figure 4.** Time series from 2007-2020 of monthly averaged wind speed cubed (left axis) and 
    bloom dates (right axis) according to three different metrics. The lines connecting the 
@@ -67,14 +67,14 @@ increases near-surface temperature. Solar radiation is strongly anti-correlated 
 meaning years with low winds also experience high solar radiation. These combining effects 
 have a strong influence on bloom development.
 
-.. figure::solar_timeseries_S3.png
+.. figure:: solar_timeseries_S3.png
 
    **Figure 5.** Time series from 2007-2020 of monthly averaged solar radiation (left axis) and 
    bloom dates (right axis) according to three different metrics. The lines connecting the 
    interannual variability in solar radiation hold no meaning, and are simply present to easily 
    distinguish between the environmental driver and the bloom date. 
 
-.. figure::solar_vs_bloom_S3.png
+.. figure:: solar_vs_bloom_S3.png
 
    **Figure 6.** Correlation between March average solar radiation and spring phytoplankton 
    bloom timing according to three different metrics. A negative relationship is observed between 
@@ -91,14 +91,14 @@ pressure on phytoplankton and result in an earlier bloom [2]_. Although temperat
 can affect stratification due to vertical differences in density, the effects are small compared to 
 the temperature dependence on the rates of mortality, grazing and growth [1]_.
 
-.. figure::temp_timeseries_S3.png
+.. figure:: temp_timeseries_S3.png
 
    **Figure 7.** Time series from 2007-2020 of monthly averaged surface conservative 
    temperature (left axis) and bloom dates (right axis) according to three different metrics. The 
    lines connecting the interannual variability in surface temperature hold no meaning, and are 
    simply present to easily distinguish between the environmental driver and the bloom date. 
 
-.. figure::temp_vs_bloom_S3.png
+.. figure:: temp_vs_bloom_S3.png
 
    **Figure 8.** Correlation between March average surface conservative temperature and spring 
    phytoplankton bloom timing according to three different metrics. A negative relationship is 
@@ -116,13 +116,13 @@ Although mid-depth nitrate concentrations (30-90m) had high correlations with bl
 was determined from examining a time series that the variation of this environmental factor 
 likely resulted from rather than drove bloom timing. 
 
-.. figure::fraser_vs_bloom_S3.png
+.. figure:: fraser_vs_bloom_S3.png
 
    **Figure 10.** Correlation between March average Fraser river flow and spring phytoplankton 
    bloom timing according to three different metrics. A negative relationship is observed between 
    this environmental driver and bloom timing.
 
-.. figure::windresid_vs_fraser_S3.png
+.. figure:: windresid_vs_fraser_S3.png
 
    **Figure 10.** Correlation between March average Fraser river flow and the residuals from 
    regression of March wind speed cubed and bloom timing according to three different metrics. 
