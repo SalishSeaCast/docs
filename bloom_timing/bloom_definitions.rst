@@ -27,15 +27,14 @@ from the week the chlorophyll concentration first reaches a threshold value (by 
 averages), as long as one of the two following weeks was >70% of that threshold value. The 
 threshold value is the median + 5% of the annual chlorophyll concentration.
 
-While Metric 2 and 3 both represent the beginning or peak of the bloom, Metric 1 is associated 
-more closely with the decline of the bloom, when nitrate has been depleted.
+While Metric 2 and 3 both represent early bloom conditions, Metric 1 is associated with nitrate 
+depletion, a trigger of bloom decline.
 
 A 2007-2019 time series of annual bloom dates at Station S3 according to each metric can be 
-found in this notebook_. Metric 2 and 3 bloom dates were consistently close to one another. 
-Metric 3 bloom dates were not as consistent from year to year, as they ranged from occurring 
-within a few days of Metric 1 and 2 to a difference of nearly 3 weeks. Metric 3 was not as heavily 
-considered in the subsequent analyses. 
-												
+found in this notebook_. Metric 2 and 3 bloom dates were consistently close to one another. Metric 3 bloom dates were not as consistent from year to year, as they ranged from occurring 
+within a few days of Metric 1 and 2 to a difference of nearly 3 weeks. Metric 3 was not as 
+heavily considered in the subsequent analyses. 
+
 The variables for calculating bloom timing were taken from daily model output  (:file:`.ptrc` files) 
 from February 15th to June 14th, a time frame chosen based on previous knowledge of spring 
 bloom timing in the region [3]_. Pickle files holding these variables were created for each year 
@@ -45,6 +44,7 @@ were created using this code_. The file names are in the format
 interest (eg. S3), :file:`modver` being the model run (e.g. 201905) and :file:`year` being the  
 year. In the same directory, there are also spring bloom time files containing variables from the  
 201812 model run from 2015-2019.
+
 
 **References:**
 

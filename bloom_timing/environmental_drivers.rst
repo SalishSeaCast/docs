@@ -53,7 +53,7 @@ and turbocline depth, the density difference from the surface to a series of dep
 30m, in increments of 5m, and the average eddy diffusivity over the upper 15m and 30m. 
 Halocline depth was defined as the depth with the maximum gradient in salinity between two 
 grid cells. Turbocline depth was defined as the depth above which the eddy diffusivity passes a 
-threshold value of 1 x 10\ :sup:`-3`\ m\ :sup:`2`\s\ :sup:`-1`\. This threshold value was 
+threshold value of 1 x 10\ :sup:`-3`\ m\ :sup:`2`\s-\ :sup:`-1`\. This threshold value was 
 determined by examining depth profiles of eddy diffusivity, and is consistent with a turbocline 
 definition by Luneva et. al (2015) [1]_.The code for these functions can be found here_.
 

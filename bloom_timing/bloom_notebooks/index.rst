@@ -13,3 +13,7 @@ Drivers of Spring Bloom Timing analysis.                                        
    makePickles201905.ipynb
    201905EnvironmentalDrivers_S3.ipynb
    201905analysis_S3.ipynb
+   201905EnvironmentalDrivers_QU39.ipynb
+   bloom_func_check.ipynb
+   201905analysis_QU39.ipynb
+
