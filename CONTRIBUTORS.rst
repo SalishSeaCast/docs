@@ -12,9 +12,8 @@ It is funded by the `Marine Environment Observation Prediction And Response`_ Na
 
 The following people have contributed code,
 documentation,
-etc. to the Salish Sea MEOPAR project repositories hosted on GitHub_ and Bitbucket_:
+etc. to the Salish Sea MEOPAR project repositories hosted on GitHub_:
 
-.. _Bitbucket: https://github.com/SalishSeaCast/
 .. _GitHub: https://github.com/SalishSeaCast
 
 * Susan Allen <sallen@eoas.ubc.ca>

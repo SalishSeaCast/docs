@@ -13,7 +13,7 @@ that we use in the Salish Sea MEOPAR project.
 
 .. _Sphinx: http://sphinx-doc.org/
 .. _Jupyter Notebook: https://jupyter.org/
-.. _NumPy: https://docs.scipy.org/doc/numpy/reference/index.html
+.. _NumPy: https://numpy.org/doc/stable/reference/index.html
 .. _matplotlib: http://matplotlib.org/contents.html
 
 Choose the *Python 3* download from the `installation instructions`_ for your operating system,

@@ -29,7 +29,7 @@ To activate the environment:
 To get all the goodies (e.g. `Jupyter Notebook`_, `NumPy`_, `matplotlib`_)
 you can install `Anaconda`_, which will auto-magically use Python 3.
 
-.. _Anaconda: https://store.continuum.io/cshop/anaconda/
+.. _Anaconda: https://www.anaconda.com/products/individual
 .. _Jupyter Notebook: https://jupyter.org/
 .. _NumPy: http://docs.scipy.org/doc/numpy/reference/index.html
 .. _matplotlib: http://matplotlib.org/contents.html

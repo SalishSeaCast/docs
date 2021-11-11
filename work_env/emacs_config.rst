@@ -120,19 +120,19 @@ YAML Mode
 
 This is useful for working on Salish Sea NEMO run description files.
 
-Download :file:`yaml-mode.el` from https://raw.github.com/yoshiki/yaml-mode/master/yaml-mode.el into your :file:`$HOME/elisp/` directory:
+Download :file:`yaml-mode.el` from https://raw.githubusercontent.com/yoshiki/yaml-mode/master/yaml-mode.el into your :file:`$HOME/elisp/` directory:
 
 .. code-block:: bash
 
     cd $HOME/elisp/
-    wget https://raw.github.com/yoshiki/yaml-mode/master/yaml-mode.el
+    wget https://raw.githubusercontent.com/yoshiki/yaml-mode/master/yaml-mode.el
 
 Configure :program:`emacs` to use :kbd:`yaml-mode` automatically whenever you visit a file with the extension :kbd:`.yaml` or :kbd:`.yml`:
 
 .. code-block:: scheme
 
     ;; YAML mode
-    ;; https://raw.github.com/yoshiki/yaml-mode/master/yaml-mode.el
+    ;; https://raw.githubusercontent.com/yoshiki/yaml-mode/master/yaml-mode.el
     (require 'yaml-mode)
     (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
     (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
@@ -196,7 +196,7 @@ and whenever a Python file is loaded or saved.
 Lines that have messages from `flake8`_ associated with them are colourfully highlighted and the messages should appear in the minibuffer region at the bottom of the screen when you hover your cursor over the highlighting.
 The :kbd:`flymake-cursor` mode displays messages from `flake8`_ for the line that the cursor is on in the minibuffer - useful for :command:`ssh` sessions when mouse integration with :program:`emacs` is not available.
 
-.. _flake8: https://pypi.python.org/pypi/flake8
+.. _flake8: https://pypi.org/project/flake8/
 .. _PEP8: https://www.python.org/dev/peps/pep-0008/
 
 Install `flake8`_ into your local Python environment:

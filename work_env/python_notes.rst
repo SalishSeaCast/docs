@@ -10,7 +10,7 @@ Intro to Python
 Most of the analysis and tools in the Salish Sea MEOPAR project are written in `Python`_,
 though Matlab makes occasional guest appearances.
 
-.. _Python: https://python.org/
+.. _Python: https://www.python.org/
 
 `This slide deck`_ from a `physics course`_ at Cornell University provides a good,
 fairly detailed,
@@ -71,7 +71,7 @@ A few differences you will see compared to our Python code:
       ax2.plot(xvals, yvals, 'r.')
       ax3.hist(yvals)
 
-.. _Matplotlib: http://matplotlib.org/
+.. _Matplotlib: https://matplotlib.org/
 
 
 Jupyter Notebook, netCDF, and Model Results
@@ -131,7 +131,7 @@ here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using ERDDAP
 * `Exploring netCDF Datasets from ERDDAP.ipynb`_
 
 .. _netCDF4-python: https://unidata.github.io/netcdf4-python/
-.. _ERDDAP server: https://salishsea.eos.ubc.ca/erddap/
+.. _ERDDAP server: https://salishsea.eos.ubc.ca/erddap/index.html
 .. _Exploring netCDF Datasets from ERDDAP.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Exploring%20netCDF%20Datasets%20from%20ERDDAP.ipynb
 
 One reason that you might want to use ERDDAP to access our model results is if you don't have access to our results files stored on the UBC EOAS Ocean cluster.
@@ -154,8 +154,8 @@ Quoting from the introduction to its documentation:
   Our approach adopts the `Common Data Model`_ for self-describing scientific data in widespread use in the Earth sciences:
   :py:class:`xarray.Dataset` is an in-memory representation of a netCDF file.
 
-.. _xarray: http://xarray.pydata.org/
-.. _pandas: http://pandas.pydata.org/
+.. _xarray: http://xarray.pydata.org/en/stable/
+.. _pandas: https://pandas.pydata.org/
 .. _Common Data Model: https://www.unidata.ucar.edu/software/netcdf-java/v4.6/CDM/index.html
 
 Here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using :kbd:`xarray`:
