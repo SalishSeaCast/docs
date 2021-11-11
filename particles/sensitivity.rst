@@ -39,4 +39,4 @@ Notebooks
 =========
 * `Ariane_TimeRes.ipynb`_
 
-.. _Ariane_TimeRes.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis/blob/master/Idalia/Ariane_TimeRes.ipynb
+.. _Ariane_TimeRes.ipynb: https://nbviewer.org/github/SalishSeaCast/analysis/blob/master/Idalia/Ariane_TimeRes.ipynb

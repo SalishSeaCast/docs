@@ -27,11 +27,11 @@ Nitrate and silica observation were compared with the model.
 
 `CitSci Nutrients 2017`_
 
-.. _CitSci Nutrients 2015: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/smelt_diag/CitizenScienceNutrients-surface.ipynb
+.. _CitSci Nutrients 2015: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/smelt_diag/CitizenScienceNutrients-surface.ipynb
 
-.. _CitSci Nutrients 2016: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSciNutrients2016-hourly.ipynb
+.. _CitSci Nutrients 2016: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSciNutrients2016-hourly.ipynb
 
-.. _CitSci Nutrients 2017: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSciNutrients2017-hourly.ipynb
+.. _CitSci Nutrients 2017: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSciNutrients2017-hourly.ipynb
 
 IOS cruises
 ======================
@@ -51,7 +51,7 @@ IOS cruises
 
 `IOS notebook`_
 
-.. _IOS notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/DFO-comparison.ipynb
+.. _IOS notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/DFO-comparison.ipynb
 
 Sentry Shoal
 =====================
@@ -72,4 +72,4 @@ Observations were made at 1m.
 
 `SS notebook`_
 
-.. _SS notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/SentryShoalNitrate.ipynb
+.. _SS notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/SentryShoalNitrate.ipynb

@@ -12,7 +12,7 @@ Water level
 
 * Jupyter Notebook: `Analysis8Components.ipynb`_
 
-.. _Analysis8Components.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis/blob/master/compare_tides/Analysis8Components.ipynb
+.. _Analysis8Components.ipynb: https://nbviewer.org/github/SalishSeaCast/analysis/blob/master/compare_tides/Analysis8Components.ipynb
 
 * This notebook focuses on a set of 31 stations that form a line from Juan de Fuca up through the Strait of Georgia into Discovery Passage and the North End of the Model.
 

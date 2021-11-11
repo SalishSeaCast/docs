@@ -22,15 +22,15 @@ The following links point to annual notebooks comparing model output to observat
 
 
 .. _IOS Ocean Sciences Data Archive: https://www.pac.dfo-mpo.gc.ca/science/oceans/data-donnees/search-recherche/profiles-eng.asp
-.. _2007: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2007.ipynb
-.. _2008: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2008.ipynb
-.. _2009: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2009.ipynb
-.. _2010: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2010.ipynb
-.. _2011: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2011.ipynb
-.. _2012: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2012.ipynb
-.. _2013: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2013.ipynb
-.. _2014: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2014.ipynb
-.. _2015: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2015.ipynb
-.. _2016: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2016.ipynb
-.. _2017: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2017.ipynb
-.. _2018: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2018.ipynb
+.. _2007: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2007.ipynb
+.. _2008: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2008.ipynb
+.. _2009: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2009.ipynb
+.. _2010: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2010.ipynb
+.. _2011: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2011.ipynb
+.. _2012: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2012.ipynb
+.. _2013: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2013.ipynb
+.. _2014: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2014.ipynb
+.. _2015: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2015.ipynb
+.. _2016: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2016.ipynb
+.. _2017: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2017.ipynb
+.. _2018: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2018.ipynb

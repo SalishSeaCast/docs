@@ -27,11 +27,11 @@ Citizen Science
 
 `CitSci Chl 2017`_
 
-.. _CitSci Chl 2015: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSciChl2015.ipynb
+.. _CitSci Chl 2015: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSciChl2015.ipynb
 
-.. _CitSci Chl 2016: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSciChl2016-hourly.ipynb
+.. _CitSci Chl 2016: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSciChl2016-hourly.ipynb
 
-.. _CitSci Chl 2017: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSciChl2017-hourly.ipynb
+.. _CitSci Chl 2017: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSciChl2017-hourly.ipynb
 
 
 Ferry
@@ -56,9 +56,9 @@ latitude, chlorophyll, or time is masked, ferry chlorophyll values > 25 :math:`\
 
 `Time series notebook`_
 
-.. _Ferry Chl notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/FerryChlVsNowcastGreen-bylongitude-Copy1.ipynb
+.. _Ferry Chl notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/FerryChlVsNowcastGreen-bylongitude-Copy1.ipynb
 
-.. _Time series notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/FerryChl2017-lon.ipynb
+.. _Time series notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/FerryChl2017-lon.ipynb
 
 IOS cruises
 =====================

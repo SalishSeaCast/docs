@@ -91,7 +91,7 @@ This function outputs a dictionary object containing the ellipse parameters for 
 
 * In this notebook: `UsingEllipse.py.ipynb`_  there are simple examples of the functions above.
 
-.. _UsingEllipse.py.ipynb: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-muriel/blob/master/notebooks/TidalEllipses/UsingEllipse.py.ipynb
+.. _UsingEllipse.py.ipynb: https://nbviewer.org/github/SalishSeaCast/analysis-muriel/blob/master/notebooks/TidalEllipses/UsingEllipse.py.ipynb
 
 
 MATLAB Scripts for Tidal Analysis
@@ -143,7 +143,7 @@ Output
 
 This notebook_ gives an example of loading the output from these scripts in python. It makes use of functions in :file:`analysis/Nancy/currents/baroclinic.py`.
 
-.. _notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis/blob/master/Nancy/currents/Baroclinic%20Tides%20-%20CODAR%20region%20-%20phase%20and%20inclination.ipynb
+.. _notebook: https://nbviewer.org/github/SalishSeaCast/analysis/blob/master/Nancy/currents/Baroclinic%20Tides%20-%20CODAR%20region%20-%20phase%20and%20inclination.ipynb
 
 
 References

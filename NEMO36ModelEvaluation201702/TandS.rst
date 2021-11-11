@@ -33,11 +33,11 @@ The Victoria stations are shown below.
 
 `CitSci - 2017 TandS notebook`_
 
-.. _CitSci - full notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/updated-nowcast-comparisons.ipynb
-.. _CitSci - single days notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/updated-nowcast-comparisons-singledays.ipynb
-.. _CitSci - single depth profiles notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSci-single-depth-profiles.ipynb
+.. _CitSci - full notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/updated-nowcast-comparisons.ipynb
+.. _CitSci - single days notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/updated-nowcast-comparisons-singledays.ipynb
+.. _CitSci - single depth profiles notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CitSci-single-depth-profiles.ipynb
 
-.. _CitSci - 2017 TandS notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/PSFBlue2017.ipynb
+.. _CitSci - 2017 TandS notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/PSFBlue2017.ipynb
 
 Ferry
 =================
@@ -58,7 +58,7 @@ Only samples with valid times, longitude, latitude, and salinity values were use
 `Ferry salinity notebook`_
 
 
-.. _Ferry salinity notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/ferrysalinityvsnowcastgreen-by-longitude.ipynb
+.. _Ferry salinity notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/ferrysalinityvsnowcastgreen-by-longitude.ipynb
 
 Fraser Plume ctd
 ========================
@@ -70,7 +70,7 @@ An example depth profile from May 31, 2017 is shown below.
 
 `CTD casts notebook`_
 
-.. _CTD casts notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CTDvsNowcastgreen.ipynb
+.. _CTD casts notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/CTDvsNowcastgreen.ipynb
 
 IOS cruises
 ======================
@@ -92,7 +92,7 @@ Surface refers to depths less than 15m, intermediate refers to depths ebwteen 15
 
 `comparison notebook`_
 
-.. _comparison notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/DFO-comparison-blue.ipynb
+.. _comparison notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/DFO-comparison-blue.ipynb
 
 San Juan Islands
 ======================
@@ -112,7 +112,7 @@ San Juan Islands
 
 `San Juan notebook`_
 
-.. _San Juan notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/SanJuan-blue.ipynb
+.. _San Juan notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/SanJuan-blue.ipynb
 
 Sentry Shoal
 ======================
@@ -132,7 +132,7 @@ Sentry Shoal
 
 `Time series notebook`_
 
-.. _Time series notebook: https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/SentryShoalTS.ipynb
+.. _Time series notebook: https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/SentryShoalTS.ipynb
 
 
 VENUS nodes
@@ -166,6 +166,6 @@ Below, statistics and plots are for model surface, and the observation - model p
 
 `Water quality buoy notebook (hourly interpolated averages)`_
 
-.. _Water quality buoy notebook (daily averages): https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/waterqualitybuoy-daily.ipynb
-.. _Water quality buoy notebook (hourly interpolated averages): https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/waterqualitybuoy-hourly.ipynb
+.. _Water quality buoy notebook (daily averages): https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/waterqualitybuoy-daily.ipynb
+.. _Water quality buoy notebook (hourly interpolated averages): https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/waterqualitybuoy-hourly.ipynb
 

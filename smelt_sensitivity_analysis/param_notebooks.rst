@@ -14,7 +14,7 @@ Three main types of plots are used in these notebooks:
 
     Facetplot showing tracer concentration vs. time at certain depths, with a coloured line for each of the six parameter values
 
-`This <https://nbviewer.jupyter.org/github/SalishSeaCast/analysis-james/blob/master/notebooks/nampisrem_old_IC_june_17_analysis/nampisrem_zz_remin_d_pon.ipynb/>`_ is an example notebook for the parameter nampisrem_zz_remin_d_pon. This parameter controls the rate at which particulate organic nitrogen becomes dissolved organic nitrogen.
+`This <https://nbviewer.org/github/SalishSeaCast/analysis-james/blob/master/notebooks/nampisrem_old_IC_june_17_analysis/nampisrem_zz_remin_d_pon.ipynb/>`_ is an example notebook for the parameter nampisrem_zz_remin_d_pon. This parameter controls the rate at which particulate organic nitrogen becomes dissolved organic nitrogen.
 
 A notebook was automatically created for every parameter using this
 `python script <https://github.com/SalishSeaCast/analysis-james/blob/master/generate_analysis_notebooks.py>`_.
