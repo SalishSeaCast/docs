@@ -1,3 +1,5 @@
+.. _AnacondaPythonDistro:
+
 Anaconda Python Distribution
 ============================
 
