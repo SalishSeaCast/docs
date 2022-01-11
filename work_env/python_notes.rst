@@ -111,10 +111,10 @@ __ jupyter_
 .. _Plotting Velocities and Tracers on Vertical Planes.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Plotting%20Velocities%20and%20Tracers%20on%20Vertical%20Planes.ipynb
 
 The links here are to static renderings of the notebooks via
-`nbviewer.jupyter.org`_ .
+`nbviewer.org`_ .
 The notebook source files are in the `analysis_tools`_ directory of the :ref:`tools-repo` repo.
 
-.. _nbviewer.jupyter.org: https://nbviewer.org/
+.. _nbviewer.org: https://nbviewer.org/
 .. _analysis_tools: https://github.com/SalishSeaCast/tools/tree/master/analysis_tools
 
 
