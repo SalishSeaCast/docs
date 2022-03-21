@@ -81,14 +81,20 @@ Those weight values were subsequently used to create a netCDF4 weights file with
 Creating New Weights Files
 --------------------------
 
-The :program:`NEMO_Preparation/4_weights_ATMOS/get_weight_nemo` program in the :ref:`NEMO_EastCoast-repo` repo can be used in conjunction with a bathymetry file and atmospheric forcing file(s) to create a weights file that allows NEMO's Interpolation On the Fly
+The :program:`NEMO_Preparation/4_weights_ATMOS/get_weight_nemo` program in the 
+:ref:`NEMO_EastCoast-repo` repo can be used in conjunction with a bathymetry file and atmospheric 
+forcing file(s) to create a weights file that allows NEMO's Interpolation On the Fly
 (IOF)
 feature to use the atmospheric forcing values.
-An example of the use of :program:`get_weight_nemo` to create a weights file for datasets from the operational West deployment of Environment Canada's `High Resolution Deterministic Prediction System`_ (HRDPS) is presented here:
+An example of the use of :program:`get_weight_nemo` to create a weights file for datasets from the 
+operational West deployment of Environment Canada's `High Resolution Deterministic Prediction 
+System`_ (HRDPS) is presented here:
 
 .. _High Resolution Deterministic Prediction System: https://weather.gc.ca/grib/grib2_HRDPS_HR_e.html
 
-Clone the :ref:`NEMO_EastCoast-repo` repo on :kbd:`salish` and edit the :file:`NEMO_Preparation/4_weights_ATMOS/make.sh` file to comment out the default build commands and enable the :kbd:`salish` ones:
+Clone the :ref:`NEMO_EastCoast-repo` repo on :kbd:`salish` and edit the 
+:file:`NEMO_Preparation/4_weights_ATMOS/make.sh` file to comment out the default build commands 
+and enable the :kbd:`salish` ones:
 
 .. code-block:: bash
 
@@ -105,7 +111,8 @@ Build :program:`get_weight_nemo`:
 
     $ ./make.sh
 
-:program:`get_weight_nemo` creates a file of weighting factors that allow atmospheric forcing variable values on one grid to be interpolated on to the model grid
+:program:`get_weight_nemo` creates a file of weighting factors that allow 
+atmospheric forcing variable values on one grid to be interpolated on to the model grid
 (as defined in the bathymetry dataset).
 To do that it requires:
 
@@ -120,22 +127,19 @@ To do that it requires:
 The output of :program:`get_weight_nemo` is a weights file,
 the name of which is hard-coded to :file:`met_gem_weight.nc`.
 
-We'll run :program:`get_weight_nemo` in :file:`NEMO-forcing/grid/`,
-so start by copying the sample namelist file to there,
-changing to that directory,
-and symlinking it as :file:`namelist`:
+We'll run :program:`get_weight_nemo` in a clone of the :ref:`grid-repo`,
+so start by symlinking the sample namelist file to there as :file:`namelist`:
 
 .. code-block:: bash
 
-    $ cp namelist ../../../NEMO-forcing/grid/namelist.get_weight_nemo.gem2.5-ops
-    $ cd ../../../NEMO-forcing/grid/
+    $ cd MEOPAR/grid/
     $ ln -s namelist.get_weight_nemo.gem2.5-ops namelist
 
 Symlink the bathymetry dataset as :file:`bathy_meter.nc`:
 
 .. code-block:: bash
 
-    $ ln -s bathy_meter_SalishSea2.nc bathy_meter.nc
+    $ ln -s bathymetry_201702.nc bathy_meter.nc
 
 The only values that :program:`get_weight_nemo` actually uses from the atmospheric forcing dataset file is the grid point locations,
 but the namelist file is more complicated.
@@ -144,10 +148,9 @@ so we symlink one as :file:`atmos.nc`:
 
 .. code-block:: bash
 
-    $ ln -s /ocean/sallen/allen/research/Meopar/Operational/oper_allvar_ss_y2014m09d23.nc atmos.nc
+    $ ln -s /results/forcing/atmospheric/GEM2.5/operational/ops_y2015m01d01.nc atmos.nc
 
-Next,
-edit the namelist file to point to that symlink:
+The namelist file looks like:
 
 .. code-block:: fortran
 
@@ -179,11 +182,11 @@ run :program:`get_weight_nemo`:
 
 .. code-block:: bash
 
-    ../../eastcoast/NEMO_Preparation/4_weights_ATMOS/get_weight_nemo
+    MEOPAR/NEMO-EastCoast/NEMO_Preparation/4_weights_ATMOS/get_weight_nemo
 
 The output should be something like::
 
-   sbc_blk_core : flux formulattion for ocean surface boundary condition
+   sbc_blk_core : flux formulation for ocean surface boundary condition
    ~~~~~~~~~~~~
              namsbc_core Namelist
              list of files
@@ -220,7 +223,9 @@ The output should be something like::
 
 and a :file:`met_gem_weight.nc` file should be created.
 
-Use the `I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb`_ notebook to transform :file:`met_gem_weight` into a netCDF4 file called :file:`weights-2.5kmGEM-ops.nc` with well-structured metadata
+Use the `I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb`_ notebook to transform 
+:file:`met_gem_weight` into a netCDF4 file called 
+:file:`weights-gem2.5-ops_201702.nc` with well-structured metadata
 (see :ref:`netCDF4FilesCreationAndConventions`).
 
 .. _I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb
