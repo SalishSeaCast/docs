@@ -32,7 +32,7 @@ During various trips to the Salish Sea, `drifters`_ are deployed and left to dri
 They are all tracked with GPS devices and sometimes are picked up by bystanders and returned.
 As of present, there have been 21 deployments in the Salish Sea and the Juan de Fuca, each releasing up to ten drifters.
 
-.. _drifters: https://drifters.eos.ubc.ca/
+.. _drifters: https://drifters.eoas.ubc.ca/
 
 Fraser Plume CTD casts
 ======================================
