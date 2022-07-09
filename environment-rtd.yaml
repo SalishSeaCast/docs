@@ -26,6 +26,6 @@ dependencies:
   - ipython
   - nbsphinx
   - pip
-  - python=3.9
+  - python=3.10
   - sphinx
   - sphinx_rtd_theme
