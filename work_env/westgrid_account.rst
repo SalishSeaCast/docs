@@ -1,7 +1,7 @@
 .. _westgridAccount:
 
-****************************
-Create a WestGrid Account
-****************************
+****************************************************
+Create a Digital Research Alliance of Canada Account
+****************************************************
 
-Please see the :ref:`moaddocs:CreateComputeCanadaAccount` section of the :ref:`UBC-EOAS-MOAD-docs`.
+Please see the :ref:`moaddocs:CreateAllianceAccount` section of the :ref:`UBC-EOAS-MOAD-docs`.

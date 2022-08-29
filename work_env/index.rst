@@ -23,7 +23,7 @@ All machines have a :file:`/ocean/` partition which provides storage that is lar
 (several terabytes),
 redundant (RAID), and
 automatically backed up.
-That storage space is on the :kbd:`ocean.eos.ubc.ca` storage server
+That storage space is on the ``ocean.eos.ubc.ca`` storage server
 (also co-operatively owned and maintained by the same group).
 Each user has their own directory on :file:`/ocean/` named with their EOAS user id;
 e.g. :file:`/ocean/sallen/`.
@@ -31,27 +31,37 @@ You should use your :file:`/ocean/` directory as your primary file storage area.
 
 Other machines that you may need working environments on later include:
 
-* :kbd:`salish.eos.ubc.ca`: Our group compute server that runs Linux and has several disk mounts in common with Waterhole workstations.
-  :kbd:`salish` is primarily used for short development runs of the Salish Sea NEMO model.
-  :kbd:`salish` has several terabytes of storage in its :file:`/data/` filesystem.
-  If your Waterhole workstation does not have access to :file:`/data/` you should open a ticket via the :kbd:`Helpdesk` link on https://helpdesk.eoas.ubc.ca/ to request that EOAS Comp Staff add a :kbd:`salish /data/` mount on the workstation you are using.
-  That will enable you to read/write files on the :kbd:`salish /data/` filesystem without have to sign on to :kbd:`salish` or copy the files from one machine to another.
-* One or more of the Westgrid_ or `ComputeCanada`_ HPC clusters such as :kbd:`orcinus.westgrid.ca`,
-  :kbd:`cedar.computecanada.ca`,
-  or :kbd:`graham.computecanada.ca` that run Linux.
+* ``salish.eos.ubc.ca``: Our group compute server that runs Linux and has several disk mounts in common with Waterhole workstations.
+  ``salish`` is primarily used for short development runs of the Salish Sea NEMO model.
+  ``salish`` has several terabytes of storage in its :file:`/data/` filesystem.
+  If your Waterhole workstation does not have access to :file:`/data/` you should open a ticket 
+  via the :kbd:`Helpdesk` link on https://helpdesk.eoas.ubc.ca/ to request that EOAS Comp Staff 
+  add a ``salish /data/`` mount on the workstation you are using.
+  That will enable you to read/write files on the ``salish /data/`` filesystem without having to 
+  sign on to ``salish`` or copy the files from one machine to another.
+* One or more of the `Digital Research Alliance of Canada`_ (formerly Compute Canada) HPC clusters 
+  :kbd:`graham.computecanada.ca` that run Linux.
   Those machines are used for longer research runs of the model.
 
-  .. _Westgrid: https://www.westgrid.ca/
-  .. _ComputeCanada: https://www.computecanada.ca/
+  .. _Digital Research Alliance of Canada: https://alliancecan.ca/en
 
 When you are ready to run on those machines,
 please see the :ref:`QuickStartGuide` for instructions on setting working environments on them.
 
-:kbd:`skookum.eos.ubc.ca` is our group results storage and web server.
-The Salish Sea Nowcast system results are stored on the :file:`/results/` file system on :kbd:`skookum`,
-and the Strait of Georgia WaveWatch3 model results and Vancouver Harbour/Fraser River FVCOM model results are stored on the :file:`/opp/` file system on :kbd:`skokkum`.
-If your Waterhole workstation does not have access to :file:`/results/` and/or :file:`/opp/` you should open a ticket via the :kbd:`Helpdesk` link on https://helpdesk.eoas.ubc.ca/ to request that EOAS Comp Staff add :kbd:`skookum /results/` and/or :file:`/opp/` mount(s) on the workstation you are using.
-That will enable you to read files from the :kbd:`skookum /results/` and or :file:`/opp/` filesystem(s) without have to sign on to :kbd:`skookum` or copy the files from one machine to another.
+``skookum.eos.ubc.ca`` is our group results storage and web server.
+The SalishSeaCast system results are stored on the :file:`/results/` and :file:`/results2/` 
+file systems on ``skookum``,
+and the Strait of Georgia WaveWatch3 model results and Vancouver Harbour/Fraser River FVCOM model results 
+are stored on the :file:`/opp/` file system on ``skokkum``.
+If your Waterhole workstation does not have access to :file:`/results/`,
+:file:`/results2/`,
+and/or :file:`/opp/` 
+you should open a ticket via the ``Helpdesk`` link on https://helpdesk.eoas.ubc.ca/ to request that 
+EOAS Comp Staff add :file:`/results/`,
+:file:`/results2/`,
+and/or :file:`/opp/` mount(s) on the workstation you are using.
+That will enable you to read files from the those filesystem(s) without have to sign on to ``skookum`` 
+or copy the files from one machine to another.
 
 
 .. toctree::
@@ -75,6 +85,7 @@ if you wish.
 The instructions and recommendations above are most applicable to doing that on a laptop that runs OS/X or Linux.
 Our best advice for Windows is to install puTTY_ and use it to connect remotely
 (via :program:`ssh`) to your Linux environments
-(though additions to these docs by experienced Windows users who set up a working environment similar to the one described above are *most* welcome).
+(though additions to these docs by experienced Windows users who set up a working environment 
+similar to the one described above are *most* welcome).
 
 .. _puTTY: http://www.chiark.greenend.org.uk/~sgtatham/putty/
