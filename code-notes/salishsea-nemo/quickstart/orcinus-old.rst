@@ -1,25 +1,23 @@
 .. _OrcinusNEMO34:
 
 ************************************
-Working on :kbd:`orcinus`: NEMO v3.4
+Working on ``orcinus``: NEMO v3.4
 ************************************
 
-This section describes *very* briefly the steps to set up and run the Salish Sea NEMO version 3.4 code on the `orcinus.westgrid.ca`_ HPC cluster.
+This section describes *very* briefly the steps to set up and run the Salish Sea NEMO version 3.4 code on the ``orcinus.westgrid.ca`` HPC cluster.
 This guide assumes that your :ref:`WorkingEnvironment` is set up,
 and that you are familiar with :ref:`WorkingOnSalish`.
-
-.. _orcinus.westgrid.ca: https://www.westgrid.ca/support/systems/orcinus
 
 
 Set-up SSH key-forwarding
 =========================
 
-See orcinus instructions at the bottom of :ref:`sshConfiguration`.
+See ``orcinus`` instructions at the bottom of :ref:`sshConfiguration`.
 
 :file:`.bash_profile` and :file:`.bashrc`
 =========================================
 
-:kbd:`orcinus` uses 2 files for :program:`bash` settings: :file:`.bash_profile` and :file:`.bashrc`.
+``orcinus`` uses 2 files for :program:`bash` settings: :file:`.bash_profile` and :file:`.bashrc`.
 In both files the location at which to add your personal customizations is indicated in comments in the default version of the files.
 Environment variables go in :file:`.bash_profile`,
 for example:
@@ -67,7 +65,7 @@ Please see :ref:`bashConfiguration` for explanations of the above settings.
 
 When working on Westgrid clusters the :command:`module` command must be used to load extra software components.
 The required modules vary from cluster to cluster.
-On :kbd:`orcinus` only the :kbd:`python` module should be loaded when you log in:
+On ``orcinus`` only the :kbd:`python` module should be loaded when you log in:
 
 .. code-block:: bash
 
@@ -79,7 +77,7 @@ and the netCDF4 library available to you.
 
 You can manually load the :kbd:`python` module each time you log in,
 or you can add it to your :file:`.bashrc` file (as shown above)
-so that it is automatically loaded when you :program:`ssh` into :kbd:`orcinus`.
+so that it is automatically loaded when you :program:`ssh` into ``orcinus``.
 
 Change the :kbd:`lpath` line in the :kbd:`modify search path` section of :file:`.bash_profile` to include :file:`$HOME/.local/bin` and :file:`$HOME/bin` in your search path:
 
@@ -105,7 +103,7 @@ Clone the repos needed to run the model:
     hg clone ssh://hg@bitbucket.org/salishsea/nemo-cmd NEMO-Cmd
     hg clone ssh://hg@bitbucket.org/salishsea/salishseacmd SalishSeaCmd
 
-There is no need to clone the :file:`docs` or :file:`analysis` repos on :kbd:`orcinus`.
+There is no need to clone the :file:`docs` or :file:`analysis` repos on ``orcinus``.
 
 
 Install Tools and Command Processor Packages

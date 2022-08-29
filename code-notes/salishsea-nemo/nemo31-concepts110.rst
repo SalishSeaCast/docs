@@ -145,10 +145,9 @@ Build and Run NEMO-3.1
       cd EXP00
       ../../../bin/opa
 
-   On :kbd:`jasper` the above command is only appopriate for short test runs.
-   Longer runs should be done using a `TORQUE batch job`_ script submitted via the :command:`qsub` command.
-
-   .. _TORQUE batch job: https://www.westgrid.ca/support/running_jobs#qsub
+   On HPC clusters the above command is only appropriate for short test runs.
+   Longer runs should be done using a job script submitted via the system's queue submission
+   command.
 
 
 .. _nemo31-concepts110-diffs:
