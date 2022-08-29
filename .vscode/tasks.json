@@ -7,11 +7,31 @@
             "label": "sphinx clean build",
             "type": "shell",
             "command": "source activate salishseacast-docs && make clean html",
-            "problemMatcher": [],
+            "problemMatcher":[
+                {
+                    "owner": "sphinx-problem-matcher",
+                    "fileLocation": ["autoDetect", "${workspaceFolder}"],
+                    "pattern": [
+                        {
+                            "regexp": "^(.*):(\\d+):\\s+(\\w*):\\s+(.*)$",
+                            "file": 1,
+                            "line": 2,
+                            "severity": 3,
+                            "message": 4
+                        }
+                    ]
+                }
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "sphinx linkcheck",
+            "type": "shell",
+            "command": "source activate salishseacast-docs && make clean linkcheck",
+            "problemMatcher": [],
         }
     ]
 }
