@@ -215,3 +215,48 @@ https://dx.doi.org/10.1029/2019JC015766
     have been described in many other tidally influenced coastal systems.",
         doi = "10.1029/2019JC015766",
     }
+
+
+Cluster Analysis of Biophysical Dynamics
+========================================
+
+A cluster-based tool for model analysis and evaluation was developed and used to 
+determine biophysical dynamics of the system in:
+
+Jarníková, T., Olson, E. M., Allen, S. E., Ianson, D., and Suchy, K. D., 2021. 
+A Clustering Approach to Determine Biophysical Provinces and Physical Drivers of 
+Productivity Dynamics in a Complex Coastal Sea. 
+Ocean Sci. Discuss., 1-36.
+https://doi.org/10.5194/os-2021-66
+
+.. code-block:: tex
+
+    @article{Jarnikova-etal-2021,
+        author = "Jarníková, T., Olson, E. M., Allen, S. E., Ianson, D., and Suchy, K. D.",
+        title = "A clustering approach to determine biophysical provinces and physical 
+    drivers of productivity dynamics in a complex coastal sea",
+        journal = "Ocean Sci. Discuss.",
+        year = "2021",
+        url = "https://doi.org/10.5194/os-2021-66",
+        abstract = "The balance between ocean mixing and stratification influences 
+    primary productivity through light limitation and nutrient supply in the 
+    euphotic ocean. Here, we apply a hierarchical clustering algorithm 
+    (Ward's method) to four factors relating to stratification and depth-integrated 
+    phytoplankton biomass extracted from a biophysical regional ocean model of the 
+    Salish Sea to assess spatial co-occurrence. Running the clustering algorithm on 
+    four years of model output, we identify distinct regions of the model domain that 
+    exhibit contrasting wind and freshwater input dynamics, as well as regions of 
+    varying watercolumn-averaged vertical eddy diffusivity and halocline depth regimes. 
+    The spatial regionalizations in physical variables are similar in all four 
+    analyzed years. We also find distinct interannually consistent biological zones. 
+    In the Northern Strait of Georgia and Juan de Fuca Strait, a deeper winter 
+    halocline and episodic summer mixing coincide with higher summer diatom abundance, 
+    while in the Fraser River stratified Central Strait of Georgia, shallower 
+    haloclines and stronger summer stratification coincide with summer flagellate 
+    abundance. Cluster based model results and evaluation suggest that the 
+    Juan de Fuca Strait supports more biomass than previously thought. Our approach 
+    elucidates probable physical mechanisms controlling phytoplankton abundance and 
+    composition. It also demonstrates a simple, powerful technique for finding 
+    structure in large datasets and determining boundaries of biophysical provinces.",
+        doi = "10.5194/os-2021-66",
+    }
