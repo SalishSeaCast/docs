@@ -12,7 +12,7 @@ tides and sea surface height was evaluated by hindcasting storm surge events
 that occurred between 2002 and 2011 in:
 
 Soontiens, N., Allen, S., Latornell, D., Le Souef, K., Machuca, I.,
-Paquin, J.-P., Lu, Y., Thompson, K., Korabel, V., 2016.
+Paquin, J.-P., Lu, Y., Thompson, K., Korabel, V., **2016**.
 Storm surges in the Strait of Georgia simulated with a regional model.
 Atmosphere-Ocean 54 1-21.
 https://dx.doi.org/10.1080/07055900.2015.1108899
@@ -66,7 +66,7 @@ The seasonal variability of aragonite saturation and pH in the surface
 Strait of Georgia and their drivers were determined using a 1-D coupled
 biochemical-physical model in:
 
-Moore-Maley, B. L., S. E. Allen, and D. Ianson, 2016.
+Moore-Maley, B. L., S. E. Allen, and D. Ianson, **2016**.
 Locally-driven interannual variability of near-surface pH and ΩA in the Strait of Georgia.
 J. Geophys. Res. Oceans, 121(3), 1600–1625.
 https://dx.doi.org/10.1002/2015JC011118
@@ -121,7 +121,7 @@ The sensitivity of the deep water renewal into the Strait of Georgia
 and of fresh water pulses into Juan de Fuca Strait to modelling choices
 affecting both turbulence and advection has been determined in:
 
-Soontiens, N. and Allen, S, 2017.
+Soontiens, N. and Allen, S, **2017**.
 Modelling sensitivities to mixing and advection in a sill-basin estuarine system.
 Ocean Modelling, 112, 17-32.
 https://dx.doi.org/10.1016/j.ocemod.2017.02.008
@@ -174,7 +174,7 @@ Moore-Maley et al . (2016) was adapted to three dimensions and coupled to the Sa
 Sea NEMO model described by Soontiens et al. (2016). Description and evaluation of the
 model can be found in:
 
-Olson, E. M., S. E. Allen, V. Do, M. Dunphy, and D. Ianson, 2020.
+Olson, E. M., S. E. Allen, V. Do, M. Dunphy, and D. Ianson, **2020**.
 Assessment of Nutrient Supply by a Tidal Jet in the Northern Strait of Georgia Based on a Biogeochemical Model.
 J. Geophys. Res. Oceans, 25(8)
 https://dx.doi.org/10.1029/2019JC015766
@@ -223,7 +223,7 @@ Cluster Analysis of Biophysical Dynamics
 A cluster-based tool for model analysis and evaluation was developed and used to 
 determine biophysical dynamics of the system in:
 
-Jarníková, T., Olson, E. M., Allen, S. E., Ianson, D., and Suchy, K. D., 2021. 
+Jarníková, T., Olson, E. M., Allen, S. E., Ianson, D., and Suchy, K. D., **2021**. 
 A Clustering Approach to Determine Biophysical Provinces and Physical Drivers of 
 Productivity Dynamics in a Complex Coastal Sea. 
 Ocean Sci. Discuss., 1-36.
@@ -268,7 +268,7 @@ SKOG, The Carbonate Chemistry Component of SalishSeaCast
 The three-dimensional carbonate chemistry model was developed and used to determine 
 the anthropogenic increase in Salish Sea coastal carbon content in:
 
-Jarníková T., Ianson D., Allen S.E., Shao A.E., Olson E.M.. 2022.
+Jarníková T., Ianson D., Allen S.E., Shao A.E., Olson E.M.. **2022**.
 Anthropogenic Carbon Increase has Caused Critical Shifts in Aragonite Saturation
 Across a Sensitive Coastal System.
 Global Biogeochemical Cycles, 36(7).
