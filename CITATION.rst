@@ -14,7 +14,7 @@ that occurred between 2002 and 2011 in:
 Soontiens, N., Allen, S., Latornell, D., Le Souef, K., Machuca, I.,
 Paquin, J.-P., Lu, Y., Thompson, K., Korabel, V., **2016**.
 Storm surges in the Strait of Georgia simulated with a regional model.
-Atmosphere-Ocean 54 1-21.
+*Atmosphere-Ocean*, 54, 1-21.
 https://dx.doi.org/10.1080/07055900.2015.1108899
 
 .. code-block:: tex
@@ -68,7 +68,7 @@ biochemical-physical model in:
 
 Moore-Maley, B. L., S. E. Allen, and D. Ianson, **2016**.
 Locally-driven interannual variability of near-surface pH and ΩA in the Strait of Georgia.
-J. Geophys. Res. Oceans, 121(3), 1600–1625.
+*J. Geophys. Res. Oceans*, 121(3), 1600–1625.
 https://dx.doi.org/10.1002/2015JC011118
 
 .. code-block:: tex
@@ -123,7 +123,7 @@ affecting both turbulence and advection has been determined in:
 
 Soontiens, N. and Allen, S, **2017**.
 Modelling sensitivities to mixing and advection in a sill-basin estuarine system.
-Ocean Modelling, 112, 17-32.
+*Ocean Modelling*, 112, 17-32.
 https://dx.doi.org/10.1016/j.ocemod.2017.02.008
 
 .. code-block:: tex
@@ -176,7 +176,7 @@ model can be found in:
 
 Olson, E. M., S. E. Allen, V. Do, M. Dunphy, and D. Ianson, **2020**.
 Assessment of Nutrient Supply by a Tidal Jet in the Northern Strait of Georgia Based on a Biogeochemical Model.
-J. Geophys. Res. Oceans, 25(8)
+*J. Geophys. Res. Oceans*, 25(8).
 https://dx.doi.org/10.1029/2019JC015766
 
 .. code-block:: tex
@@ -226,7 +226,7 @@ determine biophysical dynamics of the system in:
 Jarníková, T., Olson, E. M., Allen, S. E., Ianson, D., and Suchy, K. D., **2021**. 
 A Clustering Approach to Determine Biophysical Provinces and Physical Drivers of 
 Productivity Dynamics in a Complex Coastal Sea. 
-Ocean Sci. Discuss., 1-36.
+*Ocean Sci. Discuss.*, 1-36.
 https://doi.org/10.5194/os-2021-66
 
 .. code-block:: tex
@@ -271,7 +271,7 @@ the anthropogenic increase in Salish Sea coastal carbon content in:
 Jarníková T., Ianson D., Allen S.E., Shao A.E., Olson E.M.. **2022**.
 Anthropogenic Carbon Increase has Caused Critical Shifts in Aragonite Saturation
 Across a Sensitive Coastal System.
-Global Biogeochemical Cycles, 36(7).
+*Global Biogeochemical Cycles*, 36(7).
 https://doi.org/10.1029/2021GB007024
 
 .. code-block:: tex
