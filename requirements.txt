@@ -86,5 +86,5 @@ urllib3==1.26.10
 watchdog==1.0.2
 wcwidth==0.2.5
 webencodings==0.5.1
-wheel==0.37.1
+wheel==0.38.1
 zipp==3.8.0
