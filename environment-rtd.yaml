@@ -6,7 +6,7 @@
 #
 #   $ cd MEOPAR/docs
 #   $ conda env create -f environment-rtd.yaml
-#   $ source activate salishseacast-docs
+#   $ conda activate salishseacast-docs
 #
 # The environment will include all of the packages necessary to build
 # the docs locally so that you can preview them before you push to
@@ -28,4 +28,4 @@ dependencies:
   - pip
   - python=3.10
   - sphinx
-  - sphinx_rtd_theme
+  - sphinx_rtd_theme=1.1.1
