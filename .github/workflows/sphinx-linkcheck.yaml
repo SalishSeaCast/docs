@@ -1,0 +1,23 @@
+name: sphinx-linkcheck
+
+on:
+  push:
+    branches: ['*']
+  schedule:
+    - cron: 43 4 8 * *  # 04:43 UTC on the 8th day of each month
+
+jobs:
+  sphinx-linkcheck:
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        # Need to specify Python version here because we use test env which gets its
+        # Python version via matrix
+        python-version: [ '3.10' ]
+    uses: UBC-MOAD/gha-workflows/.github/workflows/sphinx-linkcheck.yaml@SHA
+    with:
+      python-version: ${{ matrix.python-version }}
+      conda-env-file: environment-rtd.yaml
+      conda-env-name: salishseacast-docs
