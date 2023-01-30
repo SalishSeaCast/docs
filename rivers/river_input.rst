@@ -409,7 +409,7 @@ References
 ----------
 
 * Allen and Wolfe, 2013. Hindcast of the timing of the spring phytoplankton bloom in the Strait of Georgia, 1968-2010. Progress in Oceanography, 115, 6-13.
-* Enviroment Canada Water Office. `https://wateroffice.ec.gc.ca`_
+* Environment and Climate Change Canada Water Office. `https://wateroffice.ec.gc.ca`_
 * J. Morrison , M. G. G. Foreman and D. Masson, 2012. A method for estimating monthly freshwater discharge affecting British Columbia coastal waters, Atmosphere-Ocean, 50:1, 1-8, DOI: `10.1080/07055900.2011.637667`_
 * Sanderson et al (1986)
 * Thomson, 1982: Physical Oceanography of the BC Coast.
