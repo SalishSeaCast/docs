@@ -21,3 +21,4 @@ jobs:
       python-version: ${{ matrix.python-version }}
       conda-env-file: environment-rtd.yaml
       conda-env-name: salishseacast-docs
+      docs-dir: .
