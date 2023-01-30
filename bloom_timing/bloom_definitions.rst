@@ -54,7 +54,7 @@ year. In the same directory, there are also spring bloom time files containing v
 
 .. [3] Collins, A. K., Allen, S. E., & Pawlowicz, R. (2009). The role of wind in determining the timing of the spring bloom in the Strait of Georgia. Canadian Journal of Fisheries and Aquatic Sciences, 66(9), 1597-1616. doi:10.1139/f09-071
 
-.. _here: https://github.com/SalishSeaCast/tools/blob/master/SalishSeaTools/salishsea_tools/bloomdrivers.py
+.. _here: https://github.com/SalishSeaCast/tools/blob/main/SalishSeaTools/salishsea_tools/bloomdrivers.py
 
 .. _notebook: bloom_notebooks/201905EnvironmentalDrivers_S3.ipynb#Bloom-Date-Time-Series
 

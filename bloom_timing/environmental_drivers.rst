@@ -61,7 +61,7 @@ definition by Luneva et. al (2015) [1]_.The code for these functions can be foun
 	1. Open the makePickles201905 notebook_
 	2. Follow the instructions in the second code cell of the notebook
 
-.. _here: https://github.com/SalishSeaCast/tools/blob/master/SalishSeaTools/salishsea_tools/bloomdrivers.py
+.. _here: https://github.com/SalishSeaCast/tools/blob/main/SalishSeaTools/salishsea_tools/bloomdrivers.py
 								
 .. _notebook: bloom_notebooks/makePickles201905.ipynb
 
