@@ -16,7 +16,7 @@ Next, we split the freshwater runoff from each watershed between the rivers in t
 
 * For BC, maps of rivers can be found on the Atlas of Canada - `Toporama site <http://atlas.nrcan.gc.ca/site/english/toporama/index.html>`_.
 
-* For BC, maps of watersheds use to be available at ``http://www.env.gov.bc.ca/fish/pdf/prov_wsgs.pdf``.
+* For BC, maps of watersheds used to be available at ``http://www.env.gov.bc.ca/fish/pdf/prov_wsgs.pdf``.
 
 * In Washington, maps of watersheds are available `at this site <https://mywaterway.epa.gov/>`_.
 
@@ -74,7 +74,7 @@ Skagit
 ^^^^^^
 
 * Source used: WA map
-* Includes subwatersheds WRIA3, WRIA4, WRIA5 and WRIA7 from WA map
+* Includes sub-watersheds WRIA3, WRIA4, WRIA5 and WRIA7 from WA map
 * WRIA4 represents 33% of Skagit Watershed
 
 	* Baker River and lake drains 8% of WRIA4 but does not enter ocean (24.7)... but Morrison spreadsheet is for coastal runoff therefore assume Skagit River drains 100% of WRIA4 and then enters WRIA3
@@ -176,7 +176,7 @@ Puget
 ^^^^^
 
 * Source used: WA map
-* Includes subwatersheds WRIA17, WRIA16, WRIA15, WRIA14, WRIA08, WRIA09, WRIA10, WRIA12 and WRIA11 from WA map
+* Includes sub-watersheds WRIA17, WRIA16, WRIA15, WRIA14, WRIA08, WRIA09, WRIA10, WRIA12 and WRIA11 from WA map
 * WRIA17 10% of Puget Sound Watershed
 
 	* Johnson 5% of WRIA17, 48.061231,-123.039665, i = 207, j = 202
@@ -274,7 +274,7 @@ JdF
 * The Juan de Fuca watershed in Morrison et al (2011) includes the north side of Juan de Fuca Strait from Victoria to Port Renfrew (inclusive) and the south side of Juan de Fuca Strait from Cape Flattery to Port Townsend.
 * Assume that 50% of the area of the JdF watershed defined by Morrison et al (2011) is on north side of JdF (Canada side):
 
-	* From bccf map, assume  33% of Canada side is part of San Juan River/Harris Creek watershed
+	* From BCCF map, assume  33% of Canada side is part of San Juan River/Harris Creek watershed
 
 		* San Juan River (in the steelhead map) (includes Harris Creek from the steelhead map) 48.560449,-124.404595 (i = 402, j = 56)
 	* Assume that 14% of Canada side is in the Gordon River Watershed 48.575897,-124.415281 (i = 403, j = 56)
