@@ -18,7 +18,7 @@ Next, we split the freshwater runoff from each watershed between the rivers in t
 
 * For BC, maps of watersheds use to be available at ``http://www.env.gov.bc.ca/fish/pdf/prov_wsgs.pdf``.
 
-* In Washington, maps of watersheds are available `at this site <https://cfpub.epa.gov/surf/state.cfm?statepostal=WA>`_.
+* In Washington, maps of watersheds are available `at this site <https://mywaterway.epa.gov/>`_.
 
 * For the Fraser River, the split between the arms is given in Thomson, 1981, available `here <http://www.dfo-mpo.gc.ca/Library/487.pdf>`_
 
