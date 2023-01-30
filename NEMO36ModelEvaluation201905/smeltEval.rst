@@ -21,7 +21,7 @@ The following links point to annual notebooks comparing model output to observat
 .. include:: HC1905statsTBL.txt
 
 
-.. _IOS Ocean Sciences Data Archive: https://www.pac.dfo-mpo.gc.ca/science/oceans/data-donnees/search-recherche/profiles-eng.asp
+.. _IOS Ocean Sciences Data Archive: https://www.pac.dfo-mpo.gc.ca/science/oceans/data-donnees/index-eng.html
 .. _2007: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2007.ipynb
 .. _2008: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2008.ipynb
 .. _2009: https://nbviewer.org/github/SalishSeaCast/analysis-shared/blob/master/bioEvalForDocs/vET-HC1905-DFO-NutChlPhys-2009.ipynb
