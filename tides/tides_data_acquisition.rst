@@ -79,17 +79,20 @@ TPXO7.1 modelled tidal predictions
 
 TPXO7.1 was used for the boundary conditions of the model by :ref:`sutherlandetal11`... but resolution is coarse in Juan de Fuca Strait and the Strait of Georgia is an inland sea... Sutherland et al. (2011) used the tidal predictions for a straight boundary along 127 degrees W. The TPXO7.1 predictions are probably only useful when boundaries are offshore from the coast.
 
-DFO measured data
---------------------------
 
-Measured water level data can be downloaded in .csv format from Canada's Department of Fisheries and Oceans (DFO) `website
-<https://meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp>`_.
+DFO measured data
+-----------------
+
+Measured water level data can be downloaded in .csv format from Canada's Department of Fisheries 
+and Oceans (DFO) `website
+<https://meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp?user=isdm-gdsi&region=MEDS&tst=1&perm=0>`_.
 
 * 10 years of hourly water level measured data can be downloaded at a time
 * 1 month of highest resolution (e.g. 1 minute water level at Point Atkinson) can be downloaded at a time
 
+
 Permanent data stations
-````````````````````````````````````
+```````````````````````
 
 Permanent DFO stations in Strait of Georgia and on Vancouver Island (station number, sampling interval, starting year):
 

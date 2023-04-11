@@ -112,7 +112,7 @@ The links here are to static renderings of the notebooks via
 The notebook source files are in the `analysis_tools`_ directory of the :ref:`tools-repo` repo.
 
 .. _nbviewer.org: https://nbviewer.org/
-.. _analysis_tools: https://github.com/SalishSeaCast/tools/tree/master/analysis_tools
+.. _analysis_tools: https://github.com/SalishSeaCast/tools/tree/main/analysis_tools
 
 
 ERDDAP and :kbd:`xarray`
@@ -153,7 +153,7 @@ Quoting from the introduction to its documentation:
 
 .. _xarray: http://xarray.pydata.org/en/stable/
 .. _pandas: https://pandas.pydata.org/
-.. _Common Data Model: https://www.unidata.ucar.edu/software/netcdf-java/v4.6/CDM/index.html
+.. _Common Data Model: https://docs.unidata.ucar.edu/netcdf-java/4.6/userguide/index.html
 
 Here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using :kbd:`xarray`:
 

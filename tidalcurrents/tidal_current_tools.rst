@@ -15,7 +15,9 @@ To calculate and evaluate tidal currents we need long (many months) currents tim
 Observations
 ============
 
-* Current data can be from the `Ocean Networks Canada (ONC) website`_.  An example is here: https://www.oceannetworks.ca/article-tags/acoustic-doppler-current-profler
+* Current data can be obtained from the `Ocean Networks Canada (ONC) website`_.
+  An example is here: 
+  https://data.oceannetworks.ca/DataPreview?TREETYPE=1&LOCATION=233&DEVICECATEGORY=69&TIMECONFIG=0
 * The ONC data is then processed by Dr. Rich Pawlowicz.
 * Phase and amplitude information can be reported in papers, we use values reported in Foreman et al. (2004).
 
