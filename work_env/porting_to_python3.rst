@@ -21,7 +21,7 @@ Specific instances of that
 are described below.
 The description of all of the standard library changes is contained in `PEP 3108`_.
 
-.. _PEP 3108: https://www.python.org/dev/peps/pep-3108/
+.. _PEP 3108: https://peps.python.org/pep-3108/
 
 
 .. _PortingTheSalishSeaToolsPackage:

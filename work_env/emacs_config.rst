@@ -197,7 +197,7 @@ Lines that have messages from `flake8`_ associated with them are colourfully hig
 The :kbd:`flymake-cursor` mode displays messages from `flake8`_ for the line that the cursor is on in the minibuffer - useful for :command:`ssh` sessions when mouse integration with :program:`emacs` is not available.
 
 .. _flake8: https://pypi.org/project/flake8/
-.. _PEP8: https://www.python.org/dev/peps/pep-0008/
+.. _PEP8: https://peps.python.org/pep-0008/
 
 Install `flake8`_ into your local Python environment:
 
