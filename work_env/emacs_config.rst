@@ -143,19 +143,19 @@ ReStructuredText Mode
 
 This is useful for working on the Salish Sea MEOPAR project documentation files.
 
-Download :file:`rst.el` from http://docutils.sourceforge.net/tools/editors/emacs/rst.el into your :file:`$HOME/elisp/` directory:
+Download :file:`rst.el` from https://docutils.sourceforge.io/tools/editors/emacs/rst.el into your :file:`$HOME/elisp/` directory:
 
 .. code-block:: bash
 
     cd $HOME/elisp/
-    wget http://docutils.sourceforge.net/tools/editors/emacs/rst.el
+    wget https://docutils.sourceforge.io/tools/editors/emacs/rst.el
 
 Configure :program:`emacs` to use :kbd:`rst-mode` automatically whenever you visit a file with the extension :kbd:`.rst`:
 
 .. code-block:: scheme
 
     ;; add reStructuredText mode
-    ;; http://docutils.sourceforge.net/tools/editors/emacs/rst.el
+    ;; https://docutils.sourceforge.io/tools/editors/emacs/rst.el
     (require 'rst)
     (setq auto-mode-alist
           (append '(("\\.rst$" . rst-mode)) auto-mode-alist))
@@ -211,7 +211,8 @@ add :file:`$HOME/.local/bin` to your :envvar:`PATH`
 (see :ref:`moaddocs:Create-.bash_profile`).
 The additions to your :envvar:`PATH` should be such that :file:`$HOME/.local/bin` comes after :file:`$HOME/anaconda/bin`.
 
-Download :file:`flymake-cursor.el` from http://www.emacswiki.org/emacs/download/flymake-cursor.el into your :file:`$HOME/elisp/` directory:
+Download :file:`flymake-cursor.el` from https://www.emacswiki.org/emacs/download/flymake-cursor.el
+into your :file:`$HOME/elisp/` directory:
 
 .. code-block:: bash
 

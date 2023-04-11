@@ -32,7 +32,7 @@ During various trips to the Salish Sea, `drifters`_ are deployed and left to dri
 They are all tracked with GPS devices and sometimes are picked up by bystanders and returned.
 As of present, there have been 21 deployments in the Salish Sea and the Juan de Fuca, each releasing up to ten drifters.
 
-.. _drifters: https://drifters.eos.ubc.ca/
+.. _drifters: https://drifters.eoas.ubc.ca/
 
 Fraser Plume CTD casts
 ======================
@@ -54,7 +54,7 @@ NANOOS San Jaun Dataset
 
 Downloaded from `Nanoos`_, we have temperature and salinity data from the San Juans islands from fall 2014 - fall 2017.
 
-.. _Nanoos: http://www.nanoos.org
+.. _Nanoos: https://www.nanoos.org
 
 ONC ferries
 ===========

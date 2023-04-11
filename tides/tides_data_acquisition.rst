@@ -62,7 +62,12 @@ Now, 120 degrees W (Pacific Standard Time) is 8 hours different to GMT, so to co
 
 GMTphase = PSTphase - (-8hours)*(1/12.42hours)*360degrees
 
-(For details on this conversion, see Manual for Tide Heights Analysis and Prediction by M.G.G. Foreman, Pacific Marine Science Report 77-10, IOS, 1977 (Revised 2004), Section 2.3.1 Astronomical argument and Greenwich phase lag, available `from here <ftp://canuck.seos.uvic.ca/docs/MFTides/heights.pdf>`_ or `also here <http://www.pac.dfo-mpo.gc.ca/science/oceans/tidal-marees/index-eng.html>`_)
+(For details on this conversion,
+see Manual for Tide Heights Analysis and Prediction by M.G.G. Foreman, 
+Pacific Marine Science Report 77-10, IOS, 1977 (Revised 2004), 
+Section 2.3.1 Astronomical argument and Greenwich phase lag, 
+available `from here <ftp://canuck.seos.uvic.ca/docs/MFTides/heights.pdf>`_ 
+or `also here <https://www.dfo-mpo.gc.ca/science/data-donnees/tidal-marees/index-eng.html>`_)
 
 This paper also have some info on temperature and salinity in Johnstone Strait that may be useful.
 
@@ -116,7 +121,7 @@ Vancouver:
 *	station name  (num, ??min, year1, year2, numdays)
 *	`Point Grey <https://meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7635&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7635, 60min, 1977, 1978, 552)
 *	`North Arm <https://meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7634&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7634, 60min, 1969, 1969, 175)
-*	`Sand Heads (Stn Harry) <http://www.isdm-gdsi.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7604&user=isdm-gdsi&region=MEDS>`_ (7604, 60min, 1968, 1969, 283)
+*	`Sand Heads (Stn Harry) <https://www.isdm-gdsi.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7604&user=isdm-gdsi&region=MEDS>`_ (7604, 60min, 1968, 1969, 283)
 *	`Sand Heads <https://meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7594&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7594, 60min, 1969, 1969, 188)
 *	`Roberts Bank <https://meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7592&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7592, 60min, 1981, 1982, 203)
 *	`Tsawwassen <https://meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7590&user=isdm-gdsi&region=PAC&ref=maps-cartes>`_ (7590, 60min, 1967, 1978, 4002)
@@ -347,7 +352,8 @@ For example::
 NOAA measured data
 -------------------------------
 
-Harmonic constituents and up to 31 days of measured water level data at NOAA tide gauges in the US can be downloaded `here <https://tidesandcurrents.noaa.gov/stations.html?type=Historic+Water+Levels>`_.
+Harmonic constituents and up to 31 days of measured water level data at NOAA tide gauges in the US can be downloaded
+`here <https://tidesandcurrents.noaa.gov/stations.html?type=Historic+Water+Levels>`_.
 
 (remember that tidal heights are in feet!)
 

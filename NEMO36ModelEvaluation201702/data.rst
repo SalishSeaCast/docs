@@ -54,7 +54,7 @@ NANOOS San Jaun Dataset
 
 Downloaded from `Nanoos`_, we have temperature and salinity data from the San Juans islands from fall 2014 - fall 2017.
 
-.. _Nanoos: http://www.nanoos.org
+.. _Nanoos: https://www.nanoos.org
 
 ONC ferries
 ======================================

@@ -151,7 +151,7 @@ Quoting from the introduction to its documentation:
   Our approach adopts the `Common Data Model`_ for self-describing scientific data in widespread use in the Earth sciences:
   :py:class:`xarray.Dataset` is an in-memory representation of a netCDF file.
 
-.. _xarray: http://xarray.pydata.org/en/stable/
+.. _xarray: https://docs.xarray.dev/en/stable/
 .. _pandas: https://pandas.pydata.org/
 .. _Common Data Model: https://docs.unidata.ucar.edu/netcdf-java/4.6/userguide/index.html
 

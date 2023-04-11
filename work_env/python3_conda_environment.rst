@@ -31,8 +31,8 @@ you can install `Anaconda`_, which will auto-magically use Python 3.
 
 .. _Anaconda: https://www.anaconda.com/products/distribution
 .. _Jupyter Notebook: https://jupyter.org/
-.. _NumPy: http://docs.scipy.org/doc/numpy/reference/index.html
-.. _matplotlib: http://matplotlib.org/contents.html
+.. _NumPy: https://numpy.org/doc/stable/reference/index.html
+.. _matplotlib: https://matplotlib.org/contents.html
 
 .. code-block:: bash
 
@@ -44,7 +44,7 @@ and then our additional install, `netcdf4-python`_
 
    conda install netcdf4
 
-.. _netcdf4-python: http://unidata.github.io/netcdf4-python/
+.. _netcdf4-python: https://unidata.github.io/netcdf4-python/
 
 Now you have set-up your Python 3 environment.  To start it in a new terminal
 
