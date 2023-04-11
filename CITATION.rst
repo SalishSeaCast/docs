@@ -69,7 +69,9 @@ biochemical-physical model in:
 Moore-Maley, B. L., S. E. Allen, and D. Ianson, **2016**.
 Locally-driven interannual variability of near-surface pH and ΩA in the Strait of Georgia.
 *J. Geophys. Res. Oceans*, 121(3), 1600–1625.
-https://dx.doi.org/10.1002/2015JC011118
+`https://dx.doi.org/10.1002/2015JC01111`_
+
+.. _https://dx.doi.org/10.1002/2015JC01111: https://onlinelibrary.wiley.com/doi/abs/10.1002/2015JC011118
 
 .. code-block:: tex
 
@@ -177,7 +179,9 @@ model can be found in:
 Olson, E. M., S. E. Allen, V. Do, M. Dunphy, and D. Ianson, **2020**.
 Assessment of Nutrient Supply by a Tidal Jet in the Northern Strait of Georgia Based on a Biogeochemical Model.
 *J. Geophys. Res. Oceans*, 25(8).
-https://dx.doi.org/10.1029/2019JC015766
+`https://dx.doi.org/10.1029/2019JC015766`_
+
+.. _https://dx.doi.org/10.1029/2019JC015766: https://onlinelibrary.wiley.com/doi/10.1029/2019JC015766
 
 .. code-block:: tex
 
@@ -227,7 +231,9 @@ Jarníková, T., Olson, E. M., Allen, S. E., Ianson, D., and Suchy, K. D., **202
 A Clustering Approach to Determine Biophysical Provinces and Physical Drivers of 
 Productivity Dynamics in a Complex Coastal Sea. 
 *Ocean Sci. Discuss.*, 1-36.
-https://doi.org/10.5194/os-2021-66
+`https://doi.org/10.5194/os-2021-66`_
+
+.. _https://doi.org/10.5194/os-2021-66: https://os.copernicus.org/preprints/os-2021-66/os-2021-66.pdf
 
 .. code-block:: tex
 
@@ -272,7 +278,9 @@ Jarníková T., Ianson D., Allen S.E., Shao A.E., Olson E.M.. **2022**.
 Anthropogenic Carbon Increase has Caused Critical Shifts in Aragonite Saturation
 Across a Sensitive Coastal System.
 *Global Biogeochemical Cycles*, 36(7).
-https://doi.org/10.1029/2021GB007024
+`https://doi.org/10.1029/2021GB007024`_
+
+.. _https://doi.org/10.1029/2021GB007024: https://onlinelibrary.wiley.com/doi/10.1029/2021GB007024
 
 .. code-block:: tex
 

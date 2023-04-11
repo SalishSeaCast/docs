@@ -50,7 +50,9 @@ year. In the same directory, there are also spring bloom time files containing v
 
 .. [1] Allen, S. E. and M. A. Wolfe. (2013). Hindcast of the Timing of the Spring Phytoplankton Bloom in the Strait of Georgia, 1968-2010. Progress in Oceanography, volume 115, pp 6-13. https://dx.doi.org/10.1016/j.pocean.2013.05.026
 
-.. [2] Olson, E. M., Allen, S. E., Do, V., Dunphy, M., & Ianson, D. (2020). Assessment of nutrient supply by a tidal jet in the northern Strait of Georgia based on a biogeochemical model. Journal of Geophysical Research: Oceans, 125, e2019JC015766. https://doi.org/10.1029/2019JC015766 
+.. [2] Olson, E. M., Allen, S. E., Do, V., Dunphy, M., & Ianson, D. (2020). Assessment of nutrient supply by a tidal jet in the northern Strait of Georgia based on a biogeochemical model. Journal of Geophysical Research: Oceans, 125, e2019JC015766. `https://doi.org/10.1029/2019JC015766`_
+
+.. _https://doi.org/10.1029/2019JC015766: https://onlinelibrary.wiley.com/doi/10.1029/2019JC015766
 
 .. [3] Collins, A. K., Allen, S. E., & Pawlowicz, R. (2009). The role of wind in determining the timing of the spring bloom in the Strait of Georgia. Canadian Journal of Fisheries and Aquatic Sciences, 66(9), 1597-1616. doi:10.1139/f09-071
 

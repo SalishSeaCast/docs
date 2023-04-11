@@ -338,6 +338,8 @@ See the `tools docs`_ for details on :file:`nc_tools.generate_pressure_file` met
    :command:`salishsea get_cgrf` requires a link to :file:`altitude_CGRF.nc` in :file:`/NEMO-atmos/`.
 
 
-.. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and Bélair, S. (2013), A new atmospheric dataset for forcing ice–ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc.. doi: 10.1002/qj.2194 https://dx.doi.org/10.1002/qj.2194
+.. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and Bélair, S. (2013), A new atmospheric dataset for forcing ice–ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc. `https://dx.doi.org/10.1002/qj.2194`_
+
+.. _https://dx.doi.org/10.1002/qj.2194: https://onlinelibrary.wiley.com/doi/10.1002/qj.2194
 
 .. [Holton1992] Holton, J., An introduction to dynamic meteorology 3rd edition (Acadmeic Press: 1992)

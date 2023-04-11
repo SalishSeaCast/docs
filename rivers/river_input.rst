@@ -357,7 +357,10 @@ Jervis
 * Source used: Toporama map,
 * See `this site <https://www.pac.dfo-mpo.gc.ca/science/oceans/bc-inlets-mer-de-bras-cb/index-eng.html>`_
 * As there were no gauged rivers in the Jervis Inlet watershed, Trites (1955) estimated the freshwater discharge using  the area of the watershed (~1400 km2) and local precipitation data.   The estimated mean annual discharge of 180 m3 s-1 is considerably smaller than the discharge in most of the longer BC inlets.  Unlike many of the BC inlets where the main river enters at the head, there are many small rivers and streams distributed along the shores of Jervis Inlet.  The runoff cycle for Jervis Inlet more closely follows the local precipitation cycle as the area of snow fields which store winter precipitation is relatively small (Macdonald and Murray 1973).
-* Pickard (1961) (https://doi.org/10.1139/f61-062): The chief difference between these inlets is that Jervis has less than 40% as much river runoff as Bute, and only one-quarter of this comes in at the head whereas in Bute three-quarters of the total enters at the head. The flushing effect of the large runoff into the head of Bute is expected to be greater on the whole of the inlet length than that of the smaller runoff distributed along the length of Jervis.
+* Pickard (1961) (`https://doi.org/10.1139/f61-062_`): The chief difference between these inlets is that Jervis has less than 40% as much river runoff as Bute, and only one-quarter of this comes in at the head whereas in Bute three-quarters of the total enters at the head. The flushing effect of the large runoff into the head of Bute is expected to be greater on the whole of the inlet length than that of the smaller runoff distributed along the length of Jervis.
+
+.. _https://doi.org/10.1139/f61-062: https://nrc-prod.literatumonline.com/doi/10.1139/f61-062
+
 * Flow out of Powell Lake taken from Sanderson et al. (1986)
 * Jervis Inlet only area = 1400km2 (Trites 1955) ==> 25% of Jervis watershed (5785km2)
 * Assume Skwawka/Hunaechin/Lausmann/Slane/Smanit/ account for 30% of Jervis only watershed
