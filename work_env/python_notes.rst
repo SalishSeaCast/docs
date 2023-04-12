@@ -7,71 +7,7 @@ Python, netCDF, and Model Results Visualization
 Intro to Python
 ===============
 
-Most of the analysis and tools in the Salish Sea MEOPAR project are written in `Python`_,
-though Matlab makes occasional guest appearances.
-
-.. _Python: https://www.python.org/
-
-`This slide deck`_ from a `physics course`_ at Cornell University provides a good,
-fairly detailed,
-introduction to Python for people who already know at least one programming language.
-Of course,
-no two groups make exactly the same choices within a language and the few differences to our choices are detailed below.
-Also,
-don't get too bogged down in the details of object-oriented and functional programming
-(especially slides 18 through 22) as we don't use those aspects much.
-
-.. _This slide deck: http://pages.physics.cornell.edu/~myers/teaching/ComputationalMethods/LectureNotes/Intro_to_Python.pdf
-.. _physics course: http://pages.physics.cornell.edu/~myers/teaching/ComputationalMethods/
-
-A few differences you will see compared to our Python code:
-
-* The Cornell course uses an older syntax for string interpolation:
-
-  .. code-block:: python
-
-      print 'value of %s = %s' % (name, val)
-
-  In our notebooks and code you are more likely to see that spelled like:
-
-  .. code-block:: python
-
-      print('value of {n} = {v}'.format(n=name, v=val))
-
-  or perhaps:
-
-  .. code-block:: python
-
-      print('value of {0} = {1}'.format(name, val))
-
-* The :py:obj:`scipy.array` syntax discussed on slides 25 through 28 is a synonym for :py:obj:`numpy.ndarray` and you will see it used in our code as:
-
-  .. code-block:: python
-
-      import numpy as np
-
-      a = np.array([[1,2,3], [4,5,6], [7,8,9]])
-      ...
-      p = np.arange(0.,1.,0.1)
-      etc.
-
-* The :py:obj:`pylab` namespace mentioned on slide 31 is a Matlab-like interface to the Matplotlib_ library.
-  In our code we try to use the :py:obj:`pyplot` object-oriented interface,
-  so you will see things like:
-
-  .. code-block:: python
-
-      import matplotlib.pyplot as plt
-      import numpy as np
-
-      xvals = np.linspace(-10., 10., 100)
-      yvals = xvals**3
-      fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
-      ax1.plot(xvals, yvals)
-      ax2.plot(xvals, yvals, 'r.')
-      ax3.hist(yvals)
-
-.. _Matplotlib: https://matplotlib.org/
+Please see the :ref:`moaddocs:MOAD-Python` section of the :ref:`UBC-EOAS-MOAD-docs`.
 
 
 Jupyter Notebook, netCDF, and Model Results
@@ -88,7 +24,7 @@ There are code examples in the notebooks and also examples of the use of functio
 If you are new to the Salish Sea project,
 or to `Jupyter Notebook <https://jupyter.org/>`,
 netCDF_,
-and Matplotlib_ you should read the notebooks in the following order:
+and matplotlib_ you should read the notebooks in the following order:
 
 
 * `Exploring netCDF Files.ipynb`_
@@ -96,6 +32,8 @@ and Matplotlib_ you should read the notebooks in the following order:
 * `Plotting Tracers on Horizontal Planes.ipynb`_
 * `Plotting Velocity Fields on Horizontal Planes.ipynb`_
 * `Plotting Velocities and Tracers on Vertical Planes.ipynb`_
+
+.. _matplotlib: https://matplotlib.org/
 
 .. _Exploring netCDF Files.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/analysis_tools/Exploring%20netCDF%20Files.ipynb
 
