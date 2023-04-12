@@ -10,7 +10,7 @@ The sections below describe *very* briefly the steps to set up and run the Salis
     :maxdepth: 2
 
     salish
-    computecanada
+    graham
 
 
 Running NEMO-3.4
