@@ -8,8 +8,8 @@ This section describes the steps to set up and run the Salish Sea NEMO version 3
 
 This guide assumes that your :ref:`WorkingEnvironment` is set up and that you are familiar with :ref:`WorkingOnSalish`.
 
-.. _graham.computecanada.ca: https://docs.computecanada.ca/wiki/Graham
-.. _cedar.computecanada.ca: https://docs.computecanada.ca/wiki/Cedar
+.. _graham.computecanada.ca: https://docs.alliancecan.ca/wiki/Graham
+.. _cedar.computecanada.ca: https://docs.alliancecan.ca/wiki/Cedar
 
 
 Modules setup
@@ -55,7 +55,7 @@ Both systems provide environment variables that are more convenient that remembe
   river,
   and west boundary forcing files are in the :file:`$PROJECT/SalishSea/forcing/` tree
 
-.. _several different types of file storage: https://docs.computecanada.ca/wiki/Storage_and_file_management
+.. _several different types of file storage: https://docs.alliancecan.ca/wiki/Storage_and_file_management
 
 Create a :file:`MEOPAR/` directory tree in your project space:
 

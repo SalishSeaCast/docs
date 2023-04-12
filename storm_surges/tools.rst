@@ -140,9 +140,9 @@ Several notebooks have been developed for generating the anomaly forcing files u
 * `SSH_Tofino.ipynb`_
 * `SSH_PortHardy.ipynb`_
 
-.. _SSH_Tofino.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/I_ForcingFiles/OBC/SSH_Tofino.ipynb
+.. _SSH_Tofino.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/I_ForcingFiles/OBC/SSH_Tofino.ipynb
 
-.. _SSH_PortHardy.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/I_ForcingFiles/OBC/SSH_PortHardy.ipynb
+.. _SSH_PortHardy.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/I_ForcingFiles/OBC/SSH_PortHardy.ipynb
 
 
 Analysis

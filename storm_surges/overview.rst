@@ -1,7 +1,7 @@
 .. _StormOverview:
 
 Storm surge overview
-======================================================================================================
+====================
 
 We need to test our model to see how well it can represent storm surge events in the Salish Sea. We have wind forcing available from 2002-2010, so storms need to be in this period.
 
@@ -127,7 +127,7 @@ Also, from Abeysirigunawardena et al (2011), extremes generally occur from Octob
 Existing storm surge models
 ---------------------------------------
 
-The Government of British Columbia launched the `BC Storm Surge Forecast System <http://stormsurgebc.ca/index.html>`_ in 2011. This model is driven by the Pacific Ocean Model (which is driven by 7 day weather forecasts from NOAA) and a 6 day forecast from Environment Canada. Forecast bulletins are available for Point Atkinson, Victoria and Campbell River. There is no hindcasting available in the model.
+The Government of British Columbia launched the `BC Storm Surge Forecast System <https://stormsurgebc.ca/index.html>`_ in 2011. This model is driven by the Pacific Ocean Model (which is driven by 7 day weather forecasts from NOAA) and a 6 day forecast from Environment Canada. Forecast bulletins are available for Point Atkinson, Victoria and Campbell River. There is no hindcasting available in the model.
 
 
 References

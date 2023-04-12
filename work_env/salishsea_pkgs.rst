@@ -54,8 +54,7 @@ We used to all share a single `analysis`_ repo,
 but it got too big.
 So,
 we broke it up so that each team member has their own analysis repo,
-and there are a few special pupose analysis repos.
-You can find them all at https://bitbucket.org/account/user/salishsea/projects/SSM_ANALYSIS.
+and there are a few special purpose analysis repos.
 The original analysis repo is now read-only.
 
 .. _analysis: https://github.com/SalishSeaCast/analysis

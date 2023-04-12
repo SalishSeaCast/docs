@@ -6,7 +6,7 @@ Are the velocities in the model similar to those in the field.  For field veloci
 .. figure:: images/venus_station_map.png
 
 To do this, we ran the model for Oct 18, 2002 and output average 1-hr velocities throughout the day.  Of course, VENUS was not running in 2002.  We found a similar day (slightly higher amplitudes at Point Atkinson) in Oct 15, 2013.  Note that there is a shift of 0.05 days between the two for best match.  These tidal predictions are downloaded from:
-`Integrated Science Data Managment <http://www.isdm-gdsi.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7795&user=isdm-gdsi&region=PAC>`_.
+`Integrated Science Data Management <https://www.isdm-gdsi.gc.ca/isdm-gdsi/twl-mne/inventory-inventaire/sd-ds-eng.asp?no=7795&user=isdm-gdsi&region=PAC>`_.
 
 .. figure:: images/ptatkinson_tides.png
     :width: 600px

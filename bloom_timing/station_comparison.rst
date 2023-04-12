@@ -29,6 +29,6 @@ The spring phytoplankton bloom time at Station QU39, according to metric 2, cons
 
 **References:**
 
-.. [1] Olson, E. M., Allen, S. E., Do, V., Dunphy, M., & Ianson, D. (2020). Assessment of nutrient supply by a tidal jet in the northern Strait of Georgia based on a biogeochemical model. Journal of Geophysical Research: Oceans, 125, e2019JC015766. https://doi.org/10.1029/2019JC015766 
+.. [1] Olson, E. M., Allen, S. E., Do, V., Dunphy, M., & Ianson, D. (2020). Assessment of nutrient supply by a tidal jet in the northern Strait of Georgia based on a biogeochemical model. Journal of Geophysical Research: Oceans, 125, e2019JC015766. `https://doi.org/10.1029/2019JC015766`_
 
-
+.. _https://doi.org/10.1029/2019JC015766: https://onlinelibrary.wiley.com/doi/10.1029/2019JC015766

@@ -75,7 +75,7 @@ feature to be used to take atmospheric forcing values from the :ref:`CGRF-Datase
 It is in the :file:`4_weights_ATMOS/` directory of the 2-Oct-2013 WC3_PREP tarball and has been added to the :file:`grid/` of the :ref:`NEMO-forcing-repo` repo.
 Those weight values were subsequently used to create a netCDF4 weights file with :kbd:`zlib` compression enabled and CF-1.6 conventions compliant attributes using the `I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb`_ notebook.
 
-.. _I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb
+.. _I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/I_ForcingFiles/Atmos/netCDF4weights-CGRF.ipynb
 
 
 Creating New Weights Files
@@ -228,7 +228,7 @@ Use the `I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb`_ notebook to transform
 :file:`weights-gem2.5-ops_201702.nc` with well-structured metadata
 (see :ref:`netCDF4FilesCreationAndConventions`).
 
-.. _I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb
+.. _I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb
 
 
 .. _CGRF-Dataset:
@@ -338,6 +338,8 @@ See the `tools docs`_ for details on :file:`nc_tools.generate_pressure_file` met
    :command:`salishsea get_cgrf` requires a link to :file:`altitude_CGRF.nc` in :file:`/NEMO-atmos/`.
 
 
-.. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and Bélair, S. (2013), A new atmospheric dataset for forcing ice–ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc.. doi: 10.1002/qj.2194 https://dx.doi.org/10.1002/qj.2194
+.. [Smith_etal2013] Smith, G. C., Roy, F., Mann, P., Dupont, F., Brasnett, B., Lemieux, J.-F., Laroche, S. and Bélair, S. (2013), A new atmospheric dataset for forcing ice–ocean models: Evaluation of reforecasts using the Canadian global deterministic prediction system. Q.J.R. Meteorol. Soc. `https://dx.doi.org/10.1002/qj.2194`_
+
+.. _https://dx.doi.org/10.1002/qj.2194: https://onlinelibrary.wiley.com/doi/10.1002/qj.2194
 
 .. [Holton1992] Holton, J., An introduction to dynamic meteorology 3rd edition (Acadmeic Press: 1992)

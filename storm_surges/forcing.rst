@@ -20,7 +20,7 @@ Sea surface height forcing
 
 We force the sea surface height anomaly at the Juan de Fuca boundary based on tidal observations from Tofino. The tidal component of the observed water level height at Tofino has been removed. The water level height observations are taken from the DFO and the tidal predictions are generated with t_tide. Details are found in this notebook: `SSH_Tofino.ipynb`_.
 
-.. _SSH_Tofino.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/I_ForcingFiles/OBC/SSH_Tofino.ipynb
+.. _SSH_Tofino.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/I_ForcingFiles/OBC/SSH_Tofino.ipynb
 
 This notebook can be edited to generate forcing files for other time frames.
 

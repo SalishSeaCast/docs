@@ -88,4 +88,4 @@ Our best advice for Windows is to install puTTY_ and use it to connect remotely
 (though additions to these docs by experienced Windows users who set up a working environment 
 similar to the one described above are *most* welcome).
 
-.. _puTTY: http://www.chiark.greenend.org.uk/~sgtatham/putty/
+.. _puTTY: https://www.chiark.greenend.org.uk/~sgtatham/putty/

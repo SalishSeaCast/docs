@@ -5,7 +5,7 @@ Information came from
 :kbd:`http://www2.units.it/divisioneisi/ci/tartaglia/intel/fce/copts_for.pdf`
 (inaccessible in July-2020)
 and mainly from
-https://software.intel.com/content/www/us/en/develop/documentation.html
+https://www.intel.com/content/www/us/en/docs/fortran-compiler/developer-guide-reference/2023-1/compiler-options-001.html
 
 Note that FCFLAGS are fortran 90 flags and FFLAGS are fortran 77 flags.
 

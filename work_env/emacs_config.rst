@@ -143,19 +143,19 @@ ReStructuredText Mode
 
 This is useful for working on the Salish Sea MEOPAR project documentation files.
 
-Download :file:`rst.el` from http://docutils.sourceforge.net/tools/editors/emacs/rst.el into your :file:`$HOME/elisp/` directory:
+Download :file:`rst.el` from https://docutils.sourceforge.io/tools/editors/emacs/rst.el into your :file:`$HOME/elisp/` directory:
 
 .. code-block:: bash
 
     cd $HOME/elisp/
-    wget http://docutils.sourceforge.net/tools/editors/emacs/rst.el
+    wget https://docutils.sourceforge.io/tools/editors/emacs/rst.el
 
 Configure :program:`emacs` to use :kbd:`rst-mode` automatically whenever you visit a file with the extension :kbd:`.rst`:
 
 .. code-block:: scheme
 
     ;; add reStructuredText mode
-    ;; http://docutils.sourceforge.net/tools/editors/emacs/rst.el
+    ;; https://docutils.sourceforge.io/tools/editors/emacs/rst.el
     (require 'rst)
     (setq auto-mode-alist
           (append '(("\\.rst$" . rst-mode)) auto-mode-alist))
@@ -197,7 +197,7 @@ Lines that have messages from `flake8`_ associated with them are colourfully hig
 The :kbd:`flymake-cursor` mode displays messages from `flake8`_ for the line that the cursor is on in the minibuffer - useful for :command:`ssh` sessions when mouse integration with :program:`emacs` is not available.
 
 .. _flake8: https://pypi.org/project/flake8/
-.. _PEP8: https://www.python.org/dev/peps/pep-0008/
+.. _PEP8: https://peps.python.org/pep-0008/
 
 Install `flake8`_ into your local Python environment:
 
@@ -211,7 +211,8 @@ add :file:`$HOME/.local/bin` to your :envvar:`PATH`
 (see :ref:`moaddocs:Create-.bash_profile`).
 The additions to your :envvar:`PATH` should be such that :file:`$HOME/.local/bin` comes after :file:`$HOME/anaconda/bin`.
 
-Download :file:`flymake-cursor.el` from http://www.emacswiki.org/emacs/download/flymake-cursor.el into your :file:`$HOME/elisp/` directory:
+Download :file:`flymake-cursor.el` from https://www.emacswiki.org/emacs/download/flymake-cursor.el
+into your :file:`$HOME/elisp/` directory:
 
 .. code-block:: bash
 

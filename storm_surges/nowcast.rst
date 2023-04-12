@@ -24,7 +24,7 @@ We also calculate a correction to the model water level using tidal predictions.
 
 To search for this information, you can visit the DFO_ and NOAA_ websites.
 
-.. _DFO: http://www.isdm-gdsi.gc.ca/isdm-gdsi/twl-mne/index-eng.htm
+.. _DFO: https://www.isdm-gdsi.gc.ca/isdm-gdsi/twl-mne/index-eng.htm
 
 .. _NOAA: https://tidesandcurrents.noaa.gov/stations.html?type=Water+Levels
 

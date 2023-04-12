@@ -9,7 +9,7 @@ XIOS-2 Code Repo Maintenance
 Set-up
 ======
 
-The :file:`/ocean/sallen/hg_repos/XIOS-2-hg-mirror` repository is an :command:`svn` checkout of http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/trunk at revision 1066 and also a read-only Mercurial repository.
+The :file:`/ocean/sallen/hg_repos/XIOS-2-hg-mirror` repository is an :command:`svn` checkout of https://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/trunk at revision 1066 and also a read-only Mercurial repository.
 It was initialized with:
 
 .. code-block:: bash
@@ -115,7 +115,8 @@ Workflow to Pull Changes from XIOS-2 :command:`svn` Repo
 
 The workflow to pull changes from the master XIOS :command:`svn` repo and commit them to our :file:`XIOS-2-hg-mirror` repo is somewhat automated by the :ref:`Marlin`.
 
-#. Review the upstream changes in the source browser at http://forge.ipsl.jussieu.fr/ioserver/log/ to select a range of changes to be pulled into our :file:`XIOS-2-hg-mirror` repo.
+#. Review the upstream changes in the source browser at https://forge.ipsl.jussieu.fr/ioserver/log/
+to select a range of changes to be pulled into our :file:`XIOS-2-hg-mirror` repo.
 
 #. Working on :kbd:`salish` in the :file:`/ocean/sallen/hg_repos/XIOS-2-hg-mirror` repo with an activated virtualenv in which :command:`marlin` is installed:
 

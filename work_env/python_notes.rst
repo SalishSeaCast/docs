@@ -7,71 +7,7 @@ Python, netCDF, and Model Results Visualization
 Intro to Python
 ===============
 
-Most of the analysis and tools in the Salish Sea MEOPAR project are written in `Python`_,
-though Matlab makes occasional guest appearances.
-
-.. _Python: https://www.python.org/
-
-`This slide deck`_ from a `physics course`_ at Cornell University provides a good,
-fairly detailed,
-introduction to Python for people who already know at least one programming language.
-Of course,
-no two groups make exactly the same choices within a language and the few differences to our choices are detailed below.
-Also,
-don't get too bogged down in the details of object-oriented and functional programming
-(especially slides 18 through 22) as we don't use those aspects much.
-
-.. _This slide deck: http://pages.physics.cornell.edu/~myers/teaching/ComputationalMethods/LectureNotes/Intro_to_Python.pdf
-.. _physics course: http://pages.physics.cornell.edu/~myers/teaching/ComputationalMethods/
-
-A few differences you will see compared to our Python code:
-
-* The Cornell course uses an older syntax for string interpolation:
-
-  .. code-block:: python
-
-      print 'value of %s = %s' % (name, val)
-
-  In our notebooks and code you are more likely to see that spelled like:
-
-  .. code-block:: python
-
-      print('value of {n} = {v}'.format(n=name, v=val))
-
-  or perhaps:
-
-  .. code-block:: python
-
-      print('value of {0} = {1}'.format(name, val))
-
-* The :py:obj:`scipy.array` syntax discussed on slides 25 through 28 is a synonym for :py:obj:`numpy.ndarray` and you will see it used in our code as:
-
-  .. code-block:: python
-
-      import numpy as np
-
-      a = np.array([[1,2,3], [4,5,6], [7,8,9]])
-      ...
-      p = np.arange(0.,1.,0.1)
-      etc.
-
-* The :py:obj:`pylab` namespace mentioned on slide 31 is a Matlab-like interface to the Matplotlib_ library.
-  In our code we try to use the :py:obj:`pyplot` object-oriented interface,
-  so you will see things like:
-
-  .. code-block:: python
-
-      import matplotlib.pyplot as plt
-      import numpy as np
-
-      xvals = np.linspace(-10., 10., 100)
-      yvals = xvals**3
-      fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
-      ax1.plot(xvals, yvals)
-      ax2.plot(xvals, yvals, 'r.')
-      ax3.hist(yvals)
-
-.. _Matplotlib: https://matplotlib.org/
+Please see the :ref:`moaddocs:MOAD-Python` section of the :ref:`UBC-EOAS-MOAD-docs`.
 
 
 Jupyter Notebook, netCDF, and Model Results
@@ -88,7 +24,7 @@ There are code examples in the notebooks and also examples of the use of functio
 If you are new to the Salish Sea project,
 or to `Jupyter Notebook <https://jupyter.org/>`,
 netCDF_,
-and Matplotlib_ you should read the notebooks in the following order:
+and matplotlib_ you should read the notebooks in the following order:
 
 
 * `Exploring netCDF Files.ipynb`_
@@ -97,22 +33,24 @@ and Matplotlib_ you should read the notebooks in the following order:
 * `Plotting Velocity Fields on Horizontal Planes.ipynb`_
 * `Plotting Velocities and Tracers on Vertical Planes.ipynb`_
 
-.. _Exploring netCDF Files.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Exploring%20netCDF%20Files.ipynb
+.. _matplotlib: https://matplotlib.org/
 
-.. _Plotting Bathymetry Colour Meshes.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Plotting%20Bathymetry%20Colour%20Meshes.ipynb
+.. _Exploring netCDF Files.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/analysis_tools/Exploring%20netCDF%20Files.ipynb
 
-.. _Plotting Tracers on Horizontal Planes.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Plotting%20Tracers%20on%20Horizontal%20Planes.ipynb
+.. _Plotting Bathymetry Colour Meshes.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/analysis_tools/Plotting%20Bathymetry%20Colour%20Meshes.ipynb
 
-.. _Plotting Velocity Fields on Horizontal Planes.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Plotting%20Velocity%20Fields%20on%20Horizontal%20Planes.ipynb
+.. _Plotting Tracers on Horizontal Planes.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/analysis_tools/Plotting%20Tracers%20on%20Horizontal%20Planes.ipynb
 
-.. _Plotting Velocities and Tracers on Vertical Planes.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Plotting%20Velocities%20and%20Tracers%20on%20Vertical%20Planes.ipynb
+.. _Plotting Velocity Fields on Horizontal Planes.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/analysis_tools/Plotting%20Velocity%20Fields%20on%20Horizontal%20Planes.ipynb
+
+.. _Plotting Velocities and Tracers on Vertical Planes.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/analysis_tools/Plotting%20Velocities%20and%20Tracers%20on%20Vertical%20Planes.ipynb
 
 The links here are to static renderings of the notebooks via
 `nbviewer.org`_ .
 The notebook source files are in the `analysis_tools`_ directory of the :ref:`tools-repo` repo.
 
 .. _nbviewer.org: https://nbviewer.org/
-.. _analysis_tools: https://github.com/SalishSeaCast/tools/tree/master/analysis_tools
+.. _analysis_tools: https://github.com/SalishSeaCast/tools/tree/main/analysis_tools
 
 
 ERDDAP and :kbd:`xarray`
@@ -129,7 +67,7 @@ here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using ERDDAP
 
 .. _netCDF4-python: https://unidata.github.io/netcdf4-python/
 .. _ERDDAP server: https://salishsea.eos.ubc.ca/erddap/index.html
-.. _Exploring netCDF Datasets from ERDDAP.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Exploring%20netCDF%20Datasets%20from%20ERDDAP.ipynb
+.. _Exploring netCDF Datasets from ERDDAP.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/analysis_tools/Exploring%20netCDF%20Datasets%20from%20ERDDAP.ipynb
 
 One reason that you might want to use ERDDAP to access our model results is if you don't have access to our results files stored on the UBC EOAS Ocean cluster.
 Our ERDDAP server is public.
@@ -151,15 +89,15 @@ Quoting from the introduction to its documentation:
   Our approach adopts the `Common Data Model`_ for self-describing scientific data in widespread use in the Earth sciences:
   :py:class:`xarray.Dataset` is an in-memory representation of a netCDF file.
 
-.. _xarray: http://xarray.pydata.org/en/stable/
+.. _xarray: https://docs.xarray.dev/en/stable/
 .. _pandas: https://pandas.pydata.org/
-.. _Common Data Model: https://www.unidata.ucar.edu/software/netcdf-java/v4.6/CDM/index.html
+.. _Common Data Model: https://docs.unidata.ucar.edu/netcdf-java/4.6/userguide/index.html
 
 Here is a reworking of the `Exploring netCDF Files.ipynb`_ notebook using :kbd:`xarray`:
 
 * `Exploring netCDF Datasets Using xarray.ipynb`_
 
-.. _Exploring netCDF Datasets Using xarray.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Exploring%20netCDF%20Datasets%20Using%20xarray.ipynb
+.. _Exploring netCDF Datasets Using xarray.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/analysis_tools/Exploring%20netCDF%20Datasets%20Using%20xarray.ipynb
 
 `xarray`_ uses the `netCDF4-python`_ library so it is capable of accessing netCDF datasets from either local files or from ERDDAP servers.
 The :py:class:`xarray.Dataset` object hides many of the low level details of the :py:class:`netcdf4.Dataset` objects to provide a more Pythonic interface to the dataset that is heavily inspired by `pandas`_. Like :kbd:`panada` variables,
@@ -178,4 +116,4 @@ Here is a notebook that demonstrates some of the features of `xarray`_ combined 
 
 * `Exploring a Nowcast Time Series from ERDDAP.ipynb`_
 
-.. _Exploring a Nowcast Time Series from ERDDAP.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/master/analysis_tools/Exploring%20a%20Nowcast%20Time%20Series%20from%20ERDDAP.ipynb
+.. _Exploring a Nowcast Time Series from ERDDAP.ipynb: https://nbviewer.org/github/SalishSeaCast/tools/blob/main/analysis_tools/Exploring%20a%20Nowcast%20Time%20Series%20from%20ERDDAP.ipynb

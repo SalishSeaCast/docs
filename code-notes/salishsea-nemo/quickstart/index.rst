@@ -4,13 +4,12 @@
 Quick Start Guide
 *****************
 
-The sections below describe *very* briefly the steps to set up and run the Salish Sea NEMO code on several compute platforms.
+The sections below describe *very* briefly the steps to set up and run the SalishSeaCast NEMO code on various compute platforms.
 
 .. toctree::
     :maxdepth: 2
 
     salish
-    westgrid
     computecanada
 
 
