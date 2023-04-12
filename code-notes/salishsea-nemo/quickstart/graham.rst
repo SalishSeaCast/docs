@@ -200,7 +200,7 @@ or observations:
 * Atmospheric forcing is almost always from the Environment and Climate Change Canada (ECCC) 
   `High Resolution Deterministic Prediction System`_ (HRDPS) model hourly forecasts.
 
-.. _High Resolution Deterministic Prediction System: https://weather.gc.ca/grib/grib2_HRDPS_HR_e.html
+  .. _High Resolution Deterministic Prediction System: https://weather.gc.ca/grib/grib2_HRDPS_HR_e.html
 
 * Tides are,
   by definition,
