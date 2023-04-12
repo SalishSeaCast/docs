@@ -1,11 +1,11 @@
 .. _WorkingOnSalish:
 
-************************************
-Working on :kbd:`salish` : NEMO v3.6
-************************************
+*********************************
+Working on ``salish`` : NEMO v3.6
+*********************************
 
 This section describes *very* briefly the steps to set up and run the NEMO version 3.6 code on out group's development machine,
-:kbd:`salish`.
+``salish``.
 To set up NEMO version 3.4,
 go :ref:`here<SalishNEMO34>`.
 Details of what this all means and why the steps below are what they are can be found in subsequent sections.
@@ -16,7 +16,7 @@ Create a Workspace
 
 You can call your workspace directory whatever you want but for consistency across systems we're going to call it :file:`MEOPAR`.
 
-:kbd:`salish` has a large local storage partition mounted at :file:`/data/` which is where we will put the code and run configuration file repos:
+``salish`` has a large local storage partition mounted at :file:`/data/` which is where we will put the code and run configuration file repos:
 
 .. code-block:: bash
 
@@ -30,9 +30,9 @@ We'll call them :file:`SalishSea/` and :file:`SalishSea/results/`:
 
     mkdir -p /data/$USER/MEOPAR/SalishSea/results
 
-The :kbd:`ocean.eos.ubc.ca` storage storage server space that you use on your Waterhole workstation is mounted at :file:`/ocean/` on :kbd:`salish` so you should be able to see your :ref:`SalishSeaReposPackages` at :file:`/ocean/$USER/MEOPAR/`.
+The ``ocean`` storage storage server space that you use on your Waterhole workstation is mounted at :file:`/ocean/` on ``salish`` so you should be able to see your :ref:`SalishSeaReposPackages` at :file:`/ocean/$USER/MEOPAR/`.
 
-You may want to open an EOAS help desk ticket requesting that the :kbd:`salish` :file:`/data/` partition be mounted on your Waterhole workstation so that you can easily view and copy files when you are not logged into :kbd:`salish` without having to use :command:`scp` or :command:`sftp`.
+You may want to open an EOAS help desk ticket requesting that the ``salish`` :file:`/data/` partition be mounted on your Waterhole workstation so that you can easily view and copy files when you are not logged into ``salish`` without having to use :command:`scp` or :command:`sftp`.
 
 
 Clone the Repos
@@ -69,7 +69,7 @@ Please see the :ref:`moaddocs:XIOS-2-docs` section of the :ref:`UBC-EOAS-MOAD-do
 Compile NEMO-3.6
 ================
 
-Compile the :kbd:`SalishSea` NEMO configuration and link it to XIOS-2 using the :kbd:`salish` architecture definitions,
+Compile the ``SalishSea`` NEMO configuration and link it to XIOS-2 using the ``salish`` architecture definitions,
 distributing the compilation over 8 cores.
 The NEMO ARCH files use the :envvar:`XIOS_HOME` environment variable to find the XIOS-2 library you built above.
 :envvar:`XIOS_HOME` *must* be an absolute path to your XIOS-2 clone directory.
@@ -184,7 +184,7 @@ Look at the Results
 A number of notebooks that look at NetCDF files are available in :file:`tools/analysis_tools/`.
 To start these,
 go to the top level directory of the :file:`analysis` repo on your local machine
-(not on :kbd:`salish`) and type:
+(not on ``salish``) and type:
 
 .. code-block:: bash
 
@@ -314,7 +314,7 @@ You can manually retrieve them from the paths given in the email.
 
 To resolve the copy error and get the files to be renames to :file:`stdout` and :file:`stderr` in your results directory you need to set up an ssh key pair *without a passphrase*,
 configure :command:`ssh` to be able to use them,
-and make the key pair trusted on :kbd:`salish`.
+and make the key pair trusted on ``salish``.
 The steps to do that are:
 
 #. Create a passphrase-less ssh key pair:
@@ -337,9 +337,9 @@ The steps to do that are:
          User dlatorne
          IdentityFile ~/.ssh/salish_torque_id_rsa
 
-   replacing :kbd:`dlatorne` with your user id.
+   replacing ``dlatorne`` with your user id.
 
-#. Make the key pair trusted on :kbd:`salish` by appending the public key to your :file:`$HOME/.ssh/authorized_keys` file:
+#. Make the key pair trusted on ``salish`` by appending the public key to your :file:`$HOME/.ssh/authorized_keys` file:
 
    .. code-block:: bash
 
