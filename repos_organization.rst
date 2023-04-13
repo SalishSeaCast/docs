@@ -1,6 +1,6 @@
 .. _team-repos:
 
-Organization of Mercurial Repositories
+Organization of Git Repositories
 ======================================
 
 General
