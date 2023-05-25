@@ -134,13 +134,30 @@ or you can set and export the value of :envvar:`XIOS_HOME` in your :file:`$HOME/
     cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
     XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./maketools -n REBUILD_NEMO -m X64_GRAHAM
 
+It typically takes about 3.5 minutes to build a NEMO configuration on ``graham``,
+and about 15 seconds to build ``REBUILD_NEMO``.
+
 To build a configuration other than ``SalishSeaCast``, 
 replace ``SalishSeaCast`` with the name of the configuration to be built, e.g. ``SMELT``:
 
 .. code-block:: bash
 
     cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SMELT -m X64_CEDAR -j 8
+    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SMELT -m X64_GRAHAM -j 8
+
+
+If you need to do a clean build of a NEMO configuration,
+you can use:
+
+.. code-block:: bash
+
+    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+    ./makenemo -n SalishSeaCast clean
+    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m X64_GRAHAM -j 8
+
+to clear away all artifacts of the previous build and do a fresh one.
+To clean and rebuild a different configuration,
+replace ``SalishSeaCast`` with the name of the configuration.
 
 
 Prepare and Execute Runs
@@ -173,7 +190,7 @@ and gather the results for a run:
 and the job identifier assigned by the queue manager,
 something like:
 
-.. code-block:: bash
+.. code-block:: text
 
     salishsea_cmd.run INFO: Created run directory /scratch/dlatorne/20mar17nowcast16x34_2017-10-06T101548.694389-0700
     salishsea_cmd.run INFO: Submitted batch job 1578481
