@@ -54,8 +54,9 @@ linkcheck_ignore = [
     'https://github.com/SalishSeaCast/SoG-Obs',
     'https://github.com/SalishSeaCast/XIOS-1.0',
     'https://github.com/SalishSeaCast/XIOS-2',
-    # wiley.com throws 403: Forbidden errors for DOI links
-    'https://onlinelibrary.wiley.com/doi/',   
+    # wiley.com and tandfonline.com throw 403: Forbidden errors for DOI links
+    'https://onlinelibrary.wiley.com/doi/',
+    'https://www.tandfonline.com/doi/',
 ]
 
 todo_include_todos = True

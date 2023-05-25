@@ -427,5 +427,5 @@ References
 * Sanderson et al (1986)
 * Thomson, 1982: Physical Oceanography of the BC Coast.
 
-.. _10.1080/07055900.2011.637667: https://dx.doi.org/10.1080/07055900.2011.637667
+.. _10.1080/07055900.2011.637667: https://www.tandfonline.com/doi/abs/10.1080/07055900.2011.637667
 
