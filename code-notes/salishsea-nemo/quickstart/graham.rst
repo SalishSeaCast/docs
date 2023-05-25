@@ -96,13 +96,62 @@ Clone the repos needed to run the model:
 Install the Command Processor Packages
 ======================================
 
-Install the :ref:`NEMO-CommandProcessor` and :ref:`SalishSeaCmdProcessor` Python packages:
+Download and install the Miniforge distribution of :program:`conda`:
+
+.. code-block:: bash
+
+    wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+    bash Miniforge3-Linux-x86_64.sh
+
+Create a ``salishsea-cmd`` conda environment:
 
 .. code-block:: bash
 
     cd $PROJECT/$USER/MEOPAR/
+    conda env create -f SalishSeaCmd/envs/environment-hpc.yaml
+
+Install the :ref:`NEMO-CommandProcessor` and :ref:`SalishSeaCmdProcessor` Python packages:
+
+.. code-block:: bash
+
+    conda activate salishsea-cmd
     python3 -m pip install --user --editable NEMO-Cmd
     python3 -m pip install --user --editable SalishSeaCmd
+
+Confirm that the :ref:`SalishSeaCmdProcessor` works in your base environment
+(i.e. without the ``salishsea-cmd`` environment activated):
+
+.. code-block:: bash
+
+    conda deactivate
+    salishsea --help
+
+You should see output like:
+
+.. code-block:: text
+
+    usage: salishsea [--version] [-v | -q] [--log-file LOG_FILE] [-h] [--debug]
+
+    SalishSeaCast NEMO Command Processor
+
+    options:
+    --version             show program's version number and exit
+    -v, --verbose         Increase verbosity of output. Can be repeated.
+    -q, --quiet           Suppress output except warnings and errors.
+    --log-file LOG_FILE
+                            Specify a file to log output. Disabled by default.
+    -h, --help            Show help message and exit.
+    --debug               Show tracebacks on errors.
+
+    Commands:
+    combine  Combine per-processor files from an MPI NEMO run into single files (NEMO-Cmd)
+    complete  print bash completion command (cliff)
+    deflate  Deflate variables in netCDF files using Lempel-Ziv compression. (NEMO-Cmd)
+    gather  Gather results from a NEMO run. (NEMO-Cmd)
+    help  print detailed help for another command (cliff)
+    prepare  Prepare a SalishSeaCast NEMO run.
+    run  Prepare, execute, and gather results from a SalishSeaCast NEMO model run.
+    split-results  Split the results of a multi-day SalishSeaCast NEMO model run (e.g. a hindcast run)
 
 
 Compile XIOS-2
