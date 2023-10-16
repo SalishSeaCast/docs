@@ -5,6 +5,9 @@ on:
     branches: ['*']
   schedule:
     - cron: 43 4 8 * *  # 04:43 UTC on the 8th day of each month
+  # Enable workflow to be triggered from GitHub CLI, browser, or via API
+  # primarily for testing conda env solution for new Python versions
+  workflow_dispatch:
 
 jobs:
   sphinx-linkcheck:
