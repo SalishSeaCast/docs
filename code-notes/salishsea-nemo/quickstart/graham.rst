@@ -255,6 +255,23 @@ Please see :command:`salishsea help run` or the
 You can use the batch job number with :command:`squeue --job` and :command:`sacct --job` 
 to monitor the execution status of your job.
 
+The command alias:
+
+.. code-block:: bash
+
+    alias sq='squeue -o "%.12i %.8u %.9a %.22j %.2t %.10r %.19S %.10M %.10L %.6D %.5C %P %N"'
+
+provides more informative output from :command:`squeue`.
+Add the alias to your :file:`$HOME/.bashrc` file so that it is available in every terminal session.
+You can use as:
+
+* :command:`sq -u $USER` to see all of your queued jobs
+* :command:`sq -A rrg-allen,def-allen` to see all of the group's queued jobs
+* :command:`sq --job job-number`,
+  where `job-number` is the batch job number provided in the output of a :command:`salishsea run` 
+  command,
+  to see the information about a specific job
+
 When the job completes the results should have been gathered in the directory you specified 
 in the :command:`salishsea run` command and the temporary run directory should have been deleted.
 
