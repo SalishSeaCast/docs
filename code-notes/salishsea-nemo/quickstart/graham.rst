@@ -103,6 +103,10 @@ Download and install the Miniforge distribution of :program:`conda`:
     wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
     bash Miniforge3-Linux-x86_64.sh
 
+Accept the defaults offered for all of the settings.
+Exit your terminal session on ``graham`` with :command:`exit` and start a new session to ensure that
+the Miniforge configuration takes effect and the :command:`conda` command is available.
+
 Create a ``salishsea-cmd`` conda environment:
 
 .. code-block:: bash
