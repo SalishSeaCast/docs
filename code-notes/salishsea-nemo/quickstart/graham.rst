@@ -223,7 +223,7 @@ The run description file is described in the :ref:`salishseacmd:RunDescriptionFi
 of the :ref:`salishseacmd:SalishSeaCmdProcessor` documentation.
 The namelists are described in the `NEMO-3.6 Book`_.
 
-.. _NEMO-3.6 Book: https://zenodo.org/record/3248739
+.. _NEMO-3.6 Book: https://zenodo.org/records/3248739
 
 Please see the sections below for details of using forcing climatology and 
 shared daily forcing files in your runs,
