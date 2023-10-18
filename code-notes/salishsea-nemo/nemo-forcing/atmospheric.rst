@@ -90,7 +90,7 @@ An example of the use of :program:`get_weight_nemo` to create a weights file for
 operational West deployment of Environment Canada's `High Resolution Deterministic Prediction 
 System`_ (HRDPS) is presented here:
 
-.. _High Resolution Deterministic Prediction System: https://weather.gc.ca/grib/grib2_HRDPS_HR_e.html
+.. _High Resolution Deterministic Prediction System: https://eccc-msc.github.io/open-data/msc-data/nwp_hrdps/readme_hrdps_en/
 
 Clone the :ref:`NEMO_EastCoast-repo` repo on :kbd:`salish` and edit the 
 :file:`NEMO_Preparation/4_weights_ATMOS/make.sh` file to comment out the default build commands 
