@@ -12,7 +12,7 @@ Digital Research Alliance of Canada `graham.computecanada.ca`_ HPC cluster.
 The process described here should be applicable with little or no change to the other
 `Alliance HPC clusters`_.
 
-.. _Alliance HPC clusters: https://docs.alliancecan.ca/wiki/Getting_started#What_resources_are_available?
+.. _Alliance HPC clusters: https://docs.alliancecan.ca/wiki/Getting_started#What_systems_are_available?
 
 Before going through the process described here,
 you should have completed the steps in :ref:`moaddocs:InitialSetupOnGraham` 
