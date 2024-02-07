@@ -24,6 +24,7 @@ import os
 # or your custom ones.
 extensions = [
     'nbsphinx',
+    "notfound.extension",
     'IPython.sphinxext.ipython_console_highlighting',
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
