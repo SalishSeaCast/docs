@@ -27,5 +27,7 @@ dependencies:
   - nbsphinx
   - pip
   - python=3.12
-  - sphinx
-  - sphinx_rtd_theme=1.2
+  - sphinx=7.2.6
+
+  - pip:
+    - sphinx_rtd_theme
