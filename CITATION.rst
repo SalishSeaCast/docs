@@ -226,12 +226,12 @@ Assessment of Nutrient Supply by a Tidal Jet in the Northern Strait of Georgia B
 Cluster Analysis of Biophysical Dynamics
 ========================================
 
-A cluster-based tool for model analysis and evaluation was developed and used to 
+A cluster-based tool for model analysis and evaluation was developed and used to
 determine biophysical dynamics of the system in:
 
-Jarníková, T., Olson, E. M., Allen, S. E., Ianson, D., and Suchy, K. D., **2021**. 
-A Clustering Approach to Determine Biophysical Provinces and Physical Drivers of 
-Productivity Dynamics in a Complex Coastal Sea. 
+Jarníková, T., Olson, E. M., Allen, S. E., Ianson, D., and Suchy, K. D., **2021**.
+A Clustering Approach to Determine Biophysical Provinces and Physical Drivers of
+Productivity Dynamics in a Complex Coastal Sea.
 *Ocean Sci. Discuss.*, 1-36.
 `https://doi.org/10.5194/os-2021-66`_
 
@@ -241,30 +241,30 @@ Productivity Dynamics in a Complex Coastal Sea.
 
     @article{Jarnikova-etal-2021,
         author = "Jarníková, T., Olson, E. M., Allen, S. E., Ianson, D., and Suchy, K. D.",
-        title = "A clustering approach to determine biophysical provinces and physical 
+        title = "A clustering approach to determine biophysical provinces and physical
     drivers of productivity dynamics in a complex coastal sea",
         journal = "Ocean Sci. Discuss.",
         year = "2021",
         url = "https://doi.org/10.5194/os-2021-66",
-        abstract = "The balance between ocean mixing and stratification influences 
-    primary productivity through light limitation and nutrient supply in the 
-    euphotic ocean. Here, we apply a hierarchical clustering algorithm 
-    (Ward's method) to four factors relating to stratification and depth-integrated 
-    phytoplankton biomass extracted from a biophysical regional ocean model of the 
-    Salish Sea to assess spatial co-occurrence. Running the clustering algorithm on 
-    four years of model output, we identify distinct regions of the model domain that 
-    exhibit contrasting wind and freshwater input dynamics, as well as regions of 
-    varying watercolumn-averaged vertical eddy diffusivity and halocline depth regimes. 
-    The spatial regionalizations in physical variables are similar in all four 
-    analyzed years. We also find distinct interannually consistent biological zones. 
-    In the Northern Strait of Georgia and Juan de Fuca Strait, a deeper winter 
-    halocline and episodic summer mixing coincide with higher summer diatom abundance, 
-    while in the Fraser River stratified Central Strait of Georgia, shallower 
-    haloclines and stronger summer stratification coincide with summer flagellate 
-    abundance. Cluster based model results and evaluation suggest that the 
-    Juan de Fuca Strait supports more biomass than previously thought. Our approach 
-    elucidates probable physical mechanisms controlling phytoplankton abundance and 
-    composition. It also demonstrates a simple, powerful technique for finding 
+        abstract = "The balance between ocean mixing and stratification influences
+    primary productivity through light limitation and nutrient supply in the
+    euphotic ocean. Here, we apply a hierarchical clustering algorithm
+    (Ward's method) to four factors relating to stratification and depth-integrated
+    phytoplankton biomass extracted from a biophysical regional ocean model of the
+    Salish Sea to assess spatial co-occurrence. Running the clustering algorithm on
+    four years of model output, we identify distinct regions of the model domain that
+    exhibit contrasting wind and freshwater input dynamics, as well as regions of
+    varying watercolumn-averaged vertical eddy diffusivity and halocline depth regimes.
+    The spatial regionalizations in physical variables are similar in all four
+    analyzed years. We also find distinct interannually consistent biological zones.
+    In the Northern Strait of Georgia and Juan de Fuca Strait, a deeper winter
+    halocline and episodic summer mixing coincide with higher summer diatom abundance,
+    while in the Fraser River stratified Central Strait of Georgia, shallower
+    haloclines and stronger summer stratification coincide with summer flagellate
+    abundance. Cluster based model results and evaluation suggest that the
+    Juan de Fuca Strait supports more biomass than previously thought. Our approach
+    elucidates probable physical mechanisms controlling phytoplankton abundance and
+    composition. It also demonstrates a simple, powerful technique for finding
     structure in large datasets and determining boundaries of biophysical provinces.",
         doi = "10.5194/os-2021-66",
     }
@@ -273,7 +273,7 @@ Productivity Dynamics in a Complex Coastal Sea.
 SKOG, The Carbonate Chemistry Component of SalishSeaCast
 ========================================================
 
-The three-dimensional carbonate chemistry model was developed and used to determine 
+The three-dimensional carbonate chemistry model was developed and used to determine
 the anthropogenic increase in Salish Sea coastal carbon content in:
 
 Jarníková T., Ianson D., Allen S.E., Shao A.E., Olson E.M.. **2022**.
@@ -319,4 +319,62 @@ Across a Sensitive Coastal System.
     show that estuaries throughout the Pacific Rim have already undergone a similar
     saturation state regime shift.",
         doi = "10.1029/2021GB007024",
+    }
+
+
+Zooplankton Spatial Distribution and Model Evaluation
+=====================================================
+
+SalishSeaCast was used to examine zooplankton dynamics in the Salish Sea and zooplankton
+model classes were evaluated against a transboundary observation dataset in:
+
+Suchy, K. D., Olson, E. M., Allen, S. E., Galbraith, M., Herrmann, B., Keister, J.E.,
+Perry, R.I., Sastri, A. R., Young, K., **2023**.
+Seasonal and regional variability of model-based zooplankton biomass in the Salish Sea and
+evaluation against observations.
+*Progress in Oceanography*, 219, 103171.
+`https://doi.org/10.1016/j.pocean.2023.103171`_
+
+.. _https://doi.org/10.1016/j.pocean.2023.103171: https://doi.org/10.1016/j.pocean.2023.103171
+
+.. code-block:: tex
+
+    @article{Suchy-etal-2023,
+        author = "Suchy, K. D., Olson, E. M., Allen, S. E., Galbraith, M., Herrmann, B.,
+    Keister, J.E., Perry, R.I., Sastri, A. R., Young, K.",
+        title = "Seasonal and regional variability of model-based zooplankton biomass
+    in the Salish Sea and evaluation against observations",
+        journal = "Progress in Oceanography",
+        year = "2023",
+        volume = "219",
+        pages = "103171",
+        issn = "0079-6611",
+        url = "https://doi.org/10.1016/j.pocean.2023.103171",
+        keywords = "Zooplankton, Salish Sea, Biogeochemical model, Model evaluation,
+    Transboundary studies, Strait of Georgia, Puget Sound",
+        abstract = "We used a three-dimensional coupled biophysical model to examine
+    zooplankton dynamics in the Salish Sea, NE Pacific. First, we evaluated the two
+    zooplankton classes of the SalishSeaCast model using a transboundary zooplankton
+    dataset comprised of observation data from the Canadian and United States waters
+    of the Salish Sea from 2015 to 2019. Model zooplankton classes correspond to
+    micro- and meso-zooplankton whose biomass is tightly coupled to phytoplankton
+    through modelled food web dynamics (Z1) and mesozooplankton with life cycle-based
+    seasonal grazing impacts (Z2). Overall, the model effectively captured seasonal
+    patterns in observed biomass, although with slightly higher biomass estimates for
+    both Z1 and Z2 (Bias = 0.10 and 0.08 g C m−2, respectively). Model fit varied
+    regionally, with a weaker model fit being observed in nearshore regions.
+    In addition, an autumn peak in Z2 was observed in the model, but not in the
+    observations, suggesting some seasonal variations in model fit. Following the model
+    evaluation, we used the model to determine seasonal and regional patterns of
+    zooplankton grazing. Seasonally, the main peak in modelled zooplankton biomass
+    increased in April or May in most of the regions defined within the Salish Sea and
+    was driven by grazing on diatoms. Regionally, depth-integrated zooplankton biomass
+    was consistently highest in areas adjacent to regions of strong tidal mixing.
+    In addition, model-based zooplankton grazing was highest in the tidally mixed
+    regions where phytoplankton biomass was high due to advection into the region
+    despite low primary productivity. Our model-based results provide an opportunity
+    to examine bottom-up food web processes at spatio-temporal scales not achievable
+    with in situ sampling and help to elucidate key drivers of lower trophic level
+    dynamics within the Salish Sea."
+        doi = "10.1016/j.pocean.2023.103171",
     }
