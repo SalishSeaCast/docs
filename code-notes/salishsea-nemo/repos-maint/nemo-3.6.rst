@@ -176,6 +176,6 @@ Some of these are fixed in NEMO upstream:
 
 #. Escape 'ls' in :file:`Fmake_WORK.sh`, `Ticket 1895`_, `Changeset 8527`_
 
-.. _Changeset 8527: https://forge.ipsl.jussieu.fr/nemo/changeset/8527
-.. _Ticket 1895: https://forge.ipsl.jussieu.fr/nemo/ticket/1895
+.. _Changeset 8527: https://forge.ipsl.fr/nemo/changeset/8527
+.. _Ticket 1895: https://forge.ipsl.fr/nemo/ticket/1895
 

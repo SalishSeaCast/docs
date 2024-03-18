@@ -7,7 +7,7 @@ Initially, several adaptations to the NEMO code were necessary in order to use B
 These were carried out using the NEMO development branch, :kbd:`dev_r5144_CMCC5_BDY_for_TOP`, as a template. The `ticket`_ associated
 with that branch has since been closed.
 
-.. _ticket: https://forge.ipsl.jussieu.fr/nemo/ticket/1441
+.. _ticket: https://forge.ipsl.fr/nemo/ticket/1441
 
 
 Code Changes
