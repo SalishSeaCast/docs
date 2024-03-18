@@ -22,7 +22,7 @@ The following steps took the `NEMO-3.1`_ repo from initialization to a checkout 
 ``https://forge.ipsl.jussieu.fr/nemo/svn/tags/nemo_v3_1`` that could be built on :kbd:`jasper.westgrid.ca` and used to successfully run the :kbd:`GYRE` configuration:
 
 * An :command:`svn` checkout of the trunk of the :kbd:`modipsl` framework was done from
-  ``http://forge.ipsl.jussieu.fr/igcmg/svn/modipsl/trunk``.
+  ``http://forge.ipsl.fr/igcmg/svn/modipsl/trunk``.
   That yielded revision 2163.
   The repo state was tagged as `modipsl-r2163`_.
 

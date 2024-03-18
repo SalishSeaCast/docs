@@ -6,7 +6,7 @@ These are notes on building and running NEMO v3.1 from ``https://forge.ipsl.juss
 The "Installing NEMO using modipsl" instructions
 (``https://www.nemo-ocean.eu/Using-NEMO/User-Guides/Basics/NEMO-Quick-Start-Guide``)
 and the "modipsl documentation"
-(``http://forge.ipsl.jussieu.fr/igcmg/wiki/platform/en/documentation/C_installation``)
+(``http://forge.ipsl.fr/igcmg/wiki/platform/en/documentation/C_installation``)
 provided some guidance for the creation of the notes below.
 
 
@@ -19,7 +19,7 @@ Getting the Code
 
     mkdir nemo31
     cd nemo31
-    svn checkout http://forge.ipsl.jussieu.fr/igcmg/svn/modipsl/trunk modipsl
+    svn checkout http://forge.ipsl.fr/igcmg/svn/modipsl/trunk modipsl
 
 * Edit :file:`modipsl/util/mod.def` to add a :kbd:`NEMO_31` section containing::
 

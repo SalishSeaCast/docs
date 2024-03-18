@@ -26,10 +26,10 @@ as :command:`bash` script that runs the build tool chain described below,
 and the :file:`modipsl/` directory.
 
 :kbd:`modipsl`
-(``http://forge.ipsl.jussieu.fr/igcmg/wiki/platform/en/documentation/J_outils#modipsl``)
+(``http://forge.ipsl.fr/igcmg/wiki/platform/en/documentation/J_outils#modipsl``)
 is the framework that was used to obtain and build the NEMO code prior to NEMO up to v3.2.
 :kbd:`modipsl` is available via anonymous :command:`svn` checkout from
-``http://forge.ipsl.jussieu.fr/igcmg/svn/modipsl/``.
+``http://forge.ipsl.fr/igcmg/svn/modipsl/``.
 However,
 it is unclear what revision/tag of :kbd:`modipsl` the tarball contains.
 

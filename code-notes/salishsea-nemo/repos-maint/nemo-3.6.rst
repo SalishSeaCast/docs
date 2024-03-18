@@ -9,7 +9,7 @@ NEMO-3.6 Code Repo Maintenance
 Set-up
 ======
 
-The :file:`/ocean/sallen/hg_repos/NEMO-3.6-hg-mirror` repository is an :command:`svn` checkout of ``http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE`` and also a read-only Mercurial repository.
+The :file:`/ocean/sallen/hg_repos/NEMO-3.6-hg-mirror` repository is an :command:`svn` checkout of ``http://forge.ipsl.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE`` and also a read-only Mercurial repository.
 It was initialized with:
 
 .. code-block:: bash

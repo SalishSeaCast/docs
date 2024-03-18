@@ -157,7 +157,7 @@ NEMO-3.6-code
 * CeCILL license, copyright Centre National de la Recherche Scientifique CNRS
 * NEMO-3.6 code that we run
 * a merge of the :kbd:`http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE` and our local code
-* maintenance of the repo to handle the merges is decribed in :ref:`NEMO-3.6CodeRepoMaintenance`
+* maintenance of the repo to handle the merges is described in :ref:`NEMO-3.6CodeRepoMaintenance`
 * GitHub: https://github.com/SalishSeaCast/NEMO-3.6-code
 * documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/repos-maint/nemo-3.6.html
 
@@ -168,10 +168,10 @@ XIOS-2 (XML I/O Server)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * private
-  (because the canonical source for this code is :kbd:`http://forge.ipsl.jussieu.fr/ioserver/wiki`)
+  (because the canonical source for this code is :kbd:`http://forge.ipsl.fr/ioserver/wiki`)
 * CeCILL_V2 license, copyright Centre National de la Recherche Scientifique CNRS
 * XIOS-2.0 code that we run with NEMO-3.6
-* a checkout of :kbd:`http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/trunk`
+* a checkout of :kbd:`http://forge.ipsl.fr/ioserver/svn/XIOS/trunk`
 * maintenance of the repo to handle the merging in changes from upstream is decribed in :ref:`XIOS-2CodeRepoMaintenance`
 * GitHub: https://github.com/SalishSeaCast/XIOS-2
 * documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/repos-maint/xios-2.html
@@ -399,10 +399,10 @@ XIOS-1.0 (XML I/O Server)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * private
-  (because the canonical source for this code is :kbd:`http://forge.ipsl.jussieu.fr/ioserver/wiki`)
+  (because the canonical source for this code is :kbd:`http://forge.ipsl.fr/ioserver/wiki`)
 * CeCILL_V2 license, copyright Centre National de la Recherche Scientifique CNRS
 * XIOS-1.0 code that we run with NEMO-3.6
-* a checkout of the :kbd:`http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS/branchs/xios-1.0` branch
+* a checkout of the :kbd:`http://forge.ipsl.fr/ioserver/svn/XIOS/branchs/xios-1.0` branch
 * GitHub: https://github.com/SalishSeaCast/XIOS-1.0
 
 .. note::
