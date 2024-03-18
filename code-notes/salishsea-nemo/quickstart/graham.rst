@@ -26,8 +26,9 @@ On ``graham`` the module loads that are required to build and run NEMO are:
 
 .. code-block:: bash
 
-    module load netcdf-fortran-mpi/4.6.0
-    module load perl/5.30.2
+    module load StdEnv/2023
+    module load netcdf-fortran-mpi/4.6.1
+    module load perl/5.36.1
 
 You can manually load the modules each time you log in,
 or you can add the above lines to your :file:`$HOME/.bashrc` file so that they are
@@ -181,9 +182,9 @@ or you can set and export the value of :envvar:`XIOS_HOME` in your :file:`$HOME/
 .. code-block:: bash
 
     cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m X64_GRAHAM -j 8
+    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m GCC_GRAHAM -j 8
     cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./maketools -n REBUILD_NEMO -m X64_GRAHAM
+    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./maketools -n REBUILD_NEMO -m GCC_GRAHAM
 
 It typically takes about 3.5 minutes to build a NEMO configuration on ``graham``,
 and about 15 seconds to build ``REBUILD_NEMO``.
@@ -194,7 +195,7 @@ replace ``SalishSeaCast`` with the name of the configuration to be built, e.g. `
 .. code-block:: bash
 
     cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SMELT -m X64_GRAHAM -j 8
+    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SMELT -m GCC_GRAHAM -j 8
 
 
 If you need to do a clean build of a NEMO configuration,
@@ -204,7 +205,7 @@ you can use:
 
     cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
     ./makenemo -n SalishSeaCast clean
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m X64_GRAHAM -j 8
+    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m GCC_GRAHAM -j 8
 
 to clear away all artifacts of the previous build and do a fresh one.
 To clean and rebuild a different configuration,
