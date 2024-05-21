@@ -56,7 +56,7 @@ python-dateutil==2.8.2
 pytz==2024.1
 pyzmq==25.1.2
 referencing==0.33.0
-requests==2.31.0
+requests==2.32.0
 rpds-py==0.17.1
 setuptools==69.0.3
 six==1.16.0
