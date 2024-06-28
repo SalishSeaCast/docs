@@ -68,6 +68,69 @@ clone the following repositories into your :file:`/data/$USER/MEOPAR/`  workspac
     git clone git@github.com:SalishSeaCast/SalishSeaCmd.git
 
 
+.. _InstallCommandProcessorPackages:
+
+Install the Command Processor Packages
+======================================
+
+This section assumes that you have already installed and configured :command:`conda` in your
+ocean/waterhole working environment (:ref:`/media/doug/warehouse/MOAD/docs/conda_pkg_env_mgr.rst`).
+
+Create a ``salishsea-cmd`` conda environment:
+
+.. code-block:: bash
+
+    cd /data/$USER/MEOPAR/
+    conda env create -f SalishSeaCmd/envs/environment-hpc.yaml
+
+Install the :ref:`NEMO-CommandProcessor` and :ref:`SalishSeaCmdProcessor` Python packages:
+
+.. code-block:: bash
+
+    conda activate salishsea-cmd
+    python -m pip install --user --editable NEMO-Cmd
+    python -m pip install --user --editable SalishSeaCmd
+
+The ``--user`` options in those commands cause the :command:`nemo` and :command:`salishsea`
+command processors to be installed in your :file:`$HOME/.local/` directory tree in a way that allows them to be used without the need to activate the ``salishsea-cmd`` environment.
+The ``--editable`` options install the packages in a way that they can be updated when new features are pushed to GitHub by simply doing a :command:`git pull`  in the package clone directories.
+
+Confirm that the :ref:`SalishSeaCmdProcessor` works in your base environment
+(i.e. without the ``salishsea-cmd`` environment activated):
+
+.. code-block:: bash
+
+    conda deactivate
+    salishsea --help
+
+You should see output like:
+
+.. code-block:: text
+
+    usage: salishsea [--version] [-v | -q] [--log-file LOG_FILE] [-h] [--debug]
+
+    SalishSeaCast NEMO Command Processor
+
+    options:
+    --version             show program's version number and exit
+    -v, --verbose         Increase verbosity of output. Can be repeated.
+    -q, --quiet           Suppress output except warnings and errors.
+    --log-file LOG_FILE
+                            Specify a file to log output. Disabled by default.
+    -h, --help            Show help message and exit.
+    --debug               Show tracebacks on errors.
+
+    Commands:
+    combine  Combine per-processor files from an MPI NEMO run into single files (NEMO-Cmd)
+    complete  print bash completion command (cliff)
+    deflate  Deflate variables in netCDF files using Lempel-Ziv compression. (NEMO-Cmd)
+    gather  Gather results from a NEMO run. (NEMO-Cmd)
+    help  print detailed help for another command (cliff)
+    prepare  Prepare a SalishSeaCast NEMO run.
+    run  Prepare, execute, and gather results from a SalishSeaCast NEMO model run.
+    split-results  Split the results of a multi-day SalishSeaCast NEMO model run (e.g. a hindcast run)
+
+
 .. _CompileXIOS-salish:
 
 Compile XIOS-2
