@@ -38,12 +38,20 @@ You may want to open an EOAS help desk ticket requesting that the ``salish`` :fi
 Clone the Repos
 ===============
 
-Assuming that you are using SSH key authentication on Bitbucket
-(see :ref:`vc-with-hg`),
-clone the :ref:`NEMO-3.6-code-repo`,
-:ref:`XIOS-2-repo`,
-:ref:`NEMO-forcing-repo`,
-and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
+Assuming that you are using SSH key authentication on GitHub
+(see :ref:`moaddocs:CopyYourPublicSshKeyToGitHub`),
+clone the following repositories into your :file:`/data/$USER/MEOPAR/`  workspace:
+
+* :ref:`grid-repo`
+* :ref:`rivers-repo`
+* :ref:`tides-repo`
+* :ref:`tracers-repo`
+* :ref:`NEMO-3.6-code-repo`
+* :ref:`XIOS-ARCH-repo`
+* :ref:`XIOS-2-repo`
+* :ref:`SS-run-sets-repo`
+* :ref:`NEMO-Cmd-repo`
+* :ref:`SalishSeaCmd-repo`
 
 .. code-block:: bash
 
@@ -56,6 +64,8 @@ and :ref:`SS-run-sets-repo` repos into your workspace on :file:`/data/`:
     git clone git@github.com:SalishSeaCast/XIOS-ARCH.git
     git clone git@github.com:SalishSeaCast/XIOS-2.git
     git clone git@github.com:SalishSeaCast/SS-run-sets.git
+    git clone git@github.com:SalishSeaCast/NEMO-Cmd.git
+    git clone git@github.com:SalishSeaCast/SalishSeaCmd.git
 
 
 .. _CompileXIOS-salish:
