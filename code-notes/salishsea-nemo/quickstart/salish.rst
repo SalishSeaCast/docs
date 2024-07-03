@@ -4,11 +4,8 @@
 Working on ``salish`` : NEMO v3.6
 *********************************
 
-This section describes *very* briefly the steps to set up and run the NEMO version 3.6 code on out group's development machine,
+This section describes the steps to set up and run the NEMO version 3.6 code on our group's development machine,
 ``salish``.
-To set up NEMO version 3.4,
-go :ref:`here<SalishNEMO34>`.
-Details of what this all means and why the steps below are what they are can be found in subsequent sections.
 
 
 Create a Workspace
