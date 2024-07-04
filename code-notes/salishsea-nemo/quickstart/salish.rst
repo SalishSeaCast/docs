@@ -139,19 +139,23 @@ Please see the :ref:`moaddocs:XIOS-2-docs` section of the :ref:`UBC-EOAS-MOAD-do
 Compile NEMO-3.6
 ================
 
-Compile the ``SalishSea`` NEMO configuration and link it to XIOS-2 using the ``salish`` architecture definitions,
+Compile the ``SalishSeaCast_Blue`` NEMO configuration and link it to XIOS-2 using the ``salish``
+architecture definitions,
 distributing the compilation over 8 cores.
-The NEMO ARCH files use the :envvar:`XIOS_HOME` environment variable to find the XIOS-2 library you built above.
+The NEMO ARCH files use the :envvar:`XIOS_HOME` environment variable to find the XIOS-2 library you
+built above.
 :envvar:`XIOS_HOME` *must* be an absolute path to your XIOS-2 clone directory.
-You can set :envvar:`XIOS_HOME` on the command-line before the :command:`makenemo` and :command:`maketools` commands as shown below,
+You can set :envvar:`XIOS_HOME` on the command-line before the :command:`makenemo` and
+:command:`maketools` commands as shown below,
 or you can set and export the value of :envvar:`XIOS_HOME` in your :file:`$HOME/.bashrc` file.
 
 .. code-block:: bash
 
     cd NEMO-3.6-code/NEMOGCM/CONFIG
-    XIOS_HOME=/data/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSea -m GCC_SALISH -j8
+    XIOS_HOME=/data/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast_Blue -m GCC_SALISH -j8
 
-The resulting executable is located in :file:`NEMO-3.6-code/NEMOGCM/CONFIG/SalishSea/BLD/bin/`.
+The resulting executable is located in
+:file:`NEMO-3.6-code/NEMOGCM/CONFIG/SalishSeaCast_Blue/BLD/bin/`.
 
 Compile and link the :program:`rebuild_nemo` tool:
 
