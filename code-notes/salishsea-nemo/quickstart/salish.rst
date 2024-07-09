@@ -65,13 +65,13 @@ clone the following repositories into your :file:`/data/$USER/MEOPAR/`  workspac
     git clone git@github.com:SalishSeaCast/SalishSeaCmd.git
 
 
-.. _InstallCommandProcessorPackages:
+.. _InstallCommandProcessorPackages_salish:
 
 Install the Command Processor Packages
 ======================================
 
 This section assumes that you have already installed and configured :command:`conda` in your
-ocean/waterhole working environment (:ref:`/media/doug/warehouse/MOAD/docs/conda_pkg_env_mgr.rst`).
+ocean/waterhole working environment (:ref:`moaddocs:MOAD-CondaPkgAndEnvMgr`).
 
 Create a ``salishsea-cmd`` conda environment:
 
