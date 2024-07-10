@@ -172,12 +172,15 @@ See :ref:`rebuild-nemo-tool` for more information about it.
 Prepare and Execute Runs
 ========================
 
-The :file:`SS-run-sets` :ref:`SS-run-sets-SalishSea` contains a subdirectory called :file:`v201702/` that contains a version controlled sample run description file and namelist segment files.
-Create your own directory in that repo where you can copy,
+The :file:`SS-run-sets` repository contains a subdirectory called :file:`v202111/` that contains  version controlled sample run description files and namelist segment files.
+Create your own directory in that repository
+(e.g. :file:`SS-run-sets/SalishSea/djl/` )
+where you can copy,
 edit,
 and version control those files to define the run that you want to execute.
 
-The run description file is described in the :ref:`RunDescriptionFileStructure` section of the :ref:`project tools documentation <SalishSeaToolsDocs>`.
+The run description file contents are described in the :ref:`salishseacmd:RunDescriptionFileStructure` section of the
+:ref:`SalishSeaCmdProcessor` package .
 The namelists are described in the `NEMO-3.6 Book`_.
 
 .. _NEMO-3.6 Book: https://zenodo.org/record/3248739
@@ -196,8 +199,8 @@ something like:
 
 .. code-block:: bash
 
-    salishsea_cmd.prepare INFO: Created run directory ../../SalishSea/38e87e0c-472d-11e3-9c8e-0025909a8461
-    salishsea_cmd.run INFO: 57.master
+    salishsea_cmd.run INFO: Created run directory /data/dlatorne/MEOPAR/runs/03jul24-blue_2024-07-09T161702.136657-0700
+    salishsea_cmd.run INFO: 8419.master
 
 :command:`salishsea run` has a number of command-line option flags that are useful for controlling details of how runs are executed,
 and for debugging your YAML files and the symlinks in the temporary run directory.
@@ -386,17 +389,17 @@ when your runs on salish finish,
 the system is telling you that it can't copy the :file:`master.OU` (:file:`stdout`) and :file:`master.ER` (:file:`stderr`) files from your run to your results directory.
 You can manually retrieve them from the paths given in the email.
 
-To resolve the copy error and get the files to be renames to :file:`stdout` and :file:`stderr` in your results directory you need to set up an ssh key pair *without a passphrase*,
+To resolve the copy error and get the files to be renamed to :file:`stdout` and :file:`stderr` in your results directory you need to set up an ssh key pair *without a passphrase*,
 configure :command:`ssh` to be able to use them,
 and make the key pair trusted on ``salish``.
 The steps to do that are:
 
-#. Create a passphrase-less ssh key pair:
+#. Create a passphrase-less RSA ssh key pair:
 
    .. code-block:: bash
 
        cd $HOME/.ssh
-       ssh-keygen -C"salish-torque" -f $HOME/.ssh/salish_torque_id_rsa
+       ssh-keygen -t rsa -C"salish-torque" -f $HOME/.ssh/salish_torque_id_rsa
 
    Just hit :kbd:`Enter` twice when you are prompted to enter and confirm a passphrase::
 
