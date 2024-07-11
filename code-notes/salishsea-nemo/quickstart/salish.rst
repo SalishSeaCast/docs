@@ -166,6 +166,9 @@ Compile and link the :program:`rebuild_nemo` tool:
 
 See :ref:`rebuild-nemo-tool` for more information about it.
 
+If you are using VS Code as your editor,
+consider setting up the :ref:`moaddocs:FortranLanguageServer`
+
 
 .. _PrepareRun:
 
