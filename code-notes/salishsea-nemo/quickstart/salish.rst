@@ -186,7 +186,7 @@ The run description file contents are described in the :ref:`salishseacmd:RunDes
 :ref:`SalishSeaCmdProcessor` package .
 The namelists are described in the `NEMO-3.6 Book`_.
 
-.. _NEMO-3.6 Book: https://zenodo.org/record/3248739
+.. _NEMO-3.6 Book: https://zenodo.org/records/3248739
 
 Use :program:`salishsea` :ref:`salishsea-run` to prepare,
 execute,

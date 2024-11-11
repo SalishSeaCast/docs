@@ -318,7 +318,7 @@ salishsea-site
 * Apache v2.0 license, copyright project contributors and UBC
 * code and documentation for the dynamic web app based on the Pyramid framework that serves the `salishsea.eos.ubc.ca`_ domain
 * GitHub: https://github.com/SalishSeaCast/salishsea-site
-* documentation: https://salishsea-site.readthedocs.io/en/latest/
+* documentation: https://salishsea-site.readthedocs.io
 
   .. _salishsea.eos.ubc.ca: https://salishsea.eos.ubc.ca/
 
