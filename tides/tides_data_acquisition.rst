@@ -63,10 +63,10 @@ Now, 120 degrees W (Pacific Standard Time) is 8 hours different to GMT, so to co
 GMTphase = PSTphase - (-8hours)*(1/12.42hours)*360degrees
 
 (For details on this conversion,
-see Manual for Tide Heights Analysis and Prediction by M.G.G. Foreman, 
-Pacific Marine Science Report 77-10, IOS, 1977 (Revised 2004), 
-Section 2.3.1 Astronomical argument and Greenwich phase lag, 
-available `from here <ftp://canuck.seos.uvic.ca/docs/MFTides/heights.pdf>`_ 
+see Manual for Tide Heights Analysis and Prediction by M.G.G. Foreman,
+Pacific Marine Science Report 77-10, IOS, 1977 (Revised 2004),
+Section 2.3.1 Astronomical argument and Greenwich phase lag,
+available `from here <ftp://canuck.seos.uvic.ca/docs/MFTides/heights.pdf>`_
 or `also here <https://www.dfo-mpo.gc.ca/science/data-donnees/tidal-marees/index-eng.html>`_)
 
 This paper also have some info on temperature and salinity in Johnstone Strait that may be useful.
@@ -88,7 +88,7 @@ TPXO7.1 was used for the boundary conditions of the model by :ref:`sutherlandeta
 DFO measured data
 -----------------
 
-Measured water level data can be downloaded in .csv format from Canada's Department of Fisheries 
+Measured water level data can be downloaded in .csv format from Canada's Department of Fisheries
 and Oceans (DFO) `website
 <https://meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp?user=isdm-gdsi&region=MEDS&tst=1&perm=0>`_.
 
@@ -401,18 +401,3 @@ Jan 25 1932 - present
 
 Cherry Point cp0101
 (currents)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

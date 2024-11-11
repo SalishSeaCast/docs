@@ -7,7 +7,7 @@ So the two choices appeared to be:
 a) increase the viscosity or
 b) smooth the bathymetry
 
-As the OSM a talk by Lemarie suggested that small scale codes are often stability limited by the vertical advection. 
+As the OSM a talk by Lemarie suggested that small scale codes are often stability limited by the vertical advection.
 So I wished to evaluate:
 
 1) our velocities, are they as large as we expect and

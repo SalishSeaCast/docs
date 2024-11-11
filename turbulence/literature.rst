@@ -29,9 +29,9 @@ This section documents modelling choices from other studies in this region or si
 |                          | Archipelago     |           |                  | - higher res at surface| - coefficient 0.2       | - background diff 1e-6 m2/s     | - cd0 = 0.003      |
 |                          |                 |           |                  | - higher res at bottom |                         | - surface wave mixing param     | - roughness=0.005m |
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
-| MacCready et al (2009)   |  Columbia River |  ROMS     | - 400m res plume | - s-coordinate         |                         | - GLS                           | - log layer        |  
+| MacCready et al (2009)   |  Columbia River |  ROMS     | - 400m res plume | - s-coordinate         |                         | - GLS                           | - log layer        |
 |                          |  estuary        |           |   & estuary      | - smoothing dh/h<0.8   |                         | - K-eps with Canuto A functions | - quadratic 3e-3   |
-|                          |                 |           |                  | - 20 sigma levels      |                         | - background diff/visc 5e-6 m2/s|                    |       
+|                          |                 |           |                  | - 20 sigma levels      |                         | - background diff/visc 5e-6 m2/s|                    |
 +--------------------------+-----------------+-----------+------------------+------------------------+-------------------------+---------------------------------+--------------------+
 | Baptista et al (2005)    | Columbia River  |  ELCIRC   |                  | - z-coordinate         |                         |   - kkl closure                 | - spatially varying|
 |                          |                 |  within   |                  |                        |                         |   - max diff 5e-5 m2/s          |    cd0             |
@@ -42,7 +42,7 @@ References
 ==========
 
 - Foreman et al (2006). Estuarine and Tidal Currents in the Broughton Archipelago. Atmosphere-Ocean.
-- Foreman et al (2009). A finite volume model simulation for the Broughton Archipelago, Canada. Ocean Modelling. 
+- Foreman et al (2009). A finite volume model simulation for the Broughton Archipelago, Canada. Ocean Modelling.
 - Foreman et al (2012). A Circulation Model for the Discovery Islands, British Columbia. Atmosphere-Ocean.
 - Masson and Cummins (2004). Observations and modeling of seasonal variability in the Straits of Georgia and Juan de Fuca. Journal of Marine Research.
 - Sutherland  et al (2011). A Model Study of the Salish Sea Estuarine Circulation. Journal of Physical Oceanography.

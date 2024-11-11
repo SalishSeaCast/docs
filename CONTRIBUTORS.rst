@@ -48,4 +48,3 @@ etc. to the Salish Sea MEOPAR project repositories hosted on GitHub_:
 * Keith Thompson <keith.thompson@dal.ca>
 * Vasily Korabel <v.korabel@dal.ca>
 * Pramod Thupaki <pramod.thupaki@dfo-mpo.gc.ca>
-

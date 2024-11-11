@@ -16,7 +16,7 @@ Nodes
 ~~~~~~~~
 
 * The ONC VENUS data has been processed by Dr. Rich Pawlowicz and Dr. Mark Halverson, these are the ADCP values in the table below and the opaque ellipses in the figure.
-* Note that the observational values are averaged over approximately 10-11 months where as the model output values were averaged over 8 months - Nov 26, 2014 to Jul 13, 2015. 
+* Note that the observational values are averaged over approximately 10-11 months where as the model output values were averaged over 8 months - Nov 26, 2014 to Jul 13, 2015.
 
 Comparison of the M2 harmonic constituent
 ********************************************
@@ -145,32 +145,12 @@ We have performed additional comparisons of the model phase over the full CODAR 
 
 Foreman Model (2004)
 ------------------------
-In addition to observations, we have compared with a two dimensional, high-resolution barotropic model of the Puget Sound and around Vancouver Island (Foreman et al, 2004). We use this model and a comparison tool because it can help identify which aspects we are represented similarly or differently to the Foreman model and which of these are or aren't comparable to the observations he has reported from current meter deployments. 
+In addition to observations, we have compared with a two dimensional, high-resolution barotropic model of the Puget Sound and around Vancouver Island (Foreman et al, 2004). We use this model and a comparison tool because it can help identify which aspects we are represented similarly or differently to the Foreman model and which of these are or aren't comparable to the observations he has reported from current meter deployments.
 
 Along the thalweg
 ~~~~~~~~~~~~~~~~~~~~~
-* The thalweg is the set of grid points that follow along the deepest point of the Strait of Georgia from every cross section. 
+* The thalweg is the set of grid points that follow along the deepest point of the Strait of Georgia from every cross section.
 
 * When looking along the thalweg we can see that both models are reasonable through the Juan de Fuca Strait. The Salish Sea model is a bit closer to the observations. Through Haro Strait both models seem to be off by 0.3 m/s in the semi-major axis. Through the center of the Strait both models have very low velocities as expected. The northern part of the Strait is better resolved by the Foreman model. The Salish Sea model is more focused on getting the southern area correct and many rivers and passages are closed off in this model which causes this discrepancy. Foreman et al (2004) reports that their discrepancies in the northern Strait either due to either the grid resolution being too coarse and/or the observations being inaccurate.
 
 .. figure:: Foremanthalwegcomp.png
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -149,4 +149,3 @@ References
 * Abeysirigunawardena, D.S., D.J. Smith and B. Taylor, 2011. Extreme Sea Surge Responses to Climate Variability in Coastal British Columbia, Canada, Annals of the Association of American Geographers, 101:5, 992-1010, DOI: 10.1080/00045608.2011.585929
 
 * Pawlowicz, R., B. Beardsley, and S. Lentz, 2002. Classical tidal harmonic analysis including error estimates in MATLAB using T_TIDE, Computers and Geosciences, 28,  929-937
-

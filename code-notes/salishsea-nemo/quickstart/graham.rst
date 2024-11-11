@@ -4,7 +4,7 @@
 Working on ``graham``: NEMO v3.6
 ********************************
 
-This section describes the steps to set up and run the SalishSeaCast NEMO version 3.6 code on the 
+This section describes the steps to set up and run the SalishSeaCast NEMO version 3.6 code on the
 Digital Research Alliance of Canada `graham.computecanada.ca`_ HPC cluster.
 
 .. _graham.computecanada.ca: https://docs.alliancecan.ca/wiki/Graham
@@ -15,7 +15,7 @@ The process described here should be applicable with little or no change to the 
 .. _Alliance HPC clusters: https://docs.alliancecan.ca/wiki/Getting_started#What_systems_are_available?
 
 Before going through the process described here,
-you should have completed the steps in :ref:`moaddocs:InitialSetupOnGraham` 
+you should have completed the steps in :ref:`moaddocs:InitialSetupOnGraham`
 
 
 Modules setup
@@ -169,12 +169,12 @@ Please see the :ref:`moaddocs:XIOS-2-docs` section of the :ref:`UBC-EOAS-MOAD-do
 Compile NEMO-3.6
 ================
 
-Compile the ``SalishSeaCast`` NEMO configuration and link it to XIOS-2, 
+Compile the ``SalishSeaCast`` NEMO configuration and link it to XIOS-2,
 and compile the :program:`rebuild_nemo` tool.
-The NEMO ARCH files use the :envvar:`XIOS_HOME` environment variable to find the XIOS-2 library 
+The NEMO ARCH files use the :envvar:`XIOS_HOME` environment variable to find the XIOS-2 library
 you built above.
 :envvar:`XIOS_HOME` *must* be an absolute path to your XIOS-2 clone directory.
-You can set :envvar:`XIOS_HOME` on the command-line before the :command:`makenemo` 
+You can set :envvar:`XIOS_HOME` on the command-line before the :command:`makenemo`
 and :command:`maketools` commands as shown below,
 or you can set and export the value of :envvar:`XIOS_HOME` in your :file:`$HOME/.bashrc` file.
 
@@ -188,7 +188,7 @@ or you can set and export the value of :envvar:`XIOS_HOME` in your :file:`$HOME/
 It typically takes about 3.5 minutes to build a NEMO configuration on ``graham``,
 and about 15 seconds to build ``REBUILD_NEMO``.
 
-To build a configuration other than ``SalishSeaCast``, 
+To build a configuration other than ``SalishSeaCast``,
 replace ``SalishSeaCast`` with the name of the configuration to be built, e.g. ``SMELT``:
 
 .. code-block:: bash
@@ -214,7 +214,7 @@ replace ``SalishSeaCast`` with the name of the configuration.
 Prepare and Execute Runs
 ========================
 
-The :file:`SS-run-sets/v202111/` directory in the :ref:`SS-run-sets-SalishSea` repo contains 
+The :file:`SS-run-sets/v202111/` directory in the :ref:`SS-run-sets-SalishSea` repo contains
 version controlled sample run description files and namelist segment files.
 In your own directory in that repo copy, edit,
 and version control those files to define the runs that you want to execute.
@@ -225,7 +225,7 @@ The namelists are described in the `NEMO-3.6 Book`_.
 
 .. _NEMO-3.6 Book: https://zenodo.org/records/3248739
 
-Please see the sections below for details of using forcing climatology and 
+Please see the sections below for details of using forcing climatology and
 shared daily forcing files in your runs,
 and examples of run description and namelist file sections.
 
@@ -246,13 +246,13 @@ something like:
     salishsea_cmd.run INFO: Created run directory /scratch/dlatorne/20mar17nowcast16x34_2017-10-06T101548.694389-0700
     salishsea_cmd.run INFO: Submitted batch job 1578481
 
-:command:`salishsea run` has a number of command-line option flags that are useful for controlling 
+:command:`salishsea run` has a number of command-line option flags that are useful for controlling
 details of how runs are executed,
 and for debugging your YAML files and the symlinks in the temporary run directory.
-Please see :command:`salishsea help run` or the 
+Please see :command:`salishsea help run` or the
 :ref:`SalishSeaCmd package docs <salishseacmd:salishsea-run>`.
 
-You can use the batch job number with :command:`squeue --job` and :command:`sacct --job` 
+You can use the batch job number with :command:`squeue --job` and :command:`sacct --job`
 to monitor the execution status of your job.
 
 The command alias:
@@ -268,21 +268,21 @@ You can use as:
 * :command:`sq -u $USER` to see all of your queued jobs
 * :command:`sq -A rrg-allen,def-allen` to see all of the group's queued jobs
 * :command:`sq --job job-number`,
-  where `job-number` is the batch job number provided in the output of a :command:`salishsea run` 
+  where `job-number` is the batch job number provided in the output of a :command:`salishsea run`
   command,
   to see the information about a specific job
 
-When the job completes the results should have been gathered in the directory you specified 
+When the job completes the results should have been gathered in the directory you specified
 in the :command:`salishsea run` command and the temporary run directory should have been deleted.
 
 
 Forcing Climatology and Daily Files
 ===================================
 
-Model runs use a mixture of climatology and daily forcing from other operational models 
+Model runs use a mixture of climatology and daily forcing from other operational models
 or observations:
 
-* Atmospheric forcing is almost always from the Environment and Climate Change Canada (ECCC) 
+* Atmospheric forcing is almost always from the Environment and Climate Change Canada (ECCC)
   `High Resolution Deterministic Prediction System`_ (HRDPS) model hourly forecasts.
 
   .. _High Resolution Deterministic Prediction System: https://eccc-msc.github.io/open-data/msc-data/nwp_hrdps/readme_hrdps_en/
@@ -296,7 +296,7 @@ or observations:
   Temperature and chemistry of the river run-offs are climatological.
 
 * Tracers at the northern boundary in Johnstone Strait are climatological.
-  On the western boundary at the mouth of the Juan de Fuca Strait we have hourly tracer fields 
+  On the western boundary at the mouth of the Juan de Fuca Strait we have hourly tracer fields
   from the University of Washington `LiveOcean model`_ since 4-Feb-2017
   for temperature,
   salinity,

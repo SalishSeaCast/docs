@@ -16,7 +16,7 @@ Observations
 ============
 
 * Current data can be obtained from the `Ocean Networks Canada (ONC) website`_.
-  An example is here: 
+  An example is here:
   https://data.oceannetworks.ca/DataPreview?TREETYPE=1&LOCATION=233&DEVICECATEGORY=69&TIMECONFIG=0
 * The ONC data is then processed by Dr. Rich Pawlowicz.
 * Phase and amplitude information can be reported in papers, we use values reported in Foreman et al. (2004).
@@ -156,4 +156,3 @@ References
 * Parker, B. B., 2007. Tidal analysis and prediction. US Department of Commerce, National Oceanic and Atmospheric Administration, National Ocean Service, Centre for Operational Oceanographic Products and Services, 378 pages.
 
 * Xu, Z., 2000. Ellipse parameters conversion and vertical velocity profiles for tidal currents. Bedford Institute of Oceanography, Dartmouth, Nova Scotch, Canada, 20 pages
-

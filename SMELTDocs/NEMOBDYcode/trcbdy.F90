@@ -19,7 +19,7 @@ MODULE trcbdy
    USE timing                       ! Timing
    USE oce_trc                      ! ocean dynamics and tracers variables
    USE par_trc
-   USE trc                          ! ocean space and time domain variables 
+   USE trc                          ! ocean space and time domain variables
    USE bdylib                       ! for orlanski library routines
    USE lbclnk                       ! ocean lateral boundary conditions (or mpp link)
    USE in_out_manager               ! I/O manager
@@ -28,12 +28,12 @@ MODULE trcbdy
    IMPLICIT NONE
    PRIVATE
 
-   PUBLIC trc_bdy      ! routine called in trcnxt.F90 
-   PUBLIC trc_bdy_dmp  ! routine called in trcstp.F90 
+   PUBLIC trc_bdy      ! routine called in trcnxt.F90
+   PUBLIC trc_bdy_dmp  ! routine called in trcstp.F90
 
    !!----------------------------------------------------------------------
    !! NEMO/OPA 3.6 , NEMO Consortium (2015)
-   !! $Id$ 
+   !! $Id$
    !! Software governed by the CeCILL licence (NEMOGCM/NEMO_CeCILL.txt)
    !!----------------------------------------------------------------------
 CONTAINS
@@ -89,52 +89,52 @@ CONTAINS
    SUBROUTINE bdy_trc_frs( jn, idx, dta, kt )
       !!----------------------------------------------------------------------
       !!                 ***  SUBROUTINE bdy_trc_frs  ***
-      !!                    
+      !!
       !! ** Purpose : Apply the Flow Relaxation Scheme for tracers at open boundaries.
-      !! 
+      !!
       !! Reference : Engedahl H., 1995, Tellus, 365-382.
       !!----------------------------------------------------------------------
       INTEGER,         INTENT(in) ::   kt
       INTEGER,         INTENT(in) ::   jn   ! Tracer index
       TYPE(OBC_INDEX), INTENT(in) ::   idx  ! OBC indices
       TYPE(OBC_DATA),  INTENT(in) ::   dta  ! OBC external data
-      !! 
+      !!
       REAL(wp) ::   zwgt           ! boundary weight
       INTEGER  ::   ib, ik, igrd   ! dummy loop indices
       INTEGER  ::   ii, ij         ! 2D addresses
       !!----------------------------------------------------------------------
       !
       IF( nn_timing == 1 ) CALL timing_start('bdy_trc_frs')
-      ! 
+      !
       igrd = 1                       ! Everything is at T-points here
       DO ib = 1, idx%nblen(igrd)
          DO ik = 1, jpkm1
             ii = idx%nbi(ib,igrd)
             ij = idx%nbj(ib,igrd)
             zwgt = idx%nbw(ib,igrd)
-            tra(ii,ij,ik,jn) = ( tra(ii,ij,ik,jn) + zwgt * ( ( dta%trc(ib,ik) * dta%rn_fac)  & 
+            tra(ii,ij,ik,jn) = ( tra(ii,ij,ik,jn) + zwgt * ( ( dta%trc(ib,ik) * dta%rn_fac)  &
                         &  - tra(ii,ij,ik,jn) ) ) * tmask(ii,ij,ik)
          END DO
-      END DO 
+      END DO
       !
       IF( kt .eq. nit000 ) CLOSE( unit = 102 )
       !
       IF( nn_timing == 1 ) CALL timing_stop('bdy_trc_frs')
       !
    END SUBROUTINE bdy_trc_frs
-  
+
    SUBROUTINE bdy_trc_spe( jn, idx, dta, kt )
       !!----------------------------------------------------------------------
       !!                 ***  SUBROUTINE bdy_trc_frs  ***
-      !!                    
+      !!
       !! ** Purpose : Apply a specified value for tracers at open boundaries.
-      !! 
+      !!
       !!----------------------------------------------------------------------
       INTEGER,         INTENT(in) ::   kt
       INTEGER,         INTENT(in) ::   jn   ! Tracer index
       TYPE(OBC_INDEX), INTENT(in) ::   idx  ! OBC indices
       TYPE(OBC_DATA),  INTENT(in) ::   dta  ! OBC external data
-      !! 
+      !!
       REAL(wp) ::   zwgt           ! boundary weight
       INTEGER  ::   ib, ik, igrd   ! dummy loop indices
       INTEGER  ::   ii, ij         ! 2D addresses
@@ -160,15 +160,15 @@ CONTAINS
    SUBROUTINE bdy_trc_nmn( jn, idx, dta, kt )
       !!----------------------------------------------------------------------
       !!                 ***  SUBROUTINE bdy_trc_nmn  ***
-      !!                    
+      !!
       !! ** Purpose : Duplicate the value for tracers at open boundaries.
-      !! 
+      !!
       !!----------------------------------------------------------------------
       INTEGER,         INTENT(in) ::   kt
       INTEGER,         INTENT(in) ::   jn   ! Tracer index
       TYPE(OBC_INDEX), INTENT(in) ::   idx  ! OBC indices
       TYPE(OBC_DATA),  INTENT(in) ::   dta  ! OBC external data
-      !! 
+      !!
       REAL(wp) ::   zwgt           ! boundary weight
       INTEGER  ::   ib, ik, igrd   ! dummy loop indices
       INTEGER  ::   ii, ij, zcoef, zcoef1, zcoef2, ip, jp   ! 2D addresses
@@ -206,17 +206,17 @@ CONTAINS
       IF( nn_timing == 1 ) CALL timing_stop('bdy_trc_nmn')
       !
    END SUBROUTINE bdy_trc_nmn
- 
+
 
    SUBROUTINE bdy_trc_orlanski( jn, idx, dta, ll_npo )
       !!----------------------------------------------------------------------
       !!                 ***  SUBROUTINE bdy_trc_orlanski  ***
-      !!             
-      !!              - Apply Orlanski radiation to tracers of TOP component. 
-      !!              - Wrapper routine for bdy_orlanski_3d
-      !! 
       !!
-      !! References:  Marchesiello, McWilliams and Shchepetkin, Ocean Modelling vol. 3 (2001)    
+      !!              - Apply Orlanski radiation to tracers of TOP component.
+      !!              - Wrapper routine for bdy_orlanski_3d
+      !!
+      !!
+      !! References:  Marchesiello, McWilliams and Shchepetkin, Ocean Modelling vol. 3 (2001)
       !!----------------------------------------------------------------------
       INTEGER,                      INTENT(in) ::   jn      ! Tracer index
       TYPE(OBC_INDEX),              INTENT(in) ::   idx     ! OBC indices
@@ -228,8 +228,8 @@ CONTAINS
 
       IF( nn_timing == 1 ) CALL timing_start('bdy_trc_orlanski')
       !
-      igrd = 1      ! Orlanski bc on tracers; 
-      !            
+      igrd = 1      ! Orlanski bc on tracers;
+      !
       CALL bdy_orlanski_3d( idx, igrd, trb(:,:,:,jn), tra(:,:,:,jn), (dta%trc * dta%rn_fac), ll_npo )
       !
       IF( nn_timing == 1 ) CALL timing_stop('bdy_trc_orlanski')
@@ -240,13 +240,13 @@ CONTAINS
    SUBROUTINE trc_bdy_dmp( kt )
       !!----------------------------------------------------------------------
       !!                 ***  SUBROUTINE trc_bdy_dmp  ***
-      !!                    
+      !!
       !! ** Purpose : Apply damping for tracers at open boundaries.
       !!             It currently applies the damping to all tracers!!!
-      !! 
+      !!
       !!----------------------------------------------------------------------
       INTEGER,         INTENT(in) ::   kt
-      !! 
+      !!
       INTEGER  ::   jn             ! Tracer index
       REAL(wp) ::   zwgt           ! boundary weight
       REAL(wp) ::   zta, zsa, ztime
@@ -277,7 +277,7 @@ CONTAINS
       IF( nn_timing == 1 ) CALL timing_stop('trc_bdy_dmp')
       !
    END SUBROUTINE trc_bdy_dmp
- 
+
 #else
    !!----------------------------------------------------------------------
    !!   Dummy module                   NO Unstruct Open Boundary Conditions

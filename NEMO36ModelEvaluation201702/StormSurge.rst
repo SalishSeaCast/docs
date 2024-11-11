@@ -29,4 +29,3 @@ One note, the maximum amplitude of the tides seems small.  See the first two fig
 .. figure:: images/ssh_raw.png
 .. figure:: images/ssh_corrected.png
 .. figure:: images/ssh_residuals.png
-

@@ -34,5 +34,3 @@ Barotropic Velocities & SSH
 Built in Flather boundary conditions take the tides (ssh and velocity) and add them to barotropic forcing (ssh and velocity).  These conditions are implemented only on the barotropic velocities directly but affect the ssh indirectly.  We are setting ssh based on Tofino measurements.  We are no forcing barotropic velocities but allowing any "waves" set inside the Strait to propagate out (which is what Flather conditions do).
 
 Velocities set at #2 grid points.
-
-

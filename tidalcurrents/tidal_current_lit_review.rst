@@ -12,10 +12,10 @@ Overview of tidal ellipses
 
 Tidal currents vary a lot within a fjord-like estuarine system. The Salish Sea is not an exception of this. The hydrodynamics of the channel can drastically change the tidal currents depending on the gradient of these variations. We can observe larger current speeds in the many narrow straits of the Georgia Strait, as well as near the entrance, where it connects to the Pacific Ocean. Tidal currents also vary vertically, generally due to bottom friction, but also baroclinic effects. (Parker, 2007)
 
-* Tidal current constituent ellipses describe the flow as it rotates at a single location for a single constituent's cycle. 
+* Tidal current constituent ellipses describe the flow as it rotates at a single location for a single constituent's cycle.
 * Tidal ellipses can communicate a lot about a depth profile of the flow at particular locations with only a couple of parameters. At present, we have focused our analysis on the M2 and K1 constituents because they are the largest components in our domain. The M2 component is much stronger than the K1. (Thomson 1981)
 * Tidal ellipses enable us to see the speed and direction of a flow due to a chosen tidal constituent at every hour of the day as a depth profile using only orthogonal velocities at that point over a long period of time. (Parker, 2007)
-* Comparisons of tidal ellipses from the model output with observations facilitates the understanding of which physical processes are properly and poorly represented and may even inform techniques to improve the poorly represented processes. 
+* Comparisons of tidal ellipses from the model output with observations facilitates the understanding of which physical processes are properly and poorly represented and may even inform techniques to improve the poorly represented processes.
 
 *(b) What have researchers previously done in the Salish Sea and the Strait of Georgia?*
 
@@ -25,21 +25,21 @@ National Oceanic and Atmospheric Administration (2007)
 ----------------------------------------------------------
 
 * Suggest using harmonic constituent ellipses to combine the orthogonal component time series (u and v current vectors)
-* The orthogonal components can be chosen to be north/south or along direction of maximum flood and perpendicular to it.  
+* The orthogonal components can be chosen to be north/south or along direction of maximum flood and perpendicular to it.
 * This book uses the derivation of Doodson and Warburg (1941, p.180-1):
 
-	.. math::	
+	.. math::
 	  N(t) = W_N \cos(\eta t - \kappa_N)
-	
+
 	  E(t) = W_E \cos(\eta t - \kappa_E)
 
 	where :math:`N(t)`, and :math:`E(t)`, are the north and east components of the tidal constituents, :math:`W_N` and :math:`W_E` are the amplitudes of the north and east components, :math:`\eta` is the frequency and :math:`\kappa_N` and :math:`\kappa_E` are the phase lags in the respective direction.
-	
+
 * This can be generalized for any two orthogonal components MJ(t) and MN(t), major and minor components:
 
 	.. math::
 	  MJ(t) = N(t) \cos(\theta) + E(t) \sin(\theta)
-	
+
 	  MN(t) = E(t) \cos(\theta) - N(t) \sin(\theta)
 
 	where :math:`\theta`, is the major axis direction clockwise from the north.
@@ -74,22 +74,22 @@ Short paper describing a technique for ellipse conversion explained in much deta
 
 	.. math::
 	  w = u +iv
-	
+
 	  u = a_u \cos(\omega t - \phi_u)
-	
+
 	  v = a_v \cos(\omega t - \phi_v)
-	
+
 	where :math:`w` is the complex tidal current, :math:`\omega`, is the frequency of the chosen tidal constituent, :math:`\phi_u` and :math:`\phi_v` are the phase lag for the u- and v- components and :math:`a_u` and :math:`a_v` are the amplitudes for the u- and v- components.
-	
+
 
 * Tracing out :math:`w` on a complex plane gives an ellipse, from this ellipse we can calculate many parameters that provide information about the flow.
 
 	.. math::
 	  w = W_p e^{i(\omega t + \theta_p)} + W_m e^{-i(\omega t - \theta_m)}
-	
+
 * From these equations we can extract all the ellipse parameters
 * This is the method we used to calculate the tidal ellipses from the Salish Sea model outputs.
-	
+
 
 .. _Thomson_Huggett:
 
@@ -98,8 +98,8 @@ Thomson R.E. & Huggett W.S. (1980)
 
 Johnstone Strait is part of the domain, it is important to understand the research that has previously been done regarding the area and the observations that are being compiled.
 
-* Five current meters were deployed across the the Johnstone Strait, eastward of Newcastle Sill, in June 1973. 
-* More were deployed between 1976 and 1978. 
+* Five current meters were deployed across the the Johnstone Strait, eastward of Newcastle Sill, in June 1973.
+* More were deployed between 1976 and 1978.
 * Table of 10 stations in the western basin of Johnstone Strait containing the along channel amplitude (semi-major axis) and the phase (from 120 :math:`\deg` W.) and 2 to 10 depths for each station. The moorings were out for 7 to 92 days, depending on the device type, location and start time.
 * The semi-minor axis amplitude was not reported because it is very small in this region.
 * M2 components are only fully resolved for time series that are longer than 27.6 days.

@@ -305,7 +305,7 @@ These are the steps to prepare and queue a spin-up run on :kbd:`jasper.westgrid.
      typically the same value as :kbd:`nn_itend`
 
    Also ensure that :kbd:`ln_rstart` is set to :kbd:`.true.`
-   
+
    A typical :file:`namelist.time` file looks like:
 
    .. code-block:: fortran

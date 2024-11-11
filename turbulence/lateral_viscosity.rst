@@ -2,7 +2,7 @@
 
 Lateral Dynamics
 ================
-The lateral dynamics are controlled in the :file:`namelist.dynamics`. We have decided to experiment with the lateral eddy viscosity :file:`rn_ahm_0_lap`, the biharmonic operator :file:`ln_dynldf_bilap`, and the lateral boundary conditions for momentum set in the :file:`namelist.lateral`. 
+The lateral dynamics are controlled in the :file:`namelist.dynamics`. We have decided to experiment with the lateral eddy viscosity :file:`rn_ahm_0_lap`, the biharmonic operator :file:`ln_dynldf_bilap`, and the lateral boundary conditions for momentum set in the :file:`namelist.lateral`.
 
 Lateral Eddy Viscosity
 --------------------------------------
@@ -28,7 +28,7 @@ The lateral eddy viscosity controls how dissipative the simulation is. Since we 
 
 These simulations were run on :file:`salish` with model time seven days. The boolean :file:`ln_apr_dyn` in :file:`namelist.surface` controls forcing at the free surface due to atmospheric pressure. We are having difficulty with stability when this is set to true and the viscosity is lower than 100. Unfortunately, this type of forcing is likely important when modelling storm surges.
 
-The parameter :file:`rn_avevd` in :file:`namelist.dynamics` controls the vertical eddy viscosity only in areas where/when the stratification is statically unstable. When the model is presented with an unstable stratification it locally increases the amount of vertical diffusion which effectively mixes the unstable region (see :ref:`Vertical`). Through our analysis, we have observed that the stability of the model at lower viscosities depends on how it treats vertical mixing. Thus, this parameter is likely important for achieving stability at low lateral viscosity. This must be investigated further.  
+The parameter :file:`rn_avevd` in :file:`namelist.dynamics` controls the vertical eddy viscosity only in areas where/when the stratification is statically unstable. When the model is presented with an unstable stratification it locally increases the amount of vertical diffusion which effectively mixes the unstable region (see :ref:`Vertical`). Through our analysis, we have observed that the stability of the model at lower viscosities depends on how it treats vertical mixing. Thus, this parameter is likely important for achieving stability at low lateral viscosity. This must be investigated further.
 
 We are still having trouble with stability during our spin up runs. See :ref:`spin-up`.
 
@@ -52,11 +52,11 @@ The biharmonic operator can be used in conjunction with the second order laplaci
 +------------------+---------------------+---------------------+------------------+--------------------------------+
 
 
-Lateral Boundary Conditions 
+Lateral Boundary Conditions
 -----------------------------------------
-Currently we are using partial slip boundary conditions with :file:`rn_shlat =0.5` in :file:`namelist.lateral`. No slip conditions are applied when :file:`rn_shlat =2` and free slip when :file:`rn_shlat =0`. 
+Currently we are using partial slip boundary conditions with :file:`rn_shlat =0.5` in :file:`namelist.lateral`. No slip conditions are applied when :file:`rn_shlat =2` and free slip when :file:`rn_shlat =0`.
 
-At :math:`\nu=50`, we have seen some stablizing features as we take the lateral boundary torwards no slip. It seems that the no slip conditions change the location of the maximum velocities in the island regions, which can have an affect on the mixing. Our concern with no slip stems from resolving the boundary layer. We fear that using no slip BCs will leave the boundary layer unresolved, especially at lower viscosity. 
+At :math:`\nu=50`, we have seen some stablizing features as we take the lateral boundary torwards no slip. It seems that the no slip conditions change the location of the maximum velocities in the island regions, which can have an affect on the mixing. Our concern with no slip stems from resolving the boundary layer. We fear that using no slip BCs will leave the boundary layer unresolved, especially at lower viscosity.
 
 
 +-----------------------+---------------------+---------------------+------------------+----------------------------+

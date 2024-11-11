@@ -35,4 +35,3 @@ If the model is changed and the results need to be regenerated follow the steps 
 	- If only certain parameters are needed, modify the first for loop to only include these in the patch list
 	- ssh onto Salish (optional)
 	- Run the script (using "python batch_5x5.py")
-

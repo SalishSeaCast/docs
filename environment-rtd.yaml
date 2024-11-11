@@ -26,6 +26,7 @@ dependencies:
   - ipython
   - pandoc
   - pip
+  - pre-commit
   - python=3.12
 
   - pip:

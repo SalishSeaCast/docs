@@ -178,4 +178,3 @@ Some of these are fixed in NEMO upstream:
 
 .. _Changeset 8527: https://forge.ipsl.fr/nemo/changeset/8527
 .. _Ticket 1895: https://forge.ipsl.fr/nemo/ticket/1895
-
