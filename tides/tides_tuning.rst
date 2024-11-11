@@ -98,4 +98,3 @@ And final results can be seen in:
 * Jupyter Notebook: `Analysis8Components`_
 
 .. _Analysis8Components: https://nbviewer.org/github/SalishSeaCast/analysis/blob/master/compare_tides/Analysis8Components.ipynb
-

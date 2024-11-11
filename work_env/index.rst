@@ -34,12 +34,12 @@ Other machines that you may need working environments on later include:
 * ``salish.eos.ubc.ca``: Our group compute server that runs Linux and has several disk mounts in common with Waterhole workstations.
   ``salish`` is primarily used for short development runs of the Salish Sea NEMO model.
   ``salish`` has several terabytes of storage in its :file:`/data/` filesystem.
-  If your Waterhole workstation does not have access to :file:`/data/` you should open a ticket 
-  via the :kbd:`Helpdesk` link on https://helpdesk.eoas.ubc.ca/ to request that EOAS Comp Staff 
+  If your Waterhole workstation does not have access to :file:`/data/` you should open a ticket
+  via the :kbd:`Helpdesk` link on https://helpdesk.eoas.ubc.ca/ to request that EOAS Comp Staff
   add a ``salish /data/`` mount on the workstation you are using.
-  That will enable you to read/write files on the ``salish /data/`` filesystem without having to 
+  That will enable you to read/write files on the ``salish /data/`` filesystem without having to
   sign on to ``salish`` or copy the files from one machine to another.
-* One or more of the `Digital Research Alliance of Canada`_ (formerly Compute Canada) HPC clusters 
+* One or more of the `Digital Research Alliance of Canada`_ (formerly Compute Canada) HPC clusters
   :kbd:`graham.computecanada.ca` that run Linux.
   Those machines are used for longer research runs of the model.
 
@@ -49,18 +49,18 @@ When you are ready to run on those machines,
 please see the :ref:`QuickStartGuide` for instructions on setting working environments on them.
 
 ``skookum.eos.ubc.ca`` is our group results storage and web server.
-The SalishSeaCast system results are stored on the :file:`/results/` and :file:`/results2/` 
+The SalishSeaCast system results are stored on the :file:`/results/` and :file:`/results2/`
 file systems on ``skookum``,
-and the Strait of Georgia WaveWatch3 model results and Vancouver Harbour/Fraser River FVCOM model results 
+and the Strait of Georgia WaveWatch3 model results and Vancouver Harbour/Fraser River FVCOM model results
 are stored on the :file:`/opp/` file system on ``skokkum``.
 If your Waterhole workstation does not have access to :file:`/results/`,
 :file:`/results2/`,
-and/or :file:`/opp/` 
-you should open a ticket via the ``Helpdesk`` link on https://helpdesk.eoas.ubc.ca/ to request that 
+and/or :file:`/opp/`
+you should open a ticket via the ``Helpdesk`` link on https://helpdesk.eoas.ubc.ca/ to request that
 EOAS Comp Staff add :file:`/results/`,
 :file:`/results2/`,
 and/or :file:`/opp/` mount(s) on the workstation you are using.
-That will enable you to read files from the those filesystem(s) without have to sign on to ``skookum`` 
+That will enable you to read files from the those filesystem(s) without have to sign on to ``skookum``
 or copy the files from one machine to another.
 
 
@@ -85,7 +85,7 @@ if you wish.
 The instructions and recommendations above are most applicable to doing that on a laptop that runs OS/X or Linux.
 Our best advice for Windows is to install puTTY_ and use it to connect remotely
 (via :program:`ssh`) to your Linux environments
-(though additions to these docs by experienced Windows users who set up a working environment 
+(though additions to these docs by experienced Windows users who set up a working environment
 similar to the one described above are *most* welcome).
 
 .. _puTTY: https://www.chiark.greenend.org.uk/~sgtatham/putty/

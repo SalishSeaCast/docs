@@ -153,4 +153,3 @@ Table 2: The effect of seasonality on tidal ellipse parameters
 * The Central node has a similar but muted difference between the seasons.
 * The bottom ~150m are mostly the same throughout winter and spring. We expect this because there isn't much movement there.
 * The semi-major and semi-minor axis are larger throughout the upper part of the water column in the spring.
-

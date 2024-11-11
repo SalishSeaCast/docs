@@ -81,19 +81,19 @@ Those weight values were subsequently used to create a netCDF4 weights file with
 Creating New Weights Files
 --------------------------
 
-The :program:`NEMO_Preparation/4_weights_ATMOS/get_weight_nemo` program in the 
-:ref:`NEMO_EastCoast-repo` repo can be used in conjunction with a bathymetry file and atmospheric 
+The :program:`NEMO_Preparation/4_weights_ATMOS/get_weight_nemo` program in the
+:ref:`NEMO_EastCoast-repo` repo can be used in conjunction with a bathymetry file and atmospheric
 forcing file(s) to create a weights file that allows NEMO's Interpolation On the Fly
 (IOF)
 feature to use the atmospheric forcing values.
-An example of the use of :program:`get_weight_nemo` to create a weights file for datasets from the 
-operational West deployment of Environment Canada's `High Resolution Deterministic Prediction 
+An example of the use of :program:`get_weight_nemo` to create a weights file for datasets from the
+operational West deployment of Environment Canada's `High Resolution Deterministic Prediction
 System`_ (HRDPS) is presented here:
 
 .. _High Resolution Deterministic Prediction System: https://eccc-msc.github.io/open-data/msc-data/nwp_hrdps/readme_hrdps_en/
 
-Clone the :ref:`NEMO_EastCoast-repo` repo on :kbd:`salish` and edit the 
-:file:`NEMO_Preparation/4_weights_ATMOS/make.sh` file to comment out the default build commands 
+Clone the :ref:`NEMO_EastCoast-repo` repo on :kbd:`salish` and edit the
+:file:`NEMO_Preparation/4_weights_ATMOS/make.sh` file to comment out the default build commands
 and enable the :kbd:`salish` ones:
 
 .. code-block:: bash
@@ -111,7 +111,7 @@ Build :program:`get_weight_nemo`:
 
     $ ./make.sh
 
-:program:`get_weight_nemo` creates a file of weighting factors that allow 
+:program:`get_weight_nemo` creates a file of weighting factors that allow
 atmospheric forcing variable values on one grid to be interpolated on to the model grid
 (as defined in the bathymetry dataset).
 To do that it requires:
@@ -223,8 +223,8 @@ The output should be something like::
 
 and a :file:`met_gem_weight.nc` file should be created.
 
-Use the `I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb`_ notebook to transform 
-:file:`met_gem_weight` into a netCDF4 file called 
+Use the `I_ForcingFiles/Atmos/ImproveWeightsFile.ipynb`_ notebook to transform
+:file:`met_gem_weight` into a netCDF4 file called
 :file:`weights-gem2.5-ops_201702.nc` with well-structured metadata
 (see :ref:`netCDF4FilesCreationAndConventions`).
 

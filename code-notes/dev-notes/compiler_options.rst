@@ -39,4 +39,3 @@ Note that FCFLAGS are fortran 90 flags and FFLAGS are fortran 77 flags.
 * **-traceback:** Tells the compiler to generate extra information in the object file to provide source file traceback information when a severe error occurs at run time
 
 * **-openmp:** Enables the parallelizer to generate multi-threaded code based on the OpenMP* directives.
-

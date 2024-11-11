@@ -21,4 +21,3 @@ It also includes analyses and discussion of decisions that lead to :ref:`SalishS
    AMM12-BDY-analysis-notes
    nemo_3-6_quirks
    nemo_3-4_quirks
-

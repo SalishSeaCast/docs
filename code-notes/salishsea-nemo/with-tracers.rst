@@ -81,6 +81,3 @@ Grid/Input Files
 ----------------
 
 Use appropriate files from the SalishSea configuration.
-
-
-

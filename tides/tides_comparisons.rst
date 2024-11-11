@@ -52,7 +52,3 @@ M2 and K1
 * M2 and K1 tidal ellipses calculated from CODAR current measurements have also been compared to the model output.  The agreement is generally good, but the model currents are somewhat higher!
 
 * Drifter measurements to be made in Sep 2014 will also be used to compare to the modelled tidal ellipses.
-
-
-
-

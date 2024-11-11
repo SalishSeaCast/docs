@@ -7,15 +7,16 @@ We need to test our model to see how well it can represent storm surge events in
 
 High water levels can be due to a combination of high seasonal tide, strong winds, low atmospheric pressure and sea level height anomalies due to ENSO events.
 
+
 What classifies as a storm?
 --------------------------------------
 
-How long is a storm? 
+How long is a storm?
 	* More than 6 hours => the algorithm below finds 65 'storms' from 2002-2012
 	* More than 12 hours => the algorithm below finds 25 'storms' from 2002-2012
 	* Decision: more than 12 hours is a more appropriate number to test
 
-What is the water level elevation during a storm? 
+What is the water level elevation during a storm?
 	* Decision: sea surface anomaly greater than 40cm
 
 Does the storm affect the whole domain or does it not matter?
@@ -32,7 +33,8 @@ Does the storm affect the whole domain or does it not matter?
 			* grid co-ordinates: i=351, j=213
 		* Campbell River
 			* lat/lon: 50.04,-125.25
-			* grid co-ordinates: i=747, j=124 
+			* grid co-ordinates: i=747, j=124
+
 
 Finding storms in the record
 ------------------------------------------
@@ -67,7 +69,7 @@ Outputs a text file called 'storms.txt' that contains a list of the start dates 
 
 gives for Point Atkinson: ::
 
-	Start date 	 	 Duration (hrs) 
+	Start date 	 	 Duration (hrs)
 	02-Jan-2003 04:00:00 	 13
 	13-Mar-2003 04:00:00 	 27
 	14-Mar-2003 23:00:00 	 16
@@ -94,7 +96,8 @@ gives for Point Atkinson: ::
 	30-Nov-2012 21:00:00 	 15
 	01-Dec-2012 16:00:00 	 22
 
-Water level at Point Atkinson 
+
+Water level at Point Atkinson
 ------------------------------------------
 
 Example of hourly water level at Point Atkinson during the storm on 4 February 2004:
@@ -103,15 +106,16 @@ Example of hourly water level at Point Atkinson during the storm on 4 February 2
 
 .. figure:: PtAtkinsonWLev_Feb04.png
 
-Outputting water level data at each hour (or perhaps every 30 minutes?) from the NEMO model should be therefore be appropriate for assessing storm surge performance. 
+Outputting water level data at each hour (or perhaps every 30 minutes?) from the NEMO model should be therefore be appropriate for assessing storm surge performance.
 
-Literature search for big storms 
+
+Literature search for big storms
 -----------------------------------------
 
 * Jan 02, 2003, Victoria
 * Dec 24, 2003, Vancouver
 * Nov 2006, Vancouver
-* Dec 15, 2006, Vancouver 
+* Dec 15, 2006, Vancouver
 * Dec 25, 2008, Vancouver
 * Nov 24, 2011, Vancouver (not within range)
 * Jan 05, 2012, Vancouver (not within range)
@@ -124,10 +128,19 @@ Prediction for 2013/2014 from Storm Surge Almanac:
 
 Also, from Abeysirigunawardena et al (2011), extremes generally occur from October to March.
 
+
 Existing storm surge models
 ---------------------------------------
 
-The Government of British Columbia launched the `BC Storm Surge Forecast System <https://stormsurgebc.ca/index.html>`_ in 2011. This model is driven by the Pacific Ocean Model (which is driven by 7 day weather forecasts from NOAA) and a 6 day forecast from Environment Canada. Forecast bulletins are available for Point Atkinson, Victoria and Campbell River. There is no hindcasting available in the model.
+The Government of Canada launched the `Coastal Flooding Prediction and Alerting Program`_
+in May of 2024.
+The program allows ECCC meteorologists to issue coastal flooding alerts and forecasts across most
+of the country,
+using both the probability and expected impact of an event.
+Those services will give early warning to emergency management organizations and Canadians about
+the risk of coastal flooding.
+
+.. _Coastal Flooding Prediction and Alerting Program: https://www.canada.ca/en/services/environment/weather/other-services/coastal-flooding-prediction-alert.html
 
 
 References
@@ -136,4 +149,3 @@ References
 * Abeysirigunawardena, D.S., D.J. Smith and B. Taylor, 2011. Extreme Sea Surge Responses to Climate Variability in Coastal British Columbia, Canada, Annals of the Association of American Geographers, 101:5, 992-1010, DOI: 10.1080/00045608.2011.585929
 
 * Pawlowicz, R., B. Beardsley, and S. Lentz, 2002. Classical tidal harmonic analysis including error estimates in MATLAB using T_TIDE, Computers and Geosciences, 28,  929-937
-

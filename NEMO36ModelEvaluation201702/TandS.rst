@@ -168,4 +168,3 @@ Below, statistics and plots are for model surface, and the observation - model p
 
 .. _Water quality buoy notebook (daily averages): https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/waterqualitybuoy-daily.ipynb
 .. _Water quality buoy notebook (hourly interpolated averages): https://nbviewer.org/github/SalishSeaCast/analysis-vicky/blob/master/notebooks/ModelEvaluations/waterqualitybuoy-hourly.ipynb
-

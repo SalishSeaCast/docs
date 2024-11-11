@@ -10,7 +10,7 @@ Canadian Hydrographic Service (CHS) Realtime Water Level
 CHS maintains a number of water level observation sites.  `Water level data`_ are downloaded and compared to water levels at the nearest
 model grid point.  Comparison in this document is for Sandy Cove from Aug 2017 - May 2018.
 
-.. _Water level data: https://www.pac.dfo-mpo.gc.ca/science/charts-cartes/obs-app/observed-eng.aspx?StationID=07786
+.. _Water level data: https://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/twl-mne/maps-cartes/inventory-inventaire-eng.asp?user=isdm-gdsi&region=MEDS&tst=1&perm=0
 
 Citizen Science
 ======================================

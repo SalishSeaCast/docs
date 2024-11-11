@@ -32,7 +32,7 @@ you can install `Anaconda`_, which will auto-magically use Python 3.
 .. _Anaconda: https://www.anaconda.com/download
 .. _Jupyter Notebook: https://jupyter.org/
 .. _NumPy: https://numpy.org/doc/stable/reference/index.html
-.. _matplotlib: https://matplotlib.org/contents.html
+.. _matplotlib: https://matplotlib.org/stable/users/
 
 .. code-block:: bash
 

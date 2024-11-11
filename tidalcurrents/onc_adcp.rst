@@ -445,5 +445,3 @@ Preparing the :file:`/ocean/dlatorne/MEOPAR/ONC_ADCP/` Filespace
 
       OCEAN_MEOPAR=/ocean/dlatorne/MEOPAR
         0 10 * * *  ${OCEAN_MEOPAR}/ONC_ADCP/get_VENUS_ADCP.cron.sh
-
-

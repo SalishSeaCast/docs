@@ -58,15 +58,14 @@ linkcheck_ignore = [
     # wiley.com and tandfonline.com throw 403: Forbidden errors for DOI links
     'https://onlinelibrary.wiley.com/doi/',
     'https://www.tandfonline.com/doi/',
+    # intel.com throws 403: Forbidden errors for fortran compiler docs link
+    'https://www.intel.com/content/www/us/en/docs/fortran-compiler/developer-guide-reference/2024-0/overview.html',
 ]
 
 todo_include_todos = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
-
-# The suffix of source filenames.
-source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'

@@ -24,4 +24,3 @@ Code is now slow!  The four days on Jasper took over 4 hours.  The day on Salish
 Tried with a baroclinic time step of 16s, and the barotropic time step unchanged at 2s.  Repeated Oct 26.  Noise seen in surface height as in the large dt cases.  So need to be smaller.
 
 .. figure:: images/dt10dt16etaINislands.png
-

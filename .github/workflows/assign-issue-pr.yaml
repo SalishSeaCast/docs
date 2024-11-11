@@ -14,4 +14,3 @@ jobs:
       issues: write
       pull-requests: write
     uses: UBC-MOAD/gha-workflows/.github/workflows/auto-assign.yaml@main
- 

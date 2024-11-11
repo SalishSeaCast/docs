@@ -15,14 +15,14 @@ We acquired the exact data from Morrison, which includes the runoff volumes for 
 as well as monthly averages. These data are saved in netcdf files in the :ref:`rivers-repo`.
 
 Figure 1 of Morrison et al. (2011) shows the watershed boundaries but for more precise detail,
-some of these boundaries coincide with watershed boundaries shown 
+some of these boundaries coincide with watershed boundaries shown
 `on this ArcGIS map <https://www.arcgis.com/home/webmap/viewer.html?services=aeef4efc47e842a59ea11431fcffa2bd>`_.
 
 Next,
 we split the freshwater runoff from each watershed between the rivers in that watershed.
 To do this, we needed accurate maps of the rivers in the region. The following sources were used:
 
-* For BC, maps of rivers can be found on the Atlas of Canada - 
+* For BC, maps of rivers can be found on the Atlas of Canada -
   `Toporama site <https://atlas.nrcan.gc.ca/toporama/en/index.html>`_.
 
 * For BC, maps of watersheds used to be available at ``http://www.env.gov.bc.ca/fish/pdf/prov_wsgs.pdf``.
@@ -428,4 +428,3 @@ References
 * Thomson, 1982: Physical Oceanography of the BC Coast.
 
 .. _10.1080/07055900.2011.637667: https://www.tandfonline.com/doi/abs/10.1080/07055900.2011.637667
-

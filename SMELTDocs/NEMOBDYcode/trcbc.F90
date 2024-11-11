@@ -4,9 +4,9 @@ MODULE trcbc
    !! TOP :  module for passive tracer boundary conditions
    !!=====================================================================
    !!----------------------------------------------------------------------
-#if  defined key_top 
+#if  defined key_top
    !!----------------------------------------------------------------------
-   !!   'key_top'                                                TOP model 
+   !!   'key_top'                                                TOP model
    !!----------------------------------------------------------------------
    !!   trc_dta    : read and time interpolated passive tracer data
    !!----------------------------------------------------------------------
@@ -22,7 +22,7 @@ MODULE trcbc
    IMPLICIT NONE
    PRIVATE
 
-   PUBLIC   trc_bc_init    ! called in trcini.F90 
+   PUBLIC   trc_bc_init    ! called in trcini.F90
    PUBLIC   trc_bc_read    ! called in trcstp.F90 or within
 
    INTEGER  , SAVE, PUBLIC                             :: nb_trcobc   ! number of tracers with open BC
@@ -41,12 +41,12 @@ MODULE trcbc
    REAL(wp) , SAVE, PUBLIC, ALLOCATABLE, DIMENSION(:)  :: rf_trcfac   ! multiplicative factor for CBC tracer values
    TYPE(FLD), SAVE, PUBLIC, ALLOCATABLE, DIMENSION(:)  :: sf_trccbc   ! structure of data input CBC (file informations, fields read)
    TYPE(MAP_POINTER), ALLOCATABLE, DIMENSION(:) :: nbmap_ptr   ! array of pointers to nbmap
-   
+
    !! * Substitutions
 #  include "domzgr_substitute.h90"
    !!----------------------------------------------------------------------
    !! NEMO/OPA 3.3 , NEMO Consortium (2010)
-   !! $Id: trcbc.F90 5215 2015-04-15 16:11:56Z nicolasmartin $ 
+   !! $Id: trcbc.F90 5215 2015-04-15 16:11:56Z nicolasmartin $
    !! Software governed by the CeCILL licence     (NEMOGCM/NEMO_CeCILL.txt)
    !!----------------------------------------------------------------------
 CONTAINS
@@ -54,11 +54,11 @@ CONTAINS
    SUBROUTINE trc_bc_init(ntrc)
       !!----------------------------------------------------------------------
       !!                   ***  ROUTINE trc_bc_init  ***
-      !!                    
-      !! ** Purpose :   initialisation of passive tracer BC data 
-      !! 
+      !!
+      !! ** Purpose :   initialisation of passive tracer BC data
+      !!
       !! ** Method  : - Read namtsd namelist
-      !!              - allocates passive tracer BC data structure 
+      !!              - allocates passive tracer BC data structure
       !!----------------------------------------------------------------------
       !
       INTEGER,INTENT(IN) :: ntrc                           ! number of tracers
@@ -89,12 +89,12 @@ CONTAINS
          WRITE(numout,*) ' '
          WRITE(numout,*) 'trc_bc_init : Tracers Boundary Conditions (BC)'
          WRITE(numout,*) '~~~~~~~~~~~ '
-         
+
          !WRITE(numout,*) "In trc_bc_init at A: nstop=", nstop
       ENDIF
       !
       !  Initialisation and local array allocation
-      ierr0 = 0  ;  ierr1 = 0  ;  ierr2 = 0  ;  ierr3 = 0  
+      ierr0 = 0  ;  ierr1 = 0  ;  ierr2 = 0  ;  ierr3 = 0
       ALLOCATE( slf_i(ntrc), STAT=ierr0 )
       IF( ierr0 > 0 ) THEN
          CALL ctl_stop( 'trc_bc_init: unable to allocate local slf_i' )   ;   RETURN
@@ -124,8 +124,8 @@ CONTAINS
       !
       !DO jn = 1, ntrc
       !   IF( ln_trc_obc(jn) ) THEN
-      !       nb_trcobc       = nb_trcobc + 1 
-      !       n_trc_indobc(jn) = nb_trcobc 
+      !       nb_trcobc       = nb_trcobc + 1
+      !       n_trc_indobc(jn) = nb_trcobc
       !   ENDIF
       !   IF( ln_trc_sbc(jn) ) THEN
       !       nb_trcsbc       = nb_trcsbc + 1
@@ -189,7 +189,7 @@ CONTAINS
             IF(trcdta_bdy(jn,ib)%cn_obc == 'frs' .AND. nn_trcdmp_bdy(ib) .NE. 0 )  &
                 & CALL ctl_stop( 'Use FRS OR relaxation' )
             IF (nn_trcdmp_bdy(ib) .LT. 0 .OR. nn_trcdmp_bdy(ib) .GT. 2)            THEN
-                 WRITE(numout,*) "nn_trcdmp_bdy=", nn_trcdmp_bdy(ib), " ib=", ib  
+                 WRITE(numout,*) "nn_trcdmp_bdy=", nn_trcdmp_bdy(ib), " ib=", ib
                  CALL ctl_stop( 'Not a valid option for nn_trcdmp_bdy. Allowed: 0,1,2.' )
             ENDIF
          ENDDO
@@ -211,29 +211,29 @@ CONTAINS
              nb_trccbc       = nb_trccbc + 1  ; n_trc_indcbc(jn) = nb_trccbc
          ENDIF
       ENDDO
-      ! print some information for each 
+      ! print some information for each
       !IF( lwp ) THEN
       !   DO jn = 1, ntrc
-      !      IF( ln_trc_obc(jn) )  THEN    
-      !         clndta = TRIM( sn_trcobc(jn)%clvar ) 
-      !         IF(lwp) WRITE(numout,*) 'Preparing to read OBC data file for passive tracer number :', jn, ' name : ', clndta, & 
+      !      IF( ln_trc_obc(jn) )  THEN
+      !         clndta = TRIM( sn_trcobc(jn)%clvar )
+      !         IF(lwp) WRITE(numout,*) 'Preparing to read OBC data file for passive tracer number :', jn, ' name : ', clndta, &
       !         &               ' multiplicative factor : ', rn_trofac(jn)
       !      ENDIF
-      !      IF( ln_trc_sbc(jn) )  THEN    
-      !         clndta = TRIM( sn_trcsbc(jn)%clvar ) 
-      !         IF(lwp) WRITE(numout,*) 'Preparing to read SBC data file for passive tracer number :', jn, ' name : ', clndta, & 
+      !      IF( ln_trc_sbc(jn) )  THEN
+      !         clndta = TRIM( sn_trcsbc(jn)%clvar )
+      !         IF(lwp) WRITE(numout,*) 'Preparing to read SBC data file for passive tracer number :', jn, ' name : ', clndta, &
       !         &               ' multiplicative factor : ', rn_trsfac(jn)
       !      ENDIF
-      !      IF( ln_trc_cbc(jn) )  THEN    
-      !         clndta = TRIM( sn_trccbc(jn)%clvar ) 
-      !         IF(lwp) WRITE(numout,*) 'Preparing to read CBC data file for passive tracer number :', jn, ' name : ', clndta, & 
+      !      IF( ln_trc_cbc(jn) )  THEN
+      !         clndta = TRIM( sn_trccbc(jn)%clvar )
+      !         IF(lwp) WRITE(numout,*) 'Preparing to read CBC data file for passive tracer number :', jn, ' name : ', clndta, &
       !         &               ' multiplicative factor : ', rn_trcfac(jn)
       !      ENDIF
       !   END DO
       !ENDIF
       !
       ! The following code is written this way to reduce memory usage and repeated for each boundary data
-      ! MAV: note that this is just a placeholder and the dimensions must be changed according to 
+      ! MAV: note that this is just a placeholder and the dimensions must be changed according to
       !      what will be done with BDY. A new structure will probably need to be included
       !
       ! OPEN Lateral boundary conditions
@@ -288,7 +288,7 @@ CONTAINS
 9003  FORMAT(a, i5, a)
 #if defined key_bdy
       ! OPEN Lateral boundary conditions
-      IF( nb_trcobc > 0 ) THEN 
+      IF( nb_trcobc > 0 ) THEN
          ALLOCATE ( sf_trcobc(nb_trcobc*nb_bdy), rf_trofac(nb_trcobc*nb_bdy), nbmap_ptr(nb_trcobc*nb_bdy), STAT=ierr1 )
          IF( ierr1 > 0 ) THEN
             CALL ctl_stop( 'trc_bc_init: unable to allocate sf_trcobc structure' )   ;   RETURN
@@ -306,7 +306,7 @@ CONTAINS
 
             nblen = idx_bdy(ib)%nblen(igrd)
             !WRITE(numout,*) 'nblen=', nblen
-            
+
             DO jn = 1, ntrc
                IF ( ln_trc_obc(jn)) THEN
                ! Initialise from external data
@@ -359,7 +359,7 @@ CONTAINS
       !           CALL ctl_stop( 'trc_bc_init : unable to allocate passive tracer OBC data arrays' )   ;   RETURN
       !         ENDIF
       !      ENDIF
-      !      !   
+      !      !
       !   ENDDO
       !   !                         ! fill sf_trcdta with slf_i and control print
       !   CALL fld_fill( sf_trcobc, slf_i, cn_dir, 'trc_bc_init', 'Passive tracer OBC data', 'namtrc_bc' )
@@ -384,13 +384,13 @@ CONTAINS
                  CALL ctl_stop( 'trc_bc_init : unable to allocate passive tracer SBC data arrays' )   ;   RETURN
                ENDIF
             ENDIF
-            !   
+            !
          ENDDO
          !                         ! fill sf_trcsbc with slf_i and control print
          CALL fld_fill( sf_trcsbc, slf_i, cn_dir_sbc, 'trc_bc_init', 'Passive tracer SBC data', 'namtrc_bc' )
          !
       ENDIF
-      
+
       !COASTAL Boundary conditions
       IF( nb_trccbc > 0 ) THEN       !  allocate only if the number of tracer to initialise is greater than zero
          ALLOCATE( sf_trccbc(nb_trccbc), rf_trcfac(nb_trccbc), STAT=ierr1 )
@@ -409,15 +409,15 @@ CONTAINS
                  CALL ctl_stop( 'trc_bc_ini : unable to allocate passive tracer CBC data arrays' )   ;   RETURN
                ENDIF
             ENDIF
-            !   
+            !
          ENDDO
          !                         ! fill sf_trccbc with slf_i and control print
          CALL fld_fill( sf_trccbc, slf_i, cn_dir_cbc, 'trc_bc_init', 'Passive tracer CBC data', 'namtrc_bc' )
          !
       ENDIF
- 
+
       DEALLOCATE( slf_i )          ! deallocate local field structure
-      
+
       !WRITE(numout,*) "In trc_bc_init at B: nstop=", nstop
       IF( nn_timing == 1 )  CALL timing_stop('trc_bc_init')
 
@@ -431,12 +431,12 @@ CONTAINS
       !! ** Purpose :  Read passive tracer Boundary Conditions data
       !!
       !! ** Method  :  Read BC inputs and update data structures using fldread
-      !!              
+      !!
       !!----------------------------------------------------------------------
-   
+
       ! NEMO
       USE fldread
-      
+
       !! * Arguments
       INTEGER, INTENT( in ) ::   kt      ! ocean time-step index
       INTEGER, INTENT( in ), OPTIONAL ::   jit   ! subcycle time-step index (for timesplitting option)
@@ -451,8 +451,8 @@ CONTAINS
          IF(lwp) WRITE(numout,*) '~~~~~~~ '
       ENDIF
       !WRITE(numout,*) "In trc_bc_read at A1: nstop=", nstop
-      IF ( PRESENT(jit) ) THEN 
-      
+      IF ( PRESENT(jit) ) THEN
+
 #if defined key_bdy
          ! OPEN boundary conditions (use time_offset=+1 as they are applied at the end of the step)
          IF( nb_trcobc > 0 ) THEN
@@ -477,7 +477,7 @@ CONTAINS
          ENDIF
 
       ELSE
-      
+
 #if defined key_bdy
          ! OPEN boundary conditions (use time_offset=+1 as they are applied at the end of the step)
          IF( nb_trcobc > 0 ) THEN
@@ -501,12 +501,12 @@ CONTAINS
            CALL fld_read(kt=kt, kn_fsbc=1, sd=sf_trccbc)
          ENDIF
 
-      ENDIF 
+      ENDIF
       !
-      
+
       !WRITE(numout,*) "In trc_bc_read at A: nstop=", nstop
       IF( nn_timing == 1 )  CALL timing_stop('trc_bc_read')
-      !       
+      !
 
    END SUBROUTINE trc_bc_read
 #else
