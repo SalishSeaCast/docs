@@ -27,7 +27,7 @@ dependencies:
   - pandoc
   - pip
   - pre-commit
-  - python=3.12
+  - python=3.13
 
   - pip:
     - nbsphinx==0.9.5
