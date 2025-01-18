@@ -10,5 +10,10 @@ build:
 conda:
   environment: environment-rtd.yaml
 
+sphinx:
+    builder: html
+    configuration: conf.py
+    fail_on_warning: false
+
 # Only build HTML and JSON formats
 formats: []
