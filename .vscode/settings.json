@@ -4,5 +4,6 @@
         "ERDDAP",
         "NEMO",
         "Tsawwassen"
-    ]
+    ],
+    "makefile.configureOnOpen": false
 }
