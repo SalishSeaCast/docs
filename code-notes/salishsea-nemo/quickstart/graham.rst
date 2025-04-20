@@ -26,8 +26,10 @@ On ``graham`` the module loads that are required to build and run NEMO are:
 
 .. code-block:: bash
 
-    module load netcdf-fortran-mpi/4.6.0
-    module load perl/5.30.2
+    module load StdEnv/2023
+    module load intel/2023.2.1
+    module load netcdf-fortran-mpi/4.6.1
+    module load perl/5.36.1
 
 You can manually load the modules each time you log in,
 or you can add the above lines to your :file:`$HOME/.bashrc` file so that they are
