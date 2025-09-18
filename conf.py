@@ -61,6 +61,12 @@ linkcheck_ignore = [
     # intel.com throws 403: Forbidden errors for fortran compiler docs link
     'https://www.intel.com/content/www/us/en/docs/fortran-compiler/developer-guide-reference/2024-0/overview.html',
 ]
+linkcheck_anchors_ignore_for_url = [
+    # We get false failures from the Alliance wiki; i.e. anchors that do exist
+    # are reported to be broken links. This allows the page URL to be confirmed
+    # even if the anchor is not.
+    r"https://docs\.alliancecan\.ca/wiki/.*"
+]
 
 todo_include_todos = True
 
