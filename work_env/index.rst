@@ -35,13 +35,13 @@ Other machines that you may need working environments on later include:
   ``salish`` is primarily used for short development runs of the Salish Sea NEMO model.
   ``salish`` has several terabytes of storage in its :file:`/data/` filesystem.
   If your Waterhole workstation does not have access to :file:`/data/` you should open a ticket
-  via the :kbd:`Helpdesk` link on https://helpdesk.eoas.ubc.ca/ to request that EOAS Comp Staff
+  via the https://helpdesk.eoas.ubc.ca/ website to request that EOAS Comp Staff
   add a ``salish /data/`` mount on the workstation you are using.
   That will enable you to read/write files on the ``salish /data/`` filesystem without having to
   sign on to ``salish`` or copy the files from one machine to another.
-* One or more of the `Digital Research Alliance of Canada`_ (formerly Compute Canada) HPC clusters
-  :kbd:`graham.computecanada.ca` that run Linux.
+* One or more of the `Digital Research Alliance of Canada`_ (formerly Compute Canada) HPC clusters that run Linux.
   Those machines are used for longer research runs of the model.
+  The cluster that we use most often is ``nibi.alliancecan.ca`` at the University of Waterloo.
 
   .. _Digital Research Alliance of Canada: https://alliancecan.ca/en
 
