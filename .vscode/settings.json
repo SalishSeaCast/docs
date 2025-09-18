@@ -1,9 +1,22 @@
 {
     "restructuredtext.confPath": "${workspaceFolder}",
     "cSpell.words": [
+        "alliancecan",
+        "ECCC",
         "ERDDAP",
+        "Fuca",
+        "HRDPS",
+        "Johnstone",
+        "MEOPAR",
+        "Miniforge",
         "NEMO",
-        "Tsawwassen"
+        "nibi",
+        "orcinus",
+        "Pawlowicz",
+        "Pieters",
+        "salishsea",
+        "Tsawwassen",
+        "XIOS"
     ],
     "makefile.configureOnOpen": false
 }

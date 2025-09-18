@@ -1,13 +1,13 @@
-.. _WorkingOnComputeCanada:
+.. _WorkingOnAllianceCanada:
 
-********************************
-Working on ``graham``: NEMO v3.6
-********************************
+******************************
+Working on ``nibi``: NEMO v3.6
+******************************
 
 This section describes the steps to set up and run the SalishSeaCast NEMO version 3.6 code on the
-Digital Research Alliance of Canada `graham.computecanada.ca`_ HPC cluster.
+Digital Research Alliance of Canada `nibi.alliancecan.ca`_ HPC cluster.
 
-.. _graham.computecanada.ca: https://docs.alliancecan.ca/wiki/Graham
+.. _nibi.alliancecan.ca: https://docs.alliancecan.ca/wiki/Nibi
 
 The process described here should be applicable with little or no change to the other
 `Alliance HPC clusters`_.
@@ -15,19 +15,20 @@ The process described here should be applicable with little or no change to the 
 .. _Alliance HPC clusters: https://docs.alliancecan.ca/wiki/Getting_started#What_systems_are_available?
 
 Before going through the process described here,
-you should have completed the steps in :ref:`moaddocs:InitialSetupOnGraham`
+you should have completed the steps in :ref:`moaddocs:InitialSetupOnNibi`
 
 
 Modules setup
 =============
 
 Alliance clusters use the :command:`module load` command to load software components.
-On ``graham`` the module loads that are required to build and run NEMO are:
+On ``nibi`` the module loads that are required to build and run NEMO are:
 
 .. code-block:: bash
 
-    module load netcdf-fortran-mpi/4.6.0
-    module load perl/5.30.2
+    module load StdEnv/2023
+    module load netcdf-fortran-mpi/4.6.1
+    module load perl/5.36.1
 
 You can manually load the modules each time you log in,
 or you can add the above lines to your :file:`$HOME/.bashrc` file so that they are
@@ -39,17 +40,19 @@ automatically loaded upon login.
 Create a Workspace and Clone the Repositories
 =============================================
 
-``graham`` provides `several different types of file storage`_.
-We use project space for our working environments because it is large,
-high performance,
+``nibi`` provides `several different types of file storage`_.
+We use home space (``$HOME``) for our repository clones and working environment
+because it is large enough,
+sufficiently high performance,
 and backed up.
-Scratch space is even larger,
-also high performance,
-but not backed up,
+We use project space for shared storage like forcing files because it is well
+suited to large files,
+and it is backed up.
+Scratch space tuned for high performance reading a writing of large files,
 so we use that as the space to execute NEMO runs in.
-Scratch space is purged monthly to delete files that have not been accessed in the preceding 60 days.
+Scratch space is transient storage that is not backed up.
 So,
-if you have run results that want to preserve longer than that
+if you have run results that want to preserve
 (e.g. results that are used in a your thesis or a publication),
 you should move them to project space or to MOAD storage at UBC.
 
@@ -57,20 +60,24 @@ you should move them to project space or to MOAD storage at UBC.
 
 We use environment variables to access your project and scratch spaces:
 
+* Your home space is at :file:`$HOME/`
 * Your project space is at :file:`$PROJECT/$USER/`
 * Your scratch space is at :file:`$SCRATCH/`
 * Daily atmospheric,
   river,
   and west boundary forcing files are in the :file:`$PROJECT/SalishSea/forcing/` tree
 
-:envvar:`PROJECT` and :envvar:`SCRATCH` are more convenient that remembering full paths,
+:envvar:`HOME`,
+:envvar:`PROJECT`,
+and :envvar:`SCRATCH` are more convenient that remembering full paths,
 and using them in run description YAML files makes those files reusable by other users.
 The :envvar:`USER` variable always evaluates to your userid.
 
-Create a :file:`MEOPAR/` directory trees in your project and scratch spaces:
+Create a :file:`MEOPAR/` directory trees in your home, project, and scratch spaces:
 
 .. code-block:: bash
 
+    mkdir -p $HOME/MEOPAR
     mkdir -p $PROJECT/$USER/MEOPAR
     mkdir -p $SCRATCH/MEOPAR
 
@@ -78,7 +85,7 @@ Clone the repos needed to run the model:
 
 .. code-block:: bash
 
-    cd $PROJECT/$USER/MEOPAR
+    cd $HOME/MEOPAR
     git clone git@github.com:SalishSeaCast/grid.git
     git clone git@github.com:SalishSeaCast/NEMO-Cmd.git
     git clone git@github.com:SalishSeaCast/SalishSeaCmd.git
@@ -104,30 +111,39 @@ Download and install the Miniforge distribution of :program:`conda`:
     bash Miniforge3-Linux-x86_64.sh
 
 Accept the defaults offered for all of the settings.
-Exit your terminal session on ``graham`` with :command:`exit` and start a new session to ensure that
-the Miniforge configuration takes effect and the :command:`conda` command is available.
+Exit your terminal session on ``nibi`` with :command:`exit` and start a new session to ensure that
+the Miniforge configuration takes effect and the :command:`mamba` and :command:`conda` commands are available.
+
+Configure Miniforge to *not* activate the base environment on startup:
+
+.. code-block:: bash
+
+    conda config --set auto_activate_base false
+
+Exit your terminal session on ``nibi`` with :command:`exit` and start a new session to ensure that
+configuration setting takes effect.
 
 Create a ``salishsea-cmd`` conda environment:
 
 .. code-block:: bash
 
-    cd $PROJECT/$USER/MEOPAR/
-    conda env create -f SalishSeaCmd/envs/environment-hpc.yaml
+    cd $HOME/MEOPAR/
+    mamba env create -f SalishSeaCmd/envs/environment-hpc.yaml
 
 Install the :ref:`NEMO-CommandProcessor` and :ref:`SalishSeaCmdProcessor` Python packages:
 
 .. code-block:: bash
 
-    conda activate salishsea-cmd
-    python3 -m pip install --user --editable NEMO-Cmd
-    python3 -m pip install --user --editable SalishSeaCmd
+    mamba activate salishsea-cmd
+    python -m pip install --user --editable NEMO-Cmd
+    python -m pip install --user --editable SalishSeaCmd
 
 Confirm that the :ref:`SalishSeaCmdProcessor` works in your base environment
 (i.e. without the ``salishsea-cmd`` environment activated):
 
 .. code-block:: bash
 
-    conda deactivate
+    mamba deactivate
     salishsea --help
 
 You should see output like:
@@ -164,7 +180,7 @@ Compile XIOS-2
 Please see the :ref:`moaddocs:XIOS-2-docs` section of the :ref:`UBC-EOAS-MOAD-docs`.
 
 
-.. _CompileNEMO-3.6-graham:
+.. _CompileNEMO-3.6-nibi:
 
 Compile NEMO-3.6
 ================
@@ -180,21 +196,21 @@ or you can set and export the value of :envvar:`XIOS_HOME` in your :file:`$HOME/
 
 .. code-block:: bash
 
-    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m X64_GRAHAM -j 8
-    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./maketools -n REBUILD_NEMO -m X64_GRAHAM
+    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+    XIOS_HOME=$HOME/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m GCC_NIBI -j 8
+    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/TOOLS
+    XIOS_HOME=$HOME/MEOPAR/XIOS-2/ ./maketools -n REBUILD_NEMO -m GCC_NIBI
 
-It typically takes about 3.5 minutes to build a NEMO configuration on ``graham``,
-and about 15 seconds to build ``REBUILD_NEMO``.
+It typically takes about 1.25 minutes to build a NEMO configuration on ``nibi``,
+and a few seconds to build ``REBUILD_NEMO``.
 
 To build a configuration other than ``SalishSeaCast``,
 replace ``SalishSeaCast`` with the name of the configuration to be built, e.g. ``SMELT``:
 
 .. code-block:: bash
 
-    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SMELT -m X64_GRAHAM -j 8
+    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+    XIOS_HOME=$HOME/MEOPAR/XIOS-2/ ./makenemo -n SMELT -m GCC_NIBI -j 8
 
 
 If you need to do a clean build of a NEMO configuration,
@@ -202,9 +218,9 @@ you can use:
 
 .. code-block:: bash
 
-    cd $PROJECT/$USER/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
+    cd $HOME/MEOPAR/NEMO-3.6-code/NEMOGCM/CONFIG
     ./makenemo -n SalishSeaCast clean
-    XIOS_HOME=$PROJECT/$USER/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m X64_GRAHAM -j 8
+    XIOS_HOME=$HOME/MEOPAR/XIOS-2/ ./makenemo -n SalishSeaCast -m GCC_NIBI -j 8
 
 to clear away all artifacts of the previous build and do a fresh one.
 To clean and rebuild a different configuration,
