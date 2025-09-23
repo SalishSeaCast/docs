@@ -107,8 +107,8 @@ Download and install the Miniforge distribution of :program:`conda`:
 
 .. code-block:: bash
 
-    wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
-    bash Miniforge3-Linux-x86_64.sh
+    wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+    bash Miniforge3-$(uname)-$(uname -m).sh
 
 Accept the defaults offered for all of the settings.
 Exit your terminal session on ``nibi`` with :command:`exit` and start a new session to ensure that
