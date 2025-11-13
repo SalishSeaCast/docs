@@ -174,7 +174,6 @@ We are maintaining several local commits to files that do not fit in :file:`MY_S
 
 Some of these are fixed in NEMO upstream:
 
-#. Escape 'ls' in :file:`Fmake_WORK.sh`, `Ticket 1895`_, `Changeset 8527`_
-
-.. _Changeset 8527: https://forge.ipsl.fr/nemo/changeset/8527
-.. _Ticket 1895: https://forge.ipsl.fr/nemo/ticket/1895
+#. Escape 'ls' in :file:`Fmake_WORK.sh`,
+``https://forge.ipsl.fr/nemo/ticket/1895``,
+``https://forge.ipsl.fr/nemo/changeset/8527``
