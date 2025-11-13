@@ -3,11 +3,12 @@
 Open Boundary Conditions for Tracers
 ====================================
 
-Initially, several adaptations to the NEMO code were necessary in order to use BDY open boundary conditions on tracers.
-These were carried out using the NEMO development branch, :kbd:`dev_r5144_CMCC5_BDY_for_TOP`, as a template. The `ticket`_ associated
-with that branch has since been closed.
-
-.. _ticket: https://forge.ipsl.fr/nemo/ticket/1441
+Initially,
+several adaptations to the NEMO code were necessary in order to use BDY open boundary conditions on tracers.
+These were carried out using the NEMO development branch,
+``dev_r5144_CMCC5_BDY_for_TOP``,
+as a template.
+The ticket ``https://forge.ipsl.fr/nemo/ticket/1441`` associated with that branch has since been closed.
 
 
 Code Changes
