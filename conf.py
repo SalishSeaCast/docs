@@ -61,6 +61,13 @@ linkcheck_ignore = [
     # intel.com throws 403: Forbidden errors for fortran compiler docs link
     'https://www.intel.com/content/www/us/en/docs/fortran-compiler/developer-guide-reference/2024-0/overview.html',
 ]
+if os.environ.get("GITHUB_ACTIONS") == "true":
+    # When we run on GitHub Actions, ignore a collection of URLs that have timeouts due to rate limiting
+    linkcheck_ignore.extend(
+        [
+            r"https://alliancecan.ca/.*",
+        ]
+    )
 linkcheck_anchors_ignore_for_url = [
     # We get false failures from the Alliance wiki; i.e. anchors that do exist
     # are reported to be broken links. This allows the page URL to be confirmed
