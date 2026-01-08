@@ -80,7 +80,7 @@ tornado==6.5.2
 traitlets==5.14.3
 typing_extensions==4.15.0
 ukkonen==1.0.1
-urllib3==2.6.0
+urllib3==2.6.3
 virtualenv==20.34.0
 wcwidth==0.2.13
 webencodings==0.5.1
