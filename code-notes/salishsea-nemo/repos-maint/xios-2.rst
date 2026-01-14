@@ -4,6 +4,14 @@
 XIOS-2 Code Repo Maintenance
 ****************************
 
+.. warning::
+
+   This section is completely out of date we now use Git and GitHub for our XIOS-2 code repository rather than Mercurial and Bitbucket.
+
+   This section is retained to provide guidance for development of a future maintenance workflow
+   when we move to a newer version of XIOS-2.
+
+
 .. _XIOS-2MaintSetup:
 
 Set-up
@@ -113,7 +121,9 @@ The workflow sections below explain how these 4 repo clones are used to pull cha
 Workflow to Pull Changes from XIOS-2 :command:`svn` Repo
 ========================================================
 
-The workflow to pull changes from the master XIOS :command:`svn` repo and commit them to our :file:`XIOS-2-hg-mirror` repo is somewhat automated by the :ref:`Marlin`.
+The workflow to pull changes from the master XIOS :command:`svn` repo and commit them to our :file:`XIOS-2-hg-mirror` repo was somewhat automated by the
+(now deprecated)
+``Marlin`` tool that we developed.
 
 #. Review the upstream changes in the source browser at https://forge.ipsl.fr/ioserver/log/
 to select a range of changes to be pulled into our :file:`XIOS-2-hg-mirror` repo.
