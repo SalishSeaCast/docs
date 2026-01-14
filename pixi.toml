@@ -10,12 +10,14 @@ documentation = "https://salishsea-meopar-docs.readthedocs.io/en/latest/"
 [tasks]
 docs = "make clean html"
 linkcheck = "make clean linkcheck"
+update-reqs = "python -m pip list --format=freeze >> requirements.txt"
 
 [dependencies]
 ipython = "*"
 pandoc = "*"
 python = "3.14.*"
 # For repo QA
+pip = ">=25.3,<26"
 pre-commit = "*"
 # For documentation
 nbsphinx = "==0.9.5"
