@@ -66,6 +66,7 @@ if os.environ.get("GITHUB_ACTIONS") == "true":
     linkcheck_ignore.extend(
         [
             r"https://alliancecan.ca/.*",
+            r"https://www.alliancecan.ca/.*",
         ]
     )
 linkcheck_anchors_ignore_for_url = [
