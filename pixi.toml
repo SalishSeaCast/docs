@@ -8,6 +8,8 @@ repository = "https://github.com/SalishSeaCast/docs"
 documentation = "https://salishsea-meopar-docs.readthedocs.io/en/latest/"
 
 [tasks]
+docs = "make clean html"
+linkcheck = "make clean linkcheck"
 
 [dependencies]
 ipython = "*"
