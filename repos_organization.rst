@@ -24,7 +24,7 @@ General
 * Docs from public repos will be rendered as HTML on `readthedocs.org`_.
   readthedocs also provides PDF rendering.
 
-  .. _readthedocs.org: https://readthedocs.org/profiles/salishsea/
+  .. _readthedocs.org: https://app.readthedocs.org/profiles/salishsea/
 
 * There is no provision for rendering docs from private repos.
 

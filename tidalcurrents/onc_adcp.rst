@@ -276,7 +276,7 @@ If you will be running the processing in a new directory for the first time ther
 
 * 1. In :file:`compare_daily.m` change the path to be where you want everything to be saved. Many extra files will appear in this directory every time you run the scripts.
 
-* 2. Make an account on https://data.oceannetworks.ca/home to get userId. In :file:`getSoGAdcpDataMay15_mod.m` insert your email and userId at lines 173 and 174 of the script. You will receive an email every time you load raw data from the website.
+* 2. Make an account on https://data.oceannetworks.ca/ to get userId. In :file:`getSoGAdcpDataMay15_mod.m` insert your email and userId at lines 173 and 174 of the script. You will receive an email every time you load raw data from the website.
 
 * 3. In :file:`GET_DATA_fun` change the firstdate variable to be at least 3 days before the lastdate. This is because the filter length in :file:`LTIM_fun` needs at least that much data for the processing.
 
