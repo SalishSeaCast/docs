@@ -3,6 +3,10 @@
 ### Sphinx documentation
 _build/
 
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
 
 ### Vim template
 # Swap

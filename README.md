@@ -5,6 +5,7 @@ Salish Sea MEOPAR Documentation
 
 [![Creative Commons Attribution Attribution 3.0 Unported](https://img.shields.io/badge/license-CC--BY-lightgrey.svg)](https://creativecommons.org/licenses/by/3.0/deed.en_US)
 [![Git on GitHub](https://img.shields.io/badge/version%20control-git-blue.svg?logo=github)](https://github.com/SalishSeaCast/docs)
+[![Pixi Badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/prefix-dev/pixi/main/assets/badge/v0.json)](https://pixi.sh)
 [![Documentation Status](https://readthedocs.org/projects/salishsea-meopar-docs/badge/?version=latest)](https://salishsea-meopar-docs.readthedocs.io/en/latest/)
 [![sphinx-linkcheck](https://github.com/SalishSeaCast/docs/workflows/sphinx-linkcheck/badge.svg)](https://github.com/SalishSeaCast/docs/actions?query=workflow:sphinx-linkcheck)
 [![Issue Tracker](https://img.shields.io/github/issues/SalishSeaCast/docs?logo=github)](https://github.com/SalishSeaCast/docs/issues)

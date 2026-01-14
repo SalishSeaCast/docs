@@ -5,15 +5,22 @@ version: 2
 build:
   os: ubuntu-22.04
   tools:
-    python: "mambaforge-23.11"
+    python: "latest"
 
-conda:
-  environment: environment-rtd.yaml
+  jobs:
+    create_environment:
+      - asdf plugin add pixi
+      - asdf install pixi latest
+      - asdf global pixi latest
+    install:
+      - pixi install
+    build:
+      html:
+        - pixi run sphinx-build -T -b html ./ $READTHEDOCS_OUTPUT/html
 
 sphinx:
-    builder: html
-    configuration: conf.py
-    fail_on_warning: false
+  configuration: conf.py
+  fail_on_warning: false
 
 # Only build HTML and JSON formats
 formats: []
