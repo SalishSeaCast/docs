@@ -16,7 +16,7 @@ build:
       - pixi install
     build:
       html:
-        - pixi run sphinx-build -T -b html docs $READTHEDOCS_OUTPUT/html
+        - pixi run sphinx-build -T -b html ./ $READTHEDOCS_OUTPUT/html
 
 sphinx:
   configuration: conf.py
