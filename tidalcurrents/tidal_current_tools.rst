@@ -21,7 +21,7 @@ Observations
 * The ONC data is then processed by Dr. Rich Pawlowicz.
 * Phase and amplitude information can be reported in papers, we use values reported in Foreman et al. (2004).
 
-.. _Ocean Networks Canada (ONC) website: https://data.oceannetworks.ca/home
+.. _Ocean Networks Canada (ONC) website: https://data.oceannetworks.ca/
 
 
 Tidal Ellipses

@@ -265,24 +265,3 @@ Configure :program:`emacs` to enable :kbd:`python-outline` mode:
     ;; add Python-outline mode
     (require 'python-outline)
     (setq auto-mode-alist (append '(("\\.py" . python-outline)) auto-mode-alist))
-
-
-Mercurial Mode
---------------
-
-Allows you to work with Mercurial from within :program:`emacs`.
-
-Download :file:`mercurial.el` from http://hg.intevation.org/mercurial/file/tip/contrib/mercurial.el into your :file:`$HOME/elisp/` directory:
-
-.. code-block:: bash
-
-    cd $HOME/elisp/
-    wget http://hg.intevation.org/mercurial/file/tip/contrib/mercurial.el
-
-Configure :program:`emacs` to always load Mercurial mode:
-
-.. code-block:: scheme
-
-    ;; always load mercurial support
-    ;; http://hg.intevation.org/mercurial/file/tip/contrib/mercurial.el
-    (load-file "~/elisp/mercurial.elc")

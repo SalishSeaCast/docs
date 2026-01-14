@@ -43,7 +43,7 @@ Other machines that you may need working environments on later include:
   Those machines are used for longer research runs of the model.
   The cluster that we use most often is ``nibi.alliancecan.ca`` at the University of Waterloo.
 
-  .. _Digital Research Alliance of Canada: https://alliancecan.ca/en
+  .. _Digital Research Alliance of Canada: https://www.alliancecan.ca/en
 
 When you are ready to run on those machines,
 please see the :ref:`QuickStartGuide` for instructions on setting working environments on them.

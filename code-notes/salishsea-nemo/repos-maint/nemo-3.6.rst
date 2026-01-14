@@ -4,6 +4,15 @@
 NEMO-3.6 Code Repo Maintenance
 ******************************
 
+.. warning::
+
+   This section is completely out of date because NEMO now uses Git for version control rather than SVN,
+   and we now use Git and GitHub for our Salish Sea NEMO code repository rather than Mercurial and Bitbucket.
+
+   This section is retained to provide guidance for development of a future maintenance workflow
+   when we move to a newer version of NEMO.
+
+
 .. _NEMO-3.6MaintSetup:
 
 Set-up
@@ -69,7 +78,9 @@ The workflow sections below explain how these 4 repo clones are used to pull cha
 Workflow to Pull Changes from NEMO-3.6 :command:`svn` Repo
 ==========================================================
 
-The workflow to pull changes from the master NEMO :command:`svn` repo and commit them to our :file:`NEMO-3.6-hg-mirror` repo is somewhat automated by the :ref:`Marlin`.
+The workflow to pull changes from the master NEMO :command:`svn` repo and commit them to our :file:`NEMO-3.6-hg-mirror` repo was somewhat automated by the
+(now deprecated)
+``Marlin`` tool that we developed.
 
 #. Review the upstream changes in the source browser at ``http://forge.ipsl.jussieu.fr/nemo/svn/branches/2015/nemo_v3_6_STABLE`` to select a range of changes to be pulled into our :file:`NEMO-3.6-hg-mirror` repo.
 
