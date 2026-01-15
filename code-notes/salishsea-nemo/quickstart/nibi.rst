@@ -99,53 +99,34 @@ Clone the repos needed to run the model:
 
 .. _InstallCommandProcessorPackages:
 
-Install the Command Processor Packages
-======================================
+Install the :py:obj:`SalishSeaCmd` Command Processor Package
+============================================================
 
-Download and install the Miniforge distribution of :program:`conda`:
+If you have not already done so,
+please install the Pixi_ package and environments manager
+(`installation instructions`_)
 
-.. code-block:: bash
-
-    wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-    bash Miniforge3-$(uname)-$(uname -m).sh
-
-Accept the defaults offered for all of the settings.
-Exit your terminal session on ``nibi`` with :command:`exit` and start a new session to ensure that
-the Miniforge configuration takes effect and the :command:`mamba` and :command:`conda` commands are available.
-
-Configure Miniforge to *not* activate the base environment on startup:
+  .. _Pixi: https://pixi.prefix.dev/latest/
+  .. _`installation instructions`: https://pixi.prefix.dev/latest/installation/
 
 .. code-block:: bash
 
-    conda config --set auto_activate_base false
+    curl -fsSL https://pixi.sh/install.sh | sh
 
-Exit your terminal session on ``nibi`` with :command:`exit` and start a new session to ensure that
-configuration setting takes effect.
+Exit your terminal session on ``nibi`` with :command:`exit` and start a new session to ensure that the Pixi setup takes effect.
 
-Create a ``salishsea-cmd`` conda environment:
-
-.. code-block:: bash
-
-    cd $HOME/MEOPAR/
-    mamba env create -f SalishSeaCmd/envs/environment-hpc.yaml
-
-Install the :ref:`NEMO-CommandProcessor` and :ref:`SalishSeaCmdProcessor` Python packages:
+The packages that are required by :py:obj:`SalishSeaCmd` will be downloaded and linked into
+a working environment the first time that you use a `Pixi`_ command in the :file:`SalishSeaCmd/` directory
+(or a sub-directory).
+Install the :ref:`SalishSeaCmdProcessor` and confirm that it works with:
 
 .. code-block:: bash
 
-    mamba activate salishsea-cmd
-    python -m pip install --user --editable NEMO-Cmd
-    python -m pip install --user --editable SalishSeaCmd
+    cd SalishSeaCmd
+    pixi run salishsea help
 
-Confirm that the :ref:`SalishSeaCmdProcessor` works in your base environment
-(i.e. without the ``salishsea-cmd`` environment activated):
-
-.. code-block:: bash
-
-    mamba deactivate
-    salishsea --help
-
-You should see output like:
+After some output from Pixi,
+you should see output like:
 
 .. code-block:: text
 
@@ -171,6 +152,10 @@ You should see output like:
     prepare  Prepare a SalishSeaCast NEMO run.
     run  Prepare, execute, and gather results from a SalishSeaCast NEMO model run.
     split-results  Split the results of a multi-day SalishSeaCast NEMO model run (e.g. a hindcast run)
+
+You will always precede :command:`salishsea` commands with :command:`pixi run`
+to ensure that you are running :command:`salishsea` in the environment where the required
+packages are installed.
 
 
 Compile XIOS-2
