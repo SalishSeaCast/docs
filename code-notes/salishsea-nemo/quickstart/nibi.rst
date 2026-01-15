@@ -235,7 +235,11 @@ and gather the results for a run:
 
 .. code-block:: bash
 
-    salishsea run SalishSea.yaml $SCRATCH/MEOPAR/my_excellent_results
+    pixi run -m $HOME/MEOPAR/SalishSeaCmd salishsea run nibi-example.yaml \
+      $SCRATCH/MEOPAR/my_excellent_results
+
+The ``-m $HOME/MEOPAR/SalishSeaCmd`` option tells Pixi where to find the :file:`SalishSeaCmd/`
+directory so that it can use the correct environment.
 
 :command:`salishsea run` returns the path and name of the temporary run directory,
 and the job identifier assigned by the queue manager,
