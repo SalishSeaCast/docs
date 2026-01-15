@@ -87,7 +87,6 @@ Clone the repos needed to run the model:
 
     cd $HOME/MEOPAR
     git clone git@github.com:SalishSeaCast/grid.git
-    git clone git@github.com:SalishSeaCast/NEMO-Cmd.git
     git clone git@github.com:SalishSeaCast/SalishSeaCmd.git
     git clone git@github.com:SalishSeaCast/SS-run-sets.git
     git clone git@github.com:SalishSeaCast/tides.git
