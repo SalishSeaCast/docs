@@ -214,7 +214,7 @@ replace ``SalishSeaCast`` with the name of the configuration.
 Prepare and Execute Runs
 ========================
 
-The :file:`SS-run-sets/v202111/` directory in the :ref:`SS-run-sets-SalishSea` repo contains
+The :file:`SS-run-sets/SalishSea/djl/v202111/` directory in the :ref:`SS-run-sets` repo contains
 version controlled sample run description files and namelist segment files.
 In your own directory in that repo copy, edit,
 and version control those files to define the runs that you want to execute.
