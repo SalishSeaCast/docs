@@ -71,7 +71,7 @@ pyzmq==27.1.0
 readthedocs-sphinx-ext==2.2.5
 recommonmark==0.7.1
 referencing==0.37.0
-requests==2.32.5
+requests==2.33.0
 rpds-py==0.30.0
 setuptools==80.9.0
 six==1.17.0
