@@ -172,7 +172,7 @@ XIOS-2 (XML I/O Server)
 * CeCILL_V2 license, copyright Centre National de la Recherche Scientifique CNRS
 * XIOS-2.0 code that we run with NEMO-3.6
 * a checkout of :kbd:`http://forge.ipsl.fr/ioserver/svn/XIOS/trunk`
-* maintenance of the repo to handle the merging in changes from upstream is decribed in :ref:`XIOS-2CodeRepoMaintenance`
+* maintenance of the repo to handle the merging in changes from upstream is described in :ref:`XIOS-2CodeRepoMaintenance`
 * GitHub: https://github.com/SalishSeaCast/XIOS-2
 * documentation: https://salishsea-meopar-docs.readthedocs.io/en/latest/code-notes/salishsea-nemo/repos-maint/xios-2.html
 
