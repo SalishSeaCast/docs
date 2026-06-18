@@ -91,7 +91,7 @@ sphinxcontrib-serializinghtml==1.1.10
 stack_data==0.6.3
 tinycss2==1.4.0
 tomli==2.4.1
-tornado==6.5.6
+tornado==6.5.7
 traitlets==5.15.1
 typing_extensions==4.15.0
 ukkonen==1.1.0
