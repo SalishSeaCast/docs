@@ -17,6 +17,7 @@ on:
 
 jobs:
   auto_assign:
+    name: Automatically assign new or reopened issues and pull requests to Doug
     permissions:
       issues: write  # Required to add assignee to issues
       pull-requests: write  # Required to add assignee to pull requests

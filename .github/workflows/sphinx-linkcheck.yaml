@@ -13,6 +13,7 @@ on:
 
 jobs:
   sphinx-linkcheck:
+    name: Sphinx linkcheck
     permissions:
       contents: read  # Required to access the repository contents
 
