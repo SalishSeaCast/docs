@@ -16,7 +16,7 @@ ipython = "*"
 pandoc = "*"
 python = "3.14.*"
 # For repo QA
-pip = ">=25.3,<26"
+pip = ">=26.2.2,<27"
 pre-commit = "*"
 # For documentation
 nbsphinx = "==0.9.5"
